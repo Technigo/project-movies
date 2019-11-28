@@ -128,6 +128,12 @@ Ask for help and share your knowledge about this project with the 'project-movie
 
 Make sure you've commited and pushed a version of your project before starting with the stretch goals.
 
+**_Movie not found_**
+
+Show a 'not found' page if you try to visit a movie detail page with an invalid movie ID (so the user has tried to enter an ID themselves, most likely).
+
+Hint: In this case, when you send a movie detail request with a movie ID which doesn't exist in the API, the API returns with a 404 response. You can use `.catch()` on your promise to catch this exception and toggle some sort of 'error' state which can be used to show an error page.
+
 **_Loading states_**
 
 The API responds quite quickly, but if you're on a slow network then you'd be faced with a black screen until the response comes back. During this time, you could show a loading message or spinner of some sort on the page. Hint: use something like `const [loading, setLoading] = useState(true)` to make it so the page is loading by default, then call `setLoading(false)` once you get the response back from the API.
