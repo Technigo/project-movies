@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Navigation.css'
 
 export const Navigation = () => {
+  const [showMobileNav, setShowMobileNav] = useState(false)
+
+  const showMenuHandler = () => {
+    setShowMobileNav(!showMobileNav)
+  }
   return (
     <nav>
       <span className="left">
-        Red Carpet
+        <h1>Red Carpet</h1>
+        <button type="button" onClick={showMenuHandler}>
+          <i className="fa fa-bars fa-2x" aria-hidden="true" />
+        </button>
       </span>
-      <span className="right">
+      <span className={showMobileNav ? 'down' : 'hidden'}>
         <Link to="/">
           Popular
         </Link>

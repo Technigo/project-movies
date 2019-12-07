@@ -2,10 +2,27 @@ nav {
   width: 100%;
   z-index: 1;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 15px;
   background-color: #7b0305;
 }
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left button {
+  display: none;
+}
+
+nav h1 {
+  font-size: 1.2rem;
+  margin:0;
+}
+
 
 nav a {
   padding: 15px;
@@ -20,22 +37,32 @@ nav a:hover {
 }
 
 @media only screen and (max-width: 800px) {
-  .left{
-    display: none;
+  nav {
+    flex-direction: column;
   }
-  .right{
+
+  .left {
+    width: 100%;
+  }
+
+  .left button {
+    display: inline;
+    background-color: inherit;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .down{
     width: 100%;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-}
-
-@media only screen and (max-width: 550px) {
-  .right{
-    width: 100%;
     flex-direction: column;
     align-content: center;
     text-align: center;
+  }
+
+  .hidden {
+    display: none;
+    background-color: lawngreen;
   }
 }
