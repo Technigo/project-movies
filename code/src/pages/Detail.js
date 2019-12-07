@@ -9,9 +9,16 @@ export const Detail = () => {
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c911a6ca19197e66eda27f627cd60e15&language=en-US`)
-      .then((res) => res.json())
-      .then((json) => {
-        setMovie(json)
+      .then((res) => {
+        if (res.ok) {
+          return res.json()
+        } else {
+          throw new Error('404')
+        }
+      })
+      .then((json) => { setMovie(json) })
+      .catch(() => {
+        window.location.assign('/404');
       })
   }, [id])
 
@@ -29,6 +36,7 @@ export const Detail = () => {
           </div>
         </div>
       )}
+
     </article>
   )
 }

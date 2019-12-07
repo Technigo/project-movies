@@ -1,0 +1,32 @@
+.error nav {
+  position: absolute;
+  top: 0;
+}
+
+.error {
+  background-image: url("/img/lloyd-dirks-4SLz_RCk6kQ-unsplash.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.error h2 {
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+.error h3 {
+  font-size: 3rem;
+}
+
+.error h4 {
+  font-size: 2rem;
+}
+
+h2, h3, h4 {
+  margin: 15px 0;
+  text-align: center;
+}

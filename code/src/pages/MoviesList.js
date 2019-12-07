@@ -10,10 +10,19 @@ export const MoviesList = (props) => {
 
   useEffect(() => {
     fetch(apiUrl)
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.ok) {
+          return res.json()
+        } else {
+          throw new Error('404')
+        }
+      })
       .then((json) => {
         setMovies(json.results)
         setLoading(false)
+      })
+      .catch(() => {
+        window.location.assign('/404');
       })
   }, [apiUrl])
 
