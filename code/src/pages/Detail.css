@@ -1,0 +1,52 @@
+.detail {
+  position: relative;
+}
+
+.detail nav {
+  position: absolute;
+  top: 0;
+}
+
+.detail .backLink {
+  position: absolute;
+  display: inline-flex;
+  color: #fff;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
+  left: 50px;
+  top: 50px;
+}
+
+.detail .background {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.detail img {
+  border: 5px solid #fff;
+}
+
+.detail .summary {
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+}
+
+.detail .details {
+  margin-left: 20px;
+}
+
+.detail .details p {
+  max-width: 400px;
+}
+
+.detail .rating {
+  font-size: 20px;
+  color: #fab57e;
+  font-weight: normal;
+  margin-left: 10px;
+}
