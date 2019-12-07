@@ -1,0 +1,30 @@
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 100%;
+}
+
+img {
+  /* height: 100%; */
+  object-fit: 100%;
+}
+
+h2,
+h3 {
+  /* display: inline-block; */
+}
+
+@media (min-width: 668px) {
+  .movie {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .movie {
+    width: 25%;
+  }
+}
