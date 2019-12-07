@@ -19,6 +19,9 @@ export const App = () => (
       <Route path="/upcoming" exact>
         <MoviesList>upcoming</MoviesList>
       </Route>
+      <Route path="/404" exact>
+        <Err404 />
+      </Route>
       <Route path="/movies/:id">
         <Detail />
       </Route>
