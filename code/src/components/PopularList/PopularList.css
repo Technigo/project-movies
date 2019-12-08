@@ -5,25 +5,57 @@
 
 .movie {
   width: 100%;
+  overflow: hidden;
+  object-fit: 100%;
+  /* display: grid; */
+}
+
+.movies a {
+  text-decoration: none;
+  color: #fff;
+  object-fit: cover;
+  /* grid-column: 1/-1;
+  grid-row: 1/-1; */
+}
+
+.movies .movie_details {
+  grid-column: 1 / -1;
+  grid-row: 3 / -1;
+  padding: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+p {
+  margin-top: 1rem;
+}
+
+.movie_grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr repeat(2, min-content);
 }
 
 img {
-  /* height: 100%; */
+  min-height: 100%;
+  /* min-height: 590px; */
+  min-width: 100%;
   object-fit: 100%;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
 }
 
-h2,
-h3 {
-  /* display: inline-block; */
-}
-
-@media (min-width: 668px) {
+@media (min-width: 768px) {
   .movie {
     width: 50%;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1250px) {
   .movie {
     width: 25%;
   }
