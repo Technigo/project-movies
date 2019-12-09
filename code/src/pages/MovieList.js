@@ -15,7 +15,6 @@ export const MovieList = () => {
     return (
         <div>
 
-
             {movies.map((movie) => (
                 <div key={movie.id}>
                     <Link to={`/movies/${movie.id}`}>
