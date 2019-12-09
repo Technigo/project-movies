@@ -1,0 +1,44 @@
+.popularMoviesWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  background: #000;
+
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.popularMovie {
+  width: 25%;
+  position: relative;
+  height: 400px;
+  margin-bottom: 5px;
+}
+
+.popularMoviePoster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popularMovieDetails {
+  position: absolute;
+  color: #fff;
+  padding: 20px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+
+.popularMovie:hover .popularMovieDetails {
+  display: block;
+  background: rgba(0, 0, 0, 0.7);
+}
