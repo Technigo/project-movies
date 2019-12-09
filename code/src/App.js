@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { PopularList } from "./components/PopularList/PopularList";
+import { PopularList } from "./pages/PopularList/PopularList";
+import { Detail } from "./pages/Detail/Detail";
 
 export const App = () => {
   return (
@@ -9,6 +10,9 @@ export const App = () => {
         <Switch>
           <Route path="/" exact>
             <PopularList />
+          </Route>
+          <Route path="/details/:movieId" exact>
+            <Detail />
           </Route>
         </Switch>
       </BrowserRouter>
