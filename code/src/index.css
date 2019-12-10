@@ -1,4 +1,6 @@
 body {
+  background: black;
+  color: white;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -10,4 +12,188 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Styling PopularList, the list of movies */
+.movie-poster {
+  align-items: left;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  text-align: left;
+  width: 100vw;
+}
+
+.movie-image {
+  width: 100vw;
+}
+
+.movie-image:hover {
+  opacity: 0.4;
+}
+
+.movie-title, .release-date {
+  display: none;
+}
+
+.movie-poster:hover .movie-title {
+  display: block;
+  font-size: 32px;
+  margin-top: 25vh;
+  padding-left: 1vw;
+  position: absolute;
+}
+
+.movie-poster:hover .release-date {
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 34vh;
+  padding-left: 1vw;
+  padding-top: 10vh;
+  position: absolute;
+}
+
+
+/* Styling Detail, individual movies */
+.background-container {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  text-align: left;
+  width: 100vw;
+}
+
+.background-image {
+  display: block;
+  height: 100vh;
+  padding-top: 0;
+  position: absolute;
+  width: 100vw;
+}
+
+.movie-individual-image-container {
+  display: block;
+  margin-left: 3vw;
+  margin-top: 8vh;
+  position: absolute;
+  width: 30vw;
+}
+
+.movie-individual-image {
+  border: 4px solid white;
+  width: 30vw;
+}
+
+.nav-bar {
+  padding-left: 1vw;
+}
+
+.nav-link {
+  display: block;
+  font-weight: bold;
+  padding-top: 1vh;
+  position: absolute;
+}
+
+.nav-bar:hover{
+  margin-left: 3px;
+  transition: 0.2s ease-in-out;
+}
+
+.movie-individual-info-top {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-left: 30vw;
+  position: absolute;
+}
+
+.movie-individual-title {
+  font-size: 26px;
+  padding-left: 8vw;
+}
+
+.movie-individual-rating {
+  color: red;
+  font-size: 18px;
+  padding-left: 2vw;
+}
+
+.movie-individual-overview {
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+  margin-left: 37vw;
+  margin-right: 5vw;
+  margin-top: 40vh;
+  position: absolute;
+  width: 35vw;
+}
+
+
+/* Media queries */
+/* Medium-sized devices (e.g. tablets or larger) */
+@media(min-width: 768px) {
+/* Styling PopularList, the list of movies */
+.movies-list {
+  display: grid;
+  grid-template-columns: repeat(4,4fr);
+  grid-template-rows: repeat(4,4fr);
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+.movie-poster {
+  width: 25vw;
+}
+
+.movie-image {
+  width: 25vw;
+}
+
+.movie-image:hover {
+  opacity: 0.4;
+}
+
+/* Styling Detail, individual movies */
+.background-container {
+  justify-content: center;
+}
+
+.movie-individual-image-container {
+  margin-left: 2vw;
+  margin-top: 2vh;
+  width: 26vw;
+}
+
+.movie-individual-image {
+  width: 26vw;
+}
+
+.movie-individual-info-top {
+  margin-left: 30vw;
+}
+
+.movie-individual-title {
+  font-size: 26px;
+  padding-left: 0;
+}
+
+.movie-individual-rating {
+  font-size: 18px;
+  padding-left: 1vw;
+}
+
+.movie-individual-overview {
+  font-size: 16px;
+  margin-left: 30vw;
+  margin-right: 5vw;
+  margin-top: 15vh;
+  width: 35vw;
+}
 }
