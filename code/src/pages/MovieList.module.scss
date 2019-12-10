@@ -18,13 +18,12 @@
 
 .overlay {
   width: 0%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 0;
   bottom: 0;
   display: block;
-  overflow: hidden;
-  
+  overflow: hidden; 
 }
 
 .movie:hover .overlay {
