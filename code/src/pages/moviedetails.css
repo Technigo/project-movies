@@ -6,20 +6,25 @@
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
-    background: no-repeat;
     color: #fff;
 }
 
-.go-back{
+.go-back, svg{
   position: absolute;
   display: inline-flex;
   align-items: center;
   font-weight: 700;
   text-decoration: none;
-  left: 50px;
-  top: 50px;
+  left: 58px;
+  top: 53px;
   color: #fff;
 }
+svg {
+  width: 25px;
+  left:30px;
+  top: 50px;
+}
+
 .go-back:hover {
   cursor: pointer;
 }
@@ -38,3 +43,4 @@ padding: 10px;
 .movie-summary img {
   border: 5px solid #fff;
 }
+

@@ -2,6 +2,7 @@ import React from 'react'
 import { MovieList } from "pages/MovieList"
 import { MovieDetails } from "pages/MovieDetails"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
+import "./app.css"
 
 // const api_key = "363444609247127238629594b245e069"
 // // const url = "https://api.themoviedb.org/3/movie/550?api_key={api_key}"
@@ -11,17 +12,15 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 
 export const App = () => {
   return (
-    <main>
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" exact>
-            <MovieList />
-          </Route>
-          <Route path="/movies/:id">
-            <MovieDetails />
-          </Route>
-        </Switch>
-      </BrowserRouter>
-    </main>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact>
+          <MovieList />
+        </Route>
+        <Route path="/movies/:id">
+          <MovieDetails />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   )
 }
