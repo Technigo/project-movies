@@ -17,6 +17,7 @@ export const MovieInfo = () => {
     return(
          <div>
              <h1>{movie.overview}</h1>
+             <img src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`} alt={movie.original_title} />
        { /*     {movies.map((movie) => (
         //         <div key={movie.id}>
         //             <h1>{movie.overview}</h1>
