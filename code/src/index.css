@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: black;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -29,4 +30,38 @@ code {
     width: 25%;
     justify-content: center;
     align-items: center;
+}
+
+.theInfo {
+    color: white;
+    width: 600px;
+    position: relative;
+    margin-left: 50px;
+    top: -300px;
+}
+
+.bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.back {
+    font-size: 1.2rem;
+    color: silver;
+    position: absolute;
+    top: 20px;
+    left: 20px
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: darkolivegreen;
+}
+
+a:hover {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
 }
