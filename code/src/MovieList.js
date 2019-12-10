@@ -22,40 +22,14 @@ export const MovieList = () => {
   return (
     <article>
       {movies.map((movie) => (
-        <div className="movie-cover" key={movie.id} style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w342${movie.poster_path})` }}>
-          <Link to={`/movie/${movie.id}`} className="movie-link" >
-            {/* <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} /> */}
-            <section className="movie-details">
-              <h2>{movie.original_title}</h2>
-              <h3>{movie.release_date}</h3>
-            </section>
-          </ Link>
-
-
-        </div>
+        <Link to={`/movie/${movie.id}`} className="movie-cover" key={movie.id} style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w342${movie.poster_path})` }} >
+          <section className="movie-details">
+            <h2>{movie.original_title}</h2>
+            <h3>{movie.release_date}</h3>
+          </section>
+        </ Link>
       ))
       }
     </article >
-
-
-
-    // <section className="movies">
-    //   {images.map((props) =>(
-    //     <Link key={props.results.id} to={`/about/${props.id}`}>
-    //       <Movie image={props.image} />
-    //     </Link>
-    // ) 
-    //       )
-    // }
-
-    // </section >
-    // <main>
-    //   Hej hej här är massa bilder fångade genom api och fetch. Men också useState och useEffect?
-    // <ul>
-    //     <li>
-    //       <Link to="/movie/:movieId">Film 1, länken måste kopplas till API, så att det blir rätt länk</Link>
-    //     </li>
-    //   </ul>
-    // </main >
   )
 }

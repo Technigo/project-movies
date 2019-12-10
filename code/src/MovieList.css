@@ -17,28 +17,37 @@ article{
   width: 25%;
   height: 550px;
   background-size: cover;
+  position: relative;
+  z-index: 1;
 }
-
 
 .movie-details{
   display: none;
   margin: 12px;
 }
 
-.movie-link{
-  /* height: auto; */
-  width: 379px;
-  position: relative;
-}
-
-.movie-link:hover .movie-details{
-  display: block;
+.movie-cover:hover .movie-details{
+  width: 350px;
+  display: inline-block;
   position: absolute;
+  content: "";
   align-self: flex-start;
-  /* top: -150px; */
-  top: -150px;
+  top: 390px;
   text-decoration: none;
   margin: 12px;
   color: #FFF;
   font-family:'Roboto', sans-serif;
+  z-index:5;
+}
+
+
+.movie-cover:hover::after{
+  position: absolute;
+  top: 0;
+  content: "";
+  opacity: 50%;
+  background: black;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
 }
