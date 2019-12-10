@@ -1,7 +1,29 @@
 .movieList {
-  // border: 0;
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
 }
 
-p {
-  color: green;
+.movie {
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    color: green;
+  }
 }
+
+@media screen and (min-width: 750px) {
+  .movieList {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .movieList {
+    grid-template-columns: repeat(4, 25%);
+  }
+}
+

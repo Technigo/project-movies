@@ -6,28 +6,33 @@ import styles from './MovieDetails.module.scss';
 export const MovieDetails = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState({});
-  let history = useHistory();
+  const [errorLoading, SetErrorLoading] = useState(false);
+  const history = useHistory();
 
   useEffect(() => {
+    console.log(movieId);
     API.getMovie(movieId)
       .then(data => {
         setMovie(data);
+        SetErrorLoading(false);
       })
       .catch(err => {
-        console.log(err.status);
-        // setMovie({});
+        setMovie({});
+        SetErrorLoading(true);
       });
   }, [movieId]);
 
-  if (movie.status_code) {
+  if (errorLoading) {
     history.push('/');
-    return null;
-  } else {
-    return (
-      <div>
-        Movie title <b>{movie.title}</b>!<br />
-        <Link to="/">Back to the list</Link>
-      </div>
-    );
   }
+
+  return (
+    <div>
+      {errorLoading === false && (
+        <div classNanme={styles.movieDetails}>
+          <p>Movie title: {movie.title}</p>
+        </div>
+      )}
+    </div>
+  );
 };
