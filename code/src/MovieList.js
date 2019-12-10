@@ -22,9 +22,9 @@ export const MovieList = () => {
   return (
     <article>
       {movies.map((movie) => (
-        <div className="movie-list" key={movie.id}>
-          <Link to={`/movie/${movie.id}`} className="movie-link">
-            <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} />
+        <div className="movie-cover" key={movie.id} style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w342${movie.poster_path})` }}>
+          <Link to={`/movie/${movie.id}`} className="movie-link" >
+            {/* <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} /> */}
             <section className="movie-details">
               <h2>{movie.original_title}</h2>
               <h3>{movie.release_date}</h3>
@@ -33,8 +33,9 @@ export const MovieList = () => {
 
 
         </div>
-      ))}
-    </article>
+      ))
+      }
+    </article >
 
 
 

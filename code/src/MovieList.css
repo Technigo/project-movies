@@ -1,22 +1,22 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 article{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   background: black;
-}
-
-img{
-  width: 360px;
-  height: auto;
-}
-
-img:hover{
-  opacity: 50%;
+  width:100%;
 }
 
 
-.movie-list{
-  width: 360px;
+.movie-cover{
+  width: 25%;
+  height: 550px;
+  background-size: cover;
 }
 
 
@@ -27,7 +27,7 @@ img:hover{
 
 .movie-link{
   /* height: auto; */
-  /* width:350px; */
+  width: 379px;
   position: relative;
 }
 
