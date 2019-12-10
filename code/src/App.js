@@ -3,6 +3,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { MovieList } from './MovieList'
 import { Movie } from './Movie'
 
+import 'App.css'
+
 
 // Api Key: 2a89f9965a48e33d809fbd966cc6a018
 
