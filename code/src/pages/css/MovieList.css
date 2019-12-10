@@ -1,0 +1,11 @@
+.list{
+display: flex;
+flex-wrap: wrap;
+}
+.poster img{
+width:100%;
+
+}
+.poster{
+  width:25%;
+}
