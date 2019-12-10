@@ -7,7 +7,6 @@
   width: 100%;
   overflow: hidden;
   object-fit: 100%;
-  /* display: grid; */
 }
 
 .movies a {
@@ -19,8 +18,12 @@
   opacity: 1;
 }
 
-.movie a:hover {
-  /* opacity: 0.6; */
+.movie:hover > a > img {
+  opacity: 0.6;
+}
+
+.movie:hover > a > #movie_details {
+  display: block;
 }
 
 #movie_details {
@@ -28,14 +31,8 @@
   grid-row: 3 / -1;
   padding: 2rem;
   font-family: "Roboto", sans-serif;
-  /* display: none; */
+  display: none;
   z-index: 100;
-}
-
-a:hover #movie_details {
-  /* color: red; */
-
-  /* display: block; */
 }
 
 h2 {

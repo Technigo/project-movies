@@ -1,0 +1,12 @@
+.detail_background-img {
+  height: 100vh;
+  width: auto;
+  /* background-position-x: center;
+  background-position-y: center; */
+  background: linear-gradient(#004092, #020202, transparent);
+}
+
+.detail_image {
+  height: 30%;
+  width: auto;
+}

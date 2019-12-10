@@ -4,5 +4,6 @@ import { App } from "./App";
 
 import "./index.css";
 import "./pages/PopularList/PopularList.css";
+import "./pages/Detail/Detail.css";
 
 ReactDOM.render(<App />, document.getElementById("root"));
