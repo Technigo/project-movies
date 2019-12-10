@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { PopularList } from 'pages/PopularList'
-import { Detail } from 'pages/Detail'
+import { MovieDetails } from 'pages/MovieDetails'
 
 //Page/Component: Popular list that maps all the popular movies from API
 //Page/Component: Detail that renders details about the movie (poster, info, voting)
@@ -17,7 +17,7 @@ export const App = () => {
           </Route>
 
           <Route path="/movies/:id">
-            <Detail />
+            <MovieDetails />
           </Route>
 
         </Switch>

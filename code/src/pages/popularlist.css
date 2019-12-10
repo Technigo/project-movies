@@ -16,8 +16,8 @@ h2 {
 
 .popularMovie {
   width: 25%;
+  height: 20%;
   position: relative;
-  height: 400px;
   margin-bottom: 5px;
 }
 

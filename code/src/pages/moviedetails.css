@@ -1,0 +1,38 @@
+.movieWrapper {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.backToList {
+  position: absolute;
+  top: 25px;
+  left: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.movieSummary {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  color: #fff;
+  padding: 50px;
+  height: 100%;
+}
+
+.moviePoster {
+  border: 5px solid #fff;
+}
+
+.movieInfo {
+  margin-left: 20px;
+}
+
+.voting {
+  color: red;
+  font-size: 16px;
+}
+
