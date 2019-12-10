@@ -1,0 +1,43 @@
+.movie-overview {
+  height: 100%;
+  width: 100%;
+}
+
+.movie-details {
+  background-size: cover;
+  color: #fff;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: 
+  "nav nav nav nav nav nav nav nav"
+  "poster poster ... ... ... ... ... ..."
+  "poster poster title title title ... ... ..."
+  "poster poster synopsis synopsis synopsis ... ... ...";
+  height: 100%;
+  padding: 3rem;
+  width: 100%;
+}
+
+.movie-navigation {
+  grid-area: nav;
+}
+
+.movie-poster {
+  align-self: end;
+  border: 5px solid #fff;
+  grid-area: poster;
+}
+
+.movie-overview .movie-title {
+  z-index: inherit;
+  padding: 0;
+  margin-bottom: 0;
+  align-self: end;
+  grid-area: title;
+}
+
+.movie-synopsis {
+  grid-area: synopsis;
+}

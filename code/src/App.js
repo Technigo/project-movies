@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter, Switch, Router } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 import { MovieCard } from './list/MovieCard'
+import { MovieDetails } from './detail/MovieDetails'
 
 export const App = () => {
   const [movies, setMovies] = useState([])
@@ -13,17 +14,29 @@ export const App = () => {
 
   return (
     <main>
-      <section className="movie-list">
-        {movies.map((movie) => {
-          return (
-            <MovieCard
-              key={movie.id}
-              title={movie.title}
-              date={movie.release_date}
-              poster={movie.poster_path} />
-          )
-        })}
-      </section>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact>
+            <section className="movie-list">
+              {movies.map((movie) => {
+                return (
+                  <Link to={`/movies/${movie.id}`} key={movie.id}>
+                    <MovieCard
+                      title={movie.title}
+                      date={movie.release_date}
+                      poster={movie.poster_path} />
+                  </Link>
+                )
+              })}
+            </section>
+          </Route>
+          <Route path="/movies/:movieId">
+            <section className="movie-overview">
+              <MovieDetails />
+            </section>
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </main>
   )
 }
