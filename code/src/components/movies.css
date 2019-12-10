@@ -1,0 +1,26 @@
+body {
+    margin: 0px;
+    background-color: black;
+    color: white;
+}
+
+.movie-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie-poster {
+    position: relative;
+    z-index: 1;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+}
+
+.movie-poster:hover .movie-info {
+    
+}
