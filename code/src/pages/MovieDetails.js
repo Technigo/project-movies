@@ -35,8 +35,10 @@ export const MovieDetails = () => {
             backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`
           }}
         >
-          <p>Movie title: {movie.title}</p>
-          <Link to="/">Back</Link>
+          <div className={styles.overlay}>
+            <p>Movie title: {movie.title}</p>
+            <Link to="/">Back</Link>
+          </div>
         </div>
       )}
     </div>
