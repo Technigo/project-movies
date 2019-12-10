@@ -1,8 +1,10 @@
-.movieWrapper {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
+/* Animation for link back to list */
+@-webkit-keyframes slide {
+  100% { left: 80px; }
+}
+
+@keyframes slide {
+  100% { left: 80px; }
 }
 
 .backToList {
@@ -12,6 +14,19 @@
   font-size: 18px;
   font-weight: bold;
   color: #fff;
+}
+
+.backToList:hover {
+  animation: slide 1s forwards; /* Apply the anomation to link on hover */
+  animation-delay: 0.5s;
+}
+
+
+.movieWrapper {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 .movieSummary {

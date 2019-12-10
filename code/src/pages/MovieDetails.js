@@ -18,7 +18,6 @@ export const MovieDetails = () => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`)
       .then((res) => res.json()) //Get the json of movie
       .then((json) => {
-        console.log(json)
         setMovie(json) //Set the state to movieDetails
       })
   }, [id])
@@ -27,7 +26,7 @@ export const MovieDetails = () => {
   return (
     <section className="movieWrapper" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
       <Link to="/">
-        <div className="backToList">Movies</div>
+        <div className="backToList"><i className="fas fa-chevron-circle-left"></i> Movies</div>
       </Link>
       <section className="movieSummary">
         <img className="moviePoster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />

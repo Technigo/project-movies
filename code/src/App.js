@@ -1,10 +1,14 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import { PopularList } from 'pages/PopularList'
+import { MovieList } from 'pages/MovieList'
 import { MovieDetails } from 'pages/MovieDetails'
 
-//Page/Component: Popular list that maps all the popular movies from API
-//Page/Component: Detail that renders details about the movie (poster, info, voting)
+
+//Navigation bar component only shown at list page - not in details
+//Dropdown with <select>
+//Choosing a option should set a state to use in fetch url (to fetch popular, toprated or upcoming)
+//Page component: Movie list that maps all the movies from API
+//Page component: MovieDetails that renders details about the movie
 
 export const App = () => {
   return (
@@ -13,7 +17,7 @@ export const App = () => {
         <Switch>
 
           <Route path="/" exact>
-            <PopularList />
+            <MovieList />
           </Route>
 
           <Route path="/movies/:id">
