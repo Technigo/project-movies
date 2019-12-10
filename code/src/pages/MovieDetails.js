@@ -14,23 +14,13 @@ export const MovieDetails = () => {
       })
       .catch(err => {
         console.log(err);
-        return;
+        return <div>Not found!</div>;
       });
   }, [movieId]);
   return (
     <div>
-      {movie.id ? (
-        <div>
-          Movie title <b>{movie.original_title}</b>!<br />
-          <Link to="/">Back to the list</Link>
-        </div>
-      ) : (
-        <div>
-          Not found!
-          <br />
-          <Link to="/">Back to the list</Link>
-        </div>
-      )}
+      Movie title <b>{movie.title}</b>!<br />
+      <Link to="/">Back to the list</Link>
     </div>
   );
 };
