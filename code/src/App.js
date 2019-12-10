@@ -1,9 +1,10 @@
 import React from 'react'
+import { MoviePoster } from 'components/MoviePoster'
 
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      <MoviePoster />
     </div>
   )
 }
