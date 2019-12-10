@@ -21,16 +21,34 @@ export const MovieList = () => {
 
   return (
     <div className={styles.movieList}>
-      {movies.map(movie => (
-        <Link key={movie.id} to={`/movie/${movie.id}`}>
-          <div className={styles.movie}>
-            <img
-              src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
-              alt="backdrop image"
-            />
-          </div>
-        </Link>
-      ))}
+      {movies
+        .filter(movie => {
+          return movie.id !== 540247 && movie.id !== 449924;
+        })
+        .map(movie => (
+          <Link key={movie.id} to={`/movie/${movie.id}`}>
+            <div className={styles.movie}>
+              <img
+                src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
+                alt="poster"
+              />
+              <div className={styles.overlay}>
+                <div className={styles.movieDetails}>
+                  <h1>{movie.title}</h1>
+                  <p>Released: {movie.release_date}</p>
+                </div>
+              </div>
+            </div>
+          </Link>
+        ))}
     </div>
   );
 };
+
+// style={{
+//   backgroundImage: `url(https://image.tmdb.org/t/p/w780${movie.poster_path})`
+// }}
+
+{
+  /* <img src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`} alt="backdrop image" /> */
+}

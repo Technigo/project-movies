@@ -7,11 +7,11 @@ export const getMovies = async () => {
 
   if (response.status !== 200) {
     throw Error(`Request rejected with status ${response.status}`);
+  } else {
+    const data = await response.json();
+
+    return data;
   }
-
-  const data = await response.json();
-
-  return data;
 };
 
 export const getMovie = async movieId => {
