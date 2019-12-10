@@ -17,7 +17,11 @@ export const MovieInfo = () => {
     return(
          <div>
              <h1>{movie.overview}</h1>
-             <img src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`} alt={movie.original_title} />
+             <img src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.original_title} />
+             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title} />
+             <h2>{movie.original_title}</h2>
+             <h2>{movie.vote_average}</h2>
+                
        { /*     {movies.map((movie) => (
         //         <div key={movie.id}>
         //             <h1>{movie.overview}</h1>

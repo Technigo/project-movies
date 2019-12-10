@@ -18,8 +18,9 @@ useEffect(() => {
                 <div key={movie.id}>
                     <Link to={`/movies/${movie.id}`}>
                         <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title} />
-                        <h2>{movie.original_title}</h2>
                         <h3>{movie.release_date}</h3>
+                        <h2>{movie.original_title}</h2>
+
                     </Link>
                 </div>
             ))}
