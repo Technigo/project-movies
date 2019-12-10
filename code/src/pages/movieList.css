@@ -1,0 +1,32 @@
+body {
+    margin: 0px;
+}
+
+h1 {
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+
+p {
+    color: white;
+}
+.moviePoster {
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    float: left;  
+}
+
+.titleRelease {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.75);
+    /*display: none;*/
+    padding: 20px;
+}
+
