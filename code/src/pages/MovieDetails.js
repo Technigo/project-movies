@@ -14,9 +14,13 @@ export const MovieDetails = () => {
       })
       .catch(err => {
         console.log(err);
-        return <div>Not found!</div>;
       });
   }, [movieId]);
+
+  if (!movie) {
+    return <div>Not found!</div>;
+  }
+
   return (
     <div>
       Movie title <b>{movie.title}</b>!<br />
