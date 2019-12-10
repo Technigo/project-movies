@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.main-container {
+  display: flex;
+  
+  flex-wrap: wrap;
+
+}
+
+.poster-image {
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  height: 400px;
+}
+
+.movie-info-container {
+  background: rgba(12, 12, 12, 0.591);
+  width: 100%;
+  opacity: 0;
+  
+}
+
+.movie-info-container:hover {
+  opacity: 1;
+}
+
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+
+  
+  padding-left: 5%;
+  
+
+}
+h1 {
+  width: 90%;
+}
+h1, p {
+  color: white;
+}
+
+h3 {
+  font-weight: normal;
+}
