@@ -1,0 +1,50 @@
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+
+.movie {
+  justify-content: flex-end;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  height: 513px;
+  position: relative;
+  width: 100%;
+}
+
+.movie:hover::after {
+  background-color: #000;
+  content: '';
+  height: 100%;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.movie-title,
+.movie-release-date {
+  color: #fff;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: -1;
+}
+
+.movie:hover .movie-title,
+.movie:hover .movie-release-date {
+  z-index: 3;
+}
+
+.movie-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.movie-release-date {
+  margin-bottom: 2rem;
+}
