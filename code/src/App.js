@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Movies } from 'components/Movies'
+import { MovieDetails } from 'components/MovieDetails'
 
-// const APIKEY = {057cd4e552ae112195cad4ea9c32ccdb}
 
 export const App = () => {
   return (
@@ -11,7 +11,9 @@ export const App = () => {
       <Route path="/" exact>
         <Movies />
       </Route>
-     
+     <Route path="/movies/:movieId">
+        <MovieDetails />
+     </Route>
     </Switch>
     </BrowserRouter>
   )

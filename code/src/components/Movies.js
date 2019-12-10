@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './movies.css'
+import { Link } from 'react-router-dom'
 
 export const Movies = () => {
     const [movies, setMovies] = useState([])
@@ -22,7 +23,9 @@ export const Movies = () => {
                      <h2>Released {movie.release_date}</h2>
                      </div>
                      <div className="movie-poster">
+                         <Link to={`/movies/${movie.id}`}>
                     <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title} />
+                    </Link>
                     </div>
                 </div>
                 
