@@ -1,0 +1,19 @@
+.movie-list{
+  display:flex;
+  flex-wrap: wrap;
+}
+.cover-wrapper{
+  position: relative;
+  display:flex;
+  align-items: flex-end;
+}
+.hover-details {
+position: absolute;
+color: #fff;
+font-weight: 700;
+font-size: 18px;
+opacity: 0;}
+
+.cover-wrapper:hover .hover-details {
+opacity: 1;
+}

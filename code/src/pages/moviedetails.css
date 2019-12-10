@@ -1,0 +1,40 @@
+.movie-details,
+.background-image {
+    min-height: 100vh;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    background: no-repeat;
+    color: #fff;
+}
+
+.go-back{
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  text-decoration: none;
+  left: 50px;
+  top: 50px;
+  color: #fff;
+}
+.go-back:hover {
+  cursor: pointer;
+}
+
+.movie-summary {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+}
+.details{
+max-width: 400px;
+padding: 10px;
+}
+
+.movie-summary img {
+  border: 5px solid #fff;
+}
