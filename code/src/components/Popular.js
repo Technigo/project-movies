@@ -8,7 +8,7 @@ export const Popular = ({ title, image, date, id }) => {
   let opacity = { opacity: "1" };
   if (visible) {
     display.display = "block";
-    opacity.opacity = ".6";
+    opacity.opacity = ".4";
   }
   return (
     <div key={id} className="movie">

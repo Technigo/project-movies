@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
 import { Popular } from "components/Popular";
 
 export const PopularList = () => {
   const [movies, setMovies] = useState([]);
-  // const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     fetch(
@@ -13,12 +11,9 @@ export const PopularList = () => {
       .then(res => res.json())
       .then(json => {
         setMovies(json.results);
-        console.log(json.results);
+        // console.log(json.results);
       });
   }, []);
-
-  // let style = { display: "none" };
-  // if (visible) style.display = "block";
 
   return (
     <section className="movies">
@@ -33,12 +28,3 @@ export const PopularList = () => {
     </section>
   );
 };
-
-// <img
-//               src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`}
-//               alt={movie.title}
-//             />
-//             <div id="movie_details">
-//               <h2>{movie.title}</h2>
-//               <p>Released: {movie.release_date}</p>
-//             </div>
