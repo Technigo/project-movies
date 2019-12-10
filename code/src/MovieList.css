@@ -1,0 +1,44 @@
+article{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* align-items: center; */
+  /* justify-content: space-around; */
+}
+
+.movie-list{
+  margin: 12px;
+}
+
+img{
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+  object-position: left;
+  margin: 12px;
+}
+
+.movie-link{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  width:250px;
+  margin: 12px;
+}
+.movie-link .hover-text{
+  
+  display: none;
+  margin: 12px
+}
+
+.movie-link:hover .hover-text{
+  display: block;
+  position: absolute;
+  align-self: flex-start;
+  /* top: -150px; */
+  top: 350px;
+  text-decoration: none;
+  margin: 12px;
+
+}
