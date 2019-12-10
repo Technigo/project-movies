@@ -5,19 +5,30 @@ article{
   background: black;
 }
 
-.movie-link{
-  height: 300px;
-  width:auto;
-  position: relative;
+img{
+  width: 360px;
+  height: auto;
 }
+
+img:hover{
+  opacity: 50%;
+}
+
+
+.movie-list{
+  width: 360px;
+}
+
+
 .movie-details{
   display: none;
   margin: 12px;
 }
 
-.movie-link:hover{
-  /* background: black; */
-  opacity: 50%;
+.movie-link{
+  /* height: auto; */
+  /* width:350px; */
+  position: relative;
 }
 
 .movie-link:hover .movie-details{
@@ -25,7 +36,7 @@ article{
   position: absolute;
   align-self: flex-start;
   /* top: -150px; */
-  top: -100px;
+  top: -150px;
   text-decoration: none;
   margin: 12px;
   color: #FFF;
