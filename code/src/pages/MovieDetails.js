@@ -40,7 +40,7 @@ export const MovieDetails = () => {
   }
 
   return (
-    <div className="app-container">
+    <div>
       {isLoading ? (
         <div>
           <TopBarProgress />
