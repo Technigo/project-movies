@@ -1,0 +1,58 @@
+.movie-list{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+/* .movie-list a{
+    width: 25%;
+} */
+
+.list-movie-info {
+    flex-direction: column;
+    width: 25%;
+    position: relative;
+}
+
+.list-movie-info a {
+    width: 25%;
+    position: relative;
+    /* color: #fff;
+    text-decoration: none; */
+}
+
+.list-movie-info a img {
+width: 100%;
+
+}
+
+.list-img {
+    z-index: 0;
+/*skall bli mörk när hovras*/
+}
+
+.list-movie-info .list-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background: rgba(0,0,0,.75); */ /**makes background dark*/
+    /* display: none;
+    padding: 20px; 
+    z-index: 1; */
+}
+
+.list-text {
+    color: white; /*skall vara vit*/
+    z-index: 2;
+    /*skall synas när hovras*/
+}
+
+h2 {
+    font-size: 1.0em;
+}
+
+h3 {
+    font-size: 0.7em;
+}

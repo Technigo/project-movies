@@ -1,0 +1,31 @@
+.review {
+    display: flex;
+    flex-direction: row;
+}
+
+.background-img {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    min-height: 100vh; /** från technigos kod*/
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: -1;
+    display: flex;
+  
+}
+
+.list-poster {
+    border: 2px solid rgb(245, 5, 5);
+    z-index: 0;
+}
+
+button {
+    z-index: 1;
+    align-self: flex-start;
+}
+
+.text-field {
+    border: 2px solid green;
+    z-index: 2;
+}

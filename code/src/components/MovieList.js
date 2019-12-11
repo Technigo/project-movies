@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import 'components/MovieList.css'
 
 // const api_key = 'd6f26682ba4bf575c167473c911bdd4c';
 
@@ -16,17 +17,16 @@ export const MovieList = () => {
     }, [])
 
     return (
-        <div>
+        <div className="movie-list">
             {movies.map((movie) => (
-                <div key={movie.id}>
-                    <Link to={`/movies${movie.movieId}`}>
-                        <img src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt="Movie poster" />
+                <div className="list-movie-info" key={movie.id}>
+                    <Link to={`/movies/${movie.id}`}>
+                        <img className="list-img" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="Movie poster" />
                     </Link>
-                    <h2>{movie.title}</h2>
-                    <h3>Release date: {movie.release_date}</h3>
-
-
-
+                    <div className="list-text">
+                        <h2>{movie.title}</h2>
+                        <h3>Release date: {movie.release_date}</h3>
+                    </div>
                 </div>
             ))}
 
