@@ -78,7 +78,7 @@ export const MovieDetails = () => {
                       <span>Movies</span>
                     </Link>
                   </div>
-                  <div className={styles.movieInfoGrid}>
+                  <div className={styles.movieInfoFlex}>
                     <div className={styles.movieOverview}>
                       <h2>{movie.original_title}</h2>
                       <p>{movie.overview}</p>
@@ -89,9 +89,9 @@ export const MovieDetails = () => {
                         alt="poster"
                       />
                     </div>
-                    <div className={styles.movieExtra}>
+                    {/* <div className={styles.movieExtra}>
                       <h2>Movie details</h2>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
