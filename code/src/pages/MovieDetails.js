@@ -78,14 +78,14 @@ export const MovieDetails = () => {
                       <span>Movies</span>
                     </Link>
                   </div>
-                  <img
-                    src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
-                    alt="poster"
-                  />
                   <div className={styles.movieOverview}>
                     <h2>{movie.original_title}</h2>
                     <p>{movie.overview}</p>
                   </div>
+                  <img
+                    src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
+                    alt="poster"
+                  />
                 </div>
               </div>
             </div>
