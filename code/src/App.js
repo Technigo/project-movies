@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 import { PopularList } from './pages/PopularList'
-import { Detail } from './pages/Detail'
+import { DetailPage } from './pages/DetailPage'
 
 export const App = () => {
   return (
@@ -11,8 +11,8 @@ export const App = () => {
         <Route path="/" exact>
           <PopularList />
         </Route>
-        <Route exact path="/movie/:movieId" >
-          <Detail />
+        <Route path="/movie/:movieId" >
+          <DetailPage />
         </Route>
 
       </Switch>
