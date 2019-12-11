@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import MoviesOverview from './Components/MoviesOverview.js'
+import MovieDetails from './Components/MovieDetails.js'
 
 const APIKEY = '72df873fd7965d1098248531e4dddca6'
 
@@ -22,23 +25,17 @@ export const App = () => {
     })
   }, [])
   return (
-    <section>
-      {movies.map((movie, index) => {
-        return (
-          <article key={index}>
-            <img 
-              src={`https://image.tmdb.org/t/p/${POSTERSIZE}${movie.poster_path}`} 
-              alt={`Poster for ${movie.title}`}
-            ></img>
-            <div className="overlay">
-              <div className="description">
-                <h3>{movie.title}</h3>
-                <p>Released {movie.release_date}</p>
-              </div>
-            </div>
-          </article>
-        )
-      })}
-    </section>
+    <BrowserRouter>
+      <main>
+        <Switch>
+          <Route path='/' exact>
+            <MoviesOverview movies={movies} posterSize={POSTERSIZE}/>
+          </Route>
+          <Route path={`/movies/:movieId`} exact>
+            <MovieDetails />
+          </Route>
+        </Switch>
+        </main>
+    </BrowserRouter>
   )
 }
