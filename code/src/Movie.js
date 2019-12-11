@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 
 import 'Movie.css'
@@ -17,14 +16,10 @@ export const Movie = () => {
       })
   }, [movieId])
 
-  // console.log(json)
-  // const params = useParams() "This is a hook to get a value and do what we want with it"... What does that mean?
-  // const burgerMatch = burgers.find((burgers) => burger.slug === params.slug)
-  // console.log(burgerMatch)
+
 
   return (
     <article className="about-container" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` }}>
-      {/* <Link to="/">Go back</Link> */}
       <div className="details-container">
         <img src={`https://image.tmdb.org/t/p/w300${movies.poster_path}`} />
         <section class="details">
@@ -35,12 +30,3 @@ export const Movie = () => {
     </article >
   )
 }
-
-
-  //    < div >
-  //    // 
-  //    // </div >
-  //    Här ska det vara en stor background och en mindre bild.
-  //  </div >
-  //  // < div className = "img-container" >
-  //  {/* <Burger name={burgerMatch.name} image={burgerMatch.img} /> */ }

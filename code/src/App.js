@@ -6,9 +6,6 @@ import { Nav } from './Nav'
 
 import 'App.css'
 
-
-// Api Key: 2a89f9965a48e33d809fbd966cc6a018
-
 export const App = () => {
   return (
     <BrowserRouter>
