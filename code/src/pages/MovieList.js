@@ -1,29 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 export const MovieList = () => {
-  const [albums, setAlbums] = useState([])
+  const [movies, setMovies] = useState([])
 
   useEffect(() => {
-    fetch('https://theaudiodb.com/api/v1/json/1/mostloved.php?format=album&format=album')
-      .then((res) => res.json())
-      .then((json) => {
-        setAlbums(json.loved)
-      })
+    fetch(
+      `https://api.themoviedb.org/3/movie/popular?api_key=e0031d94cffec1ccfe74eefb45815869&language=en-US&page=1`
+    )
+      .then(res => res.json())
+      .then(json => setMovies(json.results))
   }, [])
 
   return (
     <div>
-      {albums.map((album) => (
-        <div key={album.idAlbum}>
-          <img src={`${album.strAlbumThumb}/preview`} alt={album.strAlbum} />
-          <h2>{album.strAlbum}</h2>
-          <h3>
-            <Link to={`/artists/${album.idArtist}`}>
-              {album.strArtist}
-            </Link>
-          </h3>
-        </div>
+      {movies.map(movie => (
+        <Link key={movie.id} to={`/movies/${movie.id}`}>
+          <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt = "poster" />
+          <h1>{movie.title}</h1>
+        </Link>
       ))}
     </div>
   )
