@@ -8,7 +8,7 @@ import 'components/MovieDetail.css'
 
 export const MovieDetail = () => {
     const { movieId } = useParams()
-    const [movie, setMovie] = useState([])
+    const [movie, setMovie] = useState()
 
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=d6f26682ba4bf575c167473c911bdd4c&language=en-US`)
