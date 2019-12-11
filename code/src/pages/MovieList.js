@@ -26,7 +26,7 @@ export const MovieList = () => {
             {/* style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w342${movie.poster_path})` }}> */}
             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}></img>
             <div className="title-release" key={movie.id}>
-              <h2>{movie.title}</h2>
+              <h1>{movie.title}</h1>
               <p>Released: {movie.release_date}</p>
             </div>
           </Link>
