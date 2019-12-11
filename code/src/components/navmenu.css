@@ -22,6 +22,7 @@
   border-radius: 3px;
   width: 200px;
   text-transform: uppercase;
+  font-family: 'Tomorrow', sans-serif;
 }
 
 .dropdownContent {
@@ -29,6 +30,7 @@
   position: absolute;
   background: #f1f1f1;
   z-index: 1;
+  border-radius: 0 0 3px 3px;
 }
 
 .dropdownContent button {
@@ -36,8 +38,10 @@
   color: #000;
   padding: 15px;
   text-decoration: none;
+  border-radius: 0 0 3px 3px;
   border: none;
   width: 100%;
+  font-family: 'Tomorrow', sans-serif;
 }
 
 .dropdownContent button:hover {
@@ -48,7 +52,6 @@
 .dropdown:hover .dropdownContent {
   display: block;
   width: 100%;
-  border-radius: 0 0 3px 3px;
 }
 
 .dropdown:hover .dropdownButton {
