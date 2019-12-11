@@ -11,16 +11,21 @@ export const MovieDetails = () => {
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
 
+  const id = isNaN(movieId);
+  console.log('is not a number', id);
+
   useEffect(() => {
     console.log(movieId);
     setIsLoading(true);
     API.getMovie(movieId)
       .then(data => {
+        console.log(data);
         setMovie(data);
         setIsLoading(false);
         SetErrorLoading(false);
       })
       .catch(err => {
+        console.log(err);
         setMovie({});
         SetErrorLoading(true);
       });
@@ -34,6 +39,8 @@ export const MovieDetails = () => {
     shadowBlur: 5,
     barThickness: 2
   });
+
+  console.log(errorLoading);
 
   if (errorLoading) {
     history.push('/');

@@ -47,7 +47,7 @@ export const MovieList = () => {
               );
             })
             .map(movie => (
-              <Link key={movie.id} to={`/movie/${movie.id}`}>
+              <Link key={movie.id} to={`/temp/${movie.id}`}>
                 <div className={styles.movie}>
                   <img
                     src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
