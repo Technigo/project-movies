@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,4 +14,108 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.movie-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+  position: relative;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.overlay {
+  display: none;
+  color: white;
+  background: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  justify-content: left;
+  align-items: flex-end;
+}
+
+.movie-wrap:hover .overlay {
+  display: flex;
+}
+
+.small-image {
+  width: 100%;
+  display: block;
+}
+
+.big-image {
+  background-size: fill;
+}
+
+.link-wrap {
+  display: flex;
+  text-decoration: none;
+}
+
+.back-button {
+  width: 30px;
+  height: 30px;
+  margin: 40px 10px 40px 20px;
+}
+
+.link-wrap {
+  color: white;
+  /* transition: margin-right 0.2s ease-in-out; */
+  left: 50px;
+  top: 20px;
+  position: absolute;
+  display: flex;
+}
+
+h4 {
+  margin-top: 45px;
+}
+
+.movie-info {
+  display: inline-block;
+  max-width: 400px;
+  margin-left: 20px;
+  color: white;
+}
+
+.background {
+  position: absolute;
+  background-size: cover;
+  min-height: 100vh;
+  width: auto;
+  justify-content: flex-end;
+  align-items: flex-end;
+  /* flex-direction: column; */
+  display: flex;
+}
+
+.summary {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 50px;
+}
+
+.summary img {
+  border: 5px solid #fff;
+}
+
+.rating {
+  font-size: 17px;
+  color: red;
+  margin-left: 10px;
+  font-weight: 400;
 }
