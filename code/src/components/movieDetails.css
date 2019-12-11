@@ -8,11 +8,23 @@
   grid-template-areas: 
   "nav nav nav"
   "poster ... ..."
-  "poster title ..."
+  "poster title title"
   "poster synopsis ...";
   height: 100%;
   padding: 3rem;
+  position: relative;
   width: 100%;
+}
+
+/* Background gradient for movie backdrop */
+.movie-details::after {
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 100%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
 }
 
 .return-link {
@@ -22,6 +34,7 @@
   margin-right: 1.5rem;
   position: relative;
   text-decoration: none;
+  z-index: 1;
 }
 
 .return-link::before {
@@ -37,6 +50,7 @@
   align-self: end;
   border: 5px solid #fff;
   grid-area: poster;
+  z-index: 1;
 }
 
 .movie-details .movie-title {
@@ -46,6 +60,7 @@
   margin-bottom: 0;
   align-self: end;
   grid-area: title;
+  z-index: 1;
 }
 
 .movie-rating {
@@ -56,4 +71,5 @@
 
 .movie-synopsis {
   grid-area: synopsis;
+  z-index: 1;
 }
