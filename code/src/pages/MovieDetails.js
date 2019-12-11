@@ -80,7 +80,10 @@ export const MovieDetails = () => {
                   </div>
                   <div className={styles.movieInfoFlex}>
                     <div className={styles.movieOverview}>
-                      <h2>{movie.original_title}</h2>
+                      <h2>
+                        {movie.original_title}
+                        <span>{Math.floor(movie.vote_average)}/10</span>
+                      </h2>
                       <p>{movie.overview}</p>
                     </div>
                     <div className={styles.moviePoster}>

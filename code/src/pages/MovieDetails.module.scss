@@ -66,6 +66,15 @@
     margin-top: 30px;
     margin-bottom: 10px;
     // border: 1px solid red;
+
+    h2 {
+      span {
+        display: inline-block;
+        margin-left: 20px;
+        color: red;
+        // font-weight: 200;
+      }
+    }
   }
 
   .movieExtra {
@@ -113,11 +122,13 @@ p {
     // border: 2px solid yellow;
     height: 100vh;
     position: relative;
+    padding-left: 40px;
+    // padding-bottom: 40px;
   }
 
   .movieInfoFlex{
     position: absolute;
-    bottom: 30px;
+    bottom: 40px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
@@ -127,51 +138,29 @@ p {
     .movieOverview {
       width: 70%;
       // border: 1px solid blue;
+      margin-bottom: 30px;
       padding: 0 30px;
     }
     
     .moviePoster {
       width: 30%;
       // border: 4px solid green;
-      margin-right: 10  px;
+      margin-right: 10px;
       img {
         width: 100%;
+        // max-height: 400px;
       }
     }
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .content {
-    .movieInfoGrid {
-      display: flex;
-      // border: 1px solid green;
-    }
-
-    .movieOverview {
-      width: 30%;
-      margin-top: 30px;
-      margin-right: 80px;
-      // border: 1px solid red;
-    }
-
+@media screen and (min-width: 1000px) {
+  .movieInfoFlex {
     .moviePoster {
-      width: 27%;
-      margin-top: 10px;
-      // border: 1px solid blue;
-
-      img {
-        display: block;
-        width: 100%;
-        margin-top: 24px;
-        border: 5px solid white;
-      }
+      width: 25%;
     }
-
-    .movieExtra {
-      margin-top: 30px;
-      margin-left: 60px;
-      // border: 1px solid yellow;
+    .movieOverview {
+      width: 50%;
     }
   }
 }
