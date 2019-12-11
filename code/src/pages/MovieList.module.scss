@@ -17,7 +17,7 @@
 
 .overlay {
   width: 0%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -45,13 +45,13 @@ h1 {
   margin-bottom: 10px;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 600px) {
   .movieList {
     grid-template-columns: repeat(2, 50%);
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 800px) {
   .movieList {
     grid-template-columns: repeat(4, 25%);
   }

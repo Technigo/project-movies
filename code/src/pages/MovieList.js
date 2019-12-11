@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import * as API from '../api/Api';
 import styles from './MovieList.module.scss';
+// import TopBarProgress from 'react-topbar-progress-indicator';
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -23,7 +24,12 @@ export const MovieList = () => {
     <div className={styles.movieList}>
       {movies
         .filter(movie => {
-          return movie.id !== 540247 && movie.id !== 449924;
+          return (
+            movie.id !== 540247 &&
+            movie.id !== 449924 &&
+            movie.id !== 474350 &&
+            movie.id !== 492188
+          );
         })
         .map(movie => (
           <Link key={movie.id} to={`/movie/${movie.id}`}>
