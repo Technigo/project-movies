@@ -15,11 +15,12 @@ export const MovieList = (props) => {
     <section className="movie-list">
       {movies.map((movie) => {
         return (
-          <Link to={`/movies/${movie.id}`} key={movie.id} className="movie-link">
-            <article className="movie" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w342${movie.poster_path})` }} >
-              <h2 className="movie-title">{movie.title}</h2>
-              <p className="movie-release-date">Release date: {movie.release_date}</p>
-            </article>
+          <Link to={`/movies/${movie.id}`} key={movie.id} className="list-movie-link">
+            <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="" className="list-movie-poster" />
+            <div className="list-movie-details">
+              <h2 className="list-movie-title">{movie.title}</h2>
+              <p className="list-movie-release-date">Release date: {movie.release_date}</p>
+            </div>
           </Link>
         )
       })}

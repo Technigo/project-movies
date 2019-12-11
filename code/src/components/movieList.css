@@ -1,54 +1,45 @@
 .movie-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  background-color: #000;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 
-.movie-link {
-  text-decoration: none;
+.list-movie-link {
+  color: #fff;
+  position: relative;
+  width: 25%;
 }
 
-.movie {
-  justify-content: flex-end;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.list-movie-poster {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.list-movie-details {
   display: flex;
   flex-direction: column;
-  height: 513px;
-  position: relative;
-  width: 100%;
-}
-
-.movie:hover::after {
-  background-color: #000;
-  content: '';
+  left: 0;
   height: 100%;
-  opacity: 0.6;
+  justify-content: flex-end;
+  padding: 0 1.5rem;
   position: absolute;
   top: 0;
+  visibility: hidden;
   width: 100%;
-  z-index: 2;
 }
 
-.movie-title,
-.movie-release-date {
-  color: #fff;
-  padding: 0 1.5rem;
-  position: relative;
-  z-index: -1;
+.list-movie-link:hover .list-movie-details {
+  background-color: rgba(0,0,0,0.7);
+  visibility: visible;
 }
 
-.movie:hover .movie-title,
-.movie:hover .movie-release-date {
-  z-index: 3;
-}
-
-.movie-title {
+.list-movie-title {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.movie-release-date {
+.list-movie-release-date {
   margin-bottom: 2rem;
 }
