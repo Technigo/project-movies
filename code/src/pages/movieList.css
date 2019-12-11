@@ -6,27 +6,32 @@ h1 {
     padding: 0px;
     margin: 0px;
     color: white;
-    font-size: 35px;
+    font-size: 42px;
 }
 
 p {
     color: white;
 }
+
 .moviePoster {
     background-color: black;
-    position: relative;
-    display: flex;
+    position: relative; 
+    max-width: 25%;
     flex-direction: row;
     flex-wrap: wrap;
-    box-sizing: border-box;
-    float: left;  
+}
+
+.moviePoster img {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .titleRelease {
     position: absolute;
     bottom: 0;
     left: 0;
-    /*background: rgba(0,0,0,.75);*/
     background-size: cover;
     display: none;
     padding: 20px;
@@ -43,4 +48,6 @@ p {
 .moviePoster:hover .titleRelease {
     display: block;
 }
+
+/********* MEDIA QUERIES ********/
 
