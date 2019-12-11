@@ -1,17 +1,48 @@
-.list{
+.all-movies{
 display: flex;
 flex-wrap: wrap;
 }
-.poster img{
+.all-movies img{
 width:100%;
-
+}
+.poster a:hover img{
+  opacity: 0.3;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) */
 }
 .poster{
+  position: relative;
+  width:25%;
+}
+.title-release{
+  display:none;
+}
+.poster:hover .title-release{
+  display:flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
+.poster a{
+text-decoration: none;
+color: white;
+}
+
+.poster{
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width:100%;
+  min-height:500px; */
+  /* width: 25%; */
 }
-.list a{
-  width:21%;
+.all-movies a{
+  /* width:25%; */
 }
-p{
-  font-size: 10px;
+/* .list a:hover{
+  background: rgba(0,0,0,0.75);
+} */
+.poster p{
+  margin-top: 0;
+  font-size: 16px;
 }
