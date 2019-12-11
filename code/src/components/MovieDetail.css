@@ -1,23 +1,59 @@
-.review {
+.review-container {
+   position: relative;
+}
+
+.review-container .background-img {
+    min-height: 100vh;
+    background-size: cover;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.review-container .back-link {
+    position: absolute;
+    display: inline-flex;
+    color: #fff;
+    align-items: center;
+    font-weight: 700;
+    text-decoration: none;
+    left: 50px;
+    top: 50px;
+}
+
+.back-link-img {
+    width: 10%;
 }
 
 .background-img {
-    background-size: cover;
-    width: 100%;
-    height: auto;
-    min-height: 100vh; /** från technigos kod*/
-    flex-direction: column;
-    justify-content: flex-end;
+    /* background-size: cover; */
+    /* width: 100%; */
+    /* height: auto;
+    min-height: 100vh; */ /*från technigos kod */
+    /* flex-direction: column; */
+    /* justify-content: flex-end; */
     z-index: -1;
-    display: flex;
+    /* display: flex; */
   
 }
 
-.list-poster {
-    border: 2px solid rgb(245, 5, 5);
-    z-index: 0;
+.review-container .review-section {
+    position: absolute;
+    top: 333px;
+    left: 67px;
+}
+
+.review-section {
+display: flex;
+flex-direction: row;
+z-index: 0; 
+height: fit-content;
+align-items: flex-end; /** makes the text and pic align**/
+}
+
+.poster-img {
+    height: fit-content;
+    border: 5px solid #fff;
 }
 
 button {
@@ -26,6 +62,23 @@ button {
 }
 
 .text-field {
-    border: 2px solid green;
-    z-index: 2;
+    height: fit-content;
+    color: #fff;
+    margin-left: 15px; 
+}
+
+.title-vote {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+h1 {
+    font-size: 3vW;
+}
+
+span {
+color: red;
+font-weight: 800;
+padding-left: 15px;
 }
