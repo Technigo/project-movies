@@ -16,18 +16,22 @@ export const MovieInfo = () => {
     }, [movieId])
 
     return(
-         <div>
-             <h1>{movie.overview}</h1>
-             <img src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.original_title} />
-             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title} />
-             <h1>{movie.original_title}</h1>
-             <h2>{movie.vote_average}</h2>
-                
-       { /*     {movies.map((movie) => (
-        //         <div key={movie.id}>
-        //             <h1>{movie.overview}</h1>
-        //         </div>
-       //     ))} */}
-        </div> 
+        <section className="infoContainer">
+            {/*background picture for the site*/}
+            <img className="backDrop" src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.original_title} />
+             {/*contains poster, text about movie, title and rating*/}
+            <div className="aboutContainer">
+                <div className="infoPoster">             
+                    <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title} />
+                </div> 
+                <div className="titleInfo">   
+                         {/*contains title and rating*/} 
+                        <h1 className="movieTitle">{movie.original_title}
+                            <p className="movieVotes">{movie.vote_average}/10</p>
+                        </h1>
+                        <p>{movie.overview}</p>
+                </div>  
+            </div>
+        </section> 
     )
 }
