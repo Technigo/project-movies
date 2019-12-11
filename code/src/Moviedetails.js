@@ -21,7 +21,7 @@ export const Moviedetails = () => {
     return(
         <div className="detailPage">
             <div className="background-image">
-                <img  src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}/>
+                <img src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}/>
             </div>
             <Link to={`/`}>
             <div className="backLink"> 

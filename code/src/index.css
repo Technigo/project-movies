@@ -18,20 +18,36 @@ code {
 .movieList{
   display: flex;
   flex-wrap: wrap;
+
+}
+
+.moviePoster{
   background-color: black;
-}
-
-.movieListImg{
-  height: 300px;
-}
-
-.movie{
+  position: relative;
   width: 25%;
-  display: flex;
+  
+}
+
+.moviePoster Img{
+width:100%;
+}
+
+.moviePoster:hover {
+ filter: brightness(25%);
 }
 
 .title{
-  z-index: 100;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  display: none;
+  padding: 20px;
+}
+
+.moviePoster:hover .title {
+ display: block;
 }
 
 .detailPage{
@@ -42,6 +58,7 @@ code {
 .background-image{
   position: absolute;
   z-index: -1;
+  
 }
 
 .summaryBox{
@@ -69,6 +86,9 @@ code {
   display: flex;
   color: white;
   align-items: center;
+  position: absolute;
+  margin-top: 55px;
+  margin-left: 55px;
 }
 
 .backLink p{
