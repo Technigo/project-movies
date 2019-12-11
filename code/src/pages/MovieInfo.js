@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import "./movieInfo.css"
 
+
 export const MovieInfo = () => {
     const { movieId } = useParams()
     const [movie, setMovie] = useState([])
@@ -17,21 +18,26 @@ export const MovieInfo = () => {
     }, [movieId])
 
     return (
+        <section className="infoContainer">
+            {/* poster, text about the movie, title and ratings */}
 
-        <div>
-            <p className="titleInfoPage">{movie.original_title}</p>
-            <p className="votesInfoPage">{movie.vote_average}/10</p>
-
-            <p className="movieText">{movie.overview}</p>
-            <section className="backDropPoster">
-                <img className="backdropMoviePoster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="movie.poster_path" />
-            </section>
+            {/* <section className="detailsContainer"> */}
             <img className="backdrop" src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt="movie.backdrop_path" />
-
-
-
-        </div >
+            {/* background image */}
+            <div className="aboutContainer">
+                <div className="infoPoster">
+                    <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="movie.poster_path" />
+                </div>
+                <div className="titleInfo">
+                    {/* title and ratings */}
+                    <h1 className="movieTitle">{movie.original_title}</h1>
+                    <p className="movieVotes">{movie.vote_average}/10</p>
+                    <p className="movieText">{movie.overview}</p>
+                </div>
+            </div>
+        </section>
     )
 }
+
 
 
