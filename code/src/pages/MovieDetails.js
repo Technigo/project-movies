@@ -38,7 +38,8 @@ export const MovieDetails = () => {
   return (
     <div className="bg">
       <img src={`https://image.tmdb.org/t/p/w1280${bg}`} alt="" />
-      <div className="theInfo"><h2>{title}</h2>
+      <div className="theInfo">
+        <h2>{title}</h2>
         <h3>{info}</h3>
         <p><a href={website}>{website}</a></p>
       </div>

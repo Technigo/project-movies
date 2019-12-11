@@ -37,6 +37,12 @@
                         align-items: space-between;
                     }
                     
+                    .bg {
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                    }
+                    
                     .theInfo {
                         color: white;
                         width: 600px;
@@ -97,6 +103,68 @@
                     }
                     
                     @media (max-width: 1024px) {
+                        body {
+                            margin: auto;
+                            padding: 0;
+                            background-color: black;
+                            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+                            -webkit-font-smoothing: antialiased;
+                            -moz-osx-font-smoothing: grayscale;
+                        }
+                        .postersCont {
+                            display: flex;
+                            flex-direction: row;
+                            padding: 0;
+                            margin: auto;
+                            width: 100%;
+                        }
+                        .posters {
+                            margin: auto;
+                            padding: 0;
+                            width: 50%;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .posterInfo {
+                            display: none;
+                            color: white;
+                            position: relative;
+                            top: -80px;
+                            left: 20px;
+                        }
+                        .posters:hover .posterInfo {
+                            position: relative;
+                            top: -90px;
+                            display: none;
+                            color: white;
+                            font-size: 1.5rem;
+                        }
+                        .theInfo {
+                            font-size: 0.8rem;
+                            color: white;
+                            width: 400px;
+                            position: relative;
+                            top: 10px;
+                        }
+                        .back {
+                            position: absolute;
+                            top: 10px;
+                            left: 10px;
+                        }
+                        a {
+                            text-decoration: none;
+                            font-size: 1.2rem;
+                            color: darkolivegreen;
+                            padding: 10px;
+                        }
+                        a:hover {
+                            text-decoration: none;
+                            font-size: 1rem;
+                            color: white;
+                        }
+                    }
+                    
+                    @media (max-width: 650px) {
                         body {
                             margin: auto;
                             padding: 0;
