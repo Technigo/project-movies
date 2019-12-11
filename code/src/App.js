@@ -1,10 +1,26 @@
 import React from 'react'
-import { MoviePoster } from 'components/MoviePoster'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import { MoviePoster } from 'MoviePoster'
+import { Moviedetails } from 'MovieDetails'
+
 
 export const App = () => {
   return (
-    <div>
-      <MoviePoster />
+    <div className="movies">
+    
+      
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact>
+            <MoviePoster />
+          </Route>
+          {/* <Route path={`/${movie.id}`} exact> */}
+            <Moviedetails />
+          {/* </Route> */}
+        </Switch>
+      </BrowserRouter>
+
+      
     </div>
   )
 }

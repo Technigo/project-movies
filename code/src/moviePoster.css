@@ -1,0 +1,46 @@
+h1, h2, h3 {
+    display: inline;
+    color: white;
+}
+.movies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.movie:hover img {
+    /* position: relative; */
+    opacity: 0.3;
+    transition: 0.2s;
+    z-index: 0;
+}
+
+img {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+/* img:hover {
+    position: relative;
+    opacity: 0.3;
+} */
+
+.movieinfo {
+    position: absolute;
+    visibility: hidden;
+
+}
+
+.movie:hover .moviedetails {
+    visibility: visible;
+    position: absolute;
+    z-index: 2;
+}
+
+
