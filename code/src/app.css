@@ -1,0 +1,40 @@
+/* LOADING CIRCLE */
+
+.circle{
+  animation: 1.4s circle--animation ease-in-out infinite;
+  stroke-linecap: round;
+  transform-origin: 50% 50%;
+  stroke: linear-gradient(to right, #FFADAD, purple);
+}
+
+@keyframes circle--animation {
+  0%, 25% {
+    stroke-dasharray: 4 247;
+    transform: rotate(0deg);
+  }
+  50%, 75% {
+    stroke-dasharray: 188 73;
+    transform: rotate(45deg);
+  }
+  100% {
+    stroke-dasharray: 4 247;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes svg--animation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg)
+  }
+}
+
+.loading {
+  margin: 30px;
+  text-align: center;
+}
+.circle svg {
+    animation: 2s linear infinite svg--animation;
+}

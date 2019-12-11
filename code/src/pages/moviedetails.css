@@ -9,7 +9,7 @@
     color: #fff;
 }
 
-.go-back, svg{
+.go-back, .go-back-icon {
   position: absolute;
   display: inline-flex;
   align-items: center;
@@ -18,8 +18,9 @@
   left: 58px;
   top: 53px;
   color: #fff;
+  margin: 0px;
 }
-svg {
+.go-back-icon {
   width: 25px;
   left:30px;
   top: 50px;
@@ -38,9 +39,17 @@ svg {
 .details{
 max-width: 400px;
 padding: 10px;
+background: rgba(0, 0, 0, 0.349);
+margin-left: 5px;
 }
 
 .movie-summary img {
   border: 5px solid #fff;
+}
+
+.rating {
+  margin-left: 10px;
+  color: red;
+  font-size: 16px;
 }
 

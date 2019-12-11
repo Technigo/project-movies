@@ -43,6 +43,8 @@ display:block;
   margin-bottom: 0;
 }
 
-svg {
-  width: 25px;
+footer{
+  color: #fff;
+  padding: 5px;
+  text-align: center;
 }
