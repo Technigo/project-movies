@@ -78,14 +78,21 @@ export const MovieDetails = () => {
                       <span>Movies</span>
                     </Link>
                   </div>
-                  <div className={styles.movieOverview}>
-                    <h2>{movie.original_title}</h2>
-                    <p>{movie.overview}</p>
+                  <div className={styles.movieInfoGrid}>
+                    <div className={styles.movieOverview}>
+                      <h2>{movie.original_title}</h2>
+                      <p>{movie.overview}</p>
+                    </div>
+                    <div className={styles.moviePoster}>
+                      <img
+                        src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
+                        alt="poster"
+                      />
+                    </div>
+                    <div className={styles.movieExtra}>
+                      <h2>Movie details</h2>
+                    </div>
                   </div>
-                  <img
-                    src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
-                    alt="poster"
-                  />
                 </div>
               </div>
             </div>
