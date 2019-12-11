@@ -3,25 +3,68 @@
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  // padding: 20px;
 }
 
 .overlay {
   width: 100%;
   height: 100vh;
-  // background: linear-gradient(to right, rgba(0, 0, 0, 1) 20%,  rgba(0, 0, 0, 0) 30%);
-  background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0) 40%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.25) 30%, rgba(0, 0, 0, 0) 40%);
 }
 
-p {
+.movieOverview {
+  width: 100%;
+  // background: rgba(0, 0, 0, 0.3);
+  margin-top: 35px;
+  // padding: 25px;
+  // border-radius: 15px;
+  // border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.content {
+  width: 100%;
+  padding: 20px;
+
+  img {
+    width: 100%;
+    max-width: 400px;
+    border: 5px solid white;
+    margin: 30px 0 0px 0;
+  }
+
+  svg {
+    width: 9%;
+  }
+
+  .backLink {
+    position: relative;
+    color: white;
+    text-decoration: none;
+
+    span {
+      position: absolute;
+      top: -6px;
+      left: 27px;
+      transition: all .1s ease-out
+    }
+
+    &:hover span {
+      left: 32px;
+    }
+  }
+}
+
+h3, h2, p {
   color: white;
 }
 
-a {
-  color: blue;
+h2 {
+  margin-bottom: 15px;
+  font-weight: 900;
+}
 
-  &:hover {
-    color: red;
-  }
+p {
+  font-weight: 100;
 }
 
 @media screen and (min-width: 750px) {
