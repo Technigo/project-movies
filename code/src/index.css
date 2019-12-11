@@ -2,6 +2,10 @@
                         box-sizing: 0;
                     }
                     
+                    html {
+                        max-width: 1600px;
+                    }
+                    
                     body {
                         margin: 0;
                         padding: 0;
