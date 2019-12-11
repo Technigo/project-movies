@@ -32,21 +32,18 @@ export const MovieDetails = () => {
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
-        .then((json) => { setBg(json.backdrop_path) })
+      .then((json) => { setBg(json.backdrop_path) })
   }, [detailId])
 
   return (
     <div className="bg">
-          <img src={`https://image.tmdb.org/t/p/w1280${bg}`} alt="" />
+      <img src={`https://image.tmdb.org/t/p/w1280${bg}`} alt="" />
       <div className="theInfo"><h2>{title}</h2>
         <h3>{info}</h3>
         <p><a href={website}>{website}</a></p>
       </div>
-          <div className="back"><Link to={"/"}>Back to movies</Link></div>
+      <div className="back"><Link to={"/"}>Back to movies</Link></div>
     </div>
 
   )
 }
-
-
-

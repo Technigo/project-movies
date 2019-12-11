@@ -1,67 +1,131 @@
-* {
-    box-sizing: 0;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-.postersCont {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.posters {
-    margin: 0;
-    padding: 0;
-    width: 25%;
-    justify-content: center;
-    align-items: center;
-}
-
-.theInfo {
-    color: white;
-    width: 600px;
-    position: relative;
-    margin-left: 50px;
-    top: -300px;
-}
-
-.bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.back {
-    font-size: 1.2rem;
-    color: silver;
-    position: absolute;
-    top: 20px;
-    left: 20px
-}
-
-a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: darkolivegreen;
-}
-
-a:hover {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: white;
-}
+                    * {
+                        box-sizing: 0;
+                    }
+                    
+                    body {
+                        margin: 0;
+                        padding: 0;
+                        background-color: black;
+                        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                    }
+                    
+                    code {
+                        font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+                    }
+                    
+                    .postersCont {
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        width: 100%;
+                    }
+                    
+                    .posters {
+                        margin: 0;
+                        padding: 0;
+                        width: 25%;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    .theInfo {
+                        color: white;
+                        width: 600px;
+                        position: relative;
+                        margin-left: 50px;
+                        top: -300px;
+                    }
+                    
+                    .posterInfo {
+                        display: none;
+                        color: white;
+                        position: relative;
+                        top: -80px;
+                        left: 20px;
+                    }
+                    
+                    .posters:hover .posterInfo {
+                        position: relative;
+                        top: -90px;
+                        display: inline;
+                        color: white;
+                        font-size: 1.5rem;
+                    }
+                    
+                    .posters:hover img {
+                        position: relative;
+                        opacity: 0.6;
+                        display: inline;
+                        color: white;
+                        font-size: 1.5rem;
+                    }
+                    /*.info .hoverInfo img:hover */
+                    
+                    .bg img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    
+                    .back {
+                        font-size: 1.2rem;
+                        color: silver;
+                        position: absolute;
+                        top: 20px;
+                        left: 20px
+                    }
+                    
+                    a {
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        color: darkolivegreen;
+                    }
+                    
+                    a:hover {
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        color: white;
+                    }
+                    
+                    @media (max-width: 1024px) {
+                        body {
+                            margin: auto;
+                            padding: 0;
+                            background-color: black;
+                            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+                            -webkit-font-smoothing: antialiased;
+                            -moz-osx-font-smoothing: grayscale;
+                        }
+                        .postersCont {
+                            display: flex;
+                            flex-direction: column;
+                            padding: 0;
+                            margin: auto;
+                            width: 100%;
+                        }
+                        .posters {
+                            margin: auto;
+                            padding: 0;
+                            width: 50%;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .posterInfo {
+                            display: none;
+                            color: white;
+                            position: relative;
+                            top: -80px;
+                            left: 20px;
+                        }
+                        .posters:hover .posterInfo {
+                            position: relative;
+                            top: -90px;
+                            display: none;
+                            color: white;
+                            font-size: 1.5rem;
+                        }
+                    }
