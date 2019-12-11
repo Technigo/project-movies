@@ -12,7 +12,7 @@ export const NavMenu = (props) => {
     <section className="navWrapper">
       <nav role="navigation">
         <div className="dropdown">
-          <button className="dropdownButton">Choose cathegory</button>
+          <button className="dropdownButton">Choose category</button>
           <div className="dropdownContent">
             <button onClick={() => setMovieList("popular")} >Popular movies</button>
             <button onClick={() => setMovieList("top_rated")}>Top rated movies</button>
