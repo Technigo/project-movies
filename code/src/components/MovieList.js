@@ -15,7 +15,7 @@ export const MovieList = (props) => {
     <section className="movie-list">
       {movies.map((movie) => {
         return (
-          <Link to={`/movies/${movie.id}`} key={movie.id}>
+          <Link to={`/movies/${movie.id}`} key={movie.id} className="movie-link">
             <article className="movie" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w342${movie.poster_path})` }} >
               <h2 className="movie-title">{movie.title}</h2>
               <p className="movie-release-date">Release date: {movie.release_date}</p>
