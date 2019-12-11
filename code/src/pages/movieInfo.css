@@ -1,12 +1,16 @@
- 
-
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
 .backdrop {
     /* width: 100%;  
     /* position: relative; */
-    height: 100vh;
+    height: 100%;
     background-size: cover;
     display: flex;
     flex-wrap: wrap;
+    background-repeat: no-repeat;
 } 
 
 .movieText {
@@ -22,7 +26,6 @@
     max-width: 300px;
 } 
 
-
 .backdropMoviePoster {
     display: flex;
     justify-content: flex-end;
@@ -36,8 +39,7 @@
     display: flex;
     position: absolute;
     margin-top: 480px;
-    margin-left: 420px;
-   
+    margin-left: 420px;  
 } 
 
 .votesInfoPage {
