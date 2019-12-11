@@ -1,24 +1,28 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-export const ArtistDetail = () => {
-  const { artistId } = useParams()
+export const MovieList = () => {
   const [albums, setAlbums] = useState([])
 
   useEffect(() => {
-    fetch(`https://theaudiodb.com/api/v1/json/1/album.php?i=${artistId}`)
+    fetch('https://theaudiodb.com/api/v1/json/1/mostloved.php?format=album&format=album')
       .then((res) => res.json())
       .then((json) => {
-        setAlbums(json.album)
+        setAlbums(json.loved)
       })
-  }, [artistId])
+  }, [])
 
   return (
     <div>
       {albums.map((album) => (
         <div key={album.idAlbum}>
           <img src={`${album.strAlbumThumb}/preview`} alt={album.strAlbum} />
-          <h1>{album.strAlbum}</h1>
+          <h2>{album.strAlbum}</h2>
+          <h3>
+            <Link to={`/artists/${album.idArtist}`}>
+              {album.strArtist}
+            </Link>
+          </h3>
         </div>
       ))}
     </div>

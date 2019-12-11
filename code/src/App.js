@@ -1,17 +1,17 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import { AlbumList } from 'pages/AlbumList'
-import { ArtistDetail } from 'pages/ArtistDetail'
+import { MovieList } from 'pages/MovieList'
+import { MovieDetail } from 'pages/MovieDetail'
 
 export const App = () => {
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/" exact>
-          <AlbumList />
+          <MovieList />
         </Route>
         <Route path="/artists/:artistId">
-          <ArtistDetail />
+          <MovieDetail />
         </Route>
       </Switch>
     </BrowserRouter>
