@@ -12,11 +12,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #fff;
   font-family: "Roboto", sans-serif;
+  height: 100%;
+  width: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+main {
+  height: 100%;
+  width: 100%;
 }
 
 /* .movies {
