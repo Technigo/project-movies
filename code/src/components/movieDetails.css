@@ -3,21 +3,35 @@
   color: #fff;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: 22rem 25rem auto;
   grid-template-rows: repeat(4, auto);
   grid-template-areas: 
-  "nav nav nav nav nav nav nav nav"
-  "poster poster ... ... ... ... ... ..."
-  "poster poster title title title ... ... ..."
-  "poster poster synopsis synopsis synopsis ... ... ...";
+  "nav nav nav"
+  "poster ... ..."
+  "poster title ..."
+  "poster synopsis ...";
   height: 100%;
   padding: 3rem;
   width: 100%;
 }
 
-.movie-navigation {
+.return-link {
+  color: #fff;
+  font-weight: bold;
   grid-area: nav;
+  margin-right: 1.5rem;
+  position: relative;
+  text-decoration: none;
 }
+
+.return-link::before {
+ content: "<"
+}
+
+.return-link:hover::before {
+  margin-right: 0.5rem;
+}
+
 
 .movie-poster {
   align-self: end;
@@ -25,12 +39,19 @@
   grid-area: poster;
 }
 
-.movie-overview .movie-title {
+.movie-details .movie-title {
+  font-size: 1.5rem;
   z-index: inherit;
   padding: 0;
   margin-bottom: 0;
   align-self: end;
   grid-area: title;
+}
+
+.movie-rating {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #ff0000;
 }
 
 .movie-synopsis {

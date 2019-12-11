@@ -6,8 +6,8 @@ import { MovieDetails } from './components/MovieDetails'
 export const App = () => {
 
   return (
-    <main>
-      <Router>
+    <Router>
+      <main>
         <Switch>
           <Route path="/" exact>
             <MovieList />
@@ -16,7 +16,7 @@ export const App = () => {
             <MovieDetails />
           </Route>
         </Switch>
-      </Router>
-    </main>
+      </main>
+    </Router>
   )
 }

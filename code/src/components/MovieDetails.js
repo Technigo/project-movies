@@ -14,11 +14,9 @@ export const MovieDetails = (props) => {
 
   return (
     <article className="movie-details" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})` }} >
-      <nav className="movie-navigation">
-        <Link to="/">
-          Movies
+      <Link to="/" className="return-link">
+        Movies
         </Link>
-      </nav>
       <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
       <h1 className="movie-title">{movie.title} <span className="movie-rating">{movie.vote_average}/10</span></h1>
       <p className="movie-synopsis">{movie.overview}</p>
