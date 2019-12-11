@@ -50,7 +50,7 @@ export const MovieList = () => {
               <Link key={movie.id} to={`/movies/${movie.id}`}>
                 <div className={styles.movie}>
                   <img
-                    src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
+                    src={`http://image.tmdb.org/t/p/w780${movie.poster_path}`}
                     alt="poster"
                   />
                   <div className={styles.overlay}>
