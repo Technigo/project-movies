@@ -1,0 +1,46 @@
+.movie-detail {
+  height: 100vh;
+}
+
+.shading {
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.048), rgba(0, 0, 0, 0.048), black);
+  padding: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-poster {
+  border: 8px #fff solid;
+}
+
+.movie-overview {
+  width: 328px;
+  color: #fff;
+  padding: 15px;
+  background-color: rgba(248, 248, 248, 0);
+  align-self: flex-end;
+  font-size: 17px;
+}
+
+.rating {
+  margin-left: 10px;
+  color: red;
+  font-size: 17px;
+  font-weight: normal;
+}
