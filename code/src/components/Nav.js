@@ -12,7 +12,7 @@ export const Nav = (props) => {
     <section className="navWrapper">
       <form>
         <label>
-          <h3>Select a list</h3>
+          <h3>Choose movie cathegory</h3>
           <div className="selectMain">
             <select
               onChange={event => setMovieList(event.target.value)}
