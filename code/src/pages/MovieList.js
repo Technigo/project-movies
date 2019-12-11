@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Nav } from '../components/Nav'
+import { NavMenu } from '../components/NavMenu'
 import './movielist.css'
 
 export const MovieList = () => {
@@ -31,7 +31,7 @@ export const MovieList = () => {
   return (
 
     <section className="movieMain">
-      <Nav chosenMovieList={chosenMovieList} />
+      <NavMenu chosenMovieList={chosenMovieList} />
       <section className="moviesWrapper">
         {movies.map((movie) => (
           <article className="movieList" key={movie.id}>
@@ -43,8 +43,7 @@ export const MovieList = () => {
               </div>
             </Link>
           </article>
-        ))
-        }
+        ))}
         <footer>
           <p>Technigo Bootcamp 2019 © Sofie Nyblad</p>
         </footer>
