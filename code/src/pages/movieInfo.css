@@ -1,0 +1,49 @@
+ 
+
+.backdrop {
+    /* width: 100%;  
+    /* position: relative; */
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+.movieText {
+    position: absolute;
+    padding: 0px;
+    margin-top: 500px;
+    margin-left: 400px;
+    color: white;  
+    font-size: 15px;
+    display: flex;
+    font-weight: 500;
+    padding: 20px;
+    max-width: 300px;
+} 
+
+
+.backdropMoviePoster {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 50px;
+}
+
+.titleInfoPage {
+    color: #fff;
+    display: flex;
+    position: absolute;
+    margin-top: 480px;
+    margin-left: 420px;
+   
+} 
+
+.votesInfoPage {
+    color: red;
+    display: flex;
+    position: absolute;
+    margin-top: 480px;
+    margin-left: 510px;
+}

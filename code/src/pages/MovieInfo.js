@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-
+import "./movieInfo.css"
 
 export const MovieInfo = () => {
     const { movieId } = useParams()
@@ -19,25 +19,19 @@ export const MovieInfo = () => {
     return (
 
         <div>
-            <h1>{movie.overview}</h1>
-             <img src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.backdrop_path} />
-             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.poster_path} />
-              <h2>{movie.original_title}</h2>
-              <h3>{movie.vote_average}</h3>
-            {/* {movies.map((movie) => ( */}
-            {/* <div key={movieId}> */}
+            <p className="titleInfoPage">{movie.original_title}</p>
+            <p className="votesInfoPage">{movie.vote_average}/10</p>
 
-            {/* // </div>
-            )) */}
-        }
-        
+            <p className="movieText">{movie.overview}</p>
+            <section className="backDropPoster">
+                <img className="backdropMoviePoster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="movie.poster_path" />
+            </section>
+            <img className="backdrop" src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt="movie.backdrop_path" />
+
+
+
         </div >
     )
 }
 
-
-
-// `https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`
-
-// movie backdrop path
 
