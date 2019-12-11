@@ -1,6 +1,88 @@
-.dropdownWrapper {
-  width: 100%;
+.navWrapper {
   background: #000;
   color: #fff;
   padding: 20px;
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+}
+
+h3 {
+  padding-right: 40px;
+}
+
+/* DROP DOWN */
+/* Remove default select styling */
+select {
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0;
+  background: none;
+}
+
+/* Styling for select-main div */
+.selectMain {
+  position: relative;
+  display: flex;
+  width: 20%;
+  height: 40px;
+  line-height: 3;
+  background: #fff;
+  overflow: hidden;
+  /* margin-left: 30px; */
+}
+
+/* Styling for select */
+select {
+  font-size: 16px;
+  flex: 1;
+  color: #000;
+  cursor: pointer;
+  padding: 10px;
+  
+}
+
+/* Arrow */
+.selectMain::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 15px;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  pointer-events: none; /* Set whether or not an element should react to pointer events */
+  transition: .25s all ease;
+}
+
+.selectMain:hover::after {
+  color: red;
+}
+
+option {
+  background-color: #fff;
+  height: 40px;
+}
+
+
+@media (max-width: 1024px) {
+
+  .selectMain {
+    width: 35%;
+  }
+
+}
+
+@media (max-width: 667px) {
+
+  .selectMain {
+    width: 50%;
+  }
+
 }

@@ -24,6 +24,8 @@ export const MovieDetails = () => {
 
   //Return a background backdrop, smaller poster, title, voting, overview
   return (
+
+
     <section className="movieWrapper" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
       <Link to="/">
         <div className="backToList"><i className="fas fa-chevron-circle-left"></i> Movies</div>

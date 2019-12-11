@@ -9,10 +9,10 @@ export const Nav = (props) => {
 
   return (
 
-    <section className="dropdownWrapper">
+    <section className="navWrapper">
       <form>
         <label>
-          <h3>Select a movie list</h3>
+          <h3>Select a list</h3>
           <div className="selectMain">
             <select
               onChange={event => setMovieList(event.target.value)}

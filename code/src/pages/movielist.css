@@ -53,3 +53,19 @@ footer {
   font-size: 12px;
   padding: 20px;
 }
+
+@media (max-width: 1024px) {
+
+  .movieList {
+    width: 50%;
+  }
+
+}
+
+@media (max-width: 667px) {
+
+  .movieList {
+    width: 100%;
+  }
+
+}
