@@ -15,17 +15,17 @@ export const MovieDetails = () => {
   console.log('is not a number', id);
 
   useEffect(() => {
-    console.log(movieId);
+    // console.log(movieId);
     setIsLoading(true);
     API.getMovie(movieId)
       .then(data => {
-        console.log(data);
+        console.log('Data: ', data);
         setMovie(data);
         setIsLoading(false);
         SetErrorLoading(false);
       })
       .catch(err => {
-        console.log(err);
+        console.log('Error: ', err);
         setMovie({});
         SetErrorLoading(true);
       });
