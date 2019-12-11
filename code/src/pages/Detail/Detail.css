@@ -1,8 +1,7 @@
 .detail {
   height: 100%;
   width: 100%;
-  /* background: linear-gradient(#000, #020202, #000); */
-  z-index: 100;
+  overflow: hidden;
 }
 
 .detail_background-img {
@@ -13,14 +12,14 @@
   max-height: 100vh;
   object-fit: 100%; /* background-position-x: center;
   background-position-y: center; */
-  background: linear-gradient(#000, #020202, #000);
-  max-width: none;
+  background: #000;
+  overflow: hidden;
 }
 
-.detail_image {
+/* .detail_image {
   height: 30vh;
   width: 40vw;
-}
+} */
 
 .hero-image {
   max-width: 100%;
@@ -38,9 +37,107 @@
   content: "";
 }
 
+.detail-flex {
+  position: absolute;
+  display: flex;
+  bottom: 6rem;
+  left: 3rem;
+  flex-direction: column;
+}
+
+.detail-flex img {
+  object-fit: contain;
+  border: 6px #fff solid;
+  /* margin-top: 6rem; */
+}
+
+#detail-description {
+  color: #fff;
+  margin-top: 5rem;
+  width: 80%;
+  font-family: "Roboto", sans-serif;
+}
+
+.detail-title {
+  /* width: 60%; */
+  display: flex;
+  /* font-size: 0.5rem; */
+  /* justify-content: space-between; */
+}
+
+/* .button-class {
+  display: flex;
+  align-content: center;
+} */
+
+.button {
+  position: absolute;
+  top: 4rem;
+  left: 3rem;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  /* padding-right: 2rem; */
+  background: transparent;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+}
+
+.button:hover > p {
+  transform: translate(5px);
+}
+
+ion-icon {
+  font-size: 2rem;
+  align-self: center;
+}
+
+.button p {
+  align-self: center;
+  margin-top: 0;
+  margin-left: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+h2 {
+}
+
+.rating {
+  color: red;
+  margin-left: 0.5rem;
+}
+
+.image {
+  height: 500px;
+  max-width: 300px;
+}
+
+@media (max-width: 450px) {
+  .detail-flex img {
+    height: 300px;
+    width: 100px;
+  }
+}
+
 @media (min-width: 1024px) {
   .detail_background-img {
     width: 100%;
     max-width: 100%;
+  }
+
+  .detail-flex {
+    flex-direction: row;
+  }
+
+  .detail-title {
+    /* width: 55%; */
+  }
+
+  #detail-description {
+    width: 30%;
+    align-self: flex-end;
+    margin: 0 auto 0 6rem;
   }
 }

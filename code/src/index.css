@@ -10,7 +10,7 @@ body {
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fff;
+  background: #000;
   font-family: "Roboto", sans-serif;
   height: 100%;
   width: 100%;
@@ -29,3 +29,8 @@ main {
 /* .movies {
   display: flex;
 } */
+
+@media (max-width: 450px) {
+  body {
+  }
+}
