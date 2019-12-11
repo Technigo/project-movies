@@ -63,12 +63,12 @@
                     
                     .posters:hover img {
                         width: 342px;
+                        opacity: .6;
                         position: relative;
                         display: inline;
                         color: white;
                         font-size: 1.5rem;
                     }
-                    /*.info .hoverInfo img:hover */
                     
                     .bg img {
                         width: 100%;
