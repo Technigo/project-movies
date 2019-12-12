@@ -15,6 +15,10 @@ export const MovieInfo = () => {
         })  
     }, [movieId])
 
+    if (!movie) {
+        return <div>Loading...</div>
+    }
+
     return(
         <section className="infoContainer">
             {/*backDrop background picture with CSS style in react for the site*/}
