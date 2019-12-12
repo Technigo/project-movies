@@ -1,5 +1,4 @@
 import React from 'react'
-import { NavBar } from "components/NavBar"
 import { MovieList } from "pages/MovieList"
 import { MovieDetails } from "pages/MovieDetails"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
@@ -16,8 +15,6 @@ import "./app.css"
 export const App = () => {
   return (
     <BrowserRouter>
-      <NavBar />
-
       <Switch>
         <Route path="/" exact>
           <MovieList />

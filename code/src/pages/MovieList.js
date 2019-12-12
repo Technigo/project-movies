@@ -1,41 +1,32 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import { NavBar } from "components/NavBar"
+
 import "pages/movielist.css"
 
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([])
-  const [category, setCategory] = useState("top_rated");
-
+  const [chosenCategory, setChosenCategory] = useState("popular")
 
   const api_key = "363444609247127238629594b245e069"
 
+  const chosenMovieList = category => {
+    setChosenCategory(category)
+  }
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${category}?api_key=${api_key}&language=en-US&page=1`)
+    fetch(`https://api.themoviedb.org/3/movie/${chosenCategory}?api_key=${api_key}&language=en-US&page=1`)
       .then((res) => res.json())
       .then((json) => {
-        setMovies(json.results) //varför ska man skriva tex. json.results?
+        setMovies(json.results)
         console.log(json)
       })
-  }, [category])
+  }, [chosenCategory])
 
   return (
-    <div className="container">
-      <div className="category-dropdown">
-        <label>
-          <h3>Choose a list</h3>
-          <select className="select-css"
-            onChange={event => setCategory(event.target.value)}
-            value={category}>
-            <option value="top_rated">Top rated movies</option>
-            <option value="popular">Most popular movies</option>
-            <option value="upcoming">Upcoming movies</option>
-            <option value="now_playing">Now playing movies</option>
-          </select>
-        </label>
-      </div>
-
+    <div className="top-movie-list">
+      <NavBar chosenMovieList={chosenMovieList} />
       <section className="movie-list">
         {movies.map((movie) => (
           <Link key={movie.id} to={`/movies/${movie.id}`}>
