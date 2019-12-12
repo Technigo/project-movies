@@ -8,43 +8,45 @@
     flex-direction: column;
     width: 25%;
     position: relative;
-    /* color: #fff;
-    text-decoration: none; */
 } 
 
 .list-img {
     z-index: 0;
     width: 100%;
-/*skall bli mörk när hovras*/
 }
 
 .movie-list-info .list-text {
     position: absolute;
-    top: 0;
+  
     right: 0;
     bottom: 0;
     left: 0;
     padding: 20px;
-    /* background: rgba(0,0,0,.75); */ /**makes background dark*/
-    /* display: none;
-    padding: 20px; 
-    z-index: 1; */
 }
 
-.movie-list-info:hover {
-    filter: brightness(30%);
-}
+ /*Visible when hover over*/
 .list-text {
-    color: white; /*skall vara vit*/
+    color: white; 
     z-index: 2;
-    /*skall synas när hovras*/
+    opacity: 0;  /*Related to the hovering, makes the text display: none*/
 }
 
 h2 {
-    font-size: 3.2vw;
+    font-size: 3.27vw;
     margin-top: 0;
 }
 
 h3 {
     font-size: 0.7em;
 }
+
+.movie-list-info:hover img { /*Makes the poster darken when hover over**/
+    filter: brightness(20%);
+    background: rgba(0,0,0,.5);
+}
+
+.movie-list-info:hover .list-text { /*Makes the title and the release date show when hovering*/
+    display: block;
+    opacity: 1;
+}
+

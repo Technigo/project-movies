@@ -37,7 +37,7 @@ export const MovieDetail = () => {
 
                 <img className="background-img" src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt="Movie poster" />
 
-                <section className="review-section">
+                <div className="review-section">
                     <img className="poster-img" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="Movie poster" />
                     <div className="text-field">
                         <div className="title-vote">
@@ -46,7 +46,7 @@ export const MovieDetail = () => {
                         </div>
                         <p>{movie.overview}</p>
                     </div>
-                </section>
+                </div>
             </div>
         </div>
     )
