@@ -34,8 +34,6 @@ export const MovieDetails = () => {
       })
   }, [id])
 
-
-
   if (loading) {
     return <div className="loading"><svg height="100" width="100">
       <circle className="circle" cx="50" cy="50" r="40" stroke=" #FFADAD" strokeWidth="5" fill="none" />
@@ -65,8 +63,8 @@ export const MovieDetails = () => {
           <img src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`} alt={movieDetails.id} />
           <div className="details">
             <div className="title-rate">
-              <h3>{movieDetails.title}
-                <span className="rating">{movieDetails.vote_average}/10</span></h3>
+              <h2>{movieDetails.title}
+                <span className="rating">{movieDetails.vote_average}/10</span></h2>
             </div>
             <div className="genre">
               {movieDetails.genres.map((genre) => (
@@ -79,6 +77,7 @@ export const MovieDetails = () => {
                 <p key={company.name}>{company.name}</p>
               ))}
             </div>
+            <h4>Staring: </h4>
             <div className="cast">
               {cast.map((casts) => (
                 <p key={casts.name}>{casts.name}</p>

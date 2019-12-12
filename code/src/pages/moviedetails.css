@@ -71,7 +71,17 @@ margin-left: 5px;
 }
 
 .cast {
-  font-size: 10px;
+  font-size: 14px;
   display: flex;
   flex-wrap: wrap;
+}
+.details h4 {
+  margin: 10px 0 0 0;
+  font-size: 15px;
+}
+.cast p:not(:last-child):after {   
+  content: "\002C  \0010"; /* To separate the multiple actors with a comma and space */
+}
+.cast p {
+  margin: 0px;
 }
