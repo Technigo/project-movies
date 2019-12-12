@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+}
+
+
+/* .posters {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    align-items: center;
+} */
+
+
+/* .posters img {
+    padding: 3px;
+} */
+
+.posters {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: black;
+    padding: 10px;
+}
+
+.posters img {
+    background-color: transparent;
+    text-align: center;
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import './moviedetails.css';
 
 export const MovieDetails = () => {
   const [movie, setMovie] = useState()
@@ -26,5 +27,28 @@ export const MovieDetails = () => {
     return <h1>no movie</h1>
   }
 
-  return <div>{movie && <div>{movie.title}</div>}</div>
+  return (
+    
+    <div>
+      {/* <div className="background">
+        <img src={`https://image.tmdb.org/t/p/w342${movie.backdrop_path}`} alt = "background" />
+      </div> */}
+
+
+      <div className="movie">
+        <div className="poster">
+          <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt = "poster" />
+        </div>
+
+        <div className="description">
+          {movie && <div>{movie.title}</div>}
+          <div>{movie.vote_average}</div>
+       <div>{movie.overview}</div>
+
+      </div>
+    </div>
+    </div>
+    
+    
+  )
 }
