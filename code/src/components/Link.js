@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Link } from "react-router-dom";
-import { Icon } from "Icon";
+import { Icon } from "components/Icon";
 
-export const Nav = () => (
+export const LinkButton = () => (
   <header>
     <Route path="/movies">
       <Link to="/" className="link-wrap">

@@ -1,0 +1,39 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.movie-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+  position: relative;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.overlay {
+  display: none;
+  color: white;
+  background: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  justify-content: left;
+  align-items: flex-end;
+}
+
+.movie-wrap:hover .overlay {
+  display: flex;
+}
+
+.small-image {
+  width: 100%;
+  display: block;
+}

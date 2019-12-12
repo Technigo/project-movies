@@ -1,0 +1,40 @@
+.background {
+  position: absolute;
+  background-size: cover;
+  min-height: 100vh;
+  justify-content: flex-end;
+  align-items: flex-end;
+  /* flex-direction: column; */
+  display: flex;
+  /* background: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%); */
+}
+
+.summary {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 50px;
+}
+
+.summary img {
+  border: 5px solid #fff;
+}
+
+.rating {
+  font-size: 17px;
+  color: red;
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.movie-info {
+  display: inline-block;
+  max-width: 400px;
+  margin-left: 20px;
+  color: white;
+}
+
+.dark {
+  z-index: 1;
+  background: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);
+}

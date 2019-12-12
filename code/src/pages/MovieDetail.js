@@ -1,37 +1,55 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { Nav } from "Nav";
+import { useParams, useHistory } from "react-router-dom";
+import { LinkButton } from "components/Link";
 
 export const MovieDetail = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const history = useHistory();
 
   useEffect(() => {
+    setLoading(true);
     fetch(
       `https://api.themoviedb.org/3/movie/${movieId}?api_key=cc325ede4f72069add696614aa58b9e2&language=en-US`
     )
       .then(res => res.json())
       .then(json => {
         setMovie(json);
-        console.log(json);
+        setLoading(false);
       });
   }, [movieId]);
 
+  if (loading) {
+    return (
+      <h1>
+        Loading your movie...
+        <span role="img" aria-label="popcorn">
+          🍿
+        </span>
+      </h1>
+    );
+  }
+
+  if (!movie) {
+    history.push("/");
+  }
+
   return (
-    <div
+    <section
       className="background"
       style={{
         backgroundImage: `url(${`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`})`
       }}
     >
-      <Nav />
+      <LinkButton />
 
       {/* <img
         className="big-image"
         src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`}
         alt={movie.title}
       /> */}
-      <div className="summary">
+      <article className="summary">
         <img
           className="image"
           src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
@@ -45,7 +63,7 @@ export const MovieDetail = () => {
 
           <p>{movie.overview}</p>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
   );
 };
