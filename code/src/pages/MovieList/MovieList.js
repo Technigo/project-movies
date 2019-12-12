@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import TopBarProgress from 'react-topbar-progress-indicator';
 import * as API from '../../api/Api';
 import styles from './MovieList.module.scss';
-import { Movie } from '../../components/Movie';
+import { Movie } from '../../components/MovieList/Movie';
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([]);

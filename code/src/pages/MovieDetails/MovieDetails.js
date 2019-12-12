@@ -12,20 +12,20 @@ export const MovieDetails = () => {
   const history = useHistory();
 
   const id = isNaN(movieId);
-  console.log('is not a number', id);
+  // console.log('is not a number', id);
 
   useEffect(() => {
     // console.log(movieId);
     setIsLoading(true);
     API.getMovie(movieId)
       .then(data => {
-        console.log('Data: ', data);
+        // console.log('Data: ', data);
         setMovie(data);
         setIsLoading(false);
         SetErrorLoading(false);
       })
       .catch(err => {
-        console.log('Error: ', err);
+        // console.log('Error: ', err);
         setMovie({});
         SetErrorLoading(true);
       });
@@ -40,7 +40,7 @@ export const MovieDetails = () => {
     barThickness: 2
   });
 
-  console.log(errorLoading);
+  // console.log(errorLoading);
 
   if (errorLoading) {
     history.push('/');
@@ -78,21 +78,23 @@ export const MovieDetails = () => {
                       <span>Movies</span>
                     </Link>
                   </div>
-                  <div className={styles.movieInfoFlex}>
-                    <div className={styles.movieOverview}>
-                      <h2>{movie.original_title}</h2>
-                      {/* <span>Rating: {Math.floor(movie.vote_average)}/10</span> */}
+                  <div className={styles.containerFlex}>
+                    <div className={styles.overview}>
+                      <h2>
+                        {movie.original_title}
+                        {movie.vote_average > 0 && (
+                          <span>{Math.floor(movie.vote_average)}/10</span>
+                        )}
+                      </h2>
+
                       <p>{movie.overview}</p>
                     </div>
-                    <div className={styles.moviePoster}>
+                    <div className={styles.poster}>
                       <img
                         src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
                         alt="poster"
                       />
                     </div>
-                    {/* <div className={styles.movieExtra}>
-                      <h2>Movie details</h2>
-                    </div> */}
                   </div>
                 </div>
               </div>
