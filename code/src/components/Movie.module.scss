@@ -1,0 +1,31 @@
+.movie {
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+
+.movie img {
+  display: block;
+  width: 100%;
+  z-index: 1;
+}
+
+.overlay {
+  width: 0%;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  overflow: hidden; 
+}
+
+.movie:hover .overlay {
+  width: 100%;
+}
+
+.movieDetails {
+  position: absolute;
+  left: 20px;
+  bottom: 35px;
+}

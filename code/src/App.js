@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { MovieList } from './pages/MovieList';
-import { MovieDetails } from './pages/MovieDetails';
-import { MovieDetailsExtra } from './pages/MovieDetailsExtra';
+import { MovieList } from './pages/MovieList/MovieList';
+import { MovieDetails } from './pages/MovieDetails/MovieDetails';
+import { MovieDetailsExtra } from './pages/MovieDetailExtra/MovieDetailsExtra';
 
 export const App = () => {
   return (

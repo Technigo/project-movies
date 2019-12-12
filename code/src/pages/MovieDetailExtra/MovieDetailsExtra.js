@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useHistory, Link } from 'react-router-dom';
 import TopBarProgress from 'react-topbar-progress-indicator';
-import * as API from '../api/Api';
-import styles from './MovieDetails.module.scss';
+import * as API from '../../api/Api';
+import styles from './MovieDetailsExtra.module.scss';
 
-export const MovieDetails = () => {
+export const MovieDetailsExtra = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState({});
   const [errorLoading, SetErrorLoading] = useState(false);
@@ -80,8 +80,10 @@ export const MovieDetails = () => {
                   </div>
                   <div className={styles.movieInfoFlex}>
                     <div className={styles.movieOverview}>
-                      <h2>{movie.original_title}</h2>
-                      {/* <span>Rating: {Math.floor(movie.vote_average)}/10</span> */}
+                      <h2>
+                        {movie.original_title}
+                        <span>{Math.floor(movie.vote_average)}/10</span>
+                      </h2>
                       <p>{movie.overview}</p>
                     </div>
                     <div className={styles.moviePoster}>

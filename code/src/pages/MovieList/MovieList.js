@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import TopBarProgress from 'react-topbar-progress-indicator';
-import * as API from '../api/Api';
+import * as API from '../../api/Api';
 import styles from './MovieList.module.scss';
+import { Movie } from '../../components/Movie';
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -40,6 +40,7 @@ export const MovieList = () => {
           {movies
             .filter(movie => {
               return (
+                // Filtering out posters with inconsistent height and to get an even number of movies to display in the grid
                 movie.id !== 540247 &&
                 movie.id !== 449924 &&
                 movie.id !== 474350 &&
@@ -47,20 +48,7 @@ export const MovieList = () => {
               );
             })
             .map(movie => (
-              <Link key={movie.id} to={`/movies/${movie.id}`}>
-                <div className={styles.movie}>
-                  <img
-                    src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
-                    alt="poster"
-                  />
-                  <div className={styles.overlay}>
-                    <div className={styles.movieDetails}>
-                      <h1>{movie.title}</h1>
-                      <p>Released: {movie.release_date}</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
+              <Movie key={movie.id} {...movie} />
             ))}
         </div>
       )}
