@@ -7,7 +7,7 @@ export const MovieList = () => {
   //To store a list of movies
   const [movies, setMovies] = useState([])
 
-  //To store a new list of movies based in the opstion in Nav.js
+  //To store a new list of movies based on the options in Nav.js
   //Popular is initial state to show as default
   const [chosenList, setChosenList] = useState("popular")
 
@@ -32,7 +32,7 @@ export const MovieList = () => {
   //Returning the movies in the json by map() - id, poster, title, release date
   return (
     <section className="movieMain">
-      <NavMenu chosenMovieList={chosenMovieList} />
+      <NavMenu chosenMovieList={chosenMovieList} chosenList={chosenList} />
       <section className="moviesWrapper">
         {movies.map((movie) => (
           <article className="movieList" key={movie.id}>

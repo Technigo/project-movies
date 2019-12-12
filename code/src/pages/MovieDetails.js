@@ -6,6 +6,7 @@ import './moviedetails.css'
 export const MovieDetails = () => {
   //Destructuring to get the movie id key from the url params, called id beacuse that is what we named it in the path in App.js path="/movies/:id"
   const { id } = useParams()
+  // const history = useHistory()
 
   //My API key
   const apiKey = "f16bd1845da3bcbe9df17f656b96d33b"
@@ -29,9 +30,11 @@ export const MovieDetails = () => {
       <section className="notFound">
         <h1>Movie not found</h1>
         <Link to="/">
+          {/* <button onClick={() => history.goBack()} type="button"> */}
           <h2><i className="fas fa-chevron-circle-left" /> Back to list with movies</h2>
+          {/* </button> */}
         </Link>
-      </section>
+      </section >
     )
   }
 
