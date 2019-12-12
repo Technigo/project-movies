@@ -49,6 +49,7 @@
   cursor: pointer;
 }
 
+/*
 .dropdown:hover .dropdownContent {
   display: block;
   width: 100%;
@@ -57,4 +58,9 @@
 .dropdown:hover .dropdownButton {
   background: #50514F;
   border-radius: 3px 3px 0 0;
+} */
+
+.active + .dropdownContent {
+  display: block;
+  width: 100%;
 }
