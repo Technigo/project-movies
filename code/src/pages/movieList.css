@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+}
+
+.movieList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.moviePoster {
+  width: 25%;
+  position: relative;
+}
+
+.movieList .moviePoster img {
+  width: 100%;
+}
+
+.movieTitle {
+  display: none;
+}
+
+.moviePoster:hover .movieTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: left;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 1.5em 1em;
+}
+
+h1 {
+  font-size: 1.4em;
+}
+
+h2 {
+  font-size: 0.9em;
+  font-weight: lighter;
+}
