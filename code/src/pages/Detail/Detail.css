@@ -2,24 +2,13 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
+  /* overflow-y: visible; */
 }
 
 .detail_background-img {
   height: 100vh;
-  /* width: auto; */
-
-  /* height: 100%; */
   max-height: 100vh;
-  object-fit: 100%; /* background-position-x: center;
-  background-position-y: center; */
-  background: #000;
-  overflow: hidden;
 }
-
-/* .detail_image {
-  height: 30vh;
-  width: 40vw;
-} */
 
 .hero-image {
   max-width: 100%;
@@ -30,7 +19,10 @@
 .hero-image::after {
   display: block;
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0) 0, #000 100%);
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0), #000 100%);
+  background-position: top center;
+  background-size: cover;
   margin-top: -150px;
   height: 150px;
   width: 100%;
@@ -40,20 +32,25 @@
 .detail-flex {
   position: absolute;
   display: flex;
-  bottom: 6rem;
+  top: 6rem;
+  /* bottom: 6rem; */
   left: 3rem;
+  /* margin-bottom: 3rem; */
   flex-direction: column;
 }
 
 .detail-flex img {
   object-fit: contain;
   border: 6px #fff solid;
+
   /* margin-top: 6rem; */
 }
 
 #detail-description {
   color: #fff;
-  margin-top: 5rem;
+  margin-top: 10rem;
+  /* margin-bottom: 3rem; */
+  padding-bottom: 3rem;
   width: 80%;
   font-family: "Roboto", sans-serif;
 }
@@ -65,22 +62,24 @@
   /* justify-content: space-between; */
 }
 
-/* .button-class {
-  display: flex;
-  align-content: center;
-} */
-
-.button {
+/* .button {
   position: absolute;
   top: 4rem;
   left: 3rem;
   font-family: "Roboto", sans-serif;
   display: flex;
-  /* padding-right: 2rem; */
   background: transparent;
   border: none;
   color: #fff;
   text-decoration: none;
+} */
+
+.button {
+  display: flex;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 6rem;
 }
 
 .button:hover > p {
@@ -110,34 +109,39 @@ h2 {
 }
 
 .image {
-  height: 500px;
-  max-width: 300px;
+  height: 545px;
+  max-width: 350px;
 }
 
-@media (max-width: 450px) {
-  .detail-flex img {
+@media (max-width: 550px) {
+  .image {
     height: 300px;
-    width: 100px;
+    width: 204px;
+  }
+  .image img {
+    height: 300px;
+    width: 204px;
+  }
+
+  .detail-flex {
+    /* bottom: 0; */
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 551px) {
   .detail_background-img {
-    width: 100%;
-    max-width: 100%;
+    /* width: 100%;
+    max-width: 100%; */
   }
 
   .detail-flex {
     flex-direction: row;
   }
 
-  .detail-title {
-    /* width: 55%; */
-  }
-
   #detail-description {
     width: 30%;
     align-self: flex-end;
     margin: 0 auto 0 6rem;
+    padding-bottom: 0;
   }
 }

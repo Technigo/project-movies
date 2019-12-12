@@ -17,14 +17,13 @@ export const DetailView = ({
           className="detail_background-img"
         />
       </div>
-      {/* <Route path="/details" exact> */}
-      <Link to="/" className="button">
-        <ion-icon name="arrow-dropleft-circle"></ion-icon>
-        <p>Movies</p>
-      </Link>
-      {/* </Route> */}
+
       <div className="detail-flex">
         <div className="image">
+          <Link to="/" className="button">
+            <ion-icon name="arrow-dropleft-circle"></ion-icon>
+            <p>Movies</p>
+          </Link>
           <img
             src={`https://image.tmdb.org/t/p/w342/${image}`}
             alt={title}
