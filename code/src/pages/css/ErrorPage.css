@@ -1,0 +1,15 @@
+.not-found{
+  display:flex;
+  flex-direction: column;
+align-items: center;
+  color:white;
+  padding: 50px;
+}
+.not-found svg{
+  max-width: 900px;
+}
+.not-found .back-button a{
+  display:flex;
+  flex-direction: row;
+  margin:15px 0;
+}

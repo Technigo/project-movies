@@ -9,13 +9,9 @@ const apiKey = "0a7bdc5f7b44e6a5230c95a3dbb9bbbc"
 // const latest = "latest"
 // const topRated = "top_rated"
 
-export const MovieList = () => {
+export const MovieList = ({ category = "popular" }) => {
   const [movies, setMovies] = useState([])
-  const [category, setCategory] = useState("popular")
 
-  const chosenCategory = (pickedCategory) => {
-    setCategory(pickedCategory)
-  }
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${category}?api_key=${apiKey}&language=en-US&page=1`)
@@ -29,7 +25,6 @@ export const MovieList = () => {
 
   return (
     <div>
-      <Nav chosenCategory={chosenCategory} />
       <section className="all-movies">
         {movies.map((movie) => (
           <div className="poster" key={movie.id}>

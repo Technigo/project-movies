@@ -3,22 +3,22 @@ import { NavLink } from "react-router-dom"
 import "./css/Nav.css"
 
 export const Nav = (props) => {
-  const [pickedCategory, setPickedCategory] = useState("popular")
+  // const [pickedCategory, setPickedCategory] = useState("popular")
 
-  props.chosenCategory(pickedCategory)
+  // props.hej(pickedCategory) // För vi ut pickedCategory till ML?
 
   return (
     <ul className="navbar">
       {/* <li>
         <NavLink to="/">MOVIE TIME</NavLink>
       </li> */}
-      <li onClick={() => setPickedCategory("popular")}>
+      <li>
         <NavLink to="/popular">Popular movies</NavLink>
       </li>
-      <li onClick={() => setPickedCategory("upcoming")}>
+      <li>
         <NavLink to="/upcoming">Upcoming movies</NavLink>
       </li>
-      <li onClick={() => setPickedCategory("top_rated")}>
+      <li>
         <NavLink to="/top_rated">Top Rated movies</NavLink>
       </li>
     </ul>

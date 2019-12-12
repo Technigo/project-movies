@@ -9,19 +9,19 @@ import "./App.css"
 export const App = () => {
   return (
     <BrowserRouter>
-      {/* <Nav /> */}
+      <Nav />
       <Switch>
         <Route path="/" exact>
           <MovieList />
         </Route>
         <Route path="/popular">
-          <MovieList />
+          <MovieList category="popular" />
         </Route>
         <Route path="/upcoming">
-          <MovieList />
+          <MovieList category="upcoming" />
         </Route>
         <Route path="/top_rated">
-          <MovieList />
+          <MovieList category="top_rated" />
         </Route>
         <Route path="/movies/:id">
           <MovieDetail />

@@ -58,8 +58,16 @@ export const MovieDetail = () => {
             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}></img>
             <div className="text-details">
               <h2>{movie.title} <span>{movie.vote_average}/10</span></h2>
+              <div className="genres">
+                {movie.genres.map((genre) => (
+                  <p key={genre.name}>{genre.name}</p>
+                ))}
+              </div>
               <br></br>
               <p>{movie.overview}</p>
+
+
+
             </div>
           </div>
         </div>
