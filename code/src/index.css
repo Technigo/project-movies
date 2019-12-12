@@ -152,4 +152,11 @@
                             top: 10px;
                             left: 10px;
                         }
+                        a {
+                            font-size: 0.8rem;
+                        }
+                        a:hover {
+                            color: white;
+                            font-size: 0.9rem;
+                        }
                     }
