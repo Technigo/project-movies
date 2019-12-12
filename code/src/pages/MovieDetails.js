@@ -43,7 +43,7 @@ export const MovieDetails = () => {
         <h3>{info}</h3>
         <p><a href={website}>{website}</a></p>
       </div>
-      <div className="back"><Link to={"/"}>Back to movies</Link></div>
+          <div className="back"><Link to={"/"}><span className="fafa"><i class="far fa-arrow-alt-circle-left"></i></span>Back to movies</Link></div>
     </div>
 
   )
