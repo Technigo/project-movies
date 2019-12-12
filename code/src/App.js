@@ -19,8 +19,5 @@ export const App = () => {
         </Route>
       </Switch>
     </BrowserRouter>
-    // <div>
-    //   Find me in src/app.js!
-    // </div>
   )
 }
