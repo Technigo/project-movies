@@ -17,9 +17,6 @@ code {
     monospace;
 }
 
-* {
-  box-sizing: border-box;
-}
 .movieContainer {
   display: flex;
   flex-direction: row;

@@ -23,13 +23,11 @@ body {
     align-items: flex-end;
     padding: 50px;
     bottom: 0px;
-    
-
 }
 
 .infoPoster {
     float: left;
-   
+    border: 10px solid white;
 }
 
 .titleInfo {
