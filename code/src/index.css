@@ -3,6 +3,10 @@
   padding: 0;
   color: white;
 }
+
+html, main, body, #root {
+  height: 100%;
+}
   
   body {
   margin: 0;
@@ -33,6 +37,7 @@ section {
   display: flex;
   flex-wrap: wrap;
 }
+
 a {
   width: 25%;
   position: relative;
@@ -64,4 +69,6 @@ a:hover > .overlay {
 
 .movie-details {
   background: black;
+  height: 100%;
+  background-size: cover;
 }

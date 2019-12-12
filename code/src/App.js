@@ -3,16 +3,13 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import MoviesOverview from './Components/MoviesOverview.js'
 import MovieDetails from './Components/MovieDetails.js'
 
-const APIKEY = '72df873fd7965d1098248531e4dddca6'
-
 const POSTERSIZE = 'w500'
+const BACKDROPSIZE = 'w1280'
+const APIKEY = process.env.REACT_APP_MOVIEDB_APIKEY;
 
 export const App = () => {
-
+  
   const [movies, setMovies] = useState([])
-    
-
-
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${APIKEY}&language=en-US&page=1`, {
@@ -24,6 +21,7 @@ export const App = () => {
       setMovies(json.results)
     })
   }, [])
+  
   return (
     <BrowserRouter>
       <main>
@@ -32,7 +30,7 @@ export const App = () => {
             <MoviesOverview movies={movies} posterSize={POSTERSIZE}/>
           </Route>
           <Route path={`/movies/:movieId`} exact>
-            <MovieDetails />
+            <MovieDetails backdropSize={BACKDROPSIZE}/>
           </Route>
         </Switch>
         </main>
