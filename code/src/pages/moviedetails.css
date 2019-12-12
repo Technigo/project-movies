@@ -1,26 +1,3 @@
-/* ANIMATION FOR BACK LINK*/
-@-webkit-keyframes slide {
-  100% { left: 80px; }
-}
-
-@keyframes slide {
-  100% { left: 80px; }
-}
-
-.backToList {
-  position: absolute;
-  top: 25px;
-  left: 50px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.backToList:hover {
-  animation: slide 1s forwards; /* Apply the anomation to link on hover */
-  animation-delay: 0.5s;
-}
-
 /* MOVIE NOT FOUND */
 .notFound {
   display: flex;
@@ -31,7 +8,7 @@
   color: #fff;
   width: 100%;
   height: 100vh;
-  padding: 50px;
+  padding: 40px;
 }
 
 .notFound a {
@@ -46,19 +23,43 @@
 
 /* MOVIE DETAILS */
 .movieWrapper {
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
+/* ANIMATION FOR BACK LINK*/
+@-webkit-keyframes slide {
+  100% { left: 80px; }
+}
+
+@keyframes slide {
+  100% { left: 80px; }
+}
+
+.backToList {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+.backToList:hover {
+  animation: slide 1s forwards; /* Apply the anomation to link on hover */
+  animation-delay: 0.5s;
+}
+
+/* SUMMARY */
 .movieSummary {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   color: #fff;
-  padding: 50px;
-  height: 100%;
+  /* height: 70%; */
 }
 
 .moviePoster {
@@ -83,7 +84,7 @@
   }
 
   .moviePoster {
-    width: 90%;
+    width: 100%;
     max-width: 352px;
   }
 
