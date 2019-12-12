@@ -13,6 +13,8 @@ import "./app.css"
 //top rate= https://api.themoviedb.org/3/movie/top_rated?api_key=363444609247127238629594b245e069&language=en-US&page=1
 
 export const App = () => {
+
+
   return (
     <BrowserRouter>
       <Switch>

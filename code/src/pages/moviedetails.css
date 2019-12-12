@@ -28,6 +28,8 @@
 
 .go-back:hover {
   cursor: pointer;
+  margin-left: 10px;
+  transition:  0.2s ease-in-out 0s;
 }
 
 .movie-summary {
@@ -52,4 +54,24 @@ margin-left: 5px;
   color: red;
   font-size: 16px;
 }
+.title-rate h3 {
+  margin: 5px;
+}
+.genre, .companies{
+  display: flex;
+  flex-wrap: wrap;
+}
+.genre p,
+.companies p {
+  margin: 5px;
+  padding: 3px;
+  background: rgba(0, 0, 0, 0.521);
+  border: 1px solid;
+  font-size: 13px;
+}
 
+.cast {
+  font-size: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}

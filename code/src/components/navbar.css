@@ -1,0 +1,10 @@
+
+.category-dropdown label {
+  display: flex;
+  margin: 10px;
+}
+
+.category-dropdown h3 {
+  margin: 5px;
+  color: white;
+}
