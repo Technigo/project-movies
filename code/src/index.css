@@ -113,13 +113,17 @@
                             flex-direction: column;
                             padding: 0;
                             margin: auto;
-                            width: 50%;
+                            width: 100%;
                         }
                         .posters {
-                            margin: 0;
+                            width: 342px;
+                            margin: auto;
                             padding: 0;
                             justify-content: center;
                             align-items: center;
+                        }
+                        .posters img {
+                            width: 342px;
                         }
                         .posterInfo {
                             display: none;
