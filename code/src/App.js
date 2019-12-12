@@ -10,7 +10,7 @@ export const App = () => {
         <Route path='/' exact>
           <PopularList />
         </Route>
-        <Route path='/movies/:movieId'>
+        <Route path='/movies/:id'>
           <Detail />
         </Route>
       </Switch>

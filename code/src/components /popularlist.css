@@ -1,0 +1,66 @@
+.moviesWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    background: #000;
+  }
+  
+  h1 {
+    font-size: 28px;
+  }
+  
+  .movieList {
+    width: 25%;
+    height: 20%;
+    position: relative;
+    margin-bottom: 5px;
+  }
+  
+  .movieListPoster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .movieListDetails {
+    position: absolute;
+    color: #fff;
+    padding: 20px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+  }
+  
+  .movieList:hover .movieListDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  footer {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-content: center;
+    font-size: 12px;
+    padding: 20px;
+  }
+  
+  @media (max-width: 1024px) {
+  
+    .movieList {
+      width: 50%;
+    }
+  
+  }
+  
+  @media (max-width: 667px) {
+  
+    .movieList {
+      width: 100%;
+    }
+  
+  }
