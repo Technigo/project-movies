@@ -19,10 +19,12 @@ export const Moviedetails = () => {
     }, [movieId])
 
     return(
-        <div className="detailPage">
-            <div className="background-image">
-                <img src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}/>
-            </div>
+        <div className="detailPage" style={{backgroundImage: 
+            `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280/${movie.backdrop_path})` }}>
+            
+            {/* <div className="background-image">
+                <img style={{background: "linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);" }} src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}/>
+            </div> */}
             <Link to={`/`}>
             <div className="backLink"> 
                 <div className="arrow">  

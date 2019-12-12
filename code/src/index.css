@@ -29,11 +29,15 @@ code {
 }
 
 .moviePoster Img{
-width:100%;
+  width:100%;
 }
 
-.moviePoster:hover {
+/* .moviePoster:hover {
  filter: brightness(25%);
+} */
+
+.moviePoster:hover img {
+  filter: brightness(25%);
 }
 
 .title{
@@ -51,15 +55,19 @@ width:100%;
 }
 
 .detailPage{
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
  
 }
 
-.background-image{
+/* .background-image{
   position: absolute;
   z-index: -1;
   
-}
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);
+  
+} */
 
 .summaryBox{
   display: flex;
@@ -74,6 +82,8 @@ width:100%;
 .summary{
   margin-left: 20px;
   color: white;
+  max-width: 400px;
+  margin-bottom: 15px;
 }
 
 .rating{
@@ -86,8 +96,8 @@ width:100%;
   display: flex;
   color: white;
   align-items: center;
-  position: absolute;
-  margin-top: 55px;
+   position: absolute;
+  margin-top: 55px; 
   margin-left: 55px;
 }
 
@@ -112,4 +122,9 @@ a:link {
   padding: 10px;
   background-color: white;
   margin-right: 5px;
+  
+}
+
+.backLink p:hover{
+  transform: translate(10px);
 }
