@@ -48,6 +48,7 @@
   grid-area: nav;
   margin-right: 1.5rem;
   margin-bottom: 1rem;
+  margin-left: 40px;
   position: relative;
   text-decoration: none;
   z-index: 1;
@@ -55,12 +56,13 @@
 
 .return-link::before {
   content: "";
-  display: block;
+  display: inline-block;
   background-image: url("./icons8-back-to-48.png");
   background-size: 48px 48px;
+  left: -40px;
   height: 48px;
   width: 48px;
-  position: relative;
+  position: absolute;
  }
 
  .movie-title {
@@ -106,7 +108,11 @@
     padding: 3rem;
   }
 
-  .return-link:hover::before {
-    margin-right: 0.5rem;
+  .return-link {
+    transition: all 0.35s ease-in-out;
   }
+  .return-link:hover {
+    padding-left: 0.5rem;
+  }
+
 }

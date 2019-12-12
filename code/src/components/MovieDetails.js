@@ -5,6 +5,7 @@ import './movieDetails.css'
 export const MovieDetails = (props) => {
   const { movieId } = useParams()
   const [movie, setMovie] = useState({})
+
   // Fetch data from movie database
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=1a381f2cdba45c6f12c9451edcfa9c50&language=en-US`)
