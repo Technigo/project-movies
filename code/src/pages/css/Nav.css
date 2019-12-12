@@ -1,0 +1,24 @@
+.navbar{
+  display:flex;
+  justify-content: space-between;
+  list-style-type:none;
+padding:0 40px;
+}
+.navbar h1{
+  margin:0;
+}
+.navbar a{
+  color:black;
+  background:white;
+  border:2px solid black;
+  text-decoration: none;
+  font-weight: bold;
+  
+  padding: 2px 4px;
+  border-radius: 6px;
+}
+.navbar a:hover{
+  color:white;
+  border: 2px solid white;
+  background:black;
+}

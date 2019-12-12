@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
 import { useParams, Link } from "react-router-dom"
 import { ReactComponent as Arrow } from "../media/arrow5.svg"
-import { ReactComponent as Page404 } from "../media/Page404.svg"
 import "./css/MovieDetail.css"
+import { ErrorPage } from "./ErrorPage"
 
 const apiKey = "0a7bdc5f7b44e6a5230c95a3dbb9bbbc"
 
@@ -38,19 +38,9 @@ export const MovieDetail = () => {
     )
   }
 
-  if (movie.status_code) {
+  if (!movie.title) {
     return (
-      <div className="not-found">
-        <Page404 />
-        <h1>{movie.status_message}</h1>
-        <div className="back-button">
-          <Link to={"/"}>
-            <Arrow />
-            <p>Go back to movies</p>
-          </Link>
-        </div>
-
-      </div>
+      <ErrorPage message={movie.status_message} />
     )
   }
 
