@@ -1,3 +1,10 @@
+/* BOX SIZING ska gälla för alla boxar utom de som har UNSET */
+*, *::before, *::after {box-sizing: inherit}
+
+html {
+  font-size: 17px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +12,119 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background: #000;
+  color: #fff;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* FLEX */
+.fullPage {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*FRONT*/
+
+.fullPage a {
+  position: relative;
+  width:25%;
+  z-index: 0;
+  margin: 0;
+  color: #fff
+}
+
+.fullPage a img {
+  width:100%;
+  
+}
+
+.fullPage .frontInfo {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  padding: 20px;
+}
+
+.fullPage .frontInfo h1 {
+  margin-top: auto;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.fullPage a:hover .frontInfo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+}
+
+/*DETAILSPAGE*/
+
+.detailsPage {
+  position: relative;
+}
+
+.detailsPage .backDrop {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.detailsPage article {
+ display: flex;
+ flex-direction: column;
+}
+
+.detailsPage summary {
+  display: block;
+  width: 350px;
+}
+
+.detailsPage .movieDetail {
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.detailsPage .poster {
+  border: solid #fff 5px;
+}
+
+
+
+
+/*FOOTER*/
+
+footer {
+  height:100px;
+}
+  
+.madeby:hover {
+  text-decoration-line: underline;
+  color: #ffffff; 
+}
+
+.madeby {
+  font-size: 14px;
+  font-family: 'Helvetica Neue', sans-serif;
+  text-decoration-line: none;
+  font-weight: normal;
+  color: #ffffff; 
+  display: block;
+  text-align: center;
+  padding: 70px;
 }

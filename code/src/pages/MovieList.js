@@ -10,18 +10,20 @@ export const MovieList = () => {
     )
       .then(res => res.json())
       .then(json => {
-        console.log(json)
+        //console.log(json)
         setMovies(json.results)
       })
   }, [])
 
   return (
-    <div>
+    <div className="fullPage">
       {movies.map(movie => (
         <Link key={movie.id} to={`/movies/${movie.id}`}>
           <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="Movie Poster" />
-          <h1>{movie.title}</h1>
-          <h2>{movie.release_date}</h2>
+          <section className="frontInfo">
+            <h1>{movie.title}</h1>
+            <p>Released at {movie.release_date}</p>
+          </section>
         </Link>
       ))}
     </div>
