@@ -133,12 +133,16 @@
                             width: 342px;
                         }
                         .posterInfo {
-                            display: inline-block;
+                            display: inline;
                             color: white;
                             position: relative;
                             top: -60px;
                             left: 20px;
                             letter-spacing: 5px;
+                            background-color: rgba(0, 0, 0, .4);
+                            padding: 2px;
+                            border-radius: 5px;
+                            line-height: 1.4rem;
                         }
                         .theInfo {
                             color: white;
