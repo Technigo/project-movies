@@ -23,34 +23,38 @@
 
 /* MOVIE DETAILS */
 .movieWrapper {
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
+  padding: 50px;
 }
 
 /* ANIMATION FOR BACK LINK*/
 @-webkit-keyframes slide {
-  100% { left: 80px; }
+  100% { left: 75px; }
 }
 
 @keyframes slide {
-  100% { left: 80px; }
+  100% { left: 75px; }
 }
 
 .backToList {
+  position: absolute;
+  top: 20px;
+  left: 50px;
   font-size: 20px;
   font-weight: bold;
   color: #fff;
-  padding-bottom: 20px;
+}
+
+.backToList:active {
+  outline: 2px solid #fff;
 }
 
 .backToList:hover {
   animation: slide 1s forwards; /* Apply the anomation to link on hover */
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
 }
 
 /* SUMMARY */
@@ -59,7 +63,6 @@
   flex-direction: row;
   align-items: flex-end;
   color: #fff;
-  /* height: 70%; */
 }
 
 .moviePoster {
@@ -75,7 +78,7 @@
   font-size: 16px;
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERY MOBILE */
 @media (max-width: 667px) {
 
   .movieSummary {
