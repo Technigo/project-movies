@@ -66,6 +66,9 @@ export const MovieDetail = () => {
               <br></br>
               <p>{movie.overview}</p>
 
+              <Link to={`/similar/${movie.id}`}>
+                <button>Show me similar</button>
+              </Link>
 
 
             </div>

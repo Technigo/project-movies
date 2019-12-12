@@ -2,6 +2,7 @@ import React from "react"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 import { MovieList } from "pages/MovieList"
 import { MovieDetail } from "pages/MovieDetail"
+import { SimilarMovies } from "pages/SimilarMovies"
 import { Nav } from "pages/Nav"
 import "./App.css"
 
@@ -26,7 +27,9 @@ export const App = () => {
         <Route path="/movies/:id">
           <MovieDetail />
         </Route>
-
+        <Route path="/similar/:id">
+          <SimilarMovies />
+        </Route>
       </Switch>
 
 

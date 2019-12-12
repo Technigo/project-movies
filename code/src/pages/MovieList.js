@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { Nav } from "./Nav"
 
 import "./css/MovieList.css"
 
 const apiKey = "0a7bdc5f7b44e6a5230c95a3dbb9bbbc"
-// const popular = "popular"
-// const latest = "latest"
-// const topRated = "top_rated"
 
 export const MovieList = ({ category = "popular" }) => {
   const [movies, setMovies] = useState([])
@@ -21,7 +17,7 @@ export const MovieList = ({ category = "popular" }) => {
         setMovies(json.results)
 
       })
-  }, [category]) //Why?
+  }, [category]) //Why? Because it needs to re-render when you pick a new category
 
   return (
     <div>
