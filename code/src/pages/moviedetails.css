@@ -8,25 +8,32 @@ body {
     text-align: center;
 }
 
-.movie {
-    display: grid;
-    grid-template-columns: auto auto;
-    width: 1100px;
-    padding-top: 100px;
-    padding-left: 30px;
-    padding-right: 30px;
+.details .background {
+    position: absolute;
 }
 
-.poster {
-    border: white 2px solid;
-    margin: 30px;
+.background img {
+    max-width: 1600px;
+}
+
+.details .movie {
+    display: flex;
+    position: relative;
+    height: 50%;
+    width: 800px;
+    align-items: flex-end;
+    padding: 240px 50px 50px 50px;
+}
+
+.details .poster {
+    border: white 3px solid;
 }
 
 .description {
     padding: 30px;
+    height: 20%;
     display: flex;
     flex-wrap: wrap;
-    vertical-align: bottom;
     font-size: large;
 }
 

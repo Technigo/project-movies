@@ -17,7 +17,7 @@ export const MovieDetails = () => {
         setMovie(json)
         setLoading(false)
       })
-  }, [id]) // We need to pass id as a dependecy here so everytime the id changes, we do a new fetch.
+  }, [id]) 
 
   if (loading) {
     return <h1>LOADING</h1>
@@ -29,10 +29,10 @@ export const MovieDetails = () => {
 
   return (
     
-    <div>
-      {/* <div className="background">
-        <img src={`https://image.tmdb.org/t/p/w342${movie.backdrop_path}`} alt = "background" />
-      </div> */}
+    <div className="details">
+      <div className="background">
+        <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt = "background" />
+      </div>
 
 
       <div className="movie">
@@ -43,7 +43,7 @@ export const MovieDetails = () => {
         <div className="description">
 
           <div className="title">
-          {movie && <div>{movie.title}</div>}
+          {<div>{movie.title}</div>}
           </div>
 
           <div className="rate">
