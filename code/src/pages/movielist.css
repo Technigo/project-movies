@@ -1,28 +1,29 @@
-* {
-    margin: 0;
-}
-
-
-/* .posters {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: black;
-    align-items: center;
-} */
-
-
-/* .posters img {
-    padding: 3px;
-} */
-
-.posters {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    background-color: black;
-    padding: 10px;
-}
-
-.posters img {
-    background-color: transparent;
-    text-align: center;
-}
+    * {
+        margin: 0;
+    }
+    
+    .posters {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        background-color: black;
+        padding: 10px;
+    }
+    
+    img:hover {
+        opacity: 0.3;
+        background: black;
+        transition: .5s ease-in-out;
+    }
+    
+    .movie-title {
+        display: none;
+    }
+    
+    a:hover .movie-title {
+        display: inline;
+        opacity: 1;
+        position: absolute;
+        color: white;
+        text-decoration: none;
+        align-self: end;
+    }

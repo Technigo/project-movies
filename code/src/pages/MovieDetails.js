@@ -41,9 +41,18 @@ export const MovieDetails = () => {
         </div>
 
         <div className="description">
+
+          <div className="title">
           {movie && <div>{movie.title}</div>}
-          <div>{movie.vote_average}</div>
-       <div>{movie.overview}</div>
+          </div>
+
+          <div className="rate">
+          <div>{movie.vote_average}/10</div>
+          </div>
+          
+          <div className="overview">
+          <div>{movie.overview}</div>
+          </div>
 
       </div>
     </div>
