@@ -5,7 +5,6 @@ import "pages/movielist.css"
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([])
-  // const [chosenCategory, setChosenCategory] = useState("top_rated");
   const [category, setCategory] = useState("top_rated");
 
 
@@ -32,6 +31,7 @@ export const MovieList = () => {
             <option value="top_rated">Top rated movies</option>
             <option value="popular">Most popular movies</option>
             <option value="upcoming">Upcoming movies</option>
+            <option value="now_playing">Now playing movies</option>
           </select>
         </label>
       </div>
