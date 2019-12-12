@@ -1,6 +1,6 @@
 .movieList {
   display: grid;
-  grid-template-columns: repeat(1, 100%);
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .movie {
@@ -47,13 +47,13 @@ h1 {
 
 @media screen and (min-width: 600px) {
   .movieList {
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 800px) {
   .movieList {
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
