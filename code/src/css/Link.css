@@ -1,23 +1,31 @@
-.link-wrap {
-  display: flex;
-  text-decoration: none;
-}
-
 .back-button {
   width: 30px;
   height: 30px;
-  margin: 40px 10px 40px 20px;
+  margin: 40px 0px 40px 20px;
 }
 
 .link-wrap {
   color: white;
-  /* transition: margin-right 0.2s ease-in-out; */
-  left: 50px;
-  top: 20px;
+  top: 0;
+  left: 0;
   position: absolute;
   display: flex;
+  text-decoration: none;
 }
 
 h4 {
   margin-top: 45px;
+  margin-left: 0;
+  transition: margin-left 0.2s ease-in-out;
+}
+
+.link-wrap:hover h4 {
+  margin-left: 5px;
+}
+
+@media (min-width: 767px) {
+  .link-wrap {
+    left: 50px;
+    top: 20px;
+  }
 }

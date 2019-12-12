@@ -5,9 +5,7 @@
 }
 
 .movie-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  width: 25%;
+  width: 50%;
   position: relative;
 }
 
@@ -36,4 +34,10 @@ h2 {
 .small-image {
   width: 100%;
   display: block;
+}
+
+@media (min-width: 767px) {
+  .movie-wrap {
+    width: 25%;
+  }
 }

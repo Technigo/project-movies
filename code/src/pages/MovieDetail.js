@@ -4,8 +4,8 @@ import { LinkButton } from "components/Link";
 
 export const MovieDetail = () => {
   const { movieId } = useParams();
-  const [movie, setMovie] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [movie, setMovie] = useState(false);
+  const [loading, setLoading] = useState(true);
   const history = useHistory();
 
   useEffect(() => {
@@ -13,7 +13,12 @@ export const MovieDetail = () => {
     fetch(
       `https://api.themoviedb.org/3/movie/${movieId}?api_key=cc325ede4f72069add696614aa58b9e2&language=en-US`
     )
-      .then(res => res.json())
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+        }
+        return false;
+      })
       .then(json => {
         setMovie(json);
         setLoading(false);
@@ -39,16 +44,10 @@ export const MovieDetail = () => {
     <section
       className="background"
       style={{
-        backgroundImage: `url(${`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`})`
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(${`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`})`
       }}
     >
       <LinkButton />
-
-      {/* <img
-        className="big-image"
-        src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`}
-        alt={movie.title}
-      /> */}
       <article className="summary">
         <img
           className="image"
