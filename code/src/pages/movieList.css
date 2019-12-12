@@ -6,7 +6,7 @@ h1 {
     padding: 0px;
     margin: 0px;
     color: white;
-    font-size: 42px;
+    font-size: 32px;
 }
 
 p {
@@ -28,6 +28,8 @@ p {
     margin: 0;
 }
 
+
+
 .titleRelease {
     position: absolute;
     bottom: 0;
@@ -35,19 +37,25 @@ p {
     background-size: cover;
     display: none;
     padding: 20px;
+    opacity: 0;
+    color: white; 
+    z-index: 2;
 }
 
 /********* HOVER **********/
 
-.moviePoster:hover {
+.moviePoster:hover img {
     filter: brightness(20%);
-    background: rgba(0,0,0,0.75);
+    background: rgba(0,0,0,.5);
 }
 
 /* when text has display:none above, display:block, shows it on hover*/
 .moviePoster:hover .titleRelease {
+  
     display: block;
+    cursor: pointer;
+    opacity: 1;
+  
 }
 
-/********* MEDIA QUERIES ********/
 

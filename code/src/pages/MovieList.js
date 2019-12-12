@@ -13,6 +13,10 @@ useEffect(() => {
         })
 }, [])
 
+function goBack() {
+    window.history.back();
+  }
+
     return (
         
         <div className="movieContainer">

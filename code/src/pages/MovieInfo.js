@@ -12,7 +12,7 @@ export const MovieInfo = () => {
         .then((json) => {
             setMovie(json)
             console.log(json)
-        })
+        })  
     }, [movieId])
 
     return(
@@ -20,6 +20,8 @@ export const MovieInfo = () => {
             {/*backDrop background picture with CSS style in react for the site*/}
             < div className="backDrop" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}} alt={movie.original_title} />
              {/*infoBox contains poster, text about movie, title and rating*/}
+
+           
             <div className="infoBox">    
                 <img className="infoPoster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title} /> 
                 {/*titleInfo contains title and rating to make them flex in css*/} 
