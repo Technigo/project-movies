@@ -16,6 +16,15 @@ body {
     max-width: 1600px;
 }
 
+.backlink a {
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    left: 50px;
+    top: 50px;
+}
+
 .details .movie {
     display: flex;
     position: relative;

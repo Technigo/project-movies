@@ -34,6 +34,9 @@ export const MovieDetails = () => {
         <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt = "background" />
       </div>
 
+      <div className="backlink">
+      <a href="./" >Movies</a>
+      </div>
 
       <div className="movie">
         <div className="poster">
