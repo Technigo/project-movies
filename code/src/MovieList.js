@@ -17,6 +17,12 @@ export const MovieList = () => {
 
   }, [])
 
+  if (!setMovies) {
+    return (
+      <div>Not found!</div>
+    )
+
+  }
 
   return (
     <article>

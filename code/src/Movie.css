@@ -15,6 +15,16 @@ span{
   font-size: 16px;
 }
 
+.loading{
+  background: black;
+  font-size: 32px;
+  height: 100%;
+}
+
+.article{
+  background: black;
+}
+
 .about-container{
   background-size: cover;
   height:100%;

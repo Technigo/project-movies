@@ -19,25 +19,14 @@
   text-decoration: none;
 }
 
-.arrow-container{
- width: 30px;
- height: 30px;
- padding: 5px;
- background:white;
-  /* background-clip: text;
-  color: transparent; */
-  border: 2px solid white;
-  border-radius: 50%;
-  margin-right: 5px;
-   /* -webkit-text-fill-color: transparent;
-  -webkit-background-clip: ; */
-}
 
-.nav-styling:hover .arrow-container{
+.nav-styling:hover .icon svg{
   margin-right: 12px;
 }
 
-.arrow{
-  /* mix-blend-mode: overlay; */
-  /* background:#FFF; */
-}
+.icon svg{
+    margin-right: 5px;
+    height: 30px;
+    width: auto;
+    fill: #FFF;;
+  }
