@@ -1,0 +1,17 @@
+.movieList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movieList a {
+  width: 25%;
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  position: relative;
+}

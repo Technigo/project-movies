@@ -18,7 +18,5 @@ export const MovieDetails = () => {
       });
   }, []);
 
-  if (loading) {
-    return <div>LOADING</div>;
-  }
+  return <div>Loading</div>;
 };
