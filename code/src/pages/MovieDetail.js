@@ -60,7 +60,9 @@ export const MovieDetail = () => {
               <h2>{movie.title} <span>{movie.vote_average}/10</span></h2>
               <div className="genres">
                 {movie.genres.map((genre) => (
-                  <p key={genre.name}>{genre.name}</p>
+                  <Link to={`/genre/${genre.id}`}>
+                    <p key={genre.name}>{genre.name}</p>
+                  </Link>
                 ))}
               </div>
               <br></br>

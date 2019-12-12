@@ -87,13 +87,15 @@ margin-top:50px;
   flex-wrap: wrap;
   margin-top:5px;
 }
-.genres p{
+.genres a{
   margin:0 5px 5px 0;
   padding: 2px;
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+  text-decoration: none;
+  color:white;
   /* display: inline; */
 }
-.genres p:hover{
+.genres a:hover{
   background: white;
   color:black;
 }

@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 import { MovieList } from "pages/MovieList"
 import { MovieDetail } from "pages/MovieDetail"
 import { SimilarMovies } from "pages/SimilarMovies"
+import { Genre } from "pages/Genre"
 import { Nav } from "pages/Nav"
 import "./App.css"
 
@@ -29,6 +30,9 @@ export const App = () => {
         </Route>
         <Route path="/similar/:id">
           <SimilarMovies />
+        </Route>
+        <Route path="/genre/:genreId">
+          <Genre />
         </Route>
       </Switch>
 
