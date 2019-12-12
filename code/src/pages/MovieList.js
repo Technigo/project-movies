@@ -6,6 +6,7 @@ import './movielist.css'
 export const MovieList = () => {
   //To store a list of movies
   const [movies, setMovies] = useState([])
+
   //To store a new list of movies based in the opstion in Nav.js
   //Popular is initial state to show as default
   const [chosenList, setChosenList] = useState("popular")
@@ -24,12 +25,12 @@ export const MovieList = () => {
     fetch(`https://api.themoviedb.org/3/movie/${chosenList}?api_key=${apiKey}&language=en-US&page=1`)
       .then(res => res.json()) //Get the json of movie list
       .then(json => {
-        setMovies(json.results)
+        setMovies(json.results) //Set the json.reslut to movies that vi are mapping further down
       })
   }, [chosenList])
 
+  //Returning the movies in the json by map() - id, poster, title, release date
   return (
-
     <section className="movieMain">
       <NavMenu chosenMovieList={chosenMovieList} />
       <section className="moviesWrapper">

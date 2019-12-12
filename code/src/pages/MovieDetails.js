@@ -22,13 +22,24 @@ export const MovieDetails = () => {
       })
   }, [id])
 
+
+  //If movie id is not found show this "not found"-page
+  if (!movie.id) {
+    return (
+      <section className="notFound">
+        <h1>Movie not found</h1>
+        <Link to="/">
+          <h2><i className="fas fa-chevron-circle-left" /> Back to list with movies</h2>
+        </Link>
+      </section>
+    )
+  }
+
   //Return a background backdrop, smaller poster, title, voting, overview
   return (
-
-
     <section className="movieWrapper" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
       <Link to="/">
-        <div className="backToList"><i className="fas fa-chevron-circle-left"></i> Movies</div>
+        <div className="backToList"><i className="fas fa-chevron-circle-left" /> Movies</div>
       </Link>
       <section className="movieSummary">
         <img className="moviePoster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
