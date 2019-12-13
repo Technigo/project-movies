@@ -8,17 +8,6 @@
     bottom: 0px;
 }
 
-svg {
-    width: 10%;
-}
-
-.rating {
-    color: red;
-    margin-bottom: 5px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
 .background {
     display: flex;
     flex-direction: column;
@@ -31,6 +20,31 @@ svg {
     min-height: 100%;
     width: 100%;
     height: auto;
+}
+
+svg {
+    width: 10%;
+}
+
+.titel-rating-text {
+    margin-left: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.rating {
+    color: red;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .details-info {
@@ -46,14 +60,9 @@ svg {
     max-width: 60%;
 }
 
-h1 {
-    margin-bottom: 20px;
-    font-size: 36px;
-    font-weight: 800;
-}
-
 .details-info p {
     font-weight: bold;
+    font-size: 16px;
 }
 
 .go-back a {
@@ -78,11 +87,3 @@ h1 {
 }
 
 
-
-.titel-rating-text {
-    margin-left: 20px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
