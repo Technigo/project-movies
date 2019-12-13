@@ -32,6 +32,7 @@ export const MovieDetails = () => {
       })
   }, [id]) //Putting id as second argument to fetch new movie when id is changing
 
+  //SAVING OLD CODE FOR REVIEW
   //Loading spinner mean while loading API
   // if (loading) {
   //   return (
@@ -53,7 +54,6 @@ export const MovieDetails = () => {
   //   )
   // }
 
-  //Return a background backdrop, smaller poster, title, voting, overview
   return (
     <main>
       {loading &&
