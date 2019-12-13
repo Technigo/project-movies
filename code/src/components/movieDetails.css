@@ -89,14 +89,3 @@ svg {
 .go-back svg {
     transition: .4s ease-in-out;
 }
-
-@media screen and (max-device-width: 668px) {
-
-    .go-back a {
-        bottom: 650px;
-    }
-
-    .details-info {
-        bottom: 130px;
-    }
-}
