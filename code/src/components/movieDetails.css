@@ -1,0 +1,88 @@
+.detail-section {
+    display: flex;
+    z-index: 0;
+    width: 90%;
+    height: fit-content;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 0px;
+}
+
+svg {
+    width: 10%;
+}
+
+.rating {
+    color: red;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 1024px;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.details-info {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    margin-left: 30px;
+    padding-bottom: 20px;
+}
+
+.details-info img {
+    border: solid 5px white;
+    max-width: 60%;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.details-info p {
+    font-weight: bold;
+}
+
+.go-back a {
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 3;
+    bottom: 555px;
+    margin-left: 30px;
+}
+
+.go-back:hover svg {
+    margin-right: 10px;
+}
+
+.go-back svg {
+    transition: .4s ease-in-out;
+}
+
+
+
+.titel-rating-text {
+    margin-left: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
