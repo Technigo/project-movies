@@ -60,6 +60,7 @@ svg {
 .details-info img {
     border: solid 5px white;
     max-width: 60%;
+    max-height: auto;
 }
 
 .details-info p {
