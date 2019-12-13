@@ -96,13 +96,13 @@
                     
                     a {
                         text-decoration: none;
-                        font-size: 1.5rem;
-                        color: darkolivegreen;
+                        font-size: 1.2rem;
+                        color: lightsteelblue;
                     }
                     
                     a:hover {
                         text-decoration: none;
-                        font-size: 1.5rem;
+                        font-size: 1.2rem;
                         color: white;
                     }
                     
@@ -164,6 +164,20 @@
                         }
                         .back {
                             position: absolute;
+                            width: 200px;
+                            display: inline;
+                            top: 10px;
+                            left: 10px;
+                        }
+                        .back a {
+                            position: absolute;
+                            font-size: 1.2rem;
+                            top: 10px;
+                            left: 10px;
+                        }
+                        .back a:hover {
+                            position: absolute;
+                            font-size: 1.2rem;
                             top: 10px;
                             left: 10px;
                         }
