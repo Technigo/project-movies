@@ -28,7 +28,6 @@
 }
 
 .dropdownContent {
-  /* display: none; */
   position: absolute;
   background: #000;
   z-index: 1;
@@ -60,7 +59,7 @@
 
 .active + .dropdownContent {
   opacity: 1;
-  min-height: 150px;
+  min-height: 160px;
   width: 100%;
 }
 

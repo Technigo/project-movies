@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import './navmenu.css'
 
 export const NavMenu = ({ chosenMovieList, chosenList }) => {
+  //Destructured variables: props.chosenMovieList & props.chosenList
+
   //To toggle class on dropdown button
   const [menuActive, setMenuActive] = useState(false)
 
-  //Adds class "active" conditionally to dropdown button depending on state true or false
+  //Adds class "active" conditionally to dropdown menu depending on state true or false
+  //Sets what list to show in MovieList.js when clicking one of the menu buttons
   return (
 
     <section className="navWrapper">

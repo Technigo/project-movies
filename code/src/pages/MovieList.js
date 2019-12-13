@@ -4,9 +4,10 @@ import { NavMenu } from '../components/NavMenu'
 import './movielist.css'
 
 export const MovieList = () => {
+  //Loading state to show loading mean while API is fetched
+  const [loading, setLoading] = useState(true)
   //To store a list of movies
   const [movies, setMovies] = useState([])
-
   //To store a new list of movies based on the options in Nav.js
   //Popular is initial state to show as default
   const [chosenList, setChosenList] = useState("popular")
@@ -20,14 +21,25 @@ export const MovieList = () => {
   }
 
   //useEffect to fecth API data
-  //Want to get the option choosen in Nav and out it in the url
+  //Want to get the option chosen in Nav and put it in the url
   useEffect(() => {
+    setLoading(true)
     fetch(`https://api.themoviedb.org/3/movie/${chosenList}?api_key=${apiKey}&language=en-US&page=1`)
       .then(res => res.json()) //Get the json of movie list
       .then(json => {
         setMovies(json.results) //Set the json.reslut to movies that vi are mapping further down
+        setLoading(false)
       })
-  }, [chosenList])
+  }, [chosenList]) //Re fetches the API based on what list is chosen
+
+  //Loading spinner mean while loading API
+  if (loading) {
+    return (
+      <section className="loading">
+        <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </section>
+    )
+  }
 
   //Returning the movies in the json by map() - id, poster, title, release date
   return (
