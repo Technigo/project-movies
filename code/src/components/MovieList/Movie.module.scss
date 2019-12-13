@@ -31,16 +31,7 @@
   margin-right: 20px;
 }
 
-// @media screen and (min-width: 1000px) {
-//   .movie img {
-//     transition: transform .5s ease-in-out;
-//   }
-//   .movie:hover img {
-//     transform: scale(1.1);
-//   }
-// }
-
-@media (any-hover: hover) and (any-pointer: fine)  {
+@media screen and (min-width: 1000px) {
   .movie {
     overflow: hidden;
   }
@@ -51,3 +42,15 @@
     transform: scale(1.1);
   }
 }
+
+// @media (any-hover: hover) and (any-pointer: fine)  {
+//   .movie {
+//     overflow: hidden;
+//   }
+//   .movie img {
+//     transition: transform .5s ease-in-out;
+//   }
+//   .movie:hover img {
+//     transform: scale(1.1);
+//   }
+// }
