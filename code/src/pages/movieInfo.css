@@ -1,105 +1,90 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+body {
+    margin: 0px;
 }
 
-body {
-    /* box-sizing: border-box;
-    margin: 0px; */
-    padding: 0px;
+.infoContainer {
+   width: 100%; 
+   align-content: center;
+   text-align: left;
+   position: relative;
 }
 
 .backdrop {
     height: 100vh;  
+    justify-content: center;
+    background-size: cover;
     background-position: center;
-    display: flex;
-    flex-wrap: wrap;
-    /* filter: brightness(85%);
-    background: rgba(0,0,0,0.75); */
-    /* filter:drop-shadow(8px 8px 20px gray); */
+    background-repeat: no-repeat;
 } 
 
-.aboutContainer {
+
+.infoContainer .backLink {
     display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    align-self: flex-start; 
+    position: absolute;
+    display: inline-flex;
+    color: #fff;
+    align-items: center;
+    font-weight: 700;
+    text-decoration: none;
+    left: 50px;
+    top: 100px;
 }
 
-/* .movieInfo .backLink {
-  position: absolute;
-  display: inline-flex;
-  color: #fff;
-  align-items: center;
-  font-weight: bold;
-  text-decoration: none;
-  left: 50px;
-  top: 50px;
+.backLinkImg {
+    width: 10%;
+  /* transition: all .10s ease-in-out;  */
+}
+.backLink:hover svg { 
+    margin-right: 10px;
+}  
+
+.infoContainer .backLinkImg svg {
+    transition: margin-right .3s ease-in-out;  /*the anmation that makes the button move when hover */
 }
 
-.movieInfo .backLink svg {
-  width: 30px;
-  transition: margin-right 0.2s ease-in-out;
-}
-
-.movieInfo .backLink:hover svg {
-  margin-right: 5px;
-} */
+.infoContainer .infoBox {
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+    padding: 50px;
+    bottom: 0;
+} 
 
 .infoPoster {
-    display: flex;
-    justify-content: flex-end;
-    border: 7px solid white; 
-    position: absolute;
-    bottom: 3%;
-    margin-left: 72px;
-    margin-bottom: 45px;
-}
-
-.infoPoster img {
-    height: 73vh;
-    width: 49vh;
+    float: left;
+    border: 10px solid white;
 }
 
 .titleInfo {
     display: block;
-    flex-direction: column;
-    box-sizing: border-box;
-    color: #fff;
-    font-size: 12px;
-    position: absolute;
-    bottom: 10%;
-    margin-left: 39%;
-    width: 250px; 
-    justify-content: flex-end;
+    padding-left: 20px;
+    justify-content: space-evenly;  
+    max-width: 480px;
 } 
 
 .movieTitle {
     /* position: absolute; */
-    margin-left: 80px;
+    /* margin-left: 80px;
     flex-direction: row;
     display: block;
-    width: 250px;
-    /* padding-right: 10px; */
+    width: 250px; */
+    padding-right: 20px;  
 
-    /* display: flex;
-    flex-direction: column;
-    flex-flow: wrap;
-    display: inline; */
-    font-size: 30px;  
+    display: flex;
+    /* flex-direction: column;
+    flex-flow: wrap;*/
+    display: inline; 
+    /* font-size: 30px;    */
 }
 
 .movieVotes {
-    position: absolute;
+    /* position: absolute;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; */
     color: red;
-    margin-left: 255px;
-    margin-top: -28px;
+   
     font-size: 25px;
-    /* flex-flow: wrap; */
-    /* display: inline;   */
+    display: contents;
 }
 
 .movieInfo {
@@ -111,15 +96,7 @@ body {
     font-size: 25px;
 }
 
-.titleRelease {
-    display: inline-flex;
-    flex-direction: column;
-    position: absolute;
-    color: white;
-    z-index: 2;
-}
-
-@media (max-width: 650px) {
+/* @media (max-width: 650px) {
     .movieInfo { 
         flex-direction: column;
         flex-grow: initial;
@@ -131,4 +108,4 @@ body {
         width: 100%;
     }    
          
-}  
+}   */
