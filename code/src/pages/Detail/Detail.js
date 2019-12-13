@@ -4,6 +4,7 @@ import { DetailView } from "./../../components/DetailView";
 
 export const Detail = () => {
   const [details, setDetails] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const { movieId } = useParams();
   console.log(movieId);
@@ -15,7 +16,7 @@ export const Detail = () => {
     const json = await resp.json();
     // const updatedDetails = { title: json.title, overview: json.overview };
     setDetails({ ...json });
-    console.log({ ...json });
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -33,6 +34,9 @@ export const Detail = () => {
 
   return (
     <section className="details-section">
+      {loading && (
+        <h2 className="loading">Loading details..................</h2>
+      )}
       <DetailView
         title={details.title}
         overview={details.overview}

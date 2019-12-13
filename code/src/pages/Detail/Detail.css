@@ -32,18 +32,17 @@
 .detail-flex {
   position: absolute;
   display: flex;
-  top: 6rem;
+  top: 5rem;
   /* bottom: 6rem; */
   left: 3rem;
   /* margin-bottom: 3rem; */
   flex-direction: column;
+  height: 80%;
 }
 
 .detail-flex img {
   object-fit: contain;
   border: 6px #fff solid;
-
-  /* margin-top: 6rem; */
 }
 
 #detail-description {
@@ -56,23 +55,8 @@
 }
 
 .detail-title {
-  /* width: 60%; */
   display: flex;
-  /* font-size: 0.5rem; */
-  /* justify-content: space-between; */
 }
-
-/* .button {
-  position: absolute;
-  top: 4rem;
-  left: 3rem;
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  background: transparent;
-  border: none;
-  color: #fff;
-  text-decoration: none;
-} */
 
 .button {
   display: flex;
@@ -100,20 +84,12 @@ ion-icon {
   transition: all 0.3s;
 }
 
-h2 {
-}
-
 .rating {
-  color: red;
+  /* color: red; */
   margin-left: 0.5rem;
 }
 
-.image {
-  height: 545px;
-  max-width: 350px;
-}
-
-@media (max-width: 550px) {
+@media (max-width: 650px) {
   .image {
     height: 300px;
     width: 204px;
@@ -122,16 +98,12 @@ h2 {
     height: 300px;
     width: 204px;
   }
-
-  .detail-flex {
-    /* bottom: 0; */
-  }
 }
 
-@media (min-width: 551px) {
-  .detail_background-img {
-    /* width: 100%;
-    max-width: 100%; */
+@media (min-width: 651px) {
+  .image {
+    height: 545px;
+    max-width: 350px;
   }
 
   .detail-flex {

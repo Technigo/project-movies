@@ -3,6 +3,7 @@ import { Popular } from "components/Popular";
 
 export const PopularList = () => {
   const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(
@@ -13,10 +14,12 @@ export const PopularList = () => {
         setMovies(json.results);
         // console.log(json.results);
       });
+    setLoading(false);
   }, []);
 
   return (
     <section className="movies">
+      {loading && <h2 className="loading">Loading movies..................</h2>}
       {movies.map(movie => (
         <Popular
           title={movie.title}

@@ -25,17 +25,3 @@ main {
   height: 100%;
   width: 100%;
 }
-
-/* .movies {
-  display: flex;
-} */
-
-/* @media screen and (max-width: 375px) {
-  body {
-    align-items: flex-start;
-  }
-} */
-/* @media (max-width: 450px) {
-  body {
-  }
-} */

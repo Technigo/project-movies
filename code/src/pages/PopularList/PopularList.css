@@ -13,8 +13,7 @@
   text-decoration: none;
   color: #fff;
   object-fit: cover;
-  /* grid-column: 1/-1;
-  grid-row: 1/-1; */
+
   opacity: 1;
 }
 
@@ -60,6 +59,10 @@ img {
   grid-row: 1 / -1;
   min-width: 100%;
   object-fit: 100%;
+}
+
+.loading {
+  color: #fff;
 }
 
 @media (min-width: 768px) {
