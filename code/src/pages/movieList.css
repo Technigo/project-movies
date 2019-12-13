@@ -28,16 +28,13 @@ p {
     margin: 0;
 }
 
-
-
 .titleRelease {
     position: absolute;
     bottom: 0;
     left: 0;
     background-size: cover;
-    display: none;
     padding: 20px;
-    opacity: 0;
+    opacity: 0; /* equals display:none and works with opacity:1 */
     color: white; 
     z-index: 2;
 }
