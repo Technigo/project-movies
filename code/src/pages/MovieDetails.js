@@ -58,14 +58,4 @@ export const MovieDetails = () => {
 }
 
 
-/* <img classname="backDrop" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt="Movie Poster" />
-<img className="poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="Movie Poster" />
-
-<article>
-<div className="movieDetail">
-<h1>{movie && <div>{movie.title}</div>}</h1>
-<h2>{movie && <div>{movie.vote_average}/10</div>}</h2>
-</div>
-<summary>{movie && <div>{movie.overview}</div>}</summary>
-</article> */
 

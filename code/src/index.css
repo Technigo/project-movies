@@ -90,17 +90,18 @@ code {
 
 .detailsPage .backToMovies svg {
   width: 30px;
-  transition: margin-right 0.2s ease-in-out;
+  margin-right: 1px;
+  transition: margin-right 0.2s ease-out;
 }
 
-.detailPage .backToMovies:hover svg {
+.detailsPage .backToMovies:hover svg {
   margin-right: 5px;
 }
 
 .detailsPage .backDrop {
   min-height: 100vh;
   /* position: relative; */
-  background-position: center;
+  /* background-position: center; */
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -112,6 +113,7 @@ code {
   display: flex;
   align-items: flex-end;
   padding: 20px 50px;
+  
  }
 
  .detailsPage .movieDetailWrapper {
@@ -119,6 +121,8 @@ code {
   flex-direction: column;
   padding: 0px 20px;
   max-width: 350px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(19, 17, 17, 0.5);
  }
 
  .detailsPage .movieDetail h1 {
@@ -130,6 +134,11 @@ code {
   color: red;
   font-weight: normal;
 }
+
+.detailsPage .movieDetail p {
+  font-size: 16px;
+}
+
 
 .detailsPage .movieDetail {
   display:flex;
