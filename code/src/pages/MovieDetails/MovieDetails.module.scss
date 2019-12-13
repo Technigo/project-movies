@@ -131,7 +131,7 @@ p {
     // border: 1px solid red;
 
     .overview {
-      width: 50%;
+      width: 55%;
       // border: 1px solid blue;
       margin-bottom: 30px;
       padding: 0 30px;
@@ -150,9 +150,22 @@ p {
 
 @media screen and (min-width: 1000px) {
   .containerFlex {
+    .overview {
+      
+    }
     .poster {
-      width: 30%;
-      max-width: 400px;
+      width: 33%;
+      max-width: 360px;
+      // max-height: 30%;
+      // border: 5px solid red;
+    }
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .containerFlex {
+    .overview {
+      width: 45%;
     }
   }
 }
