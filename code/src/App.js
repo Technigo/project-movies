@@ -5,6 +5,7 @@ import { MovieDetail } from "pages/MovieDetail";
 import "css/MovieList.css";
 import "css/MoviePage.css";
 import "css/Link.css";
+import "css/Navbar.css";
 
 export const App = () => {
   return (
@@ -13,6 +14,15 @@ export const App = () => {
         <Switch>
           <Route path="/" exact>
             <MovieList />
+          </Route>
+          <Route path="/popular" exact>
+            <MovieList category="popular" />
+          </Route>
+          <Route path="/upcoming">
+            <MovieList category="upcoming" />
+          </Route>
+          <Route path="/top_rated">
+            <MovieList category="top_rated" />
           </Route>
           <Route path="/movies/:movieId">
             <MovieDetail />

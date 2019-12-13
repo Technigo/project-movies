@@ -1,16 +1,17 @@
 import React from "react";
-import { Route, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Icon } from "components/Icon";
 
-export const LinkButton = () => (
-  <header>
-    <Route path="/movies">
-      <Link to="/" className="link-wrap">
-        <div className="back-button">
+export const LinkButton = () => {
+  const history = useHistory();
+  return (
+    <header>
+      <button className="back-button" onClick={history.goBack}>
+        <span className="back-button-icon">
           <Icon />
-        </div>
+        </span>
         <h4>Movies</h4>
-      </Link>
-    </Route>
-  </header>
-);
+      </button>
+    </header>
+  );
+};

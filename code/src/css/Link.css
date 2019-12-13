@@ -1,30 +1,40 @@
 .back-button {
-  width: 30px;
-  height: 30px;
-  margin: 40px 0px 40px 20px;
-}
-
-.link-wrap {
   color: white;
   top: 0;
   left: 0;
   position: absolute;
   display: flex;
+  align-items: center;
   text-decoration: none;
+  padding: 0;
+  background: transparent;
+  margin: 20px 0;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
 }
 
-h4 {
-  margin-top: 45px;
-  margin-left: 0;
+.back-button:focus {
+  outline: 0;
+}
+
+.back-button-icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+
+.back-button h4 {
+  margin: 0;
   transition: margin-left 0.2s ease-in-out;
 }
 
-.link-wrap:hover h4 {
+.back-button:hover h4 {
   margin-left: 5px;
 }
 
 @media (min-width: 767px) {
-  .link-wrap {
+  .back-button {
     left: 50px;
     top: 20px;
   }

@@ -1,0 +1,11 @@
+header {
+  background-color: black;
+  width: 100%;
+  margin: 20px;
+  font: 18px bold;
+}
+
+header select {
+  height: auto;
+  font-size: 18px;
+}

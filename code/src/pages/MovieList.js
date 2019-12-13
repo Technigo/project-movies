@@ -1,22 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Navbar } from "components/Navbar";
 
-export const MovieList = () => {
+export const MovieList = ({ category = "popular" }) => {
   const apiKey = "cc325ede4f72069add696614aa58b9e2";
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/${category}?api_key=${apiKey}&language=en-US&page=1`
     )
       .then(res => res.json())
       .then(json => {
         setMovies(json.results);
       });
-  }, []);
+  }, [category]);
 
   return (
     <section className="wrapper">
+      <header>
+        <Navbar category={category} />
+      </header>
+
       {movies.map(movie => (
         <article key={movie.id} className="movie-wrap">
           <Link to={`/movies/${movie.id}`}>
