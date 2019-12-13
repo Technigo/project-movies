@@ -12,7 +12,7 @@ export const MovieDetails = () => {
   const history = useHistory();
 
   const id = isNaN(movieId);
-  // console.log('is not a number', id);
+  console.log('is not a number', id);
 
   useEffect(() => {
     // console.log(movieId);
