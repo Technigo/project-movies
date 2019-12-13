@@ -32,6 +32,9 @@ export const App = () => {
           <Route path={'/movies/:movieId'} exact>
             <MovieDetails backdropSize={BACKDROPSIZE}/>
           </Route>
+          <Route path='/test/' exact>
+            <div>Test</div>
+          </Route>
         </Switch>
         </main>
     </BrowserRouter>
