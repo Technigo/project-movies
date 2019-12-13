@@ -1,6 +1,7 @@
 import React from 'react'
 import { MovieList } from "pages/MovieList"
 import { MovieDetails } from "pages/MovieDetails"
+import { CastDetails } from "pages/CastDetails"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 import { NoMatch } from "pages/NoMatch"
 
@@ -23,6 +24,9 @@ export const App = () => {
         </Route>
         <Route path="/movies/:id" exact>
           <MovieDetails />
+        </Route>
+        <Route path="/cast/:castId">
+          <CastDetails />
         </Route>
         <Route>
           <NoMatch />

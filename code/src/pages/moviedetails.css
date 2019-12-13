@@ -85,3 +85,15 @@ margin-left: 5px;
 .cast p {
   margin: 0px;
 }
+.cast a {
+  text-decoration: none;
+  color: inherit;
+}
+.cast a:hover {
+  text-decoration: underline;
+  color: inherit;
+cursor: pointer;
+}
+.actors {
+  padding:5px;
+}

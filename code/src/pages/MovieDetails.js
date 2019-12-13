@@ -80,7 +80,9 @@ export const MovieDetails = () => {
             <h4>Staring: </h4>
             <div className="cast">
               {cast.map((casts) => (
-                <p key={casts.name}>{casts.name}</p>
+                <Link key={casts.id} to={`/cast/${casts.id}`}>
+                  <p className="actors">{casts.name}</p>
+                </Link>
               ))}
             </div>
           </div>
