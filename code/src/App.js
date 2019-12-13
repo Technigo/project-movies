@@ -29,7 +29,7 @@ export const App = () => {
           <Route path='/' exact>
             <MoviesOverview movies={movies} posterSize={POSTERSIZE}/>
           </Route>
-          <Route path={`/movies/:movieId`} exact>
+          <Route path={'/movies/:movieId'} exact>
             <MovieDetails backdropSize={BACKDROPSIZE}/>
           </Route>
         </Switch>
