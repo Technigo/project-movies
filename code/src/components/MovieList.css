@@ -1,10 +1,10 @@
-.movie-list{
+.movie-list {
     display: flex;
     flex-wrap: wrap;
     background-color: black;
 }
 
- .movie-list a{
+ .movie-list a {
     flex-direction: column;
     width: 25%;
     position: relative;
@@ -17,7 +17,6 @@
 
 .movie-list-info .list-text {
     position: absolute;
-  
     right: 0;
     bottom: 0;
     left: 0;

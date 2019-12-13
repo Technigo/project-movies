@@ -1,18 +1,8 @@
-/* html {
-    background: url(https://image.tmdb.org/t/p/w1280/xJWPZIYOEFIjZpBL7SVBGnzRYXp.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-} */
-
 .review-container {
    position: relative;
 }
 
 .review-container .background-img {
-    /* min-height: 100vh;
-    background-size: cover; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -34,58 +24,28 @@
 }
 
 .review-container .back-link svg {
-    transition: margin-right .2s ease-in-out;  /**the anmation that makes the button move when hover**/
+    transition: margin-right 0.2s ease-in-out;  /** ease-in-out the anmation that makes the button move when hover**/
 }
 
 .background-img {
-    /* background-size: cover; */
-    /* width: 100%;
-     height: auto; */
-    /*min-height: 100vh; */ /*från technigos kod */
-    /* flex-direction: column; */
-    /* justify-content: flex-end; */
     z-index: -1;
-    /* display: flex; */
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%),url(https://image.tmdb.org/t/p/w1280/zTxHf9iIOCqRbxvl8W5QYKrsMLq.jpg); */
-  /* background-image: linear-gradient(black white); */
-  /* max-width: 1600px;
-  max-height: 1269px;
-  width: auto;
-  height: auto; */
-  /* height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
-
-  /***This seams to do the work with background cover and being responsive****/
-  min-height: 100%;
-  min-width: 1024px;
-	
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-	
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
+    min-height: 100%;
+    min-width: 1024px;
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
 }
-/* 
- .review-container .review-section {
-    /* position: absolute;
-    bottom: -11px; */
-    /* display: flex;
-    align-items: flex-end;
-    padding: 50px */
-/* }  */ 
 
 .review-section {
     display: flex;
-    flex-direction: row;
     z-index: 0; 
     width: 90%;
     height: fit-content;
-    align-items: flex-end; /** makes the text and pic align**/
+    align-items: flex-end; /** makes the text and poster-img align**/
     padding: 0 0 40px 40px;
     position: fixed;
     bottom: 0px;
@@ -119,7 +79,7 @@ h1 {
 }
 
 span {
-color: red;
-font-weight: 700;
-padding-left: 15px;
+    color: red;
+    font-weight: 700;
+    padding-left: 15px;
 }
