@@ -1,5 +1,12 @@
+I created a site that shows the most popular movies right now from a free API. You can hover every monie to se titel and release date. Click on the movie to get more detals!
 
+By fetching all the data in a console.log i hand picked all the data shown on the site. 
+When i had decide what data to use i startet the skiss on how to put everything togheter in differnt section/divs and were to put what type of content. I always start by showing everything and then hide and show by hover a object. 
+In the detail view i have a go back funktion at top, hover and it will change, click to go back to main site. 
+The text an image will change on both page depending on the size of the screen.
 
+To see the site click on this link: https://laughing-davinci-84971d.netlify.com/movies/475557
+Enjoy :)
 
 --------------Save for later--------------
 # Technigo React Starter App
