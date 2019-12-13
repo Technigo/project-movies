@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { MovieList } from "pages/MovieList"
 import { MovieInfo } from "pages/MovieInfo"
 
+
 export const App = () => {
   return (
     <BrowserRouter>

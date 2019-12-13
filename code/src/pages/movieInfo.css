@@ -17,6 +17,25 @@ body {
     background-position: center;
 }
 
+.infoContainer .backLink {
+    position: absolute;
+    display: inline-flex;
+    color: #fff;
+    align-items: center;
+    font-weight: 700;
+    text-decoration: none;
+    left: 50px;
+    top: 50px;
+}
+
+.backLinkImg {
+    width: 10%;
+}
+
+.infoContainer .backLink svg {
+    transition: margin-right .2s ease-in-out;  /**the anmation that makes the button move when hover**/
+}
+
 .infoContainer .infoBox {
     display: flex;
     position: absolute;
@@ -31,8 +50,9 @@ body {
 }
 
 .titleInfo {
-   display: block;
+    display: block;
     padding-left: 20px;
+    justify-content: space-evenly;
 }
 
 .movieTitle {
@@ -43,8 +63,12 @@ body {
     color: red;
     display: contents;
     font-size: 12px;
+ 
 }
 
-
+button {
+    z-index: 1;
+    align-self: flex-start;
+}
 
 

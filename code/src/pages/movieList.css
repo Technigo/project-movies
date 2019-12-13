@@ -51,7 +51,6 @@ p {
 
 /* when text has display:none above, display:block, shows it on hover*/
 .moviePoster:hover .titleRelease {
-  
     display: block;
     cursor: pointer;
     opacity: 1;
