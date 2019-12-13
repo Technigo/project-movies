@@ -34,9 +34,9 @@ svg {
     justify-content: flex-end;
 }
 
-h1 {
+.titel-rating-text h1 {
     margin-bottom: 20px;
-    font-size: 36px;
+    font-size: 5vw;
     font-weight: 800;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -44,7 +44,7 @@ h1 {
 .rating {
     color: red;
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 2.5vw;
     font-weight: bold;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -64,7 +64,7 @@ h1 {
 
 .details-info p {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1.8vw;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
