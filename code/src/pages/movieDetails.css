@@ -1,0 +1,32 @@
+.movie-page {
+  height: 100%;
+}
+
+.return-link {
+  align-items: center;
+  display: flex;
+  color: #fff;
+  font-weight: bold;
+  grid-area: nav;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+  margin-left: 40px;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+}
+
+.return-link::before {
+  content: "";
+  display: inline-block;
+  background-image: url("./icons8-back-to-48.png");
+  background-size: 48px 48px;
+  left: -40px;
+  height: 48px;
+  width: 48px;
+  position: absolute;
+}
+
+.return-link:hover {
+  padding-left: 0.5rem;
+}

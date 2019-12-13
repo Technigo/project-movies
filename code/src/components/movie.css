@@ -1,0 +1,77 @@
+
+.movie {
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+  display: grid;
+  grid-template-areas:
+  "nav"
+  "poster"
+  "details";
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 3fr 3fr;
+  height: 100vh;
+  padding: 1.5rem;
+  position: relative;
+  width: 100%;
+}
+
+.movie-poster {
+  align-self: end;
+  border: 5px solid #fff;
+  grid-area: poster;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 50%;
+}
+
+.movie-details {
+  grid-area: details;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+ .movie-title {
+  display: flex;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+ }
+
+ .movie-rating {
+  align-self: baseline;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-left: 1rem;
+  color: #ff0000;
+  line-height: 2;
+}
+
+ @media screen and (min-width: 668px) {
+
+  .movie {
+    grid-gap: 0 1.25rem;
+    grid-template-areas:
+    "nav ... ..." 
+    "poster ... ..."
+    "poster details ...";
+    grid-template-columns: 18.75rem 20rem auto;
+    padding: 2rem;
+  }
+
+  .movie-poster {
+    width: 100%;
+  }
+
+  .movie-poster, 
+  .movie-details{
+    align-self: end;
+  }
+ }
+
+@media screen and (min-width: 1024px) {
+  .movie {
+    grid-gap: 1rem;
+    grid-template-columns: 22rem 25rem auto;
+    padding: 3rem;
+  }
+}
