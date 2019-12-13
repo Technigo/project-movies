@@ -30,7 +30,7 @@ export const MovieList = () => {
 
       </div>
       <footer>
-        <a className="madeby" href="mailto:ninamansster@gmail.com"> Fourth React project by Nina Månsson at Technigo Frontend Bootcamp 2019. API from The Movie DB - thanks!
+        <a className="madeby" href="mailto:ninamansster@gmail.com"> Fourth React project by Nina Månsson at Technigo Frontend Bootcamp 2019. API from The Movie DB - thanks! Icon from Noon project - thanks!
 </a>
       </footer>
     </div>
