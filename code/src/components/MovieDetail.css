@@ -23,6 +23,10 @@
     width: 10%;
 }
 
+.review-container:hover .back-link svg {
+    margin-right: 5px;
+}
+
 .review-container .back-link svg {
     transition: margin-right 0.2s ease-in-out;  /** ease-in-out the anmation that makes the button move when hover**/
 }
