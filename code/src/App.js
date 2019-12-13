@@ -1,4 +1,6 @@
 import React from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Popular } from 'Pages/Popular'
 
 /* https://api.themoviedb.org/3/movie/550?api_key=0774e20c1c8bfc2f79af713d52e9832d
 
@@ -12,11 +14,10 @@ https://api.themoviedb.org/3/configuration?api_key=0774e20c1c8bfc2f79af713d52e98
  */
 
 
-export const App = () => {
-  return ( <
-    div >
-    Find me in src / app.js!
-    <
-    /div>
-  )
-}
+export const App = () => ( 
+  <Router>
+  <Route path = "/" exact>
+  <Popular />
+  </Route> 
+  </Router>
+)
