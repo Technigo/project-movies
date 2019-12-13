@@ -19,11 +19,11 @@
 .return-link::before {
   content: "";
   display: inline-block;
-  background-image: url("./icons8-back-to-48.png");
-  background-size: 48px 48px;
-  left: -40px;
-  height: 48px;
-  width: 48px;
+  background-image: url("./back.svg");
+  background-size: 30px 30px;
+  left: -35px;
+  height: 30px;
+  width: 30px;
   position: absolute;
 }
 

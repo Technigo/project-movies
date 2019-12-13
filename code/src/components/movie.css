@@ -38,7 +38,6 @@
  }
 
  .movie-rating {
-  align-self: baseline;
   font-size: 1rem;
   font-weight: normal;
   margin-left: 1rem;
@@ -47,7 +46,6 @@
 }
 
  @media screen and (min-width: 668px) {
-
   .movie {
     grid-gap: 0 1.25rem;
     grid-template-areas:
