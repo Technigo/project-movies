@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams, Route } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { BackIcon } from 'BackIcon'
 
 export const MovieDetails = () => {
   const [movie, setMovie] = useState()
@@ -28,28 +29,43 @@ export const MovieDetails = () => {
 
   return (
     <div className="detailsPage">
-      <header>
-        <Route path="/">
-          <Link className="backToMovies" to="/">
-            Movies
-        </Link>
-        </Route>
-      </header>
-      <div >
-        <article>
-          <div className="movieDetail">
-            <h1>{movie && <div>{movie.title}</div>}</h1>
-            <h2>{movie && <div>{movie.vote_average}/10</div>}</h2>
+
+
+      <Link className="backToMovies" to="/">
+        <BackIcon /> Movies
+          </Link>
+
+
+      <main>
+        {movie && (
+          <div className="backDrop" alt="Movie Poster" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
+            <article>
+              <img className="poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="Movie Poster" />
+              <div className="movieDetailWrapper">
+                <div className="movieDetail">
+                  <h1>{movie.title}</h1>
+                  <h2>{movie.vote_average}/10</h2>
+                </div>
+                <p>{movie.overview}</p>
+              </div>
+            </article>
           </div>
-          <summary>{movie && <div>{movie.overview}</div>}</summary>
-        </article>
-        <img classname="backDrop" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt="Movie Poster" />
-        <img className="poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="Movie Poster" />
-      </div>
-      <footer>
-        <a className="madeby" href="mailto:ninamansster@gmail.com"> Forth React project by Nina Månsson at Technigo Frontend Bootcamp 2019. API from The Movie DB - thanks!
-    </a>
-      </footer>
+        )}
+      </main>
+
     </div>
   )
 }
+
+
+/* <img classname="backDrop" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt="Movie Poster" />
+<img className="poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="Movie Poster" />
+
+<article>
+<div className="movieDetail">
+<h1>{movie && <div>{movie.title}</div>}</h1>
+<h2>{movie && <div>{movie.vote_average}/10</div>}</h2>
+</div>
+<summary>{movie && <div>{movie.overview}</div>}</summary>
+</article> */
+

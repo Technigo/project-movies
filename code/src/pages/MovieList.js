@@ -16,16 +16,23 @@ export const MovieList = () => {
   }, [])
 
   return (
-    <div className="fullPage">
-      {movies.map(movie => (
-        <Link key={movie.id} to={`/movies/${movie.id}`}>
-          <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="Movie Poster" />
-          <section className="frontInfo">
-            <h1>{movie.title}</h1>
-            <p>Released at {movie.release_date}</p>
-          </section>
-        </Link>
-      ))}
+    <div>
+      <div className="fullPage">
+        {movies.map(movie => (
+          <Link key={movie.id} to={`/movies/${movie.id}`}>
+            <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="Movie Poster" />
+            <section className="frontInfo">
+              <h1>{movie.title}</h1>
+              <p>Released at {movie.release_date}</p>
+            </section>
+          </Link>
+        ))}
+
+      </div>
+      <footer>
+        <a className="madeby" href="mailto:ninamansster@gmail.com"> Fourth React project by Nina Månsson at Technigo Frontend Bootcamp 2019. API from The Movie DB - thanks!
+</a>
+      </footer>
     </div>
   )
 }
