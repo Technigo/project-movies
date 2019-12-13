@@ -29,4 +29,5 @@
     height: 30px;
     width: auto;
     fill: #FFF;;
+    transition: all 0.2s ;
   }

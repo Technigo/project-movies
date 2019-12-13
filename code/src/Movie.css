@@ -21,6 +21,11 @@ span{
   height: 100%;
 }
 
+.not-found{
+  background: black;
+  font-size: 32px;
+  height: 100%;
+}
 .article{
   background: black;
 }
