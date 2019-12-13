@@ -13,7 +13,6 @@ padding:0 40px;
   border:2px solid black;
   text-decoration: none;
   font-weight: bold;
-  
   padding: 2px 4px;
   border-radius: 6px;
 }
@@ -21,4 +20,23 @@ padding:0 40px;
   color:white;
   border: 2px solid white;
   background:black;
+}
+.navbar svg{
+  width: 30px;
+  height:30px;
+  /* margin: 0; */
+  /* border:2px double white;
+  padding-top: 5px; */
+}
+
+.navbar a:hover svg{
+  background: white;
+  /* color:black; */
+  border:none;
+  border-radius: 5px;
+}
+.logo{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
