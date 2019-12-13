@@ -17,6 +17,7 @@
   top: 0;
   bottom: 0;
   display: block;
+  overflow: hidden; 
 }
 
 .movie:hover .overlay {
@@ -45,8 +46,5 @@
   }
   .movie:hover img {
     transform: scale(1.1);
-  }
-  .overlay {
-    overflow: hidden; 
   }
 }
