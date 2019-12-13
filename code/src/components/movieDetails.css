@@ -88,12 +88,3 @@ h1 {
 .go-back svg {
     transition: .4s ease-in-out;
 }
-
-@media screen and (max-device-width: 668px) {
-
-    .details-info {
-        flex-direction: column;
-        margin-top: 220px;
-    } 
-   
-}
