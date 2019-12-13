@@ -1,7 +1,7 @@
 .movie {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .movie img {
@@ -41,6 +41,9 @@
 // }
 
 @media (any-hover: hover) and (any-pointer: fine)  {
+  .movie {
+    overflow: hidden;
+  }
   .movie img {
     transition: transform .5s ease-in-out;
   }
