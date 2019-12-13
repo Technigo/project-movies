@@ -7,7 +7,6 @@ export const Detail = () => {
     const { id } = useParams()
     const apiKey = "91be6b751a25062269fa48eb99e10f7a"
 
-
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`)
             .then((res) => res.json())
@@ -30,11 +29,10 @@ export const Detail = () => {
         )
     }
 
-    //Return a background backdrop, smaller poster, title, voting, overview
     return (
         <section className="movieWrapper" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
             <Link to="/">
-                <div className="backToList"><i className="fas fa-chevron-circle-left" /> Movies</div>
+                <div className="backToList"><i className="fas fa-chevron-circle-left" /> Back to Movies</div>
             </Link>
             <section className="movieSummary">
                 <img className="moviePoster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
