@@ -53,37 +53,28 @@ body {
 .infoPoster {
     float: left;
     border: 10px solid white;
+    max-width: 60%;
 }
 
 .titleInfo {
+    display: flex;
+    flex-direction: column;
     display: block;
     padding-left: 20px;
     justify-content: space-evenly;  
-    max-width: 480px;
+    max-width: 550px;
 } 
 
 .movieTitle {
-    /* position: absolute; */
-    /* margin-left: 80px;
-    flex-direction: row;
-    display: block;
-    width: 250px; */
+    font-size: 3vw;
     padding-right: 20px;  
-
     display: flex;
-    /* flex-direction: column;
-    flex-flow: wrap;*/
     display: inline; 
-    /* font-size: 30px;    */
 }
 
 .movieVotes {
-    /* position: absolute;
-    display: flex;
-    flex-direction: row; */
+    font-size: 2vw;
     color: red;
-   
-    font-size: 25px;
     display: contents;
 }
 
@@ -95,17 +86,3 @@ body {
     width: 200px;
     font-size: 25px;
 }
-
-/* @media (max-width: 650px) {
-    .movieInfo { 
-        flex-direction: column;
-        flex-grow: initial;
-    }
-}
-
-@media (max-width: 1024px) {
-    .backdrop {
-        width: 100%;
-    }    
-         
-}   */
