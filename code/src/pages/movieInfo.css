@@ -18,7 +18,7 @@ body {
     flex-direction: column;
     min-height: 100%;
     min-width: 1024px;
-    max-width: 375px;
+   
     /* Set up proportionate scaling */
     width: 100%;
     height: auto;
