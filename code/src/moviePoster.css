@@ -1,7 +1,11 @@
 h1, h2, h3 {
     display: inline;
     color: white;
+    white-space: initial;
+    overflow-wrap: normal;
 }
+
+
 .movies {
     display: flex;
     flex-direction: row;
@@ -11,11 +15,12 @@ h1, h2, h3 {
 .movie {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     width: 25%;
 }
 
+
 .movie:hover img {
-    /* position: relative; */
     opacity: 0.3;
     transition: 0.2s;
     z-index: 0;
@@ -26,21 +31,18 @@ img {
     width: 100%;
     height: auto;
 }
-/* img:hover {
-    position: relative;
-    opacity: 0.3;
-} */
+
 
 .movieinfo {
     position: absolute;
     visibility: hidden;
-
 }
 
-.movie:hover .moviedetails {
+.movie:hover .movieinfo {
     visibility: visible;
     position: absolute;
     z-index: 2;
+    width: 25%;
 }
 
 
