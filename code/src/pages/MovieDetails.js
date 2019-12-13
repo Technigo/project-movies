@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import { Arrow } from "icon/Arrow";
+import "pages/movieDetails.css";
 
 export const MovieDetails = () => {
   const [movie, setMovie] = useState();
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState();
   const { id } = useParams();
 
   useEffect(() => {
@@ -13,10 +16,31 @@ export const MovieDetails = () => {
     )
       .then(res => res.json())
       .then(json => {
-        setMovie(json);
+        if (json.status_code === 34) {
+          setError("Ooops! Movie not found");
+        } else {
+          setMovie(json);
+        }
+
         setLoading(false);
       });
-  }, []);
+  }, [id]);
 
-  return <div>Loading</div>;
+  if (loading) {
+    return <h1>LOADING</h1>;
+  }
+
+  if (error) {
+    return <h1>{error}</h1>;
+  }
+
+  return (
+    <div>
+      <Link to="/" className="backLink">
+        <Arrow />
+        Go back
+      </Link>
+      <h1>{movie.title}</h1>
+    </div>
+  );
 };
