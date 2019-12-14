@@ -30,13 +30,13 @@ export const DetailView = ({
             className="detail_image"
           />
         </div>
-        <div id="detail-description">
-          <div className="detail-title">
-            <h2>{title}</h2>
-            <p className="rating">{rating}/10</p>
-          </div>
-          <p>{overview}</p>
+      </div>
+      <div id="detail-description">
+        <div className="detail-title">
+          <h2>{title}</h2>
+          <p className="rating">{rating}/10</p>
         </div>
+        <p>{overview}</p>
       </div>
     </div>
   );
