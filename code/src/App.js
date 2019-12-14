@@ -23,10 +23,6 @@ export const App = () => {
             <MovieDetails />
           </Route>
 
-          {/* <Route path="/movies/:movieId/:producerId">
-            <ProducerDetails />
-          </Route> */}
-
         </Switch>
       </BrowserRouter>
     </div>
