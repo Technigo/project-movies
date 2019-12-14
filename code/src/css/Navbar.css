@@ -1,11 +1,20 @@
 header {
-  background-color: black;
+  display: flex;
   width: 100%;
+  background-color: #000000;
+}
+
+label {
+  display: flex;
+}
+
+header h1 {
   margin: 20px;
-  font: 18px bold;
+  font-size: 18px;
 }
 
 header select {
-  height: auto;
+  margin: auto;
+  height: 45%;
   font-size: 18px;
 }

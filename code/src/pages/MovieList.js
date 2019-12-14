@@ -30,12 +30,12 @@ export const MovieList = ({ category = "popular" }) => {
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               alt={movie.title}
             />
-            <div className="overlay">
+            <section className="overlay">
               <div>
                 <h2>{movie.title}</h2>
                 <p>Released {movie.release_date}</p>
               </div>
-            </div>
+            </section>
           </Link>
         </article>
       ))}

@@ -6,7 +6,7 @@ export const Navbar = ({ category = "popular" }) => {
 
   return (
     <label>
-      Select list:{" "}
+      <h1>Select list: </h1>
       <select
         value={category}
         onChange={e => history.push(`/${e.target.value}`)}

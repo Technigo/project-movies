@@ -3,8 +3,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { MovieList } from "pages/MovieList";
 import { MovieDetail } from "pages/MovieDetail";
 import "css/MovieList.css";
-import "css/MoviePage.css";
-import "css/Link.css";
+import "css/MovieDetails.css";
+import "css/LinkButton.css";
 import "css/Navbar.css";
 
 export const App = () => {

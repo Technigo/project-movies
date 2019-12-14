@@ -9,14 +9,8 @@
   position: relative;
 }
 
-h2 {
-  font-size: 30px;
-}
-
 .overlay {
   display: none;
-  color: white;
-  background: rgba(0, 0, 0, 0.75);
   position: absolute;
   top: 0;
   right: 0;
@@ -25,6 +19,12 @@ h2 {
   padding: 20px;
   justify-content: left;
   align-items: flex-end;
+  color: white;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.overlay h2 {
+  font-size: 30px;
 }
 
 .movie-wrap:hover .overlay {
@@ -32,8 +32,8 @@ h2 {
 }
 
 .small-image {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
 @media (min-width: 767px) {
