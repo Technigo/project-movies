@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { LoadingSpinner } from 'components/LoadingSpinner'
+import { NotFound } from 'components/NotFound'
+import { BackToList } from 'components/BackToList'
 import './moviedetails.css'
 
 export const MovieDetails = () => {
@@ -38,53 +40,21 @@ export const MovieDetails = () => {
       })
   }, [movieId]) //Putting id as second argument to fetch new movie when id is changing
 
-  //SAVING OLD CODE FOR REVIEW - WHICH APPROACH IS BEST?
-  //Loading spinner mean while loading API
-  // if (loading) {
-  //   return (
-  //     <section className="loading">
-  //       <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-  //     </section>
-  //   )
-  // }
-
-  //If movie is not found show this "not found"-page
-  // if (error) {
-  //   return (
-  //     <section className="notFound">
-  //       <h1>Movie not found</h1>
-  //       <Link to="/">
-  //         <h2><i className="fas fa-chevron-circle-left" /> Back to list with movies</h2>
-  //       </Link>
-  //     </section >
-  //   )
-  // }
-
   return (
     <main>
       {loading && <LoadingSpinner />}
 
-      {error &&
-        <section className="notFound">
-          <h1>Movie not found</h1>
-          <Link to="/">
-            <h2><i className="fas fa-chevron-circle-left" /> Back to list with movies</h2>
-          </Link>
-        </section >
-      }
+      {error && <NotFound />}
 
       {!loading && !error &&
         <section className="movieWrapper" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
-          <Link to="/">
-            <div className="backToList"><i className="fas fa-chevron-circle-left" /> Movies</div>
-          </Link>
+          <BackToList />
           <section className="movieSummary">
             <img className="moviePoster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
             <div className="movieInfo">
               <h1>{movie.title} <span className="voting">{movie.vote_average}/10</span></h1>
               <p>{movie.overview}</p>
               <h2>{movie.status}: {movie.release_date}</h2>
-
               <ul>
                 <h2>Produced by:</h2>
                 {movie.production_companies.map((company) => (
@@ -95,7 +65,6 @@ export const MovieDetails = () => {
                   </div>
                 ))}
               </ul>
-
             </div>
           </section>
         </section>

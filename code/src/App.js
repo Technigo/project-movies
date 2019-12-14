@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { MovieList } from 'pages/MovieList'
 import { MovieDetails } from 'pages/MovieDetails'
-import { ProductionCompany } from 'pages/ProductionCompany'
+import { Company } from 'pages/Company'
 
 //Navigation bar component only shown at list page - not in details
 //Choosing a list sets a state to use in fetch url (to fetch popular, top_rated or upcoming)
@@ -25,7 +25,7 @@ export const App = () => {
           </Route>
 
           <Route path="/company/:companyId">
-            <ProductionCompany />
+            <Company />
           </Route>
 
         </Switch>

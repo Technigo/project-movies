@@ -1,0 +1,30 @@
+.companyWrapper {
+  padding: 50px;
+  background: #000;
+  color: #fff;
+  height: 100vh;
+  text-align: center;
+}
+
+.companyDetails {
+  padding: 20px 0;
+}
+
+.logo {
+  filter: invert(100%);
+  padding: 20px 0;
+}
+
+.companyDetails a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* MEDIA QUERY MOBILE */
+@media (max-width: 667px) {
+
+  .logo {
+    width: 90%;
+  }
+
+}

@@ -1,0 +1,26 @@
+/* ANIMATION FOR BACK LINK*/
+@-webkit-keyframes slide {
+  100% { left: 75px; }
+}
+
+@keyframes slide {
+  100% { left: 75px; }
+}
+
+.backToList {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.backToList:active {
+  outline: 2px solid #fff;
+}
+
+.backToList:hover {
+  animation: slide 1s forwards; /* Apply the animation to link on hover */
+  animation-delay: 0.3s;
+}
