@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import { LoadingSpinner } from 'components/LoadingSpinner'
 import './moviedetails.css'
 
 export const MovieDetails = () => {
@@ -32,7 +33,7 @@ export const MovieDetails = () => {
       })
   }, [id]) //Putting id as second argument to fetch new movie when id is changing
 
-  //SAVING OLD CODE FOR REVIEW
+  //SAVING OLD CODE FOR REVIEW - WHICH APPROACH IS BEST?
   //Loading spinner mean while loading API
   // if (loading) {
   //   return (
@@ -56,11 +57,7 @@ export const MovieDetails = () => {
 
   return (
     <main>
-      {loading &&
-        <section className="loading">
-          <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-        </section>
-      }
+      {loading && <LoadingSpinner />}
 
       {error &&
         <section className="notFound">
