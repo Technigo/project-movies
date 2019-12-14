@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { MovieList } from 'pages/MovieList'
 import { MovieDetails } from 'pages/MovieDetails'
+import { ProducerCompany } from 'pages/ProducerCompany'
 
 
 //Navigation bar component only shown at list page - not in details
@@ -21,6 +22,10 @@ export const App = () => {
 
           <Route path="/movies/:movieId">
             <MovieDetails />
+          </Route>
+
+          <Route path="/company/:companyId">
+            <ProducerCompany />
           </Route>
 
         </Switch>

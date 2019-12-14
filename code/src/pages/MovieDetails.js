@@ -79,7 +79,17 @@ export const MovieDetails = () => {
             <div className="movieInfo">
               <h1>{movie.title} <span className="voting">{movie.vote_average}/10</span></h1>
               <p>{movie.overview}</p>
-              <h2>Release: {movie.release_date}</h2>
+              <h2>{movie.status}: {movie.release_date}</h2>
+
+              <ul>
+                <h2>Produced by:</h2>
+                {movie.production_companies.map((company) => (
+                  <Link to="/company/:companyId">
+                    <li key={company.id}>{company.name} <i class="fas fa-chevron-circle-right"></i></li>
+                  </Link>
+                ))}
+              </ul>
+
             </div>
           </section>
         </section>

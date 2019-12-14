@@ -82,6 +82,16 @@
   font-weight: bold;;
 }
 
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  text-decoration: none;
+  color: #fff;
+}
+
 /* MEDIA QUERY MOBILE */
 @media (max-width: 667px) {
 
