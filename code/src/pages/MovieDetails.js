@@ -27,7 +27,7 @@ export const MovieDetails = () => {
   }, [id]);
 
   if (loading) {
-    return <h1>LOADING</h1>;
+    return <h1>Loading...</h1>;
   }
 
   if (error) {
@@ -35,12 +35,31 @@ export const MovieDetails = () => {
   }
 
   return (
-    <div>
-      <Link to="/" className="backLink">
-        <Arrow />
-        Go back
-      </Link>
-      <h1>{movie.title}</h1>
-    </div>
+    <section
+      className="detailsPage"
+      style={{
+        backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`
+      }}
+    >
+      <div>
+        <Link to="/" className="backLink">
+          <Arrow />
+          <p>Go back</p>
+        </Link>
+      </div>
+      <article className="movieDetails">
+        <img
+          src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+          alt="movie-poster"
+        />
+        <div className="details">
+          <h1>
+            {movie.title}
+            <span> {movie.vote_average}/10</span>
+          </h1>
+          <p>{movie.overview}</p>
+        </div>
+      </article>
+    </section>
   );
 };
