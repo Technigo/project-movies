@@ -106,8 +106,8 @@ p {
     img {
       display: block;
       width: 100%;
-      height: 100% !important;
-      // border: 5px solid white;
+      height: auto !important;
+      border: 1px solid white;
       box-shadow: 2px 4px 10px 0px rgba(0,0,0,0.8);
     }
   }
