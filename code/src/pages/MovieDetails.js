@@ -19,11 +19,6 @@ export const MovieDetails = () => {
   //To set error state if movie not found
   const [error, setError] = useState(false)
 
-  //Get 
-  // const company = company => {
-  //   setChosenList(movieList)
-  // }
-
   //Fetching the API with useEffect
   useEffect(() => {
     setLoading(true)
@@ -34,7 +29,6 @@ export const MovieDetails = () => {
           setError(true)
         } else {
           setMovie(json) //Set the state to movieDetails
-          console.log(json)
         }
         setLoading(false)
       })

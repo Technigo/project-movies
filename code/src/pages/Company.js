@@ -5,7 +5,6 @@ import { NotFound } from 'components/NotFound'
 import { BackToList } from 'components/BackToList'
 import './company.css'
 
-
 export const Company = () => {
 
   //Destructuring to get the company id key from the url params, called id beacuse that is what we named it in the path in App.js
@@ -30,12 +29,10 @@ export const Company = () => {
           setError(true)
         } else {
           setCompany(json)
-          console.log(json)
         }
         setLoading(false)
       })
   }, [companyId])
-
 
   return (
     <main>
@@ -47,7 +44,6 @@ export const Company = () => {
         <section className="companyWrapper">
           <BackToList />
           <div className="companyDetails">
-
             {company.logo_path === null ? <h1>{company.name}</h1> : <img className="logo" src={`https://image.tmdb.org/t/p/w300${company.logo_path}`} alt={company.name} />}
             <p>{company.name} have their headquarters in {company.headquarters}</p>
             <a href={company.homepage}>Visit {company.name}'s homepage <i className="fas fa-chevron-circle-right"></i></a>
@@ -55,6 +51,5 @@ export const Company = () => {
         </section>
       }
     </main>
-
   )
 }
