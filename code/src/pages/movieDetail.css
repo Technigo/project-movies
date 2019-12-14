@@ -1,0 +1,33 @@
+body {
+  color: white;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.movieInfo {
+  display: flex;
+  align-items: flex-end;
+  margin: 3em;
+}
+
+.movieDetail {
+  margin-left: 1em;
+  max-width: 40%;
+}
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: 0.6em;
+}
+
+.heading h2 {
+  margin-left: 0.8em;
+}
