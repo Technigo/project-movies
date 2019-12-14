@@ -6,7 +6,7 @@ import './moviedetails.css'
 
 export const MovieDetails = () => {
   //Destructuring to get the movie id key from the url params, called id beacuse that is what we named it in the path in App.js path="/movies/:id"
-  const { id } = useParams()
+  const { movieId } = useParams()
 
   //My API key
   const apiKey = "f16bd1845da3bcbe9df17f656b96d33b"
@@ -21,17 +21,18 @@ export const MovieDetails = () => {
   //Fetching the API with useEffect
   useEffect(() => {
     setLoading(true)
-    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`)
+    fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`)
       .then((res) => res.json()) //Get the json of movie
       .then((json) => {
         if (json.status_code === 34) {
           setError(true)
         } else {
           setMovie(json) //Set the state to movieDetails
+          console.log(json)
         }
         setLoading(false)
       })
-  }, [id]) //Putting id as second argument to fetch new movie when id is changing
+  }, [movieId]) //Putting id as second argument to fetch new movie when id is changing
 
   //SAVING OLD CODE FOR REVIEW - WHICH APPROACH IS BEST?
   //Loading spinner mean while loading API
@@ -78,6 +79,7 @@ export const MovieDetails = () => {
             <div className="movieInfo">
               <h1>{movie.title} <span className="voting">{movie.vote_average}/10</span></h1>
               <p>{movie.overview}</p>
+              <h2>Release: {movie.release_date}</h2>
             </div>
           </section>
         </section>

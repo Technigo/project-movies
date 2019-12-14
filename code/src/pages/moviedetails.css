@@ -21,7 +21,7 @@
   transform: scale(1.2);
 }
 
-/* MOVIE DETAILS */
+/* MOVIE WRAPPER */
 .movieWrapper {
   background-position: center;
   background-size: cover;
@@ -76,6 +76,10 @@
 .voting {
   color: red;
   font-size: 16px;
+}
+
+.movieInfo h2 {
+  font-weight: bold;;
 }
 
 /* MEDIA QUERY MOBILE */

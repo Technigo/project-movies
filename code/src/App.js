@@ -5,8 +5,7 @@ import { MovieDetails } from 'pages/MovieDetails'
 
 
 //Navigation bar component only shown at list page - not in details
-//Dropdown with <select>
-//Choosing a option should set a state to use in fetch url (to fetch popular, toprated or upcoming)
+//Choosing a list sets a state to use in fetch url (to fetch popular, top_rated or upcoming)
 //Page component: Movie list that maps all the movies from API
 //Page component: MovieDetails that renders details about the movie
 
@@ -20,9 +19,13 @@ export const App = () => {
             <MovieList />
           </Route>
 
-          <Route path="/movies/:id">
+          <Route path="/movies/:movieId">
             <MovieDetails />
           </Route>
+
+          {/* <Route path="/movies/:movieId/:producerId">
+            <ProducerDetails />
+          </Route> */}
 
         </Switch>
       </BrowserRouter>

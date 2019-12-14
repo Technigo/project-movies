@@ -6,8 +6,9 @@
   background: #000;
 }
 
-h1 {
+.movieCardDetails h1 {
   font-size: 28px;
+  margin: 10px 0;
 }
 
 h2 {
@@ -15,19 +16,19 @@ h2 {
   font-weight: normal;
 }
 
-.movieList {
+.movieCard {
   width: 25%;
   height: 20%;
   position: relative;
   margin-bottom: 5px;
 }
 
-.movieListPoster {
+.movieCardPoster {
   width: 100%;
   object-fit: cover;
 }
 
-.movieListDetails {
+.movieCardDetails {
   position: absolute;
   color: #fff;
   padding: 20px;
@@ -38,7 +39,7 @@ h2 {
   display: none;
 }
 
-.movieList:hover .movieListDetails {
+.movieCard:hover .movieCardDetails {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -58,7 +59,7 @@ footer {
 /* MEDIA QUERY TABLET */
 @media (max-width: 1024px) {
 
-  .movieList {
+  .movieCard {
     width: 50%;
   }
 
@@ -73,8 +74,12 @@ footer {
     padding: 20px;
   }
 
-  .movieList {
+  .movieCard {
     width: 100%;
+  }
+
+  .movieCardDetails h1 {
+    font-size: 22px;
   }
 
 }

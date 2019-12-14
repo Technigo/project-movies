@@ -45,10 +45,10 @@ export const MovieList = () => {
           <NavMenu chosenMovieList={chosenMovieList} chosenList={chosenList} />
           <section className="moviesWrapper">
             {movies.map((movie) => (
-              <article className="movieList" key={movie.id}>
+              <article className="movieCard" key={movie.id}>
                 <Link to={`movies/${movie.id}`}>
-                  <img className="movieListPoster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-                  <div className="movieListDetails">
+                  <img className="movieCardPoster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+                  <div className="movieCardDetails">
                     <h1>{movie.title}</h1>
                     <h2>Release: {movie.release_date}</h2>
                   </div>
