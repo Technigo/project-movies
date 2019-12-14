@@ -102,16 +102,16 @@ p {
     margin-top: 40px;
     // display: flex;
     // border: 1px solid red;
-    border: 2px solid white;
-    z-index: 3;
+    // border: 2px solid white;
+    // z-index: 3;
 
     img {
       display: block;
       width: 100%;
       height: 100% !important;
-      // border: 2px solid white;
+      border: 4px solid white;
       box-shadow: 2px 4px 10px 0px rgba(0,0,0,0.8);
-      z-index: 2;
+      // z-index: 2;
     }
   }
 }
