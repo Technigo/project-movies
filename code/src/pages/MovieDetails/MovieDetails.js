@@ -49,11 +49,9 @@ export const MovieDetails = () => {
   return (
     <div>
       {isLoading ? (
-        <div>
-          <TopBarProgress />
-        </div>
+        <div>{/* <TopBarProgress /> */}</div>
       ) : (
-        <Suspense>
+        <Suspense fallback={<TopBarProgress />}>
           <div>
             {errorLoading === false && (
               <div
