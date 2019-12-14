@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { LoadingSpinner } from 'components/LoadingSpinner'
 import './moviedetails.css'
 
@@ -17,6 +16,11 @@ export const MovieDetails = () => {
   const [movie, setMovie] = useState([])
   //To set error state if movie not found
   const [error, setError] = useState(false)
+
+  //Get 
+  // const company = company => {
+  //   setChosenList(movieList)
+  // }
 
   //Fetching the API with useEffect
   useEffect(() => {
@@ -84,9 +88,11 @@ export const MovieDetails = () => {
               <ul>
                 <h2>Produced by:</h2>
                 {movie.production_companies.map((company) => (
-                  <Link to="/company/:companyId">
-                    <li key={company.id}>{company.name} <i class="fas fa-chevron-circle-right"></i></li>
-                  </Link>
+                  <div key={company.id}>
+                    <Link to={`/company/${company.id}`} replace>
+                      <li>{company.name} <i className="fas fa-chevron-circle-right"></i></li>
+                    </Link>
+                  </div>
                 ))}
               </ul>
 
