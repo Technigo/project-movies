@@ -6,9 +6,9 @@ https://movie-page-agnes.netlify.com/
 
 ## The requirements for the project:
 
--Using React router to create multi-page applications
--Using Placeholders in urls
--Combining useState with useEffect
+- Using React router to create multi-page applications
+- Using Placeholders in urls
+- Combining useState with useEffect
 
 ## Technologies used
 
