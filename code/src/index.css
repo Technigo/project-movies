@@ -14,7 +14,25 @@ code {
     monospace;
 }
 
+select {
+  height: 4vh;
+  margin: 2vh;
+  width: 50vw;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* Styling PopularList, the list of movies */
+.movies-list {
+  display: grid;
+  grid-template-columns: repeat(4,4fr);
+  grid-template-rows: repeat(4,4fr);
+  margin: 0 auto;
+  padding-left: 0;
+}
+
 .movie-poster {
   align-items: left;
   color: white;
@@ -23,11 +41,11 @@ code {
   justify-content: center;
   position: relative;
   text-align: left;
-  width: 100vw;
+  width: 25vw;
 }
 
 .movie-image {
-  width: 100vw;
+  width: 25vw;
 }
 
 .movie-image:hover {
@@ -58,6 +76,10 @@ code {
 
 
 /* Styling Detail, individual movies */
+.loading-message {
+  font-size: 24px;
+}
+
 .background-container {
   align-items: left;
   display: flex;
@@ -106,48 +128,68 @@ code {
 }
 
 .movie-individual-info-top {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
   margin-left: 30vw;
   position: absolute;
 }
 
 .movie-individual-title {
-  font-size: 26px;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  font-size: 20px;
   padding-left: 8vw;
 }
 
 .movie-individual-rating {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
   color: red;
   font-size: 18px;
-  padding-left: 2vw;
+  margin-left: 10vw;
 }
 
 .movie-individual-overview {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
   display: block;
   font-size: 16px;
   font-weight: normal;
-  margin-left: 37vw;
+  margin-left: 10vw;
   margin-right: 5vw;
   margin-top: 40vh;
   position: absolute;
-  width: 35vw;
+  width: 80vw;
+}
+
+.imdb-link {
+  background: rgba(0, 0, 0, 0.521);
+  color: white; 
+  display: block;
+  margin-left: 40vw;
+  margin-top: 20vh;
+  position: absolute;
+}
+
+.similar-movies {
+  background: rgba(0, 0, 0, 0.521); 
+  display: block;
+  margin-left: 40vw;
+  margin-top: 30vh;
+  position: absolute;
+}
+
+/* ShowSimilar component */
+.back-popular-movies {
+  margin: 2vh;
 }
 
 
 /* Media queries */
 /* Medium-sized devices (e.g. tablets or larger) */
 @media(min-width: 768px) {
-/* Styling PopularList, the list of movies */
-.movies-list {
-  display: grid;
-  grid-template-columns: repeat(4,4fr);
-  grid-template-rows: repeat(4,4fr);
-  margin: 0 auto;
-  padding-left: 0;
+select {
+  height: 4vh;
+  margin: 2vh;
+  width: 15vw;
 }
 
+/* Styling PopularList, the list of movies */
 .movie-poster {
   width: 25vw;
 }
@@ -176,6 +218,9 @@ code {
 }
 
 .movie-individual-info-top {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
   margin-left: 30vw;
 }
 
@@ -186,7 +231,7 @@ code {
 
 .movie-individual-rating {
   font-size: 18px;
-  padding-left: 1vw;
+  margin-left: 1vw;
 }
 
 .movie-individual-overview {
@@ -195,5 +240,22 @@ code {
   margin-right: 5vw;
   margin-top: 15vh;
   width: 35vw;
+}
+
+.movie-individual-info-bottom {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-left: 30vw;
+}
+
+.imdb-link {
+  margin-left: 30vw;
+  margin-top: 45vh;
+}
+
+.similar-movies {
+  margin-left: 42vw;
+  margin-top: 45vh;
 }
 }
