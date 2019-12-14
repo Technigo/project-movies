@@ -1,26 +1,3 @@
-/* MOVIE NOT FOUND */
-.notFound {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: #000;
-  color: #fff;
-  width: 100%;
-  height: 100vh;
-  padding: 40px;
-}
-
-.notFound a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.notFound a:hover {
-  cursor: pointer;
-  transform: scale(1.2);
-}
-
 /* MOVIE WRAPPER */
 .movieWrapper {
   background-position: center;
@@ -28,33 +5,6 @@
   background-repeat: no-repeat;
   min-height: 100vh;
   padding: 50px;
-}
-
-/* ANIMATION FOR BACK LINK*/
-@-webkit-keyframes slide {
-  100% { left: 75px; }
-}
-
-@keyframes slide {
-  100% { left: 75px; }
-}
-
-.backToList {
-  position: absolute;
-  top: 20px;
-  left: 50px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.backToList:active {
-  outline: 2px solid #fff;
-}
-
-.backToList:hover {
-  animation: slide 1s forwards; /* Apply the animation to link on hover */
-  animation-delay: 0.3s;
 }
 
 /* SUMMARY */
@@ -80,6 +30,16 @@
 
 .movieInfo h2 {
   font-weight: bold;;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  text-decoration: none;
+  color: #fff;
 }
 
 /* MEDIA QUERY MOBILE */
