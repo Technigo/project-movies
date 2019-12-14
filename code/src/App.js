@@ -1,5 +1,17 @@
 import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom"
+import { MovieList } from "./Pages/MovieList"
+import { MovieDetails } from "./Pages/MovieDetails"
 
 export const App = () => {
-  return <div>API key: c616ef82836e90a0073b3a17b8bde4banpm</div>;
+  return (
+    <Router>
+      <Route path='/' exact>
+        <MovieList />
+      </Route>
+      <Route path='/movies/:id' exact>
+        <MovieDetails />
+      </Route>
+    </Router>
+  )
 };
