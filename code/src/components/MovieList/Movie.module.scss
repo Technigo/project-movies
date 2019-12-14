@@ -16,8 +16,8 @@
   bottom: 0;
   display: block;
   // overflow: hidden; 
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  // -webkit-backface-visibility: hidden;
+  // backface-visibility: hidden;
 }
 
 .movieDetails {
@@ -33,11 +33,11 @@
   }
   .movie img {
     transition: transform .5s ease-in-out;
-    -webkit-transition: transform .5s ease-in-out;
+    // -webkit-transition: transform .5s ease-in-out;
   }
   .movie:hover img {
     transform: scale(1.1);
-    -webkit-transform: scale(1.1);
+    // -webkit-transform: scale(1.1);
   }
   .overlay {
     width: 0%;

@@ -90,10 +90,10 @@ export const MovieDetails = () => {
                       <p>{movie.overview}</p>
                     </div>
                     <div className={styles.poster}>
-                      <img
+                      {/* <img
                         src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
                         alt="poster"
-                      />
+                      /> */}
                     </div>
                   </div>
                 </div>
