@@ -12,21 +12,15 @@ export const MovieDetails = () => {
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
 
-  const id = isNaN(movieId);
-  // console.log('is not a number', id);
-
   useEffect(() => {
-    // console.log(movieId);
     setIsLoading(true);
     API.getMovie(movieId)
       .then(data => {
-        // console.log('Data: ', data);
         setMovie(data);
         setIsLoading(false);
         SetErrorLoading(false);
       })
       .catch(err => {
-        // console.log('Error: ', err);
         setMovie({});
         SetErrorLoading(true);
       });
@@ -40,8 +34,6 @@ export const MovieDetails = () => {
     shadowBlur: 5,
     barThickness: 2
   });
-
-  // console.log(errorLoading);
 
   if (errorLoading) {
     history.push('/');
@@ -92,10 +84,6 @@ export const MovieDetails = () => {
                         <p>{movie.overview}</p>
                       </div>
                       <div className={styles.poster}>
-                        {/* <img
-                          src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
-                          alt="poster"
-                        /> */}
                         <Image image_path={movie.poster_path} />
                       </div>
                     </div>
