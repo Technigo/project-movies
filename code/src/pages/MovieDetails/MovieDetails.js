@@ -3,7 +3,7 @@ import { useParams, useHistory, Link } from 'react-router-dom';
 import TopBarProgress from 'react-topbar-progress-indicator';
 import * as API from '../../api/Api';
 import styles from './MovieDetails.module.scss';
-import { Image } from '../../components/ResponsiveImage';
+import { Image } from '../../components/Image';
 
 export const MovieDetails = () => {
   const { movieId } = useParams();
@@ -13,7 +13,7 @@ export const MovieDetails = () => {
   const history = useHistory();
 
   const id = isNaN(movieId);
-  console.log('is not a number', id);
+  // console.log('is not a number', id);
 
   useEffect(() => {
     // console.log(movieId);
