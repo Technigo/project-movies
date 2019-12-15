@@ -14,8 +14,6 @@ export const getMovies = async () => {
 };
 
 export const getMovie = async movieId => {
-  console.log(movieId);
-
   if (isNaN(movieId)) {
     throw Error(`Request rejected because ID it's not a number`);
   }
