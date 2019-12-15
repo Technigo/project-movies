@@ -12,7 +12,7 @@ export const MovieList = () => {
     )
       .then(res => res.json())
       .then(json => {
-        console.log(json)
+        //console.log(json)
         setMovies(json.results)
       })
   }, [categories])
