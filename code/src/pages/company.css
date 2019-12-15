@@ -21,6 +21,68 @@
   text-decoration: none;
 }
 
+/* MOVIE LIST */
+.companyMovies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #000;
+}
+
+.movieCardDetails h1 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.movieCard {
+  width: 25%;
+  height: 20%;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.movieCardPoster {
+  width: 100%;
+  object-fit: cover;
+}
+
+.movieCardDetails {
+  position: absolute;
+  color: #fff;
+  padding: 20px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+
+.movieCard:hover .movieCardDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: left;
+}
+
+.altMovieTitle {
+  height: 300px;
+}
+
+/* MEDIA QUERY TABLET */
+@media (max-width: 1024px) {
+
+  .movieCard {
+    width: 50%;
+  }
+
+}
+
 /* MEDIA QUERY MOBILE */
 @media (max-width: 667px) {
 
@@ -28,4 +90,19 @@
     width: 90%;
   }
 
+  .companyMovies {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .movieCard {
+    width: 100%;
+  }
+
+  .movieCardDetails h1 {
+    font-size: 22px;
+  }
+
 }
+
