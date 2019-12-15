@@ -1,14 +1,13 @@
 .movieContainer {
-    display:flex;
-    /* flex-direction: row; */
-    flex-wrap: wrap;
+  display:flex;
+  flex-wrap: wrap;
 }
 
 .link {
-    width: 25%;
-    position: relative;
-    color: #fff;
-    text-decoration: none;
+  width: 25%;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
 }
 
 .moviePoster {
