@@ -38,11 +38,11 @@ export const MovieDetail = () => {
     <div
       className='hero'
       style={{
-        backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.9) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`
       }}
     >
       <Link to='/' className='backLink'>
-        <Arrow /> <p>Movies</p>
+        <Arrow className='arrow' /> <p>Movies</p>
       </Link>
       <div className='movieInfo'>
         <img
@@ -60,12 +60,3 @@ export const MovieDetail = () => {
     </div>
   )
 }
-
-//copy the svg link and paste
-//make a folder called icon
-//a js-file "backArrow" - paste all code from svg here
-//import
-//remember that - is not allowed in jsx, so go through the svg text
-
-/* 
-<h1>{movie.title}</h1> */

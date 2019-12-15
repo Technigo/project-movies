@@ -11,8 +11,17 @@ body {
 }
 
 .backLink {
-  width: 2em;
+  display: flex;
   margin: 3em 0 0 3em;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  align-items: center;
+}
+
+.arrow {
+  width: 2em;
+  margin-right: 0.6em;
 }
 
 .movieInfo {

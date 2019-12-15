@@ -29,10 +29,3 @@ export const MovieList = () => {
     </div>
   )
 }
-
-{
-  /* <select value={category} onChange={(e) => setCategory(e.target.value)}> 
-        <option value='popular'>Popular</option>
-        <option value='top_rated'>Top Rated</option>
-      </select> */
-}
