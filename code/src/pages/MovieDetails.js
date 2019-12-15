@@ -1,5 +1,4 @@
 
-
 import React, { useEffect, useState } from "react"
 import { useParams, Link } from "react-router-dom"
 import "./MovieDetails.css"
@@ -9,10 +8,6 @@ export const MovieDetails = () => {
   const [movie, setMovie] = useState([])
   const [loading, setLoading] = useState(false)
   const { id } = useParams()
-
-
-
-
 
   useEffect(() => {
     setLoading(true)
@@ -56,11 +51,3 @@ export const MovieDetails = () => {
     </div>
   )
 }
-
-
-// {movies.map((movie) => (
-//   <Link key={movie.id} to={`/movies/${movie.id}`}>
-//     <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} />
-//     <h1>{movie.title}</h1>
-//   </Link>
-// ))}

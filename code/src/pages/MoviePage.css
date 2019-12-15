@@ -44,8 +44,6 @@
   padding: 20px;
 }
 
-
-
 .movie-list a:hover .title {
   display: flex;
   flex-wrap: wrap;
@@ -62,11 +60,11 @@ h3 {
 }
 
 h4 {
-margin-left: 10px; 
-margin-bottom: 5px;
-font-weight: bolder;
-color: white;
-font-size: 20px;
+  margin-left: 10px; 
+  margin-bottom: 5px;
+  font-weight: bolder;
+  color: white;
+  font-size: 20px;
 }
 
 
