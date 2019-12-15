@@ -2,6 +2,7 @@ import React from 'react'
 import { MovieList } from 'pages/MovieList'
 import { MovieDetails } from 'pages/MovieDetails'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import 'App.css'
 
 export const App = () => {
   return (

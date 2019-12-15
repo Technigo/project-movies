@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import './movielist.css'
 
 export const MovieList = () => {
     const [movies, setMovies] = useState([])
@@ -13,12 +14,13 @@ export const MovieList = () => {
     }, [])
 
     return (
-        <div>
+        <div className="movieContainer">
             {movies.map((movie) => (
-                <Link key={movie.id} to={`/movies/${movie.id}`}>
-                    <div key={movie.id}>
-                        <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+                <Link className="link" key={movie.id} to={`/movies/${movie.id}`}>
+                    <img className="moviePoster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+                    <div className="movieBox">
                         <h2>{movie.title}</h2>
+                        <p>Released: {movie.release_date}</p>
                     </div>
                 </Link>
             ))}

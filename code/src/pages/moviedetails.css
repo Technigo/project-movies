@@ -1,0 +1,64 @@
+.movieBackground {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.detailBox {
+  padding:50px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.movieCover {
+    border: 5px solid #fff;
+}
+
+.movieDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 400px;
+    height: 300px;
+    margin-left: 20px;
+    color:white;
+}
+
+.backLink svg {
+    width:40px;
+    transition: all 0.5s ease-in-out;
+}
+
+.backLink:hover svg {
+    margin-right:20px;
+}
+
+.backLink {
+    margin: 20px 0px 10px 50px;
+    position: absolute;
+    display: inline-flex;
+    color: #fff;
+    align-items: center;
+    font-weight: 700;
+    text-decoration: none;
+    left: 30px;
+    top: 50px;
+}
+
+h1 {
+    font-size:22px;
+}
+
+p {
+    max-width: 400px;
+}
+
+.rating {
+    font-size:17px;
+    color:red;
+    margin-left:10px;
+    font-weight:bold;
+}
