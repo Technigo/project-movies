@@ -6,7 +6,7 @@ export const Image = ({ image_path }) => {
   let url = '';
   console.log(width);
 
-  if (width > 780) {
+  if (width > 1005) {
     url = `https://image.tmdb.org/t/p/original${image_path}`;
     console.log('Image: 2000px');
   } else if (width > 500) {
