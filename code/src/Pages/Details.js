@@ -7,7 +7,7 @@ export const Details = () => {
   const { id } = useParams()
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/{id}?api_key=0774e20c1c8bfc2f79af713d52e9832d&language=en-US`)
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=0774e20c1c8bfc2f79af713d52e9832d&language=en-US`)
       .then((res) => res.json())
       .then((json) => {
         setMovie(json)
@@ -17,7 +17,7 @@ export const Details = () => {
   return (
     <article className="detailPage">
       {movie && (
-        <div className="background" style={{  backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}}>
+        <div className="background" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}}>
           <div className="summary">
             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
             <div className="details">

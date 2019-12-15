@@ -1,0 +1,37 @@
+.detailPage {
+  position: relative;
+}
+
+.detailPage .background {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.detailPage .summary {
+  display: flex;
+  align-items: flex-end;
+  color: white;
+  padding: 50px;
+}
+
+.detailPage .details {
+  margin-left: 20px;
+}
+
+.detailPage .details p {
+  max-width: 400px;
+}
+
+.detailPage .rating {
+  font-size: 20px;
+  color: red;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.detailPage img {
+  border: white solid 5px;
+}
