@@ -1,0 +1,37 @@
+.company {
+    height: 100vh;
+    width: 100%;
+}
+
+.companyDetails {
+    min-height: 87vh;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    position: relative;
+    padding: 0px 50px;
+    top: 13vh;
+}
+
+.companyName {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.companyName h1 {
+    font-size: 60px;
+}
+
+.companyName h1 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.companyName h1 a:hover {
+    text-decoration: underline
+}
+
+.companyName img {
+    margin-left: 20px;
+}

@@ -1,0 +1,53 @@
+.detailBackground {
+    min-height: 100vh;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.movieDetail .summary {
+    display: flex;
+    align-items: flex-end;
+    padding: 50px;
+}
+
+.detailBackground img {
+    border: 5px solid #fff;
+}
+
+.detailBackground .details {
+    margin-left: 20px;
+}
+
+.rating {
+    font-size: 17px;
+    color: red;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.summary p {
+    max-width: 400px;
+}
+
+.production p {
+    margin: 10px 0px 2px;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: larger;
+}
+
+.production ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.production a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.production a:hover {
+    text-decoration: underline;
+}

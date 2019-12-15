@@ -1,0 +1,27 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown p, .dropdown select {
+    margin-right: 10px;
+}
+
+.movieList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movieList a {
+    width: 25%;
+}
+
+main a img {
+    width: 100%;
+}

@@ -1,0 +1,13 @@
+.notFound article {
+    min-height: 87vh;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    position: relative;
+    padding: 0px 50px;
+    top: 13vh;
+}
+
+.notFound img {
+    height: 82vh;
+}
