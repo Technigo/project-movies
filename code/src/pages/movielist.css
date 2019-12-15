@@ -9,7 +9,7 @@
         padding: 10px;
     }
     
-    .posters img:hover {
+    .one-poster img:hover {
         opacity: 0.3;
         background: black;
         transition: .5s ease-in-out;
@@ -28,4 +28,30 @@
         padding-top: 440px;
         line-height: 2em;
         padding-left: 5px;
+    }
+    
+    @media (min-width: 800px) and (max-width: 1024px) {
+        .posters {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 5px;
+        }
+    }
+    
+    @media (min-width: 540px) and (max-width: 800px) {
+        .posters {
+            display: grid;
+            grid-template-columns: auto auto;
+            padding: 10px;
+        }
+    }
+    
+    @media (max-width: 540px) {
+        .posters {
+            display: flex;
+            flex-direction: column;
+        }
+        .one-poster {
+            margin: 0 auto;
+        }
     }

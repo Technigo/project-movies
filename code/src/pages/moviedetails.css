@@ -16,13 +16,18 @@ body {
     max-width: 1600px;
 }
 
-.backlink a {
+.backlink {
     position: absolute;
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
     left: 50px;
     top: 50px;
+    z-index: +1;
+}
+
+.backlink a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
 }
 
 .details .movie {
@@ -66,4 +71,51 @@ body {
 .overview {
     widows: 100%;
     color: white;
+}
+
+@media (min-width: 800px) and (max-width: 1024px) {
+    .background img {
+        object-fit: cover;
+        max-width: 1024px;
+    }
+    .details .movie {
+        display: flex;
+        padding: 150px 10px 10px 10px;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+    .poster {
+        display: none;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 800px) {
+    .background img {
+        object-fit: cover;
+        max-width: 800px;
+    }
+    .details .movie {
+        display: flex;
+        padding: 150px 10px 10px 10px;
+        margin: 0 auto;
+        max-width: 600px;
+    }
+    .poster {
+        display: none;
+    }
+}
+
+@media (max-width: 540px) {
+    .background img {
+        display: none;
+    }
+    .details .movie {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 10px 10px 10px;
+        max-width: 300px;
+    }
+    .poster {
+        margin: 0 auto;
+    }
 }

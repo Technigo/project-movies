@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import './moviedetails.css';
 
 export const MovieDetails = () => {
@@ -35,7 +35,9 @@ export const MovieDetails = () => {
       </div>
 
       <div className="backlink">
-      <a href="./" >Movies</a>
+      <Link to='/'>
+        Back
+      </Link>
       </div>
 
       <div className="movie">

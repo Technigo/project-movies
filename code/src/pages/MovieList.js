@@ -17,7 +17,7 @@ export const MovieList = () => {
     <div className="posters">
 
       {movies.map(movie => (
-       
+        <div className="one-poster">
         <Link key={movie.id} to={`/movies/${movie.id}`} >
 
           <div className="movie-title">
@@ -30,7 +30,7 @@ export const MovieList = () => {
           </div>
 
         </Link>
-        
+       </div> 
       ))}
 
     </div>
