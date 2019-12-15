@@ -3,7 +3,7 @@ import { useParams, useHistory, Link } from 'react-router-dom';
 import TopBarProgress from 'react-topbar-progress-indicator';
 import * as API from '../../api/Api';
 import styles from './MovieDetails.module.scss';
-import { Image } from '../../components/Image';
+import { Image } from '../../components/MovieDetails/Image';
 
 export const MovieDetails = () => {
   const { movieId } = useParams();

@@ -1,5 +1,5 @@
 import React from 'react';
-import useWindowWidth from './../hooks/useWindowWidth';
+import useWindowWidth from '../../hooks/useWindowWidth';
 
 export const Image = ({ image_path }) => {
   const width = useWindowWidth();
