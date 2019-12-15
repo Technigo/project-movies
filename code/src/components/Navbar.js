@@ -6,11 +6,8 @@ export const Navbar = ({ category = "popular" }) => {
 
   return (
     <label>
-      <h1>Select list: </h1>
-      <select
-        value={category}
-        onChange={e => history.push(`/${e.target.value}`)}
-      >
+      <h1>Select movie list: </h1>
+      <select value={category} onChange={e => history.push(`/${e.target.value}`)}>
         <option value="popular">Popular</option>
         <option value="top_rated">Top Rated</option>
         <option value="upcoming">Upcoming</option>
