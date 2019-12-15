@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { SyncLoader } from 'react-spinners'
 import './movieList.css'
 
 export const MovieList = () => {
@@ -19,7 +20,7 @@ export const MovieList = () => {
     }, [category])
 
     if (loading) {
-        return <h1>LOADING!</h1>
+        return <main className="loading"><SyncLoader color='#fff' /></main>
     }
 
     return (

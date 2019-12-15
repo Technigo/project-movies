@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { ProdCompDetails } from '../components/ProdCompDetails'
 import { NotFound } from 'pages/NotFound'
 import { GoBack } from 'components/GoBack'
+import { SyncLoader } from 'react-spinners'
 import './prodCompanies.css'
 
 export const ProdCompanies = () => {
@@ -30,7 +31,7 @@ export const ProdCompanies = () => {
     }
 
     if (loading) {
-        return <h1>LOADING</h1>
+        return <main className="loading"><SyncLoader color='#fff' /></main>
     }
 
     return (
