@@ -38,7 +38,7 @@ export const PopularList = () => {
           />
           </Link>
           <h2 className="movie-title">{movie.title}</h2>
-          <h3 className="release-date">{movie.release_date}</h3>
+          <h3 className="release-date">Released {movie.release_date}</h3>
         </div>
       ))}
     </section>

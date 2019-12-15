@@ -71,7 +71,7 @@ export const Detail = () => {
           target="_blank" 
           rel="noopener noreferrer"
         >
-          IMDB page
+          IMDb page
         </a>
 
         <section className="similar-movies">

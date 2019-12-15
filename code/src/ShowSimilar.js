@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams, NavLink } from 'react-router-dom'
+import { useParams, NavLink, Link } from 'react-router-dom'
 
 export const ShowSimilar = () => {
   const { id } = useParams()
@@ -27,13 +27,14 @@ export const ShowSimilar = () => {
           className="movie-poster"
           key={movie.id}
         >
+        <Link to={`/movies/${movie.id}`}>
           <img 
             className="movie-image"
             src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} 
           />
-
+        </Link>
           <h2 className="movie-title">{movie.title}</h2>
-          <h3 className="release-date">{movie.release_date}</h3>
+          <h3 className="release-date">Released {movie.release_date}</h3>
         </div>
       ))}
     </section>
