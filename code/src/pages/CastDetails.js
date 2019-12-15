@@ -40,8 +40,8 @@ export const CastDetails = () => {
           <Link key={persons.credit_id} to={`/movies/${persons.id}`}>
             <img src={`https://image.tmdb.org/t/p/w342${persons.poster_path}`} alt={persons.id} />
             <div className="cast-details-summary">
-              <h1>{persons.title}</h1>
-              <p>character: {persons.character}</p>
+              <h2>{persons.title}</h2>
+              <p>Character: {persons.character}</p>
               <p>Released {persons.release_date}</p>
             </div>
           </Link>
