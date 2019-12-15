@@ -3,10 +3,14 @@ import TopBarProgress from 'react-topbar-progress-indicator';
 import * as API from '../../api/Api';
 import styles from './MovieList.module.scss';
 import { Movie } from '../../components/MovieList/Movie';
+import useWindowWidth from '../../hooks/useWindowWidth';
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+
+  const width = useWindowWidth();
+  console.log(width);
 
   useEffect(() => {
     setIsLoading(true);

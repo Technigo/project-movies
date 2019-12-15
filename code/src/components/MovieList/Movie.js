@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Movie.module.scss';
-import { Image } from '../MovieDetails/Image';
+import { GridImage } from '../../components/MovieList/GridImage';
 
 export const Movie = ({ id, poster_path, title, release_date }) => {
   return (
@@ -11,7 +11,7 @@ export const Movie = ({ id, poster_path, title, release_date }) => {
           src={`https://image.tmdb.org/t/p/w780${poster_path}`}
           alt="poster"
         /> */}
-        <Image image_path={poster_path} />
+        <GridImage imagePath={poster_path} gridCol={4} />
         <div className={styles.overlay}>
           <div className={styles.movieDetails}>
             <h1>{title}</h1>
