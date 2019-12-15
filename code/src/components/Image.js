@@ -4,7 +4,6 @@ import useWindowWidth from './../hooks/useWindowWidth';
 export const Image = ({ image_path }) => {
   const width = useWindowWidth();
   let url = '';
-  console.log(width);
 
   if (width > 1005) {
     url = `https://image.tmdb.org/t/p/original${image_path}`;
