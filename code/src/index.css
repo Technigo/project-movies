@@ -68,6 +68,9 @@ code {
   background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);
   
 } */
+h1{
+  font-size: 1.5em;
+}
 
 .summaryBox{
   display: flex;
@@ -82,7 +85,7 @@ code {
 .summary{
   margin-left: 20px;
   color: white;
-  max-width: 400px;
+  max-width: 450px;
   margin-bottom: 15px;
 }
 
@@ -96,13 +99,13 @@ code {
   display: flex;
   color: white;
   align-items: center;
-   position: absolute;
+  position: absolute;
   margin-top: 55px; 
   margin-left: 55px;
 }
 
 .backLink p{
-  margin: 0px;
+  margin: 0px 0px 0px 5px;
   font-weight: bold;
 }
 
@@ -121,10 +124,19 @@ a:link {
   border-radius: 50%;
   padding: 10px;
   background-color: white;
-  margin-right: 5px;
-  
 }
 
+/*denna gör att texten hoppar ut, inte glider ut
 .backLink p:hover{
-  transform: translate(10px);
+  transform: translate(10px) ;
+  
+}*/
+
+.backLink .arrow:hover {
+  transition: margin-right .3s ease-in-out;
+  margin-right: 5px;
 }
+
+
+
+

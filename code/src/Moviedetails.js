@@ -6,17 +6,34 @@ import {Link} from 'react-router-dom'
 export const Moviedetails = () => {
     const { movieId } = useParams()
     const [movie, setMovie] = useState([])
-    console.log("hej")
+    const [error, setError] = useState()
+    const [loading, setLoading] = useState (false)
+    console.log("moviedetails")
 
     useEffect(() =>{
+        console.log("useEffect")
+        setLoading(true)
         fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=9c9b2fee306d943c3bd7e47689474308&language=en-US`)
         .then((res) => res.json())
         .then((json) =>{
             console.log(json)
-            setMovie(json)
+            if (json.status_code === '34') {
+                setError('Movie not found')
+            } else {
+                setMovie(json)
+            }
+           setLoading(false)
         })
 
     }, [movieId])
+
+    if (loading){
+        return <h1>LOADING</h1>
+    }
+
+    if (error){
+        return <h1>{error}</h1>
+    }
 
     return(
         <div className="detailPage" style={{backgroundImage: 
