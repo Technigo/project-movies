@@ -31,15 +31,16 @@
 }
 
 .movieInfo h2 {
-  font-weight: bold;;
+  font-weight: bold;
 }
 
-ul {
+.movieInfo ul {
   list-style: none;
   padding-left: 0;
+  text-decoration: none;
 }
 
-li {
+a {
   text-decoration: none;
   color: #fff;
 }

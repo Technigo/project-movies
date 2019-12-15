@@ -52,11 +52,9 @@ export const MovieDetails = () => {
               <ul>
                 <h2>Produced by:</h2>
                 {movie.production_companies.map((company) => (
-                  <div key={company.id}>
-                    <Link to={`/company/${company.id}`} replace>
-                      <li>{company.name} <i className="fas fa-chevron-circle-right"></i></li>
-                    </Link>
-                  </div>
+                  <Link key={company.id} to={`/company/${company.id}`}>
+                    <li>{company.name} <i className="fas fa-chevron-circle-right"></i></li>
+                  </Link>
                 ))}
               </ul>
             </div>
