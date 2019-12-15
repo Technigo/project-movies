@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import "./movieDetail.css"
-import { BackArrow } from "../icons/BackArrow.js"
+import { ReactComponent as Arrow } from "../icons/arrow.svg"
 
 export const MovieDetail = () => {
   const [movie, setMovie] = useState()
@@ -41,6 +41,9 @@ export const MovieDetail = () => {
         backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`
       }}
     >
+      <Link to='/' className='backLink'>
+        <Arrow /> <p>Movies</p>
+      </Link>
       <div className='movieInfo'>
         <img
           src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
@@ -64,7 +67,5 @@ export const MovieDetail = () => {
 //import
 //remember that - is not allowed in jsx, so go through the svg text
 
-/* <Link to='/' className='backLink'>
-{BackArrow}
-</Link>
+/* 
 <h1>{movie.title}</h1> */
