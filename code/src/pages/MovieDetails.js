@@ -15,6 +15,7 @@ export const MovieDetails = () => {
     )
       .then(res => res.json())
       .then(json => {
+        console.log(json)
         if (json.status.code === 34) {
           setError('Movie not found')
 
@@ -53,6 +54,7 @@ export const MovieDetails = () => {
                   <h1>{movie.title}</h1>
                   <h2>{movie.vote_average}/10</h2>
                 </div>
+                <h4>{movie.tagline}</h4>
                 <p>{movie.overview}</p>
               </div>
             </article>

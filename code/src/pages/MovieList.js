@@ -3,20 +3,30 @@ import { Link } from "react-router-dom"
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([])
+  const [categories, setCategories] = useState('popular')
+
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=fac0e6041f4464409ca2dd71e7e9d33c&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/${categories}?api_key=fac0e6041f4464409ca2dd71e7e9d33c&language=en-US&page=1`
     )
       .then(res => res.json())
       .then(json => {
-        //console.log(json)
+        console.log(json)
         setMovies(json.results)
       })
-  }, [])
+  }, [categories])
 
   return (
     <div>
+      <nav>
+        <h4>Select movie list:</h4>
+        <select value={categories} onChange={(e) => setCategories(e.target.value)}>
+          <option value="popular">Popular</option>
+          <option value="top_rated">Top Rated</option>
+          <option value="upcoming">Upcoming</option>
+        </select>
+      </nav>
       <div className="fullPage">
         {movies.map(movie => (
           <Link key={movie.id} to={`/movies/${movie.id}`}>
