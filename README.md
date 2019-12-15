@@ -1,12 +1,12 @@
 # Movies
 
-This is my first multi-page React application, and it is using a fun new API!
-
-[themoviedb.org](https://www.themoviedb.org/)
+This is my first multi-page React application, and it is using a fun  API: [themoviedb.org](https://www.themoviedb.org/)
 
 I have followed this design to complete my project
 
 #### :clapper::clapper::clapper: https://technigo-movies-project.netlify.com/ :clapper::clapper::clapper:
+
+The design has been changed to increased accessibility by adding a contrast background to the movie description.
 
 ## What I have learned here 🧠
 
