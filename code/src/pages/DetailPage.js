@@ -35,7 +35,7 @@ export const DetailPage = () => {
   return (
     <article className="detail-page-container">
       <Link className="home-button" to="/">
-        <i class="fas fa-chevron-circle-left"></i> <p className="home">Movies</p>
+        <i className="fas fa-chevron-circle-left"></i> <p className="home">Movies</p>
       </Link>
       <div className="backdrop-poster" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
         <div className="movie-overview">

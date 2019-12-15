@@ -117,3 +117,48 @@ p.home:hover {
   justify-content: center;
   
 }
+
+
+@media (max-width: 600px) {
+
+  .backdrop-poster {
+    width: 365px;
+
+  }
+
+  .movie-overview {
+   width: 300px;
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 40px;
+
+   
+  }
+  .poster {
+    position: relative;
+    left: 44px;
+    top: 50px;
+    width: 200px;
+
+  }
+
+  .movie-summary {
+position: relative;
+width: 300px;
+top: 50px;
+left: 80px;
+
+
+
+
+
+   
+  }
+
+p {
+  text-align: justify;
+    width: 300px;
+  }
+
+}
+

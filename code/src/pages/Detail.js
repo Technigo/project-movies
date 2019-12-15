@@ -10,7 +10,7 @@ export const Detail = (props) => {
       <div className="movie-container">
         <div className="movie-info">
           <h1>{props.title}</h1>
-          <p>Released {props.release}</p>
+          <p className="release-text">Released {props.release}</p>
         </div>
       </div>
     </div>

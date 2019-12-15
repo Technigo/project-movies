@@ -11,6 +11,10 @@ export const App = () => {
         <Route path="/" exact>
           <PopularList />
         </Route>
+        <Route path="/Upcoming">
+          <PopularList category="upcoming"/>
+        </Route>
+
         <Route path="/movie/:movieId" >
           <DetailPage />
         </Route>
