@@ -9,9 +9,6 @@ export const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const width = useWindowWidth();
-  console.log(width);
-
   useEffect(() => {
     setIsLoading(true);
     API.getMovies()
