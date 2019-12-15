@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'bavroregular';
+  src: url('Bavro-Regular.ttf');
+  src: url('Bavro-Regular.otf');
+  src: url('bavro-regular-webfont.ttf')format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .navbar {
   display: flex;
   justify-content: flex-end;
@@ -9,5 +18,5 @@
   font-weight: 700;
   text-decoration: none;
   color: white;
-
+  font-family: bavroregular;
 }

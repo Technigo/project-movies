@@ -1,12 +1,12 @@
 .movie-details,
 .background-image {
-    min-height: 100vh;
-    display: flex;
-    background-size: cover;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: relative;
-    color: #fff;
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  color: #fff;
 }
 
 .go-back, .go-back-icon {
@@ -57,42 +57,36 @@ margin-left: 5px;
 .title-rate h3 {
   margin: 5px;
 }
-.genre, .companies{
+.genre, .cast{
   display: flex;
   flex-wrap: wrap;
 }
 .genre p,
-.companies p {
+.cast p {
   margin: 5px;
   padding: 3px;
   background: rgba(0, 0, 0, 0.521);
   border: 1px solid;
   font-size: 13px;
 }
-
-.cast {
-  font-size: 14px;
-  display: flex;
-  flex-wrap: wrap;
+.cast p{
+  font-size: 15px;
 }
+
 .details h4 {
   margin: 10px 0 0 0;
   font-size: 15px;
 }
-.cast p:not(:last-child):after {   
-  content: "\002C  \0010"; /* To separate the multiple actors with a comma and space */
-}
-.cast p {
-  margin: 0px;
-}
+
 .cast a {
   text-decoration: none;
+  font-size: 16px;
   color: inherit;
 }
 .cast a:hover {
   text-decoration: underline;
   color: inherit;
-cursor: pointer;
+  cursor: pointer;
 }
 .actors {
   padding:5px;

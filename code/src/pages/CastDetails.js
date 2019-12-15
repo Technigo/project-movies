@@ -5,7 +5,6 @@ import "pages/castdetails.css"
 
 export const CastDetails = () => {
   const { castId } = useParams()
-  const { castName } = useParams()
 
   const [person, setPerson] = useState([])
   const [actorName, setActorName] = useState("")
@@ -19,7 +18,6 @@ export const CastDetails = () => {
       .then((json) => {
         setPerson(json.cast)
         console.log(json.cast)
-        console.log(json.cast.credit_id)
       })
   }, [castId])
 
@@ -35,8 +33,8 @@ export const CastDetails = () => {
   }, [])
 
   return (
-    <div className="case-details-top">
-      <h1>MOVIES WITH {actorName.name}</h1>
+    <div className="cast-details-top">
+      <h1>Movies with {actorName.name}</h1>
       <section className="cast-details">
         {person.map((persons) => (
           <Link key={persons.credit_id} to={`/movies/${persons.id}`}>

@@ -74,11 +74,6 @@ export const MovieDetails = () => {
               ))}
             </div>
             <p>{movieDetails.overview}</p>
-            <div className="companies">
-              {movieDetails.production_companies.map((company) => (
-                <p key={company.name}>{company.name}</p>
-              ))}
-            </div>
             <h4>Staring: </h4>
             <div className="cast">
               {cast.map((casts) => (
@@ -87,6 +82,7 @@ export const MovieDetails = () => {
                 </Link>
               ))}
             </div>
+
           </div>
         </div>
       </div>

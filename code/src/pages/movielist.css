@@ -27,8 +27,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-end;
-  transition:2s ease-in-out 2s;
-
+  transition: 0.2s ease-in-out 0s;  
 }
 
 .movie-list a img {
@@ -37,7 +36,6 @@
 
 .movie-list:hover .hover-details a{
 display:block;
-transition: 2s ease-in-out 2s;
 }
 
 
