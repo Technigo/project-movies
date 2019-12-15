@@ -12,6 +12,12 @@ export const App = () => {
         <Route path='/' exact>
           <MovieList />
         </Route>
+        <Route path='/upcoming'>
+          <MovieList category="upcoming" />
+        </Route>
+        <Route path='/top-rated'>
+          <MovieList category="top_rated" />
+        </Route>
         <Route path='/movies/:id'>
           <MovieDetails />
         </Route>

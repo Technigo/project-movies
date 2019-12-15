@@ -16,8 +16,6 @@ export const ProdCompDetails = (props) => {
                 setCompMovies(json)
                 setLoading(false)
             })
-
-
     }, [id])
 
     if (loading) {

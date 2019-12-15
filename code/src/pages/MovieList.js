@@ -14,7 +14,6 @@ export const MovieList = () => {
             .then(res => res.json())
             .then(json => {
                 setMovies(json.results)
-                console.log(json.results)
                 setLoading(false)
             })
     }, [category])
@@ -28,8 +27,9 @@ export const MovieList = () => {
             <nav>
                 <h1>Movie List</h1>
                 <div className="dropdown">
-                    <p>Category: </p>
+                    <p>Listing: </p>
                     <select value={category} onChange={(e) => setCategory(e.target.value)}>
+                        <option value="" disabled>Select category</option>
                         <option value="popular">Popular</option>
                         <option value="top_rated">Top Rated</option>
                         <option value="upcoming">Upcoming</option>
