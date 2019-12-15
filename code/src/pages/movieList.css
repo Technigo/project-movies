@@ -26,20 +26,6 @@ nav {
     margin-right: 10px;
 }
 
-.dropdown select {
-    width: 175px;
-    background-color: #000;
-    color: #fff;
-    font-size: 20px;
-    -webkit-appearance: none;
-    border: none;
-    outline: none;
-}
-
-select:hover {
-    color: #cccccc;
-}
-
 .movieList {
     display: flex;
     flex-wrap: wrap;
