@@ -17,6 +17,7 @@
 
 .moviePoster {
   border: 5px solid #fff;
+  width: 100%;
 }
 
 .movieInfo {
