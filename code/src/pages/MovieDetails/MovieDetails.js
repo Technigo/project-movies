@@ -4,6 +4,7 @@ import TopBarProgress from 'react-topbar-progress-indicator';
 import * as API from '../../api/Api';
 import styles from './MovieDetails.module.scss';
 import { Image } from '../../components/MovieDetails/Image';
+import useWindowWidth from '../../hooks/useWindowWidth';
 
 export const MovieDetails = () => {
   const { movieId } = useParams();
@@ -11,6 +12,15 @@ export const MovieDetails = () => {
   const [errorLoading, SetErrorLoading] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
+  const width = useWindowWidth();
+  let backdropImage = '';
+
+  // Set correct backdrop image size
+  if (width > 1280) {
+    backdropImage = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`;
+  } else {
+    backdropImage = `https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`;
+  }
 
   useEffect(() => {
     setIsLoading(true);
@@ -51,7 +61,7 @@ export const MovieDetails = () => {
             {errorLoading === false && (
               <div
                 style={{
-                  backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`
+                  backgroundImage: `url(${backdropImage})`
                 }}
                 className={styles.movieDetails}
               >
