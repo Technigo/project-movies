@@ -183,3 +183,23 @@ footer {
   text-align: center;
   padding: 10px;
 }
+
+@media (max-width: 660px) {
+
+  .fullPage a {
+    width:50%;
+  }
+
+  .detailsPage article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    margin: 50px 10px;
+   }
+
+   .detailsPage .poster {
+    margin: 20px 0px;
+  }
+}
