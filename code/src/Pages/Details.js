@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
+import { BackIcon } from './Icon'
 import 'Css/Details.css'
 
 export const Details = () => {
@@ -16,6 +17,9 @@ export const Details = () => {
 
   return (
     <article className="detailPage">
+      <Link to="/" className="backLink">
+        <BackIcon /> Back
+      </Link>
       {movie && (
         <div className="background" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}}>
           <div className="summary">

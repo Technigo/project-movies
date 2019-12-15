@@ -35,3 +35,23 @@
 .detailPage img {
   border: white solid 5px;
 }
+
+.detailPage .backLink {
+  position: absolute;
+  display: inline-flex;
+  color: white;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
+  left: 50px;
+  top: 50px;
+}
+
+.detailPage .backLink svg {
+  width: 30px;
+  transition: margin-right 0.3s ease-in-out;
+}
+
+.detailPage .backLink:hover svg {
+  margin-right: 5px;
+}
