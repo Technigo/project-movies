@@ -12,7 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   background: #000;
   color: #fff;
 }
@@ -75,6 +75,7 @@ code {
 nav {
   height:100px;
   padding: 20px;
+  margin-bottom: 50px;
 }
 
 /*DETAILSPAGE*/

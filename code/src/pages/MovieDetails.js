@@ -4,7 +4,6 @@ import { BackIcon } from 'BackIcon'
 
 export const MovieDetails = () => {
   const [movie, setMovie] = useState()
-  const [error, setError] = useState()
   const [loading, setLoading] = useState(false)
   const { id } = useParams()
 
@@ -15,14 +14,7 @@ export const MovieDetails = () => {
     )
       .then(res => res.json())
       .then(json => {
-        //console.log(json)
-        if (json.status.code === 34) {
-          setError('Movie not found')
-
-        } else {
-          setMovie(json)
-
-        }
+        setMovie(json)
         setLoading(false)
       })
   }, [id])
@@ -31,13 +23,8 @@ export const MovieDetails = () => {
     return <h1> Loading page</h1>
   }
 
-  if (error) {
-    return <h1>{error}</h1>
-  }
-
   return (
     <div className="detailsPage">
-
 
       <Link className="backToMovies" to="/">
         <BackIcon /> Movies
