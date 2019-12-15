@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { NavBar } from "components/NavBar"
+import { DropDownList } from "components/DropDownList"
 
 import "pages/movielist.css"
 
@@ -15,6 +15,8 @@ export const MovieList = () => {
     setChosenCategory(category)
   }
 
+  // https://api.themoviedb.org/3/movie/popular?api_key=363444609247127238629594b245e069&language=en-US&page=1
+
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${chosenCategory}?api_key=${api_key}&language=en-US&page=1`)
       .then((res) => res.json())
@@ -26,7 +28,7 @@ export const MovieList = () => {
 
   return (
     <div className="top-movie-list">
-      <NavBar chosenMovieList={chosenMovieList} />
+      <DropDownList chosenMovieList={chosenMovieList} />
       <section className="movie-list">
         {movies.map((movie) => (
           <Link key={movie.id} to={`/movies/${movie.id}`}>

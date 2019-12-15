@@ -11,6 +11,7 @@ export const MovieDetails = () => {
   const [cast, setCast] = useState([])
 
   const api_key = "363444609247127238629594b245e069"
+  // https://api.themoviedb.org/3/movie/425?api_key=363444609247127238629594b245e069&language=en-US
 
   useEffect(() => {
     setLoading(true)
@@ -28,11 +29,12 @@ export const MovieDetails = () => {
     fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${api_key}`)
       .then((res) => res.json())
       .then((json) => {
-        //console.log(json)
         setCast(json.cast.slice(0, 3))
         console.log(json.cast.slice(0, 3))
       })
   }, [id])
+
+
 
   if (loading) {
     return <div className="loading"><svg height="100" width="100">
@@ -88,7 +90,7 @@ export const MovieDetails = () => {
           </div>
         </div>
       </div>
-    </section >
+    </section>
 
   )
 }
