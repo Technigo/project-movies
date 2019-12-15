@@ -1,3 +1,15 @@
-.companyMovieList a img {
+.compMovieList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.compMovieList a {
     width: 25%;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+}
+
+.compMovieList a img {
+    width: 100%;
 }

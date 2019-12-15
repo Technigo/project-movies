@@ -9,7 +9,7 @@ export const MovieBackground = (props) => {
         <div className="detailBackground" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 10%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${backdrop_path})` }}>
             <div className="summary">
                 <img src={`https://image.tmdb.org/t/p/w342${poster_path}`} alt={title}></img>
-                <div className="details">
+                <div className="summaryText">
                     <h1>{title}<span className="rating">{vote_average}/10</span></h1>
                     <p>{overview}</p>
                     {production_companies.length > 0 ?
