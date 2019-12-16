@@ -1,14 +1,16 @@
 
 .moviestyle {
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    /* width: 1224px;
-    height: 650px; */
+    flex-direction: column;
+    align-content: space-between;
     height: 120%;
     width: auto;
-
     padding: 20px;
+}
+
+.theMovie {
+    display: flex;
+    align-items: flex-end; 
 }
 
 .info {
@@ -17,4 +19,15 @@
 
 article {
     width: 50%;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
