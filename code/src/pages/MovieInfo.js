@@ -28,16 +28,13 @@ export const MovieInfo = () => {
                     </path></svg>
                 <p>Movies</p>
             </Link>
-
             <div className="backdrop" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }} alt="movie.original_title" />
-            {/* background image */}
+
             <div className="infoBox">
                 <img className="infoPoster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="movie.original_title" />
-
                 <div className="titleInfo">
                     <h1 className="movieTitle">{movie.original_title}</h1>
                     <p className="movieVotes">{movie.vote_average}/10</p>
-
                     <p className="movie.overview">{movie.overview}</p>
                 </div>
             </div>

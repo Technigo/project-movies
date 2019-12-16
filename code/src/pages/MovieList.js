@@ -15,12 +15,14 @@ export const MovieList = () => {
             })
     }, [])
 
+    // function goBack() {
+    //     window.history.back();
+    // }
+
     return (
         <div className="movieContainer">
-
             {movies.map((movie) => (
                 <div className="moviePoster" key={movie.id}>
-
                     <Link to={`/movies/${movie.id}`}>
                         <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title} />
                         <div className="titleRelease">
@@ -29,9 +31,7 @@ export const MovieList = () => {
                         </div>
                     </Link>
                 </div>
-
             ))}
-
         </div>
     )
 }
