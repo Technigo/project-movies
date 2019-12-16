@@ -50,20 +50,6 @@ p {
     display: block;
     opacity: 1; 
 } 
-  
 
-/* @media (max-width: 650px) {
-    img { 
-        width: 100%;
-        flex-grow: initial;
-    }
-
-}
-
-@media (max-width: 1024px) {
-    img {
-        width: 25%;
-    }
-} */
 
 
