@@ -23,11 +23,11 @@ box-sizing: border-box;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  padding:30px;
+  width: 100%;
 }
 
 .backLink:hover svg {
-  margin-right: 30px;
+  margin-right: 10px;
 }
 
 .backLink svg {

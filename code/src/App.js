@@ -4,6 +4,7 @@ import { MovieList } from 'pages/MovieList'
 import { MovieDetails } from 'pages/MovieDetails'
 
 
+
 export const App = () => {
   return (
     <BrowserRouter>

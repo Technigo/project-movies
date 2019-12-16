@@ -24,7 +24,7 @@ export const MovieDetails = () => {
 
   return (
     <div className="movieWrapper" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
-      <div>
+      <div className="btn">
         <Link to="/" className="backLink">
           <BackArrow />
           Back Back to Movies

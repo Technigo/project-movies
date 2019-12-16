@@ -30,13 +30,13 @@
     opacity: 0; 
 }
 
-h2 {
-    font-size: 3.27vw;
+h1 {
+   font-size: 30px;
     margin-top: 0;
 }
 
 h3 {
-    font-size: 0.7em;
+    font-size: 15px;
 }
 
 .movieCardInfo:hover img { 
@@ -47,4 +47,12 @@ h3 {
 .movieCardInfo:hover .movieText { 
     display: block;
     opacity: 1;
+}
+
+@media (max-width: 1024px) {
+
+  .movieCardInfo {
+    width: 50%;
+  }
+
 }
