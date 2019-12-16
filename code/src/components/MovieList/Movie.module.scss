@@ -9,15 +9,12 @@
 }
 
 .overlay {
-  width: 100%; //Original value: 0%;
-  background: rgba(0, 0, 0, 0.3); // Original value: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 0;
   bottom: 0;
   display: block;
-  // overflow: hidden;
-  // -webkit-backface-visibility: hidden;
-  // backface-visibility: hidden;
 }
 
 .movieDetails {
@@ -33,21 +30,17 @@
   }
   .movie img {
     transition: transform 0.3s ease-in-out;
-    // -webkit-transition: transform .5s ease-in-out;
   }
   .movie:hover img {
     transform: scale(1.1);
-    // -webkit-transform: scale(1.1);
   }
   .overlay {
-    // width: 0%;
     width: 100%;
     display: none;
     background: rgba(0, 0, 0, 0.6);
     overflow: hidden;
   }
   .movie:hover .overlay {
-    // width: 100%;
     display: block;
   }
 }
