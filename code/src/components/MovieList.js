@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import 'components/MovieList.css'
 
-// const api_key = 'd6f26682ba4bf575c167473c911bdd4c';
+
 
 export const MovieList = () => {
     const [movies, setMovies] = useState([]);
