@@ -2,6 +2,37 @@
   height: 100vh;
 }
 
+.back-btn-img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.back-btn {
+  position: relative;
+  display: inline-flex;
+  color: #fff;
+  align-items: center;
+  font-weight: bolder;
+  text-decoration: none;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.back-btn span {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.summary .back-btn svg {
+  transition: margin-right 0.2s ease-in-out;
+  /** ease-in-out makes the button move when hover**/
+}
+
+.back-btn:hover svg {
+  margin-right: 5px;
+}
+
 .shading {
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.048), rgba(0, 0, 0, 0.048), black);
@@ -43,4 +74,24 @@
   color: red;
   font-size: 17px;
   font-weight: normal;
+}
+
+ @media only screen and (min-width:800px) {
+  .back-btn {
+    left: 30px;
+    top: -25px;
+  }
+} 
+
+@media only screen and (max-width:799px) and (min-width:350px) {
+  .wrapper {
+    justify-content: center;
+  }
+  .back-btn {
+    left: 0;
+    top: -25px;
+  }
+  .movie-detail {
+    height: auto;
+  }
 }
