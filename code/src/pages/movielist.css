@@ -68,16 +68,6 @@ footer {
 /* MEDIA QUERY MOBILE */
 @media (max-width: 667px) {
 
-  .moviesWrapper {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-
-  .movieCard {
-    width: 100%;
-  }
-
   .movieCardDetails h1 {
     font-size: 22px;
   }
