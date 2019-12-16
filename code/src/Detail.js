@@ -29,12 +29,6 @@ export const Detail = () => {
     )
   }
 
-  if(error) {
-    return(
-      <h1>{error}</h1>
-    )
-  }
-
   if(!movie.title) {
     return (
       <div>{error}</div>
@@ -42,8 +36,10 @@ export const Detail = () => {
   }
   
   return (
-    <div key={id}>
-    <div className="background-container"> 
+    <div 
+      key={id}
+      className="background-container"
+    > 
 
       <div className="background-image" 
         style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), 
@@ -51,7 +47,9 @@ export const Detail = () => {
       />
       
       <section className="movie-individual-image-container">
-        <section className="nav-bar"><Nav /></section>
+        <section className="nav-bar">
+          <Nav />
+        </section>
         <img 
           className="movie-individual-image"
           src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} 
@@ -60,7 +58,7 @@ export const Detail = () => {
 
         <section className="movie-individual-info-top">
           <h1 className="movie-individual-title">{movie.title}</h1>
-          <h2 className="movie-individual-rating">{movie.vote_average} / 10</h2>
+          <span className="movie-individual-rating">{movie.vote_average} / 10</span>
         </section>
 
         <h4 className="movie-individual-overview">{movie.overview}</h4>
@@ -79,8 +77,6 @@ export const Detail = () => {
             Show similar movies
           </Link>
         </section>
-     
-    </div>
     </div>
   )
 }

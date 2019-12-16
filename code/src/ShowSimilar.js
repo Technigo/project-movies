@@ -10,11 +10,12 @@ export const ShowSimilar = () => {
       .then(res => res.json())
       .then(json => {
         setMovies(json.results)
-      })
+      }, [id])
   })
 
   return (
-    <section> 
+    <section>
+
     <section className="back-popular-movies">
       <NavLink to="/" style={{ textDecoration: 'none', color: 'white'}}>
         Back to popular movies
@@ -38,6 +39,7 @@ export const ShowSimilar = () => {
         </div>
       ))}
     </section>
+    
     </section>
   )
 }

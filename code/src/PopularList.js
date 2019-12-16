@@ -15,7 +15,8 @@ export const PopularList = () => {
 
   return (
     <section>
-
+    
+    <label>
     <select
       onChange={event => setMovieList(event.target.value)}
       value={movieList}
@@ -24,6 +25,7 @@ export const PopularList = () => {
       <option value="upcoming">Upcoming movies</option>
       <option value="top_rated">Top rated movies</option>
     </select>
+    </label>
    
     <section className="movies-list">
       {movies.map((movie) => (

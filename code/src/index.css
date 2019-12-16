@@ -24,7 +24,7 @@ a {
   text-decoration: none;
 }
 
-/* Styling PopularList, the list of movies */
+/* Styling PopularList, the list of movies **********/
 .movies-list {
   display: grid;
   grid-template-columns: repeat(4,4fr);
@@ -75,7 +75,7 @@ a {
 }
 
 
-/* Styling Detail, individual movies */
+/* Styling Detail, individual movies ************/
 .loading-message {
   font-size: 24px;
 }
@@ -128,20 +128,22 @@ a {
 }
 
 .movie-individual-info-top {
-  margin-left: 30vw;
+  margin-left: 35vw;
+  margin-top: 5vh;
   position: absolute;
 }
 
 .movie-individual-title {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
   font-size: 20px;
-  padding-left: 8vw;
+  margin-left: 10vw;
 }
 
 .movie-individual-rating {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
   color: red;
   font-size: 18px;
+  font-weight: bold;
   margin-left: 10vw;
 }
 
@@ -152,7 +154,7 @@ a {
   font-weight: normal;
   margin-left: 10vw;
   margin-right: 5vw;
-  margin-top: 40vh;
+  margin-top: 45vh;
   position: absolute;
   width: 80vw;
 }
@@ -161,32 +163,33 @@ a {
   background: rgba(0, 0, 0, 0.521);
   color: white; 
   display: block;
-  margin-left: 40vw;
-  margin-top: 20vh;
+  margin-left: 45vw;
+  margin-top: 30vh;
   position: absolute;
 }
 
 .similar-movies {
   background: rgba(0, 0, 0, 0.521); 
   display: block;
-  margin-left: 40vw;
-  margin-top: 30vh;
+  margin-left: 45vw;
+  margin-top: 35vh;
   position: absolute;
 }
 
-/* ShowSimilar component */
+/* ShowSimilar component ****************/
 .back-popular-movies {
   margin: 2vh;
 }
 
 
-/* Media queries */
-/* Medium-sized devices (e.g. tablets or larger) */
+/* Media queries ************************/
+/* Medium-sized devices (e.g. tablets) */
 @media(min-width: 768px) {
 select {
-  height: 4vh;
-  margin: 2vh;
-  width: 15vw;
+  height: 5vh;
+  margin: 3vh;
+  margin-left: 1vw;
+  width: 20vw;
 }
 
 /* Styling PopularList, the list of movies */
@@ -203,10 +206,6 @@ select {
 }
 
 /* Styling Detail, individual movies */
-.background-container {
-  justify-content: center;
-}
-
 .movie-individual-image-container {
   margin-left: 2vw;
   margin-top: 2vh;
@@ -221,12 +220,13 @@ select {
   align-items: center;
   display: flex;
   flex-direction: row;
-  margin-left: 30vw;
+  margin-left: 32vw;
+  margin-top: 0;
 }
 
 .movie-individual-title {
   font-size: 26px;
-  padding-left: 0;
+  margin-left: 0;
 }
 
 .movie-individual-rating {
@@ -236,9 +236,9 @@ select {
 
 .movie-individual-overview {
   font-size: 16px;
-  margin-left: 30vw;
+  margin-left: 32vw;
   margin-right: 5vw;
-  margin-top: 15vh;
+  margin-top: 18vh;
   width: 35vw;
 }
 
@@ -246,6 +246,36 @@ select {
   align-items: center;
   display: flex;
   flex-direction: row;
+  margin-left: 30vw;
+}
+
+.imdb-link {
+  margin-left: 32vw;
+  margin-top: 65vh;
+}
+
+.similar-movies {
+  margin-left: 44vw;
+  margin-top: 65vh;
+}
+}
+
+/* Large-sized devices (e.g. laptops or larger) */
+@media(min-width: 1024px) {
+select {
+  width: 15vw;
+}
+
+/* Styling Detail, individual movies */
+.background-container {
+  justify-content: center;
+}
+
+.movie-individual-info-top {
+  margin-left: 30vw;
+}
+
+.movie-individual-overview {
   margin-left: 30vw;
 }
 
