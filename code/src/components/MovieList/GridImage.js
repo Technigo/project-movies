@@ -7,6 +7,7 @@ export const GridImage = ({ imagePath }) => {
   let columns = null;
   let gridItemWidth = null;
 
+  // 800 and 600 are breakpoints for the grid
   if (width >= 800) {
     columns = 4;
   } else if (width >= 600) {
@@ -16,8 +17,6 @@ export const GridImage = ({ imagePath }) => {
   }
 
   gridItemWidth = width / columns;
-
-  console.log(gridItemWidth);
 
   if (gridItemWidth < 2000 && gridItemWidth > 780) {
     url = `https://image.tmdb.org/t/p/original${imagePath}`;
