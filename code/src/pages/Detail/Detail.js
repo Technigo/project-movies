@@ -5,6 +5,7 @@ import { DetailView } from "./../../components/DetailView";
 export const Detail = () => {
   const [details, setDetails] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   const { movieId } = useParams();
   console.log(movieId);
@@ -14,9 +15,12 @@ export const Detail = () => {
       `https://api.themoviedb.org/3/movie/${movieId}?api_key=f8c1be31e73a50dc5317ce4e3571f7a6&language=en-US`
     );
     const json = await resp.json();
-    // const updatedDetails = { title: json.title, overview: json.overview };
-    setDetails({ ...json });
-    setLoading(false);
+    if (json.status_code === 34) {
+      setError(true);
+    } else {
+      setDetails({ ...json });
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -34,16 +38,17 @@ export const Detail = () => {
 
   return (
     <section className="details-section">
-      {loading && (
-        <h2 className="loading">Loading details..................</h2>
+      {loading & <h2 className="loading">Loading details...</h2>}
+      {error && <h2 className="loading">Movie not found</h2>}
+      {!error & !loading && (
+        <DetailView
+          title={details.title}
+          overview={details.overview}
+          rating={details.vote_average}
+          image={details.poster_path}
+          backgroundImage={details.backdrop_path}
+        />
       )}
-      <DetailView
-        title={details.title}
-        overview={details.overview}
-        rating={details.vote_average}
-        image={details.poster_path}
-        backgroundImage={details.backdrop_path}
-      />
     </section>
   );
 };
