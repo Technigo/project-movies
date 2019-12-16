@@ -1,0 +1,50 @@
+.movieWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+ .movieWrapper a {
+    flex-direction: column;
+    width: 25%;
+    position: relative;
+} 
+
+.movieImg {
+    z-index: 0;
+    width: 100%;
+}
+
+.movieCardInfo .movieText {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+}
+
+
+.movieText {
+    color: white; 
+    z-index: 2;
+    opacity: 0; 
+}
+
+h2 {
+    font-size: 3.27vw;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 0.7em;
+}
+
+.movieCardInfo:hover img { 
+    filter: brightness(20%);
+    background: rgba(0,0,0,.5);
+}
+
+.movieCardInfo:hover .movieText { 
+    display: block;
+    opacity: 1;
+}

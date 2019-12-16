@@ -5,9 +5,32 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+    
+*{
+box-sizing: border-box;
+
+}
+.backLink {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding:30px;
+}
+
+.backLink:hover svg {
+  margin-right: 30px;
+}
+
+.backLink svg {
+  width: 30px;
+  transition: all 0.2s ease-in-out;
 }

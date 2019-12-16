@@ -1,0 +1,43 @@
+ .movieWrapper{
+ position: relative;
+ background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  
+}
+
+.movieSummary{
+display: flex;
+align-items: flex-end;
+padding: 50px;
+}
+
+
+.moviePoster{
+  border: 5px solid #fff;
+}
+
+.Info {
+  margin-left: 20px;
+ color: #fff;
+ background: rgba(0,0,0,.5);
+ padding:20px;
+ border-radius: 5px;
+ height: 300px;
+}
+
+.Info h1 {
+  font-weight: bold;
+  color: #fff;
+}
+.info p{
+  color: #fff;
+}
+
+.vote{
+  font-size: 20px;
+  color: red;
+   font-weight: 600;
+}
+

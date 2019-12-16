@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-
+import './MovieDetails.css'
+import { BackArrow } from 'icons/BackArrow'
 
 
 
@@ -19,30 +20,24 @@ export const MovieDetails = () => {
       })
   }, [id])
 
-  if (!movie.id) {
-    return (
-      <section className="notFound">
-        <h1>Movie not found</h1>
-        <Link to="/">
-          <h2><i className="fas fa-chevron-circle-left" /> Back to list with movies</h2>
-        </Link>
-      </section >
-    )
-  }
+
 
   return (
-    <section className="movieWrapper" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
-      <Link to="/">
-        <div className="backToList"><i className="fas fa-chevron-circle-left" /> Back to Movies</div>
-      </Link>
+    <div className="movieWrapper" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
+      <div>
+        <Link to="/" className="backLink">
+          <BackArrow />
+          Back Back to Movies
+        </Link>
+      </div>
       <section className="movieSummary">
         <img className="moviePoster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-        <div className="movieInfo">
-          <h1>{movie.title} <span className="voting">{movie.vote_average}/10</span></h1>
+        <div className="Info">
+          <h1>{movie.title} <span className="vote">{movie.vote_average}/10</span></h1>
           <p>{movie.overview}</p>
         </div>
       </section>
-    </section >
+    </div >
   )
 
 }
