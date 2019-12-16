@@ -11,3 +11,138 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.article {
+  margin: 0px;
+}
+
+ .movieList {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   min-height: 50vh;
+   background-size: cover;
+   flex-wrap: wrap;
+   z-index: 0;
+ }
+
+.movieCard {
+   display: flex;
+   flex-direction: column;
+ }
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  display: none;
+  color: #fff;
+ }
+
+ .releaseDate p {
+   display: none;
+ }
+
+ h2 {
+  color: #fff;
+ }
+
+ p {
+   color: #fff;
+ }
+
+ .movieCard:hover {
+  background: rgba(0, 0, 0, 0.5);
+  filter: opacity(0.8);
+  z-index: 1;
+ }
+
+ .movieCard:hover p {
+  display: unset;
+  padding: 15px;
+  color: #fff;
+  font-size: 1vw; /*vw gör font-size responsiv*/
+  position: absolute;
+  top: -10px;
+}
+
+ .movieCard:hover h1 {
+  display: unset;
+  padding: 15px;
+  color: #fff;
+  font-size: 3vw; /*vw gör font-size responsiv*/
+  position: absolute;
+  top: -10px;
+ }
+
+ .backLink {
+   display: flex;
+   align-items: center;
+   color: #fff;
+   text-decoration: none;
+   font-weight: bold;
+   appearance: none;
+   border: none;
+   background: none;
+   position: absolute;
+   z-index: 4;
+ }
+
+ .backLink svg {
+   width: 30px;
+   transition: all 0.5s ease-in-out; /*animation*/
+ }
+
+ .backLink:hover svg {
+   margin-right: 20px; /*moves the text while hover*/
+ }
+
+ .backDrop {
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);
+  position: relative;
+  z-index: 0;
+}
+
+.infoBox {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  max-width: 60%;
+}
+
+.detailPage .infoBox {
+  align-items: flex-end;
+  padding: 50px;
+}
+
+ .detailPage .backDrop {
+   min-height: 100vh;
+   display: flex;
+   background-size: cover;
+   flex-direction: column;
+   justify-content: flex-end;
+ }
+
+ .movieVotes {
+   color: red;
+   font-size: 17px;
+   margin-left: 10px;
+ }
+ 
+ .infoPoster {
+  border: 5px solid #fff;
+ }
+
+ .infoDetails {
+   display: block;
+   margin-left: 20px;
+ }
+
+ @media (min-width: 1040px) {
+  .movieCard:hover h1 {
+    font-size: 2vw;
+  }
+ }
