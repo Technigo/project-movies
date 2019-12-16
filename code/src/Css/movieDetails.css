@@ -1,0 +1,13 @@
+article .background {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
+
+article {
+  position: relative;
+  height: 100vh;
+}
+
+h1 {
+  color: white;
+}
