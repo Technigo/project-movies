@@ -1,5 +1,7 @@
 .movie-detail {
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
+  min-width: 200px;
 }
 
 .back-btn-img {
@@ -35,6 +37,7 @@
 
 .shading {
   height: 100%;
+  min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.048), rgba(0, 0, 0, 0.048), black);
   padding: 50px;
   -webkit-box-sizing: border-box;
@@ -49,6 +52,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  min-height: 90vh;
 }
 
 .wrapper {
@@ -76,14 +80,14 @@
   font-weight: normal;
 }
 
- @media only screen and (min-width:800px) {
+@media only screen and (min-width:800px) {
   .back-btn {
     left: 30px;
     top: -25px;
   }
-} 
+}
 
-@media only screen and (max-width:799px) and (min-width:350px) {
+@media only screen and (max-width:799px) and (min-width:356px) {
   .wrapper {
     justify-content: center;
   }
@@ -92,6 +96,32 @@
     top: -25px;
   }
   .movie-detail {
-    height: auto;
+    height: 100%;
+  }
+  .movie-overview {
+    width: 342px;
+    padding: 15px 0px;
+  }
+}
+
+@media only screen and (max-width:355px) and (min-width:200px) {
+  .back-btn {
+    left: 0;
+    top: -25px;
+  }
+  .movie-detail {
+    height: 100%;
+  }
+  .movie-overview {
+    width: 100%;
+    padding: 15px 10px;
+  }
+  .shading {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .movie-poster img {
+    border: 3px #fff solid;
+    width: 100%;
   }
 }
