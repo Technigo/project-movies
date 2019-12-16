@@ -1,5 +1,52 @@
 .popular-movie {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
+}
+
+.popular-movie a {
+  position: relative;
+  width: 25%;
+  color: #fff;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.popular-movie a img {
+  width: 100%;
+  filter: brightness(1);
+  z-index: 0;
+}
+
+.popular-movie .details {
+  /* position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding: 20px; */
+  position: absolute;
+  width: 100%;
+  bottom: 304px;
+  margin-bottom: -300px;
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+.popular-movie .details h2 {
+  margin-top: auto;
+  margin-bottom: 0;
+  font-size: 35px;
+}
+
+.popular-movie a:hover {
+  filter: brightness(0.2);
+}
+
+.popular-movie a:hover .details {
+  display: flex;
 }
