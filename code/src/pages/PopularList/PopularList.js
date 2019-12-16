@@ -12,14 +12,13 @@ export const PopularList = () => {
       .then(res => res.json())
       .then(json => {
         setMovies(json.results);
-        // console.log(json.results);
       });
     setLoading(false);
   }, []);
 
   return (
     <section className="movies">
-      {loading && <h2 className="loading">Loading movies..................</h2>}
+      {loading && <h2 className="loading">Loading movies...</h2>}
       {movies.map(movie => (
         <Popular
           title={movie.title}

@@ -25,20 +25,11 @@ export const Detail = () => {
 
   useEffect(() => {
     fetchData();
-
-    // .then(res => res.json())
-    // .then(json => {
-    //   // setDetails(json);
-    //   const updatedDetails = { title: json.title, overview: json.overview };
-    //   setDetails(updatedDetails);
-    //   console.log(updatedDetails);
-    //   // <DetailView title={json.title} />;
-    // });
   }, []);
 
   return (
     <section className="details-section">
-      {loading & <h2 className="loading">Loading details...</h2>}
+      {loading && !error && <h2 className="loading">Loading details...</h2>}
       {error && <h2 className="loading">Movie not found</h2>}
       {!error & !loading && (
         <DetailView

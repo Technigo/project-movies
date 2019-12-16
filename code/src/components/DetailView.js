@@ -17,7 +17,6 @@ export const DetailView = ({
           className="detail_background-img"
         />
       </div>
-
       <div className="detail-flex">
         <div className="image">
           <Link to="/" className="button">
