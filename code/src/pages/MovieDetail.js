@@ -20,13 +20,6 @@ export const MovieDetail = () => {
         setLoading(false)
         console.log(json)
       })
-
-    // .catch(err => {
-    //   console.log("is something wrong")
-    //   setMovie([])
-    //   setLoading(false)
-    //   console.log("error found:" + err)
-    // })
   }, [id])
 
   if (loading) {
@@ -57,10 +50,10 @@ export const MovieDetail = () => {
           <div className="details">
             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}></img>
             <div className="text-details">
-              <h2>{movie.title} <span>{movie.vote_average}/10</span></h2>
+              <h2>{movie.title} <span className="rating">{movie.vote_average}/10</span></h2>
               <div className="genres">
                 {movie.genres.map((genre) => (
-                  <Link key={genre.name} to={`/genre/${genre.id}`} params={{ test: "HEJSAN HOPPSAN" }}>
+                  <Link key={genre.name} to={`/genre/${genre.id}`}>
                     <p>{genre.name}</p>
                   </Link>
                 ))}
@@ -69,9 +62,8 @@ export const MovieDetail = () => {
               <p>{movie.overview}</p>
 
               <Link to={`/similar/${movie.id}`}>
-                <button className="similar-button">Show me similar</button>
+                <button className="similar-button">Show me similar movies</button>
               </Link>
-
 
             </div>
           </div>
@@ -83,12 +75,3 @@ export const MovieDetail = () => {
 
 
 }
-
-  // export const NoMatch = () => {
-  //   return (
-  //     <div className="not-found">
-  //       Not found
-  // </div>
-  //   )
-
-  // }

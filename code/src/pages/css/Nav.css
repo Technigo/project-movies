@@ -5,36 +5,23 @@
   list-style-type:none;
   margin:0;
   padding:16px 40px;
-  font-family: 'Nunito', sans-serif;
-border: 1px solid white;
-box-sizing: border-box;
+  font-family: 'Nunito', sans-serif, Verdana, Tahoma, sans-serif;
+  border: 1px solid white;
+  box-sizing: border-box;
 }
 .navbar h1{
   margin:0;
 }
 .navbar a{
   color:white;
-  /* background:white;
-  border:2px solid black; */
   text-decoration: none;
   font-weight: bold;
   padding: 2px 4px;
-  /* border-radius: 6px; */
 }
 .navbar svg{
   width: 30px;
   height:30px;
   fill:white;
-  /* margin: 0; */
-  /* border:2px double white;
-  padding-top: 5px; */
-}
-
-.navbar a:hover svg{
-  /* background: white; */
-  /* color:black; */
-  /* border:none;
-  border-radius: 5px; */
 }
 .logo{
   display:flex;
