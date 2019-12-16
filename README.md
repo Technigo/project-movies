@@ -7,6 +7,9 @@ Requirements for the project were:
 
 Built with React hooks, using Router, Browserrouter and switch for the first time together with useState and useEffect.
 
+Link to deployed project:
+https://movie-project-anna-almestal.netlify.com/
+
 
 
 
