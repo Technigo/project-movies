@@ -1,121 +1,130 @@
-body {
-    margin: 0;
-    background-color: black;
-}
-
-.h1 {
-    padding: 30px;
-    text-align: center;
-}
-
-.details .background {
-    position: absolute;
-}
-
-.background img {
-    max-width: 1600px;
-}
-
-.backlink {
-    position: absolute;
-    left: 50px;
-    top: 50px;
-    z-index: +1;
-}
-
-.backlink a {
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.1em;
-    text-decoration: none;
-}
-
-.details .movie {
-    display: flex;
-    position: relative;
-    height: 50%;
-    width: 800px;
-    align-items: flex-end;
-    padding: 240px 50px 50px 50px;
-}
-
-.details .poster {
-    border: white 3px solid;
-}
-
-.description {
-    padding: 30px;
-    height: 20%;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: large;
-}
-
-.title {
-    width: 50%;
-    color: white;
-    font-weight: bolder;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-}
-
-.rate {
-    width: 50%;
-    color: red;
-    font-size: 17px;
-    font-weight: bold;
-    text-align: right;
-    margin-block-start: 1.55em;
-}
-
-.overview {
-    widows: 100%;
-    color: white;
-}
-
-@media (min-width: 800px) and (max-width: 1024px) {
-    .background img {
-        object-fit: cover;
-        max-width: 1024px;
+    body {
+        margin: 0;
+        background-color: black;
     }
+    
+    .h1 {
+        padding: 30px;
+        text-align: center;
+    }
+    
+    .details .background {
+        position: absolute;
+    }
+    
+    .background img {
+        max-width: 1600px;
+    }
+    
+    .backlink {
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        z-index: +1;
+    }
+    
+    .backlink a {
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.1em;
+        text-decoration: none;
+    }
+    
+    .backlink:hover {
+        transition-property: font-size;
+        transition-property: color;
+        transition-duration: 0.3s;
+        font-size: 20px;
+        color: #97d700;
+    }
+    
     .details .movie {
         display: flex;
-        padding: 150px 10px 10px 10px;
-        margin: 0 auto;
-        max-width: 800px;
+        position: relative;
+        height: 50%;
+        width: 800px;
+        align-items: flex-end;
+        padding: 240px 50px 50px 50px;
     }
-    .poster {
-        display: none;
+    
+    .poster img {
+        border: white 3px solid;
     }
-}
-
-@media (min-width: 540px) and (max-width: 800px) {
-    .background img {
-        object-fit: cover;
-        max-width: 800px;
-    }
-    .details .movie {
+    
+    .description {
+        padding: 30px;
+        height: 20%;
         display: flex;
-        padding: 150px 10px 10px 10px;
-        margin: 0 auto;
-        max-width: 600px;
+        flex-wrap: wrap;
+        font-size: large;
     }
-    .poster {
-        display: none;
+    
+    .title {
+        width: 50%;
+        color: white;
+        font-weight: bolder;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
     }
-}
-
-@media (max-width: 540px) {
-    .background img {
-        display: none;
+    
+    .rate {
+        width: 50%;
+        color: red;
+        font-size: 17px;
+        font-weight: bold;
+        text-align: right;
+        margin-block-start: 1.55em;
     }
-    .details .movie {
-        display: flex;
-        flex-direction: column;
-        padding: 10px 10px 10px 10px;
-        max-width: 300px;
+    
+    .overview {
+        width: 100%;
+        color: white;
+        padding-top: 20px;
     }
-    .poster {
-        margin: 0 auto;
+    
+    @media (min-width: 800px) and (max-width: 1024px) {
+        .background img {
+            object-fit: cover;
+            max-width: 1024px;
+        }
+        .details .movie {
+            display: flex;
+            padding: 150px 10px 10px 10px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        .poster {
+            display: none;
+        }
     }
-}
+    
+    @media (min-width: 540px) and (max-width: 800px) {
+        .background img {
+            object-fit: cover;
+            max-width: 800px;
+        }
+        .details .movie {
+            display: flex;
+            padding: 150px 10px 10px 10px;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        .poster {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 540px) {
+        .background img {
+            display: none;
+        }
+        .details .movie {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 10px 10px 10px;
+            max-width: 300px;
+        }
+        .poster {
+            margin: 0 auto;
+        }
+    }
