@@ -11,7 +11,7 @@ export const Movie = ({ id, poster_path, title, release_date }) => {
           src={`https://image.tmdb.org/t/p/w780${poster_path}`}
           alt="poster"
         /> */}
-        <GridImage imagePath={poster_path} gridCol={4} />
+        <GridImage imagePath={poster_path} />
         <div className={styles.overlay}>
           <div className={styles.movieDetails}>
             <h1>{title}</h1>
