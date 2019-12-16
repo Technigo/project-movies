@@ -5,6 +5,7 @@ import { MovieDetail } from "pages/MovieDetail"
 import { SimilarMovies } from "pages/SimilarMovies"
 import { Genre } from "pages/Genre"
 import { Nav } from "pages/Nav"
+import { Footer } from "pages/Footer"
 import "./App.css"
 
 
@@ -36,7 +37,7 @@ export const App = () => {
         </Route>
       </Switch>
 
-
+      <Footer />
     </BrowserRouter>
 
   )

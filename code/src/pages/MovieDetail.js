@@ -47,7 +47,7 @@ export const MovieDetail = () => {
   return (
     <div>
       {movie.title &&
-        <div className="background" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
+        <div className="background" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.5) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
           <div className="back-button">
             <Link to={"/"}>
               <Arrow />
@@ -60,7 +60,7 @@ export const MovieDetail = () => {
               <h2>{movie.title} <span>{movie.vote_average}/10</span></h2>
               <div className="genres">
                 {movie.genres.map((genre) => (
-                  <Link key={genre.name} to={`/genre/${genre.id}`}>
+                  <Link key={genre.name} to={`/genre/${genre.id}`} params={{ test: "HEJSAN HOPPSAN" }}>
                     <p>{genre.name}</p>
                   </Link>
                 ))}
@@ -69,7 +69,7 @@ export const MovieDetail = () => {
               <p>{movie.overview}</p>
 
               <Link to={`/similar/${movie.id}`}>
-                <button>Show me similar</button>
+                <button className="similar-button">Show me similar</button>
               </Link>
 
 
