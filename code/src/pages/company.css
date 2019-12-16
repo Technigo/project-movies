@@ -1,13 +1,13 @@
 .companyWrapper {
-  padding: 40px 20px;
+  padding: 20px 0;
   background: #000;
   color: #fff;
   min-height: 100vh;
-  text-align: center;
+  text-align: left;
 }
 
 .companyDetails {
-  padding: 20px 0;
+  padding: 20px 50px;
 }
 
 .logo {

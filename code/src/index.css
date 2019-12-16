@@ -15,3 +15,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+button:focus, a:focus {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+  border-radius: 5px;
+}
+
+.movieCard a:focus {
+  outline-offset: -2px;
+}

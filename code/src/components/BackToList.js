@@ -7,7 +7,7 @@ export const BackToList = () => {
   return (
     <section className="backWrapper">
       <Link to="/">
-        <div className="backToList"><i className="fas fa-chevron-circle-left" /> Back to movies</div>
+        <div className="backToList" tabIndex="0" role="button" aria-pressed="false"><i className="fas fa-chevron-circle-left" /> Back to movies</div>
       </Link>
     </section >
   )
