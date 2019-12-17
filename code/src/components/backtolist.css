@@ -16,8 +16,9 @@
   color: #fff;
 }
 
-.backToList:active {
+.backToList:active, .backToList:focus {
   outline: 2px solid #fff;
+  outline-offset: 3px;
 }
 
 .backToList:hover {

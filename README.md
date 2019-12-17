@@ -15,6 +15,7 @@ https://nyblad-movies.netlify.com/
 ## Technologies used
 HTML5 <br>
 CSS3 <br>
+JavaScript ES6 <br>
 React <br>
 React Route<br>
 

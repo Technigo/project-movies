@@ -16,6 +16,7 @@ code {
     monospace;
 }
 
+/* FOCUS STYLING */
 button:focus, a:focus {
   outline: 2px solid #fff;
   outline-offset: 3px;
