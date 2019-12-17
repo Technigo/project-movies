@@ -18,13 +18,13 @@ export const GridImage = ({ imagePath }) => {
 
   gridItemWidth = width / columns;
 
-  if (gridItemWidth < 2000 && gridItemWidth > 780) {
+  if (gridItemWidth > 780) {
     url = `https://image.tmdb.org/t/p/original${imagePath}`;
-  } else if (gridItemWidth <= 780 && gridItemWidth > 500) {
+  } else if (gridItemWidth > 500) {
     url = `https://image.tmdb.org/t/p/w780${imagePath}`;
-  } else if (gridItemWidth <= 500 && gridItemWidth > 342) {
+  } else if (gridItemWidth > 342) {
     url = `https://image.tmdb.org/t/p/w500${imagePath}`;
-  } else if (gridItemWidth <= 342 && gridItemWidth > 185) {
+  } else if (gridItemWidth > 185) {
     url = `https://image.tmdb.org/t/p/w342${imagePath}`;
   } else {
     url = `https://image.tmdb.org/t/p/w185${imagePath}`;
