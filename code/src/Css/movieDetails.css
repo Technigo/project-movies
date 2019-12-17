@@ -1,6 +1,7 @@
 article .background {
-  min-height: 100vh;
+  min-height: 100%;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 article {
