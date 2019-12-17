@@ -11,6 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 *{
   box-sizing: border-box;
 }
@@ -18,23 +19,17 @@ code {
 .movieList{
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .moviePoster{
   background-color: black;
   position: relative;
   width: 25%;
-  
 }
 
 .moviePoster Img{
   width:100%;
 }
-
-/* .moviePoster:hover {
- filter: brightness(25%);
-} */
 
 .moviePoster:hover img {
   filter: brightness(25%);
@@ -57,17 +52,8 @@ code {
 .detailPage{
   display: flex;
   flex-direction: column;
-  /* position: relative; */
- 
 }
 
-/* .background-image{
-  position: absolute;
-  z-index: -1;
-  
-  background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);
-  
-} */
 h1{
   font-size: 1.5em;
 }
@@ -125,12 +111,6 @@ a:link {
   padding: 10px;
   background-color: white;
 }
-
-/*denna gör att texten hoppar ut, inte glider ut
-.backLink p:hover{
-  transform: translate(10px) ;
-  
-}*/
 
 .backLink .arrow:hover {
   transition: margin-right .3s ease-in-out;

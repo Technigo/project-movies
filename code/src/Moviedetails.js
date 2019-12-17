@@ -24,7 +24,6 @@ export const Moviedetails = () => {
             }
            setLoading(false)
         })
-
     }, [movieId])
 
     if (loading){
@@ -38,10 +37,6 @@ export const Moviedetails = () => {
     return(
         <div className="detailPage" style={{backgroundImage: 
             `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280/${movie.backdrop_path})` }}>
-            
-            {/* <div className="background-image">
-                <img style={{background: "linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);" }} src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}/>
-            </div> */}
             <Link to={`/`}>
             <div className="backLink"> 
                 <div className="arrow">  
@@ -49,7 +44,6 @@ export const Moviedetails = () => {
                 <p>Movies</p>
             </div>
             </Link>
-
             <div className="summaryBox">           
                 <img src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`}/>   
                 <div className="summary">
