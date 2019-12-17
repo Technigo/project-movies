@@ -35,3 +35,37 @@
   flex-direction: column;
   justify-content: flex-end;
 }
+
+select {
+  width: 300px;
+  height: 40px;
+  padding: 3px;
+  background-color: black;
+  border: white 2px solid;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 30px;
+}
+
+header h1 {
+  font-family: "Bungee", cursive;
+  color: white;
+  font-size: 40px;
+  margin: 0px;
+}
+
+.rating {
+  color: red;
+  margin-top: 5px;
+  font-size: 15px;
+}
