@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Arrow } from "icon/Arrow";
+import { Arrow } from "icons/Arrow";
 import "pages/movieDetails.css";
 
 export const MovieDetails = () => {
