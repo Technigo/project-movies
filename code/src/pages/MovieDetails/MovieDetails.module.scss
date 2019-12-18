@@ -16,11 +16,9 @@ p {
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  // border: 3px solid red;
 }
 
 .overlay {
-  // border: 2px solid yellow;
   width: 100%;
   background: linear-gradient(
     to top,
@@ -41,7 +39,6 @@ p {
     position: relative;
     color: white;
     text-decoration: none;
-    // border: 1px solid red;
 
     svg {
       width: 30px;
@@ -82,7 +79,6 @@ p {
     width: 100%;
     margin-top: 30px;
     margin-bottom: 10px;
-    // border: 1px solid red;
 
     h2 {
       display: inline-block;
@@ -108,10 +104,6 @@ p {
   .poster {
     width: 100%;
     margin-top: 40px;
-    // display: flex;
-    // border: 1px solid red;
-    // border: 2px solid white;
-    // z-index: 3;
 
     img {
       display: inline-block;
@@ -119,7 +111,6 @@ p {
       height: 100% !important;
       border: 4px solid white;
       box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.8);
-      // z-index: 2;
       animation: fadeIn 0.1s linear;
     }
   }
@@ -134,13 +125,8 @@ p {
   }
 }
 
-// @media(hover: hover) and (pointer: fine) {
-
-// }
-
 @media screen and (min-width: 780px) {
   .content {
-    // border: 2px solid yellow;
     height: 100vh;
     position: relative;
     padding-left: 40px;
@@ -153,18 +139,15 @@ p {
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: flex-end;
-    // border: 1px solid red;
 
     .overview {
       width: 55%;
-      // border: 1px solid blue;
       margin-bottom: 30px;
       padding: 0 30px;
     }
 
     .poster {
       width: 30%;
-      // border: 4px solid green;
       margin-right: 10px;
       img {
         width: 100%;
@@ -180,8 +163,6 @@ p {
     .poster {
       width: 33%;
       max-width: 360px;
-      // max-height: 30%;
-      // border: 5px solid red;
     }
   }
 }
