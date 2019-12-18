@@ -1,30 +1,32 @@
-# Project 12 - Movie site (Week 12)
+# Project 12 - Movie site
 
-### 1. What is this?
+### What is this?
 
-A move site created with React and React router to showcase movies from themoviedb.org's API.
+A movie site created with React and React router to showcase movies from themoviedb.org's API.
 
-### 2. What did I do?
+### What did I do?
 
 [TEXT]
 
-### 3. Technologies used
+### Technologies used
 
 - HTML
 - CSS
 - Javascript
+- SASS
 - React
+- React Router
 
-### 4. APIs used
+### APIs used
 
 - The Movie Db API (www.themoviedb.com)
 
-### 5. Learning objectives
+### Learning objectives
 
 - How to use React router to create multi-page applications
 - How to use placeholders in urls to pick dynamic parts from urls
 - Practice using APIs in React - combining `useState` with `useEffect`
 
-### 6. Where can you see it in action?
+### Where can you see it in action?
 
-URL to live site: 
+URL to live site: https://eloquent-lovelace-b89b7d.netlify.com/
