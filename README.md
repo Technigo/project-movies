@@ -8,7 +8,7 @@ A movie site created with React and React router to showcase movies from themovi
 
 Yet another fun project to work on. I'm really happy with the end result, especially the grid on the movie list page. It's so nice and responsive.
 
-On mobile I decided to disable hover state with media queries since it can be pretty annoying when the hover gets stuck and you have to click again to get somewhere.
+On mobile devices I decided to disable hover state with media queries since it can be pretty annoying when the hover gets stuck and you have to click again to get somewhere.
 
 As far as the JavaScript code goes I have built upon my previous coding patterns.
 
