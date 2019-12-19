@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import useWindowWidth from '../../hooks/useWindowWidth';
 
 export const GridImage = ({ imagePath }) => {
@@ -35,4 +36,8 @@ export const GridImage = ({ imagePath }) => {
       <img src={url} alt="Poster" />
     </div>
   );
+};
+
+GridImage.propTypes = {
+  imagePath: propTypes.string.isRequired
 };
