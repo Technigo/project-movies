@@ -6,7 +6,15 @@ A movie site created with React and React router to showcase movies from themovi
 
 ### What did I do?
 
-[TEXT]
+Yet another fun project to work on. I'm really happy with the end result, especially the grid on the movie list page. It's so nice and responsive.
+
+On mobile I decided to disable hover state with media queries since it can be pretty annoying when the hover gets stuck and you have to click again to get somewhere.
+
+As far as the JavaScript code goes I have built upon my previous coding patterns.
+
+I decided to also make use of the different image sizes provided by the API, for backdrops and posters, to reduce load time and data transfer. After doing some research I implemened logic for responsiveness (with grid size awareness). Now the most optimal image is loaded at any given time.
+
+When resizing the movie list page you can clearly see in the developer tools how the image URLs are switching constantly.
 
 ### Technologies used
 
