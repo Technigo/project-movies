@@ -16,7 +16,7 @@ export const MovieList = () => {
         setIsLoading(false);
       })
       .catch(err => {
-        console.log(err);
+        console.log(err); // Configure loading error state
       });
   }, []);
 
