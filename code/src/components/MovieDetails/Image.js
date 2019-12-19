@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import useWindowWidth from '../../hooks/useWindowWidth';
 
 export const Image = ({ image_path }) => {
@@ -25,21 +26,13 @@ export const Image = ({ image_path }) => {
     // console.log('Image: 154px');
   }
 
-  // return (
-  //   <div>
-  //     <img
-  //       src={w500}
-  //       srcSet={`${w92} 92w, ${w154} 154w, ${w185} 185w, ${w342} 342w, ${w500} 500w, ${w780} 780w, ${w2000} 2000w`}
-  //       sizes={`(max-width: 781px) 535px,
-  //       (max-width: 1000px) 774px`}
-  //       alt="poster"
-  //     />
-  //   </div>
-  // );
-
   return (
     <div>
       <img src={url} alt="Poster" />
     </div>
   );
+};
+
+Image.propTypes = {
+  image_path: propTypes.string.isRequired
 };
