@@ -1,10 +1,10 @@
 # Project 12 - Movie site
 
-### What is this?
+### Summary
 
 A movie site created with React and React router to showcase movies from themoviedb.org's API.
 
-### What did I do?
+### Implementation details
 
 Yet another fun project to work on. I'm really happy with the end result, especially the grid on the movie list page. It's so nice and responsive.
 
