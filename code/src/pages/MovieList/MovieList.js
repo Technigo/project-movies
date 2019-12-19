@@ -45,7 +45,8 @@ export const MovieList = () => {
                 movie.id !== 449924 &&
                 movie.id !== 474350 &&
                 movie.id !== 492188 &&
-                movie.id !== 159323
+                movie.id !== 159323 &&
+                movie.adult !== true
               );
             })
             .map(movie => (
