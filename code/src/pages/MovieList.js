@@ -12,7 +12,6 @@ export const MovieList = () => {
     )
       .then(res => res.json())
       .then(json => {
-        //console.log(json)
         setMovies(json.results)
       })
   }, [categories])
@@ -20,6 +19,7 @@ export const MovieList = () => {
   return (
     <div>
       <nav>
+        <h1>Moviepedia</h1>
         <h4>Select movie list:</h4>
         <select value={categories} onChange={(e) => setCategories(e.target.value)}>
           <option value="popular">Popular</option>
