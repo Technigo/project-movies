@@ -1,6 +1,8 @@
 # Movies
 
+
 This is my first multi-page React application, and it is using a fun API:[themoviedb.org](https://www.themoviedb.org/)
+
 
 I have followed this design to complete my project
 

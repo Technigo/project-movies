@@ -19,7 +19,7 @@ export const MovieList = () => {
   return (
     <div>
       <nav>
-        <h1>Moviepedia</h1>
+        <h1>MovieTime</h1>
         <h4>Select movie list:</h4>
         <select value={categories} onChange={(e) => setCategories(e.target.value)}>
           <option value="popular">Popular</option>
