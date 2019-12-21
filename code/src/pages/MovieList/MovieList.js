@@ -12,7 +12,21 @@ export const MovieList = () => {
     setIsLoading(true);
     API.getMovies()
       .then(data => {
-        setMovies(data.results);
+        const { results } = data;
+        const filteredResults = results
+          .filter(movie => {
+            return (
+              // Filtering out posters with inconsistent height and to get an even number of movies to display in the grid
+              movie.id !== 516700 &&
+              movie.id !== 651693 &&
+              movie.id !== 11 &&
+              movie.id !== 474350 &&
+              movie.adult !== true
+            );
+          })
+          .slice(0, 16);
+
+        setMovies(filteredResults);
         setIsLoading(false);
       })
       .catch(err => {
@@ -37,21 +51,9 @@ export const MovieList = () => {
         </div>
       ) : (
         <div className={styles.movieList}>
-          {movies
-            .filter(movie => {
-              return (
-                // Filtering out posters with inconsistent height and to get an even number of movies to display in the grid
-                movie.id !== 540247 &&
-                movie.id !== 449924 &&
-                movie.id !== 474350 &&
-                movie.id !== 492188 &&
-                movie.id !== 159323 &&
-                movie.adult !== true
-              );
-            })
-            .map(movie => (
-              <Movie key={movie.id} {...movie} />
-            ))}
+          {movies.map(movie => (
+            <Movie key={movie.id} {...movie} />
+          ))}
         </div>
       )}
     </div>
