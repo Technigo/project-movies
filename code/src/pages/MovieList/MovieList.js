@@ -13,7 +13,7 @@ export const MovieList = () => {
     API.getMovies()
       .then(data => {
         const { results } = data;
-        const filteredResults = results
+        const computedResults = results
           .filter(movie => {
             return (
               // Filtering out posters with inconsistent height and to get an even number of movies to display in the grid
@@ -21,12 +21,14 @@ export const MovieList = () => {
               movie.id !== 651693 &&
               movie.id !== 11 &&
               movie.id !== 474350 &&
+              movie.id !== 159323 &&
               movie.adult !== true
             );
           })
+          .sort((a, b) => b.release_date - a.release_date)
           .slice(0, 16);
-
-        setMovies(filteredResults);
+        console.log(computedResults);
+        setMovies(computedResults);
         setIsLoading(false);
       })
       .catch(err => {
