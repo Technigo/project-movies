@@ -11,5 +11,21 @@ code {
 }
 
 h1 {
-  display: none;
+  color: white;
+}
+
+h2 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
 }
