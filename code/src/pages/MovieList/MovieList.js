@@ -25,7 +25,9 @@ export const MovieList = () => {
               movie.adult !== true
             );
           })
-          .sort((a, b) => b.release_date - a.release_date)
+          .sort(
+            (a, b) => Date.parse(b.release_date) - Date.parse(a.release_date)
+          )
           .slice(0, 16);
         console.log(computedResults);
         setMovies(computedResults);
