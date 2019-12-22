@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
-import { MovieListWrapper, MovieCover, H1, HoverCoverBackground } from './styles'
+import { MovieListWrapper, MovieCover, HoverCoverBackground, MovieDescription } from './styles'
 
 const MovieList = () => {
   const [movies, setMovies] = useState([])
@@ -17,10 +17,13 @@ const MovieList = () => {
       {movies.map(movie => (
         <Link style={{ width: "25%" }} to={`/movies/${movie.id}`}>
           <MovieCover key={movie.id}>
-            <HoverCoverBackground />
             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} />
-            <H1>{movie.title}</H1>
-            <p>Released {movie.release_date}</p>
+            <HoverCoverBackground>
+              <MovieDescription>
+                <h1>{movie.title}</h1>
+                <p>Released {movie.release_date}</p>
+              </MovieDescription>
+            </HoverCoverBackground>
           </MovieCover>
         </Link>
       ))}

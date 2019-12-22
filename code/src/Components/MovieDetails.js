@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
-import { MovieBackground } from './styles'
+import { MovieBackground, MovieDetailsDescription,FlexWrapper,BackButtonWrapper } from './styles'
 import backArrow from '../static/backArrow.svg'
+
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState()
   const [loading, setLoading] = useState(true)
   const { id } = useParams()
-  const hej = useParams()
   const apiKey = "34f303052aebcecccf74022a56b92eee"
 
   useEffect(() => {
@@ -31,16 +31,20 @@ const MovieDetails = () => {
   }
 
   return (
-    <MovieBackground path={movie.backdrop_path}>
-      <div>
-        <Link to={'/'}><div style={{ width: "30px", display: "flex" }}>
-          <img src={backArrow} alt="" /><span style={{ marginLeft: "1rem", color: "white" }}>Movies</span></div></Link>
-        {/* <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="" /> */}
+    <FlexWrapper>
+      <MovieDetailsDescription>
+        <Link to={'/'}>
+          <BackButtonWrapper>
+            <img src={backArrow} alt="" />
+            <span style={{ marginLeft: "1rem", color: "white" }}>Movies</span>
+          </BackButtonWrapper>
+        </Link>
         <h1>{movie.title}</h1>
         <h2>Rating {movie.vote_average}/10</h2>
         <p>{movie.overview}</p>
-      </div>
-    </MovieBackground>
+      </MovieDetailsDescription>
+    <MovieBackground path={movie.backdrop_path} />
+    </FlexWrapper>
   )
 }
 
