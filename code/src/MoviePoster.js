@@ -1,6 +1,6 @@
 import React, {useEffect, useState } from "react"
 import 'moviePoster.css'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 export const MoviePoster = () => {

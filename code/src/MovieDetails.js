@@ -37,10 +37,12 @@ export const Moviedetails = () => {
     return (
         <div> 
         {movie&& 
-            <div className="moviestyle" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w342/${movie.backdrop_path})`, 
+            <div className="moviestyle" style={{ 
+            // backgroundImage: `linear-gradient: (rgba(0, 0, 0, 0) 90%, rgb(0, 0, 255) 100%), url(https://image.tmdb.org/t/p/w342/${movie.backdrop_path})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(${`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`})`, 
             backgroundRepeat: "no-repeat", 
-            backgroundSize: "cover",
-            linearGradient: "(#eb01a5, #d13531)"}}>
+            backgroundSize: "cover"}}>
+            
                 <div className="navigation">
                     <Link to="/">
                     <BackIcon />

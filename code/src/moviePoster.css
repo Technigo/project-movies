@@ -13,6 +13,7 @@ h1, h2, h3 {
 }
 
 .movie {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -26,8 +27,7 @@ h1, h2, h3 {
     z-index: 0;
 }
 
-img {
-    position: relative;
+.movie img {
     width: 100%;
     height: auto;
 }
@@ -40,9 +40,10 @@ img {
 
 .movie:hover .movieinfo {
     visibility: visible;
-    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    margin: 10px;
     z-index: 2;
-    width: 25%;
 }
 
 
