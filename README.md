@@ -37,4 +37,4 @@ When resizing the movie list page you can clearly see in the developer tools how
 
 ### Where can you see it in action?
 
-URL to live site: https://eloquent-lovelace-b89b7d.netlify.com/
+URL to live site: https://romantic-goldberg-1c109a.netlify.com/
