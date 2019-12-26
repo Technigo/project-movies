@@ -28,6 +28,12 @@ article {
 }
 
 a {
+    display: flex;
+    align-items: center;
     color: white;
     text-decoration: none;
+}
+.navigation a:hover {
+    transform: translateX(4px);
+    transition: all 0.1s ease;
 }

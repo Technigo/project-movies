@@ -15,8 +15,8 @@ export const Moviedetails = () => {
         .then ((res) => res.json())
         .then ((json) => {
             if(json.status_code === 34) {
-                setError('Movie not found')
-                setLoading()
+                setError('Movie not found.')
+                setLoading(false)
             } else {
             setMovie(json)
             }
@@ -39,7 +39,7 @@ export const Moviedetails = () => {
         {movie&& 
             <div className="moviestyle" style={{ 
             // backgroundImage: `linear-gradient: (rgba(0, 0, 0, 0) 90%, rgb(0, 0, 255) 100%), url(https://image.tmdb.org/t/p/w342/${movie.backdrop_path})`,
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(${`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`})`, 
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 30%, rgb(0, 0, 0) 90%), url(${`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`})`, 
             backgroundRepeat: "no-repeat", 
             backgroundSize: "cover"}}>
             
