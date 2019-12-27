@@ -9,6 +9,12 @@ export const MovieListWrapper = styled.div`
 export const MovieCover = styled.div`
   width: 100%;
   position: relative;
+  color: #fff;
+  transition: transform ease 0.6s;
+  &:hover {
+    z-index: 3;
+    transform: scale(1.03);
+  }
 `
 export const HoverCoverBackground = styled.div`
 position: absolute;
@@ -19,7 +25,7 @@ z-index: 2;
 top: 0;
 &:hover {
   opacity: 1;
-  background: rgba(0, 0, 0, 0.7)
+  background: rgba(0, 0, 0, 0.7);
 }
 `
 
@@ -27,7 +33,6 @@ export const MovieDescription = styled.div`
 position: absolute;
 top: 75%;
 left: 5%;
-color: #fff;
 `
 
 export const MovieDetailsDescription = styled.div`
@@ -71,4 +76,20 @@ export const BackButtonWrapper = styled.div`
  width: 30px;
  display: flex;
  alignItems: center;
+ margin: 1rem;
+`
+export const BackArrowIcon = styled.img`
+width: 30px;
+transition: margin-right 0.5s;
+&:hover {
+  margin-right: 5px;
+}
+`
+export const BackButtonTitle = styled.span`
+transition: margin-left 0.5s;
+margin-left: 5px;
+color: #fff;
+&:hover {
+  margin-left: 10px;
+}
 `

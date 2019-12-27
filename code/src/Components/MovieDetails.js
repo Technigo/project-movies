@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
-import { MovieBackground, MovieDetailsDescription,FlexWrapper,BackButtonWrapper } from './styles'
+import { MovieBackground, MovieDetailsDescription, FlexWrapper, BackButtonWrapper, BackArrowIcon, BackButtonTitle } from './styles'
 import backArrow from '../static/backArrow.svg'
 
 
@@ -35,15 +35,17 @@ const MovieDetails = () => {
       <MovieDetailsDescription>
         <Link to={'/'}>
           <BackButtonWrapper>
-            <img src={backArrow} alt="" />
-            <span style={{ marginLeft: "1rem", color: "white" }}>Movies</span>
+            <BackArrowIcon src={backArrow} alt="" />
+            <BackButtonTitle >Movies</BackButtonTitle>
           </BackButtonWrapper>
         </Link>
-        <h1>{movie.title}</h1>
-        <h2>Rating {movie.vote_average}/10</h2>
-        <p>{movie.overview}</p>
+        <div style={{ margin: "1rem" }}>
+          <h1>{movie.title}</h1>
+          <h2>Rating {movie.vote_average}/10</h2>
+          <p>{movie.overview}</p>
+        </div>
       </MovieDetailsDescription>
-    <MovieBackground path={movie.backdrop_path} />
+      <MovieBackground path={movie.backdrop_path} />
     </FlexWrapper>
   )
 }

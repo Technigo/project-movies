@@ -17,7 +17,7 @@ const MovieList = () => {
       {movies.map(movie => (
         <Link style={{ width: "25%" }} to={`/movies/${movie.id}`}>
           <MovieCover key={movie.id}>
-            <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} />
+            <img style={{ width: "100%" }} src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} />
             <HoverCoverBackground>
               <MovieDescription>
                 <h1>{movie.title}</h1>
