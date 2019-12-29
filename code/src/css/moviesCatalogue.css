@@ -1,0 +1,58 @@
+.movieContainer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+}
+.movieContainer a {
+    width: 100%;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+}
+
+.movieContainer a img {
+    width: 100%;
+}
+
+.movieContainer .movieInfo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    padding: 20px;
+}
+
+.movieContainer .movieInfo h1 {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+  
+.movieContainer a:hover .movieInfo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+@media (min-width: 668px) and (max-width:1024px) {
+
+    .movieContainer a {
+        width: 50%;
+        position: relative;
+        color: #fff;
+        text-decoration: none;
+    }  
+
+      }
+    
+      @media (min-width: 1025px) {
+        .movieContainer a {
+            width: 25%;
+            position: relative;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
