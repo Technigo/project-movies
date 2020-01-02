@@ -10,9 +10,9 @@ The goal for this week was to use an API to fetch multiple list of movies, displ
 * Practice using APIs in React - combining `useState` with `useEffect`
 
 ## Technologies implemented
-HTML5
-CSS3
-JavaScript ES6
-React
-React Route
+* HTML5
+* CSS3
+* JavaScript ES6
+* React
+* React Route
 
