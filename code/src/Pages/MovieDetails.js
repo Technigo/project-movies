@@ -48,7 +48,7 @@ return (
           <h2>{movie.title}
             <span className="movieVotes">{movie.vote_average}/10</span>
           </h2>
-        <p>{movie.overview}</p>
+        <p className="movieOverview">{movie.overview}</p>
         </div>
       </div>
     </article>

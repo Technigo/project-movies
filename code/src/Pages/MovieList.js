@@ -18,9 +18,9 @@ export const MovieList = ({ category = 'popular' }) => {
 
     <section className="movieSection">
       <select value={category} onChange={(e) => history.push(`/${e.target.value}`)}>
-        <option value="popular">Popular</option>
-        <option value="top_rated">Top-rated</option>
-        <option value="upcoming">Upcoming</option>
+        <option value="popular">Popular movies</option>
+        <option value="top_rated">Top-rated movies</option>
+        <option value="upcoming">Upcoming movies</option>
       </select>
 
       <div className="movieList">
