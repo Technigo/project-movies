@@ -1,37 +1,28 @@
 article {
   background: white;
 }
+
 .detail-page-container {
-
- display: flex;
- flex-direction: column;
-justify-content: flex-end;
-background-repeat: no-repeat;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-repeat: no-repeat;
 }
-
 
 .backdrop-poster {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-
   z-index: -1;
   position: absolute;
   height: 750px;
-  
   top: 0px;
   width: 100%;
   background-size: cover;
   background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);
-  
 }
 
 .poster {
-
- 
-
-
   border: 3px solid white;
 }
 
@@ -46,15 +37,10 @@ background-repeat: no-repeat;
   align-items: flex-end;
   padding: 50px;
   margin-top: 100px;
-  /*
-  position: relative;
-  z-index: 1;
-*/
 }
 
 .movie-summary {
   margin-left: 60px;
- 
 }
 
 h2 {
@@ -73,7 +59,6 @@ p {
 }
 
 .home-button {
- 
   margin-top: 30px;
   display: inline-flex;
   align-items: center;
@@ -81,31 +66,22 @@ p {
   position: absolute;
   top: 20px;
   left: 40px;
-
-}
-
-.home-button:hover {
-  
 }
 
 i.fas {
- font-size: 25px;
- padding-right: 5px;
- transition: all .3s ease
- 
+  font-size: 25px;
+  padding-right: 5px;
+  transition: all 0.3s ease;
 }
 
 i.fas:hover {
   padding-right: 15px;
-  
 }
-
-
 
 p.home {
   padding-left: 0px;
   font-weight: bold;
-  transition: all .3s ease
+  transition: all 0.3s ease;
 }
 
 p.home:hover {
@@ -115,50 +91,37 @@ p.home:hover {
 .loading-message {
   display: flex;
   justify-content: center;
-  
 }
 
-
+/* Responsive design for tablet size*/
 @media (max-width: 600px) {
-
   .backdrop-poster {
-    width: 365px;
-
+    width: 375px;
   }
 
   .movie-overview {
-   width: 300px;
-   display: flex;
-   flex-direction: column;
-   margin-bottom: 40px;
-
-   
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
   }
+
   .poster {
     position: relative;
     left: 44px;
     top: 50px;
     width: 200px;
-
   }
 
   .movie-summary {
-position: relative;
-width: 300px;
-top: 50px;
-left: 80px;
-
-
-
-
-
-   
+    position: relative;
+    width: 300px;
+    top: 50px;
+    left: 80px;
   }
 
-p {
-  text-align: justify;
+  p {
+    text-align: justify;
     width: 300px;
   }
-
 }
-
