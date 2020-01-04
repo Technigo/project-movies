@@ -23,7 +23,7 @@ Finally I decided to implement infinite scroll which basically means that you ca
 - HTML
 - CSS
 - Javascript
-- SASS
+- SCSS
 - React
 - React Router
 
