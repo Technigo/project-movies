@@ -12,9 +12,11 @@ On mobile devices I decided to disable hover state with media queries since it c
 
 As far as the JavaScript code goes I have built upon my previous coding patterns.
 
-I decided to also make use of the different image sizes provided by the API, for backdrops and posters, to reduce load time and data transfer. After doing some research I implemened logic for responsiveness (with grid size awareness). Now the most optimal image is loaded at any given time.
+I decided to also make use of the different image sizes provided by the API, for backdrops and posters, to reduce load time and data transfer. After doing some research I implemened logic for responsiveness (with grid size awareness) in a separate React component. Now the most optimal image is loaded at any given time.
 
 When resizing the movie list page you can clearly see in the developer tools how the image URLs are switching constantly.
+
+Finally I decided to implement infinite scroll which basically mean that you can keep scrolling on the page and new movies will constantly be loaded and presented to the screen. Infinite scroll is more modern version of the traditional pagination feature.
 
 ### Technologies used
 
