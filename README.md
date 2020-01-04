@@ -16,7 +16,7 @@ I decided to also make use of the different image sizes provided by the API, for
 
 When resizing the movie list page you can clearly see in the developer tools how the image URLs are switching constantly.
 
-Finally I decided to implement infinite scroll which basically means that you can keep scrolling on the page and new movies will constantly be loaded and presented to the screen. Infinite scroll is more modern version of the traditional pagination feature.
+Finally I decided to implement infinite scroll which basically means that you can keep scrolling on the page and new movies will constantly be loaded and presented on the screen. Infinite scroll is a more modern version of the traditional pagination feature.
 
 ### Technologies used
 
