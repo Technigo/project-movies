@@ -9,7 +9,7 @@
   "poster"
   "details";
   grid-template-columns: auto;
-  grid-template-rows: 1fr 3fr 3fr;
+  grid-template-rows: 1fr 3fr 1fr;
   height: 100vh;
   padding: 1.5rem;
   position: relative;
@@ -26,23 +26,34 @@
 }
 
 .movie-details {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-template-rows: repeat(2, auto);
   grid-area: details;
   padding-bottom: 1rem;
   width: 100%;
 }
 
  .movie-title {
-  display: flex;
+  grid-column: 1 / span 5;
+  grid-row: 1 / span 1;
   font-size: 1.5rem;
   margin-bottom: 1rem;
  }
 
  .movie-rating {
+  color: #ff0000;
   font-size: 1rem;
   font-weight: normal;
-  margin-left: 1rem;
-  color: #ff0000;
+  grid-row: 1 / span 1;
+  grid-column: 6 / span 1;
   line-height: 2;
+  margin-left: 0.5rem;
+}
+
+.movie-synopsis {
+  grid-column: 1 / span 6;
+  grid-row: 2 / span 1;
 }
 
  @media screen and (min-width: 668px) {
@@ -61,7 +72,7 @@
   }
 
   .movie-poster, 
-  .movie-details{
+  .movie-details {
     align-self: end;
   }
  }
