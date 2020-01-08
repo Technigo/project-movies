@@ -9,8 +9,8 @@ export const Movie = (props) => {
       <div className="movie-details">
         <h1 className="movie-title">
           {props.title}
-          <span className="movie-rating">{props.rating}/10</span>
         </h1>
+        <p className="movie-rating">{props.rating}/10</p>
         <p className="movie-synopsis">{props.overview}</p>
       </div>
     </article>
