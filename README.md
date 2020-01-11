@@ -1,4 +1,4 @@
-# Project 12 - Movie site
+# Movie site
 
 ### Summary
 
@@ -30,12 +30,6 @@ Finally I decided to implement infinite scroll which basically means that you ca
 ### APIs used
 
 - The Movie Db API (www.themoviedb.com)
-
-### Learning objectives
-
-- How to use React router to create multi-page applications
-- How to use placeholders in urls to pick dynamic parts from urls
-- Practice using APIs in React - combining `useState` with `useEffect`
 
 ### Where can you see it in action?
 
