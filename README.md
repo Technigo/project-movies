@@ -16,3 +16,6 @@ The goal for this week was to use an API to fetch multiple list of movies, displ
 * React
 * React Route
 
+##
+deployed site: https://swolfson-project-movie.netlify.com
+
