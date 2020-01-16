@@ -9,6 +9,7 @@ Learning Objectives:
 * Use React hooks, Router, Browserrouter and switch together with useState and useEffect.
 
 Technology implemented:
+
 React
 JSX
 HTML
