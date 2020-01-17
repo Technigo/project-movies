@@ -1,4 +1,4 @@
-# RED CARPET
+# THE RED CARPET
 Ultra fast web app where you can find information about best and newest movies
 
 ## Details
