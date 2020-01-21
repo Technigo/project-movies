@@ -1,15 +1,16 @@
+`PROJECT 12`
+
 # Project Movies
 
-week 12: built a movie site with multi-page React. Fetching information from an API.
+Built a movie site with multi-page React. Fetching information from an API.
+
+# The requirements for the project:
+* JavaScript ES6
+* React (useState with useEffect)
+* CSS
+* HTML5
 
 See it: https://movies-sara.netlify.com/
 
-# The requirements for the project:
-* Using React router to create multi-page applications
-* Using Placeholders in urls
-* Combining useState with useEffect
-* Technologies used
-* HTML5
-* CSS3
-* JavaScript ES6
-* React
+
+
