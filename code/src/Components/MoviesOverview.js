@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+// import urlSlug from 'url-slug' /* might remove this... */
 
 const MoviesOverview = ({ movies, posterSize }) => {
   
@@ -7,7 +10,7 @@ const MoviesOverview = ({ movies, posterSize }) => {
     <section>
       {movies.map((movie, index) => {
         return (
-          <a key={index} href={`/movies/${movie.id}`}>
+            <Link to={`/movies/${movie.id}`}>
             <img 
               src={`https://image.tmdb.org/t/p/${posterSize}${movie.poster_path}`} 
               alt={`Poster for ${movie.title}`}
@@ -18,7 +21,7 @@ const MoviesOverview = ({ movies, posterSize }) => {
                 <p>Released {movie.release_date}</p>
               </div>
             </div>
-          </a>
+            </Link>
         )
       })}
     </section>
