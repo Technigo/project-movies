@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   color: white;
+  box-sizing: border-box;
 }
 
 html, main, body, #root {
@@ -22,6 +23,10 @@ code {
     monospace;
 }
 
+h1 {
+  font-size: 24px;
+}
+
 h3 {
   font-size: 2em;
   width: 90%;
@@ -29,8 +34,8 @@ h3 {
 }
 p {
   font-size: 1em;
-  width: 90%;
-  margin: 10px 0 10px 0;
+  width: 100%;
+  margin: 16px 0 16px 0;
 }
 
 section {
@@ -41,7 +46,6 @@ section {
 a {
   width: 25%;
   position: relative;
-  background: black;
 }
 a img {
   width: 100%;
@@ -71,4 +75,52 @@ a:hover > .overlay {
   background: black;
   height: 100%;
   background-size: cover;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.summary {
+  display: flex;
+  align-items: flex-end;
+}
+
+.summary img {
+  border-width: 5px;
+  border-style: solid;
+  border-color: white;
+}
+
+.summary .details {
+  max-width: 400px;
+  margin-left: 20px;
+}
+
+.rating {
+  font-weight: 400;
+  font-size: 17px;
+  color: red;
+  margin-left: 10px;
+}
+
+.back-link {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  text-decoration: none;
+
+}
+
+.back-link svg {
+  width: 30px;
+  transition: margin-right .2s ease-in-out;
+}
+
+.movie-details a:hover svg {
+  margin-right: 5px;
+
 }

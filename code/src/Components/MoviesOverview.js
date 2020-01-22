@@ -1,5 +1,4 @@
 import React from 'react'
-// import urlSlug from 'url-slug' /* might remove this... */
 
 const MoviesOverview = ({ movies, posterSize }) => {
   

@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import MoviesOverview from './Components/MoviesOverview.js'
 import MovieDetails from './Components/MovieDetails.js'
 
-const POSTERSIZE = 'w500'
+const POSTERSIZE = 'w342'
 const BACKDROPSIZE = 'w1280'
 const APIKEY = process.env.REACT_APP_MOVIEDB_APIKEY;
 
@@ -17,7 +17,6 @@ export const App = () => {
     })
     .then(response => response.json())
     .then(json => {
-      console.log(json.results)
       setMovies(json.results)
     })
   }, [])
@@ -30,7 +29,7 @@ export const App = () => {
             <MoviesOverview movies={movies} posterSize={POSTERSIZE}/>
           </Route>
           <Route path={`/movies/:movieId`} exact>
-            <MovieDetails backdropSize={BACKDROPSIZE}/>
+            <MovieDetails backdropSize={BACKDROPSIZE} posterSize={POSTERSIZE}/>
           </Route>
         </Switch>
         </main>

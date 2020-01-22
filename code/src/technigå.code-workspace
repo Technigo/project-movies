@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"name": "project-happy-thoughts",
+			"path": "/Users/tehvicke/Dropbox/Skola/Technigo/project-happy-thoughts"
+		},
+		{
+			"name": "project-react-native-app",
+			"path": "/Users/tehvicke/Dropbox/Skola/Technigo/project-react-native-app"
+		},
+		{
+			"name": "project-survey",
+			"path": "/Users/tehvicke/Dropbox/Skola/Technigo/project-survey"
+		},
+		{
+			"name": "project-redux-quiz-orange",
+			"path": "/Users/tehvicke/Dropbox/Skola/Technigo/project-redux-quiz-orange"
+		},
+		{
+			"name": "project-movies",
+			"path": "/Users/tehvicke/Dropbox/Skola/Technigo/project-movies"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "project-music-releases"
+	}
+}
