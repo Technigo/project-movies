@@ -1,4 +1,4 @@
-# A  multi-page popular movies in React using React Router
+#  "Popular Movies" a multi-page app using React & React Router
 
 
 My fourth react project - The goal for this week is to use themoviedb.org's API to fetch a list of movies (more on which movies further down), display them on a page and then link to a movie detail page when you click on the movie.
