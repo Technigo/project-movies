@@ -1,25 +1,29 @@
-# Project 12 @ Technigo Bootcamp - Our first multi-page React application
+# A  multi-page popular movies in React using React Router
 
 
-The forth week with React - The goal for this week is to use themoviedb.org's API to fetch a list of movies (more on which movies further down), display them on a page and then link to a movie detail page when you click on the movie.
+My fourth react project - The goal for this week is to use themoviedb.org's API to fetch a list of movies (more on which movies further down), display them on a page and then link to a movie detail page when you click on the movie.
 
-## To learn this week 🧠
+### Learning objectives 🧠
 
 - How to use React router to create multi-page applications
 - How to use placeholders in urls to pick dynamic parts from urls
 - Practice using APIs in React - combining <code> useState </code> with <code> useEffect </code>
 
-### Tech  💻
+### Technologies used 💻  
 
 - HTML
 - CSS 
 - JavaScript 
-- React JS 
+- React JS
 
+## Deployed version 🎯
 
-My live project [Here](https://popular-movies-by-nasim.netlify.com/)
+https://popular-movies-by-nasim.netlify.com/
 
+<br>
+<br>
 
+<p> Nasim Mahzoun 2019 </p>
 
 
 
