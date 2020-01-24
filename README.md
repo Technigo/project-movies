@@ -1,8 +1,6 @@
-This was the fourth, and final, project of the third sprint on the Technigo Frontend Bootcamp, which was focused on React.
-
 ## 1. What is this?
 
-The purpose of this assignment was to fetch movie data from themoviedb.org API and display them on a page and then link to a movie detail page when you'd click on the movie.
+The purpose of this project was to fetch movie data from themoviedb.org API and display them on a page and then link to a movie detail page when you'd click on the movie.
 This project also introduce me to React router.
 With this project I've learned:
 * How to use React router to create multi-page applications
