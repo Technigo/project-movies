@@ -15,7 +15,6 @@ This is a multi-page React app that uses the Movie database API to display upcom
 - CSS
 - Flexbox
 - Grid
-In this project I used hooks, React router, CSS and HTML. I used flexbox and grid for layout.
 
 ## What did I do?
 
