@@ -65,6 +65,7 @@ body {
 .infoPoster {
     float: left;
     border: 10px solid white;
+    width: 230px;
 }
 
 .titleInfo {
