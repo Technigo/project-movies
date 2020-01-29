@@ -54,7 +54,7 @@ body {
 .infoPoster {
     float: left;
     border: 10px solid white;
-    max-width: 30%;
+    width: 60%;
 }
 
 .titleInfo {
@@ -81,4 +81,16 @@ body {
     margin-left: 80px;
     width: 200px;
     font-size: 25px;
+}
+
+@media (min-width: 650px) and (max-width: 1023px) {
+    .movieInfo .infoBox {
+   width: 25%;
+} 
+
+.infoPoster {
+    float: left;
+    border: 10px solid white;
+    width: 40%;
+    }
 }
