@@ -2,14 +2,12 @@
 
 See site here: https://mrsucodesproject12movieproject.netlify.com/
 
-In this project, I've built a multi-page React application, and used a fun new API too!
-
-The goal was to use [themoviedb.org](https://www.themoviedb.org/)'s API to fetch a list of movies (more on _which movies_ further down), display them on a page and then link to a movie detail page when you click on the movie.
+A multi-page React application, and used an API to fetch popular movies.
 
 
 #### :clapper::clapper::clapper: Let's go! :clapper::clapper::clapper:
 
-In this app, I used the API to fetch popular movies in the US.
+In this app, I used the API to fetch popular movies in the US, display them on a page and then link to a movie detail page when you click on the movie.
 
 ## What I learned 🧠
 
