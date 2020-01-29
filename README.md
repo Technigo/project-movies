@@ -29,4 +29,4 @@ I registered an account with [themoviedb.org](https://www.themoviedb.org/) and t
 ## If I had more time 🏃‍♂
 
 I would have added a "movie not found" reply and more pages and a made a search field for specific movie genres.  
-You can see it here: https://trusting-bell-b37c20.netlify.com/
+You can see it here: https://popularmovies-petrabrinck.netlify.com
