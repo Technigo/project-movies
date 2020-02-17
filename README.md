@@ -11,8 +11,8 @@ Learning objectives
 - Practice using APIs in React - combining useState with useEffect
 
 Technologies used
-HTML5 
-CSS3 
-JavaScript ES6 
-React 
-React Route
+-HTML5 
+-CSS3 
+-JavaScript ES6 
+-React 
+-React Route
