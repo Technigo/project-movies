@@ -18,8 +18,13 @@ export const MovieList = ({id}) => {
 
   return (
     <div>
-     
+        <select value={category} onChange={e => setCategory(e.target.value)}>
+          <option value="popular">Popular</option>
+          <option value="top_rated">Top Rated</option>
+          <option value="upcoming">Upcoming</option>
+        </select>
       {movies.map(movie => (
+   
         <Link key={movie.id} to={`/movies/${movie.id}`}>
           <img
             src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}

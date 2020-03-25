@@ -7,6 +7,7 @@ import { MovieDetails } from "./MovieDetails";
 export const App = () => {
   const key = "1ff77d3fb46cefb77c7370504c6cb69d"
   return (
+    
     <BrowserRouter>
       <Switch>
         <Route path="/" exact>
