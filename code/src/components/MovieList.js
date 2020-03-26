@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-//import "./movieList.css"
+import "./MovieList.css"
 import { Link } from 'react-router-dom'
 
 export const MovieList = () => {
@@ -28,8 +28,12 @@ export const MovieList = () => {
           <Link to={'/Order Now'}>
 
           <img src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`} /*alt={movie.original_title}*/ />
-          <h1>{movie.original_title}</h1>
-          <h1>{movie.original_language}</h1>
+          <div 
+            
+            className="Movie-Title">
+            <h1>{movie.original_title}</h1>
+            <h1>{movie.original_language}</h1>
+          </div>
           </Link>
 
 
