@@ -1,26 +1,35 @@
 import React, { useState, useEffect } from "react";
+import { BounceLoader } from 'react-spinners'
 import { Link } from "react-router-dom";
 // import { Link } from 'react-router-dom'
 import './liststyle.css'
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true)
 
   const moviesURL =
     "https://api.themoviedb.org/3/movie/popular?api_key=57134eb2a62754e27d3ec2d3fe453512&language=en-US&page=1";
 
   useEffect(() => {
+    setLoading(true)
     fetch(moviesURL)
       .then(res => res.json())
       .then(json => {
         setMovies(json.results);
+        setLoading(false)
       });
   }, []);
 
+  if (loading) {
+    return <main className="loading"><BounceLoader color='lightskyblue'/></main>
+  }
+
   return (
-    <div className='listContent'>
-      {movies.map(movie => (
-        <Link className="movies" key={movie.id} to={`/movies/${movie.id}`}>
+    <main>
+      <div className='listContent'>
+        {movies.map(movie => (
+          <Link className="movies" key={movie.id} to={`/movies/${movie.id}`}>
             <img
               src={`http://image.tmdb.org/t/p/w342${movie.poster_path}`}
               alt={movie.original_title}
@@ -29,8 +38,9 @@ export const MovieList = () => {
               <h1 className="movieTitle">{movie.title}</h1>
               <p>Premiered: {movie.release_date}</p>
             </div>
-        </Link>
-      ))}
-    </div>
+          </Link>
+        ))}
+      </div>
+    </main>
   );
 };

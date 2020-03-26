@@ -17,9 +17,7 @@ export const DetailedInfo = () => {
   }, []);
 
   const detailStyle = {
-    backgroundImage: `url("http://image.tmdb.org/t/p/w1280${
-      movie.backdrop_path
-      }")`,
+    backgroundImage: `url("http://image.tmdb.org/t/p/w1280${movie.backdrop_path}")`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat"
   };
