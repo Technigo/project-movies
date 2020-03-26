@@ -25,12 +25,11 @@ export const MovieList = () => {
             
           className="movieImg" key={movie.id}>
 
+          <Link to={'/Order Now'}>
+
           <img src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`} /*alt={movie.original_title}*/ />
           <h1>{movie.original_title}</h1>
-          
-
-          <Link to={'/Order Now'}>
-            <h1>{movie.original_language}</h1>
+          <h1>{movie.original_language}</h1>
           </Link>
 
 
