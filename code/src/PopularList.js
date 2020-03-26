@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Link } from 'react-router-dom'
+import "./popularlist.css"
 
 export const PopularList = (props) => {
     const { films, setFilms } = props
@@ -10,13 +11,20 @@ export const PopularList = (props) => {
             .then((data) => {
                 setFilms(data.results)
                 console.log(films)
-                console.log(data)
             })
     }, [])
 
     return (
         films.map((film) => {
-            return <Link to={`/films/${film.title}`} key={film.id}><img src={`https://image.tmdb.org/t/p/w500${film.poster_path}`} alt=""></img></Link>
+            return <Link className="film-card" to={`/films/${film.title}`} key={film.id}>
+
+                <img className="film-poster" src={`https://image.tmdb.org/t/p/w500${film.poster_path}`} alt={film.title} />
+                <article className="poster-text">
+                    <h1 className="film-title">{film.title}</h1>
+                    <h2 className="release-date">Released {film.release_date}</h2>
+                </article>
+
+            </Link>
         })
     )
 }

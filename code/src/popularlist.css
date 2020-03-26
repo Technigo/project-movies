@@ -1,0 +1,41 @@
+
+.film-card {
+width: 25%;
+margin: 0;  
+display: flex;
+position: relative;
+background-color: black;
+
+}
+.film-card:hover .film-poster {
+    opacity: .2;
+}
+
+.film-card:hover .poster-text {
+    display: block;
+}
+
+.film-poster {
+    width: 100%;
+}
+
+.poster-text {
+position: absolute;
+align-self: flex-end;
+text-decoration: none;
+color: white; 
+padding: 15px;
+display: none;
+}
+
+.film-title {
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.release-date {
+    font-size: 18px;
+    font-family: helvetica;
+    font-weight: lighter;
+    margin-top: 8px;
+}

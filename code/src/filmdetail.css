@@ -1,4 +1,61 @@
 .film-detail-container {
-    width: 100%;
+    display: flex;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    padding: 46px;
+   
+   
+}
+
+.left-column {
+    align-self: flex-end;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-column {
+    align-self: flex-end;
+    width: 35%;
+    color: white;
+}
+
+.back-button {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.button-icon {
+    width: 25px;
+    height: 25px;
+    fill: white;
+    margin-right: 5px;
+    
+}
+
+.back-button:hover .back-text {
+    margin-left: 7px;
+    transition: all .2s ease-in-out;
+}
+
+.film-img {
+    border: 6px solid white;
+    margin-right: 20px;
+}
+
+.film-name {
+    font-size: 24px;
+}
+
+.film-rating {
+  color: red;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-left: 15px;
 }
