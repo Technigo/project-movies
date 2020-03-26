@@ -1,15 +1,15 @@
 .film-detail-container {
     display: flex;
+    flex-direction: column;
     background-size: cover;
-    height: 100vh;
+    align-items: center;
+    height: 100%;
     width: 100vw;
     padding: 46px;
-   
-   
 }
 
 .left-column {
-    align-self: flex-end;
+    /* align-self: flex-end; */
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -17,8 +17,8 @@
 }
 
 .right-column {
-    align-self: flex-end;
-    width: 35%;
+    /* align-self: flex-end; */
+    width: 85%;
     color: white;
 }
 
@@ -58,4 +58,20 @@
   font-size: 18px;
   font-weight: lighter;
   margin-left: 15px;
+}
+
+@media (min-width: 680px) {
+    .film-detail-container {
+        flex-direction: row;
+    }
+    .left-column {
+        align-self: flex-end;
+       
+    }
+    
+    .right-column {
+        align-self: flex-end;
+        width: 35%;
+       
+    }
 }

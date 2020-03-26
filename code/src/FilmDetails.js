@@ -17,7 +17,7 @@ export const FilmDetails = (props) => {
                     <YourSvg className="button-icon" />
                     <span className="back-text">Movies</span>
                 </Link>
-                <img className="film-img" src={`https://image.tmdb.org/t/p/w342${selectedFilm.poster_path}`} />
+                <img className="film-img" src={`https://image.tmdb.org/t/p/w342${selectedFilm.poster_path}`} alt={selectedFilm.title} />
             </article >
             <article className="right-column">
                 <h1 className="film-name">{selectedFilm.title}<span className="film-rating">

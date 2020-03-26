@@ -1,12 +1,13 @@
 
 .film-card {
-width: 25%;
+width: 100%;
 margin: 0;  
 display: flex;
 position: relative;
 background-color: black;
-
+justify-content: center;
 }
+
 .film-card:hover .film-poster {
     opacity: .2;
 }
@@ -21,7 +22,7 @@ background-color: black;
 
 .poster-text {
 position: absolute;
-align-self: flex-end;
+align-self: center;
 text-decoration: none;
 color: white; 
 padding: 15px;
@@ -29,7 +30,7 @@ display: none;
 }
 
 .film-title {
-    font-size: 30px;
+    font-size: 45px;
     margin-bottom: 0;
 }
 
@@ -38,4 +39,33 @@ display: none;
     font-family: helvetica;
     font-weight: lighter;
     margin-top: 8px;
+}
+
+
+@media (min-width: 680px) and (max-width: 1024px) {
+    .film-card {
+        width: 50%;
+    }
+   .poster-text {
+       align-self: flex-end;
+   }
+   .film-card {
+       justify-content: flex-start;
+   }
+}
+
+@media (min-width: 1025px) {
+    .film-card {
+        width: 25%;
+    }
+    .poster-text {
+        align-self: flex-end;
+    }
+    .film-card {
+        justify-content: flex-start;
+    }
+
+    .film-title {
+        font-size: 30px;
+    }
 }
