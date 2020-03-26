@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 
 export const MovieDetails = () => {
   const api_key = "67a5c607e91b1a60e64b4e131b88956b";
   const [movieDetails, setMovieDetails] = useState([]);
   const { id } = useParams();
+  const [loading, setLoading] = useState(true);
+  const useHistory = useHistory();
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${api_key}&language=en-US`)
@@ -13,8 +15,19 @@ export const MovieDetails = () => {
       .then((json) => {
         console.log(json)
         setMovieDetails(json)
+        setLoading(false)
       })
   }, [id])
+
+  if (loading) {
+    return (
+      <h3>Loading...</h3>
+    )
+  }
+
+  if (!moviesDetails) {
+    history.push('/')
+  }
 
   return (
     <section>
