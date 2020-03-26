@@ -46,13 +46,12 @@
   display: block;
 }
 
-h1 {
+.movieTitle {
   font-size: 24px;
-  overflow-wrap: break-word;
 }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 

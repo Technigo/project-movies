@@ -26,7 +26,7 @@ export const MovieList = () => {
               alt={movie.original_title}
             />
             <div className="infoAbout">
-              <h1>{movie.title}</h1>
+              <h1 className="movieTitle">{movie.title}</h1>
               <p>Premiered: {movie.release_date}</p>
             </div>
         </Link>

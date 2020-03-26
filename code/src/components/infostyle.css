@@ -32,12 +32,15 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-end;
   /* background-color: rgba(255, 255, 255, 0.644); */
 }
 
-h1 {
+.infoTitle {
   color: white;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.521);
+  padding: 10px;
+  font-size: 32px;
 }
 
 .singleMovie img {
@@ -49,9 +52,10 @@ h1 {
 .overview {
   padding: 10px;
   width: 30%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-.shading {
+.darkenBackground {
   height: 100%;
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.274), black);

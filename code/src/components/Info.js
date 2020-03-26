@@ -26,7 +26,7 @@ export const DetailedInfo = () => {
 
   return (
     <section className="eachMovie" style={detailStyle}>
-      <div className="shading">
+      <div className="darkenBackground">
         <div className="goBack">
           <Link to="/">
             <span role="img" aria-label="back">
@@ -42,7 +42,7 @@ export const DetailedInfo = () => {
             alt="poster"
           />
           <div className="overview">
-            <h1>{movie.title}</h1>
+            <h1 className="infoTitle">{movie.title}</h1>
             <p>{movie.overview}</p>
           </div>
         </div>
