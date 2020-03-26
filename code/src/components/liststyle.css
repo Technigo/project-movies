@@ -21,6 +21,10 @@
   width: 300px;
 }
 
+.infoAbout {
+  display: none;
+}
+
 h1 {
   font-size: 18px;
 }

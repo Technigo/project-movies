@@ -32,18 +32,20 @@ export const DetailedInfo = () => {
             <span role="img" aria-label="back">
               ⬅️
             </span>{" "}
-            Back
+            Go Back
           </p>
         </Link>
       </div>
 
       <div className="singleMovie">
-        <h1>{movie.title}</h1>
         <img
           src={`http://image.tmdb.org/t/p/w342${movie.poster_path}`}
           alt="poster"
         />
-        {movie.overview}
+        <div className="overview">
+        <h1>{movie.title}</h1>
+          {movie.overview}
+          </div>
       </div>
     </section>
   );
