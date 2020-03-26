@@ -10,7 +10,7 @@ export const MovieList = () => {
   const apiKey = '85c8192ada23df0631c9cf9ca0b5729d'
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
+    fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`)
       .then((res) => res.json())
       .then((json) => {
         setMovies(json.results)
