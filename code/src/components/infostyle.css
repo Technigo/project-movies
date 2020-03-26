@@ -1,0 +1,44 @@
+.eachMovie {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 300px;
+  line-height: 25px;
+  color: white;
+}
+p {
+  margin: 0;
+}
+
+.goBack a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.goBack span {
+  text-decoration: none;
+}
+
+.singleMovie {
+  height: 100%;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+}
+
+.singleMovie img {
+  border: 4px solid black;
+  filter: brightness(80%);
+}
