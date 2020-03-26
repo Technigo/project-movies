@@ -19,33 +19,33 @@ export const DetailedInfo = () => {
   const detailStyle = {
     backgroundImage: `url("http://image.tmdb.org/t/p/w1280${
       movie.backdrop_path
-    }")`,
+      }")`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat"
   };
 
   return (
     <section className="eachMovie" style={detailStyle}>
-      <div className="goBack">
-        <Link to="/">
-          <p>
+      <div className="shading">
+        <div className="goBack">
+          <Link to="/">
             <span role="img" aria-label="back">
               ⬅️
             </span>{" "}
             Go Back
-          </p>
         </Link>
-      </div>
+        </div>
 
-      <div className="singleMovie">
-        <img
-          src={`http://image.tmdb.org/t/p/w342${movie.poster_path}`}
-          alt="poster"
-        />
-        <div className="overview">
-        <h1>{movie.title}</h1>
-          {movie.overview}
+        <div className="singleMovie">
+          <img
+            src={`http://image.tmdb.org/t/p/w342${movie.poster_path}`}
+            alt="poster"
+          />
+          <div className="overview">
+            <h1>{movie.title}</h1>
+            <p>{movie.overview}</p>
           </div>
+        </div>
       </div>
     </section>
   );

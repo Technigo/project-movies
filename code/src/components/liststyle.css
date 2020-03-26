@@ -9,39 +9,57 @@
   padding: 0px;  
 }
 
-.movies {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: white;
+.listContent a {
+  position: relative;
+  width: 25%;
   text-decoration: none;
-  border: 2px solid black;
-  margin: 3px;
-  padding: 1px;
-  width: 300px;
+  z-index: 1;
+}
+
+.movies img {
+  width: 100%;
+  z-index: 0;
+  transition: all .4s ease-in-out;
+}
+
+.listContent .infoAbout {
+  position: absolute;
+  bottom: 20px;
+  padding: 20px;
+  width: 100%;
 }
 
 .infoAbout {
+  position: absolute;
   display: none;
+  z-index: 2;
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+}
+
+.movies:hover img {
+  filter: brightness(40%);
+}
+
+.movies:hover .infoAbout {
+  display: block;
 }
 
 h1 {
+  font-size: 24px;
+  overflow-wrap: break-word;
+}
+
+p {
   font-size: 18px;
 }
 
-img {
-  width: 300px;
-  transition: all 0.4s ease-in-out;
-}
-
-img:hover {
-  filter: brightness(40%);
-}
 
 a {
   text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
   font-weight: bold;
-}
+} */
