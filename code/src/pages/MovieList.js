@@ -14,7 +14,6 @@ export const MovieList = () => {
       .then((res) => res.json())
       .then((json) => {
         setMovies(json.results)
-        console.log(movies)
       })
   })
   return (
