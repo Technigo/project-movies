@@ -9,16 +9,15 @@
 }
 
 .left-column {
-    /* align-self: flex-end; */
-    height: 100%;
+    /* height: 100%; */
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .right-column {
-    /* align-self: flex-end; */
-    width: 85%;
+    width: 80%;
     color: white;
 }
 
