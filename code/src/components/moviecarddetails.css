@@ -1,0 +1,13 @@
+.movie-card-details {
+  display: none;
+}
+
+.movie-card-title {
+  width: 80%;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.movie-card-release {
+  padding: 0;
+}
