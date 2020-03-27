@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BounceLoader } from 'react-spinners'
 import { Link } from "react-router-dom";
+// import RRS from 'react-responsive-select';
 // import { Navigate } from './Nav'
 // import { Link } from 'react-router-dom'
 import './liststyle.css'

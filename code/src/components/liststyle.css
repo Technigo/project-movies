@@ -14,7 +14,7 @@ nav {
 }
 
 .menuDropdown select {
-  font-size: 18px;
+  font-size: 16px;
   height: 30px;
   width: 200px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -26,7 +26,7 @@ nav {
 
 .sorting {
   margin-right: 20px;
-  font-size: 22px;
+  font-size: 18px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -97,6 +97,14 @@ a {
   text-decoration: none;
 }
 
-/* a:hover {
-  font-weight: bold;
-} */
+@media (max-width: 1024px) {
+  .listContent a {
+    width: 33%;
+  }
+}
+
+@media (max-width: 680px) {
+  .listContent a {
+    width: 50%;
+  }
+}
