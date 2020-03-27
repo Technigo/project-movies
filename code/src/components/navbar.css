@@ -1,17 +1,23 @@
 .navbar {
   display: flex;
   flex-direction: row;
-  height: 7vh;
+  height: 4vh;
   background-color: black;
   color: white;
   justify-content: flex-end;
-  padding: 10px 40px 0px 0px;
-
+  padding: 0px 40px 20px 0px;
+  justify-content: flex-end;
 }
 
 .navbar a {
   text-decoration: none;
   color: white;
+  margin-left: 30px;
+}
+
+.navbar p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
 }
 
 .navbar,
@@ -23,4 +29,10 @@
 .navbar,
 .back-arrow:hover {
   cursor: pointer;
+}
+
+.current-page {
+  cursor: default;
+  color: grey;
+  margin-left: 30px;
 }
