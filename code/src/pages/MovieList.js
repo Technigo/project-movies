@@ -28,8 +28,8 @@ export const MovieList = () => {
         selectMovieList={selectMovieList} />
       <div className="movie-container">
         {movies.map((movie) => (
-          <Link to={`/movies/${movie.id}`}>
-            <article className="movie-card" key={movie.id}>
+          <Link to={`/movies/${movie.id}`} key={movie.id}>
+            <article className="movie-card">
               <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title} />
               <MovieCardDetails
                 title={movie.title}
