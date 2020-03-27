@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import './moviedetail.css'
 
 export const MovieDetail = () => {
   const { movieId } = useParams()
@@ -20,12 +21,17 @@ export const MovieDetail = () => {
   }, [movieId])
 
   return (
-    <div className="movie-detail-wrapper">
-      <img className="movie-backdrop" src={backdropUrl} alt={movie.title} />
-      <img className="movie-detail-poster" src={posterUrl} alt={movie.title} />
-      <h1 className="movie-title">{movie.title}</h1>
-      <p className="movie-rating">{movie.vote_average}/10</p>
-      <p className="movie-overview">{movie.overview}</p>
-    </div>
+    <div className="movie-backdrop" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0) 40%, rgba(0, 0, 0) 100%), url(${backdropUrl})` }}>
+      <div className="movie-detail-wrapper" >
+        <p className="back-link">BACK</p>
+        <div className="movie-detail-container">
+          <img className="movie-detail-poster" src={posterUrl} alt={movie.title} />
+          <div className="movie-summary">
+            <h1 className="movie-title">{movie.title} <span className="movie-rating">{movie.vote_average}/10</span></h1>
+            <p className="movie-overview">{movie.overview}</p>
+          </div>
+        </div>
+      </div >
+    </div >
   )
 }
