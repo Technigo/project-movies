@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { BackLink } from 'components/BackLink'
 import './moviedetail.css'
+
 
 export const MovieDetail = () => {
   const { movieId } = useParams()
@@ -21,9 +24,11 @@ export const MovieDetail = () => {
   }, [movieId])
 
   return (
-    <div className="movie-backdrop" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0) 40%, rgba(0, 0, 0) 100%), url(${backdropUrl})` }}>
+    <div className="movie-backdrop" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0) 20%, rgba(0, 0, 0) 100%), url(${backdropUrl})` }}>
       <div className="movie-detail-wrapper" >
-        <p className="back-link">BACK</p>
+        <Link to="/" className="back-link">
+          <BackLink />
+          Movies</Link>
         <div className="movie-detail-container">
           <img className="movie-detail-poster" src={posterUrl} alt={movie.title} />
           <div className="movie-summary">
