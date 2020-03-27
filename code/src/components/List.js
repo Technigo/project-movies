@@ -34,11 +34,11 @@ export const MovieList = () => {
     <main>
       {/* <Navigate /> */}
       <nav className="navigateCategory">
-        <h1>Movie List</h1>
-        <div className="dropdown">
-          <p>Listing: </p>
+        {/* <h1 className="headerTitle">Movies to watch</h1> */}
+        <div className="menuDropdown">
+          <p className="sorting">Sort by: </p>
           <select value={chosenCategory} onChange={(event) => setChosenCategory(event.target.value)}>
-            <option value="popular">Category: </option>
+            <option value="popular">Popular</option>
             <option value="top_rated">Top Rated</option>
             <option value="upcoming">Upcoming</option>
           </select>
