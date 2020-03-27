@@ -6,6 +6,9 @@ export const MovieDetail = () => {
   const [movie, setMovie] = useState([])
   const apiKey = '85c8192ada23df0631c9cf9ca0b5729d'
   const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`
+  const posterUrl = `https://image.tmdb.org/t/p/w342${movie.poster_path}`
+  const backdropUrl = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`
+
 
   useEffect(() => {
     fetch(url)
@@ -18,8 +21,8 @@ export const MovieDetail = () => {
 
   return (
     <div className="movie-detail-wrapper">
-      <img className="movie-backdrop" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title} />
-      <img className="movie-detail-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+      <img className="movie-backdrop" src={backdropUrl} alt={movie.title} />
+      <img className="movie-detail-poster" src={posterUrl} alt={movie.title} />
       <h1 className="movie-title">{movie.title}</h1>
       <p className="movie-rating">{movie.vote_average}/10</p>
       <p className="movie-overview">{movie.overview}</p>
