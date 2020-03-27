@@ -10,7 +10,7 @@ export const NavBar = () => (
     <Route path="/" exact>
       <p className="current-page">Most Popular Movies</p>
       <Link to="/top_rated" exact>
-        <p>Top Rated</p>
+        <p className="nav-hover">Top Rated</p>
       </Link>
       <Link to="/now_playing" exact>
         <p>Now Playing</p>

@@ -1,11 +1,11 @@
 .navbar {
   display: flex;
   flex-direction: row;
-  height: 4vh;
+  height: 1vh;
   background-color: black;
   color: white;
   justify-content: flex-end;
-  padding: 0px 40px 20px 0px;
+  padding: 10px 40px 50px 0px;
   justify-content: flex-end;
 }
 
@@ -15,9 +15,28 @@
   margin-left: 30px;
 }
 
+.navbar a:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.navbar a:hover {
+  color: #F2CB05;
+}
+
+.navbar a:hover:after {
+  width: 100%;
+  background: #F2CB05;
+}
+
 .navbar p {
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .navbar,
