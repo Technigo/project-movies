@@ -6,8 +6,9 @@ import { NavButtons } from "NavButtons"
 import { ChangeApi } from "ChangeApi"
 
 export const PopularList = (props) => {
-    const { films, setFilms, pageNumber, setPageNumber, api, setApi } = props
+    const { films, setFilms, pageNumber, api } = props
     const [isLoading, setIsLoading] = useState(true)
+
 
 
     useEffect(() => {
@@ -25,9 +26,11 @@ export const PopularList = (props) => {
             <section className="flex-container">
                 {isLoading && <Loader />}
                 {!isLoading && films.map((film) => {
+
                     return (
                         <Link className="film-card" to={`/films/${film.title}`} key={film.id}>
-                            <img className="film-poster" src={`https://image.tmdb.org/t/p/w500${film.poster_path}`} alt={film.title} />
+                            <img className="film-poster" src={`https://image.tmdb.org/t/p/w500${film.poster_path}`} alt={film.title} style={{ opacity: localStorage.getItem(`${film.id}`) ? ".2" : "1" }} />
+                            {localStorage.getItem(`${film.id}`) && <p className="seen">Seen</p>}
                             <article className="poster-text">
                                 <h1 className="film-title">{film.title}</h1>
                                 <h2 className="release-date">Released {film.release_date}</h2>
