@@ -1,9 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-export const Navbar = () => {
+export const Navbar = ({ header }) => {
   return (
     <nav>
+      <h2>{header}</h2>
       <ul>
         <li><NavLink to="/">Popular</NavLink></li>
         <li><NavLink to="/nowplaying">Now playing</NavLink></li>

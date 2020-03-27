@@ -12,24 +12,23 @@ export const App = () => {
 
   return (
     <BrowserRouter>
-      <header>
-        <h2>{header}</h2>
-        <Navbar />
-      </header>
-      <Switch>
-        <Route path="/" exact>
-          <PopularMovieList apiKey={apiKey} setHeader={setHeader} />
-        </Route>
-        <Route path="/nowplaying" exact>
-          <NowPlaying apiKey={apiKey} setHeader={setHeader} />
-        </Route>
-        <Route path="/upcoming" exact>
-          <Upcoming apiKey={apiKey} setHeader={setHeader} />
-        </Route>
-        <Route path="/movies/:movieId" exact>
-          <MovieDetail apiKey={apiKey} />
-        </Route>
-      </Switch>
+      <Navbar header={header} />
+      <main>
+        <Switch>
+          <Route path="/" exact>
+            <PopularMovieList apiKey={apiKey} setHeader={setHeader} />
+          </Route>
+          <Route path="/nowplaying" exact>
+            <NowPlaying apiKey={apiKey} setHeader={setHeader} />
+          </Route>
+          <Route path="/upcoming" exact>
+            <Upcoming apiKey={apiKey} setHeader={setHeader} />
+          </Route>
+          <Route path="/movies/:movieId" exact>
+            <MovieDetail apiKey={apiKey} />
+          </Route>
+        </Switch>
+      </main>
     </BrowserRouter>
   )
 }
