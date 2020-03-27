@@ -1,5 +1,6 @@
 .movie-details{
   display: flex;
+  flex-direction: row;
 }
 
 .movie-details,
@@ -53,4 +54,22 @@
   cursor: pointer;
   margin-left: 10px;
   transition: 0.2s ease-in-out 0s;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 667px) {
+  .movie-summary {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .movie-summary img {
+    display: none;  
+  }
+
+  .description {
+    max-width: 200px;
+    padding: 90px;
+    background: rgba(0, 0, 0, 0.6);
+  }
 }

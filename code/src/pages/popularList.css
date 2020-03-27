@@ -38,7 +38,18 @@
 .main-content .hover-details h1 {
   margin-top: auto;
   margin-bottom: 0;
-  font-size: 32px;
+  font-size: 28px;
 }
 
+/* MEDIA QUERIES */
+@media (max-width: 667px) {
+  .main-content .hover-details h1 {
+    font-size: 14px;
+    text-transform: uppercase;
+  } 
+
+  .main-content .hover-details p {
+    display: none;
+  }
+}
 
