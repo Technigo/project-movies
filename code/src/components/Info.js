@@ -14,7 +14,7 @@ export const DetailedInfo = () => {
       .then(json => {
         setMovie(json);
       });
-  }, []);
+  }, [detailsURL]);
 
   const detailStyle = {
     backgroundImage: `url("http://image.tmdb.org/t/p/w1280${movie.backdrop_path}")`,
@@ -27,9 +27,9 @@ export const DetailedInfo = () => {
       <div className="darkenBackground">
         <div className="goBack">
           <Link to="/">
-            <span role="img" aria-label="back">
-              ⬅️
-            </span>{" "}
+            <span role="img" aria-label="Back">
+            {" ⬅️ "}
+            </span>
             Go Back
         </Link>
         </div>
@@ -40,7 +40,10 @@ export const DetailedInfo = () => {
             alt="poster"
           />
           <div className="overview">
-            <h1 className="infoTitle">{movie.title}</h1>
+            <h1 className="infoTitle">{movie.title}
+            </h1>
+            <h3><span className="starRating" role="img" aria-label="star">⭐️</span><span className="rating">{movie.vote_average}/10
+            </span></h3>
             <p>{movie.overview}</p>
           </div>
         </div>
