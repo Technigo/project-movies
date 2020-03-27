@@ -13,7 +13,7 @@ export const MovieList = () => {
     setMovieList(selectedList)
   }
   const apiKey = '85c8192ada23df0631c9cf9ca0b5729d'
-  const url = `https://api.themoviedb.org/3/movie/${movieList}?api_key=${apiKey}`
+  const url = `https://api.themoviedb.org/3/movie/${movieList}?api_key=${apiKey}&region=SE`
 
   useEffect(() => {
     fetch(url)
