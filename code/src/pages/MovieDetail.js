@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Error } from '../components/Error'
+import { Detail } from '../components/Detail'
 
 export const MovieDetail = (props) => {
   const { apiKey } = props
@@ -25,35 +27,16 @@ export const MovieDetail = (props) => {
       })
   }, [movieId, apiKey])
 
-  const hours = Math.floor(runtime / 60)
-  const minutes = runtime % 60
-
   if (!movieDetail || !runtime || !trailer[0]) {
     return (
-      <>
-        <section>
-          <h1>Oh no, there's an error</h1>
-          <a className="return-button" href="/">Return</a>
-        </section>
-      </>
+      <Error />
     )
   }
 
   return (
     <section>
       {movieDetail && (
-        <>
-          <img src={`https://image.tmdb.org/t/p/w342${movieDetail.poster_path}`} alt="" />
-          <article>
-            <h1>{movieDetail.title}</h1>
-            <p>{hours} h {minutes} minutes</p>
-            <h5>{movieDetail.genres[0].name} | {movieDetail.genres[1].name}</h5>
-            <p>{movieDetail.overview}</p>
-            <h4>{movieDetail.vote_average}/10 ({movieDetail.vote_count})</h4>
-            <a target="_blank" rel="noopener noreferrer" href={`https://www.imdb.com/title/${movieDetail.imdb_id}/`}>IMDb</a>
-            {trailer && (<a target="_blank" rel="noopener noreferrer" href={`https://www.youtube.com/watch?v=${trailer[0].key}`}>Trailer</a>)}
-          </article>
-        </>
+        <Detail runtime={runtime} trailer={trailer} {...movieDetail} />
       )}
     </section>
   )
