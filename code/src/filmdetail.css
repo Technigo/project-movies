@@ -57,6 +57,27 @@
   margin-left: 15px;
 }
 
+.seen-button-container {
+    display: flex;
+}
+.seen-button {
+    background: transparent;
+    color: white;
+    font-size: 18px; 
+    font-weight: bold; 
+    border: none;
+    cursor: pointer;
+}
+
+.seen-button:hover {
+    color: yellow;
+    transform:translatex(-3px);
+}
+.seen-text {
+    color: red;
+    font-weight: bold;
+}
+
 @media (min-width: 680px) {
     .film-detail-container {
         flex-direction: row;

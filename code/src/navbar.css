@@ -1,0 +1,24 @@
+.nav-bar {
+    width: 100%;
+    background-color: #181818;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.view-count {
+    color: white;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.headline {
+    color: white;
+    font-family: 'Permanent Marker';
+    font-size: 40px;
+    margin: 0;
+}

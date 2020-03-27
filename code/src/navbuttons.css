@@ -1,0 +1,22 @@
+.buttons {
+    display: flex;
+}
+
+.nav-button {
+    background: transparent;
+    color: white;
+    border-radius: 15px;
+ 
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    height: 35px;
+    justify-content: space-between;
+    width: 80px;
+    margin-right: 15px;
+}
+
+.icon {
+    fill: white;
+}
