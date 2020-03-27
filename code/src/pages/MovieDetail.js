@@ -28,7 +28,8 @@ export const MovieDetail = () => {
       <div className="movie-detail-wrapper" >
         <Link to="/" className="back-link">
           <BackLink />
-          Movies</Link>
+          <span className="back-link-text">Movies</span>
+        </Link>
         <div className="movie-detail-container">
           <img className="movie-detail-poster" src={posterUrl} alt={movie.title} />
           <div className="movie-summary">
