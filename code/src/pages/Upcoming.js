@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Movies } from '../components/Movies'
 
 export const Upcoming = (props) => {
   const { apiKey, setHeader } = props
@@ -18,9 +18,7 @@ export const Upcoming = (props) => {
     <section>
       {movies.map((movie, index) => (
         <article key={index}>
-          <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="" />
-          <h2><NavLink to={`/movies/${movie.id}`}>{movie.title}</NavLink></h2>
-          <h3>{movie.vote_average}</h3>
+          <Movies {...movie} />
         </article>
       ))}
     </section>
