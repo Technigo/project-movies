@@ -1,0 +1,56 @@
+.movie-details{
+  display: flex;
+}
+
+.movie-details,
+.background-image {
+  height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  position: relative;
+  color: #fff;
+  justify-content: flex-end;
+}
+
+.movie-summary {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+}
+
+.movie-summary img {
+  border: black solid 1px;
+  margin: 50px 10px 50px 50px;
+}
+
+.movie-details,
+.movie-description {
+  position: relative;
+}
+
+.description {
+  max-width: 250px;
+  padding: 60px;
+  background: rgba(0, 0, 0, 0.6);
+  margin-bottom: 50px;
+}
+
+.back-homepage {
+  position: fixed;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  text-decoration: none;
+  left: 58px;
+  top: 53px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.back-homepage:hover {
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.2s ease-in-out 0s;
+}

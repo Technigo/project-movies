@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  height: 7vh;
+  background-color: black;
+  color: white;
+  justify-content: flex-end;
+  padding: 10px 40px 0px 0px;
+
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar,
+.back-arrow {
+  font-size: 18px;
+  transition: ease-in-out 1s;
+}
+
+.navbar,
+.back-arrow:hover {
+  cursor: pointer;
+}
