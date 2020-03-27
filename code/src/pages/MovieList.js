@@ -13,9 +13,10 @@ export const MovieList = () => {
     setMovieList(selectedList)
   }
   const apiKey = '85c8192ada23df0631c9cf9ca0b5729d'
+  const url = `https://api.themoviedb.org/3/movie/${movieList}?api_key=${apiKey}`
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${movieList}?api_key=${apiKey}`)
+    fetch(url)
       .then((res) => res.json())
       .then((json) => {
         setMovies(json.results)
@@ -30,7 +31,7 @@ export const MovieList = () => {
         {movies.map((movie) => (
           <Link to={`/movies/${movie.id}`} key={movie.id}>
             <article className="movie-card">
-              <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title} />
+              <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
               <MovieCardDetails
                 title={movie.title}
                 release_date={movie.release_date} />
