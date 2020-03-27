@@ -17,6 +17,8 @@ nav {
   font-size: 16px;
   height: 30px;
   width: 200px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(54, 54, 54);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 

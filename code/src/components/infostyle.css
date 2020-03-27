@@ -14,12 +14,16 @@
   font-size: 28px;
   color: white;
   text-decoration: none;
-  padding: 40px 20px;
+  padding: 30px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .goBack span {
   text-decoration: none;
+  margin-left: 20px;
 }
 
 .singleMovie {
@@ -87,5 +91,11 @@
 
   .overview {
     width: 80%;
+  }
+}
+
+@media (max-width: 680px) {
+  .overview {
+    width: 90%;
   }
 }
