@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './nav.css'
 
-export const Nav = () => {
+export const Nav = ({ selectMovieList }) => {
   return (
     <nav>
       <h1>Movies</h1>
@@ -12,16 +12,16 @@ export const Nav = () => {
           <Link>Category</Link>
           <ul className="dropdown">
             <li>
-              <Link to="/">Now Playing</Link>
+              <Link to="/" onClick={() => selectMovieList('now_playing')}>Now Playing</Link>
             </li>
             <li>
-              <Link to="#">Upcoming</Link>
+              <Link to="#" onClick={() => selectMovieList('upcoming')}>Upcoming</Link>
             </li>
             <li>
-              <Link to="#">Popular</Link>
+              <Link to="#" onClick={() => selectMovieList('popular')}>Popular</Link>
             </li>
             <li>
-              <Link to="#">Top Rated</Link>
+              <Link to="#" onClick={() => selectMovieList('top_rated')}>Top Rated</Link>
             </li>
           </ul>
         </li>
