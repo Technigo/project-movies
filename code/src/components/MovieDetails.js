@@ -5,7 +5,7 @@ import './moviedetails.css'
 
 export const MovieDetails = ({ backdropUrl, posterUrl, title, vote_average, overview }) => {
   return (
-    <div className="movie-backdrop" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0) 20%, rgba(0, 0, 0) 100%), url(${backdropUrl})` }}>
+    <div className="movie-backdrop" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0) 1%, rgba(0, 0, 0) 100%), url(${backdropUrl})` }}>
       <section className="movie-detail-wrapper" >
         <Link to="/" className="back-link">
           <LeftArrow />
