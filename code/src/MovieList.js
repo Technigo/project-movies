@@ -17,10 +17,11 @@ export const MovieList = () => {
   }, [])
 
 
+  
 
   return (
 
-    <section>
+    <section className = "movieBox">
        {movies.map((movie)=>(
          <Link key={movie.id} to={`/movies/${movie.id}`}>
           <articl>
