@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import './movielist.css'
 import { MovieCard } from 'components/MovieCard'
 import { Nav } from 'components/Nav'
@@ -35,12 +34,12 @@ export const MovieList = () => {
 
       <div className="movie-container">
         {movies.map((movie) => (
-          <Link to={`/movies/${movie.id}`} key={movie.id}>
-            <MovieCard
-              poster_path={movie.poster_path}
-              title={movie.title}
-              release_date={movie.release_date} />
-          </Link>
+          <MovieCard
+            key={movie.id}
+            id={movie.id}
+            poster_path={movie.poster_path}
+            title={movie.title}
+            release_date={movie.release_date} />
         ))}
       </div>
     </>
