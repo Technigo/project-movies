@@ -30,17 +30,14 @@ export const PopularList = () => {
           fill="#fff" fill-rule="evenodd"> </path>
           
           </svg> 
-          <p>Movies</p>
+          Movies
           
           </a>
 
-          <div 
+        <section 
           
           className="background"style={{ backgroundImage: 
           `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }} alt="movie.original_title" >
-
-          </div>
-
 
           <div 
           
@@ -48,27 +45,27 @@ export const PopularList = () => {
         
         
             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="movie.original_title" />
+            
 
             <div 
               
               className="details">
 
-              <h1> {movie.original_title} </h1>
+              <h1> {movie.original_title} 
 
               <span 
                 
                 class="rating">
                 {movie.vote_average}
               </span>
+              </h1>
               
               <p> {movie.overview} </p>
-
             </div>
 
           </div>
-
-          
-
+            
+        </section> 
 
     </article>
   )

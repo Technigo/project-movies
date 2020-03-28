@@ -27,20 +27,24 @@ body {
   width: 100%; 
 }
 
-article {
+/*article {
   display: block;
-}
+}*/
 
 /*element.style {
-background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%)url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path});
+background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);
 }*/
 
 .detailPage .background {
-  min-height: 100vh;
+  height: 100vh; 
   display: flex;
   background-size: cover;
   flex-direction: column;
   justify-content: flex-end;
+  /*min-width: 1024px;
+  min-height: 100%;*/
+
+  
 }
 
 .detailPage .summary {
@@ -54,8 +58,13 @@ a {
 }
 
 .detailPage p {
-  color: #ffffff;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
+
 
 .detailPage svg {
   width: 10%;
@@ -64,4 +73,22 @@ a {
 .detailPage img {
   border: 5px solid #fff;
   width: 10%;
+}
+
+.detailPage .details {
+  margin-left: 20px;
+}
+
+.detailPage h1 {
+  display: block;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.detailPage .rating {
+  font-size: 17px;
+  color: red;
+  font-weight: 400;
+  margin-left: 10px;
 }
