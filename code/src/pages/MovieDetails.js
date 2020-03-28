@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export const MovieDetails = () => {
   const { movieID } = useParams()
@@ -16,10 +17,18 @@ export const MovieDetails = () => {
 
   return (
     <section className="details">
-      <div >
-
+      <div>
         <img className="backdrop" src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt="movie backdrop" />
+        <Link to={`/`}>
+          <div className="icon-container">
+            <div className="icon">
+              <i className="fas fa-chevron-circle-left"></i>
+            </div>
+              Movies
+         </div>
+        </Link>
       </div>
+
       <div className="summary">
         <img className="poster-image" src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt="movie poster" />
         <div className="summary-text">
