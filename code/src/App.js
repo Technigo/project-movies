@@ -12,7 +12,9 @@ export const App = () => {
 
       <Switch>
       <Route path="/" exact>
+        
       <MoviesList />
+
       </Route>
       </Switch>
 

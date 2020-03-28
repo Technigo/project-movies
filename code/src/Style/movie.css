@@ -1,0 +1,12 @@
+
+
+.movieContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movieBox {
+    width: 25%;
+    position: relative;
+    color: white;
+}
