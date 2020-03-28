@@ -31,20 +31,12 @@ body {
   display: block;
 }*/
 
-/*element.style {
-background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);
-}*/
-
 .detailPage .background {
   height: 100vh; 
   display: flex;
   background-size: cover;
   flex-direction: column;
   justify-content: flex-end;
-  /*min-width: 1024px;
-  min-height: 100%;*/
-
-  
 }
 
 .detailPage .summary {
@@ -65,14 +57,13 @@ a {
   margin-inline-end: 0px;
 }
 
-
 .detailPage svg {
   width: 10%;
 }
 
 .detailPage img {
   border: 5px solid #fff;
-  width: 10%;
+  width: 30%;
 }
 
 .detailPage .details {
