@@ -2,7 +2,7 @@ import React, { useState } from 'react' // Going to use useState to toggle dropd
 import { Link } from 'react-router-dom'
 import './nav.css'
 
-export const Nav = ({ selectMovieList, selectDocuList }) => {
+export const Nav = ({ selectMovieList }) => {
   return (
     <nav>
       <h1>Movies</h1>
@@ -12,22 +12,12 @@ export const Nav = ({ selectMovieList, selectDocuList }) => {
           <Link to="/">Category</Link>
           <ul className="dropdown">
             <li className="sub-list">
-              <Link to="/" onClick={() => selectMovieList('now_playing')}>Now Playing</Link>
+              <Link to="/" onClick={() => selectMovieList(137418)}>The Winners</Link>
             </li>
             <li className="sub-list">
-              <Link to="/" onClick={() => selectMovieList('upcoming')}>Upcoming</Link>
-            </li>
-            <li className="sub-list">
-              <Link to="/" onClick={() => selectMovieList('popular')}>Popular</Link>
-            </li>
-            <li className="sub-list">
-              <Link to="/" onClick={() => selectMovieList('top_rated')}>Top Rated</Link>
+              <Link to="/" onClick={() => selectMovieList(137392)}>Docu Reco</Link>
             </li>
           </ul>
-        </li>
-
-        <li>
-          <Link to="/docu">Docu Reco</Link>
         </li>
 
         <li>

@@ -20,10 +20,7 @@ export const MovieDetail = () => {
       .then((json) => {
         setMovie(json)
       })
-    return () => {
-
-    }
-  }, [])
+  }, [movieId])
 
   return (
     <div className="movie-backdrop" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0) 20%, rgba(0, 0, 0) 100%), url(${backdropUrl})` }}>

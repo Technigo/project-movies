@@ -8,12 +8,12 @@ import { Nav } from 'components/Nav'
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([])
-  const [movieList, setMovieList] = useState('now_playing')
+  const [movieList, setMovieList] = useState(137418)
   const selectMovieList = selectedList => {
     setMovieList(selectedList)
   }
   const apiKey = '85c8192ada23df0631c9cf9ca0b5729d'
-  const url = `https://api.themoviedb.org/3/movie/${movieList}?api_key=${apiKey}&region=SE`
+  const url = `https://api.themoviedb.org/4/list/${movieList}?page=1&api_key=${apiKey}`
 
   useEffect(() => {
     fetch(url)
@@ -21,10 +21,7 @@ export const MovieList = () => {
       .then((json) => {
         setMovies(json.results)
       })
-    return () => {
-
-    }
-  }, [])
+  }, [movieList])
 
   return (
     <>
