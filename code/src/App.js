@@ -1,12 +1,15 @@
 import React, {useState} from 'react'
 import {BrowserRouter, Route, Switch } from 'react-router-dom'
-import { MovieList } from 'MovieList'
-import { MovieDetails } from 'MovieDetails'
+import { MovieList } from 'movieList/MovieList'
+import { MovieDetails } from 'movieDetails/MovieDetails'
 import { Banner } from 'Banner'
+const key = "1ff77d3fb46cefb77c7370504c6cb69d"
 export const App = () => {
-
+console.log("key from start", key)
+  
   return (
     <BrowserRouter>
+    <div className = "app">
       <Banner />
         <Switch>
             <Route path="/" exact>
@@ -16,6 +19,7 @@ export const App = () => {
             <MovieDetails />
           </Route>
       </Switch>
+      </div>
     </BrowserRouter>
   )
 }

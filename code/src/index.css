@@ -12,11 +12,14 @@ code {
     monospace;
 }
 
-.movieBox {
+.app {
   width: 95vw;
   margin: 1em auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(auto-fill, auto);
-  grid-gap: 1em;
+  background-color: #803a40;
+}
+header{
+  background-color: #27352a;
+  color: white;
+  display: flex;
+  justify-content: space-around;
 }

@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import {useParams, Link} from 'react-router-dom'
+import { Page } from './Page';
 
+const key = "1ff77d3fb46cefb77c7370504c6cb69d"
 
-const key ="1ff77d3fb46cefb77c7370504c6cb69d"
-export const MovieDetails = (props) => {
+export const MovieDetails = () => {
     const [movie, setMovie] = useState();
     const [error, setError] = useState();
     const [loading, setLoading] = useState(true);
@@ -37,13 +38,7 @@ export const MovieDetails = (props) => {
   }
 
   return (
-    <section>
-      <Link to="/" className="backLink">
-        {/* <BackArrow /> */}
-        Back
-      </Link>
-      <h1>{movie.title}</h1>
-    </section>
+    <Page item = {movie} />
   );
 };
 
