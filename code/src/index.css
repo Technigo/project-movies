@@ -19,8 +19,10 @@ code {
   
 }
 header{
-  background-color: indigo;
-  color: white;
+  background-color: #090c1b;
+  border-bottom: 2px solid #777;
+  /* background: linear-gradient(0deg, 	#333 0%, #090c1b 70%);  */
+  color: #ADEFD1FF;
   display: flex;
   justify-content: space-around;
 }
