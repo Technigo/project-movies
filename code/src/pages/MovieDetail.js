@@ -12,7 +12,6 @@ export const MovieDetail = () => {
 			)
 				.then((res) => res.json())
 				.then((json) => {
-					console.log(json);
 					setMovieInfo(json);
 				});
 		},
@@ -41,9 +40,6 @@ export const MovieDetail = () => {
 					</h1>
 					<p>{movieInfo.overview}</p>
 				</div>
-				{/* <img src={drink.strDrinkThumb} alt={drink.strDrink} />
-					<h3>Instructions</h3>
-					<p>{drink.strInstructions}</p> */}
 			</div>
 		</div>
 	);
