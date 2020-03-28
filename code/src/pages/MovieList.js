@@ -12,17 +12,51 @@ export const MovieList = () => {
         setMovies(json.results)
       })
   }, [])
-
   return (
-    <div>
-      <div className="movieList">
-        {movies.map((movie) => (
-          <div className="movieCard" key={movie.id}>
-            <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="movie poster" />
+    <div className="movie-card">
+      {movies.map(movie => {
+        return (
+          <div className="movie">
+            <div>
+              <div className="movie-image" key={movie.id}>
+                <a href="">
+                  <div className="overlay">
+                    <div className="details">
+                      <h3>{movie.title} </h3>
+                      <h4>Released {movie.release_date} </h4>
+                    </div>
+                  </div>
+                  <img
+                    className="movie-poster"
+                    src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+                    alt="album cover" />
+                </a>
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
+        );
+      })}
     </div>
-  )
-}
+  );
+};
 
+
+
+
+
+// return (
+//   <div>
+//     <div className="movieList">
+//       {movies.map((movie) => (
+//         <div className="movieCard" key={movie.id}>
+//           <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="movie poster" />
+
+//           <div className="listDetails"><h3>{movie.title} </h3>
+
+//           </div>
+
+//         </div>
+//       ))}
+//     </div>
+//   </div>
+// )

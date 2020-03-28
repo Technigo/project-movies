@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
 
   
 }
@@ -19,14 +19,49 @@ code {
 .movieList {
 display: flex;
 flex-wrap: wrap;
+position: relative; 
+overflow-x: hidden;
+
 }
 
-.movieCard {
-  width: 25%;
+.movie-card {
   margin: 0;
-  display: flex; 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+   }
+
+
+.movie {
+  width: 22%;
+  
+} 
+
+.movie-poster {
+  width: 100%;
+ 
 }
 
-img {
-width: 100%;
+.movie-image {
+  position: relative;
+  
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.8);
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-image:hover .overlay {
+  opacity: 1;
 }
