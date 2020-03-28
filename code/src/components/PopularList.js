@@ -56,7 +56,7 @@ export const PopularList = () => {
               <span 
                 
                 class="rating">
-                {movie.vote_average}
+                {movie.vote_average}/10
               </span>
               </h1>
               
