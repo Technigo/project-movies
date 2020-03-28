@@ -4,8 +4,6 @@ import { MovieCard } from 'components/MovieCard'
 import { Nav } from 'components/Nav'
 import { LoadingSpinner } from 'components/LoadingSpinner'
 
-
-
 export const MovieList = () => {
   const [movies, setMovies] = useState([])
   const [movieList, setMovieList] = useState(137418)
@@ -22,7 +20,6 @@ export const MovieList = () => {
       .then((json) => {
         setMovies(json.results)
         setLoading(false)
-        console.log(json)
       })
   }, [movieList])
 
