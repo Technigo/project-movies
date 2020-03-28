@@ -1,0 +1,23 @@
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin-top: -200px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.about-title {
+  font-size: 18px;
+}
+
+.about-text {
+  font-size: 14px;
+}
