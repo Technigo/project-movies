@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import './moviedetail.css'
+import './moviepage.css'
 import { NotFound } from 'components/NotFound'
 import { MovieDetails } from 'components/MovieDetails'
 
 
-export const MovieDetail = () => {
+export const MoviePage = () => {
   const { movieId } = useParams()
   const [movie, setMovie] = useState([])
   const [notFound, setNotFound] = useState('')
