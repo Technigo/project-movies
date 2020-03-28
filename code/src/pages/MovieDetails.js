@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import './moviedetails.css'
 
 export const MovieDetails = () => {
   const { movieId } = useParams()
@@ -22,10 +23,13 @@ export const MovieDetails = () => {
           backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})`
         }}
       >
-        <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.original_title} />
-        <h2>{details.original_title}</h2>
-        <h3>{details.vote_average}/10</h3>
-        <p>{details.overview}</p>
+        <div className='summary'>
+          <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.original_title} />
+          <div className='text'>
+            <h2>{details.original_title} <span>{details.vote_average}/10</span></h2>
+            <p>{details.overview}</p>
+          </div>
+        </div>
       </div>
     </div>
   )
