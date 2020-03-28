@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom'
 import './movielist.css'
 import { MovieCardDetails } from 'components/MovieCardDetails'
 import { Nav } from 'components/Nav'
+import { LoadingSpinner } from 'components/LoadingSpinner'
 
 
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([])
   const [movieList, setMovieList] = useState(137418)
+  const [loading, setLoading] = useState(true)
   const selectMovieList = selectedList => {
     setMovieList(selectedList)
   }
@@ -20,6 +22,7 @@ export const MovieList = () => {
       .then((res) => res.json())
       .then((json) => {
         setMovies(json.results)
+        setLoading(false)
       })
   }, [movieList])
 
@@ -27,6 +30,9 @@ export const MovieList = () => {
     <>
       <Nav
         selectMovieList={selectMovieList} />
+
+      {loading && <LoadingSpinner />}
+
       <div className="movie-container">
         {movies.map((movie) => (
           <Link to={`/movies/${movie.id}`} key={movie.id}>
