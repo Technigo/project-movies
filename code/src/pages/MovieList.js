@@ -21,7 +21,10 @@ export const MovieList = () => {
       .then((json) => {
         setMovies(json.results)
       })
-  })
+    return () => {
+
+    }
+  }, [])
 
   return (
     <>

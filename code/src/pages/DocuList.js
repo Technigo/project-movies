@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './movielist.css'
+import './moviedetail.css'
 import { MovieCardDetails } from 'components/MovieCardDetails'
 import { LeftArrow } from 'components/LeftArrow'
 
@@ -17,7 +18,10 @@ export const DocuList = () => {
       .then((json) => {
         setDocumentaries(json.results)
       })
-  })
+    return () => {
+
+    }
+  }, [])
 
   return (
     <>
