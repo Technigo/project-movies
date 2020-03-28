@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './movielist.css'
-import { MovieCardDetails } from 'components/MovieCardDetails'
+import { MovieCard } from 'components/MovieCard'
 import { Nav } from 'components/Nav'
 import { LoadingSpinner } from 'components/LoadingSpinner'
 
@@ -23,25 +23,23 @@ export const MovieList = () => {
       .then((json) => {
         setMovies(json.results)
         setLoading(false)
+        console.log(json)
       })
   }, [movieList])
 
   return (
     <>
-      <Nav
-        selectMovieList={selectMovieList} />
+      <Nav selectMovieList={selectMovieList} />
 
       {loading && <LoadingSpinner />}
 
       <div className="movie-container">
         {movies.map((movie) => (
           <Link to={`/movies/${movie.id}`} key={movie.id}>
-            <article className="movie-card">
-              <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-              <MovieCardDetails
-                title={movie.title}
-                release_date={movie.release_date} />
-            </article>
+            <MovieCard
+              poster_path={movie.poster_path}
+              title={movie.title}
+              release_date={movie.release_date} />
           </Link>
         ))}
       </div>
