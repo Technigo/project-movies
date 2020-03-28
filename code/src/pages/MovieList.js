@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const API = 'https://api.themoviedb.org/3/movie/popular?api_key=83328e75221cc6b9f332da9a39a408f8&language=en-US&page=1'
 
@@ -19,18 +20,21 @@ export const MovieList = () => {
           <div className="movie">
             <div>
               <div className="movie-image" key={movie.id}>
-                <a href="">
-                  <div className="overlay">
-                    <div className="details">
-                      <h3>{movie.title} </h3>
-                      <h4>Released {movie.release_date} </h4>
+                <Link to={`/details/${movie.id}`}>
+                  <a href="">
+                    <div className="overlay">
+                      <div className="details">
+                        <h3>{movie.id}</h3>
+                        <h3>{movie.title} </h3>
+                        <h4>Released {movie.release_date} </h4>
+                      </div>
                     </div>
-                  </div>
-                  <img
-                    className="movie-poster"
-                    src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-                    alt="album cover" />
-                </a>
+                    <img
+                      className="movie-poster"
+                      src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+                      alt="album cover" />
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
