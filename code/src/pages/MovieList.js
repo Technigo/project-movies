@@ -24,8 +24,7 @@ export const MovieList = () => {
                   <a href="">
                     <div className="overlay">
                       <div className="details">
-                        <h3>{movie.id}</h3>
-                        <h3>{movie.title} </h3>
+                        <h1>{movie.title} </h1>
                         <h4>Released {movie.release_date} </h4>
                       </div>
                     </div>
@@ -44,23 +43,3 @@ export const MovieList = () => {
   );
 };
 
-
-
-
-
-// return (
-//   <div>
-//     <div className="movieList">
-//       {movies.map((movie) => (
-//         <div className="movieCard" key={movie.id}>
-//           <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="movie poster" />
-
-//           <div className="listDetails"><h3>{movie.title} </h3>
-
-//           </div>
-
-//         </div>
-//       ))}
-//     </div>
-//   </div>
-// )

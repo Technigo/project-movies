@@ -15,13 +15,20 @@ export const MovieDetails = () => {
   }, [movieID])
 
   return (
-    <div>
-      <img src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} />
-      <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} />
-      <h2>{details.title}</h2>
-      <h4>{details.vote_average}/10</h4>
-      <h3>{details.overview}</h3>
-    </div>
+    <section className="details">
+      <div >
+
+        <img className="backdrop" src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt="movie backdrop" />
+      </div>
+      <div className="summary">
+        <img className="poster-image" src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt="movie poster" />
+        <div className="summary-text">
+          <h2>{details.title}</h2>
+          <h3>{details.vote_average}/10</h3>
+          <h4>{details.overview}</h4>
+        </div>
+      </div>
+    </section>
 
   )
 }
