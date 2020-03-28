@@ -2,11 +2,12 @@ import React, {useState} from 'react'
 import {BrowserRouter, Route, Switch } from 'react-router-dom'
 import { MovieList } from 'MovieList'
 import { MovieDetails } from 'MovieDetails'
+import { Banner } from 'Banner'
 export const App = () => {
 
   return (
     <BrowserRouter>
-      <header>Hello world</header>
+      <Banner />
         <Switch>
             <Route path="/" exact>
               <MovieList />
