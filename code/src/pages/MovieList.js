@@ -15,11 +15,16 @@ export const MovieList = () => {
 	}, []);
 
 	return (
-		<div>
+		<div className="movies-container">
 			{movies.map((movie) => (
-				<div key={movie.id}>
-					<img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.original_title} />
-					<Link to={`/drinks/${movie.id}`}>
+				<div className="movie-card" key={movie.id}>
+					<Link to={`/movies/${movie.id}`}>
+						<img
+							className="img-poster"
+							src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+							alt={movie.original_title}
+						/>
+
 						<h3>{movie.original_title}</h3>
 					</Link>
 				</div>
