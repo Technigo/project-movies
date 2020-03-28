@@ -13,9 +13,9 @@ code {
 }
 
 .app {
-  width: 95vw;
-  margin: 1em auto;
-  background-color: #803a40;
+  width: 100%;
+  background-color: #111;
+  
 }
 header{
   background-color: #27352a;
@@ -23,3 +23,11 @@ header{
   display: flex;
   justify-content: space-around;
 }
+
+@media screen and (min-width: 576px){
+
+}
+@media screen and (min-width: 992px){
+
+}
+

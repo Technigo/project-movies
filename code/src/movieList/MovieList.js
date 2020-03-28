@@ -23,16 +23,18 @@ export const MovieList = (props) => {
 
   return (
     <div>
-    <select value={category} onChange={e => setCategory(e.target.value)}>
+      <div className="select">
+    <select className="select-css" value={category} onChange={e => setCategory(e.target.value)}>
     <option value="popular">Popular</option>
     <option value="top_rated">Top Rated</option>
     <option value="upcoming">Upcoming</option>
   </select>
+  </div>
     <section className = "movieBox">
    
        {movies.map((movie)=>(
          <Link key={movie.id} to={`/movies/${movie.id}`}>
-          <article>
+          <article className="card">
             <h2>{movie.title}</h2>
             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} />
             </article>
