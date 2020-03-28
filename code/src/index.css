@@ -1,10 +1,130 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap');
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  list-style: none;
+  color: white;
 }
 
+body{
+  background-color: black;
+}
 
+/* NAVBAR */
+
+nav {
+  background-color: #CC0028;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+}
+
+nav h2 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+  width: 40%;
+}
+
+ul{
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+nav a {
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 3px;
+}
+
+#back:hover{
+  text-decoration: underline 3px;
+}
+
+.active{
+  font-weight: 400;
+}
+
+.burger{
+  display: none;
+}
+
+.burger div{
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: white;
+}
+
+/* MOVIEDETAIL */
+
+h1{
+  font-size: 2rem;
+}
+
+h4{
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+h5{
+  text-transform: uppercase;
+}
+
+p:nth-child(4){
+  font-weight: 200;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px){
+  ul {
+    width: 50%;
+  }
+}
+
+@media (max-width: 800px){
+  body{
+    overflow-x: hidden;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  ul {
+    position: absolute;
+    right: 0;
+    height: 90vh;
+    top: 10vh;
+    width: 100%;
+    background-color: #CC0028;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  li{
+    opacity: 0;
+  }
+
+  .burger{
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-active {
+    overflow-x: visible;
+    transform: translateX(0%);
+  }
+
+  
+}

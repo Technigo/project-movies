@@ -4,7 +4,7 @@ import { Error } from '../components/Error'
 import { Detail } from '../components/Detail'
 
 export const MovieDetail = (props) => {
-  const { apiKey } = props
+  const { apiKey, loading, setLoading } = props
   const { movieId } = useParams()
   const [movieDetail, setMovieDetail] = useState()
   const [trailer, setTrailer] = useState([])
@@ -16,8 +16,9 @@ export const MovieDetail = (props) => {
       .then((json) => {
         setMovieDetail(json)
         setRuntime(json.runtime)
+        setLoading(false)
       })
-  }, [movieId, apiKey])
+  }, [movieId, apiKey, setLoading])
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${apiKey}&language=en-US`)
@@ -34,10 +35,14 @@ export const MovieDetail = (props) => {
   }
 
   return (
-    <section>
-      {movieDetail && (
-        <Detail runtime={runtime} trailer={trailer} {...movieDetail} />
-      )}
-    </section>
+    <>
+      {!loading &&
+        <section>
+          {movieDetail && (
+            <Detail runtime={runtime} trailer={trailer} {...movieDetail} />
+          )}
+        </section>
+      }
+    </>
   )
 }

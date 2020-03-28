@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Movies } from '../components/Movies'
 
 export const PopularMovieList = (props) => {
-  const { apiKey, setHeader } = props
+  const { apiKey, setHeader, loading, setLoading } = props
   const [movies, setMovies] = useState([])
   setHeader('Popular movies')
 
@@ -11,16 +11,21 @@ export const PopularMovieList = (props) => {
       .then((res) => res.json())
       .then((json) => {
         setMovies(json.results)
+        setLoading(false)
       })
-  }, [apiKey])
+  }, [apiKey, setLoading])
 
   return (
-    <section>
-      {movies.map((movie, index) => (
-        <article key={index}>
-          <Movies {...movie} />
-        </article>
-      ))}
-    </section>
+    <>
+      {!loading &&
+        <section>
+          {movies.map((movie, index) => (
+            <article key={index}>
+              <Movies {...movie} />
+            </article>
+          ))}
+        </section>
+      }
+    </>
   )
 }
