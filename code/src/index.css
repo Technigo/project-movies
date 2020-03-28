@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #111;
 }
 
 code {
@@ -18,10 +19,21 @@ code {
   
 }
 header{
-  background-color: #27352a;
+  background-color: indigo;
   color: white;
   display: flex;
   justify-content: space-around;
+}
+header a{
+  text-decoration: none;
+  color: white;
+}
+span {
+  font-size: 2.5em;
+}
+header p{
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 @media screen and (min-width: 576px){
