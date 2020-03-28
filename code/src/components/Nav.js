@@ -5,7 +5,7 @@ import './nav.css'
 export const Nav = ({ selectMovieList }) => {
   return (
     <nav>
-      <h1>Binge</h1>
+      <h1 className="site-headline">Binge</h1>
 
       <ul>
         <li>
