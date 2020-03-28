@@ -19,7 +19,7 @@ export const PopularList = () => {
 
   return (
 
-    <section 
+    <article 
       
       className="detailPage">
 
@@ -49,15 +49,27 @@ export const PopularList = () => {
         
             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="movie.original_title" />
 
-          {movie.original_title}
-          {movie.vote_average}
-          {movie.overview}
+            <div 
+              
+              className="details">
+
+              <h1> {movie.original_title} </h1>
+
+              <span 
+                
+                class="rating">
+                {movie.vote_average}
+              </span>
+              
+              <p> {movie.overview} </p>
+
+            </div>
 
           </div>
 
           
 
 
-    </section>
+    </article>
   )
 }
