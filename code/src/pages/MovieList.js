@@ -26,9 +26,7 @@ export const MovieList = () => {
   return (
     <>
       <Nav selectMovieList={selectMovieList} />
-
       {loading && <LoadingSpinner />}
-
       <div className="movie-container">
         {movies.map((movie) => (
           <MovieCard
