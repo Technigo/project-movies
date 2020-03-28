@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-import { LeftArrow } from 'components/LeftArrow'
 import './moviedetail.css'
 import { NotFound } from 'components/NotFound'
+import { MovieDetails } from 'components/MovieDetails'
 
 
 export const MovieDetail = () => {
@@ -33,21 +32,13 @@ export const MovieDetail = () => {
   return (
     <>
       {notFound && <NotFound />}
-      {!notFound && <div className="movie-backdrop" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0) 20%, rgba(0, 0, 0) 100%), url(${backdropUrl})` }}>
-        <div className="movie-detail-wrapper" >
-          <Link to="/" className="back-link">
-            <LeftArrow />
-            <span className="back-link-text">Movies</span>
-          </Link>
-          <div className="movie-detail-container">
-            <img className="movie-detail-poster" src={posterUrl} alt={movie.title} />
-            <div className="movie-summary">
-              <h1 className="movie-title">{movie.title} <span className="movie-rating">{movie.vote_average}/10</span></h1>
-              <p className="movie-overview">{movie.overview}</p>
-            </div>
-          </div>
-        </div >
-      </div >
+      {!notFound &&
+        <MovieDetails
+          backdropUrl={backdropUrl}
+          posterUrl={posterUrl}
+          title={movie.title}
+          vote_average={movie.vote_average}
+          overview={movie.overview} />
       }
     </>
   )
