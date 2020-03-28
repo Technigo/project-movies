@@ -33,12 +33,14 @@ export const MoviePage = () => {
     <>
       {loading && <LoadingSpinner />}
       {notFound && <NotFound />}
-      <MovieDetails
-        backdropUrl={backdropUrl}
-        posterUrl={posterUrl}
-        title={movie.title}
-        vote_average={movie.vote_average}
-        overview={movie.overview} />
+      {!notFound &&
+        <MovieDetails
+          backdropUrl={backdropUrl}
+          posterUrl={posterUrl}
+          title={movie.title}
+          vote_average={movie.vote_average}
+          overview={movie.overview} />
+      }
     </>
   )
 }

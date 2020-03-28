@@ -1,0 +1,15 @@
+.homepage-button {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 50px;
+  background: #2196f3;
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+}
+
+.homepage-button-text {
+  margin-left: 5px;
+}
