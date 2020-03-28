@@ -21,6 +21,10 @@ export const App = () => {
           <MovieList category="upcoming" />
         </Route>
 
+        <Route path="/now_playing">
+          <MovieList category="now_playing" />
+        </Route>
+
         <Route path="/movies/:movieId">
           <DetailedInfo />
         </Route>

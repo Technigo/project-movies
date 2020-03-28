@@ -11,12 +11,12 @@ export const MovieList = () => {
   const [chosenCategory, setChosenCategory] = useState('popular')
   const [loading, setLoading] = useState(true)
 
-  const moviesURL =
-    `https://api.themoviedb.org/3/movie/${chosenCategory}?api_key=57134eb2a62754e27d3ec2d3fe453512&language=en-US&page=1`
+  // const moviesURL =
+    // `https://api.themoviedb.org/3/movie/${chosenCategory}?api_key=57134eb2a62754e27d3ec2d3fe453512&language=en-US&page=1`
 
   useEffect(() => {
     setLoading(true)
-    fetch(moviesURL)
+    fetch(`https://api.themoviedb.org/3/movie/${chosenCategory}?api_key=57134eb2a62754e27d3ec2d3fe453512&language=en-US&page=1`)
       .then(res => res.json())
       .then(json => {
         setMovies(json.results);
@@ -42,6 +42,7 @@ export const MovieList = () => {
             <option value="popular">Popular</option>
             <option value="top_rated">Top Rated</option>
             <option value="upcoming">Upcoming</option>
+            <option value="now_playing">Now Playing</option>
           </select>
         </div>
       </nav>
