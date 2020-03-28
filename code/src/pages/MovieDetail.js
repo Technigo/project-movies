@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import { BackLink } from 'components/BackLink'
+import { LeftArrow } from 'components/LeftArrow'
 import './moviedetail.css'
 
 
@@ -27,7 +27,7 @@ export const MovieDetail = () => {
     <div className="movie-backdrop" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0) 20%, rgba(0, 0, 0) 100%), url(${backdropUrl})` }}>
       <div className="movie-detail-wrapper" >
         <Link to="/" className="back-link">
-          <BackLink />
+          <LeftArrow />
           <span className="back-link-text">Movies</span>
         </Link>
         <div className="movie-detail-container">
