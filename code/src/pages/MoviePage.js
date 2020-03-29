@@ -25,22 +25,26 @@ export const MoviePage = () => {
           setMovie(json)
         }
         setLoading(false)
-        console.log(json)
       })
-  }, [movieId])
+  }, [url, movieId])
 
+
+  console.log(movie.production_companies)
   return (
     <>
       {loading && <LoadingSpinner />}
       {notFound && <NotFound />}
-      {!notFound &&
+      {!notFound && !loading &&
         <MovieDetails
           backdropUrl={backdropUrl}
           posterUrl={posterUrl}
           title={movie.title}
           vote_average={movie.vote_average}
-          overview={movie.overview} />
+          overview={movie.overview}
+          production_companies={movie.production_companies} />
       }
     </>
   )
+
+
 }
