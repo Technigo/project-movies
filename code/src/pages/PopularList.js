@@ -21,7 +21,7 @@ export const PopularList = () => {
               <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.original_title} />
               <div className='text'>
                 <h2>{movie.original_title}</h2>
-                <h3>{movie.release_date}</h3>
+                <h3>Released {movie.release_date}</h3>
               </div>
             </div>
           </Link>

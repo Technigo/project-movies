@@ -23,8 +23,8 @@ margin: 0;
   width: 100%;
 }
 
-.popular-card:hover {
-filter: grayscale(70%)
+.popular-card img:hover {
+filter: brightness(30%);
 }
 
 .movie-box {

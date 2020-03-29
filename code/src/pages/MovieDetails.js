@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
+import { BackIcon } from './BackIcon'
 import './moviedetails.css'
 
 export const MovieDetails = () => {
@@ -16,7 +17,10 @@ export const MovieDetails = () => {
   }, [movieId])
 
   return (
-    <div>
+    <div className='detail-page'>
+      <Link to="/" className="back-link">
+        <BackIcon /> Movies
+      </Link>
       <div
         className="background"
         style={{
