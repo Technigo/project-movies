@@ -18,3 +18,10 @@
 .back-link:hover svg {
   margin-right: 5px;
 }
+
+@media (max-width:700px) {
+
+  .back-link {
+    position: relative;
+}
+}
