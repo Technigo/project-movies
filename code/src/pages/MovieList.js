@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import '../components/movielist.css'
+
 
 export const MovieList = () => {
   const apiKey = '0d6aca16f35de68455e54acc43915021'
@@ -14,13 +17,17 @@ export const MovieList = () => {
   }, [])
 
   return (
-    <div>
+    <div className='movies-container'>
       {movies.map(movie =>
-        <div key={movie.id}>
-          <img src={`${movie.poster_path}`} alt={movie.title} />
-          <h1>{movie.title}</h1>
-          <h2>{movie.release_date}</h2>
-        </div >
+        <Link to={`/movies/${movie.id}`}>
+          <div className='movie-card' key={movie.id}>
+            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+            <div className='movie-title'>
+              <h1>{movie.title}</h1>
+              <p>Released {movie.release_date}</p>
+            </div>
+          </div>
+        </Link>
       )
       }
     </div >
