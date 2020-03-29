@@ -34,11 +34,12 @@ export const MovieDetails = () => {
   }
 
   if (error) {
-    return <h1>{error}</h1>;
+    return <h1 style = {{"color": "white"}}>{error}, please go back to home page</h1>;
   }
 
   return (
     <Page item = {movie} />
+    
   );
 };
 
