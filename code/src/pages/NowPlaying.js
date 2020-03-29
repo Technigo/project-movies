@@ -13,7 +13,7 @@ export const NowPlaying = (props) => {
         setMovies(json.results)
         setLoading(false)
       })
-  }, [apiKey])
+  }, [apiKey, setLoading])
 
   return (
     <>

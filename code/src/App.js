@@ -23,6 +23,9 @@ export const App = () => {
       <main>
         <Loading loading={loading} />
         <Switch>
+          <Route path="/" exact>
+            <PopularMovieList apiKey={apiKey} setHeader={setHeader} setLoading={setLoading} loading={loading} />
+          </Route>
           <Route path="/popular" exact>
             <PopularMovieList apiKey={apiKey} setHeader={setHeader} setLoading={setLoading} loading={loading} />
           </Route>

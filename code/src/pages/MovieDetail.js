@@ -9,6 +9,11 @@ export const MovieDetail = (props) => {
   const [movieDetail, setMovieDetail] = useState()
   const [trailer, setTrailer] = useState([])
   const [runtime, setRuntime] = useState()
+  const [imgUrl, setImgUrl] = useState()
+
+  const background = {
+    backgroundImage: `url(https://image.tmdb.org/t/p/w1280${imgUrl})`
+  }
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`)
@@ -16,9 +21,10 @@ export const MovieDetail = (props) => {
       .then((json) => {
         setMovieDetail(json)
         setRuntime(json.runtime)
+        setImgUrl(json.backdrop_path)
         setLoading(false)
       })
-  }, [movieId, apiKey, setLoading])
+  }, [movieId, apiKey, setLoading, setImgUrl])
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${apiKey}&language=en-US`)
@@ -37,9 +43,12 @@ export const MovieDetail = (props) => {
   return (
     <>
       {!loading &&
-        <section>
+        <section style={background}>
           {movieDetail && (
-            <Detail runtime={runtime} trailer={trailer} {...movieDetail} />
+            <>
+              <img src="" alt="" />
+              <Detail runtime={runtime} trailer={trailer} {...movieDetail} />
+            </>
           )}
         </section>
       }

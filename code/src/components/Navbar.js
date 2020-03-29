@@ -5,7 +5,7 @@ export const Navbar = ({ header }) => {
   return (
     <nav className="nav-container">
       <Switch>
-        <Route path="/(popular|upcoming|nowplaying)" exact><h2>{header}</h2></Route>
+        <Route path="/(|popular|upcoming|nowplaying)" exact><h2>{header}</h2></Route>
         <Route path="/movies"><NavLink to="/popular" id="back"><h2>Back</h2></NavLink></Route>
       </Switch>
       <ul className="nav-links">
