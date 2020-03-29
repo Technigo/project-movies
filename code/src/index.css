@@ -21,6 +21,52 @@ code {
   width: 500px;
 }
 
-.backdrop-holder img {
+.backdrop-holder, img {
   width: 100%;
+  
+  
+}
+
+.backdrop-holder {
+  position: relative;
+  
+}
+
+
+.movie-cover-detail {
+ 
+  width: 90%;
+  border: white solid 7px;
+  
+}
+
+.album-cover {
+  width: 350px;
+}
+
+.movie-card {
+
+display: flex;
+align-items: flex-end;
+position: absolute;
+left: 50px;
+top: 200px;
+}
+
+.movie-info {
+  width: 30%;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  
+}
+
+.rating {
+  color: red;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+.title-detail {
+  font-size: 28px;;
 }

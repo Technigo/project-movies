@@ -10,13 +10,6 @@ export const Movie = () => {
   
   let match 
 
-
-  
-  
-  
-
-  
-
   useEffect(() => {
     //same movie id as the param we used to destructure
     fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=ba52b3b5b6905f01165c6cc35c2a979c&language=en-US`)
@@ -33,14 +26,20 @@ export const Movie = () => {
   }, [movieId])
 
   return (
-     <div className="backdrop-holder">
+     <section className="backdrop-holder">
        <img src={` https://image.tmdb.org/t/p/w1280${movies.backdrop_path} `}></img>
 
-        <div className="movie-details">
-          <h1>{movies.title}</h1>
-          <h3>{movies.overview} </h3>
-          <h2>{movies.release_date}</h2>
-        </div>
-      </div>
+        <article className="movie-card">
+          <div className="album-cover">
+          <img className="movie-cover-detail" src={` https://image.tmdb.org/t/p/w500${movies.poster_path} `}  alt={`${movies.title} cover image`} ></img>
+       </div> 
+        <div className="movie-info">
+  <h1 className="title-detail">{movies.title} <span className="rating"> {movies.vote_average}</span></h1>
+          <p className="info-detail">{movies.overview} </p>
+          
+          </div> 
+
+        </article>
+      </section>
   )
 }

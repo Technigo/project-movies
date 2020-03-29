@@ -11,6 +11,7 @@ export const App = () => {
        <MovieList />
     </Route>
     <Route path='/movies/:movieId'>
+      
      <Movie />
     </Route>
     </Switch>
