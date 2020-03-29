@@ -43,10 +43,9 @@ export const MovieDetail = (props) => {
   return (
     <>
       {!loading &&
-        <section style={background}>
+        <section style={background} className="movie-detail-container">
           {movieDetail && (
             <>
-              <img src="" alt="" />
               <Detail runtime={runtime} trailer={trailer} {...movieDetail} />
             </>
           )}

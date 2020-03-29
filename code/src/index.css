@@ -28,16 +28,16 @@ main{
   width: 100vw;
 }
 
-section {
+.movies-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(342px, 1fr));
 }
 
-article {
+.movies-container article {
   position: relative;
 }
 
-article img{
+.movies-container img{
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -61,7 +61,7 @@ article img{
   font-weight: 100;
 }
 
-article:hover::before{
+.movies-container article:hover::before{
   content: '';
   top: 0;
   left: 0;
@@ -72,7 +72,7 @@ article:hover::before{
   height: 100%;
 }
 
-article:hover h2, article:hover h3{
+.movies-container article:hover h2, article:hover h3{
   display: block;
 }
 
@@ -144,6 +144,45 @@ nav a {
 }
 
 /* MOVIEDETAIL */
+
+.movie-detail-container::after{
+  content: '';
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100vw;
+  height: 90vh;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.movie-detail-container {
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+}
+
+.movie-detail-container article{
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  width: 60vw;
+  height: 60vh;
+  display: flex;
+}
+
+.movie-detail-container img{
+  margin-right: 1rem;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
 h1{
   font-size: 2rem;

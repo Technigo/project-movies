@@ -18,7 +18,7 @@ export const Upcoming = (props) => {
   return (
     <>
       {!loading &&
-        <section>
+        <section className="movies-container">
           {movies.map((movie, index) => (
             <>
               <Movies {...movie} key={index} />
