@@ -35,6 +35,12 @@ article {
   position: relative;
 }
 
+article img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .movie-title-container{
   position: absolute;
   bottom: 15px;
@@ -43,6 +49,10 @@ article {
 
 .movie-title-container h2, .movie-title-container h3{
   display: none;
+}
+
+.movie-title-container h2{
+  font-size: 1.75rem;
 }
 
 .movie-title-container h3{
