@@ -27,9 +27,6 @@ export const DetailedInfo = () => {
       <div className="darkenBackground">
         <div className="goBack">
           <Link to="/">
-            {/* <span role="img" aria-label="Back">
-            {" ⬅️ "}
-            </span> */}
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#fff"><path d="M12 24c6.627 0 12-5.373 12-12s-5.373-12-12-12-12 5.373-12 12 5.373 12 12 12zm-1-17v4h8v2h-8v4l-6-5 6-5z"/></svg>
             <span>Back</span>
         </Link>

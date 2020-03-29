@@ -99,6 +99,32 @@ a {
   text-decoration: none;
 }
 
+.errorSite {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.gifError {
+  width: 300px;
+}
+
+.errorMsg {
+  color: white;
+}
+
+.svgError {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 1024px) {
   .listContent a {
     width: 33%;

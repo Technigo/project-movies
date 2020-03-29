@@ -3,7 +3,6 @@ import { BounceLoader } from 'react-spinners'
 import { Link } from "react-router-dom";
 // import RRS from 'react-responsive-select';
 // import { Navigate } from './Nav'
-// import { Link } from 'react-router-dom'
 import './liststyle.css'
 
 export const MovieList = () => {
@@ -11,8 +10,7 @@ export const MovieList = () => {
   const [chosenCategory, setChosenCategory] = useState('popular')
   const [loading, setLoading] = useState(true)
 
-  // const moviesURL =
-    // `https://api.themoviedb.org/3/movie/${chosenCategory}?api_key=57134eb2a62754e27d3ec2d3fe453512&language=en-US&page=1`
+
 
   useEffect(() => {
     setLoading(true)
@@ -22,9 +20,6 @@ export const MovieList = () => {
         setMovies(json.results);
         setLoading(false)
       });
-    // .catch(() => {
-    //   window.location.assign("'/404")
-    // })
   }, [chosenCategory]);
 
   if (loading) {
@@ -33,7 +28,6 @@ export const MovieList = () => {
 
   return (
     <main>
-      {/* <Navigate /> */}
       <nav className="navigateCategory">
         {/* <h1 className="headerTitle">Movies to watch</h1> */}
         <div className="menuDropdown">
@@ -49,10 +43,11 @@ export const MovieList = () => {
       <div className='listContent'>
         {movies.map(movie => (
           <Link className="movies" key={movie.id} to={`/movies/${movie.id}`}>
+            
             <img
               src={`http://image.tmdb.org/t/p/w342${movie.poster_path}`}
-              alt={movie.original_title}
-            />
+              alt={movie.original_title}/>
+
             <div className="infoAbout">
               <h1 className="movieTitle">{movie.title}</h1>
               <p>Premiered: {movie.release_date}</p>

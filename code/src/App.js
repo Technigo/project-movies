@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { MovieList } from "./components/List";
 import { DetailedInfo } from "./components/Info";
-import { ErrorMessage } from './components/ErrorMessage'
 import "./index.css";
+import { FailedTo } from "components/Failed";
 
 export const App = () => {
   return (
@@ -30,7 +30,7 @@ export const App = () => {
         </Route>
 
         <Route path="/404">
-          <ErrorMessage />
+          <FailedTo />
         </Route>
       </Switch>
     </BrowserRouter>
