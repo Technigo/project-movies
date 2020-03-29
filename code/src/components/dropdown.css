@@ -1,0 +1,15 @@
+.category-dropdown label {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+  align-items: center;
+}
+
+.category-dropdown h3 {
+  margin: 10px;
+  color: white;
+}
+
+.select {
+  font-size: 20px;
+}

@@ -7,23 +7,23 @@ body{
   background-color: black;
 }
 
-.popular-movies {
+.movies-list {
 display: flex;
 flex-wrap: wrap;
 margin: 0;
 } 
 
-.popular-card {
+.movie-card {
   width: 25%;
   position: relative;
   margin-bottom: 0;
 }
 
-.popular-card img {
+.movie-card img {
   width: 100%;
 }
 
-.popular-card img:hover {
+.movie-card img:hover {
 filter: brightness(30%);
 }
 
@@ -59,7 +59,7 @@ h3 {
   display: block;
 }
 
-.popular-card:hover .text {
+.movie-card:hover .text {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;

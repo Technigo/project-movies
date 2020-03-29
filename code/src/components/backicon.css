@@ -1,0 +1,20 @@
+.back-link {
+  position: absolute;
+  display: inline-flex;
+  color: #fff;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
+  left: 50px;
+  top: 50px;
+}
+
+.back-link svg {
+  width: 30px;
+  transition: margin-right 1s;
+  transition-timing-function: cubic-bezier(0.13, 1.9, 0, 1);
+}
+
+.back-link:hover svg {
+  margin-right: 5px;
+}
