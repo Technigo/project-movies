@@ -15,6 +15,7 @@ export const App = () => {
     .then(movies => setAllMovies(movies.results))
   }, [])
 
+
   return (
 
     <Router>
