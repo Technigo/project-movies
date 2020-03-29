@@ -20,9 +20,9 @@ export const PopularMovieList = (props) => {
       {!loading &&
         <section>
           {movies.map((movie, index) => (
-            <article key={index}>
-              <Movies {...movie} />
-            </article>
+            <>
+              <Movies {...movie} key={index} />
+            </>
           ))}
         </section>
       }
