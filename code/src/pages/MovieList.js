@@ -23,7 +23,7 @@ export const MovieList = () => {
                 <Link to={`/details/${movie.id}`}>
                   <a href="">
                     <div className="overlay">
-                      <div className="details">
+                      <div className="movie-details">
                         <h1>{movie.title} </h1>
                         <h4>Released {movie.release_date} </h4>
                       </div>
