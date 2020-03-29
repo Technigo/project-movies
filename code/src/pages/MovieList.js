@@ -24,22 +24,18 @@ export const MovieList = () => {
       <header>
         <DropDown chosenMovieList={chosenMovieList} />
       </header>
-      <div className='movies-list'>
+      <section className='movie-list'>
         {movies.map((movie) => (
-          <div key={movie.id} className='movie-card'>
-            <Link to={`/movies/${movie.id}`}>
-              <div className='movie-box'>
-                <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.original_title} />
-                <div className='text'>
-                  <h2>{movie.original_title}</h2>
-                  <h3>Released {movie.release_date}</h3>
-                </div>
-              </div>
-            </Link>
-          </div>
+          <Link key={movie.id} to={`/movies/${movie.id}`}>
+            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.original_title} />
+            <div className='text'>
+              <h2>{movie.original_title}</h2>
+              <h3>Released {movie.release_date}</h3>
+            </div>
+          </Link>
         ))
         }
-      </div>
+      </section>
     </div>
   )
 }

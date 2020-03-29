@@ -7,63 +7,54 @@ body{
   background-color: black;
 }
 
-.movies-list {
+.movie-list {
 display: flex;
 flex-wrap: wrap;
 margin: 0;
 } 
 
-.movie-card {
+.movie-list a {
   width: 25%;
   position: relative;
   margin-bottom: 0;
+  text-decoration: none;
+  color: #fff;
 }
 
-.movie-card img {
+.movie-list a img {
   width: 100%;
 }
 
-.movie-card img:hover {
-filter: brightness(30%);
-}
-
-.movie-box {
-  position: relative;
-  display: inline-block;
-}
-
-.movie-box .text {
+.movie-list .text {
   position: absolute;
-  z-index: 999;
-  margin-left: 20px;
-  left: 0;
+  top: 0;
   right: 0;
-  text-align: left;
-  width: 60%;
-  bottom: 2%;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.75);
   display: none;
+  padding: 20px;
 }
 
-h2 {
-  font-size: 32px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  display: block;
-}
-
-h3 {
-  text-decoration: none;
-  color: white;
-  font-weight: 400;
-  display: block;
-}
-
-.movie-card:hover .text {
+.movie-list a:hover .text {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-end;
+  transition: 0.2s ease-in-out 0s;  
+}
+
+.movie-list:hover .text a{
+  display:block;
+}
+
+.movie-list .text h1 {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-weight: 50;
 }
 
 @media (max-width:700px) {
