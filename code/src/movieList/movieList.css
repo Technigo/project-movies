@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo+Thambi+2|Playfair+Display&display=swap"); 
 .movieBox {
     width: 95vw;
     margin: 1em auto;
@@ -6,17 +7,21 @@
     grid-template-rows: repeat(auto-fill, auto);
     grid-gap: 1em;
     justify-items: center;
+    font-family: 'Baloo Thambi 2', cursive;
   }
 
   .movieBox a {
     width: 100%;
     height: 400px;
     text-decoration: none;
-    color: black;
+    color: white;
     
   }
+  .movieBox a:focus {
+    border: 2px solid white;
+  }
   .movieBox a:hover{
-    border: 2px solid red;
+    border: 2px solid white;
   }
 
   .card {
@@ -45,18 +50,21 @@
     height: 250px;
     margin-bottom: 1em;
     object-fit: cover;
+    border: 1px solid darkgrey;
+    border-radius: 10px;
   }
 .select {
   width: 95%;
   margin: 1em auto;
   display: flex;
   justify-content: center;
+  font-family: 'Baloo Thambi 2', cursive;
 }
 
 .select-css {
 	display: block;
 	font-size: 16px;
-	font-family: sans-serif;
+	/* font-family: sans-serif; */
 	font-weight: 700;
 	color: #fff;
 	line-height: 1.3;

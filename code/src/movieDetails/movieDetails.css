@@ -1,13 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo+Thambi+2|Playfair+Display&display=swap"); 
 main {
     padding: 1em;
     color: white;
+}
+main p{
+  font-family: 'Playfair Display', serif; 
 }
 main div {
     display: flex;
     justify-content: space-between;
 }
 ul {
-    font-size: 1.5em;
+    font-size: 1.3em;
+    font-family: 'Playfair Display', serif; 
+    color: darkgrey;
 }
 li {
     margin-left: 1.5em;
