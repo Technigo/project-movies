@@ -23,6 +23,7 @@ export const PopularList = () => {
         <div className="middle">
         <div className="text"><h1>{movie.original_title}</h1>
         <h2>{movie.release_date}</h2></div> 
+        
         </div>
         </div>
         </div>

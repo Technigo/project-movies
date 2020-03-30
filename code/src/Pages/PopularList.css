@@ -3,8 +3,8 @@
   flex-wrap: wrap;
 }
 .box>* {
-  flex: 1 1 300px;
-}
+        flex: 1 1 300px;
+    }
 
 .container {
   position: relative;
@@ -42,5 +42,5 @@
 .text {
   color: black;
   font-size: 16px;
-  padding: 16px 32px;
+  font-size: 1vw;
 }
