@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from 'react'
-import { Movie } from '../components/Movie'
+import { Link } from 'react-router-dom'
 
 export const MoviesList = () => {
-  const moviesUrl = 'https://api.themoviedb.org/3/movie/popular?api_key=00a26f8911994a10cd0aea2660d5417f&language=en-US&page=1'
+  const apiUrl = 'https://api.themoviedb.org/3/movie/popular?api_key=00a26f8911994a10cd0aea2660d5417f&language=en-US&page=1'
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
-    fetch(moviesUrl)
+    fetch(apiUrl)
       .then(res => res.json())
       .then(json => setMovies(json.results))
   }, [])
-
-
-  console.log(movies)
 
   return (
     <div>
 
 
       {movies.map(movie => (
-        <h2>{movie.original_title}</h2>
+        <section key={movie.id} className="movie-card">
+          <h2>{movie.title}</h2>
+          <p>{movie.release_date}</p>
+          <Link to={`/movies/${movie.id}`}>Link</Link>
+        </section>
       ))}
 
     </div>
