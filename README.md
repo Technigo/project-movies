@@ -1,13 +1,16 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+- The project was about to build a movie site with react, react-router-dom and use params.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+- I made a plan before I started this work, which I usually do not do. 
+  It made it easier to understand what I needed to do.
+
+- If I had more time I would add one more side, and change the design. I followed the design example.
 
 ## View it live
 
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://kajsa-projectmovies.netlify.com/
