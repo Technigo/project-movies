@@ -1,12 +1,12 @@
 .movie-backdrop {
-  min-height: 100vh;
+  min-height: 91vh;
   background-size: cover;
 }
 
 .movie-detail-wrapper {
   display: grid;
   grid-template-rows: 1fr 3fr;
-  height: 100vh;
+  height: 91vh;
   padding: 0 20px;
   background: rgba(0, 0, 0, 0.7);
   background: linear-gradient(rgba(0,0,0,0) 1%, rgba(0, 0, 0) 100%);
@@ -71,7 +71,7 @@
   }
 
   .movie-detail-poster {
-    height: 500px;
+    height: 400px;
     margin-bottom: 50px;
   }
 
