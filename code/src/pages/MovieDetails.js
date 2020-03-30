@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
+import { BackButton } from '../BackButton'
 
 import 'pages/movieDetails.css'
 
@@ -28,6 +29,14 @@ export const MovieDetails = () => {
           </div>
         </div>
       </div>
+      <Link to='/'>
+        <div>
+          <BackButton />
+          <h4 className='back-button-text'>Back</h4>
+        </div>
+      </Link>
+      
+      
 
     </div>
   )

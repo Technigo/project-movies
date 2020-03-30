@@ -24,8 +24,7 @@ export const MovieList = () => {
               <img className='poster' src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
                 <section className='info'>
                   <h2>{movie.title}</h2>
-                  <h3>Released:</h3>
-                  <h3>{movie.release_date}</h3>
+                  <h3>Released: {movie.release_date}</h3>
                 </section>
             </Link>
           </div>

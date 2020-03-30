@@ -2,6 +2,19 @@ h1 {
   color: #fff;
 }
 
+h4 {
+  color: #fff;
+  top: 1.85em;
+  left: 4em;
+  align-self: center;
+  position: absolute;
+}
+
+h4:hover {
+  cursor: pointer;
+  translate: 5px;
+}
+
 .backdrop {
   height: 100vh;
   background-size: cover;
@@ -19,6 +32,16 @@ h1 {
   display: flex;
   align-items: flex-end;
 
+}
+
+.back-button {
+  color: #fff;
+  height: 25px;
+  width: auto;
+  top: 3em;
+  left: 2em;
+  align-self: center;
+  position: absolute;
 }
 
 .details-poster {
