@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 import "./PopularList.css"
 
 export const PopularList = () => {
@@ -36,8 +36,8 @@ export const PopularList = () => {
 
         <section 
           
-          className="background"style={{ backgroundImage: 
-          `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }} alt="movie.original_title" >
+          className="background"style ={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), 
+          url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }} alt="movie.original_title" >
 
             <div 
           

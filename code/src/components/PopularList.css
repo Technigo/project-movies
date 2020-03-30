@@ -52,6 +52,8 @@ a {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  /*text-shadow: 4px 5px 3px rgba(0,0,0, 0.4);*/
+  text-shadow: 4px 5px 3px rgba(0,0,0, 0.5);
 }
 
 .detailPage svg {
@@ -60,7 +62,7 @@ a {
 
 .detailPage img {
   border: 5px solid #fff;
-  width: 30%;
+  width: 25%;
 }
 
 .detailPage .details {
