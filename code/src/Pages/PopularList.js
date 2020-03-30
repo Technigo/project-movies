@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
+
 export const PopularList = () => {
   const [movies, setMovies] =useState([])
 
@@ -11,18 +12,15 @@ export const PopularList = () => {
     })
   }, [])
   return (
-    <div>
-      {movies.map((movie) =>(
+    <div>{movies.map((movie)=> (
       <div key={movie.id}>
-        <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt= {movie.original_title} />
-        <Link to={`/films/${movie.id}`}>
         <h2>{movie.original_title}</h2>
-        </Link>
+        <img src={`http://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.original_title} />
+        <Link to ={`/films/${movie.id}`}>{movie.original_title}</Link>
         <h3>{movie.release_date}</h3>
-      </div>
-        
 
-      ))}
+        </div>
+    ))}
      
     </div>
   )
