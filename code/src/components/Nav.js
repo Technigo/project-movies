@@ -6,7 +6,6 @@ export const Nav = ({ selectMovieList }) => {
   return (
     <nav>
       <h1 className="site-headline">Binge</h1>
-
       <Route path="/" exact>
         <ul>
           <li>
@@ -20,11 +19,9 @@ export const Nav = ({ selectMovieList }) => {
               </li>
             </ul>
           </li>
-
           <li>
             <Link to="/about">About</Link>
           </li>
-
         </ul>
       </Route>
     </nav>
