@@ -5,7 +5,7 @@
 .Movie-Title h1 {
   color: #ffffff;
   display: block;
-  font-size: 2em;
+  font-size: 13px;
   margin-block-start: 0.67em;
   margin-block-end: 0.67em;
   margin-inline-start: 0px;
@@ -21,6 +21,7 @@
   margin-inline-end: 0px;
   color: #ffffff;
   font-weight: bolder;
+  font-size: 10px;
 }
 
 .movieContainer {
@@ -63,3 +64,15 @@
   display: block;
   opacity: 1; 
 } 
+
+@media (min-width: 1025px) {
+
+  .Movie-Title h1 {
+    font-size: 2em;
+  }
+
+  .Movie-Title p {
+    font-size: 16px;
+  }
+
+}
