@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { MovieCard } from '../components/MovieCard'
 
 export const MoviesList = () => {
-  const apiUrl = 'https://api.themoviedb.org/3/movie/popular?api_key=00a26f8911994a10cd0aea2660d5417f&language=en-US&page=1'
+  const apiUrl = 'https://api.themoviedb.org/3/movie/upcoming?api_key=00a26f8911994a10cd0aea2660d5417f&language=en-US&page=1'
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
