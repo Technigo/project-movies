@@ -21,13 +21,14 @@ export const Movie = () => {
 }
 
   return (
-    <article className="movieDetail" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}}>
+    <article className="movieDetail" style={{backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0, 0, 0, 1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}}>
       <img className="movieImage" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title} />
 
       <div className="movieDescription">
-        <h1>{movie.original_title}</h1>
+        <h1>{movie.original_title} 
+          <span className="movieVote">{movie.vote_average} / 10</span>
+        </h1>
         <p>{movie.overview}</p>
-        <p>Movie budget: {movie.budget}</p>
       </div>
     </article>
   )
