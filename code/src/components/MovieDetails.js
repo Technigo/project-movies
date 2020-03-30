@@ -20,7 +20,9 @@ export const MovieDetails = ({ backdropUrl, posterUrl, title, vote_average, over
             <h3 className="production-companies-title">Production companies</h3>
             <ul className="production-companies">
               {production_companies.map((company) => (
-                <li className="company" key={company.name}>{company.name}</li>
+                <Link key={company.id} to={`/companies/${company.id}`}>
+                  <li className="company" key={company.name}>{company.name}</li>
+                </Link>
               )
               )}
             </ul>
