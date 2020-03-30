@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 
 export const MovieDetails = () => {
   const { movieId } = useParams()
@@ -17,6 +17,7 @@ export const MovieDetails = () => {
       <h1>{movieDetails.title}</h1>
       <span>{movieDetails.vote_average}</span>
       <p>{movieDetails.overview}</p>
+      <Link to={'/'} className="back-btn">Back</Link>
     </section >
   )
 }
