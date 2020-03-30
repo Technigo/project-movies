@@ -17,31 +17,17 @@ export const MovieList = () => {
 
   return (
     <section className="movieMenu">
-      {/* {
-        // Add a link
-        data.map((item) => <Movie {...item} />)
-      } */}
-
       {
         data.map((item) => (
-          <Link to={`/movie/${item.id}`}>
+          <Link key={item.id} to={`/movie/${item.id}`}>
             <img className="movieImageSize" src={`https://image.tmdb.org/t/p/w342${item.poster_path}`} alt={item.original_title} />
+            <div className="movieOverview">
+              <h1>{item.title}</h1>
+              <p>Released {item.release_date}</p>
+            </div>
           </Link>
         ))
       }
-
-      {/* {
-        data.map((item) => {
-          return (
-            <div>
-              <p>{item.id}</p>
-              <p>{item.original_title}</p>
-              <p>{item.poster_path}</p>
-              <img src={`https://image.tmdb.org/t/p/w342${item.poster_path}`} alt={item.original_title} />
-            </div>
-          )
-        })
-      } */}
 
     </section>
   )
