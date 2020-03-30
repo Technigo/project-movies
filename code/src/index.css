@@ -52,11 +52,14 @@ a {
 	font-weight: 400;
 	color: red;
 	margin-left: 10px;
+	font-weight: 700;
 }
 
 .movie-detail-container {
 	display: flex;
+	flex-direction: column;
 	height: 100vh;
+	justify-content: space-between;
 }
 
 .img-poster-detail {
@@ -67,6 +70,7 @@ a {
 	display: flex;
 	align-items: flex-end;
 	padding: 50px;
+	width: 100%;
 }
 
 .movie-detail-text {
@@ -77,6 +81,26 @@ a {
 .movie-detail-score-con {
 	display: flex;
 	flex-direction: row;
+}
+
+.home-button {
+	border: none;
+	background: none;
+	display: flex;
+	align-items: center;
+	padding: 50px 0 0 50px;
+}
+
+.home-button-text {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+	margin: 0 0 0 5px;
+	transition: all 0.5s ease-in-out;
+}
+
+.home-button:hover .home-button-text {
+	margin-left: 15px;
 }
 
 a:hover .text-container {

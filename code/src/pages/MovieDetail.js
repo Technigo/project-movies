@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { HomeButton } from 'components/HomeButton';
 
 export const MovieDetail = () => {
 	const { movieId } = useParams();
@@ -28,6 +29,7 @@ export const MovieDetail = () => {
 			}}
 			key={movieInfo.id}
 		>
+			<HomeButton />
 			<div className="movie-detail-all-info">
 				<img
 					className="img-poster-detail"
