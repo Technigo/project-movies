@@ -1,13 +1,19 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A multi-page React application based on the Movie Database API and primarily two lists made by me for this project.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The app is split up into four main pages using React Router. Each page consists of different components that are rendered conditionally. The overall design is based on an example from the project brief with some minor changes. If I had more time I would like to add some actors and the director to the individual movie pages.
+
+## Tech
+
+* HTML5
+* CSS3
+* JSX
+* React
+* React Router
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://fridamaria-movies.netlify.com/
