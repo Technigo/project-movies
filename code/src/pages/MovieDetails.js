@@ -12,6 +12,7 @@ export const MovieDetails = () => {
   }, [movieId])
 
   return (
+
     <section className="movie" style={{ background: `url(https://image.tmdb.org/t/p/w1280/${movieDetails.backdrop_path})` }}>
       <img src={`https://image.tmdb.org/t/p/w342/${movieDetails.poster_path}`} alt={`${movieDetails.title} Poster`} ></img>
       <h1>{movieDetails.title}</h1>
@@ -19,5 +20,6 @@ export const MovieDetails = () => {
       <p>{movieDetails.overview}</p>
       <Link to={'/'} className="back-btn">Back</Link>
     </section >
+
   )
 }

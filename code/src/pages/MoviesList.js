@@ -15,7 +15,12 @@ export const MoviesList = () => {
     <div className="movies-container">
 
       {movies.map(movie => (
-        <MovieCard id={movie.id} title={movie.title} releaseDate={movie.release_date} />
+        <MovieCard
+          id={movie.id}
+          title={movie.title}
+          img={movie.poster_path}
+          releaseDate={movie.release_date}
+        />
       ))}
 
     </div>
