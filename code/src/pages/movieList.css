@@ -1,3 +1,7 @@
+body {
+  background-color: #020204;
+}
+
 .movie-list {
   display: flex;
   flex-direction: row;
@@ -5,10 +9,14 @@
   margin: 0;
 }
 
-.poster {
-  margin: 0;
+.image-card {
   width: 25%;
   height: auto;
-  object-fit: contain;
-  position: relative;
+  object-fit: cover;
+  margin: 0;
+}
+
+.poster {
+  margin: 0;
+  width: 100%;
 }

@@ -1,0 +1,47 @@
+h1 {
+  color: #fff;
+}
+
+.backdrop {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.backdrop-gradient {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: linear-gradient(to top, #1a1a1a, transparent);
+}
+
+.content-container {
+  display: flex;
+  align-items: flex-end;
+
+}
+
+.details-poster {
+  border: 5px solid #fff;
+  width: 30%;
+  height: auto;
+  position: relative;
+  top: 9em;
+  left: 2em;
+}
+
+.title-and-rating {
+  position: relative;
+  top: 10em;
+  left: 5em;
+}
+
+.rating {
+  color: #ff6257;
+}
+
+.overview {
+  color: #fff;
+  text-shadow: 1px 1px 10px #2e2e2e;
+  width: 300px;
+}
