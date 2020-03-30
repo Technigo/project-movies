@@ -1,0 +1,46 @@
+.movie-list-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+}
+
+.movie-list-movie {
+  position: relative;
+  width: 25%;
+}
+
+
+.movie-list-movie img {
+  width: 100%;
+}
+
+.hover-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+
+.hover-container:hover {
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+}
+
+.hover-container h1 {
+  margin: 0;
+}
+
+.hover-container p {
+  
+}
