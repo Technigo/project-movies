@@ -27,7 +27,7 @@ export const MovieList = () => {
 
           <Link to={`/movies/${movie.id}`}>
 
-          <img src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`} /*alt={movie.original_title}*/ />
+          <img src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`} alt={movie.original_title} />
           <div 
             
             className="Movie-Title">

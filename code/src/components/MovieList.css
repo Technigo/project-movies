@@ -20,6 +20,7 @@
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   color: #ffffff;
+  font-weight: bolder;
 }
 
 .movieContainer {
@@ -35,10 +36,15 @@
 
 .movieImg {
   /*background-color: black;*/
-  position: relative;
-  width: 25%;
+  /*position: relative;*/
+  /*width: 25%;*/
   /*flex-direction: row;
   flex-wrap: wrap; */
+  background-color: black;
+  position: relative;
+  width: 25%;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .movieImg a img {
@@ -52,18 +58,13 @@
   right: 0;
   bottom: 0;
   left: 0;
-  /*background: rgba(0,0,0,.75);*/
   display: none;
   padding: 20px;
 }
 
-.movieContainer .Movie-Title h1 {
-  margin-top: auto;
-  margin-bottom: 0;
-}
-
-.movieImg:hover {
-  filter: brightness(30%);
+.movieImg:hover img {
+  filter: brightness(35%);
+  background: rgba(0,0,0,0.5); 
 }
 
 .movieImg:hover .Movie-Title {
