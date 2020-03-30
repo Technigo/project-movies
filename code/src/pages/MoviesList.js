@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { MovieCard } from '../components/MovieCard'
 
 export const MoviesList = () => {
   const apiUrl = 'https://api.themoviedb.org/3/movie/popular?api_key=00a26f8911994a10cd0aea2660d5417f&language=en-US&page=1'
@@ -12,15 +12,10 @@ export const MoviesList = () => {
   }, [])
 
   return (
-    <div>
-
+    <div className="movies-container">
 
       {movies.map(movie => (
-        <section key={movie.id} className="movie-card">
-          <h2>{movie.title}</h2>
-          <p>{movie.release_date}</p>
-          <Link to={`/movies/${movie.id}`}>Link</Link>
-        </section>
+        <MovieCard id={movie.id} title={movie.title} releaseDate={movie.release_date} />
       ))}
 
     </div>
