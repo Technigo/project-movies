@@ -29,17 +29,9 @@
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
-  /*background-color: black;*/
-  /*margin: 0px;*/
-  /*padding: 0px; */ 
 }
 
 .movieImg {
-  /*background-color: black;*/
-  /*position: relative;*/
-  /*width: 25%;*/
-  /*flex-direction: row;
-  flex-wrap: wrap; */
   background-color: black;
   position: relative;
   width: 25%;

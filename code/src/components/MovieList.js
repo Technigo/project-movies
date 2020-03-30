@@ -9,7 +9,7 @@ export const MovieList = () => {
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=55cd0e0e418083e581aec6766c6a1677&language=en-US&page=1')
         .then((res) => res.json())
         .then((json) => {
-          console.log(json.results)
+          //console.log(json.results)
             setMovies(json.results)
         })
 }, [])
@@ -23,23 +23,23 @@ export const MovieList = () => {
 
           <div 
             
-          className="movieImg" key={movie.id}>
+            className="movieImg" key={movie.id}>
 
-          <Link to={`/movies/${movie.id}`}>
+            <Link to={`/movies/${movie.id}`}>
 
-          <img src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`} alt={movie.original_title} />
-          <div 
+              <img src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`} alt={movie.original_title} />
+              <div 
             
-            className="Movie-Title">
-            <h1>{movie.original_title}</h1>
-            <p>Released {movie.release_date}</p>
-          </div>
+                className="Movie-Title">
+                <h1>{movie.original_title}</h1>
+                <p>Released {movie.release_date}</p>
+              </div>
           </Link>
 
 
           </div>
                 
             ))}
-        </section>
+    </section>
   )
 }
