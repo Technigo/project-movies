@@ -8,9 +8,9 @@ import { Navbar } from './components/Navbar'
 import { Loading } from './components/Loading'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faSpinner, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faSpinner, faStar, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { faClock as farClock, faStar as farStar } from '@fortawesome/free-regular-svg-icons'
-library.add(fab, faSpinner, faStar, farClock, farStar)
+library.add(fab, faSpinner, faStar, farClock, farStar, faTimes)
 
 export const App = () => {
   const apiKey = 'd6e700026d82752be03ea2fec6531439'
