@@ -1,4 +1,4 @@
-import React, { useState } from 'react' // Going to use useState to toggle dropdown
+import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import './nav.css'
 

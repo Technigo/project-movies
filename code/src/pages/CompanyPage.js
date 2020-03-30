@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { NotFound } from 'components/NotFound'
 import { LoadingSpinner } from 'components/LoadingSpinner'
 import './companypage.css'
+import { CompanyMovies } from 'components/CompanyMovies'
 
 export const CompanyPage = () => {
   const { companyId } = useParams()
@@ -11,6 +12,7 @@ export const CompanyPage = () => {
   const [loading, setLoading] = useState(true)
   const apiKey = '85c8192ada23df0631c9cf9ca0b5729d'
   const url = `https://api.themoviedb.org/3/company/${companyId}?api_key=${apiKey}`
+  const imgSrc = `https://image.tmdb.org/t/p/w500${company.logo_path}`
 
   useEffect(() => {
     fetch(url)
@@ -20,24 +22,33 @@ export const CompanyPage = () => {
           setNotFound(true)
         } else {
           setCompany(json)
+          console.log(json)
         }
         setLoading(false)
       })
   }, [url, companyId])
 
-  console.log(company)
+
+
   return (
     <>
       {loading && <LoadingSpinner />}
       {notFound && <NotFound />}
       {!loading && !notFound &&
-        <div className="company-wrapper">
-          <img className="company-image" src={`https://image.tmdb.org/t/p/w500${company.logo_path}`} alt={company.name} />
-          <h2>{company.name}</h2>
-          <h3>{company.headquarters}</h3>
-          <a href={company.homepage}>Visit company website</a>
-        </div>
-
+        <>
+          <div className="company-wrapper">
+            {company.homepage !== '' ?
+              <a href={company.homepage}>
+                {company.logo_path !== null ? <img className="company-image" src={imgSrc} alt={company.name} /> : <h2>{company.name}</h2>}
+              </a>
+              :
+              <>
+                {company.logo_path !== null ? <img className="company-image" src={imgSrc} alt={company.name} /> : <h2>{company.name}</h2>}
+              </>
+            }
+          </div>
+          <CompanyMovies />
+        </>
       }
     </>
   )
