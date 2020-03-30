@@ -1,0 +1,37 @@
+.moviepage {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+}
+
+.movie-card {
+  position: relative;
+}
+
+.moviepage a {
+  width: 25%;
+  color: #fff;
+  text-decoration: none;
+}
+.movie-details {
+    position: absolute;
+    color: #fff;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    padding: 20px;
+  }
+
+  .movie-details h1 {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
+  .movie-card:hover .movie-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.75);
+  }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import './movies.css'
 
 export const Movies = () => {
   const [movies, setMovies] = useState([])
@@ -14,11 +14,16 @@ export const Movies = () => {
   }, [])
 
   return (
-    <div>
+    <div className="moviepage">
       {movies.map((results) => (
-        <div key={results.id}>
-          <h2>{results.original_title}</h2>
-          <img src={`https://image.tmdb.org/t/p/w185${results.poster_path}`} alt={results.original_title} />
+        <div className="movie-card" key={results.id}>
+          <Link to={`movies/${results.id}`}>
+            <img src={`https://image.tmdb.org/t/p/w185${results.poster_path}`} alt={results.original_title} />
+            <div className="movie-details">
+              <h2>{results.original_title}</h2>
+              <h4> {results.release_date}</h4>
+            </div>
+          </Link>
         </div>
       ))}
     </div>

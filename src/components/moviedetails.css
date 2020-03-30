@@ -1,0 +1,41 @@
+.movie-details-page{
+  position: relative;
+}
+
+.background {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+.movie-info {
+  color: #ffffff;
+  padding: 50px;
+  margin-left: 20px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.movie-info p {
+  max-width: 400px;
+  margin-left: 20px;
+}
+
+.movie-info h1 {
+ margin-left: 20px;
+}
+
+.movie-poster {
+  border: 5px solid #fff;
+  width: 100%;
+  max-width: 450px;
+}
+
+.back-link  {
+ color: #ffffff;
+ font-weight: 700;
+ align-self: flex-start;
+}
