@@ -1,0 +1,19 @@
+.company-link {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+
+.company-image {
+  max-height: 50px;
+  filter: brightness(0) invert(1);
+}
+
+.company-name-nav {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
+  margin: 0;
+}

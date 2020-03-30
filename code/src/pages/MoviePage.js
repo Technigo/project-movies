@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import './moviepage.css'
 import { NotFound } from 'components/NotFound'
 import { MovieDetails } from 'components/MovieDetails'
 import { LoadingSpinner } from 'components/LoadingSpinner'

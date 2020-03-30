@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 9vh;
+  height: 70px;
   margin: 0;
   padding: 0 0 0 20px;
   color: #fff;
@@ -29,7 +29,7 @@ li {
   background: #000;
   display: block;
   float: left;
-  padding: 1rem;
+  padding: 1.6rem 2rem;
   position: relative;
   text-decoration: none;
   transition-duration: 0.5s;
@@ -57,10 +57,10 @@ ul li ul {
   background: #000;
   visibility: hidden;
   opacity: 0;
-  min-width: 5rem;
+  min-width: 2rem;
   position: absolute;
   transition: all 0.5s ease;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   left: 0;
   display: none;
 }

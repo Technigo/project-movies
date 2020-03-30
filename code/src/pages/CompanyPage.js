@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { NotFound } from 'components/NotFound'
 import { LoadingSpinner } from 'components/LoadingSpinner'
-import './companypage.css'
 import { CompanyMovies } from 'components/CompanyMovies'
+import { CompanyLink } from 'components/CompanyLink'
 
 export const CompanyPage = () => {
   const { companyId } = useParams()
@@ -22,7 +22,6 @@ export const CompanyPage = () => {
           setNotFound(true)
         } else {
           setCompany(json)
-          console.log(json)
         }
         setLoading(false)
       })
@@ -36,17 +35,11 @@ export const CompanyPage = () => {
       {notFound && <NotFound />}
       {!loading && !notFound &&
         <>
-          <div className="company-wrapper">
-            {company.homepage !== '' ?
-              <a href={company.homepage}>
-                {company.logo_path !== null ? <img className="company-image" src={imgSrc} alt={company.name} /> : <h2>{company.name}</h2>}
-              </a>
-              :
-              <>
-                {company.logo_path !== null ? <img className="company-image" src={imgSrc} alt={company.name} /> : <h2>{company.name}</h2>}
-              </>
-            }
-          </div>
+          <CompanyLink
+            homepage={company.homepage}
+            logo_path={company.logo_path}
+            imgSrc={imgSrc}
+            name={company.name} />
           <CompanyMovies />
         </>
       }
