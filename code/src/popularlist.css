@@ -9,7 +9,7 @@ overflow: hidden;
 }
 
 .film-card:hover .film-poster {
-    opacity: .2;
+    opacity: .2 !important;
 }
 
 .film-card:hover .poster-text {
