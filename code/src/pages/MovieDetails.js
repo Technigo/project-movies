@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { BackButton } from '../BackButton'
 
 import 'pages/movieDetails.css'
+import '../backButton.css'
 
 export const MovieDetails = () => {
   const { movieId } = useParams()
@@ -30,9 +31,9 @@ export const MovieDetails = () => {
         </div>
       </div>
       <Link to='/'>
-        <div>
+        <div className='back-section'>
           <BackButton />
-          <h4 className='back-button-text'>Back</h4>
+          <h4 className='hvr-forward'>Back</h4>
         </div>
       </Link>
       

@@ -1,0 +1,9 @@
+.back-button {
+  color: #fff;
+  height: 25px;
+  width: auto;
+  top: 3em;
+  left: 2em;
+  align-self: center;
+  position: absolute;
+}
