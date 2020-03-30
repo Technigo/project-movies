@@ -9,14 +9,39 @@ body {
   margin: 0;
 }
 
-.image-card {
+.image-card-container {
   width: 25%;
   height: auto;
-  object-fit: cover;
-  margin: 0;
+  position: relative;
 }
 
 .poster {
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
   margin: 0;
   width: 100%;
+  -webkit-backface-visibility: hidden;
+}
+
+.info {
+  transition: .5s ease;
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -ms-transition: .5s ease;
+  -o-transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  bottom: 2em;
+  left: 1em;
+  color: #fff;
+}
+
+.image-card-container:hover .poster {
+  opacity: 0.3;
+}
+
+.image-card-container:hover .info {
+  opacity: 1;
 }
