@@ -18,7 +18,7 @@ export const MovieDetails = ({ backdropUrl, posterUrl, title, vote_average, over
           <div className="movie-summary">
             <h2 className="movie-title">{title} <span className="movie-rating">{vote_average}/10</span></h2>
             <p className="movie-overview">{overview}</p>
-            <h3 className="production-companies-title">Production companies</h3>
+            <h3 className="production-companies-title">Production companies:</h3>
             <ul className="production-companies">
               {production_companies.map((company) => (
                 <Link key={company.id} to={`/companies/${company.id}`}>
