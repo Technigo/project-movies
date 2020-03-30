@@ -3,11 +3,12 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { MovieList } from './MovieList'
+import {Link, NavLink } from 'react-router-dom'
 
 export const Movie = () => {
   const { movieId } = useParams()
   const [movies, setMovies ] = useState([])
-  
+  // const backdropImage = ` https://image.tmdb.org/t/p/w500${movies.poster_path} `
   let match 
 
   useEffect(() => {
@@ -26,15 +27,14 @@ export const Movie = () => {
   }, [movieId])
 
   return (
-     <section className="backdrop-holder">
-       <img src={` https://image.tmdb.org/t/p/w1280${movies.backdrop_path} `}></img>
-
+     <section className="backdrop-holder" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})`}}>
+       <NavLink to="/" exact className="navButton"> <span role="img" className="bild">◀︎</span>Movies</NavLink>
         <article className="movie-card">
           <div className="album-cover">
           <img className="movie-cover-detail" src={` https://image.tmdb.org/t/p/w500${movies.poster_path} `}  alt={`${movies.title} cover image`} ></img>
        </div> 
         <div className="movie-info">
-  <h1 className="title-detail">{movies.title} <span className="rating"> {movies.vote_average}</span></h1>
+          <h1 className="title-detail">{movies.title} <span className="rating"> {movies.vote_average}</span></h1>
           <p className="info-detail">{movies.overview} </p>
           
           </div> 

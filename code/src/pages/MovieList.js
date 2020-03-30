@@ -19,11 +19,15 @@ export const MovieList = () => {
   return (
    <div className="flex">
      {movies.map((movie) => (
-       <div key={movie.id} className="width"> 
+       <div key={movie.id} className="movieListCard"> 
        <Link to={`/movies/${movie.id}`}>
-         <img src={` https://image.tmdb.org/t/p/w500${movie.poster_path} `} alt={movie.title}></img>
-        <h2>{movie.title}</h2>
-        <h3> {movie.release_date}</h3>
+        <article className="linkis">
+          <img src={` https://image.tmdb.org/t/p/w500${movie.poster_path} `} alt={movie.title} className="imgList"></img>
+          <div className="titleList">
+          <h2 className="margin">{movie.title}</h2>
+          <h3 className="margin">Released {movie.release_date}</h3>
+          </div>
+        </article>
         </Link>
        </div>
      ))}
