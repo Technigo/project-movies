@@ -10,7 +10,7 @@ export const MovieDetails = () => {
     const [loading, setLoading] = useState(true);
     const { id } = useParams();
     
-
+// fetching data
   useEffect(() => {
     setLoading(true);
     fetch(
@@ -28,7 +28,7 @@ export const MovieDetails = () => {
         setLoading(false);
       });
   }, [id]); // We need to pass id as a dependecy here so everytime the id changes, we do a new fetch.
-
+// loading, error, and if it passes show Page component.   
   if (loading) {
     return <h1>LOADING</h1>;
   }

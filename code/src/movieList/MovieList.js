@@ -7,7 +7,7 @@ export const MovieList = (props) => {
   const [movies, setMovies] = useState([])
   const [category, setCategory] = useState("popular");
 
-
+// Fetching data
   useEffect(()=>{
     fetch(`https://api.themoviedb.org/3/movie/${category}?api_key=${id}&language=en-US&page=1`)
     .then(res => res.json())
@@ -18,10 +18,9 @@ export const MovieList = (props) => {
 
   }, [category])
 
-
-  
-
   return (
+    // A dropdown to select different categories
+    // displaying movies in the grid
     <div>
       <div className="select">
     <select className="select-css" value={category} onChange={e => setCategory(e.target.value)}>
@@ -30,6 +29,7 @@ export const MovieList = (props) => {
     <option value="upcoming">Upcoming</option>
   </select>
   </div>
+
     <section className = "movieBox">
    
        {movies.map((movie)=>(
