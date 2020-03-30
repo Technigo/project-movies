@@ -13,12 +13,17 @@ export const MovieDetails = () => {
 
   return (
 
-    <section className="movie" style={{ background: `url(https://image.tmdb.org/t/p/w1280/${movieDetails.backdrop_path})` }}>
-      <img src={`https://image.tmdb.org/t/p/w342/${movieDetails.poster_path}`} alt={`${movieDetails.title} Poster`} ></img>
-      <h1>{movieDetails.title}</h1>
-      <span>{movieDetails.vote_average}</span>
-      <p>{movieDetails.overview}</p>
+    <section className="movie-details" style={{
+      backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${movieDetails.backdrop_path})`
+    }}>
       <Link to={'/'} className="back-btn">Back</Link>
+
+      <div className="container">
+        <img src={`https://image.tmdb.org/t/p/w342/${movieDetails.poster_path}`} alt={`${movieDetails.title} Poster`} ></img>
+        <h1>{movieDetails.title}</h1>
+        <span>{movieDetails.vote_average}</span>
+        <p>{movieDetails.overview}</p>
+      </div>
     </section >
 
   )

@@ -1,8 +1,17 @@
 @import-normalize;
 
+/* ––– General styles ––– */
+
+html, body, div#root {
+  height: 100%;
+}
+
 img {
   width: 100%;
 }
+
+
+/* ––– Movies Grid ––– */
 
 .movies-container {
   display: flex;
@@ -32,4 +41,29 @@ img {
     flex-direction: column;
     justify-content: flex-end;
   }
+}
+
+
+/* ––– Movie Details Page ––– */
+
+.movie-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  background-size: cover;
+
+  .container {
+    flex: 0 1 80%;
+  }
+
+  img {
+    width: 280px;
+  }
+}
+
+.back-btn {
+  align-self: flex-start;
+  margin-top: 2rem;
 }
