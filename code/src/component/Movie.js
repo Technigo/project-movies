@@ -21,11 +21,14 @@ export const Movie = () => {
 }
 
   return (
-    <article>
-      <h1>{movie.original_title}</h1>
-      <p>{movie.overview}</p>
-      <p>Movie budget: {movie.budget}</p>
-      {/* <img className="movieImageSize" src={`https://image.tmdb.org/t/p/w342${poster_path}`} alt={original_title} /> */}
+    <article className="movieDetail" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}}>
+      <img className="movieImage" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title} />
+
+      <div className="movieDescription">
+        <h1>{movie.original_title}</h1>
+        <p>{movie.overview}</p>
+        <p>Movie budget: {movie.budget}</p>
+      </div>
     </article>
   )
 }

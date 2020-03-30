@@ -1,3 +1,22 @@
-.movieImageSize {
-  width: 25vw;
+.movieDetail {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  padding: 50px;;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movieImage {
+  margin-right: 20px;
+  border: 3px solid white;
+}
+
+p, h1 { 
+  color: white;
+}
+
+.movieDescription {
+  max-width: 400px;
 }
