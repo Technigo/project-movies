@@ -1,0 +1,32 @@
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movies-list a:link {
+  width: 25%;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+
+.movies-list a:visited {
+  color: #fff;
+}
+
+.movies-list img {
+  width: 100%;
+}
+
+.movies-list-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,.75);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
