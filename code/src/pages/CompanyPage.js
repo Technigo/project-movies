@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { NotFound } from 'components/NotFound'
 import { LoadingSpinner } from 'components/LoadingSpinner'
 import { CompanyMovies } from 'components/CompanyMovies'
 import { CompanyLink } from 'components/CompanyLink'
@@ -32,8 +31,7 @@ export const CompanyPage = () => {
   return (
     <>
       {loading && <LoadingSpinner />}
-      {notFound && <NotFound />}
-      {!loading && !notFound &&
+      {!loading &&
         <>
           <CompanyLink
             homepage={company.homepage}

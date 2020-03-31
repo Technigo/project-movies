@@ -1,5 +1,5 @@
 import React from 'react'
-import { HomepageButton } from './HomepageButton'
+import { HomepageButton } from '../components/HomepageButton'
 import './error.css'
 
 export const Error = () => {
