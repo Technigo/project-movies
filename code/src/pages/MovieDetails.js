@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Movie } from '../components/Movie.js'
 
+import '../moviedetails.scss'
+
 export const MovieDetails = () => {
 
   const { movieId } = useParams()

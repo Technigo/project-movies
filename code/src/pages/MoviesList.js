@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { MovieCard } from '../components/MovieCard'
 import { InputRadio } from '../components/InputRadio'
 
+import '../movieslist.scss'
+
 export const MoviesList = () => {
 
   const [movies, setMovies] = useState([])

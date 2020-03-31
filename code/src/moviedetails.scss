@@ -1,0 +1,59 @@
+@import 'app.scss';
+
+/* ––– Movie Details Page ––– */
+
+.movie-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+
+  .container {
+    flex: 0 1 80%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .movie-details-info {
+    flex: 0 1 600px;
+    padding: 2rem;
+    margin-bottom: -3rem;
+    margin-left: -3rem;
+    background-color: rgba($primaryColor, .85);
+
+    .rating {
+      display: block;
+      margin-top: 1rem;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+  }
+
+  img {
+    width: 280px;
+  }
+}
+
+.back-btn {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  padding: .8rem 1rem .8rem .8rem;
+  background-color: $primaryColor;
+  font-weight: 700;
+  transition: all .2s ease-in-out;
+
+  &::before {
+    content: '← ';
+    position: relative;
+    top: 1px;
+  }
+
+  &:hover {
+    transform: translateX(-3px);
+    background-color: darken($primaryColor, 10%);
+  }
+}
