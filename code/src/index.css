@@ -29,7 +29,7 @@ code {
   position: relative;
 }
 
-.linkis {
+.info-holder {
   position: relative;
 }
 
@@ -140,7 +140,14 @@ margin: 70px;
   
 }
 
-.navButton:hover .bild {
+.navButton:hover .icon {
   transition: 0.2s ease-in-out;
   margin-right: 7px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }

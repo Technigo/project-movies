@@ -4,12 +4,14 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { MovieList } from './MovieList'
 import {Link, NavLink } from 'react-router-dom'
+import Loader from 'react-loader-spinner'
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 export const Movie = () => {
   const { movieId } = useParams()
   const [movies, setMovies ] = useState([])
-  // const backdropImage = ` https://image.tmdb.org/t/p/w500${movies.poster_path} `
-  let match 
+  const [ loading, setLoading ] =useState(true)
+ 
 
   useEffect(() => {
     //same movie id as the param we used to destructure
@@ -17,18 +19,18 @@ export const Movie = () => {
     .then((res) => res.json())
     .then((json) => { 
       setMovies(json)
-      
-      console.log('json', json)
-      
-      console.log(json.title)
-     
+      setLoading(false)
     })
     //we need to place this inside of the array so we can mount the site again if the id will change.
   }, [movieId])
 
+  if (loading) {
+    return <main className="loading"> <Loader type="TailSpin" color="gray"/></main>
+  }
+
   return (
      <section className="backdrop-holder" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})`}}>
-       <NavLink to="/" exact className="navButton"> <span role="img" className="bild">◀︎</span>Movies</NavLink>
+       <NavLink to="/" exact className="navButton"> <span role="img" className="icon">◀︎</span>Movies</NavLink>
         <article className="movie-card">
           <div className="album-cover">
           <img className="movie-cover-detail" src={` https://image.tmdb.org/t/p/w500${movies.poster_path} `}  alt={`${movies.title} cover image`} ></img>
