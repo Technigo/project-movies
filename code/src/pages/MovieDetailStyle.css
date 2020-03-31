@@ -1,0 +1,23 @@
+.big-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie-card {
+height: 400px;
+width: 300px;
+background-color: aqua;
+border: black solid 2px;
+display: flex;
+flex-direction: column;
+align-content: flex-start;
+padding: 50px;
+}
+
+.text-card {
+    color: white;
+}
+
+.go-back-btn {
+    color:white;
+}

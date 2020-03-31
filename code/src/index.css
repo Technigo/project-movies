@@ -5,9 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* https://api.themoviedb.org/3/movie/popular?api_key=9eb10b1ac1ea6b4cccef611cbd68f8fc&language=en-US&page=1 */
+/* 9eb10b1ac1ea6b4cccef611cbd68f8fc */
