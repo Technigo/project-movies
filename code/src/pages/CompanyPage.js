@@ -3,11 +3,12 @@ import { useParams } from 'react-router-dom'
 import { LoadingSpinner } from 'components/LoadingSpinner'
 import { CompanyMovies } from 'components/CompanyMovies'
 import { CompanyLink } from 'components/CompanyLink'
+import { Error } from 'components/Error'
 
 export const CompanyPage = () => {
   const { companyId } = useParams()
   const [company, setCompany] = useState([])
-  const [notFound, setNotFound] = useState(false)
+  const [error, setError] = useState(false)
   const [loading, setLoading] = useState(true)
   const apiKey = '85c8192ada23df0631c9cf9ca0b5729d'
   const url = `https://api.themoviedb.org/3/company/${companyId}?api_key=${apiKey}`
@@ -18,7 +19,7 @@ export const CompanyPage = () => {
       .then((res) => res.json())
       .then((json) => {
         if (json.status_code === 34 || json.status_code === 404) {
-          setNotFound(true)
+          setError(true)
         } else {
           setCompany(json)
         }
@@ -31,7 +32,8 @@ export const CompanyPage = () => {
   return (
     <>
       {loading && <LoadingSpinner />}
-      {!loading &&
+      {error && <Error />}
+      {!loading && !error &&
         <>
           <CompanyLink
             homepage={company.homepage}

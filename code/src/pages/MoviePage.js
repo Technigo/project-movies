@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { MovieDetails } from 'components/MovieDetails'
 import { LoadingSpinner } from 'components/LoadingSpinner'
+import { Error } from 'components/Error'
 
 export const MoviePage = () => {
   const { movieId } = useParams()
   const [movie, setMovie] = useState([])
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
   const apiKey = '85c8192ada23df0631c9cf9ca0b5729d'
   const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`
   const posterUrl = `https://image.tmdb.org/t/p/w342${movie.poster_path}`
@@ -16,7 +18,11 @@ export const MoviePage = () => {
     fetch(url)
       .then((res) => res.json())
       .then((json) => {
-        setMovie(json)
+        if (json.status_code === 34 || json.status_code === 404) {
+          setError(true)
+        } else {
+          setMovie(json)
+        }
         setLoading(false)
       })
   }, [url, movieId])
@@ -26,7 +32,8 @@ export const MoviePage = () => {
   return (
     <>
       {loading && <LoadingSpinner />}
-      {!loading &&
+      {error && <Error />}
+      {!loading && !error &&
         <MovieDetails
           backdropUrl={backdropUrl}
           posterUrl={posterUrl}

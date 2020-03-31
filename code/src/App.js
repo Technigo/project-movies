@@ -5,7 +5,6 @@ import { MovieList } from 'pages/MovieList'
 import { MoviePage } from 'pages/MoviePage'
 import { CompanyPage } from 'pages/CompanyPage'
 import { About } from 'pages/About'
-import { Error } from 'pages/Error'
 
 export const App = () => {
   const [movieList, setMovieList] = useState(137418)
@@ -16,6 +15,7 @@ export const App = () => {
   return (
     <BrowserRouter>
       <Nav selectMovieList={selectMovieList} />
+
       <Switch>
         <Route path="/" exact>
           <MovieList movieList={movieList} />
@@ -28,9 +28,6 @@ export const App = () => {
         </Route>
         <Route path="/about" exact>
           <About />
-        </Route>
-        <Route>
-          <Error path="/error" exact />
         </Route>
       </Switch>
     </BrowserRouter>
