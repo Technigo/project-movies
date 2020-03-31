@@ -45,6 +45,32 @@ img {
   margin: auto;
 }
 
+.filter {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 1rem 2rem;
+
+  >* {
+    flex: 0 1 auto;
+  }
+
+  p {
+    font-weight: 700;
+    margin-right: .5rem;
+  }
+
+  .radio-btn {
+    margin-left: 1.5rem;
+
+    label {
+      margin-left: .5rem;
+    }
+  }
+}
+
 .movie-card {
   position: relative;
   flex: 0 1 50%;

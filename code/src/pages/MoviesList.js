@@ -1,42 +1,53 @@
 import React, { useState, useEffect } from 'react'
 import { MovieCard } from '../components/MovieCard'
+import { InputRadio } from '../components/InputRadio'
 
 export const MoviesList = () => {
-  // const apiUrl = 'https://api.themoviedb.org/3/movie/upcoming?api_key=00a26f8911994a10cd0aea2660d5417f&language=en-US&page=1'
   const [movies, setMovies] = useState([])
-  const [selection, setSelection] = useState('upcoming')
+  const [endpoint, setEndpoint] = useState('popular')
 
-  const submitHandler = (event) => {
-    event.preventDefault()
-    setSelection(event.target.value)
-    console.log(selection)
+  const oldArray = ['upcoming', 'popular', 'top_rated']
+
+  const selections = {
+    popular: 'Popular',
+    upcoming: 'Upcoming',
+    top_rated: 'Top rated'
   }
 
+
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${selection}?api_key=00a26f8911994a10cd0aea2660d5417f&language=en-US&page=1`)
+    fetch(`https://api.themoviedb.org/3/movie/${endpoint}?api_key=00a26f8911994a10cd0aea2660d5417f&language=en-US&page=1`)
       .then(res => res.json())
       .then(json => setMovies(json.results))
-  }, [selection])
-
+  }, [endpoint])
 
 
   return (
     <div className="movies-container">
 
-      <button onClick={submitHandler} value={"upcoming"}>upcoming</button>
-      <button onClick={submitHandler} value={"popular"}>popular</button>
-      <button onClick={submitHandler} value={"top_rated"}>top_rated</button>
-
-      {movies.map(movie => (
-        <MovieCard
-          key={movie.id}
-          id={movie.id}
-          title={movie.title}
-          img={movie.poster_path}
-          releaseDate={movie.release_date}
+      <div className="filter">
+        <InputRadio
+          label="Filter:"
+          id="chooseSelection"
+          array={oldArray}
+          object={selections}
+          state={endpoint}
+          setState={setEndpoint}
         />
-      ))}
+      </div>
 
-    </div>
+      {
+        movies.map(movie => (
+          <MovieCard
+            key={movie.id}
+            id={movie.id}
+            title={movie.title}
+            img={movie.poster_path}
+            releaseDate={movie.release_date}
+          />
+        ))
+      }
+
+    </div >
   )
 }
