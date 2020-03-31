@@ -10,6 +10,9 @@ export const MovieDetails = () => {
     fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=00a26f8911994a10cd0aea2660d5417f&language=en-US&page=1`)
       .then(res => res.json())
       .then(json => setMovieDetails(json))
+      .catch((err) => {
+        console.log('oops error', err)
+      })
   }, [movieId])
 
   return (
@@ -17,7 +20,7 @@ export const MovieDetails = () => {
     <section className="movie-details" style={{
       backgroundImage: `url(${imgBaseUrl}/w1280/${movieDetails.backdrop_path})`
     }}>
-      <Link to={'/'} className="back-btn">Back</Link>
+      <Link to={'/'} className="back-btn">Movies</Link>
 
       <div className="container">
         <div className="movie-details-img">
@@ -25,7 +28,7 @@ export const MovieDetails = () => {
         </div>
         <article className="movie-details-info">
           <h1>{movieDetails.title}</h1>
-          <span>{movieDetails.vote_average}</span>
+          <span className="rating">–– {movieDetails.vote_average}</span>
           <p>{movieDetails.overview}</p>
         </article>
       </div>
