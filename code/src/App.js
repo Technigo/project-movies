@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavBar } from './Header/NavBar'
 import { MoviesList } from './Pages/MoviesList'
 import { DetailsMovies  } from './Pages/DetailsMovies'
 import { BrowserRouter, Route, Switch} from 'react-router-dom'
@@ -9,6 +10,8 @@ export const App = () => {
     
     <BrowserRouter>
 
+    <NavBar />
+    
     <main>
 
       <Switch>

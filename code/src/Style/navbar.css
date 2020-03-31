@@ -1,0 +1,14 @@
+
+
+body {
+    margin: 0;
+  }
+  
+  header {
+    height: auto;
+    padding: 20px;
+    background-color: rgb(178, 189, 189);
+    text-align: center;
+    border-bottom: 1px solid;
+  }
+  
