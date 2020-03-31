@@ -9,12 +9,13 @@
 
 .company-image {
   max-height: 50px;
-  filter: brightness(0) invert(1);
+  max-width: 150px;
+  filter: invert(1);
 }
 
 .company-name-nav {
   font-family: 'Quicksand', sans-serif;
-  font-size: 1em;
+  font-size: 0.8em;
   margin: 0;
   margin-top: 0.5em;
 }
