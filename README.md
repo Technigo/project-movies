@@ -1,13 +1,11 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This application is about rendering a list of the most popular movies right now and some details about them. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I used React Hooks useState and useEffect to build the application and params to render a more detailed page with the selected movie. It would be nice to connect the page to sites where you can stream the selected movies. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://objective-poitras-a7eb67.netlify.com/

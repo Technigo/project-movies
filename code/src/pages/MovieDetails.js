@@ -15,12 +15,10 @@ export const MovieDetails = () => {
       })
   }, [movieID])
 
-
   // "linearGradient(rgba(0, 0, 0, 0) 70 %, rgb(0, 0, 0) 100 %)
   return (
-    <section style={{
-      backgroundImage: `url(https://image.tmdb.org/t/p/original${details.backdrop_path})`
-    }} className="details" >
+    <section style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original${details.backdrop_path})` }}
+      className="details">
       <div>
         <Link to={`/`}>
           <div className="icon-container">
@@ -31,7 +29,6 @@ export const MovieDetails = () => {
           </div>
         </Link>
       </div>
-
       <div className="summary">
         <img className="poster-image" src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt="movie poster" />
         <div className="summary-text">
@@ -40,7 +37,6 @@ export const MovieDetails = () => {
           <h4>{details.overview}</h4>
         </div>
       </div>
-    </section >
-
+    </section>
   )
 }
