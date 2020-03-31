@@ -9,7 +9,7 @@
   width: 25%;
   height: 20%;
   position: relative;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 .movie-poster {
@@ -26,4 +26,36 @@
   bottom: 0;
   left: 0;
   display: none;
+}
+
+.movie-card-info h1 {
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 80%;
+  /* margin-right: 8px; */
+}
+.movie-card-info p {
+  font-size: 16px;
+  margin: 0px;
+  font-style: italic;
+}
+.movie-card-info h2 {
+  font-size: 20px;
+  margin: 0px;
+  font-weight: 700;
+}
+
+.movie-title-text span {
+  margin: 5px;
+  /* display: none; */
+}
+
+.movie-card:hover .movie-card-info {
+
+  display: flex;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
 }

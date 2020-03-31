@@ -1,4 +1,5 @@
 import React, { useEffect, useState} from 'react'
+import { Link } from 'react-router-dom'
 
 import './movielist_style.css'
 
@@ -26,11 +27,15 @@ export const MovieList = () => {
         {movies.map((movie) => (
 
           <article className="movie-card" key={movie.id}>
-            <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-            <div className="movie-card-info">
-              <h2>{movie.title}</h2>
-              <h2>{movie.release_date}</h2>
-            </div>
+            <Link to={`movies/${movie.id}`}>
+              <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+              <div className="movie-card-info">
+                <h1 className="movie-title-text">{movie.title}</h1>
+                <p>In Theaters: </p>
+                <h2>{movie.release_date}</h2> 
+                  
+              </div>
+            </Link>
           </article>
 
         ))}
