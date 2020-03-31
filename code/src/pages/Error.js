@@ -1,8 +1,8 @@
 import React from 'react'
 import { HomepageButton } from './HomepageButton'
-import './notfound.css'
+import './error.css'
 
-export const NotFound = () => {
+export const Error = () => {
   return (
     <div className="not-found-wrapper">
       <div className="not-found-container">
