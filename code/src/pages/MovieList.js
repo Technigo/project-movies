@@ -22,7 +22,6 @@ export const MovieList = () => {
             <div className="text-container">
               <h1>{movie.title}</h1>
               <p>Released: {movie.release_date}</p>
-              <p>Average rating: {movie.vote_average}</p>
             </div>
           </Link>
         </article>

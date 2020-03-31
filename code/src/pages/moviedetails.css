@@ -1,0 +1,45 @@
+.detail-page {
+  position: relative;
+}
+
+.background {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie-container {
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+}
+
+.detail-image {
+  border: 5px solid white;
+}
+
+.description {
+  margin-left: 20px;
+  color: white;
+}
+
+.overview {
+  max-width: 400px;
+}
+
+.backlink {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 50px 0 0 50px;
+  color: white;
+}
+
+.backlink:hover span {
+  margin-left: 6px;
+}
+
+span {
+  transition: margin-left .2s ease-in-out;
+}

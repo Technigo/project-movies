@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
+import './moviedetails.css'
 
 export const MovieDetails = () => {
   const { movieId } = useParams()
@@ -14,14 +15,21 @@ export const MovieDetails = () => {
   }, [movieId])
 
   return (
-    <section>
-      <article key={movie.id}>
-        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
-        <div className="text-container">
-          <h2>{movie.title}</h2>
-          <p>{movie.overview}</p>
+    <section className="detail-page">
+      <div className="background"
+        style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
+        <Link className="backlink" to="/">
+          ◀️ <span>Movies</span>
+        </Link>
+        <div className="movie-container">
+          <img className="detail-image" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+          <div className="description">
+            <h2>{movie.title}</h2>
+            <p>Rating: {movie.vote_average} / 10</p>
+            <p className="overview">{movie.overview}</p>
+          </div>
         </div>
-      </article>
+      </div>
     </section>
   )
 }
