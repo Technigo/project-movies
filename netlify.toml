@@ -4,8 +4,3 @@
   base = "code/"
   publish = "build/"
   command = "npm run build"
-
-[[redirects]]
-  from = "/*"
-  to = "/error"
-  status = 404
