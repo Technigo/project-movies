@@ -7,7 +7,7 @@
 - I made a plan before I started this work, which I usually do not do. 
   It made it easier to understand what I needed to do.
 
-- If I had more time I would add one more side, and change the design. I followed the design example.
+- If I had more time I would add a page "Movie not found".
 
 ## View it live
 
