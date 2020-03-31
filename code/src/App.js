@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { MovieList } from "./pages/MovieList"
 import { ShowMovieDetails } from "./pages/ShowMovieDetails"
 import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { GenreList } from 'pages/GenreList';
 
 export const App = () => {
 
@@ -25,8 +26,12 @@ export const App = () => {
         < MovieList movies={allMovies}/>
       </Route>
 
-      <Route exact path="/movie/:moviedetails">
+      {/* <Route exact path="/movie/:moviedetails">
         <ShowMovieDetails movies={allMovies}/>
+      </Route>  */}
+
+      <Route exact path="/genre/:selectedgenre">
+        <GenreList />
       </Route> 
 
     </Switch>
