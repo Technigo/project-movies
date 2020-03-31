@@ -3,6 +3,7 @@ import { MovieCard } from '../components/MovieCard'
 import { InputRadio } from '../components/InputRadio'
 
 export const MoviesList = () => {
+
   const [movies, setMovies] = useState([])
   const [endpoint, setEndpoint] = useState('popular')
 
@@ -41,6 +42,8 @@ export const MoviesList = () => {
             title={movie.title}
             img={movie.poster_path}
             releaseDate={movie.release_date}
+            rating={movie.vote_average}
+            state={endpoint}
           />
         ))
       }
