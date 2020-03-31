@@ -1,0 +1,46 @@
+
+.MoviePage {
+    position: relative;
+    background-color: black;
+}
+
+.MoviePage .background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.MoviePage img {
+    border: 5px solid #fff;
+    
+}
+
+.MoviePage .summary {
+
+    display: flex;
+    align-items: flex-end;
+    padding: 50px;
+}
+
+.MoviePage .details {
+    margin-left: 20px;
+    color: white;
+}
+
+.MoviePage .details p {
+    max-width: 400px;
+    color: white;
+}
+
+
+.MoviePage .raiting {
+    font-size: 17px;
+    color: red;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
