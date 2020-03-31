@@ -1,0 +1,37 @@
+.header {
+  background-color: black;
+  width: auto;
+  height: 120px;
+  margin-top: -20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header h1 {
+  color: white;
+  padding: 30px;
+}
+
+.about {
+  color: white;
+  display: flex;
+  cursor: pointer;
+  border: 1px solid;
+  border-color: white;
+  padding: 4px;
+  text-decoration: none;
+}
+
+.about p {
+  padding: 5px;
+  margin: 2px 0 2px 0;
+}
+
+@media screen and (max-width: 667px) {
+  .about {
+    border: none;
+    text-decoration: underline;
+  }
+}
+

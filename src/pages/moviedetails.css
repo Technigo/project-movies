@@ -60,3 +60,8 @@
   fill: #fff;
 }
 
+@media screen and (max-width: 667px) {
+  .movie-info {
+    display: block;
+  }
+}
