@@ -6,8 +6,6 @@ export const MoviesList = () => {
   const [movies, setMovies] = useState([])
   const [endpoint, setEndpoint] = useState('popular')
 
-  const oldArray = ['upcoming', 'popular', 'top_rated']
-
   const selections = {
     popular: 'Popular',
     upcoming: 'Upcoming',
@@ -29,7 +27,6 @@ export const MoviesList = () => {
         <InputRadio
           label="Filter:"
           id="chooseSelection"
-          array={oldArray}
           object={selections}
           state={endpoint}
           setState={setEndpoint}

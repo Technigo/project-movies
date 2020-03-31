@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const InputRadio = ({ label, id, array, object, state, setState }) => {
+export const InputRadio = ({ label, id, object, state, setState }) => {
 
   return (
     <>
