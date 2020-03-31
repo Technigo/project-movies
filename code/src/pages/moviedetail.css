@@ -21,7 +21,10 @@
 }
 
 .img-poster-detail {
-	border: 5px solid #fff;
+	/* border: 5px solid #fff; */
+	border-radius: 20px;
+	border: 5px solid rgb(156, 156, 156);
+	box-shadow: 10px 10px rgb(77, 77, 77);
 }
 
 .movie-detail-text {

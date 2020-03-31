@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './movielist.css';
+import './director.css';
 
-export const MovieList = ({ setDirector, director }) => {
+export const MovieList = ({ setDirector, director, directorName }) => {
 	const [ movies, setMovies ] = useState([]);
-	let filteredMovies;
+	let filteredMovies = [];
 
 	useEffect(
 		() => {
@@ -20,36 +21,44 @@ export const MovieList = ({ setDirector, director }) => {
 	);
 
 	if (director !== undefined) {
-		setDirector(localStorage.getItem('director'));
-		console.log(director);
-		filteredMovies = movies.filter(
-			(movie) =>
-				movie.job.toLowerCase().includes('director') && movie.poster_path !== null && movie.release_date !== ''
-		);
+		const filteredMoviesIds = [];
+
+		movies.forEach((movie) => {
+			if (!filteredMoviesIds.includes(movie.id)) {
+				if (
+					movie.department.toLowerCase().includes('directing') ||
+					movie.department.toLowerCase().includes('writing')
+				) {
+					if (movie.poster_path !== null && movie.release_date !== '') {
+						filteredMoviesIds.push(movie.id);
+						filteredMovies.push(movie);
+					}
+				}
+			}
+		});
 	}
 
-	if (director !== '') {
-		return (
+	// if (director !== '') {
+	return (
+		<div>
+			<h1>{directorName}</h1>
 			<div className="movies-container">
 				{filteredMovies.map((movie) => (
 					<Link key={movie.id} to={`/${director}/${movie.id}`}>
-						<div>
+						<div className="movie-card">
 							<img
 								className="img-poster"
 								src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
 								alt={movie.original_title}
 							/>
-
 							<div className="text-container">
-								<h1>{movie.original_title}</h1>
+								<h2>{movie.original_title}</h2>
 								<p>{movie.release_date}</p>
 							</div>
 						</div>
 					</Link>
 				))}
 			</div>
-		);
-	} else {
-		return <div />;
-	}
+		</div>
+	);
 };

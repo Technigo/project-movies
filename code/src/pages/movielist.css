@@ -5,21 +5,36 @@ a {
 }
 
 .movies-container {
+	padding: 50px;
 	display: grid;
 	grid-template-columns: 1fr;
+	grid-gap: 30px;
+	box-sizing: border-box;
+}
+
+.movie-card {
+	height: unset;
 }
 
 .img-poster {
 	display: block;
 	width: 100%;
+	border-radius: 15px;
+	border: 5px solid rgb(77, 77, 77);
+	box-shadow: 10px 10px rgb(156, 156, 156);
+	transition: all 0.2s ease-in;
 }
 
 .text-container {
 	display: none;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: center;
+	align-items: center;
 
 	position: absolute;
+
+	height: 100%;
+	width: 100%;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -27,10 +42,28 @@ a {
 
 	background: rgba(0, 0, 0, .6);
 	padding: 20px;
+	border-radius: 15px;
+	border: 5px solid rgb(77, 77, 77);
+	box-shadow: 10px 10px rgb(77, 77, 77);
+
+	width: 90%;
+	height: inherit;
+	transition: all 0.2s ease-in;
+}
+
+.text-container p {
+	margin: 0;
 }
 
 a:hover .text-container {
 	display: flex;
+	/* border: none;
+	box-shadow: none; */
+}
+
+a:hover .img-poster {
+	/* border: none;
+	box-shadow: none; */
 }
 
 @media (min-width: 368px) {
