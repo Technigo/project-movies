@@ -3,10 +3,30 @@
 .movieContainer {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .movieBox {
     width: 25%;
-    position: relative;
     color: white;
 }
+
+.movieBox img {
+    width: 100%;
+}
+
+.movieBox h1 {
+    background-color: thistle;
+    position: absolute;
+    width: 25%;
+    margin-top:-80px;
+}
+
+
+
+
+
+
+
+
+
