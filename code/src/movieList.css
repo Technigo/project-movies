@@ -1,0 +1,62 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.info-holder {
+  position: relative;
+}
+
+.movieListCard {
+  width: 25%;
+ 
+}
+
+.imgList {
+  width: 100%;
+  
+}
+
+.titleList {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 30px;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 30px;
+  opacity: 0;  
+}
+
+.titleList:hover {
+background-color: rgba(24, 22, 22, 0.651);
+opacity: 1;
+
+}
+
+.titleList h3 {
+font-size: 20px;
+font-weight: 400;
+}
+
+.margin {
+margin: 0; 
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+  .movieListCard {
+    width: 50%;
+  }
+
+  .titleList h2 {
+    font-size: 20px;
+  }
+}
