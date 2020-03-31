@@ -14,18 +14,21 @@ export const MovieList = () => {
 
   return (
     <section>
-      {movies.map((movie) => (
+      {movies.map(movie => (
         <article key={movie.id}>
-          <a>
-            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
-            <div className="text-container">
-              <h1>{movie.title}</h1>
-              <p>Released: {movie.release_date}</p>
-              <p>Average rating: {movie.vote_average}</p>
-            </div>
-          </a>
+          <Link to={`/movies/${movie.id}`}>
+          <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+          <div className="text-container">
+            <h1>{movie.title}</h1>
+            <p>Released: {movie.release_date}</p>
+            <p>Average rating: {movie.vote_average}</p>
+          </div>
+          </Link>
         </article>
       ))}
     </section>
   )
 }
+
+/* <Link to={`/movies/${movie.id}`}> */
+/* </Link> */
