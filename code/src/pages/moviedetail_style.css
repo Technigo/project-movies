@@ -1,14 +1,74 @@
 .movie-container {
 
-
   background-repeat: no-repeat;
-
   min-height: 100vh;
-
-  
-  padding: 50px;
+  padding: 20px;
   background-position: center;
   background-size: cover;
 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}
+
+.movie-card {
+  /* display: flex;
+  flex-direction: row;
+  align-items: flex-end; */
+}
+
+.movie-container .style {
+  background: rgba(0, 0, 0, 0.776);
+
+}
+
+.movie-image {
+ border: 3px solid white;
+ border-radius: 8px;
+}
+
+.movie-info-on-card {
+  background: rgba(0, 0, 0, 0.372);
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* border: 1px solid rgb(77, 77, 77); */
+  width: 325px;
+  margin-top: 10px;
+
+}
+
+h1 {
+  line-height: 80%;
+}
+
+p {
+  font-size: 15px;
+}
+
+.vote-number {
+  color: rgb(191, 0, 0);
+  font-size: 15px;
+  font-weight: 500;
+
+}
+
+
+/****** MEDIA QUERIES FOR RESPONSIVE DESIGN ******/
+@media (min-width: 668px) {
+  
+
+
+
+
+
+}
+
+@media (min-width: 900px) {
+
+  
 
 }

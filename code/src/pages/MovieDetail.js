@@ -28,12 +28,12 @@ export const MovieDetails = () => {
 
       <div className="movie-container" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}}>
 
-        <article>
-          <img className="" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}/>
+        <article className="movie-card">
+          <img className="movie-image" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}/>
 
-          <div className="movie-info">
-            <p>Movie details</p> 
-            <h1>{movie.title} <span>{movie.vote_average}/10</span></h1> 
+          <div className="movie-info-on-card">
+            {/* <p>Movie details</p>  */}
+            <h1>{movie.title} <span className="vote-number">{movie.vote_average}/10</span></h1> 
             <p>{movie.overview}</p> 
           </div>
         </article>
