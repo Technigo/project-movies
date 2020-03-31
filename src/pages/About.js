@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import './about.cssgi'
+import './about.css'
 
 export const About = () => {
   const [about, setAbout] = useState({})
@@ -14,9 +14,12 @@ export const About = () => {
 
   return (
     <div className="about-page">
-      hello
-      <div className="movie-details">
-        <h2>{about.biography}</h2>
+
+      <div className="giovanni">
+        <h2>Full name: {about.name}</h2>
+        <img src={`https://image.tmdb.org/t/p/w342${about.profile_path}`} alt={about.name} />
+        <h3>Born: {about.birthday} in {about.place_of_birth}</h3>
+        <h4>Biography: {about.biography}</h4>
       </div>
 
       <div className="back-link-button">
@@ -24,12 +27,10 @@ export const About = () => {
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
             <path d="M27 14.5C27 7.596441 21.4035594 2 14.5 2S2 7.596441 2 14.5 7.5964406 27 14.5 27 27 21.403559 27 14.5zm-19.3388348-.353553l7.4852814-7.485282c.1952622-.195262.5118446-.195262.7071068 0l2.1213203 2.121321c.1952622.195262.1952622.511844 0 .707106L12.9644661 14.5l5.0104076 5.010408c.1952622.195262.1952622.511844 0 .707106l-2.1213203 2.121321c-.1952622.195262-.5118446.195262-.7071068 0l-7.4852814-7.485282c-.19799-.19799-.197989-.509117 0-.707106z" fill="#fff" fill-rule="evenodd"></path>
           </svg>
-          <p>Movies</p>
+          <p>Back to Movies</p>
         </Link>
       </div>
-
     </div>
   )
-
 }
 

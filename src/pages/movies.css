@@ -31,26 +31,26 @@
   padding: 20px;
 }
 
-  .movie-details h2 {
-    margin-top: auto;
-    margin-bottom: 0;
-  }
+.movie-details h2 {
+  margin-top: auto;
+  margin-bottom: 0;
+}
 
-  .movie-details h4 {
-    font-weight: 500;
-  }
+.movie-details h4 {
+  font-weight: 500;
+}
 
-  .movie-card:hover .movie-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    background-color: rgba(0, 0, 0, 0.75);
-    cursor: pointer;
-  }
+.movie-card:hover .movie-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
 
-  @media screen and (max-width: 667px) {
-    .movie-card {
-      position: relative;
-      width: 50%;
-    }
+@media screen and (max-width: 667px) {
+  .movie-card {
+    position: relative;
+    width: 50%;
   }
+}
