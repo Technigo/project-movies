@@ -1,0 +1,35 @@
+.movie-rating {
+	font-size: 17px;
+	font-weight: 400;
+	color: red;
+	margin-left: 10px;
+	font-weight: 700;
+}
+
+.movie-detail-container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: space-between;
+}
+
+.movie-detail-all-info {
+	display: flex;
+	align-items: flex-end;
+	padding: 50px;
+	width: 100%;
+}
+
+.img-poster-detail {
+	border: 5px solid #fff;
+}
+
+.movie-detail-text {
+	max-width: 400px;
+	margin-left: 20px;
+}
+
+.movie-detail-score-con {
+	display: flex;
+	flex-direction: row;
+}

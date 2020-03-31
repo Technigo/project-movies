@@ -1,0 +1,19 @@
+.home-button {
+	border: none;
+	background: none;
+	display: flex;
+	align-items: center;
+	padding: 50px 0 0 50px;
+}
+
+.home-button-text {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+	margin: 0 0 0 5px;
+	transition: all 0.5s ease-in-out;
+}
+
+.home-button:hover .home-button-text {
+	margin-left: 15px;
+}

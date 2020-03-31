@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { HomeButton } from 'components/HomeButton';
+import './moviedetail.css';
 
 export const MovieDetail = () => {
 	const { movieId } = useParams();
