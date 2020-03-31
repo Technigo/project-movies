@@ -1,5 +1,7 @@
 @import-normalize;
 
+$primaryColor: #001e96;
+
 /* ––– General styles ––– */
 
 html, body, div#root {
@@ -9,7 +11,8 @@ html, body, div#root {
 body {
   font-family: 'Avenir', 'Helvetica', sans-serif;
   font-size: 16px;
-  color: #eaeaea;
+  background-color: $primaryColor;
+  color: #fff;
 }
 
 a {
@@ -22,7 +25,7 @@ h1, h2, h3 {
 }
 
 h2 {
-  font-size: 2.6rem;
+  font-size: 2rem;
 }
 
 img {
@@ -37,12 +40,17 @@ img {
   flex-wrap: wrap;
 
   width: 100%;
-  max-width: 1200px;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .movie-card {
   position: relative;
-  flex: 0 1 25%;
+  flex: 0 1 50%;
+
+  @media (min-width: 768px) {
+    flex: 0 1 25%;
+  }
 
   img {
     display: block;
@@ -61,21 +69,31 @@ img {
     justify-content: flex-end;
 
     &:hover {
-      background: linear-gradient(180deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,1) 100%);
-
-
       .movie-info {
-        visibility: visible;
+        opacity: 1;
       }
     }
   }
 
   .movie-info {
-    visibility: hidden;
-    padding: 1rem;
+    flex: 1 1 auto;
 
-    p {
-      margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 2rem 1rem;
+    background-color: rgba($primaryColor, .85);
+    opacity: 0;
+    transition: all .2s ease-in-out;
+
+    h2 {
+      text-align: center;
+    }
+
+    .release-date {
+      margin: 0;
       font-size: .8rem;;
     }
   }
@@ -91,9 +109,21 @@ img {
 
   height: 100%;
   background-size: cover;
+  background-position: 50% 50%;
 
   .container {
     flex: 0 1 80%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .movie-details-img {}
+
+  .movie-details-info {
+    padding: 2rem;
+    margin-bottom: -3rem;
+    margin-left: -3rem;
+    background-color: rgba($primaryColor, .85);
   }
 
   img {

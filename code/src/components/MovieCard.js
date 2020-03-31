@@ -9,7 +9,7 @@ export const MovieCard = ({ id, title, img, releaseDate }) => {
       <Link to={`/movies/${id}`} className="overlay">
         <div className="movie-info">
           <h2>{title}</h2>
-          <p>Release: {releaseDate}</p>
+          <p className="release-date">Release: {releaseDate}</p>
         </div>
       </Link>
     </section>
