@@ -17,7 +17,11 @@ export const MovieInfo = () => {
 
   return (
     <div>
-      <h1>{info.original_title}</h1>
+      <img src={`https://image.tmdb.org/t/p/w300${info.poster_path}`} />
+      <img src={`https://image.tmdb.org/t/p/w300${info.backdrop_path}`} />
+      <h3>{info.original_title}</h3>
+      <h4>{info.vote_average}</h4>
+      <p>{info.overview}</p>
     </div>
   )
 }
