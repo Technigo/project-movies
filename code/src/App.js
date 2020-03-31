@@ -1,16 +1,15 @@
 import React from 'react'
 import { MovieList } from 'pages/MovieList'
-import { BrowserRouter, Switch, route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 
 export const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <route path="/" exact >
+        <Route path="/" exact >
           <MovieList />
-        </route>
-
+        </Route>
       </Switch>
     </BrowserRouter>
   )

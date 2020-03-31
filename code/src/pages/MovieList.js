@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link, BrowserRouter } from 'react-router-dom'
 
 
 export const MovieList = () => {
@@ -15,9 +16,17 @@ export const MovieList = () => {
   return (
     <div>
       {movies.map((movie) => (
-        <div>
-          <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title} />
-          <h2>{movie.title}</h2>
+        <div key={movie.id}>
+          <img src={`https://image.tmdb.org/t/p/w185${movie.poster_path}`} alt={movie.original_title} />
+
+          {/*I had to wrapp <Link> in <BrowserRouter> to make it work, but that shouldn´t be necessary? It is wrapped i that tag in App.js?*/}
+          <h2>
+            <BrowserRouter>
+              <Link to={`/movie/${movie.id}`}>
+                {movie.title}
+              </Link>
+            </BrowserRouter>
+          </h2>
 
         </div>
       ))}
