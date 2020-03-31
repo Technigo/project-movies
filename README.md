@@ -6,6 +6,12 @@ A multi-page React application based on the Movie Database API and primarily two
 
 The app is split up into four main pages using React Router. Each page consists of different components that are rendered conditionally. The overall design is based on an example from the project brief with some minor changes. If I had more time I would like to add some actors and the director to the individual movie pages.
 
+## Learning objectives
+
+* Using React router to create multi-page applications
+* Using placeholders in urls to pick dynamic parts from urls
+* Using APIs in React - combining `useState` with `useEffect`
+
 ## Tech
 
 * HTML5
