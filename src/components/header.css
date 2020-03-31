@@ -11,6 +11,7 @@
 .header h1 {
   color: white;
   padding: 30px;
+  font-family: 'Special Elite', cursive;
 }
 
 .about {
@@ -26,6 +27,7 @@
 .about p {
   padding: 5px;
   margin: 2px 0 2px 0;
+  font-family: 'Special Elite', cursive;
 }
 
 @media screen and (max-width: 667px) {

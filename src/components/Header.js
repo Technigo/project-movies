@@ -9,8 +9,8 @@ export const Header = () => {
   return (
     <section className="header">
       <h1>Popular Movies with Giovanni Ribisi</h1>
-      <Link className="about" to={'/'}>
-        <p>About Giovanni</p>
+      <Link className="about" to={"/about/"}>
+        <p>About</p>
       </Link>
     </section>
   )
