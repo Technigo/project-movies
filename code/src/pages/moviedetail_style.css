@@ -1,0 +1,14 @@
+.movie-container {
+
+
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+
+  
+  padding: 50px;
+  background-position: center;
+  background-size: cover;
+
+
+}
