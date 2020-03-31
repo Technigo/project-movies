@@ -105,4 +105,8 @@ margin: 70px;
     margin: 20px;
     
     }
+
+    .backdrop-holder {
+      height: auto;
+    }
 }
