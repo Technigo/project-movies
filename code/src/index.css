@@ -151,3 +151,14 @@ margin: 70px;
   align-items: center;
   height: 100%;
 }
+
+.notFound {
+  color: white;
+  font-size: 36px; 
+  display: flex;
+  justify-content: center;
+  
+  
+ 
+
+}
