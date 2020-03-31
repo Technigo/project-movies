@@ -60,6 +60,7 @@ img {
   p {
     font-weight: 700;
     margin-right: .5rem;
+    border-bottom: 1px solid;
   }
 
   .radio-btn {
@@ -144,8 +145,6 @@ img {
     align-items: flex-end;
   }
 
-  .movie-details-img {}
-
   .movie-details-info {
     flex: 0 1 600px;
     padding: 2rem;
@@ -167,8 +166,9 @@ img {
 }
 
 .back-btn {
-  align-self: flex-start;
-  margin-top: 2rem;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
   padding: .8rem 1rem .8rem .8rem;
   background-color: $primaryColor;
   font-weight: 700;
