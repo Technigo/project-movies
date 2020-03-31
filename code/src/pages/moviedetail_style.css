@@ -1,5 +1,4 @@
 .movie-container {
-
   background-repeat: no-repeat;
   min-height: 100vh;
   padding: 20px;
@@ -14,8 +13,8 @@
 
 .movie-card {
   /* display: flex;
-  flex-direction: row;
-  align-items: flex-end; */
+  flex-direction: row; */
+
 }
 
 .movie-container .style {
@@ -24,19 +23,20 @@
 }
 
 .movie-image {
- border: 3px solid white;
- border-radius: 8px;
+ border: 5px solid white;
+ border-radius: 2px;
+ max-width: 300px;
 }
 
 .movie-info-on-card {
-  background: rgba(0, 0, 0, 0.372);
-  border-radius: 8px;
+  /* background: rgba(0, 0, 0, 0.372); */
+  border-radius: 2px;
   color: rgb(255, 255, 255);
   padding: 5px;
   padding-left: 10px;
   padding-right: 10px;
   /* border: 1px solid rgb(77, 77, 77); */
-  width: 325px;
+  max-width: 280px;
   margin-top: 10px;
 
 }
@@ -59,8 +59,21 @@ p {
 
 /****** MEDIA QUERIES FOR RESPONSIVE DESIGN ******/
 @media (min-width: 668px) {
+  .movie-container {
+    flex-direction: column-reverse;
+  }
   
+  .movie-card {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    
 
+  }
+  .movie-info-on-card {
+    margin-left: 20px;
+    max-width: 450px;
+  }
 
 
 
@@ -68,6 +81,9 @@ p {
 }
 
 @media (min-width: 900px) {
+  .movie-container {
+    flex-direction: column-reverse;
+  }
 
   
 
