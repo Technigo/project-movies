@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Sen:400,700&display=swap');
 
 body {
-  background-color: #020204;
+  background-color: #1a1a1a;
   font-family: 'Sen', sans-serif;
 }
 
 h3 {
   font-size: .8em;
 }
-
-
 
 .movie-list {
   display: flex;
@@ -53,4 +51,16 @@ h3 {
 
 .image-card-container:hover .info {
   opacity: 1;
+}
+
+@media (max-width:769px) {
+  .image-card-container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  .image-card-container {
+    width: 100%;
+  }
 }

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Sen:400,700&display=swap');
 
+body {
+  background-color: #1a1a1a;
+}
+
 h1 {
   color: #fff;
 }
@@ -44,7 +48,7 @@ h4 {
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background: linear-gradient(to top, #1a1a1a, transparent);
+  background: linear-gradient(to top, #1a1a1a 5%, transparent);
 }
 
 .content-container {
@@ -69,10 +73,51 @@ h4 {
 
 .rating {
   color: #ff6257;
+  font-size: 1.2em;
 }
 
 .overview {
   color: #fff;
   text-shadow: 1px 1px 10px #2e2e2e;
   width: 300px;
+}
+
+@media (max-width: 886px) {
+  .details-poster {
+    width: 30%;
+    height: auto;
+    position: relative;
+    top: 10em;
+    left: 2em;
+  }
+}
+
+
+@media (max-width: 769px) {
+  .backdrop {
+    background-position: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .details-poster {
+    display: none;
+  }
+  .title-and-rating {
+    top: 20em;
+    left: 5em;
+  }
+}
+
+@media (max-width: 525px) {
+  .title-and-rating {
+    left: 2em;
+  }
+}
+
+@media (max-width: 448px) {
+  .overview {
+    width: 250px;
+    font-size: .8em;
+  }
 }
