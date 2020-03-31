@@ -6,21 +6,45 @@
     position: relative;
 }
 
-.movieBox {
+.movieContainer a {
+
     width: 25%;
-    color: white;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+
 }
 
-.movieBox img {
+.movieContainer img {
     width: 100%;
 }
 
-.movieBox h1 {
-    background-color: thistle;
+
+.movieContainer .movieInfo {
     position: absolute;
-    width: 25%;
-    margin-top:-80px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: none;
+    padding: 20px;
 }
+
+
+.movieContainer .movieInfo h1 {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+
+.movieContainer a:hover .movieInfo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 
 
 

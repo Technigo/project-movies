@@ -22,10 +22,13 @@ return (
 
       <article className="movieContainer">
        {movies.map((movie) => (
-       <Link key={movie.id} to={`/movies/${movie.id}`}className="movieBox">
+       <Link key={movie.id} to={`/movies/${movie.id}`}>
            <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title} />
-  
+
+       <div class="movieInfo">    
        <h1>{movie.original_title}</h1>
+       <p> Release {movie.release_date}</p>
+       </div>
  
 
        </Link>
