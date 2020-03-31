@@ -13,20 +13,25 @@
   color: #fff;
   text-decoration: none;
 }
-.movie-details {
-    position: absolute;
-    color: #fff;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    padding: 20px;
-  }
 
-  .movie-details h1 {
+.movie-details {
+  position: absolute;
+  color: #fff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  padding: 20px;
+}
+
+  .movie-details h2 {
     margin-top: auto;
     margin-bottom: 0;
+  }
+
+  .movie-details h4 {
+    font-weight: 500;
   }
 
   .movie-card:hover .movie-details {

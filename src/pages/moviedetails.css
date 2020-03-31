@@ -10,7 +10,6 @@
   justify-content: flex-end;
 }
 
-
 .movie-info {
   color: #ffffff;
   padding: 50px;
@@ -19,13 +18,16 @@
   align-items: flex-end;
 }
 
-.movie-info p {
+.movie-info-text {
   max-width: 400px;
   margin-left: 20px;
 }
 
-.movie-info h1 {
- margin-left: 20px;
+.voting {
+  font-weight: 400;
+  color: #ff4949;
+  margin-left: 10px;
+  font-size: medium;
 }
 
 .movie-poster {
@@ -35,7 +37,26 @@
 }
 
 .back-link  {
- color: #ffffff;
- font-weight: 700;
- align-self: flex-start;
+  color: #ffffff;
+  font-weight: 700;
+  align-self: flex-start;
+  display: inline-flex;
+  margin: 20px 30px 0 50px;
+  text-decoration: none;
+  cursor: pointer;
 }
+
+.back-link-button a p {
+  transition: margin-left 0.2s ease-in-out;
+}
+
+.back-link-button a:hover p {
+  margin-left: 8px;
+}
+
+.back-link svg {
+  width: 30px;
+  margin-right: 2px;
+  fill: #fff;
+}
+
