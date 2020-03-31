@@ -30,7 +30,7 @@ export const App = () => {
           <About />
         </Route>
         <Route>
-          <Error path="/error" />
+          <Error path="/error" exact />
         </Route>
       </Switch>
     </BrowserRouter>
