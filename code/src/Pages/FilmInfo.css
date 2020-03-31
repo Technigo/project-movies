@@ -11,15 +11,15 @@ body {
   display: block;
   margin: 8px;
 }
+.summary {
+display:flex;
+align-items: flex-end;
+margin: 50px;
+}
 
-div{
-  display: flex;
-  align-items: flex-end;
-  padding: 50px;
-} 
 .poster {
   border: 5px solid #fff;
 }
-.p {
-  padding:50px;
+P {
+  margin: 50px;
 }

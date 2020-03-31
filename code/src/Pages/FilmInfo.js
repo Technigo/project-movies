@@ -19,18 +19,13 @@ export const FilmInfo = () => {
     return <></>
   }
   
-
   return (
-    <div class>
-      <div key={movies.id}>
-        <img class="poster" src={`http://image.tmdb.org/t/p/w300${movies.poster_path}`} alt={movies.original_title} />
+    <div>
+      <div key={movies.id} className="summary">
+        <img className="poster" src={`http://image.tmdb.org/t/p/w300${movies.poster_path}`} alt={movies.original_title} />
         <p><h2>{movies.original_title}</h2>
         {movies.overview}</p>
-
         </div>
-   
-     
-   
     </div>
   )
 }
