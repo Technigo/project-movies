@@ -1,6 +1,7 @@
 .movie-backdrop {
   min-height: 90vh;
   background-size: cover;
+  background-position: center;
 }
 
 .movie-detail-wrapper {

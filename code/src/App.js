@@ -7,9 +7,9 @@ import { CompanyPage } from 'pages/CompanyPage'
 import { About } from 'pages/About'
 
 export const App = () => {
-  const [movieList, setMovieList] = useState(137418)
+  const [movieList, setMovieList] = useState(137418) //Used to store selected movie list passed as props to MovieList
   const selectMovieList = selectedList => {
-    setMovieList(selectedList)
+    setMovieList(selectedList) //Updates chosen list based on selection made in Nav
   }
 
   return (
@@ -30,6 +30,7 @@ export const App = () => {
           <About />
         </Route>
       </Switch>
+
     </BrowserRouter>
   )
 }

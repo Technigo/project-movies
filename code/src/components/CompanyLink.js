@@ -1,6 +1,8 @@
 import React from 'react'
 import './companylink.css'
 
+//If the company has a homepage, the logo or company name will link to the homepage
+//If not, the logo or company name will only be displayed
 export const CompanyLink = ({ homepage, logo_path, imgSrc, name }) => {
   return (
     <div className="company-link">

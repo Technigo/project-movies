@@ -2,6 +2,7 @@ import React from 'react'
 import './about.css'
 import { HomepageButton } from 'components/HomepageButton'
 
+//Plain page displaying some details about the project and a HomepageButton component
 export const About = () => {
   return (
     <div className="about-wrapper">

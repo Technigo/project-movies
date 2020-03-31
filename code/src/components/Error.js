@@ -2,6 +2,7 @@ import React from 'react'
 import { HomepageButton } from './HomepageButton'
 import './error.css'
 
+//Content displayed when page is not found
 export const Error = () => {
   return (
     <div className="not-found-wrapper">

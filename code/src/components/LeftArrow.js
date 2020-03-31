@@ -1,6 +1,7 @@
 import React from 'react'
 import './leftarrow.css'
 
+//Svg of an arrow pointing to the left
 export const LeftArrow = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
