@@ -162,3 +162,9 @@ margin: 70px;
  
 
 }
+
+@media only screen and (max-width: 1000px) {
+  .movieListCard {
+    width: 50%;
+  }
+}

@@ -8,5 +8,4 @@ This project was very fun, and it was nice to build a multi-page application. In
 If I had more time on this project my next step would be to create one more page if the user wanted more information about the production companies behind every movie etc. 
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://zen-lovelace-779d61.netlify.com 
