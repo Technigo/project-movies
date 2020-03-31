@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route} from 'react-router-dom'
 import { MovieList } from './pages/MovieList'
-import { MovieDetail } from './pages/MovieDetail'
+import { MovieDetails } from './pages/MovieDetail'
 
 export const App = () => {
   return (
@@ -13,7 +13,7 @@ export const App = () => {
             <MovieList />
           </Route>
           <Route>
-            <MovieDetail />
+            <MovieDetails path="/movies/:movieId" />
           </Route>
         </Switch>
       </main>
