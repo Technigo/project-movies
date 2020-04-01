@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { Route, Link, useParams, useHistory } from 'react-router-dom';
 import { BackIcon } from '../components/BackIcon'
 import './MovieDetails.css'
 
@@ -8,14 +7,29 @@ import './MovieDetails.css'
 export const MovieDetails = () => {
   const { movieId } = useParams()
   const [movie, setMovie] = useState([])
+  const history = useHistory();
+  const [statusCode, setStatusCode] = useState(200);
+  const DETAILS_API = `https://api.themoviedb.org/3/movie/${movieId}?api_key=a87d34281c8e1e04c49c6b1cfecbf6f0&language=en-US`
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=a87d34281c8e1e04c49c6b1cfecbf6f0&language=en-US`)
-      .then((res) => res.json())
-      .then((json) => {
-        setMovie(json)
+    fetch(DETAILS_API)
+      .then(res => {
+        setStatusCode(res.status)
+        return res.json()
       })
-  }, [movieId])
+      .then(json => setMovie(json))
+  }, [DETAILS_API, movieId])
+
+  useEffect(() => {
+    console.log(`Status code: ${statusCode}`);
+    if (statusCode !== 200) {
+      history.push("/");
+    }
+  }, [history, statusCode]);
+
+  if (!movie) {
+    return <></>;
+  }
 
   return (
     <div key={movie.id}>
