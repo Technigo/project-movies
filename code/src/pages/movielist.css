@@ -1,54 +1,76 @@
+h1 {
+	margin: auto;
+	margin-bottom: 25px;
+	text-align: center;
+}
+
 a {
 	color: white;
 	text-decoration: none;
-	position: relative;
+	margin: 0;
+}
+
+.site-container {
+	margin: auto;
+	padding: 25px 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
 }
 
 .movies-container {
-	padding: 50px;
 	display: grid;
+	width: fit-content;
+	margin: auto;
 	grid-template-columns: 1fr;
+	grid-template-rows: auto;
 	grid-gap: 30px;
 	box-sizing: border-box;
 }
 
 .movie-card {
-	height: unset;
+	position: relative;
+	height: 450px;
+	width: 300px;
+	max-height: 750px;
+	max-width: 500px;
+	border-radius: 15px;
+	border: 5px solid rgb(133, 133, 133);
+	box-shadow: 10px 0px rgb(77, 77, 77), 10px 10px rgb(77, 77, 77);
 }
 
 .img-poster {
-	display: block;
+	height: 100%;
 	width: 100%;
-	border-radius: 15px;
-	border: 5px solid rgb(77, 77, 77);
-	box-shadow: 10px 10px rgb(156, 156, 156);
-	transition: all 0.2s ease-in;
+	position: absolute;
+	z-index: 1;
+	border-radius: 10px;
+}
+
+.movie-card-layer {
+	display: none;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 5;
+	background: #000;
+	opacity: 0.8;
+	border-radius: 10px;
 }
 
 .text-container {
 	display: none;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-	position: absolute;
-
 	height: 100%;
 	width: 100%;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-
-	background: rgba(0, 0, 0, .6);
-	padding: 20px;
+	position: absolute;
+	z-index: 10;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 	border-radius: 15px;
-	border: 5px solid rgb(77, 77, 77);
-	box-shadow: 10px 10px rgb(77, 77, 77);
-
-	width: 90%;
-	height: inherit;
-	transition: all 0.2s ease-in;
 }
 
 .text-container p {
@@ -57,13 +79,10 @@ a {
 
 a:hover .text-container {
 	display: flex;
-	/* border: none;
-	box-shadow: none; */
 }
 
-a:hover .img-poster {
-	/* border: none;
-	box-shadow: none; */
+a:hover .movie-card-layer {
+	display: flex;
 }
 
 @media (min-width: 368px) {

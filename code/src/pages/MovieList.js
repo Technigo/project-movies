@@ -24,13 +24,14 @@ export const MovieList = ({ setDirector, director, directorName }) => {
 		const filteredMoviesIds = [];
 
 		movies.forEach((movie) => {
-			if (!filteredMoviesIds.includes(movie.id)) {
+			if (!filteredMoviesIds.includes(movie.id) && !filteredMoviesIds.includes(movie.original_title)) {
 				if (
 					movie.department.toLowerCase().includes('directing') ||
 					movie.department.toLowerCase().includes('writing')
 				) {
 					if (movie.poster_path !== null && movie.release_date !== '') {
 						filteredMoviesIds.push(movie.id);
+						filteredMoviesIds.push(movie.original_title);
 						filteredMovies.push(movie);
 					}
 				}
@@ -40,8 +41,8 @@ export const MovieList = ({ setDirector, director, directorName }) => {
 
 	// if (director !== '') {
 	return (
-		<div>
-			<h1>{directorName}</h1>
+		<div className="site-container">
+			<h1>Written or directed by {directorName}</h1>
 			<div className="movies-container">
 				{filteredMovies.map((movie) => (
 					<Link key={movie.id} to={`/${director}/${movie.id}`}>
@@ -51,6 +52,8 @@ export const MovieList = ({ setDirector, director, directorName }) => {
 								src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
 								alt={movie.original_title}
 							/>
+
+							<div className="movie-card-layer" />
 							<div className="text-container">
 								<h2>{movie.original_title}</h2>
 								<p>{movie.release_date}</p>
