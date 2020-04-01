@@ -1,0 +1,55 @@
+.directors {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+}
+
+button {
+	border: none;
+	font-size: 40px;
+	background: none;
+	color: #fff;
+}
+
+.anderson {
+	font-family: 'Didact Gothic', sans-serif;
+}
+
+.scorsese {
+	color: #000;
+	font-family: 'Abel', sans-serif;
+	background: #fbb91c;
+	margin: 0;
+	padding: 0 15px;
+	border: 5px solid #000;
+}
+
+.scorsese:hover {
+	box-shadow: inset 14px 16px #000;
+	border: 5px solid #fbb91c;
+}
+
+.tarantino {
+	font-family: 'Alfa Slab One', sans-serif;
+	color: #ffa304;
+	text-shadow: 0px 8px #fe0c02;
+}
+
+.tarantino:hover {
+	color: #7c4e00;
+	text-shadow: inset 0px 10px #3d0d0b;
+}
+
+@media (min-width: 668px) {
+	button {
+		font-size: 80px;
+	}
+}
+
+@media (min-width: 1024px) {
+	button {
+		font-size: 160px;
+	}
+}
