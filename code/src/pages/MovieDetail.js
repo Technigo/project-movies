@@ -26,7 +26,7 @@ export const MovieDetail = ({ director, directorName }) => {
 			<div
 				className="movie-detail-container"
 				style={{
-					backgroundImage  : `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movieInfo.backdrop_path})`,
+					backgroundImage  : `linear-gradient(rgba(0, 0, 0, 0) -10%, rgb(0, 0, 0) 50%), url(https://image.tmdb.org/t/p/w1280${movieInfo.backdrop_path})`,
 					backgroundRepeat : 'no-repeat',
 					backgroundSize   : 'cover'
 				}}
