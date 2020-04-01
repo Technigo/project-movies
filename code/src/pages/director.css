@@ -8,7 +8,7 @@
 
 button {
 	border: none;
-	font-size: 160px;
+	font-size: 40px;
 	background: none;
 	color: #fff;
 }
@@ -35,10 +35,21 @@ button {
 	font-family: 'Alfa Slab One', sans-serif;
 	color: #ffa304;
 	text-shadow: 0px 8px #fe0c02;
-	font-size: 160px;
 }
 
 .tarantino:hover {
 	color: #7c4e00;
 	text-shadow: inset 0px 10px #3d0d0b;
+}
+
+@media (min-width: 668px) {
+	button {
+		font-size: 80px;
+	}
+}
+
+@media (min-width: 1024px) {
+	button {
+		font-size: 160px;
+	}
 }

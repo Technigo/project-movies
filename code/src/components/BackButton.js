@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BackArrow } from './BackArrow';
-import './homebutton.css';
+import './backbutton.css';
 
-export const HomeButton = () => {
+export const BackButton = ({ path, text }) => {
 	return (
-		<Link to="/">
+		<Link to={path}>
 			<button className="home-button" type="button">
 				<BackArrow />
-				<p className="home-button-text">Movies</p>
+				<p className="home-button-text">{text}</p>
 			</button>
 		</Link>
 	);

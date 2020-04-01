@@ -17,7 +17,7 @@ export const App = () => {
 					<MovieList director={director} setDirector={setDirector} directorName={directorName} />
 				</Route>
 				<Route path={`/${director}/:movieId`}>
-					<MovieDetail />
+					<MovieDetail director={director} directorName={directorName} />
 				</Route>
 			</Switch>
 		</BrowserRouter>

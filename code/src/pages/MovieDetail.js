@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { HomeButton } from 'components/HomeButton';
+import { BackButton } from 'components/BackButton';
 import './moviedetail.css';
 
-export const MovieDetail = () => {
+export const MovieDetail = ({ director, directorName }) => {
 	const { movieId } = useParams();
 	const [ movieInfo, setMovieInfo ] = useState([]);
 
@@ -30,7 +30,7 @@ export const MovieDetail = () => {
 			}}
 			key={movieInfo.id}
 		>
-			<HomeButton />
+			<BackButton path={`/${director}/`} text={`Back to ${directorName}'s movies`} />
 			<div className="movie-detail-all-info">
 				<img
 					className="img-poster-detail"

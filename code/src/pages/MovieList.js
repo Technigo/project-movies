@@ -2,25 +2,23 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './movielist.css';
 import './director.css';
+import { BackButton } from 'components/BackButton';
 
 export const MovieList = ({ setDirector, director, directorName }) => {
 	const [ movies, setMovies ] = useState([]);
 	let filteredMovies = [];
 	setDirector(localStorage.getItem('director'));
-
+	const url = `https://api.themoviedb.org/3/person/${director}/movie_credits?api_key=3506f645d143411491b3a1c8d00f1217`;
 	useEffect(
 		() => {
-			fetch(
-				`https://api.themoviedb.org/3/person/${director}/movie_credits?api_key=3506f645d143411491b3a1c8d00f1217`
-			)
-				.then((res) => res.json())
-				.then((json) => {
-					setMovies(json.crew);
-				});
+			fetch(url).then((res) => res.json()).then((json) => {
+				setMovies(json.crew);
+			});
 		},
-		[ director ]
+		[ url, director ]
 	);
 
+	//So many if's but I'm not sure how to write this otherwise so I'll keep it like this for now
 	if (director !== undefined) {
 		const filteredMoviesIds = [];
 
@@ -42,7 +40,10 @@ export const MovieList = ({ setDirector, director, directorName }) => {
 
 	return (
 		<div className="site-container">
-			<h1>Written or directed by {directorName}</h1>
+			<BackButton path={'/'} text={'Back to Movies'} />
+			<header>
+				<h1>Written or directed by {directorName}</h1>
+			</header>
 			<div className="movies-container">
 				{filteredMovies.map((movie) => (
 					<Link key={movie.id} to={`/${director}/${movie.id}`}>
