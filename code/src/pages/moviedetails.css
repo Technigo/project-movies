@@ -1,0 +1,45 @@
+*{
+  box-sizing: border-box;
+}
+
+.background {
+  display: flex;
+  align-items: flex-end;  
+  background-color: #000;
+  min-height: 100vh;
+  padding: 50px; 
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.movie-backdrop {
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.movie-details {
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+
+}
+
+
+.movie-poster{
+  border: solid 5px #fff;
+}
+
+
+.movie-text {
+  color: white;
+  margin: 0 0 0 20px;
+  max-width: 400px;
+}
+
+.average-vote{
+  color: red;
+  font-size: 17px;
+  font-weight: 400;
+  margin-left: 10px;
+}

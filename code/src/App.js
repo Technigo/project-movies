@@ -13,7 +13,7 @@ export const App = () => {
         <Route path='/' exact>
           <MovieList />
         </Route>
-        <Route path='/movie/:movieId'>
+        <Route path='/movies/:movieId' exact>
           <MovieDetails />
         </Route>
       </Switch>
