@@ -19,13 +19,13 @@ export const MovieList = () => {
         <div key={movie.id}>
           <img src={`https://image.tmdb.org/t/p/w185${movie.poster_path}`} alt={movie.original_title} />
 
-          {/*I had to wrapp <Link> in <BrowserRouter> to make it work, but that shouldn´t be necessary? It is wrapped i that tag in App.js?*/}
+          {/*I had to wrapp <Link> in <BrowserRouter> to make it work, but that shouldn´t be necessary? It is wrapped in that tag in App.js?*/}
           <h2>
-            <BrowserRouter>
-              <Link to={`/movie/${movie.id}`}>
-                {movie.title}
-              </Link>
-            </BrowserRouter>
+
+            <Link to={`/movie/${movie.id}`}>
+              {movie.title}
+            </Link>
+
           </h2>
 
         </div>
