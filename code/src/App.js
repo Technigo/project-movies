@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { MoviesList } from 'pages/MoviesList'
 import { MovieDetails } from 'pages/MovieDetails'
-import 'app.scss'
+import 'scss/app.scss'
 
 export const App = () => {
   return (

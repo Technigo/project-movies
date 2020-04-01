@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { MovieCard } from '../components/MovieCard'
 import { InputRadio } from '../components/InputRadio'
 
-import '../movieslist.scss'
+import '../scss/movieslist.scss'
 
 export const MoviesList = () => {
 
@@ -11,8 +11,8 @@ export const MoviesList = () => {
 
   const selections = {
     popular: 'Popular',
-    upcoming: 'Upcoming',
-    top_rated: 'Top rated'
+    top_rated: 'Top rated',
+    upcoming: 'Upcoming'
   }
 
 
