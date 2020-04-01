@@ -34,3 +34,13 @@
 .giovanni img {
   border-radius: 7px;
 }
+
+@media screen and (max-width: 667px) {
+  .back-link {
+    margin: 20px 30px 0 0;
+  }
+
+  .back-link p {
+    display: none;
+  }
+}

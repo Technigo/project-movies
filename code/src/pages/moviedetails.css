@@ -68,4 +68,8 @@
   .back-link{
     margin: 20px 30px 0 0;
   }
+
+  .back-link p {
+    display: none;
+  }
 }
