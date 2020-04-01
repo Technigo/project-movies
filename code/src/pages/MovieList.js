@@ -8,7 +8,7 @@ export const MovieList = ({ setDirector, director, directorName }) => {
 	const [ movies, setMovies ] = useState([]);
 	let filteredMovies = [];
 	setDirector(localStorage.getItem('director'));
-	console.log(director);
+
 	const url = `https://api.themoviedb.org/3/person/${director}/movie_credits?api_key=3506f645d143411491b3a1c8d00f1217`;
 	useEffect(
 		() => {
