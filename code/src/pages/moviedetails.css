@@ -64,4 +64,8 @@
   .movie-info {
     display: block;
   }
+  
+  .back-link{
+    margin: 20px 30px 0 0;
+  }
 }
