@@ -19,13 +19,13 @@ export const PopularList = () => {
       <div key={movie.id}>
         <Link to ={`/films/${movie.id}`}>
         <img className="image" src={`http://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.original_title}  />
-        </Link>
         <div className="middle">
         <div className="text"><h1>{movie.original_title}</h1>
-        <h2>{movie.release_date}</h2></div> 
+        <h3>{movie.release_date}</h3></div> 
+        </div>
+        </Link>
+        </div>
         
-        </div>
-        </div>
         </div>
     ))}
     </div>
