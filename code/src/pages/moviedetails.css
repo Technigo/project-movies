@@ -6,17 +6,21 @@
   min-height: 100vh;
   display: flex;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .movie-container {
   display: flex;
-  align-items: flex-end;
-  padding: 50px;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
 }
 
 .detail-image {
+  width: 280px;
   border: 5px solid white;
 }
 
@@ -47,4 +51,25 @@ a {
 
 .back-to-movies {
   transition: margin-left .2s ease-in-out;
+}
+
+@media (min-width: 700px) {
+  
+.movie-container {
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 50px;
+}
+
+.background {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.detail-image {
+  width: 342px;
+}
 }

@@ -10,13 +10,18 @@ export const SimilarMovies = () => {
       .then(res => res.json())
       .then(json => {
         setMovies(json.results)
+        console.log(json.results)
       })
   }, [movieId])
 
-  // setMovies !== [] && 
+  if (setMovies === []) {
+    return (
+      <div className="not-found-message">No similar movies found.</div>
+    )
+  }
 
   return (
-  
+
     <section className="movies-container">
 
       {movies.map(movie => (
