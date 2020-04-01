@@ -12,6 +12,7 @@ export const DetailedInfo = () => {
     fetch(detailsURL)
       .then(res => res.json())
       .then(json => {
+        console.log(json)
         setMovie(json);
       });
   }, [detailsURL]);
