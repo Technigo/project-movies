@@ -1,0 +1,18 @@
+.right-column-review {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 60%;   
+    justify-content: flex-end;
+    align-self: flex-end;
+    
+}
+.review-link {
+    color: white;
+    text-decoration: underline;
+}
+
+
+.buttons-container {
+    display: flex;
+}

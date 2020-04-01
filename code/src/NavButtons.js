@@ -15,7 +15,7 @@ export const NavButtons = (props) => {
 
     return (
         <article className="buttons">
-            {pageNumber != 1 &&
+            {pageNumber !== 1 &&
                 <button className="nav-button" onClick={handleBack}><BackSvg className="icon" />Back</button>}
             <button className="nav-button" onClick={handleNext}>Next<NextSvg className="icon" /></button>
         </article>

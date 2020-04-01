@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from "react"
-import { Link } from 'react-router-dom'
+import { useParams, Link } from "react-router-dom"
+import { Loader } from "./Loader"
 import "./popularlist.css"
-import { Loader } from "Loader"
-export const PopularList = (props) => {
-    const { films, setFilms, pageNumber, api } = props
+export const Recommended = (props) => {
+    const { films, recommendedFilms, setRecommendedFilms, pageNumber } = props
+    const params = useParams()
     const [isLoading, setIsLoading] = useState(true)
+
     useEffect(() => {
-        setIsLoading(true)
-        fetch(`https://api.themoviedb.org/3/movie/${api}?api_key=11a30ee49cca0ec90b41dc63ab197a6d&language=en-US&page=${pageNumber}`)
+        const selectedFilm = films.find((film) => film.title === params.title) || recommendedFilms.find((film) => film.title === params.title)
+        fetch(`https://api.themoviedb.org/3/movie/${selectedFilm.id}/recommendations?api_key=11a30ee49cca0ec90b41dc63ab197a6d&language=en-US&page=${pageNumber}`)
             .then((res) => res.json())
-            .then((data) => {
-                setFilms(data.results)
-                setIsLoading(false)
-            })
-    }, [pageNumber, api])
+            .then(data => setRecommendedFilms(data.results))
+        setIsLoading(false)
+    }, [pageNumber])
 
     return (
         <section>
             <section className="flex-container">
                 {isLoading && <Loader />}
-                {!isLoading && films.map((film) => {
+                {!isLoading && recommendedFilms.map((film) => {
 
                     return (
                         <Link className="film-card" to={`/films/${film.title}`} key={film.id}>
