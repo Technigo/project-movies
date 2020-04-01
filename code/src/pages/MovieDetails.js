@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 
 export const MovieDetails = () => {
   const { movieID } = useParams()
@@ -15,7 +14,6 @@ export const MovieDetails = () => {
       })
   }, [movieID])
 
-  // "linearGradient(rgba(0, 0, 0, 0) 70 %, rgb(0, 0, 0) 100 %)
   return (
     <section style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original${details.backdrop_path})` }}
       className="details">
