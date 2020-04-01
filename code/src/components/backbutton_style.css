@@ -3,6 +3,8 @@
   top: 10;
   left: 50; */
 
+  display: none;
+
 }
 
 .back-button {
@@ -19,7 +21,10 @@
 /****** MEDIA QUERIES FOR RESPONSIVE DESIGN ******/
 @media (min-width: 668px) {
   .back-button {
-    top: 70px
+    top: 100px
+  }
+  .back-button-wrapper {
+    display: contents;
   }
 
 }
