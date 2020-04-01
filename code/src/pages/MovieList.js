@@ -43,7 +43,7 @@ export const MovieList = ({ setDirector, director, directorName }) => {
 		<div className="site-container">
 			<BackButton path={'/'} text={'Back to Movies'} />
 			<header>
-				<h1>Written or directed by {directorName}</h1>
+				<h1>Written and/or directed by {directorName}</h1>
 			</header>
 			<div className="movies-container">
 				{filteredMovies.map((movie) => (
