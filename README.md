@@ -1,13 +1,25 @@
-# Project Movies
+# What is this
 
-Replace this readme with your own information about your project.
+My fourth React project during the Technigo bootcamp.
+Assignment: **Build a multi-page movie application**.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## How I started
 
-## The problem
+I watch all the movies from this week and also a few extra on youtube. Then I made the site accordingly to the project guide. When I was done with that I started with changes. Such as giving the user the option to choose a director and see the movies they have directed or written. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+### What I struggled with and should improve for next weeks project
+
+My big issue this week is that the site doesn't reload when I refresh it. I have tried a few different things and nothing seems to work. I'm hoping that I can get some help with that because I have no idea why it doesn't work or how to approach it.  
+
+### What I'm proud of
+
+I'm really proud if the design. I think it looks pretty cool and I've spent quite some time with the CSS-part of this project. 
+
+## If I had more time
+
+If I hade more time I would have done at least one of the deep dives. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+My multipage movie website:
+https://pretty-decent-directors.netlify.com/
