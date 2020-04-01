@@ -1,13 +1,17 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+Mission was to focus on how to make react apps with multiple pages using routes. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started off by writing with paper and pen, all parts and how they should work together, based on the brief. Installed all dependencies for our project and then I started to code in VS Code, and used Chrome inspector to see the result. 
+
+I added a little responsive design and decided to remove the "back button" from the mobile view.
+If I had more time I would like to do the stretch goals, like adding data from more lists. 
+
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://frosty-bohr-60ebe7.netlify.com/
+
