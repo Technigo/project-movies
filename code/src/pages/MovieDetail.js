@@ -21,29 +21,31 @@ export const MovieDetail = ({ director, directorName }) => {
 	);
 
 	return (
-		<div
-			className="movie-detail-container"
-			style={{
-				backgroundImage  : `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movieInfo.backdrop_path})`,
-				backgroundRepeat : 'no-repeat',
-				backgroundSize   : 'cover'
-			}}
-			key={movieInfo.id}
-		>
+		<section className="wrapper-for-details">
 			<BackButton path={`/${director}/`} text={`Back to ${directorName}'s movies`} />
-			<div className="movie-detail-all-info">
-				<img
-					className="img-poster-detail"
-					src={`https://image.tmdb.org/t/p/w342${movieInfo.poster_path}`}
-					alt={`${movieId.original_title} poster`}
-				/>
-				<div className="movie-detail-text">
-					<h1>
-						{movieInfo.original_title} <span className="movie-rating">{movieInfo.vote_average}/10</span>
-					</h1>
-					<p>{movieInfo.overview}</p>
+			<div
+				className="movie-detail-container"
+				style={{
+					backgroundImage  : `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movieInfo.backdrop_path})`,
+					backgroundRepeat : 'no-repeat',
+					backgroundSize   : 'cover'
+				}}
+				key={movieInfo.id}
+			>
+				<div className="movie-detail-all-info">
+					<img
+						className="img-poster-detail"
+						src={`https://image.tmdb.org/t/p/w342${movieInfo.poster_path}`}
+						alt={`${movieId.original_title} poster`}
+					/>
+					<div className="movie-detail-text">
+						<h1>
+							{movieInfo.original_title} <span className="movie-rating">{movieInfo.vote_average}/10</span>
+						</h1>
+						<p>{movieInfo.overview}</p>
+					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
