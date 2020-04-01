@@ -1,5 +1,41 @@
-.navbar h1 {
+nav {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px 10px rgba(0, 0, 0, 0.5); */
   color: #FFF;
-  margin-left: 20px;
+}
+
+.navbar h1 {
+  margin-left: 25px;
   font-size: 35px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+}
+
+.nav-links a:link {
+  margin-right: 20px;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.nav-links a:visited {
+  color: #FFF;
+}
+
+.nav-links a:hover {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 32px;
+}
+
+.dropdown-style {
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 30px;
 }

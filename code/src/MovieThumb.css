@@ -24,9 +24,29 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0,0,0,.75);
+  background: rgba(0, 0, 0, 0.65);
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+/* Media Quaries */
+
+@media (max-width: 1023px) {
+  .movies-list a:link {
+    width: 33%;
+  }
+}
+
+@media (max-width: 500px) {
+  .movies-list a:link {
+    width: 50%;
+  }
+}
+
+@media (max-width: 320px) {
+  .movies-list a:link {
+    width: 100%;
+  }
 }
