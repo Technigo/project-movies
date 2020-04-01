@@ -25,7 +25,7 @@ export const MovieList = () => {
         <Link to={`/movies/${movie.id}`}>
           <section className='movie-card' key={movie.id}>
             <div className='movie-card-image-wrapper'>
-              <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className='movie-image' />
+              <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} className='movie-image' />
               <div className='movie-title'>
                 <h1>{movie.title}</h1>
                 <p>Released {movie.release_date}</p>

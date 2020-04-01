@@ -1,13 +1,13 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is a website built in React and React Router that shows the most popular movies right now and when clicked it shows the details of the movie. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started by creating a list with the movies from the API. The different pages are linked using React Router. 
+Then a second page was created containing the details of the movie generated from another API endpoint. There is a back button that leads you back to all the movies. 
+If I had had more time I would have made an error message and added a page to see movies in the same genre. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Take a look! 

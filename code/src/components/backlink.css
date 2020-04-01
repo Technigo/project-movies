@@ -1,0 +1,24 @@
+.back-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.back-link-text {
+  margin-left: 8px;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: margin-left 0.4s ease-in-out;
+}
+
+.back-link-text:hover {
+  margin-left: 10px;
+}
+
+svg {
+  width: 30px;
+}
