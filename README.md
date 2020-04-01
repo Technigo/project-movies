@@ -1,13 +1,11 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Technigo Remote Bootcamp Project to practice multipage React application, using API. Building a "popular movies" page where you can find info pages for each movie.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Planned the project to consist of the maim Film List page, and a Film Info page that fetches the information for each movie in question.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://thirsty-ramanujan-35c0ff.netlify.com/
