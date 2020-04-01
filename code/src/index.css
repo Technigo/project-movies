@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -11,3 +17,69 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+/* NAV BAR STUFF */
+
+.nav-link {
+  text-decoration: none;
+  color: rgb(23, 23, 36);
+}
+.nav-link.active {
+  color: crimson;
+}
+nav {
+  display: inline;
+}
+.list-items {
+  list-style: none;
+  display: inline-flex;
+  padding: 5px;
+  margin: 2px;
+  border: 1px solid grey;
+}
+
+
+
+/* CARD & LIST PAGE */
+
+.card-wrapper {
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+}
+.card-wrapper .a-tag {
+width: 25%;
+position: relative;
+color: #fff;
+text-decoration: none;
+}
+
+.card-wrapper .a-tag img {
+  width: 100%;
+}
+.details-div {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background: rgba(0,0,0,.75);
+display: none;
+padding: 20px;
+}
+.details-div h1 {
+margin-top: auto;
+margin-bottom: 0;
+}
+a:hover + details-div {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+  display: inline;
+  z-index: 10;
+}
+
+/* Details PAGE */
