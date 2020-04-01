@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import './similarmovies.css'
 
 export const SimilarMovies = () => {
   const { movieId } = useParams()
@@ -14,9 +15,15 @@ export const SimilarMovies = () => {
       })
   }, [movieId])
 
-  if (setMovies === []) {
+  if (!movies.length) {
     return (
-      <div className="not-found-message">No similar movies found.</div>
+      <section className="not-found-message">
+        <p>No similar movies found.</p>
+        <Link className="backlink" to="/">
+          <span role="img" aria-label="back-to-movies">◀️ </span>
+          <span className="back-to-movies">Back to movies</span>
+        </Link>
+      </section>
     )
   }
 

@@ -1,3 +1,15 @@
+
 .not-found-message{
-  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+}
+
+.not-found-message p{
+  margin-left: 50px;
 }
