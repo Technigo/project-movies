@@ -1,13 +1,11 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project was one of the projects at the Technigo bootcamp. The focus was to practice React Routing while using a movie API to fetch a list of movies, display them on a page and then link to a movie detail page when you click on the movie.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started out with the structure of the pages and routes before I added the styling. After that I also added another route to a page to see similar movies to the one you had clicked on. If there are no similar movies you are directed to a "not found-page".
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://best-rated-movies.netlify.com/
