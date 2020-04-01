@@ -9,6 +9,8 @@
   flex-direction: column;
   flex-wrap: wrap;
 
+  justify-content: center;
+
 }
 
 .movie-card {
@@ -39,6 +41,8 @@
   max-width: 280px;
   margin-top: 10px;
 
+  text-shadow: 1px 0.5px rgb(53, 53, 53);
+
 }
 
 h1 {
@@ -50,9 +54,10 @@ p {
 }
 
 .vote-number {
-  color: rgb(191, 0, 0);
+  color: rgb(228, 0, 0);
   font-size: 15px;
   font-weight: 500;
+  text-shadow: none;
 
 }
 

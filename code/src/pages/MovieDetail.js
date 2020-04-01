@@ -2,6 +2,7 @@ import React, { useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 
 import './moviedetail_style.css'
+import { BackButton } from 'components/BackButton'
 
 
 export const MovieDetails = () => {
@@ -27,24 +28,16 @@ export const MovieDetails = () => {
     <main>
 
       <div className="movie-container" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}}>
-
+        <BackButton />
         <article className="movie-card">
           <img className="movie-image" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}/>
-
           <div className="movie-info-on-card">
             {/* <p>Movie details</p>  */}
             <h1>{movie.title} <span className="vote-number">{movie.vote_average}/10</span></h1> 
             <p>{movie.overview}</p> 
           </div>
         </article>
-
-
-
-
-        
       </div>
-
     </main>
   )
-
 }
