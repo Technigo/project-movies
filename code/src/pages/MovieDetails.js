@@ -9,11 +9,13 @@ export const MovieDetails = () => {
   const { movieId } = useParams()
   const [movieDetails, setMovieDetails] = useState([])
 
+  const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=00a26f8911994a10cd0aea2660d5417f&language=en-US&page=1`
+
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=00a26f8911994a10cd0aea2660d5417f&language=en-US&page=1`)
+    fetch(apiUrl)
       .then(res => res.json())
       .then(json => setMovieDetails(json))
-  }, [movieId])
+  }, [apiUrl, movieId])
 
   return (
     <>

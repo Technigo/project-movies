@@ -15,14 +15,12 @@ export const MoviesList = () => {
     upcoming: 'Upcoming'
   }
 
-  const apiUrl = `https://api.themoviedb.org/3/movie/${endpoint}?api_key=00a26f8911994a10cd0aea2660d5417f&language=en-US&page=1`
-
 
   useEffect(() => {
-    fetch(apiUrl)
+    fetch(`https://api.themoviedb.org/3/movie/${endpoint}?api_key=00a26f8911994a10cd0aea2660d5417f&language=en-US&page=1`)
       .then(res => res.json())
       .then(json => setMovies(json.results))
-  }, [apiUrl, endpoint])
+  }, [endpoint])
 
 
   return (
