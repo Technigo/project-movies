@@ -5,30 +5,30 @@ import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export const GenreList = () => {
 
-  const [genre, setGenre] = useState([]);
+  const [movieList, setMovieList] = useState();
   const params = useParams();
-  console.log("params", params)
-  console.log("genre", genre)
-
+  console.log("params", params.selectedgenre)
+  console.log("movielist", movieList)
+  
   useEffect(() => {
     fetch(`
     https://api.themoviedb.org/3/discover/movie?api_key=ee5e4399bb9b4b26410c80fdb1ecdd56&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${params.selectedgenre}`, {
       method: "GET"
     })
     .then(response => response.json())
-    .then(genre => setGenre(genre.results))
+    .then(genre => setMovieList(genre.results))
   }, [])
 
-  {if (genre === []) {
-    return 
+  if (movieList === undefined) {
+    return (<div>Loading</div>)
    }
    
    return (
-     
-        <MovieList movies={genre} />
+
+      <MovieList movieList={movieList}/>
 
    )
   
-  }
+  
 }
 

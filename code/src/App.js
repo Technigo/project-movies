@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { MovieList } from "./pages/MovieList"
-import { ShowMovieDetails } from "./pages/ShowMovieDetails"
+import { Movie } from "./pages/Movie"
 import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { GenreList } from 'pages/GenreList';
 
 export const App = () => {
 
-  const [allMovies, setAllMovies] = useState([]);
+  const [movieList, setMovieList] = useState([]);
 
   useEffect(() => {
-    fetch("https://api.themoviedb.org/3/discover/movie?api_key=ee5e4399bb9b4b26410c80fdb1ecdd56&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=14&page=1", {
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=ee5e4399bb9b4b26410c80fdb1ecdd56&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=14&page=1`, {
       method: "GET"
     })
     .then(response => response.json())
-    .then(movies => setAllMovies(movies.results))
+    .then(movies => setMovieList(movies.results))
   }, [])
-
 
   return (
 
@@ -23,12 +22,12 @@ export const App = () => {
     <Switch>
 
       <Route exact path="/">
-        < MovieList movies={allMovies}/>
+        < MovieList movieList={movieList}/>
       </Route>
 
-      {/* <Route exact path="/movie/:moviedetails">
-        <ShowMovieDetails movies={allMovies}/>
-      </Route>  */}
+      <Route exact path="/movie/:moviedetails">
+        <Movie />
+      </Route> 
 
       <Route exact path="/genre/:selectedgenre">
         <GenreList />
@@ -37,10 +36,6 @@ export const App = () => {
     </Switch>
     </Router>
   
-        // < Movies allMovies={allMovies} /> 
-
   )
     
-  }
-
-// "https://api.themoviedb.org/3/discover/movie?api_key=ee5e4399bb9b4b26410c80fdb1ecdd56&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=14&page=1"
+}
