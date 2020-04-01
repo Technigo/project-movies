@@ -1,3 +1,37 @@
-.movie-details {
 
+.details-background-image {
+  background-size: cover;
+  height:100vh;
+}
+h1{
+  color:#fff;
+  font-size:28px;
+  margin-bottom: 0;
+  font-weight: 800;
+}
+span{
+  font-size: 18px;
+  color:#de0404;
+}
+.details{
+  display:flex;
+  align-items: flex-end;
+  padding:7% 5%;
+}
+.details-overview {
+  color: #fff;
+  font-size:18px;
+  font-weight: 600;
+}
+.details-container {
+  width:600px;
+  display:flex;
+  flex-direction:column;
+  padding-left: 3%;
+  
+}
+
+.details-mini-poster {
+  height: 500px;
+  border:solid 5px #fff;
 }

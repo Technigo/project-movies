@@ -6,7 +6,7 @@ a {
   color:#fff;
 }
 .movie-list-container{
-  background-color: blueviolet;
+  background-color: #000;
   display:flex;
   flex-wrap:wrap;
   margin:0;
@@ -16,6 +16,7 @@ a {
  width:25%;
  height:auto;
  position:relative;
+ margin:0;
 }
 
 .movie-thumb-image{
@@ -32,8 +33,12 @@ a {
   top:0;
   left:0;
   z-index:1;
-  opacity:0
+  opacity:0;
   
+  
+}
+div.details{
+  padding-bottom:0;
 }
 .movie-thumb:hover .overlay {
   transition:opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -43,6 +48,7 @@ a {
 .movie-thumb-text{
   margin-top:80%;
   padding:20px;
+  
 }
 .movie-thumb-text h1{
   font-size:32px;
