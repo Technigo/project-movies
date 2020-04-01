@@ -1,13 +1,12 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A movie website built with React.js and using the router to navigate to different pages.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Approached the project by splitting up the homepage from the detailed info to make sure that the basics worked. Did the same type of map-function I've used in the passed and was able to retrive all info I wanted. Later on did a dropdown that will sort the list of movies depending on the chosen category, popular by default. 
+Continued with the details for each movie and styling the site to make it responsive and easy to use. Added some animation on the back button and a darken gradient for the background.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Deployed site: https://proj-movies-bealun.netlify.com/
