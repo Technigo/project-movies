@@ -1,10 +1,14 @@
+a {
+  text-decoration: none;
+}
+
 .back-link {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 
-.back-link-text {
+.back-link-text{
   margin-left: 8px;
   margin: 0;
   font-size: 24px;
@@ -14,6 +18,8 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: margin-left 0.4s ease-in-out;
 }
+
+
 
 .back-link-text:hover {
   margin-left: 10px;

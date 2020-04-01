@@ -29,7 +29,7 @@ export const MovieDetails = () => {
       <article className='movie-details'>
         <img src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`} alt='movieposter' className='movie-poster' />
         <div className='movie-text'>
-          <h1>{movieDetails.title} <span className='average-vote'>{movieDetails.vote_average} /10</span></h1>
+          <h1>{movieDetails.title} <span className='average-vote'>{movieDetails.vote_average}/10</span></h1>
           <p>{movieDetails.overview}</p>
         </div>
       </article>
