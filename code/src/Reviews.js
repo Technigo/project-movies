@@ -9,25 +9,26 @@ export const Reviews = (props) => {
     const params = useParams()
     const [reviews, setReviews] = useState([])
     const [i, setI] = useState(0)
-    const [isLoading, setIsLoading] = useState(true)
+    const [status, setStatus] = useState(200)
     const history = useHistory()
-
-
     const selectedFilm = films.find((film) => film.title === params.title) || recommendedFilms.find((film) => film.title === params.title)
-    useEffect(() => {
 
+    useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/${selectedFilm.id}/reviews?api_key=11a30ee49cca0ec90b41dc63ab197a6d&language=en-US&page=1`)
-            .then((res) => res.json())
+            .then((res) => {
+                setStatus(res.status)
+                return res.json()
+            })
             .then((data) => {
                 setReviews(data.results)
-                setIsLoading(false)
-            }
-            )
+            })
     }, [])
 
-    if (!selectedFilm || !reviews) {
-        window.location.href = '/'
-    }
+    useEffect(() => {
+        if (status !== 200) {
+            history.push('/')
+        }
+    }, [status])
 
     return (
         <section className="film-detail-container" style={{
@@ -42,8 +43,10 @@ export const Reviews = (props) => {
                 <img className="film-img" src={`https://image.tmdb.org/t/p/w342${selectedFilm.poster_path}`} alt={selectedFilm.title} />
             </article >
 
-            <article className="right-column-review">
-                {!isLoading &&
+            <article className="right-column-review" style={{ alignSelf: reviews.length === 0 ? "center" : "flex-end" }}>
+                {reviews.length === 0 &&
+                    <p className="no-reviews">There are currently no reviews for this film. Write one and be the first!</p>}
+                {reviews.length > 0 &&
                     <div >
                         {reviews[i].content.length > 1000 &&
                             <p>{reviews[i].content.substr(0, 1000) + "..."}</p>}
@@ -51,15 +54,17 @@ export const Reviews = (props) => {
                             <p>{reviews[i].content}</p>}
                         <p>{reviews[i].author}</p>
                         {reviews[i].content.length > 1000 &&
-                            <p>Read full review <a className="review-link" href={reviews[i].url} target="_blank">here.</a></p>}
+                            <p>Read full review <a className="review-link" href={reviews[i].url} target="_blank"
+                                rel="noopener noreferrer">here.</a></p>}
+
+                        <div className="buttons-container">
+                            {i !== 0 &&
+                                <button className="nav-button" onClick={() => setI(i - 1)}><BackSvg className="icon" />Back</button>}
+                            {i !== reviews.length - 1 &&
+                                <button className="nav-button" onClick={() => setI(i + 1)}>Next<NextSvg className="icon" /></button>}
+                        </div>
+                        <p>{i + 1} of {reviews.length}</p>
                     </div>}
-                <div className="buttons-container">
-                    {i != 0 &&
-                        <button className="nav-button" onClick={() => setI(i - 1)}><BackSvg className="icon" />Back</button>}
-                    {i != reviews.length - 1 &&
-                        <button className="nav-button" onClick={() => setI(i + 1)}>Next<NextSvg className="icon" /></button>}
-                </div>
-                <p>{i + 1} of {reviews.length}</p>
             </article>
         </section >
     )

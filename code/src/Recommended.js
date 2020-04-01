@@ -9,6 +9,9 @@ export const Recommended = (props) => {
 
     useEffect(() => {
         const selectedFilm = films.find((film) => film.title === params.title) || recommendedFilms.find((film) => film.title === params.title)
+        if (!selectedFilm) {
+            window.location.href = '/'
+        }
         fetch(`https://api.themoviedb.org/3/movie/${selectedFilm.id}/recommendations?api_key=11a30ee49cca0ec90b41dc63ab197a6d&language=en-US&page=${pageNumber}`)
             .then((res) => res.json())
             .then(data => setRecommendedFilms(data.results))

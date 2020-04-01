@@ -6,6 +6,7 @@ import { FilmDetails } from 'FilmDetails'
 import { NavBar } from "./NavBar"
 import { Recommended } from 'Recommended'
 import { Reviews } from 'Reviews'
+import { Footer } from "./Footer"
 
 
 export const App = () => {
@@ -37,6 +38,7 @@ export const App = () => {
         </Switch>
 
       </main>
+      <Footer viewCount={viewCount} />
     </BrowserRouter>
   )
 

@@ -15,11 +15,12 @@ color: white;
 }
 
 .film-card:hover .poster-text {
-    display: block;
+    opacity: 1;
 }
 
 .film-poster {
     width: 100%;
+    transition: all .3s ease-in-out;
 }
 
 .seen {
@@ -39,7 +40,8 @@ color: white;
 position: absolute;
 align-self: center;
 padding: 15px;
-display: none;
+opacity: 0;
+transition: all .3s ease-in-out;
 }
 
 .film-title {

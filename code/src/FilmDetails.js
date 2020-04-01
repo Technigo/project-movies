@@ -13,7 +13,6 @@ export const FilmDetails = (props) => {
         window.location.href = '/'
     }
     const [seen, setSeen] = useState(localStorage.getItem(`${selectedFilm.id}`))
-    console.log(selectedFilm)
     const handleClick = () => {
         localStorage.setItem(`${selectedFilm.id}`, true)
         setSeen(localStorage.getItem(`${selectedFilm.id}`))

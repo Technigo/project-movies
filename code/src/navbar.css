@@ -4,7 +4,7 @@
     display: flex;
     padding: 20px;
     align-items: center;
-    justify-content: space-between;
+   
 }
 
 .home-button {
@@ -25,4 +25,14 @@
     font-family: 'Permanent Marker';
     font-size: 40px;
     margin: 0;
+    display: none;
+}
+
+@media (min-width: 680px) {
+.nav-bar {
+    justify-content: space-between;
+}
+    .headline {
+        display: block;
+    }
 }

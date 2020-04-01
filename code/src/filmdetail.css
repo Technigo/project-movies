@@ -6,6 +6,7 @@
     height: 100%;
     width: 100vw;
     padding: 46px;
+    background-attachment: fixed;
 }
 
 .left-column {
@@ -70,14 +71,14 @@
 
 .film-img {
     border: 6px solid white;
-    margin-right: 20px;
+    
 }
 
 .film-name {
     font-size: 24px;
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: space-between ;
 }
 
 .film-rating {
@@ -130,5 +131,9 @@
         align-self: flex-end;
         width: 35%;
        
+    }
+
+    .film-img {
+        margin-right: 20px;
     }
 }
