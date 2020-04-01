@@ -1,13 +1,11 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A multi-page React application using the [Movie Database API] (https://www.themoviedb.org/).
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The app is divided in two pages using React Router, and each of them are split up in components. The movie listing page is rendered by combining `useState` and `useEffect`, via the filter input.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://project-movies-list.netlify.com/
