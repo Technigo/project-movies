@@ -9,13 +9,11 @@
 }
 
 .movieListCard {
-  width: 25%;
- 
+  width: 50%;
 }
 
 .imgList {
-  width: 100%;
-  
+  width: 100%; 
 }
 
 .titleList {
@@ -36,11 +34,10 @@
 .titleList:hover {
 background-color: rgba(24, 22, 22, 0.651);
 opacity: 1;
-
 }
 
 .titleList h3 {
-font-size: 20px;
+font-size: 18px;
 font-weight: 400;
 }
 
@@ -48,15 +45,17 @@ font-weight: 400;
 margin: 0; 
 }
 
+.titleList h2 {
+  font-size: 20px;
+}
 
 
-
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 1000px) {
   .movieListCard {
-    width: 50%;
+    width: 25%;
   }
 
   .titleList h2 {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
