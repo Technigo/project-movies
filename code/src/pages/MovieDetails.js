@@ -5,14 +5,15 @@ import './moviedetails.css'
 export const MovieDetails = () => {
   const { movieId } = useParams()
   const [movie, setMovie] = useState({})
+  const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=df891c50a8dd83e3e3bb1b5bb74c3699&language=en-US`
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=df891c50a8dd83e3e3bb1b5bb74c3699&language=en-US`)
+    fetch(url)
       .then(res => res.json())
       .then(json => {
         setMovie(json)
       })
-  }, [movieId])
+  }, [url, movieId])
 
   return (
     <section className="detail-page">

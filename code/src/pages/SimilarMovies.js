@@ -13,7 +13,10 @@ export const SimilarMovies = () => {
       })
   }, [movieId])
 
+  // setMovies !== [] && 
+
   return (
+  
     <section className="movies-container">
 
       {movies.map(movie => (
