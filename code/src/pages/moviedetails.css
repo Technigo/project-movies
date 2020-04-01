@@ -27,11 +27,9 @@
   align-items: flex-end;
 }
 
-
 .movie-poster{
   border: solid 5px #fff;
 }
-
 
 .movie-text {
   color: white;

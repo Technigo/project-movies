@@ -5,9 +5,7 @@ import { MovieDetails } from './pages/MovieDetails'
 
 export const App = () => {
 
-
   return (
-
     <BrowserRouter>
       <Switch>
         <Route path='/' exact>
@@ -18,6 +16,5 @@ export const App = () => {
         </Route>
       </Switch>
     </BrowserRouter>
-
   )
 }

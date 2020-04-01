@@ -19,7 +19,6 @@ export const MovieDetails = () => {
   }, [detailsApiUrl, movieId]
   )
 
-
   return (
     <div className='movie-details-container' style={{
       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), 
@@ -34,6 +33,5 @@ export const MovieDetails = () => {
         </div>
       </article>
     </div>
-    // </div >
   )
 }
