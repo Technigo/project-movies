@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import "./FilmInfo.css"
 
 export const FilmInfo = () => {
@@ -15,12 +16,18 @@ export const FilmInfo = () => {
     })
   }, [filmId])
 
-  if (!movies) {
-    return <></>
+  const detailStyle= {
+    backgroundImage: `url("http://image.tmdb.org/t/p/w1280${movies.backdrop_path}")`
   }
   
   return (
-    <div>
+  
+    <div className="movie" style={detailStyle}>
+      <Link to={`/`}>
+      <a href="#" class="previous round">&#8249;</a>
+      </Link>
+  
+
       <div key={movies.id} className="summary">
         <img className="poster" src={`http://image.tmdb.org/t/p/w300${movies.poster_path}`} alt={movies.original_title} />
         <p><h2>{movies.original_title}</h2>
