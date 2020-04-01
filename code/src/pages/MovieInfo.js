@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
-
+import { BackIcon} from'../components/BackIcon'
 import '../style/movieInfo.css'
 
 export const MovieInfo = () => {
@@ -22,7 +22,7 @@ export const MovieInfo = () => {
         backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)), 
             url(https://image.tmdb.org/t/p/w1280${info.backdrop_path})`
       }}>
-      <div className="poster-container"><Link className="back" to="/"><i className="arrow-right"></i>Movies</Link>
+      <div className="poster-container"><Link className="back" to="/"><BackIcon /><h5>Movies</h5></Link>
         <img className="poster" src={`https://image.tmdb.org/t/p/w300${info.poster_path}`} />
       </div>
       <div className="info-text">
