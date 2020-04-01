@@ -1,0 +1,47 @@
+.movies-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.movies-list-content {
+  position: relative;
+  width: 25%;
+}
+
+.movies-list-img {
+  width: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.movies-list-content:hover .movies-list-img{
+  opacity: 0.2;
+}
+
+.movie-details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+
+  /* Specify the animation time */
+  webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.movies-list-content:hover .movie-details {
+  visibility: visible;
+  opacity: 1;
+}

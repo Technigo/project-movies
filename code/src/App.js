@@ -6,14 +6,16 @@ import { MovieDetails } from 'pages/MovieDetails'
 export const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route path="/" exact>
-          <MoviesList />
-        </Route>
-        <Route path="/movies/:movieId">
-          <MovieDetails />
-        </Route>
-      </Switch>
+      <main>
+        <Switch>
+          <Route path="/" exact>
+            <MoviesList />
+          </Route>
+          <Route path="/movies/:movieId">
+            <MovieDetails />
+          </Route>
+        </Switch>
+      </main>
     </BrowserRouter>
   )
 }
