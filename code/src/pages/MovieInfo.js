@@ -18,13 +18,16 @@ export const MovieInfo = () => {
   }
 
   return (
-    <article className="info-container">
+    <article className="info-container" style={{
+        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)), 
+            url(https://image.tmdb.org/t/p/w1280${info.backdrop_path})`
+      }}>
       <div className="poster-container"><Link className="back" to="/"><i className="arrow-right"></i>Movies</Link>
         <img className="poster" src={`https://image.tmdb.org/t/p/w300${info.poster_path}`} />
       </div>
       <div className="info-text">
         <div className="title-and-rating">
-          <h3>{info.original_title}</h3>
+          <h3>{info.title}</h3>
           <h4>{info.vote_average}/10</h4>
         </div>
       <p>{info.overview}</p>
