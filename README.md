@@ -1,13 +1,11 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Assignment 12 at Technigo bootcamp. Assignment to learn multi page development in React.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The problem this time was to figure out how the API was working, it was difficult to try and render different lists with just one component since the API was built differently depending on what list you want. If I had more time I would like to add a navbar with different genres and a link back to the main page
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://malins-movie-project.netlify.com
