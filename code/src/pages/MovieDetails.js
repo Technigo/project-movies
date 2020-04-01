@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { BackButton } from '../components/BackButton.js'
 import './moviedetails.css'
 
 export const MovieDetails = () => {
@@ -19,9 +20,12 @@ export const MovieDetails = () => {
   )
 
 
-
   return (
-    <div className='background'>
+    <div className='movie-details-container' style={{
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), 
+    url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`
+    }}>
+      <BackButton />
       {/* <div
         className="movie-detail-container"
         style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})` }}> */}

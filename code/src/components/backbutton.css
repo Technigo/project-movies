@@ -1,0 +1,24 @@
+.back-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.back-button-text {
+  margin-left: 5px;
+  margin: 0; 
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  transition: margin-left 0.4s ease-in-out;
+}
+
+.back-button-text:hover {
+  margin-left: 10px;
+}
+
+svg {
+  width: 30px;
+}

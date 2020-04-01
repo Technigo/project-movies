@@ -2,15 +2,19 @@
   box-sizing: border-box;
 }
 
-.background {
+.movie-details-container {
   display: flex;
-  align-items: flex-end;  
+  flex-direction: column;
+  align-items: flex-start;  
+  justify-content:space-between;
   background-color: #000;
+  background-size: cover;
   min-height: 100vh;
   padding: 50px; 
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .movie-backdrop {
   min-height: 90vh;
   background-size: cover;
@@ -21,8 +25,6 @@
 .movie-details {
   display: flex;
   align-items: flex-end;
-  padding: 50px;
-
 }
 
 
