@@ -6,6 +6,7 @@ import './director.css';
 export const MovieList = ({ setDirector, director, directorName }) => {
 	const [ movies, setMovies ] = useState([]);
 	let filteredMovies = [];
+	setDirector(localStorage.getItem('director'));
 
 	useEffect(
 		() => {
@@ -39,7 +40,6 @@ export const MovieList = ({ setDirector, director, directorName }) => {
 		});
 	}
 
-	// if (director !== '') {
 	return (
 		<div className="site-container">
 			<h1>Written or directed by {directorName}</h1>

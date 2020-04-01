@@ -8,11 +8,9 @@ export const Director = ({ setDirector, setDirectorName }) => {
 	const tarantino = 138;
 
 	const changeDirector = (director, directorName) => {
-		if (director !== '') {
-			localStorage.setItem('director', director);
-			setDirector(localStorage.getItem('director'));
-			setDirectorName(directorName);
-		}
+		localStorage.setItem('director', director);
+		setDirector(director);
+		setDirectorName(directorName);
 	};
 
 	return (
