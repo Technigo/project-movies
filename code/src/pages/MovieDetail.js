@@ -3,9 +3,8 @@ import { useParams } from 'react-router-dom';
 import { BackButton } from 'components/BackButton';
 import './moviedetail.css';
 
-export const MovieDetail = (
-	{ directorName }
-	) => {
+export const MovieDetail = ({ directorName, setDirectorName }) => {
+	setDirectorName(localStorage.getItem('directorName'));
 	const { directorId, movieId } = useParams();
 	const [ movieInfo, setMovieInfo ] = useState([]);
 
@@ -25,7 +24,7 @@ export const MovieDetail = (
 	return (
 		<section className="wrapper-for-details">
 			<div className="button-wrapper">
-			<BackButton path={`/${directorId}/`} text={`Back to ${directorName}`} />
+				<BackButton path={`/${directorId}/`} text={`Back to ${directorName}`} />
 			</div>
 			<div
 				className="movie-detail-container"

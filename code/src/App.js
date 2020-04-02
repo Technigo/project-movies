@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { MovieList } from './pages/MovieList';
 import { MovieDetail } from './pages/MovieDetail';
@@ -10,17 +10,13 @@ export const App = () => {
 		<BrowserRouter>
 			<Switch>
 				<Route path="/" exact>
-					<Director setDirectorName={setDirectorName}
-					/>
+					<Director setDirectorName={setDirectorName} />
 				</Route>
 				<Route path={`/:directorId/`} exact>
-					<MovieList
-					directorName={directorName}
-					/>
+					<MovieList directorName={directorName} setDirectorName={setDirectorName} />
 				</Route>
 				<Route path={`/:directorId/:movieId`}>
-					<MovieDetail directorName={directorName}
-					/>
+					<MovieDetail directorName={directorName} setDirectorName={setDirectorName} />
 				</Route>
 			</Switch>
 		</BrowserRouter>

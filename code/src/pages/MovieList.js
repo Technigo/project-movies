@@ -4,8 +4,10 @@ import './movielist.css';
 import './director.css';
 import { BackButton } from 'components/BackButton';
 
-export const MovieList = ({ directorName}) => {
-	 const { directorId } = useParams();
+export const MovieList = ({ directorName, setDirectorName }) => {
+	setDirectorName(localStorage.getItem('directorName'));
+
+	const { directorId } = useParams();
 
 	const [ movies, setMovies ] = useState([]);
 	let filteredMovies = [];
@@ -16,7 +18,7 @@ export const MovieList = ({ directorName}) => {
 				setMovies(json.crew);
 			});
 		},
-		[url ]
+		[ url ]
 	);
 
 	//So many if's but I'm not sure how to write this otherwise so I'll keep it like this for now
@@ -58,8 +60,12 @@ export const MovieList = ({ directorName}) => {
 							<div className="movie-card-layer" />
 							<div className="text-container">
 								<h2>{movie.original_title}</h2>
-								
-								<p><span className="release-date">Release date:</span><br/>{movie.release_date}</p>
+
+								<p>
+									<span className="release-date">Release date:</span>
+									<br />
+									{movie.release_date}
+								</p>
 							</div>
 						</div>
 					</Link>
