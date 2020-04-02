@@ -12,9 +12,6 @@ a {
   margin:0;
 }
 
-h1 {
-  margin:0;
-}
 .movie-thumb {
   width:25%;
   height:auto;
@@ -54,4 +51,30 @@ div.details {
 }
 .movie-thumb-text h1 {
   font-size:32px;
+  margin:0;
+}
+
+@media (max-width:768px){
+  .movie-thumb{
+    width: 33.33%;
+  }
+  .movie-thumb-text h1 {
+    font-size:24px;
+  }
+  span p{
+    font-size:18px;
+  }
+}
+
+@media (max-width:375px){
+
+  .movie-thumb{
+    width: 50%;
+  }
+  .movie-thumb-text h1 {
+    font-size:18px;
+  }
+  span p{
+    font-size:12px;
+  }
 }
