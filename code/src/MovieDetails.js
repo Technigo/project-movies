@@ -28,7 +28,10 @@ export const MovieDetails = () => {
             {movie.overview}
           </p>
           <h2>
-            Rating: {movie.vote_average}/10 | Released: {movie.release_date}
+
+            {/* add genre instead of budget! */}
+
+            Genre: {movie.budget} | Rating: {movie.vote_average}/10 | Released: {movie.release_date}
           </h2>
         </div>
       </div>
