@@ -1,13 +1,13 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I built a multi-page React application that shows the most popular movies in the US. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started by skissing of how many pages I wanted to display and which components to use. Then I used postman to check out the api and how the information was set up. I worked in React and used useState, useEffects, Route, Switch and BrowserRouter to enable the functionality in this project.
+
+If I had more time, I would have made a nav bar and bring in more info from different endpoints in the api.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://blissful-raman-86c1a0.netlify.com
