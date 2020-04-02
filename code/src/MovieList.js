@@ -28,24 +28,26 @@ export const MovieList = () => {
   }, [])
 
   return (
-    <div>
+    <div className="movie-list">
       {movies.map((movie => (
         <Link
-          to={`/movies/${movie.id}`}
+          to={`/movie/${movie.id}`}
           key={movie.id}>
-          <div className="movie-container">
+          <div
+            className="movie-container"
+            style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.poster_path})` }}>
+
             <h1>
               {movie.title}
             </h1>
-            <h1>
-              {movie.id}
-            </h1>
-            <h2>
-              {movie.release_date}
-            </h2>
-            <p>
-              {movie.overview}
-            </p>
+            <div className="overview-release-wrapper">
+              <p>
+                {movie.overview}
+              </p>
+              <h2>
+                {movie.vote_average}/10
+              </h2>
+            </div>
           </div>
         </Link>
       )))}

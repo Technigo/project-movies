@@ -1,17 +1,91 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1 {
+font-size: 35px;
+text-transform: uppercase;
+margin: 0;
+}
+
+h2 {
+font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.movie-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .movie-container {
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 300px;
+  height: 470px;
+  background-size: cover;
+  padding: 20px;
+  margin: 2px;
+}
+
+.movie-container h1 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+}
+
+.overview-release-wrapper p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+}
+
+/* movie-details page */
+
+.movie-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  padding: 70px;
+}
+
+.poster-text-wrapper{
+display: flex;
+flex-direction: row;
+}
+
+.poster-text-wrapper img {
+width: 300px;
+padding: 20px;
+}
+
+.overview-rating-wrapper {
+padding: 20px;
+}
+
+.movie-details-wrapper h1 {
+font-size: 50px;
+}
+
+.overview-rating-wrapper p {
+  font-size: 25px;
 }
