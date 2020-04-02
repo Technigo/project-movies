@@ -11,6 +11,10 @@ a {
   flex-wrap:wrap;
   margin:0;
 }
+h1{
+  margin:0;
+  
+}
 
 .movie-thumb {
  width:25%;
@@ -20,10 +24,8 @@ a {
 }
 
 .movie-thumb-image{
-  
   width:100%;
   position:relative;
-  
 }
 .overlay {
   background-color:rgba(0,0,0,0.0);
@@ -34,22 +36,29 @@ a {
   left:0;
   z-index:1;
   opacity:0;
-  
-  
 }
+
 div.details{
   padding-bottom:0;
 }
+
 .movie-thumb:hover .overlay {
   transition:opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   background-color:rgba(0,0,0,0.8);
   opacity:1
 }
 .movie-thumb-text{
-  margin-top:80%;
-  padding:20px;
+height:100%;
   
 }
+.movie-thumb-text{
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-end;
+  padding-left:20px;
+  padding-bottom:20px;
+}
+
 .movie-thumb-text h1{
   font-size:32px;
 }

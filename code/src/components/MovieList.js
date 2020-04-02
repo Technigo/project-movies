@@ -24,7 +24,7 @@ export const MovieList = () => {
             <div className="overlay">
               <div className="movie-thumb-text">
               <h1>{movie.title}</h1>
-              <p className="movie-thumbnail-image-releasedate">{movie.release_date}</p>
+              <p className="movie-thumbnail-image-releasedate">Release date {movie.release_date}</p>
               </div>
             </div>
             <img className="movie-thumb-image"
