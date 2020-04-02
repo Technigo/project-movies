@@ -7,7 +7,6 @@ export const InputRadio = ({ label, id, object, state, setState }) => {
       <p>{label}</p>
 
       {/* Render radio buttons from object (props) */}
-
       {Object.keys(object).map(function (item) {
         return (
 

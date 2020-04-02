@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 export const Movie = ({ movieDetails }) => {
   const imgBaseUrl = 'https://image.tmdb.org/t/p'
 
