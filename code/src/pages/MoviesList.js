@@ -19,13 +19,15 @@ export const MoviesList = () => {
 
   // Map over the state and render movie name, release date and poster image
   return (
-    <div>
+    <div className="popular-list-page">
       {movies.map((movie) => (
         <Link to={`/movie/${movie.id}`}>
-          <div key={movie.id}>
+          <div className="popular-movie-wrapper" key={movie.id}>
             <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title}></img>
-            <h3>{movie.title}</h3>
-            <p>Released: {movie.release_date}</p>
+            <div className="details">
+              <h2>{movie.title}</h2>
+              <p className="released-p">Released {movie.release_date}</p>
+            </div>
           </div>
         </Link>
       ))

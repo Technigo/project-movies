@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+.popular-list-page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.popular-list-page a {
+  position: relative;
+  width: 25%;
+  color: white;
+  text-decoration: none;
+}
+
+.popular-movie-wrapper {
+  position: relative;
+}
+
+.popular-list-page a img {
+  width: 100%;
+}
+
+.popular-list-page .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.75);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+}
+
+.popular-list-page .details h2 {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.popular-movie-wrapper:hover .details {
+  visibility: visible;
+}
+
+
+

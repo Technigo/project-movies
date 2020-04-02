@@ -2,22 +2,23 @@ header {
   background-color: black;
   color: white;
   display: flex;
- flex-direction: column;
- padding-bottom: 10px;;
+  flex-direction: column;
+  padding-bottom: 10px; ;
 }
 
 header h1 {
   font-size: 28px;
   margin-left: 20px;
+  font-weight: normal;
 }
 
-a {
+header a {
   color: white;
   text-decoration: none;
   cursor: pointer;
   margin-left: 20px;
 }
 
-.back-link {
+i {
   margin-right: 10px;
 }
