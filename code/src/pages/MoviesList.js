@@ -17,11 +17,11 @@ export const MoviesList = () => {
       })
   }, [])
 
-  // Map over the state and render movie name and release date (image later)
+  // Map over the state and render movie name, release date and poster image
   return (
     <div>
       {movies.map((movie) => (
-        <Link to={`/movies/${movie.id}`}>
+        <Link to={`/movie/${movie.id}`}>
           <div key={movie.id}>
             <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title}></img>
             <h3>{movie.title}</h3>

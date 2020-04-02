@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+.details-page {
+  position: relative;
+  color: white;
+}
+
+.details-background {
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+}
+
+.details-summary {
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+}
+
+.details-page img {
+  border: 5px solid white;
+}
+
+.description {
+  margin-left: 20px;
+}
+
+.vote-average {
+  color: red;
+  font-size: 17px;
+  font-weight: normal;
+  margin-left: 10px;
+}
+.overview {
+  max-width: 400px;
+}
