@@ -41,7 +41,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-end;
-    webkit-transition: 0.2s ease-in-out 0s;
+    transition: 0.2s ease-in-out 0s;
     -moz-transition: 0.2s ease-in-out 0s;
     -o-transition: 0.2s ease-in-out 0s;
     transition: 0.2s ease-in-out 0s;  

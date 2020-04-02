@@ -6,30 +6,30 @@ import './movies.css'
 export const Movies = () => {
   const api_key = 'a73940630fef7bbf6627fbbc1d85c9ee'
   const [movies, setMovies] = useState([])
-  const [chosenCategory, setChosenCategory] = useState('popular')
+  const [category, setCategory] = useState('popular')
 
-  const chosenMovieList = category => {
-    setChosenCategory(category)
+  const choiceOfMovieList = category => {
+    setCategory(category)
   }
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${chosenCategory}?api_key=${api_key}&language=en-US&page=1`)
+    fetch(`https://api.themoviedb.org/3/movie/${category}?api_key=${api_key}&language=en-US&page=1`)
       .then((res) => res.json())
       .then((json) => {
         setMovies(json.results)
       })
-  }, [chosenCategory])
+  }, [category])
 
 
   return (
     <div>
       <header>
-        <Dropdown chosenMovieList={chosenMovieList} />
+        <Dropdown chosenMovieList={choiceOfMovieList} />
       </header>
       <section className='movie-list'>
         {movies.map((movie) => (
           <Link key={movie.id} to={`/movies/${movie.id}`}>
-            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.original_title} />
+            <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.original_title} />
             <div className='text'>
               <h2>{movie.original_title}</h2>
               <h3>Released {movie.release_date}</h3>

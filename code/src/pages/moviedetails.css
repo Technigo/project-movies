@@ -3,13 +3,13 @@ body {
   }
   
   .movie-not-found .back-link, h1 {
-    margin: 20px
+    margin: 200px
   }
   
   span {
-    color: red;
-    font-size: 15px;
+    color: rgb(252, 41, 41);
     margin-left: 10px;
+    font-weight: 600;
   }
   
   .background {
@@ -32,21 +32,22 @@ body {
   }
   
   .summary .text {
-  margin-left: 20px;
+  margin-left: 30px;
   max-width: 400px;
+  font-weight: 300;
   }
   
   h2 {
     font-size: 24px;
   }
   
-  .genre {
+  .producer {
     display: flex;
     flex-direction: row;
   }
   
-  .genre p {
-    background-color: grey;
+  .producer p {
+    background-color: rgb(129, 109, 241);
     margin: 0 5px 0 0;
     padding: 2px;
     border: 1px solid white;
