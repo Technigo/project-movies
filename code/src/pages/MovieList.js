@@ -41,7 +41,7 @@ export const MovieList = ({ directorName}) => {
 
 	return (
 		<div className="site-container">
-			<BackButton path={'/'} text={'Back to Movies'} />
+			<BackButton path={'/'} text={'Back to directors'} />
 			<header>
 				<h1>Written and/or directed by {directorName}</h1>
 			</header>
@@ -59,7 +59,7 @@ export const MovieList = ({ directorName}) => {
 							<div className="text-container">
 								<h2>{movie.original_title}</h2>
 								
-								<p><span className="release-date">Release date:</span> <br/>{movie.release_date}</p>
+								<p><span className="release-date">Release date:</span><br/>{movie.release_date}</p>
 							</div>
 						</div>
 					</Link>
