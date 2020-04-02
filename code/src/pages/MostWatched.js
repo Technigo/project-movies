@@ -17,7 +17,7 @@ export const MostWatched = () => {
 }
 
     return (
-        <section className= "card-wrapper">
+        <section className= "list-wrapper">
         <h1 className="header">Most Watched Today!</h1>
            {albums.map((albumItem) =>
                  <AlbumCard {...albumItem}/>

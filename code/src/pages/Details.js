@@ -19,17 +19,17 @@ export const Details = () => {
         return (
          
                 
-                <section className="specific-detail-wrapper" /* style= background-image: linear-gradient(rgba   (0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url("https://image.tmdb.org/t/p/w1280/lvjRFFyNLdaMWIMYQvoebeO1JlF.jpg") */>
-                    <div className="specific-detail-text-box" >
-                        {details.original_title}
+        <div className="specific-detail-wrapper" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }} alt={details.title}>
+                    <div className="specific-detail-box" >
+                       
                         <img className="specific-detail-img" src = {`https://image.tmdb.org/t/p/w342${details.poster_path}`}/>
-                        <div className="specific-detail-img" >
-                        <p>{details.original_title }</p>
-                        <p>{details.vote_average} </p>
-                        <p> {details.overview} </p>
+                        <div className="specific-detail-txt" >
+                           <div className=" in-line"><h1 className="specific-title">{details.original_title }</h1>
+                            <p className="vote-txt" >{details.vote_average} </p></div> 
+                            <p className="specific-overview" > {details.overview} </p>
                         </div>
                     </div>
-                </section>
+                </div>
          
         )
     }

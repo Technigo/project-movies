@@ -18,8 +18,8 @@ export const BestChoice = () => {
 
     return (
         
-         <section className= "card-wrapper">
-             <p>Filter out bad movies!!</p>
+         <section className= "list-wrapper">
+             <h1 className="header">Only the good ones!</h1>
              
          {albums.filter(albumItem => albumItem.vote_average < 7).map(albumItem => 
                 <AlbumCard {...albumItem}/>
