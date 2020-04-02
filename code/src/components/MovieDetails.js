@@ -19,17 +19,19 @@ export const MovieDetails = () => {
 
   return (
     <div className='details-background-image' style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})` }}>
-
+      <BackToList />
       <article >
-        <BackToList />
+        
+        
         <div className="details">
+         
           <img className="details-mini-poster" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}></img>
           <div className="details-container">
             <h1 className='title'>{movie.title}  <span>{movie.vote_average}/10</span></h1>
-
             <p className="details-overview">{movie.overview}</p>
           </div>
-        </div>
+          </div>
+        <div className="details-overlay"></div>
 
       </article>
     </div>

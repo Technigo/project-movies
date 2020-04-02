@@ -1,15 +1,17 @@
 .fa-chevron-circle-left{
   font-size:28px;
   color:white;
+  z-index:1;
 }
 .back-to-list{
   display:flex;
   align-items: baseline;
   padding-left:30px;
+  
 }
 h2 {
   color:white;
-  
+  z-index:1;
 }
 .back-to-list:hover h2{
  transform: translate(0.5em,0);
