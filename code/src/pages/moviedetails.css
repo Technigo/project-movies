@@ -61,13 +61,14 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: flex-start;
     }
     
     .summary {
       display: flex;
-      align-items: flex-end;
       padding: 50px;
+      flex-flow: wrap-reverse;
+      margin: 10px;
     }
     
     .summary .text {
@@ -76,9 +77,8 @@
       font-weight: 300;
     }
   
-  
     .summary img {
-      width: 80%;
-      height: 80%;
+      width: 50%;
+      height: 50%;
     }
   }
