@@ -15,7 +15,7 @@ h5 {
   color: white;
   margin: 0;
   padding-top: 5px;
-  font-size: 16px;
+  font-size: 25px;
 }
 
 p {
@@ -32,25 +32,22 @@ p {
 .poster {
   position: relative;
   z-index: 1;
-  border: 4px solid white;  
+
+  box-shadow: 0 4px 8px 0 rgb(241, 242, 243), 0 6px 20px 0 rgb(241, 242, 243);
 }
 
 .back {
+  margin-bottom: 16px;
   display: flex;
   flex-direction: row;
-  position: absolute;
-  top: 28px;
-  left: 28px;
   color: white;
   text-decoration: none;
-  z-index: 2;
+  opacity: 0.5;
+  transition: 0.3s;
 }
 
-i {
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
+.back:hover {
+  opacity: 1;
 }
 
 
