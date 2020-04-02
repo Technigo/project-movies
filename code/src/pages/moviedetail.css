@@ -40,6 +40,7 @@
 	flex-direction: column;
 	align-items: center;
 	align-self: flex-end;
+	height: fit-content;
 }
 
 .img-poster-detail {
