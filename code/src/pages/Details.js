@@ -17,12 +17,20 @@ export const Details = () => {
         return <>SORRY ABOUT THAT, ITS NOT FOUND!</>;
     } else {
         return (
-            <Link to ="/" className="a-tag">
-                <section className="details-wrapper">
-                    {details.original_title}
-                    <img src = {`https://image.tmdb.org/t/p/w342${details.poster_path}`}/>
+         
+                
+                <section className="specific-detail-wrapper" /* style= background-image: linear-gradient(rgba   (0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url("https://image.tmdb.org/t/p/w1280/lvjRFFyNLdaMWIMYQvoebeO1JlF.jpg") */>
+                    <div className="specific-detail-text-box" >
+                        {details.original_title}
+                        <img className="specific-detail-img" src = {`https://image.tmdb.org/t/p/w342${details.poster_path}`}/>
+                        <div className="specific-detail-img" >
+                        <p>{details.original_title }</p>
+                        <p>{details.vote_average} </p>
+                        <p> {details.overview} </p>
+                        </div>
+                    </div>
                 </section>
-            </Link>
+         
         )
     }
 }

@@ -3,9 +3,9 @@ import {BrowserRouter, Route, Switch} from "react-router-dom"
 import {About} from "./About"
 import {AlbumList} from "./AlbumList"
 import {Details} from "./Details"
-import { TopList } from "./TopList"
+import { BestChoice } from "./BestChoice"
 import { Nav } from "./Nav"
-
+import {MostWatched} from "./MostWatched"
 
 export const Home = () => {
     return (
@@ -24,14 +24,17 @@ export const Home = () => {
                 <About/>
             </Route>  
 
-            <Route path = "/movie-details/:id">
+            <Route path = "/movie-details/:id" exact>
                 <Details/>
             </Route>
 
-            <Route path = "/top-list" exact>
-                <TopList/>
+            <Route path = "/best-choince" exact>
+                <BestChoice/>
             </Route>
 
+            <Route path = "/most-watched" exact>
+                <MostWatched/>
+            </Route>
             
            
                 

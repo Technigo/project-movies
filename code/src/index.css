@@ -39,47 +39,90 @@ nav {
   border: 1px solid grey;
 }
 
+/* HEADER */
+.header {
+  width: 100%;
+  background-color: rgb(102, 99, 99);
+  padding: 10px;
+  text-align: center;
+}
+
 
 
 /* CARD & LIST PAGE */
-
+.card-section {
+  position: relative;
+}
 .card-wrapper {
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-}
-.card-wrapper .a-tag {
-width: 25%;
-position: relative;
-color: #fff;
-text-decoration: none;
-}
-
-.card-wrapper .a-tag img {
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }
 .details-div {
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-background: rgba(0,0,0,.75);
-display: none;
-padding: 20px;
-}
-.details-div h1 {
-margin-top: auto;
-margin-bottom: 0;
-}
-a:hover + details-div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: rgb(75, 73, 73);
+  font-size: 2em;
+  visibility: hidden;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition:opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4 ease-in-out;
+  transition: opacity 0.4s ease-in-out;
   display: flex;
-  position: relative;
-  flex-wrap: wrap;
-  flex-direction: column;
   justify-content: flex-end;
-  display: inline;
-  z-index: 10;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.details-img{
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition:opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4 ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+.list-wrapper{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }
 
+.card-wrapper:hover .details-div{
+  visibility: visible;
+  opacity: 1;
+}
+.card-wrapper:hover .details-img {
+  opacity: 0.2;
+}
+.details-title {
+  font-size: 0.7em;
+}
+.details-release {
+  font-size: 0.5em;
+}
+
+
 /* Details PAGE */
+
+.specific-detail-text-box{
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+}
+.specific-detail-img{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
