@@ -11,6 +11,7 @@
 	font-weight: 700;
 	margin: 0 0 0 5px;
 	transition: all 0.5s ease-in-out;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .home-button:hover .home-button-text {

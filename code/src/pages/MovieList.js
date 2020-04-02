@@ -58,7 +58,8 @@ export const MovieList = ({ directorName}) => {
 							<div className="movie-card-layer" />
 							<div className="text-container">
 								<h2>{movie.original_title}</h2>
-								<p>{movie.release_date}</p>
+								
+								<p><span className="release-date">Release date:</span> <br/>{movie.release_date}</p>
 							</div>
 						</div>
 					</Link>

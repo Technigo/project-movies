@@ -24,7 +24,7 @@ export const MovieDetail = (
 
 	return (
 		<section className="wrapper-for-details">
-			<BackButton path={`/${directorId}/`} text={`Back to ${directorName}'s movies`} />
+			<BackButton path={`/${directorId}/`} text={`Back to ${directorName}`} />
 			<div
 				className="movie-detail-container"
 				style={{
