@@ -1,8 +1,8 @@
-body {
+  body {
     color: white;
   }
   
-  .movie-not-found .back-link, h1 {
+  .not-found .back-link, h1 {
     margin: 200px
   }
   
@@ -18,7 +18,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
   }
   
   .summary {
@@ -43,7 +43,7 @@ body {
   
   .producer {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
   }
   
   .producer p {
@@ -54,17 +54,31 @@ body {
     display: flex;
   }
   
-  @media (max-width:700px) {
-  
-  .summary {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
+  @media (max-width:650px) {
+    .background {
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    
+    .summary {
+      display: flex;
+      align-items: flex-end;
+      padding: 50px;
+    }
+    
+    .summary .text {
+      margin-left: 30px;
+      max-width: 400px;
+      font-weight: 300;
     }
   
-  .summary img {
-    width: 50%;
-    height: 50%;
+  
+    .summary img {
+      width: 80%;
+      height: 80%;
     }
   }

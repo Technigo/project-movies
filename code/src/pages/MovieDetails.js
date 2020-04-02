@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { BackIcon } from '../components/BackIcon'
+import { HomeLink } from '../components/HomeLink'
 import './moviedetails.css'
 
 
@@ -26,18 +26,18 @@ export const MovieDetails = () => {
 
   if (!details.id) {
     return (
-      <div className='movie-not-found'>
+      <div className='not-found'>
         <h1>Movie not found...</h1>
         <Link to='/' className='back-link'>
-          <BackIcon /> Back to start
+          <HomeLink /> Back to start
         </Link>
       </div>)
   }
 
   return (
-    <>
+    < div className='detail-page'>
     <Link to='/' className='back-link'>
-        <BackIcon /> Movies
+        <HomeLink /> Movies
       </Link>
       <div className='detail-page'>
         <div className='background' style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
@@ -55,6 +55,6 @@ export const MovieDetails = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }

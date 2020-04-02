@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Dropdown } from 'components/Dropdown'
 import './movies.css'
 
 export const Movies = () => {
   const api_key = 'a73940630fef7bbf6627fbbc1d85c9ee'
   const [movies, setMovies] = useState([])
-  const [category, setCategory] = useState('popular')
-
-  const choiceOfMovieList = category => {
-    setCategory(category)
-  }
+  const [category] = useState('popular')
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${category}?api_key=${api_key}&language=en-US&page=1`)
@@ -23,9 +18,6 @@ export const Movies = () => {
 
   return (
     <div>
-      <header>
-        <Dropdown chosenMovieList={choiceOfMovieList} />
-      </header>
       <section className='movie-list'>
         {movies.map((movie) => (
           <Link key={movie.id} to={`/movies/${movie.id}`}>
