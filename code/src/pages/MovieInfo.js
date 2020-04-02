@@ -1,17 +1,28 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useHistory } from 'react-router-dom'
 import { BackIcon} from'../components/BackIcon'
 import '../style/movieInfo.css'
 
 export const MovieInfo = () => {
   const { movieInfo } = useParams();
+  const history = useHistory();
   const [info, setInfo] = useState();
+  const [statusCode, setStatusCode] = useState(200);
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${movieInfo}?api_key=ef0fb1aeba7a73c8909c5037c23fc608&language=en-US`)
-    .then(res => res.json())
+    .then(res => {
+      setStatusCode(res.status);
+      return res.json();
+    })
     .then(json => setInfo(json))
   }, [movieInfo]);
+
+  useEffect(() => {
+    if (statusCode !== 200) {
+      history.push("/");
+    }
+  }, [statusCode])
 
   if(!info){
     return <></>;
@@ -23,7 +34,7 @@ export const MovieInfo = () => {
             url(https://image.tmdb.org/t/p/w1280${info.backdrop_path})`
       }}>
       <div className="poster-container"><Link className="back" to="/"><BackIcon /><h5>Movies</h5></Link>
-        <img className="poster" src={`https://image.tmdb.org/t/p/w300${info.poster_path}`} />
+        <img className="poster" src={`https://image.tmdb.org/t/p/w300${info.poster_path}`} alt={info.title}/>
       </div>
       <div className="info-text">
         <div className="title-and-rating">
@@ -35,5 +46,3 @@ export const MovieInfo = () => {
     </article>
   )
 }
-/*
-<img className="bakground-image" src={`https://image.tmdb.org/t/p/w1280${info.backdrop_path}`} />*/

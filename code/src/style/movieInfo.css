@@ -32,7 +32,6 @@ p {
 .poster {
   position: relative;
   z-index: 1;
-
   box-shadow: 0 4px 8px 0 rgb(241, 242, 243), 0 6px 20px 0 rgb(241, 242, 243);
 }
 
@@ -49,7 +48,6 @@ p {
 .back:hover {
   opacity: 1;
 }
-
 
 .info-container {
   display: flex;

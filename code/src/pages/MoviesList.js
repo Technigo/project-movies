@@ -24,7 +24,7 @@ export const MoviesList = () => {
     <div>
       <div className="header">
       <h1>Escape This World</h1>
-      < Dropdown genreList={genreList} />
+      <Dropdown genreList={genreList} />
       </div>
     <div className="movies-list">  
       {movies.map((movie) =>(
