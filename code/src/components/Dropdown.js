@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import '../style/dropdown.css'
+
 
 export const Dropdown = (props) => {
   const [genre, setGenre] = useState('878')

@@ -1,0 +1,14 @@
+.genre-dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  font-family: 'Chango', cursive;
+  font-size: 20px;
+  padding: 8px;
+  background-color: black;
+  color: rgb(241, 242, 243);
+  border: 3px solid rgb(241, 242, 243);
+  border-radius: 20px;
+}

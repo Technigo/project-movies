@@ -1,3 +1,9 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 .movies-list {
   display: flex;
   flex-flow: row wrap;
