@@ -1,26 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './movielist.css';
 import './director.css';
 import { BackButton } from 'components/BackButton';
 
-export const MovieList = ({ setDirector, director, directorName }) => {
+export const MovieList = ({ directorName}) => {
+	 const { directorId } = useParams();
+
 	const [ movies, setMovies ] = useState([]);
 	let filteredMovies = [];
-	setDirector(localStorage.getItem('director'));
-
-	const url = `https://api.themoviedb.org/3/person/${director}/movie_credits?api_key=3506f645d143411491b3a1c8d00f1217`;
+	const url = `https://api.themoviedb.org/3/person/${directorId}/movie_credits?api_key=3506f645d143411491b3a1c8d00f1217`;
 	useEffect(
 		() => {
 			fetch(url).then((res) => res.json()).then((json) => {
 				setMovies(json.crew);
 			});
 		},
-		[ url, director ]
+		[url ]
 	);
 
 	//So many if's but I'm not sure how to write this otherwise so I'll keep it like this for now
-	if (director !== undefined) {
+	if (directorId !== undefined) {
 		const filteredMoviesIds = [];
 
 		movies.forEach((movie) => {
@@ -47,7 +47,7 @@ export const MovieList = ({ setDirector, director, directorName }) => {
 			</header>
 			<div className="movies-container">
 				{filteredMovies.map((movie) => (
-					<Link key={movie.id} to={`/${director}/${movie.id}`}>
+					<Link key={movie.id} to={`/${directorId}/${movie.id}`}>
 						<div className="movie-card">
 							<img
 								className="img-poster"
