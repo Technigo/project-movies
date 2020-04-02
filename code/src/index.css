@@ -8,18 +8,23 @@ body {
 }
 
 h1 {
-font-size: 35px;
-text-transform: uppercase;
-margin: 0;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 h2 {
-font-size: 15px;
+  font-size: 15px;
 }
 
 a {
+  width: 300px;
+  height: 470px;
+  display: flex;
   text-decoration: none;
   color: white;
+  background-size: cover;
+  margin: 2px;
 }
 
 .movie-list {
@@ -30,14 +35,16 @@ a {
 }
 
 .movie-container {
+  display: none
+}
+
+a:hover .movie-container {
+  background-color: black;
+  opacity: 0.5;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 300px;
-  height: 470px;
-  background-size: cover;
   padding: 20px;
-  margin: 2px;
 }
 
 .movie-container h1 {
@@ -69,21 +76,21 @@ a {
 }
 
 .poster-text-wrapper{
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .poster-text-wrapper img {
-width: 300px;
-padding: 20px;
+  width: 300px;
+  padding: 20px;
 }
 
 .overview-rating-wrapper {
-padding: 20px;
+  padding: 20px;
 }
 
 .movie-details-wrapper h1 {
-font-size: 50px;
+  font-size: 50px;
 }
 
 .overview-rating-wrapper p {

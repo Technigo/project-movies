@@ -32,11 +32,11 @@ export const MovieList = () => {
       {movies.map((movie => (
         <Link
           to={`/movie/${movie.id}`}
-          key={movie.id}>
+          key={movie.id}
+          style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.poster_path})` }}
+        >
           <div
-            className="movie-container"
-            style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.poster_path})` }}>
-
+            className="movie-container">
             <h1>
               {movie.title}
             </h1>
@@ -49,8 +49,8 @@ export const MovieList = () => {
               </h2>
             </div>
           </div>
-        </Link>
+        </Link >
       )))}
-    </div>
+    </div >
   )
 }
