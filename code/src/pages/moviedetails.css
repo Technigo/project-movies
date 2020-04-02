@@ -48,9 +48,10 @@ body {
   
   .producer p {
     background-color: rgb(129, 109, 241);
-    margin: 0 5px 0 0;
+    margin: 0;
     padding: 2px;
     border: 1px solid white;
+    display: flex;
   }
   
   @media (max-width:700px) {
