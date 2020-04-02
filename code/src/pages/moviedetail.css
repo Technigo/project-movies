@@ -21,7 +21,6 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
 }
 
 .button-wrapper {
@@ -78,5 +77,9 @@
 		align-items: flex-end;
 		justify-content: space-evenly;
 		width: 100%;
+	}
+
+	.wrapper-for-details {
+		height: 100vh;
 	}
 }
