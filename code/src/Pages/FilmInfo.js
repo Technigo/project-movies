@@ -17,7 +17,7 @@ export const FilmInfo = () => {
   }, [filmId])
 
   const detailStyle= {
-    backgroundImage: `url("http://image.tmdb.org/t/p/w1280${movies.backdrop_path}")`
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("http://image.tmdb.org/t/p/w1280${movies.backdrop_path}")`
   }
   
   return (
