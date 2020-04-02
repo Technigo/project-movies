@@ -12,6 +12,7 @@
 
 .movie-card:hover .info-on-hover {
   visibility: visible;
+  opacity: 1;
 }
 
 .movie-card:hover .img-hover {
@@ -33,14 +34,22 @@
   margin-left: 20px;
   margin-bottom: 6px;
   visibility: hidden;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+h1 {
+  font-family: 'Chango', cursive;
+  color: rgb(241, 242, 243);
+  margin: 0;
+  text-align: center;
+  font-size: 60px;
 }
 
 h2 {
   margin-block-end: 0;
   font-size: 30px;
   width: 50%;
-
-  
 }
 
 
