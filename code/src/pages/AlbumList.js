@@ -13,7 +13,7 @@ export const AlbumList = () => {
        .then (json => setAlbums(json.results))
    })
    if (!albums) {
-    return <>Not Found</>
+    return <>Paitence, still loading.. </>
 }
 
     return (
