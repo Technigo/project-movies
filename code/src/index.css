@@ -5,9 +5,124 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: block;
+  color: #fff;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+main {
+  box-sizing: border-box;
+}
+
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.movies-list a {
+  width:25%;
+}
+.movie-thumb {
+  display: flex;
+  position: relative;
+}
+.movie-poster{
+  width: 100%;
+}
+.movie-thumb-description{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: center;
+  padding-left: 2em;
+  padding-bottom: 2em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.movie-poster-wrapper:hover .movie-thumb-description {
+  visibility: visible;
+  opacity: 1;
+}
+.movie-poster-wrapper:hover .movie-poster {
+  background-color: black;
+  opacity: 0.5;
+}
+.movie-thumb-description h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.movie-backdrop {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.movie-details {
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+}
+.movie-details img {
+  border: 5px solid #fff;
+  box-sizing: border-box;
+}
+.details-box{
+  display: block;
+  margin-left: 20px;
+}
+.title-rating{
+  display:flex;
+  flex-direction: row;
+}
+.title-rating h2 {
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+}
+.movie-rating {
+  font-size: 17px;
+  color: red;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.movie-summary {
+  max-width: 400px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.back-to-list {
+  position: absolute;
+  display: inline-flex;
+  color: #fff;
+  align-items: center;
+  font-weight: 700;
+  text-decoration: none;
+  left: 50px;
+  top: 50px;
+}
+.back-to-list svg {
+  width: 30px;
+  transition: margin-right .2s ease-in-out;
 }
