@@ -1,17 +1,19 @@
 .header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .movies-list {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .movie-card {
   display: flex;
-  width: 25%;
   position: relative;
   color: white;
 }
@@ -26,7 +28,8 @@
 }
 
 .img-hover {
-  width: 100%;
+  height: 350px;
+  width: auto;
   transition: 0.3s;
 }
 
@@ -49,7 +52,7 @@ h1 {
   color: rgb(241, 242, 243);
   margin: 0;
   text-align: center;
-  font-size: 60px;
+  font-size: 30px;
 }
 
 h2 {
@@ -57,5 +60,34 @@ h2 {
   font-size: 30px;
   width: 50%;
 }
+
+@media (min-width: 668px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .movies-list {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .movie-card {
+    width: 25%;
+    flex-grow: 1;
+  }
+  
+  .img-hover {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
 
 
