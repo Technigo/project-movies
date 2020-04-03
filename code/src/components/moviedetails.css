@@ -21,7 +21,7 @@ body{
 body:hover 
 .details-overlay{
   transition:opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  opacity:0.3
+  opacity:0.5
 }
 h1{
   color:#fff;
@@ -39,7 +39,7 @@ span{
 .details{
   display:flex;
   align-items: flex-end;
-  padding:7% 5%;
+  padding:7% 15%;
   
 }
 .details-overview {
@@ -71,7 +71,7 @@ span{
     padding:0;
   }
   .details-overview{
-    font-size: 16px;
+    font-size: 21px;
   }
   body:hover 
   .details-overlay{
