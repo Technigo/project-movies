@@ -24,11 +24,11 @@ export const MovieList = () => {
           <div className="imageSection">
             <Link to={`/details/${title.id}`}>
             <img className="imgPosterSize" src= {`https://image.tmdb.org/t/p/w342${title.poster_path}`} alt={title.title}/>
-            </Link>
             <div className="overlay">
               <h2>{title.title}</h2>
               <p>{title.vote_average}</p>
             </div>
+            </Link>
           </div>
         </div>
       ))}
