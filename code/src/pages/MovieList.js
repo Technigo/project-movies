@@ -17,26 +17,23 @@ useEffect(() => {
 
     return (
         <div >
-            <section className="big-container">
-            {movies.map((movie) => (
-                <div key={movie.id}  className= "movie-card-wrapper">
-                    <div clasName="movie-card"> 
-                    <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt= {movie.title}/>
-                    </div>
-                    <div className="text-box">
-                    <h2>
-                        <Link to={`/details/${movie.id}`}>
-                        {movie.title}
+        
+                <section className= "movie-card-wrapper">
+                    {movies.map((movie) => (
+                          
+                             <Link key={movie.id} to={`/details/${movie.id}`}>
+                            <img className="movie-card" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt= {movie.title}/>
+                        
+                            <div className="text-box">
+                                <h2>{movie.title}</h2>
+                                <h3>Relased {movie.release_date}</h3>
+                            </div>
+                       
                         </Link>
-                    </h2>
-                        <h3>Relased {movie.release_date}</h3>
-                </div>
-                </div>
 
-            )
-            ) 
-            }
-            </section> 
+                    )) 
+                    }
+            </section>
         </div>
     )
 }

@@ -1,55 +1,50 @@
-.big-container {
-    display: flex;
-    flex-wrap: wrap;
-    background: black;
-    flex-direction: row;
-    justify-content: center;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+.movie-card {
+    width: 342px;
 }
 
 .movie-card-wrapper {
-    width: 342px;
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: #000;
 }
 
+.movie-card-wrapper  a {
+    width: 25vw;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+  }
 
 .text-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
     position: absolute;
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    padding: 10px;
-   /* z-index: 0;*/
-   /*  visibility: hidden;*/
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    display: none;
 }
 
-
-a {
-    color: white;
-    text-decoration: none;
-}
-
-.text-box h2 {
-    color: white;
-    margin-bottom: 0px;
+.movie-card-wrapper .text-box h2 {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
   
-}
-
-
-.text-box h3 {
-    color: white;
-    margin-top: 0px;
-}
-
-
-.movie-card-wrapper:hover {
-    opacity: 0.3;
-}
-
-.text-box:hover {
-visibility: visible;
-}
+.movie-card-wrapper a:hover .text-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
