@@ -9,7 +9,7 @@ export const Nav = () => {
       <Route path="/movie">
         <Link to="/">
           <i className="fas fa-arrow-circle-left"></i>
-          Back to list
+          Movies
         </Link>
       </Route>
     </header>
