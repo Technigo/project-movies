@@ -13,9 +13,7 @@
 }
 
 .backlink {
-  /* position: absolute;
-  top: 50px;
-  left: 50px; */
+  margin-top: 50px;
   width: fit-content;
   vertical-align: middle;
   text-decoration: none;
@@ -48,10 +46,6 @@
   max-width: 400px;
 }
 
-.info-text h2 {
-  
-}
-
 .rating {
   font-size: 17px;
   font-weight: normal;
@@ -59,12 +53,8 @@
   margin-left: 15px;
 }
 
-.info-text p {
-  
-}
-
 .fade {
-  display: none;
+  /* display: none; */
   position: absolute;
   left: 0;
   top: 0;
@@ -72,8 +62,6 @@
   width: 100vw;
   background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);
 }
-
-
 
 @media (max-width: 1024px) {
 
@@ -88,12 +76,7 @@
 
   .info-text {
     margin-left: 0;
+    margin-top: 20px;
     max-width: 342px;
   }
-}
-
-
-@media (max-width: 600px) {
-
-
 }

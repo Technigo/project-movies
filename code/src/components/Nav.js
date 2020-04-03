@@ -1,19 +1,31 @@
 import React from 'react'
-import { Route, Link } from "react-router-dom";
+import { Route, useParams, Link } from "react-router-dom";
 import "./nav.css";
 
 export const Nav = () => {
+  const { movieId } = useParams();
   return (
     <nav>
-      <h1>Popular</h1>
-      <h1>Top Rated</h1>
-      <h1>Newest</h1>
-      <h1>Genres</h1>
+      {/* Did not have time to figure out how to access the right paths for this.
       <Route path="/movies">
-        <Link to="/">
-          Back to popular
+        <Link to={`/${sorting}`}>
+          <h1>Home</h1>
         </Link>
       </Route>
+      <Route path="/similar">
+        <Link to={`/movies/${movieId}`}>
+          <h1>Back to movie</h1>
+        </Link>
+      </Route> */}
+      <Link to="/">
+        <h1>Popular</h1>
+      </Link>
+      <Link to="/top">
+        <h1>Top Rated</h1>
+      </Link>
+      <Link to="/new">
+        <h1>New releases</h1>
+      </Link>
     </nav>
   )
 }

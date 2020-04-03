@@ -1,0 +1,42 @@
+.loader-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  animation: squaringTheCircle 2s infinite;
+}
+
+@keyframes squaringTheCircle {
+  25% {
+    transform: rotate(22.5deg);
+    border-radius: 50%;
+    padding: 10px;
+  } 
+  50% {
+    transform: rotate(45deg);
+    border-radius: 0%;
+    padding: 0px;
+  } 
+  75% {
+    transform: rotate(67.5deg);
+    border-radius: 50%;
+    padding: 10px;
+  } 
+  100% {
+    transform: rotate(90deg);
+    border-radius: 0%;
+    padding: 0px;
+  }
+}
+
+/* @keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} */

@@ -17,3 +17,12 @@ nav {
   align-items: center;
   color: white;
 }
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover, nav a:active {
+  text-decoration: underline;
+}
