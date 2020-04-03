@@ -1,13 +1,16 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+This project is built within the Technigo frontend developer bootcamp. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The objective was to practice React Router and create a multi-page application, how to use placeholders in urls to pick dynamic parts from urls, and practice using APIs in React, combining useState and use Effect.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I tried to focus on the basics and build a structure that I could understand and feel comfortable with. There were a lot of things to keep track of and needed to spend some time on getting the design right. 
+
+A part from React Router I used useState, useEffect and useParams.  If I had more time I would look more into the API and create more lists for different purposes. I would also look into how to make the site responsive.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Link to deployed project here:
+https://project-movies-lisah.netlify.com/

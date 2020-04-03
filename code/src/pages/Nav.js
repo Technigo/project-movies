@@ -7,7 +7,7 @@ export const Nav = () => {
     <header>
       <h1>Most popular movies in the US right now</h1>
       <Route path="/movie">
-        <Link to="/">
+        <Link className="back-link" to="/">
           <i className="fas fa-arrow-circle-left"></i>
           Movies
         </Link>

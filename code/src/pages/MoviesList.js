@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import "./movieslist.css"
 
 // UseState to store a list of Movies
-// API request, when page loads, fetch the list and throw into our movies state
+// API request, when page loads, fetch the list and throw into the movies state
 export const MoviesList = () => {
   const api_key = "bf1c38c5c54137f389c5c7971de1fe96"
   const [movies, setMovies] = useState([])
