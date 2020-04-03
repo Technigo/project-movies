@@ -1,10 +1,25 @@
-.movies-container {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
+.movies-container { 
+  display: grid; 
+  grid-template-columns: 50% 50%; 
+  width: 100%;
   background-color: #000;
   font-family: 'Segoe UI';
   box-sizing: border-box;
+ 
+}
+
+.movie-card {
+  width: 25%;
+}
+
+.movie-title {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  width: 400px;
 }
 
 .movie-title h1 {
@@ -33,14 +48,7 @@
   opacity: 0.2;
 }
 
-.movie-title {
-  position: absolute;
-  bottom: 40px;
-  left: 30px;
-  color: white;
-  visibility: hidden;
-  opacity: 0;
-}
+
 
 .movie-card:hover .movie-title {
   visibility: visible;
@@ -48,4 +56,13 @@
   -moz-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
+}
+
+
+
+@media (min-width: 750px) { 
+  .movie-container { 
+  grid-template-columns: 25% 25% 25% 25%; 
+  max-width: 100%;
+  }
 }
