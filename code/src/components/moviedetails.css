@@ -4,15 +4,16 @@ body{
 }
 
 .details-background-image {
-  background-size: cover;
+  background-size:cover;
   height:100vh;
-  position:relative
+  position:relative;
+  background-repeat: no-repeat;
 }
 .details-overlay{
   height:100%;
   width:100%;
   top:0;
-  left:top;
+  left:0;
   background:#000;
   position:absolute;
   opacity:0;
@@ -64,15 +65,23 @@ span{
     height:350px;
   }
   .details{
-    margin-top:150px;
+    flex-direction:column;
+    align-items: center;
+    align-content: flex-start;
+    padding:0;
   }
   .details-overview{
     font-size: 16px;
   }
-}
+  body:hover 
+  .details-overlay{
+    opacity: 0.6;
+ 
+  }
 @media (max-width:375px){
   .details{
     margin-top:0;
+    
   }
   .details-mini-poster{
     display:none;
@@ -83,4 +92,6 @@ span{
   h1{
     font-size: 32px;
   }
+
+}
 }
