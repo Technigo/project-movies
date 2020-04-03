@@ -1,13 +1,10 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Project made week 12 of the Technigo Bootcamp. The aim was to make a movie site with more than one page using react router.
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+This project was fun and pretty straight forward. I used fetch to get the movies from the api and mapped through them to get the details. This was the first time I worked with react-router and Links. Apart from a few hickups it went well.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://practical-jennings-54a1e0.netlify.com/
