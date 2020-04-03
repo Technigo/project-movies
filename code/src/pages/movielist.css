@@ -1,4 +1,6 @@
 .movie-list-container {
+  position: relative;
+  top: 0;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -43,4 +45,18 @@
 
 .hover-container p {
   
+}
+
+
+@media (max-width: 1024px) {
+  .movie-list-movie {
+    width: 50%;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .movie-list-movie {
+    width: 100%;
+  }
 }

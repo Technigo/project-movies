@@ -1,6 +1,7 @@
 .movie-detail-container {
   background-color: black;
   min-height: 100vh;
+  margin-top: -50px; /* to compensate for the sticky nav, is there a better method? */ 
   background-repeat: no-repeat;
   background-size: cover;
   color: white; 
@@ -63,10 +64,36 @@
 }
 
 .fade {
+  display: none;
   position: absolute;
   left: 0;
   top: 0;
   height: 100vh;
   width: 100vw;
   background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);
+}
+
+
+
+@media (max-width: 1024px) {
+
+  .movie-detail-container {
+  background-position: center;
+  }
+
+  .movie-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info-text {
+    margin-left: 0;
+    max-width: 342px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+
 }
