@@ -18,7 +18,7 @@ export const MovieDetails = () => {
         setDetails(json)
         setLoading(false)
       })
-  }, [movieId])
+  },[])
 
   if (loading) {
     return <h1>Page is loading..</h1>
