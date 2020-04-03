@@ -1,15 +1,11 @@
+
 .movies-container { 
   display: grid; 
-  grid-template-columns: 50% 50%; 
+  grid-template-columns: 25% 25% 25% 25%; 
   width: 100%;
   background-color: #000;
   font-family: 'Segoe UI';
   box-sizing: border-box;
- 
-}
-
-.movie-card {
-  width: 25%;
 }
 
 .movie-title {
@@ -59,10 +55,3 @@
 }
 
 
-
-@media (min-width: 750px) { 
-  .movie-container { 
-  grid-template-columns: 25% 25% 25% 25%; 
-  max-width: 100%;
-  }
-}
