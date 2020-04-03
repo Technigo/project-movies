@@ -19,7 +19,6 @@ useEffect(() => {
 
 return (
    <div>
-
       <article className="movieContainer">
        {movies.map((movie) => (
        <Link key={movie.id} to={`/movies/${movie.id}`}>

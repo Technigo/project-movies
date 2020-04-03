@@ -8,7 +8,7 @@ export const NavBar = () => {
     return (
 
         <header>
-            <p>hej</p>
+            <p>Popular movies in the US</p>
         </header>
     )
 

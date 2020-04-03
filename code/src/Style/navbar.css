@@ -5,10 +5,16 @@ body {
   }
   
   header {
-    height: auto;
-    padding: 20px;
-    background-color: rgb(178, 189, 189);
+    height: 40px;
+    background-color: rgb(0, 0, 0);
     text-align: center;
     border-bottom: 1px solid;
+  }
+
+  header p {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
   }
   
