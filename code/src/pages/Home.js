@@ -16,7 +16,7 @@ export const Home = () => {
     <main>
 
         <Switch>
-             <Route path = "/" exact>
+            <Route path = "/" exact>
                 <AlbumList/>
             </Route>
 
