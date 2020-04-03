@@ -1,14 +1,55 @@
 .big-container {
     display: flex;
     flex-wrap: wrap;
+    background: black;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.movie-card {
-height: 400px;
-width: 300px;
-background-color: aqua;
-border: black solid 2px;
-display: flex;
-flex-direction: column;
-padding: 50px;
+.movie-card-wrapper {
+    width: 342px;
+    position: relative;
+}
+
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+   /* z-index: 0;*/
+   /*  visibility: hidden;*/
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.text-box h2 {
+    color: white;
+    margin-bottom: 0px;
+  
+}
+
+
+.text-box h3 {
+    color: white;
+    margin-top: 0px;
+}
+
+
+.movie-card-wrapper:hover {
+    opacity: 0.3;
+}
+
+.text-box:hover {
+visibility: visible;
 }

@@ -1,23 +1,43 @@
-.big-container {
+
+.movie-details {
+    color: white;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
-.movie-card {
-height: 400px;
-width: 300px;
-background-color: aqua;
-border: black solid 2px;
+.movie-details,
+.backdrop {
+background-size: cover;
+height: 100vh;
+display: flex; 
+flex-direction: column;
+justify-content: flex-end; 
+}
+
+.movie-information-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 50px;
+    border: 2px solid blue;  
+}
+
+.movie-information {
 display: flex;
 flex-direction: column;
-align-content: flex-start;
-padding: 50px;
+padding: 20px;
 }
 
-.text-card {
-    color: white;
+h1 {
+font-size: 45px;
+margin-bottom: 0px;
 }
 
-.go-back-btn {
-    color:white;
+h3 {
+    color: red;
+}
+
+p {
+font-size: 24px;
 }
