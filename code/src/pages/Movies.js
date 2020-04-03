@@ -19,9 +19,6 @@ export const Movies = () => {
 
   return (
     <div>
-      <section>
-        
-      </section>
       <section className='movie-list'>
         {movies.map((movie) => (
           <Link key={movie.id} to={`/movies/${movie.id}`}>
