@@ -13,13 +13,11 @@ export const App = () => {
       <main>
         <Switch>
           <Route path="/" exact >
-
             <MovieList />
           </Route>
           <Route path="/movie/:id">
             <MovieDetail />
           </Route>
-
         </Switch>
       </main>
     </BrowserRouter>

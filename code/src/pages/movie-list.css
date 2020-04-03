@@ -14,7 +14,7 @@ body {
 }
 .movieImage {
   object-fit: cover;
-  transition: ease-in-out 2s;
+  transition: ease-in-out 0,5s;
   width: 100%;
 }
 .movieWrapper:hover .movieImage {
@@ -28,10 +28,10 @@ body {
   right: 0;
   opacity: 0;
   color: white;
-  -webkit-transition: opacity 0.4s ease-in-out;
-  -moz-transition: opacity 0.4s ease-in-out;
-  -o-transition: opacity 0.4s ease-in-out;
-  transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
   width: 90%;
   height: auto;
   opacity: 0;
