@@ -1,12 +1,10 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This was a project I did when attending Technigos 24 week frontend bootcamp. The assignment was to build  a multi-page React application, and using a API to fill it with content.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+This was the first time I was introduced to React Router and it was quite tricky getting the site to work. But with good help from the teatchers codealongs and support from my team, I finally got all the pieces together.
 
 ## View it live
 
