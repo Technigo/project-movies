@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+//import components
+import { MovieList } from "pages/MovieList.js";
+import { MovieDetail } from "pages/MovieDetail.js";
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  )
-}
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact>
+          <MovieList />
+        </Route>
+        <Route path="/movie/:movieId">
+          <MovieDetail />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  );
+};
