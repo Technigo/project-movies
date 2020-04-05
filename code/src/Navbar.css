@@ -34,8 +34,12 @@ nav {
 }
 
 .dropdown-style {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   color: white;
   border: none;
   font-size: 30px;
+}
+
+option {
+  color: rgb(0, 0, 0);
 }
