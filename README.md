@@ -1,6 +1,6 @@
-# Project Movies 🎬💥👩‍💻✨
+# Project Movies 
 
-A movie website built with React.js and using the router to navigate to different pages.
+A movie website built with React.js and using the router to navigate to different pages 🎬💥👩‍💻✨
 
 ## Code
 I've used:
