@@ -4,11 +4,11 @@ A movie website built with React.js and using the router to navigate to differen
 
 ## Code
 I've used:
-  1.**API**
-  2.**React.js**
-  3.**JSX**
-  4.**JavaScript**
-  5.**CSS**
+  * **API**
+  * **React.js**
+  * **JSX**
+  * **JavaScript**
+  * **CSS**
 
 ## The problem
 
