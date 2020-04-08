@@ -1,13 +1,11 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The aim of the project was to build a multi-page React application which fetches a list of movies using the themoviedb.org's API. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+To solve the problem I used React router to create the multi-page application. I practiced using placeholders in urls to pick dynamic parts from urls and setting up the different fetch requests of the different pages. I also practiced on using APIs in React and combining 'useState' and 'useEffect'. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://hopeful-shirley-611c2d.netlify.com
