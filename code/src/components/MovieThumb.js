@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './MovieThumb.css'
+import './MovieThumb.css';
 import { Link } from 'react-router-dom';
 
 export const MovieThumb = ({ id, title, poster_path, release_date}) => {

@@ -33,19 +33,13 @@
 
 /* Media Quaries */
 
-@media (max-width: 1023px) {
-  .movies-list a:link {
-    width: 33%;
-  }
-}
-
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .movies-list a:link {
     width: 50%;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 425px) {
   .movies-list a:link {
     width: 100%;
   }

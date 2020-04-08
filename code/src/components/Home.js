@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { Navbar } from './Navbar';
-import { MoviesList } from './MoviesList';
-import { MoviesDetails } from './MoviesDetails';
-import { SimilarMovies } from './SimilarMovies'
+import { MoviesList } from '../pages/MoviesList';
+import { MoviesDetails } from '../pages/MoviesDetails';
+import { SimilarMovies } from '../pages/SimilarMovies'
 
 export const Home = () => {
   const [sortCategory, setSortCategory] = useState('popular');
@@ -15,6 +15,7 @@ export const Home = () => {
           dropdownItem={sortCategory}
           onDropdownChange={setSortCategory}
         />
+
         <Switch>
           <Route path='/' exact>
             <Redirect to='/movies' />

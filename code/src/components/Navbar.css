@@ -1,13 +1,12 @@
 nav {
   display: flex;
   justify-content: space-between;
-  /* background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 5px 10px rgba(0, 0, 0, 0.5); */
   color: #FFF;
 }
 
 .navbar h1 {
   margin-left: 25px;
+  margin-right: 25px;
   font-size: 35px;
 }
 
@@ -15,13 +14,13 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 30%;
 }
 
 .nav-links a:link {
-  margin-right: 20px;
+  margin-right: 40px;
   font-size: 30px;
   text-decoration: none;
+  padding-bottom: 3px;
 }
 
 .nav-links a:visited {
@@ -42,4 +41,32 @@ nav {
 
 option {
   color: rgb(0, 0, 0);
+}
+
+/* Media Quaries */
+
+@media (max-width: 425px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .navbar h1 {
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MovieThumb } from './MovieThumb'
+import { MovieThumb } from '../components/MovieThumb'
 import { useParams } from 'react-router-dom';
   
 export const SimilarMovies = () => {
