@@ -11,4 +11,4 @@ I tried to do it with setting the "background = url", but then my information wa
 
 ## View it live
 
-https://blissful-heisenberg-6117cd.netlify.com/
+https://movie-project-bytuliany.netlify.com
