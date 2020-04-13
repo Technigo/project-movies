@@ -55,21 +55,21 @@ a {
 
 @media (min-width: 700px) {
   
-.movie-container {
-  flex-direction: row;
-  align-items: flex-end;
-  padding: 50px;
-}
+  .movie-container {
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 50px;
+  }
 
-.background {
-  min-height: 100vh;
-  display: flex;
-  background-size: cover;
-  flex-direction: column;
-  justify-content: space-between;
-}
+  .background {
+    min-height: 100vh;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-.detail-image {
-  width: 342px;
-}
+  .detail-image {
+    width: 342px;
+  }
 }
