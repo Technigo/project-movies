@@ -10,10 +10,10 @@ A website showing upcoming movie releases in Sweden.
 - JavaScript
 - CSS
 
-## The problem
+## How I did it
 
-The webite is done in React using routes. 
+The webite is built with React using routes. 
 
 ## View it live
 
-See the upcoming movie releases in Sweden here🎞: https://condescending-goodall-d94da0.netlify.com/
+See the upcoming movie releases in Sweden here🖤: https://condescending-goodall-d94da0.netlify.com/
