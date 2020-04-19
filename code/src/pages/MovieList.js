@@ -11,15 +11,13 @@ export const MovieList = () => {
       .then((res) => res.json())
       .then((json) => {
         setMovies(json.results)
-        console.log(json.results)
       })
   }, [])
 
   return (
     <div className='movie-list'>
       {movies.map((movie) => (
-        <div className='image-card-container'>
-          <div key={movie.id} className='image-card'>
+          <div key={movie.id} className='image-card-container'>
             <Link to={`/movie/${movie.id}`}>
               <img className='poster' src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
                 <section className='info'>
@@ -28,8 +26,6 @@ export const MovieList = () => {
                 </section>
             </Link>
           </div>
-        </div>
-
       ))}
     </div>
   )

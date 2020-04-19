@@ -13,7 +13,6 @@ export const MovieDetails = () => {
     fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=ce155d55b3ce81f17dbaf865fc989515&language=en-US`)
       .then((res) => res.json())
       .then((json) => {
-        console.log(json)
         setMovie(json)
       })
   }, [movieId])
