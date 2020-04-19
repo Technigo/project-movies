@@ -1,0 +1,31 @@
+.detail-page {
+    position: absolute;
+    top: 0;
+    background-size: cover;
+}
+
+.background {
+    background-size: cover;
+}
+
+.summary-img {
+    border: white 5px solid;
+    margin: 2em;
+}
+
+.summary {
+    color: white;
+}
+
+.go-back {
+    color: white;
+    position: relative;
+    top: 4em;
+    left: 4em;
+    text-decoration: none;
+}
+
+.go-back:hover {
+    font-weight: bold;
+    list-style-type: symbols();
+}

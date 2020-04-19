@@ -1,0 +1,18 @@
+.movie-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.movie-div{
+    width: 25%;
+    text-decoration: none;
+}
+
+.movie-details {
+    cursor: pointer;
+}
+
+.movie-details a {
+    text-decoration: none;
+}
