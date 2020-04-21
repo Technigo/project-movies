@@ -20,9 +20,9 @@ export const Details = () => {
     return (
       <section className="detail-page">
             {console.log(details)}
-              <Link to={`/`} className="go-back"> Go back </Link> 
+              <Link to={`/`} className="go-back"> 👈Go back </Link> 
                 {details && (
-                  <div className="background" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
+                  <div className="background" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
                     <div className="summary">
                       <img className="summary-img" alt={details.title} src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} />
                       <div className="details">
@@ -35,3 +35,5 @@ export const Details = () => {
       </section>
     )
   }
+
+  // linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%),

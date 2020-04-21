@@ -1,18 +1,39 @@
 .movie-container {
     display: flex;
-    width: 100%;
     flex-wrap: wrap;
 }
 
-.movie-div{
+.movie-container a{
     width: 25%;
     text-decoration: none;
-}
-
-.movie-details {
+    position: relative;
+    z-index: 0;
     cursor: pointer;
+    color: white;
 }
 
-.movie-details a {
+
+.movie-container a:hover .movie-details {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: column; 
+    align-content: center;
+    justify-content: flex-end;
+}
+
+.movie-container .movie-details {
+    position: absolute;
     text-decoration: none;
+    display: none;
+    z-index: 10;
+    color: white;
+    background-color: rgba(0,0,0,0.75);
+    padding: 20px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+ 
 }

@@ -20,10 +20,9 @@ export const Movies = () => {
                 <div className="movie-div"> 
                     <div className="movie-details">
                         <h1>{movie.title}</h1>
-                        <p>{movie.release_date}</p>
-                        <p>{movie.id}</p>
-                        <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+                        <p>Released {movie.release_date}</p>
                     </div>
+                    <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
                 </div>
               </Link> 
             ))} 
