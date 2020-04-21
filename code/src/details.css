@@ -1,0 +1,51 @@
+/* .detail-page {
+    position: absolute;
+    top: 0;
+    background-size: cover;
+} */
+.detail-page {
+    top: 0;
+    margin: 0;
+}
+
+.background {
+    background-size: cover;
+}
+
+.summary-img {
+    border: white 5px solid;
+    margin: 2em;
+}
+
+.summary {
+    color: white;
+    padding: 2.5em;
+    display: flex;
+}
+
+.details {
+    align-self: flex-end;
+    width: 50%;
+    padding-bottom: 2em;
+}
+
+.go-back {
+    position: absolute;
+    display: inline-flex;
+    color: white;
+    top: 5.2em;
+    left: 5em;
+    padding: .2em;
+    text-decoration: none;
+    transition: ease 0.3s;
+    border: none;
+}
+
+.go-back:hover {
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+
+.rating {
+    color: red;
+}
