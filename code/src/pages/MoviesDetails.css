@@ -75,3 +75,33 @@
 .moviedetails-content a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
+
+/* Media Quaries */
+
+@media (max-width: 769px) {
+  .moviedetails-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 170px;
+  }
+
+  .moviedetails-content a:link {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 426px) {
+  .moviedetails-background {
+    background-color: black;
+  }
+
+  .moviedetails-content {
+    margin: 200px 0px 0px 0px;
+  }
+
+  .moviedetails-info {
+    width: 80%;
+    margin: 0px;
+  }
+}
