@@ -49,7 +49,7 @@ export const MovieDetails = () => {
             </h2>
             {movie.genres.map((genres) => (
               <h2>
-                {genres.name}
+                &nbsp;{genres.name}&nbsp;
               </h2>
             ))}
             <h2>
