@@ -35,7 +35,7 @@ export const MovieDetails = () => {
   }
 
   return (
-    < div className='detail-page'>
+    <div className='detail-page'>
     <Link to='/' className='back-link'>
         <HomeLink /> Movies
       </Link>

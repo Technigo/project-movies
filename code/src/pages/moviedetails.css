@@ -7,9 +7,9 @@
   }
   
   span {
-    color: rgb(252, 41, 41);
+    color: #690505;
     margin-left: 10px;
-    font-weight: 600;
+    font-weight: 700;
   }
   
   .background {
@@ -25,16 +25,25 @@
     display: flex;
     align-items: flex-end;
     padding: 50px;
+    margin:10px;
+  }
+
+  .summary .text:hover{
+   background-color: rgba(28, 28, 49, 0.562);
+   border-radius: 5px;
   }
   
   .summary img {
     border: 5px solid white;
+    margin: 10px;
+    width: 20%;
+    height: 20%;
   }
   
   .summary .text {
-  margin-left: 30px;
+  margin: 30px;
   max-width: 400px;
-  font-weight: 300;
+  font-weight: 600;
   }
   
   h2 {
@@ -47,21 +56,21 @@
   }
   
   .producer p {
-    background-color: rgb(129, 109, 241);
+    background-color: rgba(129, 109, 241, 0.671);
     margin: 0;
-    padding: 2px;
+    padding: 5px;
     border: 1px solid white;
     display: flex;
   }
   
   @media (max-width:650px) {
     .background {
-      background-size: cover;
-      background-repeat: no-repeat;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-height: 100vh;
     }
     
     .summary {
@@ -72,7 +81,7 @@
     }
     
     .summary .text {
-      margin-left: 30px;
+      margin: 30px;
       max-width: 400px;
       font-weight: 300;
     }
