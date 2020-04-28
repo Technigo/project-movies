@@ -1,25 +1,19 @@
-# What is this
+# Project movies
 
-My fourth React project during the Technigo bootcamp.
-Assignment: **Build a multi-page movie application**.
+### For this project I used React router to create a multi page site, fetching information from a movie database.
 
-## How I started
+## Learning objectives
 
-I watch all the movies from this week and also a few extra on youtube. Then I made the site accordingly to the project guide. When I was done with that I started with changes. Such as giving the user the option to choose a director and see the movies they have directed or written. 
+- How to make API calls using useEffect in React.
+- Using React Router to create a multi page site.
 
-### What I struggled with and should improve for next weeks project
+## Tech
 
-My big issue this week is that the site doesn't reload when I refresh it. I have tried a few different things and nothing seems to work. I'm hoping that I can get some help with that because I have no idea why it doesn't work or how to approach it.  
+- JSX
+- CSS
+- React
+- API
 
-### What I'm proud of
+### View it live:
 
-I'm really proud if the design. I think it looks pretty cool and I've spent quite some time with the CSS-part of this project. 
-
-## If I had more time
-
-If I hade more time I would have done at least one of the deep dives. 
-
-## View it live
-
-My multipage movie website:
-https://pretty-decent-directors.netlify.com/
+https://pretty-decent-directors.netlify.app/

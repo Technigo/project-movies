@@ -12,8 +12,7 @@ export const MovieList = ({ directorName, setDirectorName }) => {
 	const [ movies, setMovies ] = useState([]);
 	let filteredMovies = [];
 	const url = `https://api.themoviedb.org/3/person/${directorId}/movie_credits?api_key=3506f645d143411491b3a1c8d00f1217`;
-	useEffect(
-		() => {
+	useEffect(() => {
 			fetch(url).then((res) => res.json()).then((json) => {
 				setMovies(json.crew);
 			});
