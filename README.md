@@ -8,4 +8,4 @@ To solve the problem I used React router to create the multi-page application. I
 
 ## View it live
 
-https://hopeful-shirley-611c2d.netlify.com
+https://er-project-movies.netlify.app
