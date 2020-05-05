@@ -1,13 +1,14 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+Movie project made with React 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I really liked this project, I think I have a better view on how react works.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I wish I had done more like added a new pages with Tv show.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://musing-panini-9888d6.netlify.com/
+
