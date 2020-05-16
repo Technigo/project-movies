@@ -14,12 +14,12 @@ The app is split up into four main pages using React Router. Each page consists 
 
 ## Tech
 
-* HTML5
-* CSS3
-* JSX
-* React
+* React.js
 * React Router
+* JSX
+* JavaScript ES6
+* CSS3
 
 ## View it live
 
-https://fridamaria-movies.netlify.com/
+https://fridamaria-movies.netlify.app/
