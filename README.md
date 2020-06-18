@@ -1,6 +1,6 @@
 # Movie Browser&ensp;|&ensp;[View Live &#10555;](https://olle-react-movie-list.netlify.app/)
 
-A multi-page applications using React Router to browse movies fetched from themoviedb.org's API.
+A multi-page application using React Router to browse movies fetched from themoviedb.org's API.
 Using placeholders in urls to access specific movies based on their ID. 
 
 The app fetches the data when components mounts using useEffect and stores it with useState.
@@ -16,7 +16,7 @@ I also added a loading state that shows a spinner while fetching new information
 * useParams
 
 ## Screenshot
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.jpg)
 
 ## View it live
 https://olle-react-movie-list.netlify.app/
