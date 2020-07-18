@@ -8,4 +8,4 @@ Planned the project to consist of a main Film List page, and a Film Info page th
 
 ## View it live
 
-https://thirsty-ramanujan-35c0ff.netlify.com/
+https://movie-project-technigo.netlify.app/
