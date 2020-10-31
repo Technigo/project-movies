@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/***************** MOVIES LIST *****************/
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-wrapper {
+  position: relative;
+  width: 25%;
+  color: transparent;
+  display: flex;
+}
+
+.movie-wrapper:hover {
+  color: white;
+}
+
+.movie-wrapper:hover .movie-image-overlay {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.movie-image {
+  width: 100%;
+}
+
+.movie-image-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%; 
+  background-color: transparent;
+}
+
+.movie-start-info {
+  position: absolute;
+  
+  z-index: 10;
+  align-self: flex-end;
+  padding: 15px;
+}
+
