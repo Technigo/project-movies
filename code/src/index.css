@@ -52,3 +52,56 @@ code {
   padding: 15px;
 }
 
+/*********** MOVIE DETAILS PAGE ************************/
+.movie-detail-page {
+  height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.image-background {
+  position: relative;
+}
+
+.movie-poster {
+  border: 5px solid white;
+}
+
+.movie-detail-info-container {
+  display: flex;
+  padding: 50px;
+  align-items: flex-end;
+}
+
+.movie-detail-text-container {
+  padding: 0 50px;
+}
+
+.startpage-link {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  
+}
+
+.startpage-link img {
+  height: 30px;
+}
+
+.startpage-link:hover {
+  letter-spacing: 0.1em;
+}
+
+.overview-text {
+  max-width: 400px;
+}
+
+.vote-styling {
+  color: red;
+}
