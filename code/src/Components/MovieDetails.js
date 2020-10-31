@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import icon from '../assets/icons8-chevron-left-64.png';
 
 import { API_KEY } from 'urls';
+import MoviesList from './MoviesList';
 
 const MovieDetails = () => {
     const { id } = useParams();
@@ -11,6 +12,8 @@ const MovieDetails = () => {
     const MOVIE_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`;
 
     const [movie, setMovie] = useState({});
+
+    //const moviesMatch = moviesList.find(())
 
     useEffect(() => {
         fetch(MOVIE_URL)
@@ -20,20 +23,24 @@ const MovieDetails = () => {
                 setMovie(data)
             })
     }, [MOVIE_URL]);
+
+    const background = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`;
     
     return (
-        <main className="movie-detail-page">
-            <Link className="startpage-link" to="/">
+        <main className="movie-detail-page" style={{backgroundImage: `url(${background})`}}>
+            <div className="info">
+                <Link className="startpage-link" to="/">
                     <img src={icon} alt="Arrow link"></img>
                     <p>Movies</p>
-            </Link>
-            <div className="movie-detail-info-container">
-                <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}></img>
-                <div className="movie-detail-text-container">
-                    <h1>{movie.title}</h1>
-                    <p className="vote-styling">{movie.vote_average} / 10</p>
-                    <h2>{movie.tagline}</h2>
-                    <p className="overview-text">{movie.overview}</p>
+                </Link>
+                <div className="movie-detail-info-container">
+                    <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}></img>
+                    <div className="movie-detail-text-container">
+                        <h1>{movie.title}</h1>
+                        <p className="vote-styling">{movie.vote_average} / 10</p>
+                        <h2>{movie.tagline}</h2>
+                        <p className="overview-text">{movie.overview}</p>
+                    </div>
                 </div>
             </div>
         </main> 

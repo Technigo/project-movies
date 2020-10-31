@@ -60,6 +60,9 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  position: relative;
+  background-size: cover;
+
 }
 
 .image-background {
