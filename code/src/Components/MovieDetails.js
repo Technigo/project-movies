@@ -24,20 +24,21 @@ const MovieDetails = () => {
             })
     }, [MOVIE_URL]);
 
-    const background = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`;
+    const background = `https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`;
     
     return (
-        <main className="movie-detail-page" style={{backgroundImage: `url(${background})`}}>
+        <main className="movie-detail-page" style={{backgroundImage: `linear-gradient(rgba(0,0,0,0) 20%, rgb(0,0,0) 100%), url(${background})`}}>
             <div className="info">
-                <Link className="startpage-link" to="/">
-                    <img src={icon} alt="Arrow link"></img>
-                    <p>Movies</p>
+                <Link className="back-link" to="/">
+                    <div className="back-link-wrapper">
+                        <img src={icon} alt="Arrow link"></img>
+                        <p>Movies</p>
+                    </div>   
                 </Link>
-                <div className="movie-detail-info-container">
+                <div className="detail-info-container">
                     <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}></img>
                     <div className="movie-detail-text-container">
-                        <h1>{movie.title}</h1>
-                        <p className="vote-styling">{movie.vote_average} / 10</p>
+                        <h1 className="movie-title">{movie.title} <span className="rating">{movie.vote_average} / 10</span></h1>
                         <h2>{movie.tagline}</h2>
                         <p className="overview-text">{movie.overview}</p>
                     </div>

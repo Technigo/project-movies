@@ -46,23 +46,22 @@ code {
 
 .movie-start-info {
   position: absolute;
-  
   z-index: 10;
   align-self: flex-end;
   padding: 15px;
 }
 
 /*********** MOVIE DETAILS PAGE ************************/
+
 .movie-detail-page {
   height: 100vh;
   background: black;
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   position: relative;
   background-size: cover;
-
 }
 
 .image-background {
@@ -73,9 +72,9 @@ code {
   border: 5px solid white;
 }
 
-.movie-detail-info-container {
+.detail-info-container {
   display: flex;
-  padding: 50px;
+  padding: 10px 50px 50px 50px;
   align-items: flex-end;
 }
 
@@ -83,28 +82,41 @@ code {
   padding: 0 50px;
 }
 
-.startpage-link {
-  display: flex;
-  align-items: center;
+.back-link {
+  display: inline-block;
   color: white;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
-  
+  margin: 10px 50px;
 }
 
-.startpage-link img {
+.back-link-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.back-link img {
   height: 30px;
 }
 
-.startpage-link:hover {
-  letter-spacing: 0.1em;
+.back-link p {
+  transition: transform 0.5s ease-in-out;
+}
+
+.back-link:hover p {
+  transform: translateX(20px);
 }
 
 .overview-text {
   max-width: 400px;
 }
 
-.vote-styling {
+.rating {
   color: red;
+  font-size: 16px;
+}
+
+.movie-link {
+  font-size: 18px;
 }
