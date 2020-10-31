@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import { API_URL } from '../urls';
+import Header from './Header'
 
 const MoviesList = () => {
 
@@ -12,10 +13,17 @@ const MoviesList = () => {
             .then(response => response.json())
             .then(data => {
                 setMoviesList(data.results)
+                console.log(data)
             })
     }, []);
 
+   
+
+
+
     return (
+        <>
+            <Header />
             <main className="movies-container">
                 {moviesList.map((movie) => {
                     return (
@@ -39,6 +47,7 @@ const MoviesList = () => {
                     )
                 })}
             </main>
+        </>
     ) 
 }
 
