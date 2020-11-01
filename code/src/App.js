@@ -22,3 +22,4 @@ export const App = () => {
 };
 
 //Fix a page for movie not found
+//move API key to separate file and import it

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const API_KEY = '2ff070f81f8c9206d9426765e063f416';
 
@@ -16,13 +17,18 @@ export const MovieDetails = () => {
   }, [params.movieID])
 
   return (
-    <div className="movie-details-page">
-      <img src={`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.original_title} />
-      <h2>{movie.original_title}</h2>
-      <p>{`${movie.vote_average} / 10`}</p>
-      <p>{movie.overview}</p>
-      <img width="300px" src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`} alt={movie.original_title} />
-    </div>
+    <>
+      <Link to="/" exact>
+        <p>Back to Movies List</p>
+      </Link>
+      <div className="movie-details-page">
+        <img src={`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.original_title} />
+        <h2>{movie.original_title}</h2>
+        <p>{`${movie.vote_average} / 10`}</p>
+        <p>{movie.overview}</p>
+        <img width="300px" src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`} alt={movie.original_title} />
+      </div>
+    </>
   )
 };
 
