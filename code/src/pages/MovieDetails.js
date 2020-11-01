@@ -18,7 +18,7 @@ export const MovieDetails = () => {
 
   return (
     <>
-      <Link to="/" exact>
+      <Link to="/" exact="true">
         <p>Back to Movies List</p>
       </Link>
       <div className="movie-details-page">

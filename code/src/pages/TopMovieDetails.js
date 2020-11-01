@@ -18,7 +18,7 @@ export const TopMovieDetails = () => {
 
   return (
     <>
-      <Link to="/top-movies" exact>
+      <Link to="/top-movies" exact="true">
         <p>Back to Top Movies List</p>
       </Link>
       <div className="movie-details-page">
