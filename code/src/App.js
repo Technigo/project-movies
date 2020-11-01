@@ -20,3 +20,5 @@ export const App = () => {
     </BrowserRouter>
   )
 };
+
+//Fix a page for movie not found
