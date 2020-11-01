@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -11,3 +12,56 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.movie-backdrop {
+  border: solid blue 2px;
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 850px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.movie-content {
+border: solid red 2px;
+display: flex;
+flex-direction: row;
+margin-bottom: 50px;
+margin-left:50px;
+height: 580px;
+}
+
+.movie-poster {
+  border: solid white 6px;
+  width: 380px;
+}
+
+.movie-info {
+color: white;
+border: solid green 2px;
+max-width: 400px;
+font-size: 18px;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+margin-left: 20px;
+}
+
+.movie-vote {
+  color: red;
+  font-size: 15px;
+}
+
+
+.movies-info:hover img { 
+  filter: brightness(20%);
+  background: rgba(0,0,0,.5);
+}
+
+.movies-info:hover .movieText { 
+  display: block;
+  opacity: 1;
+}
+

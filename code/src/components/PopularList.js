@@ -16,14 +16,14 @@ export const PopularList = () => {
 
     return (
         <div>
-            <div className="movie-container">
+            <div className="movies-container">
             {movies.map((movie) => (
-            <Link className="moive-info" key={movie.id} to={`/movies/${movie.id}`}>
-            <div className="movie-text">
+            <Link className="movies-info" key={movie.id} to={`/movies/${movie.id}`}>
+            <div className="movies-text">
              <h2>{movie.title}</h2>
              <h3>Relsease: {movie.release_date}</h3>
              </div>
-            <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}/>    
+            <img className="movies-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}/>    
             </Link>
             ))}
         </div>
