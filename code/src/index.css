@@ -13,6 +13,76 @@ code {
     monospace;
 }
 
+/*Popular List*/
+
+.movies-container { 
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+}
+
+.movies-container a {
+  flex-direction: column;
+  width: 25%;
+  position: relative;
+}
+
+.movies-text {
+  color: white; 
+  z-index: 2;
+  opacity: 0; 
+}
+
+
+ .movies-poster {
+  z-index: 0;
+  width: 100%;
+
+ }
+
+.movies-info .movies-text {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 30px;
+   margin-top: 0;
+}
+
+h3 {
+   font-size: 15px;
+}
+
+.movies-info:hover .movies-poster { 
+  filter: brightness(20%);
+  background: rgba(0,0,0,.5);
+}
+
+.movies-info:hover .movies-text { 
+  display: block;
+  opacity: 1;
+}
+
+
+
+@media (min-width: 300px) and (max-width: 700px) {
+
+  h2 {
+    font-size: 19px;
+  }
+  
+  h3 {
+     font-size: 10px;
+  }
+  
+}
+
+
+/*Detail*/
 .movie-backdrop {
   border: solid blue 2px;
   background-position: left;
@@ -54,14 +124,4 @@ margin-left: 20px;
   font-size: 15px;
 }
 
-
-.movies-info:hover img { 
-  filter: brightness(20%);
-  background: rgba(0,0,0,.5);
-}
-
-.movies-info:hover .movieText { 
-  display: block;
-  opacity: 1;
-}
 

@@ -17,6 +17,7 @@ export const PopularList = () => {
     return (
         <div>
             <div className="movies-container">
+                
             {movies.map((movie) => (
             <Link className="movies-info" key={movie.id} to={`/movies/${movie.id}`}>
             <div className="movies-text">
