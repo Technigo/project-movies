@@ -3,20 +3,30 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import { MoviesList } from 'pages/MoviesList';
 import { MovieDetails } from 'pages/MovieDetails';
+import { Nav } from './Nav';
+import { TopMoviesHome } from './TopMoviesHome';
 
 export const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
+      <main>
+        <Nav />
 
-        <Route path="/" exact>
-          <MoviesList />
-        </Route>
+        <Switch>
 
-        <Route path="/movies/:movieID">
-          <MovieDetails />
-        </Route>
-      </Switch>
+          <Route path="/" exact>
+            <MoviesList />
+          </Route>
+
+          <Route path="/movies/:movieID">
+            <MovieDetails />
+          </Route>
+
+          <Route path="/top-movies">
+            <TopMoviesHome />
+          </Route>
+        </Switch>
+      </main>
     </BrowserRouter>
   )
 };

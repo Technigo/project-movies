@@ -9,3 +9,7 @@ body {
 .movie-details-page img {
   width: 200px;
 }
+
+nav {
+  border: 2px solid blue;
+}
