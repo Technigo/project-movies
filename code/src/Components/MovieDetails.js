@@ -4,7 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import icon from '../assets/icons8-chevron-left-64.png';
 
 import { API_KEY } from 'urls';
-import MoviesList from './MoviesList';
+//import MoviesList from './MoviesList';
 
 const MovieDetails = () => {
     const { id } = useParams();

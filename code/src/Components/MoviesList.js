@@ -7,23 +7,24 @@ import Header from './Header'
 const MoviesList = () => {
 
     const [moviesList, setMoviesList] = useState([]);
+    const [choosenAPI, setChoosenAPI] = useState(API_URL);
 
     useEffect(() => {
-        fetch(API_URL)
+        fetch(choosenAPI)
             .then(response => response.json())
             .then(data => {
                 setMoviesList(data.results)
                 console.log(data)
             })
-    }, []);
+    }, [choosenAPI]);
 
+    const reachAPIValue = (apiURL) => {
+        setChoosenAPI(apiURL)
+    }
    
-
-
-
     return (
         <>
-            <Header />
+            <Header reachAPIValue={reachAPIValue} />
             <main className="movies-container">
                 {moviesList.map((movie) => {
                     return (
