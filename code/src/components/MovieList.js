@@ -7,8 +7,8 @@ export const MovieList = () => {
 
     useEffect(() => {
         fetch ("https://api.themoviedb.org/3/movie/popular?api_key=868bb0ec2938c0c650aeb654eb40061d&language=en-US&page=1")
-        .then ((res) => res.json())
-        .then ((json) => {
+        .then((res) => res.json())
+        .then((json) => {
             setMovies(json.results)
         })
     }, [])

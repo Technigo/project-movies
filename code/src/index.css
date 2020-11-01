@@ -13,6 +13,14 @@ code {
     monospace;
 }
 
+h2 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
 .movie-list {
   display: flex;
   flex-direction: row;
@@ -58,4 +66,38 @@ code {
 
 .movie-in-list:hover .movie-poster {
   filter: brightness(40%);
+}
+
+/* MovieDetails*/
+
+.movie {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 40px;
+}
+
+.back-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.movie-details {
+  display: flex;
+  align-items: flex-end;
+}
+
+.movie-details-poster {
+  border: 4px solid white;
+}
+
+.movie-information {
+  width: 400px;
+  margin: 0 20px;
 }
