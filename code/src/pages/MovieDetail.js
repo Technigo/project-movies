@@ -7,7 +7,8 @@ export const MovieDetail = () => {
 
   //get the parameter from the URL
   const { movieId } = useParams();
-  const [movie, setMovie] = useState([]);
+  const [currentMovie, setcurrentMovie] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   //Get the movie detail for the selected movie using the movieID param from the URL
   useEffect(() => {
@@ -15,41 +16,37 @@ export const MovieDetail = () => {
     .then((res) => res.json())
     .then((json) => {
       console.log(json);
-      setMovie(json);
+      setIsLoading(false);
+      setcurrentMovie(json);
     })
   },[movieId])
 
-
-
-
-  return (
-    <div 
+  return ( <>
+  {!isLoading && currentMovie &&
+    <section 
       className="movie-detail-container" 
-      key={movie.id}
+      key={currentMovie.id}
       style={{  
-        backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
+        backgroundImage: `url(https://image.tmdb.org/t/p/w1280${currentMovie.backdrop_path})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
-    
       }}
-      >
+    >
 
-      <Link className="link-back" to="/"><span role="img" aria-label="back-arrow">⬅️ </span>Go back</Link>
-     { /*
-      <img className="movie-backdrop-image" src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.title} />
-     */} 
+      <Link className="link-back" to="/"><span role="img" aria-label="back-arrow"><span role="img" aria-label="arrow-emoji">⬅️</span> </span>Movies start</Link>
         
         <div className="movie-details-wrapper">
-        <img className="movie-detail-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+       <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${currentMovie.poster_path}`} alt={currentMovie.title} />
         <div className="movie-details-text">
-        <h1 className="movie-detail-title">{movie.title}</h1> 
-          <h2 className="movie-detail-rating">{movie.vote_average}</h2> 
-          <p className="movie-detail-overview">{movie.overview}</p>
+        <h1 className="movie-detail-title">{currentMovie.title}</h1> 
+        <p className="movie-tagline">{currentMovie.tagline}</p>
+          <h2 className="movie-detail-rating">Rating: {currentMovie.vote_average}</h2> 
+          <p className="movie-detail-overview">{currentMovie.overview}</p>
+          <a className="imdb-link" href={`https://www.imdb.com/title/${currentMovie.imdb_id}/`} alt="imdb-link" target="_blank" rel="noopener noreferrer">IMDB <span role="img" aria-label="link-emoji">🔗</span> </a>
+          <Link className="similar-movies-link" to= {`/movies/${movieId}/similarMovies`}>Explore recommended movies <span role="img" aria-label="heart-eyes-emoji">😍</span> </Link>
         </div>
-        
         </div>
-    
-     
-    </div>
+    </section>}
+    </>
   )
 }
