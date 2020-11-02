@@ -12,7 +12,54 @@ code {
     monospace;
 }
 
-.posters {
-  height: 300px; 
+main {
+  display: flex;
+  flex-direction: row;
+}
+/*
+p {
+  width: 250px;
+}*/
+
+/* NAV */
+header {
+  margin: 0;
+  height: 100px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* MOVIE LIST */
+.list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.thumbnail {
+  height: 300px;
   width: auto;
+}
+
+/* MOVIE DETAILS */
+.movie-detail-container {
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  align-items: flex-end;
+}
+.poster {
+  border: solid 2px #ffffff;
+  height: 60vh;
+  display: flex;
+  margin: 100px 0 100px 100px;
+}
+
+.details {
+  background: rgb(44 43 43/80%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 100px 20px;
 }

@@ -13,20 +13,19 @@ export const MovieList = () => {
     })
   })
 
-    return (
-      <div>
-        {movies.map((movie) => (
-          <div key={movie.id} className="lists">
-            <img className="posters" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.original_title} />
-            <h2>
-              <Link to={`/movies/${movie.id}`}>
-              {movie.original_title}
-              </Link>
-              </h2>
-            <h3>{movie.release_date}</h3>
-          </div>
-        )
-    )} </div>
-  
+  return (
+    <div className="list-wrapper">
+      {movies.map((movie) => (
+        <div key={movie.id} className="lists">
+          <img className="posters" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.original_title} />
+          <h2>
+            <Link to={`/movies/${movie.id}`}>
+            {movie.original_title}
+            </Link>
+            </h2>
+          <h3>{movie.release_date}</h3>
+        </div>
+      )
+  )} </div>
 )
 }
