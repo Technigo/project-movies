@@ -27,7 +27,8 @@ export const MovieDetails = () => {
           <img className="poster" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}></img>
         </div>
         <div className="movie-text">
-          <p>{movie.title}</p>
+          <h1>{movie.title}</h1>
+          <p>{movie.overview}</p>
         </div>
       </div>
     </div>
