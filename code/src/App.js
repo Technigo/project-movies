@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { ApiUrl, PosterImgUrl } from './components/ApiUrls';
 import ListedMovie from './components/ListedMovie';
 import MoviePage from './pages/MoviePage';
-import { ApiUrl, PosterImgUrl, BackdropImgUrl } from './components/ApiUrls';
 
 export const App = () => {
   const [movies, setMovies] = useState([]);

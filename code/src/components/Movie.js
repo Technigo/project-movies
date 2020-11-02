@@ -4,7 +4,7 @@ const Movie = ({ posterImg, title, rating, description }) => {
   return (
     <section>
       <div className="movie--details">
-        <img className="movie--details--image" src={posterImg} />
+        <img className="movie--details--image" src={posterImg} alt={title} />
 
         <div className="movie--details--textbox">
           <h2 className="movie--details--title">
