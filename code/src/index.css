@@ -5,9 +5,36 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ background-color: black;
+ box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.movie-list{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  
+ 
+}
+.movie-card{
+  
+  width: 100%;
+}
+.movie-card-details{
+  display:none;
+}
+.movie-card-container:hover .movie-card-details{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.movie-card-container:hover .movie-card-img {
+  filter: brightness(40%);
 }
