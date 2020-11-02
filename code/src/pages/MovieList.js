@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export const MovieList = () => {
 
   const[movies,setMovies] = useState([]);
-  const[listType, setListType] = useState("popular");
+  const[listType, setListType] = useState("top_rated");
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${listType}?sort_by=vote_average.desc&api_key=303d50a32fc0419fb55796d006e5d6c2&language=en-US&page=1`)

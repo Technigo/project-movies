@@ -3,6 +3,7 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { MovieDetail } from 'pages/MovieDetail';
 import { RecommendedMovies } from 'pages/RecommendedMovies'
+import { Actor } from 'pages/Actor';
 
 export const App = () => {
   return (
@@ -20,6 +21,11 @@ export const App = () => {
       <Route path="/movies/:movieId/recommendedMovies" exact>
         <RecommendedMovies />
       </Route>
+
+      <Route path="/movies/:movieId/cast/:actorID" exact>
+        <Actor/>
+      </Route>
+
     </Switch>
 
     </BrowserRouter>

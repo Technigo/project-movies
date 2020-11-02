@@ -177,6 +177,10 @@ option {
 	color: palevioletred;
 }
 
+.actor-container {
+	color: white;
+}
+
 @media only screen and (max-width: 992px) {
 	.app-container {
 		grid-template-columns: repeat(3, 1fr);
@@ -194,6 +198,10 @@ option {
 		display: none;
 	}
 
+	.movie-detail-overview {
+		backdrop-filter: brightness(0.6);
+	}
+
 	.movie-details-wrapper {
 		position: relative;
 		top: unset;
@@ -203,7 +211,7 @@ option {
 		height: 100vh;
 		margin: 0;
 		width: 100%;
-		background: rgba(0, 0, 0, 0.5);
+		background: rgba(0, 0, 0, 0.7);
 	}
 
 	.link-back {
