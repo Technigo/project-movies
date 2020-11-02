@@ -1,13 +1,78 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/*** MOVIE COMPONENT ***/
+
+/* .movie-card {
+  display: inline;
+} */
+
+.movie-card {
+  display: inline;
+  width: 25%; 
+  margin-bottom: -4px;
 }
+
+a:hover {
+  opacity: 0.8;
+}
+
+/*** MOVIE DETAILS ***/
+
+.movie-details {
+  display: flex;
+}
+
+.details-container {
+  position: absolute;
+
+  display: flex;
+
+ 
+  left: 50px;
+  bottom: 50px;
+
+  background-color: blue;
+
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  margin-bottom: -4px;
+}
+
+.poster {
+  width: 67%;
+  border: 5px solid white;
+}
+
+.movie-text {
+  background-color: green;
+
+}
+
+p {
+  color:white;
+  font-size: 36px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*** MEDIA QUERIES ***/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .movie-card img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .movie-card img {
+    width: 100%;
+  }
+}
+
+
+
