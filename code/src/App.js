@@ -23,7 +23,6 @@ export const App = () => {
   }
 
 
-
   return (
     <BrowserRouter>
       <main>

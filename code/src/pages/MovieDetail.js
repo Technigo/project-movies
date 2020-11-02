@@ -1,17 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 export const MovieDetail = () => {
-    const params = useParams();
-    console.log(params)
+    const {id} = useParams();
+    console.log(id)
+
+    const API_KEY = '7a8b8f73f0f19bc86674c69db87cbbc7'
+    const MOVIE_DETAILS_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`;
+
+    const [details, setDetails] = useState([]);
+
+    useEffect(() => {
+        fetchMoviesDetails();
+      }, []);
+
+    const fetchMoviesDetails = () => {
+        fetch(MOVIE_DETAILS_URL)
+            .then(res => res.json())
+            .then(data => setDetails(data))
+            .catch(error => console.error(error));
+      }
+    
     return (
         <div>
-            {/* <h2>hi</h2>
-            <h2>{title}</h2>
-            <p>{release}</p>
-            <p>{overview}</p>
-            <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} />
-            <img src={`https://image.tmdb.org/t/p/w1280${backdrop}`} alt={title} /> */}
+            <h2>{details.title}</h2>
+            <p>{details.release_date}</p>
+            <p>{details.overview}</p>
+            <img src={`https://image.tmdb.org/t/p/w500${details.poster_path}`} alt={details.title} />
+            <img src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt={details.title} />
         </div> 
     )
 }
