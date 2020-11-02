@@ -28,17 +28,40 @@ header {
 
 /* MOVIE LIST */
 
-.list-wrapper {
+.popular-movies {
   display: flex;
   flex-wrap: wrap;
+  background-color: #000000;
 }
 
-.list-wrapper a {
+.popular-movies a  {
+  color: #ffffff;
   position: relative;
   width: 25%;
-  color: #000000;
   text-decoration: none;
   z-index: 1;
+}
+
+.popular-movies .popular-movie-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  background: rgba(0,0,0,.75);
+}
+
+.popular-movie-info {
+ display: none;
+}
+
+.popular-movies a:hover .popular-movie-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;  
 }
 
 .thumbnail {
