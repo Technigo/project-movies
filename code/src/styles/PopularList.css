@@ -1,0 +1,55 @@
+.popularPage {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 30px;
+  margin: 20px;
+}
+
+.image-poster {
+  width: 100%;
+}
+
+.popularPage a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.movie-wrapper {
+  position: relative;
+}
+
+.movie-text {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.8;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.movie-text p {
+  font-weight: bold;
+}
+
+a:hover .movie-text {
+  display: flex;
+}
+
+@media (min-width: 668px) {
+  .popularPage {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .popularPage {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
