@@ -6,7 +6,9 @@ Start by briefly describing the assignment in a sentence or two. Keep it short a
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I could note figur out how to get a not found page. Looked at Damiens video multipel times and search for it on how to do it but didn´t find. 
+I did the text on the front page  resposiv so it behaves nicer when it gets smaler.
+
 
 ## View it live
 
