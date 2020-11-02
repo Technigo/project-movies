@@ -23,9 +23,9 @@ const Footer = () => {
           </div>
         </div>
         <p className="reference">
-          <a target="_blank" href="https://icons8.com/icons/set/popcorn">
+          <a target="_blank" href="https://icons8.com/icons/set/popcorn" rel=" noopener noreferrer">
           Popcorn icon
-          </a> icon by <a target="_blank" href="https://icons8.com"> Icons8</a>
+          </a> icon by <a target="_blank" href="https://icons8.com" rel="noopener noreferrer"> Icons8</a>
         </p>
       </footer>
     )
