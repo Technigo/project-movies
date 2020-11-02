@@ -22,6 +22,28 @@ main {
   flex-wrap: wrap;
 }
 
+.movies--back-button {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.movies--back-button-img {
+  width: 30px;
+  filter: invert(1);
+}
+
+.movies--back-button--text {
+  transition: margin 0.2s ease-in-out;
+  margin: 0 0 5px 5px;
+}
+
+.movies--back-button--text:hover {
+  margin: 0 0 5px 10px;
+}
+
 /* --- MOVIE-LIST --- */
 .movie-list--wrapper {
   width: 25vw;
@@ -54,4 +76,45 @@ main {
   align-items: flex-start;
   justify-content: flex-end;
   cursor: pointer;
+}
+
+/* --- MOVIE --- */
+.movie--wrapper {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: left;
+  padding: 50px;
+  color: #fff;
+}
+
+.movie--details {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 50px;
+}
+
+.movie--details--image {
+  border: 5px solid #fff;
+}
+
+.movie--details--textbox {
+  max-width: 400px;
+  margin-left: 20px;
+}
+
+.movie--details--title {
+  margin: 20px 0;
+}
+
+.movie--details--rating {
+  font-weight: 400;
+  color: red;
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+.movie--details--description {
+  margin-bottom: 20px;
 }
