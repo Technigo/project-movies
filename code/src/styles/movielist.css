@@ -1,6 +1,8 @@
 .movielist__container {
     width: 100vw;
     height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
     background: #debbde;
     border: 2px solid #000;
 }
