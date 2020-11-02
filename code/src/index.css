@@ -18,6 +18,7 @@ main {
 }
 
 /* NAV */
+
 header {
   margin: 0;
   height: 100px;
@@ -26,9 +27,18 @@ header {
 }
 
 /* MOVIE LIST */
+
 .list-wrapper {
   display: flex;
   flex-wrap: wrap;
+}
+
+.list-wrapper a {
+  position: relative;
+  width: 25%;
+  color: #000000;
+  text-decoration: none;
+  z-index: 1;
 }
 
 .thumbnail {
@@ -38,6 +48,7 @@ header {
 }
 
 /* MOVIE DETAILS */
+
 .movie-detail-container {
   display: flex;
   justify-content: center;
