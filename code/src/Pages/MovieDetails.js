@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
 import icon from '../assets/icons8-chevron-left-64.png';
-
-import { API_KEY } from 'urls';
-
+import { API_KEY } from '../urls';
 
 const MovieDetails = () => {
     const { id } = useParams();
@@ -12,8 +10,6 @@ const MovieDetails = () => {
     const MOVIE_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`;
 
     const [movie, setMovie] = useState({});
-
-    //const moviesMatch = moviesList.find(())
 
     useEffect(() => {
         fetch(MOVIE_URL)
@@ -23,6 +19,7 @@ const MovieDetails = () => {
             })
     }, [MOVIE_URL]);
 
+    //const moviesMatch = moviesList.find(())
     // const idMatch = (movie.id === id);
 
     // if (!idMatch) {

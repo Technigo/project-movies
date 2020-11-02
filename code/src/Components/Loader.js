@@ -10,7 +10,6 @@ const Loader = () => {
         <img className="popcorn" src={popcorn} alt="loader"></img>
         <img className="popcorn" src={popcorn} alt="loader"></img>
       </div>
-
     </section>
   )
 }

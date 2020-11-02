@@ -9,7 +9,7 @@ const MovieList = () => {
 
     const [movieList, setMovieList] = useState([]);
     const [choosenAPI, setChoosenAPI] = useState(MOVIES_URL);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true); //Show loader
 
     useEffect(() => {
         fetch(choosenAPI)
@@ -17,12 +17,12 @@ const MovieList = () => {
             .then(data => {
                 setTimeout(() => {
                     setMovieList(data.results)
-                    setLoading(false);
+                    setLoading(false); // Hide loader
                 }, 1500)
             })
     }, [choosenAPI]);
 
-    // Reach the url choosen in movie details
+    // Reach the url choosen in header
     const reachAPIValue = (apiURL) => {
         setChoosenAPI(apiURL);
         setLoading(true);
@@ -43,23 +43,3 @@ const MovieList = () => {
 }
 
 export default MovieList;
-
-// {movieList.map((movie) => {
-//                     return (
-//                         <Link
-//                             to={`/movie/${movie.id}`}
-//                             className="movie-wrapper"
-//                             key={movie.id}>
-//                             <div className="movie-image-overlay"></div>
-//                             <div className="movie-start-info-container">
-//                                 <h1>{movie.title}</h1>
-//                                 <p>Released {movie.release_date}</p>
-//                             </div>
-//                             <img
-//                                 className="movie-image"
-//                                 src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-//                                 alt={movie.title}>
-//                             </img>
-//                         </Link>
-//                     )
-//                 })}
