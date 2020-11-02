@@ -18,11 +18,11 @@ header {
 }
 select {
   width: 200px;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Merriweather Sans', Sans-Serif;
   color: white;
-  background: #737770;
-  padding: 8px 6px;
+  background: #4070f3; /*#737770*/
+  padding: 6px 6px;
   border-radius: 10px;
   margin: 10px 50px;
 }
@@ -35,7 +35,7 @@ select {
 
 .movie-wrapper {
   position: relative;
-  width: 25%;
+  width: 50%;
   color: transparent;
   display: flex;
 }
@@ -48,10 +48,6 @@ select {
   background-color: rgba(0,0,0,0.5);
 }
 
-.movie-image {
-  width: 100%;
-}
-
 .movie-image-overlay {
   position: absolute;
   width: 100%;
@@ -59,7 +55,11 @@ select {
   background-color: transparent;
 }
 
-.movie-start-info {
+.movie-image {
+  width: 100%;
+}
+
+.movie-start-info-container {
   position: absolute;
   z-index: 10;
   align-self: flex-end;
@@ -120,7 +120,7 @@ select {
 }
 
 .back-link:hover p {
-  transform: translateX(20px);
+  transform: translateX(10px);
 }
 
 .overview-text {
@@ -134,4 +134,13 @@ select {
 
 .movie-link {
   font-size: 18px;
+}
+
+@media (min-width: 667px) {
+  .movie-wrapper {
+    position: relative;
+    width: 25%;
+    color: transparent;
+    display: flex;
+  }
 }

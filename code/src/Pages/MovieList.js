@@ -2,19 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import { API_URL } from '../urls';
-import Header from './Header'
+import Header from '../Components/Header'
 
-const MoviesList = () => {
+const MovieList = () => {
 
-    const [moviesList, setMoviesList] = useState([]);
+    const [movieList, setMovieList] = useState([]);
     const [choosenAPI, setChoosenAPI] = useState(API_URL);
 
     useEffect(() => {
         fetch(choosenAPI)
             .then(response => response.json())
             .then(data => {
-                setMoviesList(data.results)
-                console.log(data)
+                setMovieList(data.results)
             })
     }, [choosenAPI]);
 
@@ -26,7 +25,7 @@ const MoviesList = () => {
         <>
             <Header reachAPIValue={reachAPIValue} />
             <main className="movies-container">
-                {moviesList.map((movie) => {
+                {movieList.map((movie) => {
                     return (
                         <Link
                             to={`/movies/${movie.id}`}
@@ -34,7 +33,7 @@ const MoviesList = () => {
                             key={movie.id}
                         >
                             <div className="movie-image-overlay"></div>
-                            <div className="movie-start-info">
+                            <div className="movie-start-info-container">
                                 <h1>{movie.title}</h1>
                                 <p>Released {movie.release_date}</p>
                             </div>
@@ -52,4 +51,4 @@ const MoviesList = () => {
     ) 
 }
 
-export default MoviesList;
+export default MovieList;

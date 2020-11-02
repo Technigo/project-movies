@@ -4,10 +4,10 @@ import { useParams, Link } from 'react-router-dom';
 import icon from '../assets/icons8-chevron-left-64.png';
 
 import { API_KEY } from 'urls';
-//import MoviesList from './MoviesList';
 
 const MovieDetails = () => {
     const { id } = useParams();
+    
 
     const MOVIE_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`;
 
@@ -19,10 +19,17 @@ const MovieDetails = () => {
         fetch(MOVIE_URL)
             .then(response => response.json())
             .then(data => {
-                console.log(data)
                 setMovie(data)
             })
     }, [MOVIE_URL]);
+
+    // const idMatch = (movie.id === id);
+
+    // if (!idMatch) {
+    //     return (
+    //         <div>Not found</div>
+    //     )
+    // }
 
     const background = `https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`;
     
