@@ -7,27 +7,57 @@ header {
 	align-items: center;
 }
 
-ul {
-	list-style: none;
-	text-transform: uppercase;
-	display: flex;
-}
-
-li {
-	margin-left: 10px;
-}
-
 a {
 	text-decoration: none;
 	color: #fff;
 	font-weight: bold;
+	display: block;
 	/* animation: 1s ease-in-out; */
 }
 
-.nav-bar-link:hover {
-	border-bottom: 1px solid #fff;
+a.active {
+	border-bottom: 1px solid white;
 }
 
+.nav-button {
+	background: transparent;
+	color: white;
+	padding: 12px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+
+nav {
+	position: relative;
+	display: inline-block;
+}
+
+.nav-links {
+	display: none;
+	position: absolute;
+	background-color: #000;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.nav-links a:hover {
+	background: grey;
+}
+
+nav:hover .nav-links {
+	display: block;
+}
+
+nav:hover .nav-button {
+	background-color: #565e56;
+}
+/* .nav-bar-link:hover {
+	border-bottom: 1px solid #fff;
+} */
+
+/*flyttas*/
 .back-button {
 	position: absolute;
 	z-index: 1;
@@ -40,8 +70,4 @@ a {
 	text-transform: uppercase;
 	font-size: 16px;
 	font-weight: 700;
-}
-
-a.active {
-	border-bottom: 1px solid white;
 }

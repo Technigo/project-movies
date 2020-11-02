@@ -9,39 +9,17 @@ const Nav = () => (
 			<h1>Movie time</h1>
 		</Link>
 
-		<Route path="/movies">
-			<Link to="/">
-				<button type="button" className="back-button">
-					Home
-				</button>
-			</Link>
-		</Route>
 		<nav>
-			<ul>
-				<li>
-					<NavLink to="/" className="nav-bar-NavLink">
-						Now Playing
-					</NavLink>
-				</li>
+			<button className="nav-button">Category</button>
+			<div className="nav-links">
+				<NavLink to="/">Now Playing</NavLink>
 
-				<li>
-					<NavLink to="/popular" className="nav-bar-NavLink">
-						Popular
-					</NavLink>
-				</li>
+				<NavLink to="/popular">Popular</NavLink>
 
-				<li>
-					<NavLink to="/upcoming" className="nav-bar-NavLink">
-						Upcoming
-					</NavLink>
-				</li>
+				<NavLink to="/upcoming">Upcoming</NavLink>
 
-				<li>
-					<NavLink to="/top_rated" className="nav-bar-NavLink">
-						Top Rated
-					</NavLink>
-				</li>
-			</ul>
+				<NavLink to="/top_rated">Top Rated</NavLink>
+			</div>
 		</nav>
 	</header>
 );

@@ -14,20 +14,15 @@ export const App = () => {
 			<Nav />
 			<Switch>
 				<Route exact path="/movies/:movieId">
-					<MovieDetail
-					//movieDetail={movieDetail}
-					//onMovieClick={fetchMovieDetail}
-					/>
+					<MovieDetail />
 				</Route>
 
-				<Route exact path="/companies/:companyId">
+				<Route exact path="/company/:companyId">
 					<CompanyDetail />
 				</Route>
 
 				<Route exact path="/">
-					<MovieList
-					//movies={movies}
-					/>
+					<MovieList />
 				</Route>
 
 				<Route exact path="/popular">

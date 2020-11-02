@@ -13,6 +13,7 @@ main {
 
 .movie-container {
 	display: grid;
+	grid-template-columns: 1fr 1fr;
 	width: 100%;
 }
 
@@ -47,7 +48,7 @@ article:hover .movie-information {
 
 @media (min-width: 768px) {
 	.movie-container {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 

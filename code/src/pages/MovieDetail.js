@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, Route } from 'react-router-dom';
 
 //import Actor from '../components/MovieActors';
 
@@ -38,6 +38,13 @@ const MovieDetail = () => {
 
 	return (
 		<section className="movie-details-container">
+			<Route path="/movies">
+				<Link to="/">
+					<button type="button" className="back-button">
+						Home
+					</button>
+				</Link>
+			</Route>
 			{movieDetail.title && (
 				<>
 					<div

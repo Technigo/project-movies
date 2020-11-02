@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
 
 const CompanyDetail = () => {
 	const [companies, setCompanies] = useState();
@@ -7,14 +7,18 @@ const CompanyDetail = () => {
 
 	const ApiKey = '175ffd5710eba9b52b1d7f46de42a152';
 
-	const CompanyURL = `https://api.themoviedb.org/3/discover/movie?api_key=${ApiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_companies=with_companies=${companyId}`;
+	//const CompanyURL = `https://api.themoviedb.org/3/discover/movie?api_key=${ApiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_companies=with_companies=${companyId}`;
+	//const CompanyURL =
+	//'https://api.themoviedb.org/3/discover/movie?api_key=175ffd5710eba9b52b1d7f46de42a152&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_companies=11395';
 
 	useEffect(() => {
-		fetchProductionCompanies();
-	}, [CompanyURL, companyId]);
+		fetchProductionCompanies(companyId);
+	}, [companyId]);
 
-	const fetchProductionCompanies = () => {
-		fetch(CompanyURL)
+	const fetchProductionCompanies = companyId => {
+		fetch(
+			`https://api.themoviedb.org/3/discover/movie?api_key=${ApiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_companies=${companyId}`
+		)
 			.then(res => res.json())
 			.then(json => {
 				setCompanies(json.results);
@@ -23,14 +27,26 @@ const CompanyDetail = () => {
 	};
 
 	return (
-		<section>
-			{companies.name && (
-				<div>
-					<p>hejhej</p>
-					<p>Companyname</p>
-				</div>
+		<main>
+			{companies && (
+				<section className="movie-container">
+					{companies.map(company => (
+						<article key={company.id}>
+							<Link to={`/movies/${company.id}`}>
+								<img
+									src={`https://image.tmdb.org/t/p/w300/${company.poster_path}`}
+									alt={`${company.id}`}
+								/>
+								<div className="movie-information">
+									<h2>{company.title}</h2>
+									<p className="release-date">{`Released ${company.release_date}`}</p>
+								</div>
+							</Link>
+						</article>
+					))}
+				</section>
 			)}
-		</section>
+		</main>
 	);
 };
 export default CompanyDetail;
