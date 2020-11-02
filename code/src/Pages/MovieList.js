@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import { API_URL } from '../urls';
-import Header from '../Components/Header'
+import { MOVIES_URL } from '../urls';
+import Header from '../Components/Header';
+import Movie from '../Components/Movie';
 
 const MovieList = () => {
 
     const [movieList, setMovieList] = useState([]);
-    const [choosenAPI, setChoosenAPI] = useState(API_URL);
+    const [choosenAPI, setChoosenAPI] = useState(MOVIES_URL);
 
     useEffect(() => {
         fetch(choosenAPI)
@@ -17,6 +18,7 @@ const MovieList = () => {
             })
     }, [choosenAPI]);
 
+    // Reach the url choosen in movie details
     const reachAPIValue = (apiURL) => {
         setChoosenAPI(apiURL)
     }
@@ -28,10 +30,8 @@ const MovieList = () => {
                 {movieList.map((movie) => {
                     return (
                         <Link
-                            to={`/movies/${movie.id}`}
-                            className="movie-wrapper"
-                            key={movie.id}
-                        >
+                            to={`/movie/${movie.id}`}
+                            className="movie-wrapper">
                             <div className="movie-image-overlay"></div>
                             <div className="movie-start-info-container">
                                 <h1>{movie.title}</h1>
@@ -40,8 +40,7 @@ const MovieList = () => {
                             <img
                                 className="movie-image"
                                 src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-                                alt={movie.title}
-                            >
+                                alt={movie.title}>
                             </img>
                         </Link>
                     )

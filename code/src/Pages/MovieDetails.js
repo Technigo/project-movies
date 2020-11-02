@@ -5,6 +5,7 @@ import icon from '../assets/icons8-chevron-left-64.png';
 
 import { API_KEY } from 'urls';
 
+
 const MovieDetails = () => {
     const { id } = useParams();
     

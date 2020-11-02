@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import MoviesList from './Pages/MovieList';
+import MovieList from './Pages/MovieList';
 import MovieDetails from './Pages/MovieDetails';
 
 export const App = () => {
@@ -9,9 +9,9 @@ export const App = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact> 
-          <MoviesList />
+          <MovieList />
         </Route>
-        <Route path="/movies/:id">
+        <Route path="/movie/:id">
           <MovieDetails />
         </Route>
       </Switch>
