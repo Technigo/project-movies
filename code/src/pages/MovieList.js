@@ -18,15 +18,15 @@ const MovieList = () => {
       console.log(json.results);
     })
   }, [])
-  //the movie.poster_path doesn't return any picture. Look that up!
+  //What is the link on movie-list-movie-wrapper going to go to? Right now it's wrong!
   return (
     <div> 
       {movies.map((movie) => (
-        <a className="movie-list-movie-wrapper" href={movie.poster_path} key={movie.id}>
-          <img src={movie.poster_path} alt={movie.title} />
+        <a className="movie-list-movie-wrapper" href= {`https://image.tmdb.org/t/p/w342${movie.poster_path}`} key={movie.id}>
+          <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
           <div className="movie-list-details"> 
             <h2 className="movie-list-title">{movie.title}</h2>
-            <p className="movie-list-release">{movie.release_date}</p>
+            <p className="movie-list-release">Release-date: {movie.release_date}</p>
           </div>
         </a>
       ))}
