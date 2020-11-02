@@ -11,3 +11,109 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.navigation {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.navigation h1 {
+  padding: 4px;
+}
+
+.movie-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.movie-thumb {
+  display: flex;
+  flex-flow: column;
+  background-color: black;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.movie-thumb-image-wrapper {
+  position: relative;
+}
+
+.movie-thumb-image {
+  padding: 0;
+  margin-top: 0;
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  /* webkit-transition: opacity 0.4s ease-in-out; */
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.movie-thumb-image-wrapper:hover .movie-thumb-image {
+  opacity: 0.2;
+}
+
+.movie-thumb-image-description {
+  /* Needed for the overlay to work */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  /* Center the content vetically */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-start;
+
+  /* Other styling  */
+  color: white;
+  font-size: 20px;
+  padding-left: 10px;
+
+  /* Start as invisible */
+  visibility: hidden;
+  opacity: 0;
+
+  /* Specify the animation time */
+  /* webkit-transition: opacity 0.4s ease-in-out; */
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.movie-thumb-image-wrapper:hover .movie-thumb-image-description {
+  visibility: visible;
+  opacity: 1;
+}
+
+.movie-details {
+  display: inline-block;
+  padding: 16px;
+  background-color: #efefef;
+  align-items: center;
+}
+
+.movie-details img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  padding: 16px;
+  background-color: #6e6e6e;
+}
+
+.movie-overview {
+  display: flex;
+  flex-flow: row;
+}
+
+.movie-stats {
+  padding: 12px;
+  display: flex;
+  flex-flow: column;
+}
