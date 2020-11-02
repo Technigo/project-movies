@@ -5,17 +5,23 @@ import { Link } from 'react-router-dom';
 const API_KEY = '2ff070f81f8c9206d9426765e063f416';
 
 export const MovieDetails = () => {
-  const params = useParams();
+  //The movie ID of the movie the user has clicked on will show on the
+  //URL, so we use the params feature to access that movie ID
+  const { movieID } = useParams();
   const [movie, setMovie] = useState([]);
 
+  //We do a new fetch to the specific movie details endpoint, using the movie ID
+  //we got from the params so we make sure to fetch the data for the right movie
+  //We set movieID as dependency for this fetch, it will change if the movie id changes
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${params.movieID}?api_key=${API_KEY}&language=en-US`)
+    fetch(`https://api.themoviedb.org/3/movie/${movieID}?api_key=${API_KEY}&language=en-US`)
      .then((response) => response.json())
      .then((json) => {
        setMovie(json)
      })
-  }, [params.movieID])
+  }, [movieID])
 
+  //The movie we want to display is determined with the movie/ setMovie state
   return (
     <>
       <Link to="/" exact="true">
@@ -33,3 +39,6 @@ export const MovieDetails = () => {
 };
 
 //backdrop as background, access backdrop: src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}
+
+//Chose not to create a separate movie-details-page component since it's not
+//a long or complex component, found it easier to keep it all here.

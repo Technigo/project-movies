@@ -31,3 +31,5 @@ export const TopMovieDetails = () => {
     </>
   )
 };
+
+//Create a component top movie details card to generate in the return instead of having all html here, pass data as props

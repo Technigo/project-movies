@@ -28,3 +28,7 @@ export const TopMoviesList = () => {
     </div>
   )
 };
+
+//Same logic applied in the MoviesList and TopMovieDetails components is applied to these
+//TopMovies components. We just work with different data retrieved from doing a new main fetch
+//to the endpoint showing top rated movies instead.
