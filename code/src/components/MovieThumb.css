@@ -1,10 +1,11 @@
-.movie-thumb {
+.movie-thumb-wrapper{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   width: 25%;
   position: relative;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .movie-image {
@@ -12,11 +13,11 @@
   transition: 0.3s ease;
 }
 
-.movie-thumb:hover .movie-image {
+.movie-thumb-wrapper:hover .movie-image {
   filter: brightness(0.3);
 }
 
-.movie-details {
+.movie-description {
   position: absolute;
   display: none;
   transition: 0.3s ease;
@@ -24,8 +25,7 @@
 
 h2, h3 {
   z-index: 1;
-  margin: 0;
-  margin-left: 20px;
+  margin: 0 20px;
 }
 
 h2 {
@@ -39,6 +39,6 @@ h3 {
   margin-bottom: 40px;
 }
 
-.movie-thumb:hover .movie-details {
+.movie-thumb-wrapper:hover .movie-description {
   display: block;
 }

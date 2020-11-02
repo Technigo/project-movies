@@ -19,9 +19,8 @@ export const MovieList = () => {
     <section className="movies-list">
       {movies.map((movie) => (
         <MovieThumb
-          title={movie.title}
-          release_date={movie.release_date}
-          poster_path={movie.poster_path}
+          key={movie.id}
+          {...movie}
         />
       ))}
     </section>
