@@ -1,60 +1,76 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+//import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import MovieList from './pages/MovieList';
 import MovieDetail from './pages/MovieDetail';
-
+import CompanyDetail from './pages/CompanyDetail.js';
 import Nav from './components/Nav';
 //import API key after
 
 export const App = () => {
-	// const [movies, setMovies] = useState([]);
-	// const [movieDetail, setMovieDetail] = useState([]);
-
-	// const ApiKey = '175ffd5710eba9b52b1d7f46de42a152';
-	// const movieListURL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${ApiKey}&language=en-US`;
-	// //const movieDetailURL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${ApiKey}&language=en-US`;
-
-	// useEffect(() => {
-	// 	fetchMovieList();
-	// }, []);
-
-	// const fetchMovieList = () => {
-	// 	fetch(movieListURL)
-	// 		.then(res => res.json())
-	// 		.then(json => {
-	// 			setMovies(json.results);
-	// 			console.log(json.results);
-	// 		});
-	// };
-
-	// const fetchMovieDetail = movieId => {
-	// 	fetch(
-	// 		`https://api.themoviedb.org/3/movie/${movieId}?api_key=${ApiKey}&language=en-US`
-	// 	)
-	// 		.then(res => res.json())
-	// 		.then(json => {
-	// 			setMovieDetail(json);
-	// 			console.log(json);
-	// 		});
-	// };
-
 	return (
 		<BrowserRouter>
 			<Nav />
 			<Switch>
-				<Route exact path="/">
-					<MovieList
-					//movies={movies}
-					/>
-				</Route>
 				<Route exact path="/movies/:movieId">
 					<MovieDetail
 					//movieDetail={movieDetail}
 					//onMovieClick={fetchMovieDetail}
 					/>
 				</Route>
+
+				<Route exact path="/companies/:companyId">
+					<CompanyDetail />
+				</Route>
+
+				<Route exact path="/">
+					<MovieList
+					//movies={movies}
+					/>
+				</Route>
+
+				<Route exact path="/popular">
+					<MovieList>popular</MovieList>
+				</Route>
+				<Route exact path="/upcoming">
+					<MovieList>upcoming</MovieList>
+				</Route>
+				<Route exact path="/top_rated">
+					<MovieList>top_rated</MovieList>
+				</Route>
 			</Switch>
 		</BrowserRouter>
 	);
 };
+
+// const [movies, setMovies] = useState([]);
+// const [movieDetail, setMovieDetail] = useState([]);
+
+// const ApiKey = '175ffd5710eba9b52b1d7f46de42a152';
+// const movieListURL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${ApiKey}&language=en-US`;
+// //const movieDetailURL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${ApiKey}&language=en-US`;
+
+// useEffect(() => {
+// 	fetchMovieList();
+// }, []);
+
+// const fetchMovieList = () => {
+// 	fetch(movieListURL)
+// 		.then(res => res.json())
+// 		.then(json => {
+// 			setMovies(json.results);
+// 			console.log(json.results);
+// 		});
+// };
+
+// const fetchMovieDetail = movieId => {
+// 	fetch(
+// 		`https://api.themoviedb.org/3/movie/${movieId}?api_key=${ApiKey}&language=en-US`
+// 	)
+// 		.then(res => res.json())
+// 		.then(json => {
+// 			setMovieDetail(json);
+// 			console.log(json);
+// 		});
+// };
