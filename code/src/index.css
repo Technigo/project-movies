@@ -12,7 +12,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #000;
   color: #fafafa;
-  
 }
 
 h2, p {
@@ -31,9 +30,10 @@ a[href]:not([class]) {
   grid-template-columns: repeat(4, 0fr);
 }
 
+/* Set height and width to a 4:3 ratio. 25vw means it'll be 25% of the viewport width (and since the image is in 4:3 ratio, the height should be 1.33 times larger than the width */
 .movie-card {
   color: white;
-  height: 37vw;
+  height: 37.5vw;
   width: 25vw;
   position: relative;
 }
@@ -63,4 +63,19 @@ a[href]:not([class]) {
 
 .movie-card-overlay:hover {
   opacity: 1;
+}
+
+.movie-details {
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
