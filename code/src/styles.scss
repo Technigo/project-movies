@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: #000;
+  color: #fff;
+}
+
+/*** MAIN ***/
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  /* animation: 1s ease-in-out; */
+}
+a.active {
+  border-bottom: 1px solid white;
+}
+.nav-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+nav {
+  position: relative;
+  display: inline-block;
+}
+.nav-links {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.nav-links a:hover {
+  background: grey;
+}
+nav:hover .nav-links {
+  display: block;
+}
+nav:hover .nav-button {
+  background-color: #565e56;
+}
+
+.article {
+  position: relative;
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px 10px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover .article__overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__header {
+  }
+
+  &__date {
+  }
+}
+
+.detail {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-position: center;
+  background-position-x: center;
+  background-position-y: center;
+  position: relative;
+
+  &__info-container {
+    padding: 50px;
+  }
+
+  &__vote {
+    font-size: 16px;
+    margin-left: 10px;
+    color: red;
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
