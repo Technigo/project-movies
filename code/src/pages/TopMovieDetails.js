@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-const API_KEY = '2ff070f81f8c9206d9426765e063f416';
+import { API_KEY } from '../key';
 
 export const TopMovieDetails = () => {
   const params = useParams();
