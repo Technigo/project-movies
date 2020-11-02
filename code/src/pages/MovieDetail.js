@@ -43,7 +43,7 @@ export const MovieDetail = () => {
           <h2 className="movie-detail-rating">Rating: {currentMovie.vote_average}</h2> 
           <p className="movie-detail-overview">{currentMovie.overview}</p>
           <a className="imdb-link" href={`https://www.imdb.com/title/${currentMovie.imdb_id}/`} alt="imdb-link" target="_blank" rel="noopener noreferrer">IMDB <span role="img" aria-label="link-emoji">🔗</span> </a>
-          <Link className="similar-movies-link" to= {`/movies/${movieId}/similarMovies`}>Explore recommended movies <span role="img" aria-label="heart-eyes-emoji">😍</span> </Link>
+          <Link className="similar-movies-link" to= {`/movies/${movieId}/recommendedMovies`}>Explore recommended movies <span role="img" aria-label="heart-eyes-emoji">😍</span> </Link>
         </div>
         </div>
     </section>}

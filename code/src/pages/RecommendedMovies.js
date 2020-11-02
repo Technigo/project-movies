@@ -13,7 +13,9 @@ export const RecommendedMovies = () => {
    .then((res) => res.json())
    .then((json) => {
      console.log(json.results);
-     setRecommendedMovies(json.results);
+     const resultsFiltered = json.results.filter((movie) =>( movie.poster_path != null ));
+     //console.log(newArr);
+     setRecommendedMovies(resultsFiltered);
    })
   },[movieId])
 
