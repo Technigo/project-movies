@@ -1,0 +1,44 @@
+.movie-thumb {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 25%;
+  position: relative;
+  color: #ffffff;
+}
+
+.movie-image {
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.movie-thumb:hover .movie-image {
+  filter: brightness(0.3);
+}
+
+.movie-details {
+  position: absolute;
+  display: none;
+  transition: 0.3s ease;
+}
+
+h2, h3 {
+  z-index: 1;
+  margin: 0;
+  margin-left: 20px;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: normal;
+  margin-top: 1em;
+  margin-bottom: 40px;
+}
+
+.movie-thumb:hover .movie-details {
+  display: block;
+}
