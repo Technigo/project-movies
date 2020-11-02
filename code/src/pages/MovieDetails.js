@@ -42,3 +42,29 @@ export const MovieDetails = () => {
 
 //Chose not to create a separate movie-details-page component since it's not
 //a long or complex component, found it easier to keep it all here.
+
+//Logic if I decide to implement NotFound page:
+//console.log(typeof movie.id) //number
+//console.log(typeof parseInt(movieID)) //string, so need to parse it
+
+/*if(movie.id === parseInt(movieID)) {
+    return (
+      <>
+      <Link to="/" exact="true">
+        <p>Back to Movies List</p>
+      </Link>
+      <div className="movie-details-page">
+        <img src={`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.original_title} />
+        <h2>{movie.original_title}</h2>
+        <p>{`${movie.vote_average} / 10`}</p>
+        <p>{movie.overview}</p>
+        <img width="300px" src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`} alt={movie.original_title} />
+      </div>
+    </>
+    )
+  } else {
+    return (
+      //Need to create NotFound component if I want to implement this
+      <NotFound />
+    )
+  }*/
