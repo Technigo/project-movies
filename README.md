@@ -1,13 +1,22 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+A multi-page React application with movies. :movie_camera
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## :brain: Learning objectives
+- build multi-page application using React Router
+- use placeholders in URLs to pick dynamic parts from urls
+- pass information such as product ids, or blog post titles in the URL and pick this up in React router to load dynamic content
+- practice using APIs in React - combining useState with useEffect
 
-## The problem
+## :heavy_check_mark: Features
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## :chart_with_upwards_trend: Future improvements
 
-## View it live
+## :robot: Tech used 
+- HTML5
+- CSS3
+- React
+- JSX
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+## :eyes: View it live
+
