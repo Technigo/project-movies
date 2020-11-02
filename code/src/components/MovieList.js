@@ -13,8 +13,6 @@ export const MovieList = () => {
         })
     }, [])
 
-    
-
     return (
         <section className="movie-list">
          {movies.map((movie) => {      
