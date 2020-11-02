@@ -1,0 +1,77 @@
+.poster-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.poster-image {
+  width: 24.7vw;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.details {
+  display: flex;
+  flex-flow: column;
+  background: rgba(0,0,0,.75);
+  align-items: center;
+  position: relative;
+}
+
+.details:hover .poster-image {
+  opacity: 0.2;
+}
+
+.movie-title, .movie-release {
+  margin: 45px;
+  position: absolute;
+  color: #fff;
+
+  /* Start as invisible */
+  visibility: hidden;
+  opacity: 0;
+  
+  /* Specify the animation time */
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.movie-title {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 30px;
+  margin-bottom: 80px;
+  opacity: 0;
+}
+
+.movie-release {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+.details:hover .movie-title  {
+  visibility: visible;
+  opacity: 1;
+}
+
+.details:hover .movie-release {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 1023px) {
+  .poster-image { /* Kan ev. ta bort denna om den är samma dom för desktop */
+    width: 24.7vw;
+  }
+}
+
+@media (max-width: 668px) {
+
+}

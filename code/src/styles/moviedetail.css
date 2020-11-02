@@ -1,0 +1,32 @@
+.background-picture {
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.detailed-card {
+  margin: 40px;
+}
+
+.picture-text-rating-wrapper {
+  display: flex;
+}
+
+.detail-poster-image {
+  border: 5px solid #fff;
+}
+
+.text-rating-overview-wrapper {
+  max-width: 450px;
+}
+
+.top-info {
+  display: flex;
+  margin: 20px;
+  align-items: flex-end;
+}
+
+
+.overview {
+  margin: 20px;
+}
