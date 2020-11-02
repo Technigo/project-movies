@@ -16,10 +16,6 @@ main {
   display: flex;
   flex-direction: row;
 }
-/*
-p {
-  width: 250px;
-}*/
 
 /* NAV */
 header {
@@ -36,8 +32,9 @@ header {
 }
 
 .thumbnail {
-  height: 300px;
-  width: auto;
+  height: auto;
+  width: 100%;
+  z-index: 0;
 }
 
 /* MOVIE DETAILS */

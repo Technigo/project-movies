@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom'
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([])
+  const ApiKey = '40be626d591abb41158713818687432b'
+  const movieListURL = `https://api.themoviedb.org/3/movie/popular?api_key=${ApiKey}&language=en-US&page=1`
 
   useEffect(() => {
-    fetch('https://api.themoviedb.org/3/movie/popular?api_key=40be626d591abb41158713818687432b&language=en-US&page=1')
+    fetch(movieListURL)
     .then((res) => res.json())
     .then(json => {
       setMovies(json.results) 
-      
     })
   })
 

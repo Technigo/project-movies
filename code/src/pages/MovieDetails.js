@@ -4,17 +4,17 @@ import { useParams } from 'react-router-dom'
 export const MovieDetails = () => {
   const { id } = useParams()
   const [details, setDetails] = useState([])
+  const ApiKey = '40be626d591abb41158713818687432b'
+  const detailListURL = `https://api.themoviedb.org/3/movie/${id}?api_key=${ApiKey}&language=en-US`
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=40be626d591abb41158713818687432b&language=en-US`)
+    fetch(detailListURL)
     .then((res) => res.json())
     .then((json) => {
       console.log(json)
       setDetails(json)
     })
-  
   },[])
-
 
   const movieDetailStyle = {
     backgroundImage: `url("http://image.tmdb.org/t/p/w1280${details.backdrop_path}")`,
@@ -29,10 +29,11 @@ export const MovieDetails = () => {
           <section className="details">
             <h2>{details.original_title}</h2>
             <h3>{details.vote_average}/10</h3>
-            <p class="overview">{details.overview}</p>
+            {details.overview}
           </section>
         </div>
     </section> 
     
   )
 }
+
