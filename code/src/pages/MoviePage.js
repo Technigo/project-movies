@@ -38,7 +38,7 @@ const MoviePage = ({ movies }) => {
       <Link className="movies--back-button" key={movies.id} to="/">
         <img
           alt="back-button"
-          className="movies--back-button-img"
+          className="movies--back-button--img"
           src="../images/noun_back arrow_2223783.svg"
         />
         <span className="movies--back-button--text">Movies</span>

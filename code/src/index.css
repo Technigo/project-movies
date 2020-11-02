@@ -30,7 +30,7 @@ main {
   align-items: center;
 }
 
-.movies--back-button-img {
+.movies--back-button--img {
   width: 30px;
   filter: invert(1);
 }
@@ -40,7 +40,7 @@ main {
   margin: 0 0 5px 5px;
 }
 
-.movies--back-button--text:hover {
+.movies--back-button:hover .movies--back-button--text {
   margin: 0 0 5px 10px;
 }
 
