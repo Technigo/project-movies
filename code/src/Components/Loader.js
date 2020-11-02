@@ -6,7 +6,6 @@ const Loader = () => {
   return (
     <section className="loader-page-container">
       <div className="loader-wrapper">
-        <p>Loading</p>
         <img className="popcorn" src={popcorn} alt="loader"></img>
         <img className="popcorn" src={popcorn} alt="loader"></img>
         <img className="popcorn" src={popcorn} alt="loader"></img>
