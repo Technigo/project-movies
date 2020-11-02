@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 10px;
   background-color: black;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -81,8 +81,7 @@ h3 {
   
 }
 
-
-/*Detail*/
+/*Detail.js*/
 .movie-backdrop {
   /* border: solid blue 2px; */
   background-position: left;
@@ -92,8 +91,7 @@ h3 {
   height: 850px;
   display: flex;
   align-items: flex-end;
-  justify-content: left;
-  
+  justify-content: left; 
 }
 
 .movie-content {
@@ -111,6 +109,7 @@ height: 780px;
   width: 380px;
 }
 
+
 .movie-info {
 color: white;
 /* border: solid green 2px; */
@@ -120,6 +119,8 @@ display: flex;
 flex-direction: column;
 justify-content: flex-end;
 margin-left: 20px;
+background: rgba(8, 8, 8, 0.565);
+padding:20px;
 }
 
 .movie-vote {
@@ -127,11 +128,17 @@ margin-left: 20px;
   font-size: 15px;
 }
 
- .link {
-  border:none;
-  display: flex;
-flex-direction: row;
+.movie-status {
+  color:white;
+  font-size: 20px;
+  font-weight: bold;
+}
 
+.link {
+display: flex;
+flex-direction: row;
+text-decoration:none;
+outline:none;
 align-items: center;
 margin-bottom: 120px;
 }
@@ -139,11 +146,10 @@ margin-bottom: 120px;
 .back-movies {
 display: flex;
 flex-direction: column;
-/* border: solid red 2px; */
-
 }
 
 .back-text  {
+  opacity:1;
 color: white;
 margin-left: 10px;
 font-size: 20px;
@@ -160,7 +166,23 @@ transition-property: transform;
 } 
 
 
-  .back-text:hover, .back-text:focus, .back-text:active {
-    -webkit-transform: translateX(8px);
-    transform: translateX(8px);
+.back-text:hover, .back-text:focus, .back-text:active {
+-webkit-transform: translateX(8px);
+transform: translateX(8px);
+}
+
+h1 {
+  margin:0;
+}
+
+.movie-homepage a{
+color: white;
+text-decoration:none;
+outline:none;
+font-size: 13px;
+}
+
+.movie-homepage a:hover{
+  border-bottom: solid red 1px;
+  color: red;
   }

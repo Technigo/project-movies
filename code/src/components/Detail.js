@@ -18,8 +18,8 @@ export const Detail = () => {
 
     return (
 
-        <section className="movie-backdrop" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` }}>
-         
+    <section className="movie-backdrop"  style={{  backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` }}>
+      
             <div className="movie-content">
             <div className="back-movies">
                     <Link to="/" className="link">
@@ -31,7 +31,9 @@ export const Detail = () => {
                
                
                 <div className="movie-info">
-                    <h1>{movies.title} <span className="movie-vote">{movies.vote_average}/10</span></h1>
+                 <h1>{movies.title} <span className="movie-vote">{movies.vote_average}/10</span></h1> 
+                 <span className="movie-homepage"><a href={movies.homepage} target="blank">{movies.homepage}</a></span>
+                    <span className="movie-status">- {movies.status} -</span>
                     <p>{movies.overview}</p>
                 </div>
 
