@@ -36,7 +36,7 @@ export const MovieDetail = () => {
       <Link className="link-back" to="/"><span role="img" aria-label="back-arrow"><span role="img" aria-label="arrow-emoji">⬅️</span> </span>Movies start</Link>
         
         <div className="movie-details-wrapper">
-       <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${currentMovie.poster_path}`} alt={currentMovie.title} />
+       <img className="movie-detail-poster" src={`https://image.tmdb.org/t/p/w342${currentMovie.poster_path}`} alt={currentMovie.title} />
         <div className="movie-details-text">
         <h1 className="movie-detail-title">{currentMovie.title}</h1> 
         <p className="movie-tagline">{currentMovie.tagline}</p>

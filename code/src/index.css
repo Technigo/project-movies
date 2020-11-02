@@ -190,6 +190,10 @@ option {
 		background-position: center;
 	}
 
+	.movie-detail-poster {
+		display: none;
+	}
+
 	.movie-details-wrapper {
 		position: relative;
 		top: unset;
@@ -205,10 +209,6 @@ option {
 	.link-back {
 		left: 20px;
 		top: 30px;
-	}
-	.movie-detail-poster,
-	.movie-poster {
-		display: none;
 	}
 
 	.movie-details-text {
