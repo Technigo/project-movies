@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const MovieDetails = ({title, overview, vote_average}) => {
+export const MovieDetails = ({ title, overview, vote_average }) => {
 
     return (
         <section className='movie-details'>
