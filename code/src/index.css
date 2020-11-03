@@ -1,49 +1,81 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
 }
  /*Nav Bar styling*/
-  nav {
-    height: 50px;
-    background-color: black;
-  }
+nav {
+  height: 50px;
+  background-color: black;
+}
 
-  .movies-nav-text-mobile {
-    margin: 0;
-  }
+.movies-nav-text-mobile {
+  margin: 0;
+}
 
-  .movies-nav-text-mobile span {
-    font-size: 30px;
-    text-decoration: none;
-    margin-right: 5px;
-  }
+.movies-nav-text-mobile span {
+  font-size: 30px;
+  text-decoration: none;
+  margin-right: 5px;
+}
 
-  .movies-nav-text-mobile a {
-    font-size: 18px;
-    text-decoration: none;
-    color: white;
-    margin-left: 7px;
-    font-weight: bold;
-  }
+.movies-nav-text-mobile a {
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  margin-left: 7px;
+  font-weight: bold;
+}
 
-  .movies-nav-text-mobile a:hover {
-    color: #f03a17;
-  }
+.movies-nav-text-mobile a:hover {
+  color: #f03a17;
+}
 
- .movies-nav-text, .top-movies-nav-text, .tmdb-nav-text {
-   display: none;
+.movies-nav-text, .top-movies-nav-text, .tmdb-nav-text {
+  display: none;
+}
+
+ /*MoviesList page Styling*/
+ .movie-card {
+  position: relative;
  }
 
-
-
-
-
-
-
-
-.movie-card img {
-  width: 200px;
+ .movie-card img {
+  width: 100%;
 }
+
+/*Hover effect over Movie card*/
+.text-over-movie-card {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
+}
+
+.movie-card:hover .text-over-movie-card {
+  visibility: visible;
+  opacity: 1;
+}
+
+.text-over-movie-card h2 {
+  font-size: 30px;
+  margin-left: 30px;
+  margin-top: 600px;
+  margin-bottom: 0;
+}
+
+.text-over-movie-card p {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+
 
 .movie-details-page img {
   width: 200px;

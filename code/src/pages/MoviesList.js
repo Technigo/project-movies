@@ -18,7 +18,7 @@ export const MoviesList = () => {
   }, []);
 
   return (
-    <div className="movie-card">
+    <>
       {/* We do a map on the movies array to create a movie card component
       for each movie in the array and make that movie card clickable with
       Link feature to direct to the page showing the movie details*/}
@@ -26,12 +26,14 @@ export const MoviesList = () => {
         <div className="movie-card" key={movie.id}>
           <Link to={`/movies/${movie.id}`}>
             <img src={`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.original_title} />
-            <h2>{movie.original_title}</h2>
-            <p>{movie.release_date}</p>
+            <div className="text-over-movie-card">
+              <h2>{movie.original_title}</h2>
+              <p>{`Released ${movie.release_date}`}</p>
+            </div>
           </Link>
         </div>
       ))}
-    </div>
+    </>
   )
 };
 
