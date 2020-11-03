@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:#000 ;
+  background-color:#000;
+  text-decoration: none;
 }
 
 code {
@@ -28,15 +29,33 @@ code {
    width: 100%;
    margin: 0;
 }
+.overlay-container {
+  position: relative;
+}
 
 .text-overlay { 
   position: absolute;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 25%;
-  height: 2%;
-  transition: 0.5s ease;
+  bottom: 0;
+  color: white;
+  background: rgba(0, 0, 0, 0.742);
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease;
   opacity: 0;
+}
+
+.text-overlay h1 { 
+  position: absolute;
+  bottom: 50px;
+  margin-left: 20px;
+  font-size: 30px;
+}
+
+.text-overlay p {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  font-size: 17px;
 }
 
 .text-overlay:hover {
