@@ -1,0 +1,5 @@
+.backdrop {
+    min-height: 100vh;
+    max-width: 100vh;
+    background-size: cover;
+}
