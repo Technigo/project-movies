@@ -1,9 +1,29 @@
+.details-back-arrow {
+    display: inline-flex;
+    width: 40px;
+}
+
+.details-text-arrow {
+    display: inline-flex;
+    align-self: center;
+    margin-left: 10px;
+    color: white;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    transition: .8s;
+}
+
+.details-text-arrow:hover {
+    margin-left: 20px;   
+}
 
 .back-link {
-    color: white;
     position: absolute;
     top: 50px;
-    padding: 20px;
+    padding: 50px;
+    text-decoration: none;
+    display: inline-flex;
 }
 
 .details-container {
@@ -21,7 +41,29 @@
 }
 
 .details-summary {
-    color: white;
-    z-index: 20;
-    max-width: 200px;
+    display: flex;
+    align-items: flex-end;
+    padding: 50px;
+    color: white;    
+}
+
+.details-text {
+    margin-left: 30px;
+    max-width: 400px;
+}
+
+.details-text h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.details-text h2 {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.details-rating {
+    color: red;
+    font-size: 17px;
+    margin-left: 8px;
 }
