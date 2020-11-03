@@ -3,7 +3,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: black;
 }
- /*Nav Bar styling*/
+
+/*Nav Bar styling*/
 nav {
   height: 50px;
   background-color: black;
@@ -37,8 +38,15 @@ nav a {
 }
 
  /*MoviesList page Styling*/
+ .movie-cards-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+ }
+
  .movie-card {
   position: relative;
+  width: 100%;
  }
 
  .movie-card img {
@@ -80,6 +88,9 @@ nav a {
 .movie-details-page {
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  min-height: 100vh;
 }
 
 .movie-details-container {
@@ -174,5 +185,35 @@ nav a {
 
   .nav-emoji-tablet {
     font-size: 20px;
+  }
+
+  /*MoviesList page Styling*/
+  .movie-cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .movie-card {
+    position: relative;
+    width: 50%;
+  }
+
+  .movie-card img {
+    width: 100%;
+  }
+
+  /*Hover effect over Movie card*/
+  .text-over-movie-card h2 {
+    font-size: 30px;
+    margin-left: 25px;
+    margin-top: 100%;
+    margin-bottom: 0;
+  }
+
+  .text-over-movie-card p {
+    margin-left: 25px;
+    margin-top: 10px;
+    font-size: 15px;
   }
 }

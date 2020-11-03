@@ -18,7 +18,7 @@ export const MoviesList = () => {
   }, []);
 
   return (
-    <>
+    <section className="movie-cards-container">
       {/* We do a map on the movies array to create a movie card component
       for each movie in the array and make that movie card clickable with
       Link feature to direct to the page showing the movie details*/}
@@ -33,7 +33,7 @@ export const MoviesList = () => {
           </Link>
         </div>
       ))}
-    </>
+    </section>
   )
 };
 
