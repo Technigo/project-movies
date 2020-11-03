@@ -1,13 +1,18 @@
 import React from 'react'
-// import { Route } from "react-router-dom"
+import { BrowserRouter, Route } from "react-router-dom"
 import { MovieList } from 'components/MovieList'
+import { MovieDetails } from 'components/MovieDetails'
+
 
 export const App = () => {
   return (
-    <div>
-      {/* <Route path="/" exact> */}
-      <MovieList />
-      {/* </Route> */}
-    </div>
+    <BrowserRouter>
+      <Route path="/" exact>
+        <MovieList />
+      </Route>
+      <Route path="/movies/:id">
+          <MovieDetails />
+        </Route>
+    </BrowserRouter>
   )
 }

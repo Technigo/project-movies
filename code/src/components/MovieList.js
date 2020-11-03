@@ -3,8 +3,10 @@ import React, { useEffect, useState } from 'react'
 import { MovieThumb } from 'components/MovieThumb'
 
 export const MovieList = () => {
+  const baseURL = 'https://api.themoviedb.org'
+  const listID = '7063718'
   const apiKey = '18fb720a795c179526f7b480bba674dd'
-  const movieUrl = `https://api.themoviedb.org/3/list/7063718?api_key=${apiKey}`
+  const movieUrl = `${baseURL}/3/list/${listID}?api_key=${apiKey}`
   const [movies, setMovies] = useState([])
 
   useEffect(() => {

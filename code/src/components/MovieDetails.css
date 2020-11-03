@@ -1,0 +1,16 @@
+.background{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.detail-movie-img{
+  width:350px;
+  height: 500px;
+  border: 5px solid white;
+}
+
+p{
+  color: #fff
+}
