@@ -99,8 +99,9 @@ main {
   color: #fff;
   display: none;
 }
-.movie-list--details--wrapper h1 {
+.movie-list--details--title {
   padding: 10px 0;
+  font-size: 32px;
 }
 
 .movie-list--movie-wrapper:hover .movie-list--details--wrapper {

@@ -9,7 +9,7 @@ const ListedMovie = ({ id, title, releaseDate, posterImgSrc }) => {
 
         {/* Content for hover-effect */}
         <div className="movie-list--details--wrapper">
-          <h1>{title}</h1>
+          <h1 className="movie-list--details--title">{title}</h1>
           <p>{releaseDate}</p>
         </div>
       </Link>
