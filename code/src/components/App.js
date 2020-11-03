@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import { MOVIELIST__URL } from './URLS.js'
-import { Nav } from './Nav.js'
-import { MovieList } from './MovieList'
-import { Movie } from './Movie'
+import { MOVIELIST__URL } from './URLS.js';
+import { Nav } from './Nav.js';
+import { MovieList } from './MovieList';
+import { Movie } from './Movie';
 
-import '../styles/app.css'
+import '../styles/app.css';
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
@@ -24,7 +24,7 @@ export const App = () => {
 
 useEffect(()=>{
   getMovieList()
-},[])
+},[]);
 
   return (
 /* To include: combining useEffect and useState with using API's in react
@@ -58,5 +58,5 @@ To use React Router to create multi-page applications */
       </main>
     </BrowserRouter>
 
-  )
-}
+  );
+};

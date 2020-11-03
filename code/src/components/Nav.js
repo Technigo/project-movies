@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 import '../styles/nav.css'
 
@@ -25,5 +25,5 @@ export const Nav = () => {
                 </li>
             </ul>
         </nav>
-    )
-}
+    );
+};

@@ -1,15 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-import '../styles/movie.css'
+import { IMAGE_URL } from './URLS';
+
+import '../styles/movie.css';
 
 /* The idea is to use props to display 
 movie-titles and images from different endpoints
 of the API */
-export const Movie = ({title}) => {
+export const Movie = ({title, poster_path}) => {
     return ( 
         <section className='movie__card'>
             <h2>{title}</h2>
-            <img src='' alt='Picture of Movie'/>
+            <img src={`${IMAGE_URL}${poster_path}`} alt={title}/>
         </section>
-    )
-}
+    );
+};
