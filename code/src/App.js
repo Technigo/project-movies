@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import MovieList from './pages/MovieList';
-import MovieDetail from './pages/MovieDetail';
-import CompanyDetail from './pages/CompanyDetail';
+import MoviePage from './pages/MoviePage';
+import CompanyList from './pages/CompanyList';
 //import { API_KEY } from './api.js';
 
 import './styles.scss';
@@ -27,10 +27,10 @@ export const App = () => {
           <MovieList>upcoming</MovieList>
         </Route>
         <Route exact path="/movies/:movieId">
-          <MovieDetail />
+          <MoviePage />
         </Route>
         <Route exact path="/company/:companyId">
-          <CompanyDetail />
+          <CompanyList />
         </Route>
       </Switch>
     </BrowserRouter>

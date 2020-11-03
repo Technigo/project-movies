@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
+import MovieThumb from '../components/MovieThumb';
 import { API_KEY } from '../api.js';
 
 const MovieList = ({ children }) => {
@@ -29,19 +30,7 @@ const MovieList = ({ children }) => {
   return (
     <main className="main">
       {movies.map(movie => (
-        <article className="article" key={movie.id}>
-          <Link className="article__link" to={`/movies/${movie.id}`}>
-            <img
-              className="article__image"
-              src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-              alt={movie.title}
-            />
-            <div className="article__overlay">
-              <h2 className="article__header">{movie.title}</h2>
-              <p className="article__date">Released {movie.release_date}</p>
-            </div>
-          </Link>
-        </article>
+        <MovieThumb key={movie.id} {...movie} />
       ))}
     </main>
   );

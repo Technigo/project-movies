@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
+import MovieThumb from '../components/MovieThumb';
 import { API_KEY } from '../api.js';
 
-const CompanyDetail = () => {
+const CompanyList = () => {
   const [companies, setCompanies] = useState();
   const { companyId } = useParams();
   //const ApiKey = '175ffd5710eba9b52b1d7f46de42a152';
@@ -28,22 +29,11 @@ const CompanyDetail = () => {
       {companies && (
         <section className="movie-container">
           {companies.map(company => (
-            <article key={company.id}>
-              <Link to={`/movies/${company.id}`}>
-                <img
-                  src={`https://image.tmdb.org/t/p/w300/${company.poster_path}`}
-                  alt={`${company.id}`}
-                />
-                <div className="movie-information">
-                  <h2>{company.title}</h2>
-                  <p className="release-date">{`Released ${company.release_date}`}</p>
-                </div>
-              </Link>
-            </article>
+            <MovieThumb key={company.id} {...company} />
           ))}
         </section>
       )}
     </main>
   );
 };
-export default CompanyDetail;
+export default CompanyList;
