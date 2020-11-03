@@ -9,9 +9,9 @@ const MoviePage = ({ movies }) => {
   const [movieDetails, setMovieDetails] = useState('');
 
   useEffect(() => {
-    const movieMatch = movies.find(
-      (movie) => JSON.stringify(movie.id) === params.id
-    );
+    // const movieMatch = movies.find(
+    //   (movie) => JSON.stringify(movie.id) === params.id
+    // );
 
     fetch(
       `https://api.themoviedb.org/3/movie/${params.id}?api_key=${ApiKey}&language=en-US`

@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import { ApiUrl, PosterImgUrl } from './components/ApiUrls';
+import TopNav from './components/TopNav';
 import ListedMovie from './components/ListedMovie';
 import MoviePage from './pages/MoviePage';
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
+  const [categoryUrl, setCategoryUrl] = useState(ApiUrl);
 
   const getData = () => {
-    fetch(ApiUrl)
+    fetch(categoryUrl)
       .then((results) => results.json())
       .then((json) => {
         setMovies(json.results);
@@ -17,10 +20,11 @@ export const App = () => {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [categoryUrl]);
 
   return (
     <Router>
+      <TopNav setCategoryUrl={setCategoryUrl} />
       <main>
         <Switch>
           <Route exact path="/">

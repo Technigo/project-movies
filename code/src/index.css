@@ -17,9 +17,42 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.top-nav {
+  background: #000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 1;
+}
+
+.top-nav--logo {
+  width: 25px;
+  margin: 20px;
+  filter: invert(1);
+}
+
+.top-nav--dropdown--label {
+  margin-right: 10px;
+}
+
+.top-nav--dropdown--select {
+  margin-right: 20px;
+  padding: 5px 20px 5px 5px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  text-align: left;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 65px;
 }
 
 .movies--back-button {
@@ -81,10 +114,10 @@ main {
 /* --- MOVIE --- */
 .movie--wrapper {
   min-width: 100vw;
-  min-height: 100vh;
+  min-height: calc(100vh - 65px);
   background-size: cover;
   background-position: left;
-  padding: 50px;
+  padding: 35px 50px;
   color: #fff;
   background-color: #000;
 }
@@ -98,6 +131,8 @@ main {
 
 .movie--details--image {
   border: 5px solid #fff;
+  width: 352px;
+  height: auto;
 }
 
 .movie--details--textbox {
@@ -112,8 +147,8 @@ main {
 .movie--details--rating {
   font-weight: 400;
   color: red;
-  font-size: 17px;
-  margin-left: 10px;
+  font-size: 16px;
+  margin-left: 15px;
   background: #fff;
   padding: 4px 8px;
 }
