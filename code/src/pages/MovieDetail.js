@@ -9,7 +9,6 @@ export const MovieDetail = () => {
   const { movieId } = useParams();
   const [currentMovie, setcurrentMovie] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [wantsCast, setWantsCast] = useState(false);
   const [castList, setCastList] = useState([]);
 
   //Get the movie detail for the selected movie using the movieID param from the URL
@@ -30,12 +29,7 @@ export const MovieDetail = () => {
       console.log(json);
       setCastList(json.cast);
     })
-  },[])
-
-  const viewCast = () => {
-    console.log("wants cast clicked!");
-    setWantsCast(true);
-  }
+  },[movieId])
 
   return ( <>
   {!isLoading && currentMovie &&
@@ -59,21 +53,13 @@ export const MovieDetail = () => {
           <h2 className="movie-detail-rating">Rating: {currentMovie.vote_average}</h2> 
           <p className="movie-detail-overview">{currentMovie.overview}</p>
 
-          {wantsCast && 
+         
           <div className="movie-details-cast-list">
-            {castList.slice(0,5).map((actor) => (
-              <Link className="cast-link" to={`/movies/${movieId}/cast/${actor.id}`}>{actor.name}</Link>
+            {castList.slice(0,5).map((actor,index) => (
+              <Link key={index} className="cast-link" to={`/movies/${movieId}/cast/${actor.id}`}>{actor.name}</Link>
             ))}
           </div>
-          
-          }
          
-          <button
-          onClick={viewCast}
-          >
-            Top billed cast
-          </button>
-
           <a className="imdb-link" href={`https://www.imdb.com/title/${currentMovie.imdb_id}/`} alt="imdb-link" target="_blank" rel="noopener noreferrer">IMDB <span role="img" aria-label="link-emoji">🔗</span> </a>
           <Link className="similar-movies-link" to= {`/movies/${movieId}/recommendedMovies`}>Explore recommended movies <span role="img" aria-label="heart-eyes-emoji">😍</span> </Link>
         </div>
