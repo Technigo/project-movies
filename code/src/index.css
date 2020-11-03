@@ -11,3 +11,61 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-link {
+  width: 25%;
+}
+
+.list-image {
+  width: 100%;
+}
+
+.detail-backdrop {
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.detail-summary {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+}
+
+.detail-poster {
+  border: 5px solid white;
+}
+
+.detail-text {
+  display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 30px;
+    width: 30%;
+}
+
+.detail-title {
+  color: white;
+}
+
+.detail-rating {
+  font-size: 17px;
+  color: red;
+  font-weight: 400;
+  margin-left: 10px;  
+}
+
+.detail-overview {
+  color: white;
+}
