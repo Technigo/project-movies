@@ -1,0 +1,12 @@
+.movie-card {
+  display: flex;
+  flex-direction: row;
+  border: blue solid 2px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.movie-title {
+  font-size: 18px;
+  margin: 0;
+}
