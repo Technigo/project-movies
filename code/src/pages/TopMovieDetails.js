@@ -21,7 +21,7 @@ export const TopMovieDetails = () => {
      })
   }, [topMovieID])
 
-  if(!topMovie.id) {
+  if(topMovie.success === false) {
     return (
       <NotFound />
     )
@@ -31,11 +31,7 @@ export const TopMovieDetails = () => {
     )
   } else {
     return (
-      //We send the whole movie object to the Movie component so it has
-      //all the data to display
       <TopMovie {...topMovie} />
     )
   }
 };
-
-//(topMovie.success === false)
