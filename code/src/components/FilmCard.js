@@ -7,7 +7,6 @@ export const FilmCard = ({
     release_date,
     id
 }) => {
-
     return (
         <Link to={`/movies/${id}`}>
             <article>

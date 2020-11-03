@@ -6,7 +6,7 @@ export const FilmDetail = () => {
     const api_key = "cf10fb16d5d29cc1bc7eb10f47f96663"
     const RG_API_MOVIE_DETAILS = `https://api.themoviedb.org/3/movie/${id}?api_key=${api_key}&language=en-US`;
 
-    const [MovieDetails, setMovieDetails] = useState("hello"); 
+    const [MovieDetails, setMovieDetails] = useState(""); 
 
     useEffect(() => {
         fetch(RG_API_MOVIE_DETAILS)
