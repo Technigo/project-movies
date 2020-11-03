@@ -27,16 +27,24 @@ export const MovieDetail = () => {
     <section
       className="movieDetailPage"
       style={{
-        backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w780${movie.backdrop_path})`,
+        backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
       }}>
       <Link to="/">
         <p>Go back!</p>
       </Link>
       <div className="movie-details">
-        <h2>
-          {movie.title} <span className="rating">{movie.vote_average}/10</span>
-        </h2>
-        <p>{movie.overview}</p>
+        <img
+          className="image-poster-x"
+          src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+          alt={movie.title}
+        />
+        <div className="movie-details-text">
+          <h1>
+            {movie.title}{' '}
+            <span className="rating">{movie.vote_average}/10</span>
+          </h1>
+          <p>{movie.overview}</p>
+        </div>
       </div>
     </section>
   );

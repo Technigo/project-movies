@@ -6,3 +6,8 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.movieDetailPage a {
+  color: #fff;
+  text-decoration: none;
+}
