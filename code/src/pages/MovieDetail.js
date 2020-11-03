@@ -19,6 +19,7 @@ export const MovieDetail = () => {
 
   useEffect(() => {
     fetchMovie();
+    // eslint-disable-next-line
   }, [id]);
 
   return (
