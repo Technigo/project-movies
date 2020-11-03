@@ -1,0 +1,39 @@
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  background: black;
+}
+
+.movie-list a {
+  position: relative;
+  width: 25%;
+  color: white;
+  text-decoration: none;
+}
+
+.movie-list img {
+  width: 100%;
+}
+
+.movie-details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  display: none;
+}
+
+.movie-details h1 {
+  font-size: 45px;
+  margin: 0;
+}
+
+.movie-list a:hover .movie-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}

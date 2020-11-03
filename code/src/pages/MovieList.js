@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Link } from 'react';
 
 import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
+import 'styles/movieList.css'
 
 export const MovieList = ({apiKey, baseUrl, posterSize}) => {
   const [movies, setMovies] = useState([]);
@@ -15,12 +16,20 @@ export const MovieList = ({apiKey, baseUrl, posterSize}) => {
     ))
   }, []);
 
+  console.log(movies)
+
   return (
     <>
       <Header />
-      <section>
+      <section className='movie-list'>
         {movies.map((movie) => (
-          <img src={baseUrl + posterSize + `${movie.poster_path}`}/>
+          <a key={movie.id} href={`/movies/${movie.id}`}>
+            <img src={baseUrl + posterSize + `${movie.poster_path}`}/>
+            <div className='movie-details'>
+              <h1>{movie.original_title}</h1>
+              <p>Erschienen {movie.release_date}</p>
+            </div>
+          </a>
         ))}
       </section>
     </>
