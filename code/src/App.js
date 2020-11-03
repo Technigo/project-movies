@@ -1,6 +1,8 @@
-import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import { MovieList } from './pages/MovieList'
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import { MovieList } from './pages/MovieList';
+import { MoviePage } from './pages/MoviePage';
 
 export const App = () => {
   return (
@@ -8,6 +10,9 @@ export const App = () => {
       <Switch>
         <Route path="/" exact>
         <MovieList/>
+        </Route>
+        <Route path="/movies/:movieId" exact>
+        <MoviePage/>
         </Route>
       </Switch>
     </BrowserRouter>

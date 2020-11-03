@@ -12,9 +12,14 @@ code {
     monospace;
 }
 
+.movie-card-container { 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
 .movie-card-image { 
-  width: 50%;
-  height: 50%;
-
+  width: 20%;
+  height: 20%;
 }
+  
