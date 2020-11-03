@@ -195,7 +195,6 @@ nav a {
   }
 
   .movie-card {
-    position: relative;
     width: 50%;
   }
 
@@ -207,6 +206,70 @@ nav a {
   .text-over-movie-card h2 {
     font-size: 30px;
     margin-left: 25px;
+    margin-top: 100%;
+    margin-bottom: 0;
+  }
+
+  .text-over-movie-card p {
+    margin-left: 25px;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .movies-nav-text-mobile {
+    display: none;
+  }
+  
+  /*Hide Home link from mobile version*/
+  .first-a {
+    display: none;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .movies-nav-text, .top-movies-nav-text, .tmdb-nav-text {
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 10px;
+  }
+
+  .movies-nav-text:hover, .top-movies-nav-text:hover, .tmdb-nav-text:hover {
+    color: #f03a17;
+  }
+
+  .nav-emoji-tablet {
+    font-size: 22px;
+  }
+
+  /*MoviesList page Styling*/
+  .movie-cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .movie-card {
+    position: relative;
+    width: 25%;
+  }
+
+  .movie-card img {
+    width: 100%;
+  }
+
+  /*Hover effect over Movie card*/
+  .text-over-movie-card h2 {
+    font-size: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
     margin-top: 100%;
     margin-bottom: 0;
   }
