@@ -2,34 +2,39 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
+import { TopMovie } from 'components/TopMovie';
+import { Loading } from 'components/Loading';
 import { API_KEY } from '../key';
+import { NotFound } from 'components/NotFound';
 
 export const TopMovieDetails = () => {
-  const params = useParams();
+  const { topMovieID } = useParams();
   const [topMovie, setTopMovie] = useState([]);
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${params.topMovieID}?api_key=${API_KEY}&language=en-US`)
+    fetch(`https://api.themoviedb.org/3/movie/${topMovieID}?api_key=${API_KEY}&language=en-US`)
      .then((response) => response.json())
      .then((json) => {
       setTopMovie(json)
      })
-  }, [params.topMovieID])
+     .catch((err) => {
+       console.log(err)
+     })
+  }, [topMovieID])
 
-  return (
-    <>
-      <Link to="/top-movies" exact="true">
-        <p>Back to Top Movies List</p>
-      </Link>
-      <div className="movie-details-page">
-        <img src={`https://image.tmdb.org/t/p/w780/${topMovie.poster_path}`} alt={topMovie.original_title} />
-        <h2>{topMovie.original_title}</h2>
-        <p>{`${topMovie.vote_average} / 10`}</p>
-        <p>{topMovie.overview}</p>
-        <img width="300px" src={`https://image.tmdb.org/t/p/w1280/${topMovie.backdrop_path}`} alt={topMovie.original_title} />
-      </div>
-    </>
-  )
+  if(topMovie.success === false) {
+    return (
+      <NotFound />
+    )
+  } else if (topMovie.id === undefined) {
+    return (
+      <Loading />
+    )
+  } else {
+    return (
+      //We send the whole movie object to the Movie component so it has
+      //all the data to display
+      <TopMovie {...topMovie} />
+    )
+  }
 };
-
-//Create a component top movie details card to generate in the return instead of having all html here, pass data as props

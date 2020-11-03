@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import { TopMoviesList } from 'pages/TopMoviesList';
 import { TopMovieDetails } from 'pages/TopMovieDetails';
+import { MoviesList } from 'pages/MoviesList';
 
 //TopMoviesHome is my second main page showing movies by rating.
 //Created a new BrowserRouter here to make a map of the pages
@@ -18,6 +19,10 @@ export const TopMoviesHome = () => {
 
           <Route path="/top-movies/:topMovieID">
             <TopMovieDetails />
+          </Route>
+
+          <Route path="/" exact>
+            <MoviesList />
           </Route>
         </Switch>
       </main>
