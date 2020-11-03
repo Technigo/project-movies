@@ -142,3 +142,37 @@ nav a {
   margin-left: 15px;
   margin-bottom: 30px;
 }
+
+/*Media Queries*/
+/*TABLET*/
+@media (min-width: 667px) and (max-width: 1024px) {
+  .movies-nav-text-mobile {
+    display: none;
+  }
+  
+  /*Hide Home link from mobile version*/
+  .first-a {
+    display: none;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .movies-nav-text, .top-movies-nav-text {
+    display: block;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 10px;
+  }
+
+  .movies-nav-text:hover, .top-movies-nav-text:hover {
+    color: #f03a17;
+  }
+
+  .nav-emoji-tablet {
+    font-size: 20px;
+  }
+}
