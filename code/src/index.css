@@ -19,4 +19,5 @@ code {
 .app-container {
   display: flex;
   flex-wrap: wrap;
+  color: #fff;
 }

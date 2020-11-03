@@ -16,9 +16,11 @@ const MovieList = ({ title, vote_average, release_date, poster_path }) => {
   return (
     <div className="movie-card">
       <img className="movie-img" src={POSTER_URL} alt=""></img>
-      <h1>{title}</h1>
-      <p>Rating: {vote_average}/10</p>
-      <p>Release date: {release_date}</p>
+      <div className="movie-details">
+        <h1>{title}</h1>
+        <p>Rating {vote_average}/10</p>
+        <p>Released {release_date}</p>
+      </div>
     </div>
   );
 
