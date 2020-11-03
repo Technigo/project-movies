@@ -3,11 +3,16 @@ import { useParams, Link, Route } from 'react-router-dom';
 
 //import Actor from '../components/MovieActors';
 import MovieDetail from '../components/MovieDetail';
+import Loader from '../components/Loader';
+import Error from '../components/Error';
 import '../styles/MovieDetails.css';
 
 const MoviePage = () => {
 	const { movieId } = useParams();
 	const [movieDetail, setMovieDetail] = useState({});
+	const [error, setError] = useState(false);
+	const [loading, setLoading] = useState(true);
+
 	//const [error, setError] = useState(false);
 	//const history = useHistory(); //TO PUSH BACK TO MAIN IF WRONG ID ENTERED
 
@@ -29,8 +34,16 @@ const MoviePage = () => {
 		)
 			.then(res => res.json())
 			.then(json => {
-				setMovieDetail(json);
-				console.log(json);
+				//console.log(json);
+
+				if (json.success === false) {
+					setError(true);
+					console.log(json);
+				} else {
+					setMovieDetail(json);
+					console.log(json);
+				}
+				setLoading(false);
 			});
 	};
 
@@ -43,11 +56,9 @@ const MoviePage = () => {
 					</button>
 				</Link>
 			</Route>
-			{movieDetail.title && (
-				<>
-					<MovieDetail {...movieDetail} />
-				</>
-			)}
+			{loading && <Loader />}
+			{error && <Error />}
+			{!loading && !error && <MovieDetail {...movieDetail} />}
 		</main>
 	);
 };

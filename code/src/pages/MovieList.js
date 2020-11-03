@@ -7,6 +7,7 @@ import '../styles/MovieList.css';
 
 const MovieList = ({ children }) => {
 	const [movies, setMovies] = useState([]);
+	const [error, setError] = useState(false);
 
 	const ApiKey = '175ffd5710eba9b52b1d7f46de42a152';
 	//const movieListURL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${ApiKey}&language=en-US`;
@@ -27,7 +28,14 @@ const MovieList = ({ children }) => {
 
 	const fetchMovieList = () => {
 		fetch(movieListURL)
-			.then(res => res.json())
+			.then(res => {
+				if (res.ok) {
+					return res.json();
+				} else {
+					setError(true);
+					console.log(error);
+				}
+			})
 			.then(json => {
 				setMovies(json.results);
 				console.log(json.results);

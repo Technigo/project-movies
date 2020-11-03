@@ -2,8 +2,13 @@ import MovieThumb from 'components/MovieThumb';
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
+import Loader from '../components/Loader';
+import Error from '../components/Error';
+
 const CompanyList = () => {
 	const [companies, setCompanies] = useState();
+	const [error, setError] = useState(false);
+	const [loading, setLoading] = useState(true);
 	const { companyId } = useParams();
 
 	const ApiKey = '175ffd5710eba9b52b1d7f46de42a152';
@@ -22,14 +27,24 @@ const CompanyList = () => {
 		)
 			.then(res => res.json())
 			.then(json => {
-				setCompanies(json.results);
 				console.log(json);
+
+				if (json.success === false) {
+					setError(true);
+					console.log(json);
+				} else {
+					setCompanies(json.results);
+					console.log(json);
+				}
+				setLoading(false);
 			});
 	};
 
 	return (
 		<main>
-			{companies && (
+			{loading && <Loader />}
+			{error && <Error />}
+			{!loading && !error && (
 				<section className="movie-container">
 					{companies.map(company => (
 						<MovieThumb key={company.id} {...company} />
