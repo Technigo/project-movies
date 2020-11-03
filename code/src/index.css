@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.movie-list a{
+ position: relative;
+ text-decoration: none;
+}
+
+.movie-info {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  background: rgba(0,0,0,0.75);
+  color: whitesmoke;
+}
+
+.movie-list a:hover .movie-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
