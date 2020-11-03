@@ -21,6 +21,12 @@ code {
 .movie-list a{
  position: relative;
  text-decoration: none;
+ width: 25%;
+}
+
+.movie-list img{
+  width: 100%;
+  height: 100%;
 }
 
 .movie-info {
@@ -31,7 +37,7 @@ code {
   bottom: 0;
   left: 0;
   padding: 20px;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0,0,0,0.50);
   color: whitesmoke;
 }
 
@@ -39,4 +45,40 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.movie-backdrop {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.movie-details-container {
+  display: flex;
+  align-items: flex-end;
+  color: whitesmoke;
+  padding: 40px;
+}
+
+.movie-details {
+  padding-left: 15px;
+  width: 40%;
+}
+
+.movie-rating {
+  display: inline;
+  color: #f10400;
+  font-size: 17px;
+  margin-left: 20px;
 }

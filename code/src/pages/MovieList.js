@@ -28,8 +28,8 @@ export const MovieList = () => {
 
           <div className='movie-info'>
             <h2>{movie.original_title}</h2>
-            <p>Released:
-              {movie.release_date}
+            <p>
+              Released {movie.release_date}
             </p>
           </div>
 

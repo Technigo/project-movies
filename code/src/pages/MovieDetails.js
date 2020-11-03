@@ -19,11 +19,18 @@ export const MovieDetails = () => {
   }, )
 
   return (
-    <article>
-      <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title}/>
-      <h1>{movie.original_title}</h1>
-      <p>{movie.vote_average} / 10</p>
-      <p>{movie.overview}</p>
-    </article>
+    <main className='movie-backdrop' style= {{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}}>
+      <div className='movie-details-container'>
+        <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title}/>
+        <div className='movie-details'>
+          <h1>{movie.original_title}
+            <span className='movie-rating'>
+              {movie.vote_average} / 10
+            </span>
+          </h1>
+          <p>{movie.overview}</p>
+        </div>
+      </div>
+    </main>
   )
 }
