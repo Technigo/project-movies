@@ -2,16 +2,19 @@ import React, { useState, useEffect } from 'react';
 
 //import { Link } from 'react-router-dom';
 import MovieThumb from '../components/MovieThumb';
+import Error from '../components/Error';
+import Loader from '../components/Loader';
 
 import '../styles/MovieList.css';
 
 const MovieList = ({ children }) => {
 	const [movies, setMovies] = useState([]);
 	const [error, setError] = useState(false);
+	const [loading, setLoading] = useState(true);
 
 	const ApiKey = '175ffd5710eba9b52b1d7f46de42a152';
 	//const movieListURL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${ApiKey}&language=en-US`;
-	const movieListURL = `https://api.themoviedb.org/3/movie/${
+	const API_URL = `https://api.themoviedb.org/3/movie/${
 		children ? children : 'now_playing'
 	}?api_key=${ApiKey}&language=en-US`;
 
@@ -24,29 +27,54 @@ const MovieList = ({ children }) => {
 
 	useEffect(() => {
 		fetchMovieList();
-	}, [movieListURL]);
+	}, [API_URL]);
 
 	const fetchMovieList = () => {
-		fetch(movieListURL)
+		fetch(API_URL)
 			.then(res => {
 				if (res.ok) {
 					return res.json();
 				} else {
-					setError(true);
-					console.log(error);
+					throw new Error('404');
 				}
 			})
 			.then(json => {
 				setMovies(json.results);
-				console.log(json.results);
+				setLoading(false);
+			})
+			.catch(() => {
+				//window.location.reload();
+				window.location.assign('/error');
+				console.log(error);
 			});
+
+		// .then(res => res.json())
+		// .then(json => {
+		// 	console.log(json);
+		// 	setMovies(json.results);
+		// 	setLoading(false);
+		// if (json.status_code === 34 || json.status_code === 404) {
+		// 	setError(true);
+		// 	console.log(json);
+		// } else {
+		// 	setMovies(json.results);
+		// 	console.log(json);
+		// }
+
+		//});
 	};
 
 	return (
-		<main>
-			{movies.map(movie => (
-				<MovieThumb key={movie.id} {...movie} />
-			))}
+		<main className="movie-list">
+			{loading && <Loader />}
+			{error && <Error />}
+			{!loading && !error && (
+				<>
+					{movies.map(movie => (
+						<MovieThumb key={movie.id} {...movie} />
+					))}
+				</>
+			)}
 		</main>
 	);
 };

@@ -56,18 +56,3 @@ nav:hover .nav-button {
 /* .nav-bar-link:hover {
 	border-bottom: 1px solid #fff;
 } */
-
-/*flyttas*/
-.back-button {
-	position: absolute;
-	z-index: 1;
-	top: 15%;
-	left: 5%;
-	padding: 5px 15px;
-	border: none;
-	background: transparent;
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 16px;
-	font-weight: 700;
-}

@@ -6,6 +6,7 @@ import MovieList from './pages/MovieList';
 import MoviePage from './pages/MoviePage';
 import CompanyList from './pages/CompanyList.js';
 import Nav from './components/Nav';
+import Error from './components/Error';
 //import API key after
 
 export const App = () => {
@@ -33,6 +34,10 @@ export const App = () => {
 				</Route>
 				<Route exact path="/top_rated">
 					<MovieList>top_rated</MovieList>
+				</Route>
+
+				<Route exact path="/error">
+					<Error />
 				</Route>
 			</Switch>
 		</BrowserRouter>
