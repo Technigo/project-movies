@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -17,6 +19,10 @@ main {
   flex-direction: row;
 }
 
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 /* NAV */
 
 header {
@@ -24,6 +30,13 @@ header {
   height: 100px;
   background-color: #000000;
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  padding-left: 30px;
+  margin-bottom: 0;
 }
 
 /* MOVIE LIST */
@@ -49,12 +62,12 @@ header {
   bottom: 0;
   left: 0;
   padding: 20px;
-  width: 100%;
   background: rgba(0,0,0,.75);
 }
 
 .popular-movie-info {
  display: none;
+ word-break: break-word;
 }
 
 .popular-movies a:hover .popular-movie-info {
@@ -72,25 +85,63 @@ header {
 
 /* MOVIE DETAILS */
 
+.movie-detail {
+  width: 100%;
+}
+
 .movie-detail-container {
   display: flex;
-  justify-content: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 90vh;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 90vh;
 }
+
+.overview {
+  max-width: 400px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
 .poster {
   border: solid 2px #ffffff;
-  height: 60vh;
-  display: flex;
-  margin: 100px 0 100px 100px;
 }
 
 .details {
-  background: rgb(44 43 43/80%);
-  color: #ffffff;
   display: flex;
-  flex-direction: column;
-  margin: 0 0 100px 20px;
+  align-items: flex-end;
+  padding: 50px;
+}
+
+.summary {
+  background: rgb(44 43 43/40%);
+  color: #ffffff;
+  margin: 0 0 0 20px;
+  padding: 15px;
+}
+
+/* BUTTON */
+
+button {
+  border: none;
+  color: white;
+  background-color: black;
+  padding-left: 30px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 755px) {
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  .popular-movies .popular-movie-info {
+    padding-left: 5px;
+  }
 }
