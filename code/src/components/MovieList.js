@@ -18,7 +18,7 @@ export const MovieList = () => {
       <div className='all-top-movies'>
         {topMovies.map((movie) => (
         <div className='top-movie-card' key={movie.id}>
-          <img src={`https://image.tmdb.org/t/p/w780/${movie.poster_path}`}/>
+          <img src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`}/>
           <h3>{movie.original_title}</h3>
           <p>Release Date : {movie.release_date}</p>
           <p>⭐   {movie.vote_average} / 10</p>
