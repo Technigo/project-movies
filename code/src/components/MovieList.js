@@ -3,7 +3,7 @@ import React from "react";
 import "./movie-list.css";
 
 
-const MovieList = ({ movieTitle, averageVote, releaseDate }) => {
+const MovieList = ({ title, vote_average, release_date, poster_path }) => {
   // const [movies, setMovies] = useState();
 
   // fetch(API_URL)
@@ -11,11 +11,14 @@ const MovieList = ({ movieTitle, averageVote, releaseDate }) => {
   //   .then(data => setMovies(data.results));
   // .then(data => setMovies(data));
 
+  const POSTER_URL = `https://image.tmdb.org/t/p/w500${poster_path}`;
+
   return (
     <div className="movie-card">
-      <h1>{movieTitle}</h1>
-      <p>Rating: {averageVote}/10</p>
-      <p>Release date: {releaseDate}</p>
+      <img className="movie-img" src={POSTER_URL} alt=""></img>
+      <h1>{title}</h1>
+      <p>Rating: {vote_average}/10</p>
+      <p>Release date: {release_date}</p>
     </div>
   );
 

@@ -1,22 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 
 import MovieList from "./components/MovieList";
 
 const API_key = "5ddb547497cb885965bcba7335e4be9c";
-const API_URL = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_key}&language=en-US&page=1`;
+const MOVIES_API = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_key}&language=en-US&page=1`;
+// const IMG_SIZES_API = `https://api.themoviedb.org/3/configuration?api_key=${API_key}`;
 
 export const App = () => {
 
   const [movies, setMovies] = useState([]);
 
-  const fetchTopRatedMovies = () => {
-    fetch(API_URL)
+  console.log("Render 1");
+  //fetch top rated movies
+  useEffect(() => {
+    fetch(MOVIES_API)
       .then(response => response.json())
       .then(data => setMovies(data.results));
-  };
 
-  fetchTopRatedMovies();
+  }, []);
+
+  //fetch poster image
+
+
+
+  console.log("Render 2");
+
 
   return (
     <BrowserRouter>
@@ -25,9 +34,7 @@ export const App = () => {
         {movies.map(movie => (
           <MovieList
             key={movie.id}
-            movieTitle={movie.title}
-            averageVote={movie.vote_average}
-            releaseDate={movie.release_date}
+            {...movie}
           />
         ))}
 
