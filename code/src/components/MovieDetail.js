@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
+
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "./movieDetail.css";
 
 const MovieDetail = () => {
   const { movieId } = useParams();
@@ -20,9 +23,32 @@ const MovieDetail = () => {
 
   console.log("Movie", movie);
   return (
-    <>
-      <h1>{movie.title}</h1>
-    </>
+    <div
+      className="movie-details-container"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path}) `,
+      }}
+    >
+      <div className="back-to-movies">
+        <span>&#10094; </span>
+        <Link to="/">
+          <span className="back">Movies</span>
+        </Link>
+      </div>
+      <div className="summery">
+        <img
+          src={`http://image.tmdb.org/t/p/w342${movie.poster_path}`}
+          alt={movie.title}
+        />
+        <div className="movie-details">
+          <h1>
+            {movie.title}
+            <span className="movie-detial-rating">{movie.vote_average}/10</span>
+          </h1>
+          <p>{movie.overview}</p>
+        </div>
+      </div>
+    </div>
   );
 };
 
