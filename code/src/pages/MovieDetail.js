@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import { API_KEY } from 'urls'; 
+import { Link } from 'react-router-dom';
 import 'styles/moviedetail.css';
 
 export const MovieDetail = () => {
@@ -15,14 +16,20 @@ export const MovieDetail = () => {
       })
   }, [id])
 
+  // `https://image.tmdb.org/t/p/w1280${movies.backdrop_path}`
   return (
-    <main>
-      <img 
-          src={`https://image.tmdb.org/t/p/w1280${movies.backdrop_path}`} 
-          alt={movies.title}
-          className="background-picture" 
-      />
+    <main 
+      className="background-picture" 
+      style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` }}>
       <section className="detailed-card">
+        <Link key={id} to={`/`} className="back-link">
+          <span className="arrows-wrapper">
+            <i class="arrow left"></i>
+            <i class="arrow left"></i>
+            <i class="arrow left"></i>
+          </span>
+          Movies
+        </Link>
         <div className="picture-text-rating-wrapper">
           <img 
               src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`} 
@@ -31,8 +38,9 @@ export const MovieDetail = () => {
           />
           <div className="text-rating-overview-wrapper">
             <div className="top-info">
-              <h2>{movies.original_title}</h2>
-              <p className="rating">{movies.vote_average}/10</p>
+              <h2>{movies.title} 
+                <span className="rating">{movies.vote_average}/10</span>
+              </h2>
             </div>
             <p className="overview">{movies.overview}</p>
           </div>    
