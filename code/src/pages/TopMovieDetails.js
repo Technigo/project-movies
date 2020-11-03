@@ -35,3 +35,9 @@ export const TopMovieDetails = () => {
     )
   }
 };
+
+//https://dev.to/kapi1/how-to-fix-page-not-found-on-netlify-a4i
+//A special _redirects file is added to public folder in order for the redirecting logic
+//above to work, this logic to redirect to not found page works locally, but broke down
+//when deployed on Netlify. This redirect file helps so that when deployed
+//Netlify knows how to handle the route. Info on the article linked above.
