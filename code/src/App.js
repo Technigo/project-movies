@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import { BrowserRouter, Switch, Route } from "react-router-dom"
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import MovieList from "./components/MovieList";
+import MovieDetails from "./pages/MovieDetails";
 
 const API_key = "5ddb547497cb885965bcba7335e4be9c";
 const MOVIES_API = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_key}&language=en-US&page=1`;
-// const IMG_SIZES_API = `https://api.themoviedb.org/3/configuration?api_key=${API_key}`;
 
 export const App = () => {
 
@@ -20,25 +20,26 @@ export const App = () => {
 
   }, []);
 
-  //fetch poster image
-
-
-
   console.log("Render 2");
-
 
   return (
     <BrowserRouter>
-      {/* <h1>Hello, Rebeka. Best of luck with this week's project! ^.^</h1> */}
-      <section className="app-container">
-        {movies.map(movie => (
-          <MovieList
-            key={movie.id}
-            {...movie}
-          />
-        ))}
-
-      </section>
+      <Switch>
+        {/* if the path = / then render MovieList component */}
+        <Route path="/" exact>
+          <section className="app-container">
+            {movies.map(movie => (
+              <MovieList
+                key={movie.id}
+                {...movie}
+              />
+            ))}
+          </section>
+        </Route>
+        <Route path="/movies/:slug" exact>
+          <MovieDetails />
+        </Route>
+      </Switch>
     </BrowserRouter>
-  )
-}
+  );
+};
