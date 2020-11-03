@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.movie-card-list {
+  display: flex;
+  
+}
+
+.movie-card{
+}
+
+.movie-card-image {
+
+}
+
