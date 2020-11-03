@@ -27,7 +27,14 @@ export const MovieDetails = () => {
      })
   }, [movieID])
 
-
+  //Logic to implement NotFound and Loading pages. For NotFound
+  //I was looking at the Components in dev tools and noticed that
+  //when the page is 404 the movie state creates an almost empty
+  //object with a property of success: false, this object only appears
+  //on 404, so thought of using this info to redirect to my NotFound page
+  //For the Loading page, this will appear for barely half second while
+  //the fetch is completing, during that time, the movie object is undefined
+  //so used that data to implement the Loading page.
   if(movie.success === false) {
     return (
       <NotFound />
@@ -45,10 +52,8 @@ export const MovieDetails = () => {
   }
 };
 
-//backdrop as background, access backdrop: src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}
-
 //https://dev.to/kapi1/how-to-fix-page-not-found-on-netlify-a4i
 //A special _redirects file is added to public folder in order for the redirecting logic
 //above to work, this logic to redirect to not found page works locally, but broke down
-//when deployed on Netlify. This redirect file helps so that when deployed
+//when deployed to Netlify. This redirect file helps so that when deployed
 //Netlify knows how to handle the route. Info on the article linked above.

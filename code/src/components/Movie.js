@@ -17,3 +17,5 @@ export const Movie = ({poster_path, original_title, vote_average, overview, back
     </>
   )
 };
+
+//backdrop as background, access backdrop: src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}
