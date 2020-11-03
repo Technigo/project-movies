@@ -1,26 +1,40 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
+import Loader from '../components/Loader';
+import Error from '../components/Error';
 import MovieDetail from '../components/MovieDetail';
 import { API_KEY } from '../api.js';
 
 const MoviePage = () => {
-  const { movieId } = useParams();
+  const [error, setError] = useState(false);
+  const [isLoading, setLoading] = useState(true);
   const [movie, setMovie] = useState([]);
-  //const [error, setError] = useState(false);
-
-  //const API_KEY = '29ee910f5072fe7c4bc00a08633532c0';
+  const { movieId } = useParams();
 
   useEffect(() => {
+    fetchMovieDetail(movieId);
+  }, [movieId]);
+
+  const fetchMovieDetail = movieId => {
     fetch(
       `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US`
     )
       .then(result => result.json())
       .then(json => {
-        console.log(json);
-        setMovie(json);
+        if (json.success === false) {
+          setError(true);
+          console.log(json);
+        } else {
+          console.log(json);
+          setMovie(json);
+        }
+        setLoading(false);
       });
-  }, [movieId]);
+  };
+  // useEffect(() => {
+
+  // }, [movieId]);
 
   console.log(movie);
 
@@ -31,7 +45,9 @@ const MoviePage = () => {
           Home
         </button>
       </Link>
-      {movie.title && <MovieDetail {...movie} />}
+      {isLoading && <Loader />}
+      {error && <Error />}
+      {!isLoading && !error && <MovieDetail {...movie} />}
     </main>
   );
 };
