@@ -9,25 +9,24 @@ nav {
   background-color: black;
 }
 
+/*Removes all underlines from nav links*/
+nav a {
+  text-decoration: none;
+}
+
 .movies-nav-text-mobile {
-  margin: 0;
-}
-
-.movies-nav-text-mobile span {
-  font-size: 30px;
-  text-decoration: none;
-  margin-right: 5px;
-}
-
-.movies-nav-text-mobile a {
-  font-size: 18px;
-  text-decoration: none;
   color: white;
-  margin-left: 7px;
+  font-size: 18px;
   font-weight: bold;
+  margin-top: 3px;
+  margin-left: 7px;
 }
 
-.movies-nav-text-mobile a:hover {
+.nav-emoji {
+  font-size: 30px;
+}
+
+.movies-nav-text-mobile:hover {
   color: #f03a17;
 }
 
@@ -75,8 +74,7 @@ nav {
   margin-top: 10px;
 }
 
-
-
+/* Movie Details Styling*/
 .movie-details-page img {
   width: 200px;
 }
