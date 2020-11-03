@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import '../styles/MovieDetail.css';
 
 export const MovieDetail = () => {
   const [movie, setMovie] = useState([]);
@@ -23,7 +24,11 @@ export const MovieDetail = () => {
   }, [id]);
 
   return (
-    <section className="movieDetailPage">
+    <section
+      className="movieDetailPage"
+      style={{
+        backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w780${movie.backdrop_path})`,
+      }}>
       <Link to="/">
         <p>Go back!</p>
       </Link>
