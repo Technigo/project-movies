@@ -1,0 +1,5 @@
+.movie-card {
+  border: 1px solid red;
+  width: 25%;
+  position: relative;
+}
