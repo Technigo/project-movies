@@ -279,4 +279,46 @@ nav a {
     margin-top: 10px;
     font-size: 15px;
   }
+
+  .arrow {
+    width: 35px;
+    margin-right: 17px;
+  }
+  
+  .back-movies-text {
+    font-size: 25px;
+    margin-top: 5px;
+  }
+  
+  .back-arrow-text {
+    height: 35px;
+  }
+
+  /*Styling for MovieDetails Page*/
+  .movie-details-container {
+    margin-top: 250px;
+    margin-left: 120px;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  
+  .movie-details-container img {
+    width: 20%;
+    border: 5px solid white;
+  }
+
+  .movie-details-text {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-left: 30px;
+  }
+
+  .movie-details-text h2, .movie-rating-text, .movie-overview-text {
+    text-align: left;
+  }
+
+  .movie-overview-text {
+    padding: 15px 0;
+  }
 }

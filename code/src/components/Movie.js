@@ -14,9 +14,11 @@ export const Movie = ({poster_path, original_title, vote_average, overview, back
       </Link>
       <div className="movie-details-container">
         <img src={`https://image.tmdb.org/t/p/w780/${poster_path}`} alt={original_title} />
-        <h2>{original_title}</h2>
-        <p className="movie-rating-text">{`${vote_average} / 10`}</p>
-        <p className="movie-overview-text">{overview}</p>
+        <div className="movie-details-text">
+          <h2>{original_title}</h2>
+          <p className="movie-rating-text">{`${vote_average} / 10`}</p>
+          <p className="movie-overview-text">{overview}</p>
+        </div>
       </div>
     </section>
   )
