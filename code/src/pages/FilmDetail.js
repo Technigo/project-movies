@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 export const FilmDetail = () => {
-    const { FilmId } = useParams();
+    const { filmid } = useParams();
 
     const [FilmDetails, setFilmDetails] = useState(""); 
 
-    const fetchFilmId = () => {
+    const fetchFilmId = (filmid) => {
         const api_key = "cf10fb16d5d29cc1bc7eb10f47f96663";
-        const RG_API_FILM_DETAILS = `https://api.themoviedb.org/3/movie/${FilmId}?api_key=${api_key}&language=en-US`;
+        const RG_API_FILM_DETAILS = `https://api.themoviedb.org/3/movie/${filmid}?api_key=${api_key}&language=en-US`;
 
         fetch(RG_API_FILM_DETAILS)
             .then((data) => {
@@ -23,8 +23,8 @@ export const FilmDetail = () => {
     };
 
     useEffect(() => {
-        fetchFilmId();        
-    }, [FilmId]);
+        fetchFilmId(filmid);        
+    }, [filmid]);
 
     return (
         <article>
