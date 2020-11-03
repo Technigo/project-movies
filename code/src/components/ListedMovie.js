@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ListedMovie = ({ id, title, releaseDate, posterImgSrc }) => {
   return (
-    <section className="movie-list--wrapper">
+    <section className="movie-list--movie-wrapper">
       <Link key={id} to={`/movies/${id}`}>
         <img className="movie-list--img" src={posterImgSrc} alt={title} />
 

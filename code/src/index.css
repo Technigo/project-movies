@@ -78,7 +78,7 @@ main {
 }
 
 /* --- MOVIE-LIST --- */
-.movie-list--wrapper {
+.movie-list--movie-wrapper {
   width: 25vw;
   position: relative;
 }
@@ -151,8 +151,50 @@ main {
   margin-left: 15px;
   background: #fff;
   padding: 4px 8px;
+  word-break: keep-all;
 }
 
 .movie--details--description {
   margin-bottom: 20px;
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media (max-width: 830px) {
+  .movie--details--textbox {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .movie--wrapper {
+    background-position: center center;
+  }
+  .movie-list--movie-wrapper {
+    width: 50vw;
+  }
+
+  .movie--details {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .movie--details--image {
+    width: 250px;
+  }
+
+  .movie--details--textbox {
+    max-width: 70vw;
+    margin: 0;
+  }
+}
+@media (max-width: 480px) {
+  .movie-list--movie-wrapper {
+    width: 100vw;
+  }
+}
+@media (max-width: 380px) {
+  .movie--wrapper {
+    padding: 35px 30px;
+  }
 }
