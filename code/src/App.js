@@ -3,8 +3,8 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import MovieList from './pages/MovieList';
-import MovieDetail from './pages/MovieDetail';
-import CompanyDetail from './pages/CompanyDetail.js';
+import MoviePage from './pages/MoviePage';
+import CompanyList from './pages/CompanyList.js';
 import Nav from './components/Nav';
 //import API key after
 
@@ -14,11 +14,11 @@ export const App = () => {
 			<Nav />
 			<Switch>
 				<Route exact path="/movies/:movieId">
-					<MovieDetail />
+					<MoviePage />
 				</Route>
 
 				<Route exact path="/company/:companyId">
-					<CompanyDetail />
+					<CompanyList />
 				</Route>
 
 				<Route exact path="/">

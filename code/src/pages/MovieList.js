@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
+import MovieThumb from '../components/MovieThumb';
+
 import '../styles/MovieList.css';
 
 const MovieList = ({ children }) => {
@@ -34,43 +36,10 @@ const MovieList = ({ children }) => {
 
 	return (
 		<main>
-			<section className="movie-container">
-				{movies.map(movie => (
-					<article key={movie.id}>
-						<Link to={`/movies/${movie.id}`}>
-							<img
-								src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-								alt={`${movie.id}`}
-							/>
-							<div className="movie-information">
-								<h2>{movie.title}</h2>
-								<p className="release-date">{`Released ${movie.release_date}`}</p>
-							</div>
-						</Link>
-					</article>
-				))}
-			</section>
+			{movies.map(movie => (
+				<MovieThumb key={movie.id} {...movie} />
+			))}
 		</main>
 	);
 };
 export default MovieList;
-// const MovieList = ({ movies }) => {
-// 	return (
-// 		<main>
-// 			{movies.map(movie => (
-// 				<article key={movie.id}>
-// 					<Link to={`/movies/${movie.id}`}>
-// 						<img
-// 							src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`}
-// 							alt={`${movie.id}`}
-// 						/>
-// 						<h2>{movie.title}</h2>
-// 					</Link>
-// 					<p>{movie.overview}</p>
-// 					<p>{movie.release_date}</p>
-// 				</article>
-// 			))}
-// 		</main>
-// 	);
-// };
-// export default MovieList;

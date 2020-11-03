@@ -5,16 +5,15 @@
 }
 
 main {
-	/* display: flex;
-	flex-wrap: wrap;
-	/* flex-direction: column; */
-	/* width: 100%; */
-}
-
-.movie-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	width: 100%;
+}
+
+.movie-container {
+	/* display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 100%; */
 }
 
 article {
@@ -47,13 +46,13 @@ article:hover .movie-information {
 }
 
 @media (min-width: 768px) {
-	.movie-container {
+	main {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
 @media (min-width: 1024px) {
-	.movie-container {
+	main {
 		grid-template-columns: repeat(4, 1fr);
 	}
 }
