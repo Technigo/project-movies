@@ -8,6 +8,7 @@ export const MovieDetail = () => {
   const { id } = useParams();
   const [movies, setMovies] = useState([]);
  
+  // Fecthing detailed information for the choosen movie
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`)
       .then((res) => res.json())
@@ -16,11 +17,11 @@ export const MovieDetail = () => {
       })
   }, [id])
 
-  // `https://image.tmdb.org/t/p/w1280${movies.backdrop_path}`
   return (
     <main 
       className="background-picture" 
-      style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` }}>
+      style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` }}
+    >
       <section className="detailed-card">
         <Link key={id} to={`/`} className="back-link">
           <span className="arrows-wrapper">
