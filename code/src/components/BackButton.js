@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 
 const BackButton = ({ path, text }) => {
 	return (
-		<Link to={path}>
+		<Link to={path} className="back-button-wrapper">
 			<button type="button" className="back-button">
-				<span>←</span>
+				<span role="img" aria-label="arrow-emoji">
+					←
+				</span>
 				{text}
 			</button>
 		</Link>

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import Loader from '../components/Loader';
-import Error from '../components/Error';
+//import Error from '../components/Error';
 import BackButton from '../components/BackButton';
 
 import '../styles/MovieList.css';
