@@ -1,5 +1,7 @@
-import PopularList from "components/PopularList";
 import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import PopularList from "./components/PopularList";
+import MovieDetail from "./components/MovieDetail";
 // const API_KEY = f7e0c4070f4665dbae6d58fba626cfe4;
 
 // *Fetching popular movies for the list page*
@@ -9,5 +11,16 @@ import React from "react";
 // const URL = `https://api.themoviedb.org/3/movie/{movie_id}?${API_KEY}={api_key}&language=en-US`
 
 export const App = () => {
-  return <PopularList />;
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact>
+          <PopularList />
+        </Route>
+        <Route path="/movies/:movieId">
+          <MovieDetail />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  );
 };

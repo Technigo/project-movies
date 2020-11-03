@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "./popularList.css";
 
 const PopularList = () => {
   const [movies, setMovies] = useState([]);
 
   const API_KEY = "f7e0c4070f4665dbae6d58fba626cfe4";
   const URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
-  // const POSTER = `https://api.themoviedb.org/3/configuration?api_key=${API_KEY} `;
+  // const POSTER = `https://api.themoviedb.org/3/configuration?api_key=${API_KEY}`;
 
   console.log("api", URL);
   // console.log("poster", POSTER);
@@ -20,14 +22,21 @@ const PopularList = () => {
   }, []);
 
   return (
-    <div>
+    <div className="movie-list-container">
       {movies.map((movie) => (
-        <div key={movie.id}>
-          <img
-            src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`}
-            alt={movie.title}
-          />
-          <h2>{movie.original_title}</h2>
+        <div className="movie-card" key={movie.id}>
+          <Link to={`/movies/${movie.id}`}>
+            <div className="movie-list-info">
+              <h2 className="movie-title">{movie.original_title}</h2>
+              <p className="movie-release-date">Relesed {movie.release_date}</p>
+            </div>
+            <div>
+              <img
+                src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                alt={movie.title}
+              />
+            </div>
+          </Link>
         </div>
       ))}
     </div>
