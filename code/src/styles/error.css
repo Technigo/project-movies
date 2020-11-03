@@ -1,0 +1,18 @@
+.error-div {
+  margin: 40px;
+}
+
+.error-text {
+  color: white;
+}
+
+.back-home-link {
+  text-decoration: none;
+  color: white;
+  transition: ease 0.2s;
+}
+
+.back-home-link:hover {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
