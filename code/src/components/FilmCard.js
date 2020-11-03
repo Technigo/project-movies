@@ -8,9 +8,9 @@ export const FilmCard = ({
     id
 }) => {
     return (
-        <Link to={`/movies/${id}`}>
+        <Link to={`/films/${id}`}>
             <article>
-                <img src={`https://image.tmdb.org/t/p/w342${poster_path}`} />
+                <img src={`https://image.tmdb.org/t/p/w342${poster_path}`} alt="{title} film poster" />
                 <h1>{title}</h1>
                 <p>Released {release_date}</p>
             </article>
