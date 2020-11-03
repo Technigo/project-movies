@@ -87,7 +87,7 @@ p {
 /*** MEDIA QUERIES ***/
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .movie-card {
+  .movie-card-image {
     width: 50%;
   }
   .poster {
@@ -99,7 +99,7 @@ p {
 }
 
 @media (max-width: 767px) {
-  .movie-card {
+  .movie-card-image {
     width: 100%;
   }
   .poster {
