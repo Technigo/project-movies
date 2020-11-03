@@ -280,6 +280,7 @@ option {
 
 	.actor-main-content {
 		width: 100%;
+		height: unset;
 	}
 	.actor-container {
 		flex-direction: column;
