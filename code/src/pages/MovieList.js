@@ -17,7 +17,7 @@ export const MovieList = () => {
       }, []);
 
     return (
-      <section className="movie-card">
+      <section className="movie-cards-container">
         {moviesList.map((movie) => (
           <MovieCard key= {movie.id} {...movie} />
       ))}

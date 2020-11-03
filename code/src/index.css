@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:#000 ;
 }
 
 code {
@@ -12,14 +13,33 @@ code {
     monospace;
 }
 
-.movie-card-container { 
+.movie-cards-container { 
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: column;
+  flex-flow: wrap;
 }
 
-.movie-card-image { 
-  width: 20%;
-  height: 20%;
+.movie-card {
+  flex-basis: 25%;
+}
+
+ .movie-card img {
+   width: 100%;
+   margin: 0;
+}
+
+.text-overlay { 
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 25%;
+  height: 2%;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.text-overlay:hover {
+  opacity: 1;
 }
   
