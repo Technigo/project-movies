@@ -1,13 +1,11 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A dynamic multipage movie application listing top 20 popular movies in the US, built in React using React Router.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+After sketching the components on paper, and planning on what to include in which, I started building them in React. Once the components and some test content was there I fetched data from themoviedb.org's API. Styling happened last and was inspired by Netflix.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://elegant-curran-1f5998.netlify.app
