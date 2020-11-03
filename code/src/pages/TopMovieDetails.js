@@ -21,7 +21,7 @@ export const TopMovieDetails = () => {
      })
   }, [topMovieID])
 
-  if(topMovie.success === false) {
+  if(!topMovie.id) {
     return (
       <NotFound />
     )
@@ -37,3 +37,5 @@ export const TopMovieDetails = () => {
     )
   }
 };
+
+//(topMovie.success === false)
