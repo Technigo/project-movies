@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
+import Loader from '../components/Loader';
+import Error from '../components/Error';
+//import BackButton from '../components/BackButton';
 import MovieThumb from '../components/MovieThumb';
 import { API_KEY } from '../api.js';
 
 const MovieList = ({ children }) => {
+  const [isLoading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
+  const API_URL = `https://api.themoviedb.org/3/movie/${
+    children ? children : 'now_playing'
+  }?api_key=${API_KEY}&language=en-US&page=1`;
 
   // 	The React docs say that you can use props.children on
   //components that represent ‘generic boxes’ and that ‘don’t know their children ahead of time’.
@@ -13,24 +20,39 @@ const MovieList = ({ children }) => {
   // My simple explanation of what this.props.children does is that it is used
   //to display whatever you include between the opening and closing tags when invoking a component.
 
-  const API_URL = `https://api.themoviedb.org/3/movie/${
-    children ? children : 'now_playing'
-  }?api_key=${API_KEY}&language=en-US&page=1`;
-
   useEffect(() => {
+    getMovieList();
+  }, [API_URL]);
+
+  const getMovieList = () => {
     fetch(API_URL)
-      .then(result => result.json())
+      .then(result => {
+        if (result.ok) {
+          return result.json();
+        } else {
+          throw new Error('404');
+        }
+      })
       .then(json => {
         console.log(json.results);
         setMovies(json.results);
+        setLoading(false);
+      })
+      .catch(() => {
+        window.location.assign('/error');
       });
-  }, [API_URL]);
+  };
 
   return (
-    <main className="main">
-      {movies.map(movie => (
-        <MovieThumb key={movie.id} {...movie} />
-      ))}
+    <main className="list">
+      {isLoading && <Loader />}
+      {!isLoading && (
+        <>
+          {movies.map(movie => (
+            <MovieThumb key={movie.id} {...movie} />
+          ))}
+        </>
+      )}
     </main>
   );
 };

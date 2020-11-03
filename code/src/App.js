@@ -1,13 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import Nav from 'components/Nav';
+import Error from 'components/Error';
 import MovieList from './pages/MovieList';
 import MoviePage from './pages/MoviePage';
 import CompanyList from './pages/CompanyList';
-//import { API_KEY } from './api.js';
 
-import './styles.scss';
-import Nav from 'components/Nav';
+import './styles/styles.scss';
+import './styles/list.scss';
+import './styles/detail.scss';
+import './styles/button.scss';
 
 export const App = () => {
   return (
@@ -29,8 +32,11 @@ export const App = () => {
         <Route exact path="/movies/:movieId">
           <MoviePage />
         </Route>
-        <Route exact path="/company/:companyId">
+        <Route exact path="/movies/:movieId/company/:companyId">
           <CompanyList />
+        </Route>
+        <Route exact path="/error">
+          <Error />
         </Route>
       </Switch>
     </BrowserRouter>

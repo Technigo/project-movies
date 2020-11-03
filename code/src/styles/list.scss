@@ -1,0 +1,47 @@
+@import './variables.scss';
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  width: 100%;
+
+  @include respond(medium) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond(large) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.movieThumb {
+  position: relative;
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px 10px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover .movieThumb__overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}

@@ -3,33 +3,36 @@ import { useParams, Link } from 'react-router-dom';
 
 import Loader from '../components/Loader';
 import Error from '../components/Error';
+import Backbutton from '../components/Backbutton';
 import MovieDetail from '../components/MovieDetail';
 import { API_KEY } from '../api.js';
 
 const MoviePage = () => {
-  const [error, setError] = useState(false);
   const [isLoading, setLoading] = useState(true);
   const [movie, setMovie] = useState([]);
   const { movieId } = useParams();
+  const API_URL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US`;
 
   useEffect(() => {
-    fetchMovieDetail(movieId);
+    fetchMovieDetail();
   }, [movieId]);
 
-  const fetchMovieDetail = movieId => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US`
-    )
-      .then(result => result.json())
-      .then(json => {
-        if (json.success === false) {
-          setError(true);
-          console.log(json);
+  const fetchMovieDetail = () => {
+    fetch(API_URL)
+      .then(result => {
+        if (result.ok) {
+          return result.json();
         } else {
-          console.log(json);
-          setMovie(json);
+          throw new Error('404');
         }
+      })
+      .then(json => {
+        setMovie(json);
         setLoading(false);
+      })
+      .catch(() => {
+        //window.location.reload();
+        window.location.assign('/error');
       });
   };
   // useEffect(() => {
@@ -40,14 +43,14 @@ const MoviePage = () => {
 
   return (
     <main>
+      <Backbutton path={'/'} text={'Home'} />
       <Link to="/">
         <button type="button" className="back-button">
           Home
         </button>
       </Link>
       {isLoading && <Loader />}
-      {error && <Error />}
-      {!isLoading && !error && <MovieDetail {...movie} />}
+      {!isLoading && <MovieDetail {...movie} />}
     </main>
   );
 };
