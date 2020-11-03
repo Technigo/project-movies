@@ -3,7 +3,7 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { MovieList } from 'pages/MovieList'
 import { MovieDetails } from 'pages/MovieDetails'
-import { Nav } from 'components/Nav'
+import { Nav } from 'components/nav'
 
 export const App = () => {
   return (
