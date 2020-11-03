@@ -1,0 +1,27 @@
+
+.back-link {
+    color: white;
+    position: absolute;
+    top: 50px;
+    padding: 20px;
+}
+
+.details-container {
+    background-color: pink;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.details-summary img {
+    border: 3px solid white;
+    width: 50%;   
+}
+
+.details-summary {
+    color: white;
+    z-index: 20;
+    max-width: 200px;
+}

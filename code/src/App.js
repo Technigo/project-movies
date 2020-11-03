@@ -8,15 +8,17 @@ import { MovieDetails } from 'pages/MovieDetails';
 export const App = () => {
   
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact>
-          <PopularList />
-        </Route>
-        <Route path="/title/:movieId">
-          <MovieDetails />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    <main>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact>
+            <PopularList />
+          </Route>
+          <Route path="/title/:movieId">
+            <MovieDetails />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </main>
   )
 }

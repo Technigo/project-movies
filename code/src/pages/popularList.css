@@ -1,0 +1,36 @@
+.list-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    background: black;    
+}
+
+.list-card {
+    position: relative;
+    display: inline;
+}
+
+a {
+    border: none;
+}
+.list-card img {
+    position: relative;
+    border: 5px solid red;
+    border-top: none;
+    border-bottom: none;
+    width: 100%;
+}
+
+.list-card .list-text {
+    position: absolute;
+    color: white;
+    padding: 20px;
+    bottom: 0;
+}
+
+.list-container img:hover {
+    opacity: .2;
+}
+
