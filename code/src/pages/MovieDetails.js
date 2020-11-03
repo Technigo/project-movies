@@ -15,9 +15,7 @@ export const MovieDetails = () => {
       .then((json) => setMovie(json))
   }
 
-  useEffect(() => {
-    getMovie()
-  }, [])
+  useEffect(getMovie, [])
 
   return (
     <div className="movie-details">
@@ -28,20 +26,13 @@ export const MovieDetails = () => {
         </div>
         <div className="movie-text">
           <h1>{movie.title}</h1>
+          <h2>Release date: {movie.release_date}</h2>
           <p>{movie.overview}</p>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 
-
-//console.log(json.overview)
-//console.log(json.vote_average)
-//console.log(json.backdrop_path)
-//console.log(json.poster_path)
-//console.log(json.release_date)
-//console.log(json.title)
-//console.log(json.id)
-//console.log(json.homepage)
+//movie.vote_average, movie.homepage
 

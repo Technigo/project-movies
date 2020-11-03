@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import { Movie } from './Movie.js'
+import { Movie } from '../components/Movie.js'
 
 //const API_KEY = 'c07a4dcb1d91b54eb3b153e458e26489'
 
@@ -18,9 +18,7 @@ export const MovieList = () => {
       )
   }
 
-  useEffect(() => {
-    getMovies()
-  }, [])
+  useEffect(getMovies, [])
 
   return (
     <>
@@ -30,7 +28,3 @@ export const MovieList = () => {
     </>
   )
 }
-
-
-//add some sorting based on json.results[0].popularity or json.results[0].vote_average
-//add some condition to only include movies with title and overview

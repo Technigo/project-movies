@@ -1,0 +1,4 @@
+[1103/233711.536:ERROR:process_info.cc(329)] VirtualQueryEx: Åtkomst nekad. (0x5)
+[1103/233711.537:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[1103/233711.538:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[1103/233711.538:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Ett försök gjordes att använda en befintlig process. (0xc000010a)

@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import { MovieList } from './components/MovieList.js'
+import { MovieList } from './pages/MovieList.js'
 import { MovieDetails } from './pages/MovieDetails.js'
 
 export const App = () => {
