@@ -12,7 +12,6 @@ const MovieDetail = ({
 	production_companies,
 }) => {
 	return (
-		// <section className="movie-details-container">
 		<>
 			<div
 				className="movie-details-background"
@@ -39,11 +38,9 @@ const MovieDetail = ({
 					<p>Genre:</p>
 					<div className="genres-wrapper">
 						{genres.map(genre => (
-							//<Link key={genre.name} to={`/genre/${genre.id}`}>
 							<ul className="movie-genres" key={genre.name}>
 								<li>{genre.name}</li>
 							</ul>
-							//</Link>
 						))}
 					</div>
 				</div>
