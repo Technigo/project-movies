@@ -86,6 +86,7 @@ main {
   background-position: left;
   padding: 50px;
   color: #fff;
+  background-color: #000;
 }
 
 .movie--details {
@@ -113,6 +114,8 @@ main {
   color: red;
   font-size: 17px;
   margin-left: 10px;
+  background: #fff;
+  padding: 4px 8px;
 }
 
 .movie--details--description {
