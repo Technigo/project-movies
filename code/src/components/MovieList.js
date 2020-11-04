@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+import { MovieCard } from './MovieCard'
+
 
 export const MovieList = () => {
   const [topMovies, setTopMovies] = useState([]); 
@@ -15,15 +17,12 @@ export const MovieList = () => {
   }, [])
 
   return (
-      <div className='all-top-movies'>
-        {topMovies.map((movie) => (
-        <div className='top-movie-card' key={movie.id}>
-          <img src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`}/>
-          <h3>{movie.original_title}</h3>
-          <p>Release Date : {movie.release_date}</p>
-          <p>⭐   {movie.vote_average} / 10</p>
-        </div>  
-      ))}
+      <div className='movie-card'>
+          {topMovies.map((movie) => (
+          <MovieCard key= {movie.id} {...movie} /> 
+          ))}
       </div>
-      )
+    
+  )
+      
 }
