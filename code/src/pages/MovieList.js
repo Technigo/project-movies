@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 
+
 export const MovieList = () => {
   const [movies, setMovies] = useState([])
 
@@ -20,6 +21,7 @@ export const MovieList = () => {
   }, [])
 
   return(
+
     <section className='movie-list'>
       {movies.map((movie) => (
         <Link key={movie.id} to={`/movies/${movie.id}`}>
@@ -36,5 +38,6 @@ export const MovieList = () => {
         </Link>
       ))}
     </section>
+
   )
 }

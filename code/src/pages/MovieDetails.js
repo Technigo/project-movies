@@ -19,7 +19,7 @@ export const MovieDetails = () => {
     <main className='movie-backdrop' style= {{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}}>
 
       <Link className='back-link' to='/'>
-        <img className='back-arrow' src='../left-arrow.svg'/>
+        <img className='back-arrow' alt='back arrow' src='../left-arrow.svg'/>
         Movies
       </Link>
 
