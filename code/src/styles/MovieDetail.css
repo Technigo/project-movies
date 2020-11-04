@@ -11,3 +11,47 @@
   color: #fff;
   text-decoration: none;
 }
+
+.movieDetailPage .movie-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.movieDetailPage .image-poster {
+  border: 2px solid #fff;
+  max-width: 300px;
+}
+
+.movieDetailPage .movie-details-text p {
+  max-width: 300px;
+}
+
+.movieDetailPage .movie-rating {
+  font-size: 17px;
+  color: red;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+@media (min-width: 668px) {
+  .movieDetailPage .movie-details {
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 40px;
+  }
+
+  .movieDetailPage .image-poster {
+    border: 2px solid #fff;
+    max-width: 400px;
+  }
+
+  .movieDetailPage .movie-details-text {
+    margin-left: 20px;
+  }
+
+  .movieDetailPage .movie-details-text p {
+    max-width: 400px;
+  }
+}

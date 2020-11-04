@@ -8,7 +8,7 @@ export const App = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact>
-          <PopularList />}
+          <PopularList />
         </Route>
         <Route path="/movies/:id">
           <MovieDetail />

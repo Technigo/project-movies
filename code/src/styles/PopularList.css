@@ -2,11 +2,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  grid-gap: 30px;
+  grid-gap: 1px;
   margin: 20px;
 }
 
-.image-poster {
+.popularPage .image-poster {
   width: 100%;
 }
 
@@ -15,11 +15,11 @@
   text-decoration: none;
 }
 
-.movie-wrapper {
+.popularPage .movie-wrapper {
   position: relative;
 }
 
-.movie-text {
+.popularPage .movie-text {
   display: none;
   position: absolute;
   top: 0;
@@ -34,7 +34,7 @@
   text-align: center;
 }
 
-.movie-text p {
+.popularPage .movie-text p {
   font-weight: bold;
 }
 

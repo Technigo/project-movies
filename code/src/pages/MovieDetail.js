@@ -30,18 +30,18 @@ export const MovieDetail = () => {
         backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
       }}>
       <Link to="/">
-        <p>Go back!</p>
+        <p>Movies</p>
       </Link>
       <div className="movie-details">
         <img
-          className="image-poster-x"
+          className="image-poster"
           src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
           alt={movie.title}
         />
         <div className="movie-details-text">
           <h1>
             {movie.title}{' '}
-            <span className="rating">{movie.vote_average}/10</span>
+            <span className="movie-rating">{movie.vote_average}/10</span>
           </h1>
           <p>{movie.overview}</p>
         </div>
