@@ -9,6 +9,7 @@
 }
 
 .movie-image {
+  border-bottom: solid 3px #000000;
   width: 100%;
   transition: 0.3s ease;
 }
