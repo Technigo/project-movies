@@ -1,0 +1,23 @@
+.movie-card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+@media screen and (min-width: 700px) {
+  .movie-card-container {
+  grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  .movie-card-container {
+  grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .movie-card-container {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

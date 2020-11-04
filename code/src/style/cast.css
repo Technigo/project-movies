@@ -1,0 +1,32 @@
+.cast-image {
+  width: 100%
+}
+
+.cast-cards {
+  align-items: center;
+  border: 2px solid rgba( 0, 0, 0, 0.4);
+  border-radius: 10px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.cast-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 600px) {
+  .cast-card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .cast-card-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
