@@ -44,21 +44,21 @@
 
 .details-summary img {
     border: 3px solid white;
-    width: 300px;   
+    width: 300px;  
+    display: none; 
 }
 
 .details-summary {
     display: inline-flex;
     align-items: flex-end;
-    padding: 50px;
     color: white;    
 }
 
 .details-text {
-    margin-left: 30px;
+    margin: 15px;
     max-width: 400px;
-    padding: 10px;
-    background: rgb(220, 220, 220, 0.6)
+    background: rgb(220, 220, 220, 0.6);
+    padding: 20px;
 }
 
 .details-text h1 {
@@ -75,4 +75,27 @@
     color: red;
     font-size: 17px;
     margin-left: 8px;
+}
+
+@media (min-width: 667px) {
+
+    .details-summary img {
+      display: block;
+      border: 3px solid white;
+      width: 300px;  
+    } 
+
+    .details-text {
+      max-width: 400px;
+      background: rgb(220, 220, 220, 0.6)
+    }
+
+    .details-summary {
+      display: inline-flex;
+      align-items: flex-end;
+      padding: 50px;
+      color: white;    
+    }
+    
+
 }
