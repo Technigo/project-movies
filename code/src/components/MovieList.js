@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { MovieCard } from "components/MovieCard";
+import { MovieThumb } from "components/MovieThumb";
 
 export const MovieList = () => {
   const MOVIES_URL =
@@ -16,7 +16,7 @@ export const MovieList = () => {
   return (
     <section className="movie-list">
       {movies.map(movie => (
-        <MovieCard key={movie.id} {...movie} />
+        <MovieThumb key={movie.id} {...movie} />
       ))}
     </section>
   );
