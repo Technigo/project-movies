@@ -33,7 +33,10 @@ export const TVShowList = () => {
         <div className="tvshow__wrapper" key={tvshow.id}>
           <div className="tvshow">
             <img className="tvshow__image" src={`${imageURL}${tvshow.poster_path}`} alt={tvshow.name} />
-            <h4 className="tvshow__name">{tvshow.name}</h4>
+            <div className="tvshow__textbox">
+              <h4 className="tvshow__name">{tvshow.name}</h4>
+              <p className="tvshow__text">First aired: {tvshow.first_air_date}</p>
+            </div>
           </div>
         </div>
       ))}
