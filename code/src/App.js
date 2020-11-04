@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Nav from 'components/Nav';
@@ -13,14 +13,22 @@ import './styles/detail.scss';
 import './styles/button.scss';
 
 export const App = () => {
+  const [list, setList] = useState();
+  const handleNavClick = selectedList => {
+    setList(selectedList);
+  };
+
   return (
     <BrowserRouter>
-      <Nav />
+      <Nav onNavClick={handleNavClick} />
       <Switch>
+        {/* <Route exact path="/">
+   <MovieList/>{list}</MovieList>
+        </Route> */}
         <Route exact path="/">
-          <MovieList />
+          <MovieList>{list}</MovieList>
         </Route>
-        <Route exact path="/popular">
+        {/* <Route exact path="/popular">
           <MovieList>popular</MovieList>
         </Route>
         <Route exact path="/top_rated">
@@ -28,7 +36,7 @@ export const App = () => {
         </Route>
         <Route exact path="/upcoming">
           <MovieList>upcoming</MovieList>
-        </Route>
+        </Route> */}
         <Route exact path="/movies/:movieId">
           <MoviePage />
         </Route>

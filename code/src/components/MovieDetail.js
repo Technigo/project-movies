@@ -40,7 +40,7 @@ const MovieDetail = ({
           </a>
         </div>
       </div>
-      {/* <div>
+      <div>
         <p>Genres: </p>
         {genres.map(genre => (
           <Link key={genre.name} to={`/genre/${genre.id}`}>
@@ -60,7 +60,7 @@ const MovieDetail = ({
             <p>{company.name}</p>
           </Link>
         ))}
-      </div> */}
+      </div>
     </section>
   );
 };
