@@ -3,7 +3,7 @@
   width: 25%;
   position: relative;
   display: flex;
-  background: yellow;
+  background: #000;
 }
 
 .movie-img {
@@ -16,8 +16,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, .75);
-  display: none;
+  /* background: rgba(0, 0, 0, .75); */
+  /* display: none; */
   padding: 20px;
 }
 

@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import MovieList from "./components/MovieList";
 import MovieDetails from "./pages/MovieDetails";
-
-const API_key = "5ddb547497cb885965bcba7335e4be9c";
-const MOVIES_API = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_key}&language=en-US&page=1`;
+import { MOVIES_API } from "./API_info";
 
 export const App = () => {
 
@@ -25,7 +23,6 @@ export const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        {/* if the path = / then render MovieList component */}
         <Route path="/" exact>
           <section className="app-container">
             {movies.map(movie => (
@@ -36,9 +33,13 @@ export const App = () => {
             ))}
           </section>
         </Route>
-        <Route path="/movies/:slug" exact>
+        <Route path="/movies/:id">
           <MovieDetails />
         </Route>
+        <Route path="/404">
+          {/* <NotFound /> */}
+        </Route>
+        <Redirect to="/404" />
       </Switch>
     </BrowserRouter>
   );
