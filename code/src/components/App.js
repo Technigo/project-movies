@@ -3,8 +3,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import { MOVIELIST__URL } from './URLS.js';
 import { Nav } from './Nav.js';
-import { MovieList } from './MovieList';
-import { Movie } from './Movie';
+import { MovieList } from '../pages/MovieList';
+import { Movie } from '../pages/Movie';
 
 import '../styles/app.css';
 
@@ -13,10 +13,10 @@ export const App = () => {
 
   const getMovieList = () => {
     fetch(MOVIELIST__URL)
-    .then((res) => {
+    .then(res => {
       return res.json();
     })
-    .then((data) => {
+    .then(data => {
       console.log(data.results)
       setMovies(data.results)
     })
@@ -29,7 +29,9 @@ useEffect(()=>{
   return (
 /* To include: combining useEffect and useState with using API's in react
 To use placeholders in urls to pick dynamic parts from urls
-To use React Router to create multi-page applications */
+To use React Router to create multi-page applications 
+
+ADD MOVIEDETAILS PAGE WITH DETAILS ABOUT MOVIE*/
 
     //The BrowserRouter enables the usage of routes and links
     //The whole application should be wrapped in Browserrouter
@@ -48,12 +50,12 @@ To use React Router to create multi-page applications */
               <MovieList 
               movies={movies}/>
           </Route>
-          <Route path='/movie' exact>
+          <Route path='/movie/:slug' exact>
             <Movie />
           </Route>
-          <Route path='/short' exact>
+{/*           <Route path='/short' exact>
             <Movie />
-          </Route>
+          </Route> */}
         </Switch>
       </main>
     </BrowserRouter>
