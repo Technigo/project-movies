@@ -22,7 +22,7 @@ const MovieDetail = () => {
         setMovie(json);
         setTimeout(() => {
           SetLoading(false);
-        }, 3000);
+        }, 500);
       });
   }, [movieId, URL]);
 

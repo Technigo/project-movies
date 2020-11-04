@@ -1,3 +1,27 @@
+.loading-container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
 h1 {
   color: white;
+}
+
+.loader {
+  border: 30px solid white;
+  border-right: 30px solid rgba(255, 255, 255, 0);
+  border-left: 30px solid rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  opacity: 0.8;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg); /*rotates all the way around*/
+  }
 }
