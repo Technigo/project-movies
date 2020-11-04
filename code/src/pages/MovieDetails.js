@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import './MovieDetails.css'
+import { PageNotFound } from './PageNotFound'
 
 export const MovieDetails = () => {
   const { id } = useParams()
@@ -10,12 +11,32 @@ export const MovieDetails = () => {
   const movieUrlDetails = `${baseURL}/3/movie/${id}?api_key=${apiKey}`
   //I need to change this API key to the correct one
   const [movieDetails, setMovieDetails] = useState([])
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     fetch(movieUrlDetails)
       .then(response => response.json())
-      .then(json => setMovieDetails(json))
+      .then(json => {
+        setMovieDetails(json)
+        setLoading(false)
+      })
   }, [movieUrlDetails])
+
+  if (loading) {
+    return (
+      <div className="loading-page">
+        <div className="loader"></div>
+        <p>Loading movie...</p>
+      </div>
+    )
+  }
+
+  if (!movieDetails.title) {
+    return (
+      <PageNotFound message={movieDetails.status_message} />
+    )
+  }
+
   return (
     <section className='Movie-thumb'>
       <div className="background" 

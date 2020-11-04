@@ -32,9 +32,9 @@ h2{
   left: 0;
   width: 100%;
   height: 100%;
-  /* padding: 40px 10px; */
   background: rgba(0, 0, 0, 0.7);
   transition: all 0.5s ease-in-out;
+  /* // dont forget to add hover effect for safari usage too! */
 }
 
 .movie-overlay:hover{

@@ -8,7 +8,8 @@ body{
   grid-template-columns: 1fr;
   position: relative;
   width: 100%;
-  justify-self: center;
+  justify-content: center;
+    margin: 0 auto;
 }
 
 @media screen and (min-width:768px) {
@@ -20,7 +21,7 @@ body{
 @media screen and (min-width:1024px) {
   .movie-wraper {
     grid-template-columns: repeat(4, 1fr);
-    /* grid-template-columns: repeat(auto-fit, minmax(4, 1fr)); */
+    max-width: 1370px;
     
 
   }
