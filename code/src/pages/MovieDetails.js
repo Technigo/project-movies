@@ -13,10 +13,10 @@ export const MovieDetails = () => {
   const [details, setDetails] = useState([])
 
   useEffect (() => {
-    fetch(DETAILS_URL)
+    fetch(DETAILS_URL)  
       .then((response) => response.json())
       .then((json) => setDetails(json))
-  }, [])
+  }, [id])
 
   console.log(details) // - don't forget to remove
 
