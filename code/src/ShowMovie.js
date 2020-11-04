@@ -32,6 +32,7 @@ export const ShowMovie = () => {
                 <div className="button-container">
                     <Route path="/:id">
                         <Link to="/">
+                        <img src={require("back-button.png")}/>
                         <BackButton />
                         </Link>
                     </Route>
