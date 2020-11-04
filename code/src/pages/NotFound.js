@@ -12,7 +12,7 @@ const NotFound = () => {
       <div className="not-found--message-box">
         <img
           className="not-found--message-img"
-          src="%PUBLIC_URL%/images/noun_emotion_798837.svg"
+          src="./assets/noun_emotion_798837.svg"
           alt="not found"
         />
         <p className="not-found--message-text">
