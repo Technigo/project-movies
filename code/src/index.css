@@ -14,13 +14,13 @@ code {
 
 /* ----Landing page with mobvie posters */
 
-.movies-list{
+.movies-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.movie-poster-container{
+.movie-poster-container {
   display: flex;
   flex-direction: column;
   /* background-color: #efefef; */
@@ -28,24 +28,29 @@ code {
   margin: 10px;
 }
 
-.poster-wrapper{
+.poster-wrapper {
   position: relative;
-  background-color:#000;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 12%,
+    rgba(72, 72, 72, 1) 46%,
+    rgba(24, 24, 24, 1) 79%
+  );
 }
-.movie-poster{
+.movie-poster {
   /* padding: 10px; */
   /* width: 300px;
   height: 300px; */
   object-fit: cover;
-  -webkit-transition: opacity 0.4s ease-in-out; 
+  -webkit-transition: opacity 0.4s ease-in-out;
   -moz-transition: opacity 0.4s ease-in-out;
   -o-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
 }
 
-.poster-wrapper:hover .movie-poster{
+.poster-wrapper:hover .movie-poster {
   opacity: 0.5;
-  
 }
 
 .poster-description {
@@ -55,17 +60,13 @@ code {
   bottom: 0;
   left: 0;
   right: 0;
-margin: 10px; 
+  margin: 10px;
 
-  /* Center the content vetically */
+  /* position the content */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  
-
-  /* Center horizontally */
-  text-align: center;
 
   /* Other styling  */
   color: #fff;
@@ -92,11 +93,58 @@ margin: 10px;
 
 /* -----------Detail-page-------------- */
 
-.movie-detail-page{
+.background-image {
+  background-size: cover;
 
-background-size:cover;
-  height:100vh;
-  position:relative;
+  position: relative;
   background-repeat: no-repeat;
-  background-color: linear-gradient(rgba(0,0,0,0) 20%, rgb(0,0,0) 100%);
+  /* background-color: linear-gradient(rgba(0,0,0,0) 20%, rgb(0,0,0) 100%); */
+}
+
+.movie-detail-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 100vh;
+  color: #fff;
+}
+.details-container {
+  display: flex;
+  margin: 50px;
+  /* word-break: break-word; */
+}
+.details {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin-left: 30px;
+  justify-content: flex-end;
+}
+
+.details-poster {
+  border: 4px solid #fff;
+}
+
+.vote {
+  font-size: 17px;
+  color: #8b0000;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.link-text {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.fa-chevron-circle-left {
+  font-size: 25px;
+  color: #fff;
+  margin-right: 10px;
 }

@@ -1,8 +1,9 @@
-import React , { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 // import React from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 import { API_KEY } from '../urls';
+// import { BackToList } from 'pages/BackToList'
 
 export const MovieDetails = () => {
     const { id } = useParams()
@@ -15,17 +16,28 @@ export const MovieDetails = () => {
             .then((json) => {
                 console.log(json)
                 setMovie(json)
-              })
-            
-           }, [MOVIE_URL])
-           
-           const backgroundImage = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`;
-    return(
-        <main className="movie-detail-page" style={{backgroundImage:  `url(${backgroundImage})`}}>
-         <section className="movie-details">
-        
-        <h1>{movie.title}</h1>        
-        <p>{movie.overview}</p>
+            })
+
+    }, [MOVIE_URL])
+
+    const backgroundImage = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`;
+    return (
+        <main className="background-image" style={{ backgroundImage: `url(${backgroundImage})` }}>
+            <Link to="/" className="back-link"> 
+                <div className="link-text">
+                    <i class="fas fa-chevron-circle-left"></i>
+                    <h3>Movies</h3>
+                </div>
+             </Link> 
+        <section className="movie-detail-page" >
+             
+            <article className="details-container">
+                <img className="details-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+                <div className="details">
+                    <h1>{movie.title} <span className="vote">{movie.vote_average} / 10</span></h1>
+                    <p>{movie.overview}</p>
+                </div>
+            </article>
         </section>
         </main>
     )

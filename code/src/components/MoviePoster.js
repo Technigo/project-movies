@@ -8,7 +8,7 @@ export const MoviePoster = ({ title, release_date, poster_path, id  }) => {
         <Link to={`/movies/${id}`}>
         <section className="movie-poster-container">
             <div className="poster-wrapper">
-                <img className="movie-poster" src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} />
+                <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${poster_path}`} alt={title} />
                 <div className="poster-description">
                     <p>{title}</p>
                     <span className="release">Released {release_date}</span>
