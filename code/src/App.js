@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import PopularList from "./components/PopularList";
-import MovieDetail from "./components/MovieDetail";
+import PopularList from "./pages/PopularList";
+import MovieDetail from "./pages/MovieDetail";
 // const API_KEY = f7e0c4070f4665dbae6d58fba626cfe4;
 
 // *Fetching popular movies for the list page*

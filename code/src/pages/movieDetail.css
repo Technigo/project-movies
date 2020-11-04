@@ -67,3 +67,32 @@
   margin-left: 16px;
   transition: 0.2s ease-in-out;
 }
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .movie-details-container {
+    display: block;
+    position: relative;
+  }
+
+  .summery {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .movie-details {
+    width: 290px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 668px) {
+  .summery {
+    /* flex-direction: column; */
+    padding: 10px;
+  }
+
+  .summery img {
+    display: none;
+  }
+}

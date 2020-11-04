@@ -10,6 +10,7 @@
 .movie-card {
   position: relative;
   width: 25%;
+  margin-bottom: -4px;
 }
 
 .movie-card img {
@@ -43,4 +44,18 @@
 
 .movie-release-date {
   margin: 10px 0;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .movie-card {
+    width: 50%;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 668px) {
+  .movie-card {
+    width: 100%;
+  }
 }
