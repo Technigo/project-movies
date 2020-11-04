@@ -1,9 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+import "./notFound.css";
 
 const NotFound = () => {
   return (
     <div>
-      <h1>ERROR</h1>
+      <Link to="/">
+        <span className="back">Home</span>
+      </Link>
     </div>
   );
 };

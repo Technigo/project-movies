@@ -53,6 +53,11 @@
   left: 50px;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 .back-to-movies a {
   color: #fff;
   text-decoration: none;

@@ -14,11 +14,11 @@ export const App = () => {
         </Route>
         <Route path="/movies/:movieId">
           <MovieDetail />
-          {/* <Route path="/404">
-            <NotFound />
-          </Route>
-          <Redirect to="/404" /> */}
         </Route>
+        <Route path="/404">
+          <NotFound />
+        </Route>
+        <Redirect to="/404" />
       </Switch>
     </BrowserRouter>
   );

@@ -22,7 +22,7 @@ const PopularList = () => {
         setMovies(json.results);
         setTimeout(() => {
           SetLoading(false);
-        }, 500);
+        }, 0);
         console.log("Movies", json.results);
       });
   }, []);
