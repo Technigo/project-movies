@@ -40,14 +40,15 @@ body {
 }
 
 .button-container {
-  display: flex;
+ 
   height: 80px;
   width: 80px;
   margin-left: 10px;
+  
 }
 
 .back-button {
-  height: 50px;
+  transform: translate(100%, 91%);
   width: 50px;
-  margin-top: 10px;
+  height: 50px;
 }

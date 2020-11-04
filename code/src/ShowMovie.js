@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Route, Link} from 'react-router-dom'
 
+import { BackButton } from 'BackButton'
+
 
 
 export const ShowMovie = () => {
@@ -30,7 +32,7 @@ export const ShowMovie = () => {
                 <div className="button-container">
                     <Route path="/:id">
                         <Link to="/">
-                            <img src="https://img.pngio.com/back-button-free-arrows-icons-back-button-png-512_512.png" alt="back button" className="back-button" />
+                        <BackButton />
                         </Link>
                     </Route>
                 </div>
