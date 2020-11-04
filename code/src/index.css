@@ -132,7 +132,25 @@ button:hover {
   cursor: pointer;
 }
 
-@media (max-width: 755px) {
+@media (max-width: 600px) {
+  .popular-movies a {
+    width: 100%;
+  }
+  .details {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    flex-direction: column;
+  }
+  .poster {
+    width: 88%;
+  }
+  .summary {
+    padding: 7px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
   h2 {
     font-size: 16px;
   }
@@ -144,4 +162,28 @@ button:hover {
   .popular-movies .popular-movie-info {
     padding-left: 5px;
   }
+
+  .popular-movies a {
+    width: 50%;
+  }
+  .details {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    flex-direction: column;
+  }
+  .poster {
+    width: 66%;
+  }
+  .summary {
+    padding: 7px;
+    margin: 0;
+    font-size: x-large;
+  }
+  .overview {
+    max-width: 490px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
 }
