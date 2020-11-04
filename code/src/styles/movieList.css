@@ -36,3 +36,17 @@
   flex-direction: column;
   justify-content: flex-end;
 }
+
+/*media queries*/
+
+@media (max-width: 1024px) {
+  .movie-list a {
+    width: 50%
+  }
+}
+/* 
+@media (max-width: 767px) {
+  .movie-list a {
+    width: 100%;
+  }
+} */
