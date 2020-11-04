@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const MovieDetail = ({
   backdrop_path,
@@ -12,8 +12,6 @@ const MovieDetail = ({
   genres,
   production_companies,
 }) => {
-  const { movieId } = useParams();
-
   return (
     <section
       className="detail"
@@ -53,10 +51,7 @@ const MovieDetail = ({
       <div>
         <p>Production Companies: </p>
         {production_companies.map(company => (
-          <Link
-            key={company.name}
-            to={`/movies/${movieId}/company/${company.id}`}
-          >
+          <Link key={company.name} to={`/company/${company.id}`}>
             <p>{company.name}</p>
           </Link>
         ))}

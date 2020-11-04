@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import Nav from 'components/Nav';
 import Error from 'components/Error';
@@ -14,18 +14,18 @@ import './styles/button.scss';
 
 export const App = () => {
   const [list, setList] = useState();
-  const handleNavClick = selectedList => {
+  const handleClick = selectedList => {
     setList(selectedList);
   };
 
   return (
     <BrowserRouter>
-      <Nav onNavClick={handleNavClick} />
       <Switch>
         {/* <Route exact path="/">
    <MovieList/>{list}</MovieList>
         </Route> */}
         <Route exact path="/">
+          <Nav onClick={handleClick} />
           <MovieList>{list}</MovieList>
         </Route>
         {/* <Route exact path="/popular">
@@ -40,12 +40,13 @@ export const App = () => {
         <Route exact path="/movies/:movieId">
           <MoviePage />
         </Route>
-        <Route exact path="/movies/:movieId/company/:companyId">
+        <Route exact path="/company/:companyId">
           <CompanyList />
         </Route>
         <Route exact path="/error">
           <Error />
         </Route>
+        <Redirect to="/error" />
       </Switch>
     </BrowserRouter>
   );

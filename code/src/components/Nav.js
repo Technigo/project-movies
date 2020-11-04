@@ -1,37 +1,60 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
-const Nav = ({ onNavClick }) => {
+const Nav = ({ onClick }) => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const onMenuClick = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <header>
+      <Link to="/">
+        <h1>CinemaTech</h1>
+      </Link>
       <nav>
-        <button className="nav-button">Category</button>
-        <div className="nav-links">
+        <button className="nav-button" onClick={onMenuClick}>
+          Category
+        </button>
+        <div className={showMenu ? 'open' : 'closed'}>
           <NavLink
             to="/"
             className="nav-bar-NavLink"
-            onClick={() => onNavClick('now_playing')}
+            onClick={() => {
+              onClick('now_playing');
+              onMenuClick();
+            }}
           >
             Now Playing
           </NavLink>
           <NavLink
             to="/"
             className="nav-bar-NavLink"
-            onClick={() => onNavClick('popular')}
+            onClick={() => {
+              onClick('popular');
+              onMenuClick();
+            }}
           >
             Popular
           </NavLink>
           <NavLink
             to="/"
             className="nav-bar-NavLink"
-            onClick={() => onNavClick('upcoming')}
+            onClick={() => {
+              onClick('upcoming');
+              onMenuClick();
+            }}
           >
             Upcoming
           </NavLink>
           <NavLink
             to="/"
             className="nav-bar-NavLink"
-            onClick={() => onNavClick('top_rated')}
+            onClick={() => {
+              onClick('top_rated');
+              onMenuClick();
+            }}
           >
             Top Rated
           </NavLink>
