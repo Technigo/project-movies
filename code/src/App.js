@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
 import { MovieList } from './pages/MovieList.js'
 import { MovieDetails } from './pages/MovieDetails.js'
@@ -18,15 +18,15 @@ export const App = () => {
           <MovieDetails />
         </Route>
 
-        <Route>
-          <NotFound />
-        </Route>
-
-        {/* <Route path='/404'>
+        {/* <Route>
           <NotFound />
         </Route> */}
 
-        {/* <Redirect to='/404' /> */}
+        <Route path='/404'>
+          <NotFound />
+        </Route>
+
+        <Redirect to='/404' />
 
       </Switch>
     </Router>
