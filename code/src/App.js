@@ -18,11 +18,15 @@ export const App = () => {
           <MovieDetails />
         </Route>
 
-        <Route path='/404'>
+        <Route>
           <NotFound />
         </Route>
 
-        <Redirect from='/movy' to='/404' />
+        {/* <Route path='/404'>
+          <NotFound />
+        </Route> */}
+
+        {/* <Redirect to='/404' /> */}
 
       </Switch>
     </Router>
