@@ -21,19 +21,34 @@ export const MovieDetail = () => {
 
     return(
      <>
-        <Link to ="/" exact='true'>
-        <p> here goes the info about the movies</p>
-        </Link>
+      
+    <div className="movie-detail-overlay">   
+        <img className="movie-detail-background" 
+          src={`https://image.tmdb.org/t/p/w1280${movies.backdrop_path} `} alt={`${`original_title`}poster`}  /> 
 
-        <img className="movie-card-image" 
-          src={`https://image.tmdb.org/t/p/w1280${movies.backdrop_path} `} alt={`${`original_title`}poster`}  />   
-       <div>
-        <h1>{movies.title}</h1>
-            <p>{movies.vote_average}/10</p>
-            <p>{movies.overview}</p>
-            <p>{movies.tagline}</p>
-        </div>
+<div className="movie-detail-text-overlay">
+        <div className="movie-detail-poster">
+            <img src={`https://image.tmdb.org/t/p/w342/${movies.poster_path}`} 
+              alt={`${`original_title`}poster`} />
+         
+            <div className="movie-detail-text"> 
+            
+             <h1>{movies.title}</h1> 
+             <span className="rating"><p> {movies.vote_average}/10</p></span>
+            
+
+            <p className="overview">{movies.overview}</p>
+            </div>
+            </div>
+        </div>  
+    </div>     
     
     </>
     )
 }
+
+/*
+<Link to ="/" exact='true'>
+<button type="button"></button>
+</Link>
+*/
