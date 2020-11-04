@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/*MOVIE DETAILS*/
+
+.backdrop-image {
+  min-height: 1100px;
+  background-size: cover;
+}
