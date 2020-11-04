@@ -7,9 +7,10 @@ import { FilmDetail } from 'pages/FilmDetail';
 export const App = () => {
 
   return (
-    <main className="main-container">
-      <BrowserRouter>
-        <Switch>
+    <>
+    <BrowserRouter>
+      <main>        
+        <Switch>            
           <Route path="/" exact>
             <FilmList />          
           </Route>
@@ -17,7 +18,8 @@ export const App = () => {
             <FilmDetail />          
           </Route>
         </Switch>      
-      </BrowserRouter>
-    </main>
+      </main>
+    </BrowserRouter>
+    </>
   );
 };
