@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom';
 
 import { ApiUrl, PosterImgUrl } from './components/ApiUrls';
 import TopNav from './components/TopNav';
 import ListedMovie from './components/ListedMovie';
 import MoviePage from './pages/MoviePage';
+import NotFound from './pages/NotFound';
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
@@ -44,6 +50,12 @@ export const App = () => {
           <Route exact path="/movies/:id">
             <MoviePage movies={movies} />
           </Route>
+
+          <Route exact path="/404">
+            <NotFound />
+          </Route>
+
+          <Redirect to="/404" />
         </Switch>
       </main>
     </Router>

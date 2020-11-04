@@ -17,6 +17,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* --- HEADER --- */
 .top-nav {
   background: #000;
   width: 100%;
@@ -47,15 +48,22 @@ body {
   border: 1px solid #fff;
   border-radius: 4px;
   text-align: left;
+  cursor: pointer;
 }
 
+.top-nav--dropdown--select:hover {
+  color: #666;
+  border: 1px solid #666;
+}
+
+/* --- MAIN SECTION --- */
 main {
   display: flex;
   flex-wrap: wrap;
   padding-top: 65px;
 }
 
-.movies--back-button {
+.movie--back-button {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
@@ -63,17 +71,17 @@ main {
   align-items: center;
 }
 
-.movies--back-button--img {
+.movie--back-button--img {
   width: 30px;
   filter: invert(1);
 }
 
-.movies--back-button--text {
+.movie--back-button--text {
   transition: margin 0.2s ease-in-out;
   margin: 0 0 5px 5px;
 }
 
-.movies--back-button:hover .movies--back-button--text {
+.movie--back-button:hover .movie--back-button--text {
   margin: 0 0 5px 10px;
 }
 
@@ -143,6 +151,7 @@ main {
 
 .movie--details--title {
   margin: 20px 0;
+  font-size: 32px;
 }
 
 .movie--details--rating {
@@ -159,11 +168,75 @@ main {
   margin-bottom: 20px;
 }
 
+/* --- NOT FOUND PAGE --- */
+.not-found--wrapper {
+  width: 100vw;
+  height: calc(100vh - 65px);
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.48783263305322133) 34%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url('/images/charles-deluvio-I6mx55jXOvM-unsplash.jpg');
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found--message-box {
+  background: #000;
+  box-shadow: 0 0 15px #000;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found--message-img {
+  filter: invert(1);
+  width: 20vw;
+}
+
+.not-found--message-text {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 30px;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.not-found--message-button {
+  padding: 10px 50px;
+  font-size: 20px;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.not-found--message-button:hover {
+  border: 1px solid #666;
+  color: #666;
+}
+
 /* --- MEDIA QUERIES --- */
 
 @media (max-width: 830px) {
   .movie--details--textbox {
     max-width: 300px;
+  }
+
+  .movie--details {
+    position: static;
+  }
+
+  .movie--back-button {
+    margin-bottom: 45px;
   }
 }
 
@@ -171,6 +244,11 @@ main {
   .movie--wrapper {
     background-position: center center;
   }
+
+  .movie-wrapper {
+    padding: 35px 30px;
+  }
+
   .movie-list--movie-wrapper {
     width: 50vw;
   }
@@ -178,15 +256,16 @@ main {
   .movie--details {
     align-items: flex-start;
     flex-direction: column;
+    bottom: 25px;
+  }
+
+  .movie--details--textbox {
+    max-width: 80vw;
+    margin: 0;
   }
 
   .movie--details--image {
     width: 250px;
-  }
-
-  .movie--details--textbox {
-    max-width: 70vw;
-    margin: 0;
   }
 }
 @media (max-width: 480px) {
@@ -197,5 +276,27 @@ main {
 @media (max-width: 380px) {
   .movie--wrapper {
     padding: 35px 30px;
+  }
+
+  .movie--details {
+    bottom: 5px;
+  }
+}
+
+@media (max-width: 330px) {
+  .movie--wrapper {
+    padding: 35px 30px;
+  }
+
+  .movie--details {
+    bottom: 5px;
+  }
+
+  .movie--details--title {
+    font-size: 20px;
+  }
+
+  .movie--details--image {
+    width: 150px;
   }
 }
