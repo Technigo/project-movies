@@ -47,14 +47,32 @@ code {
   justify-content: flex-end;
 }
 
-main {
+
+.back-link {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 20px;
+  padding-left: 40px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  position: relative;
+  align-items: center; 
+}
+
+.back-arrow {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  transition: .4s ease-in-out;
+}
+
+.back-link:hover .back-arrow{
+  margin-right: 10px;
 }
 
 .movie-backdrop {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-repeat: no-repeat;
   background-size: cover;
   position: fixed;
@@ -62,6 +80,10 @@ main {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.movie-backdrop a {
+  padding-top: 70px;
 }
 
 .movie-details-container {
@@ -73,7 +95,7 @@ main {
 
 .movie-details {
   padding-left: 15px;
-  width: 40%;
+  width: 30%;
 }
 
 .movie-rating {
@@ -81,4 +103,27 @@ main {
   color: #f10400;
   font-size: 17px;
   margin-left: 20px;
+}
+
+.not-found-container {
+  display: flex;
+  align-items: center;
+  height: 200px;
+}
+
+.not-found-container h2 {
+  padding-left: 30px;
+}
+
+@media (min-width: 667px) and (max-width: 1024px) {
+  .movie-list a {
+    width: 30%;
+    flex-grow: 1;
+  } 
+}
+
+@media (max-width: 666px) {
+  .movie-list a{
+    width: 50%;
+  }
 }
