@@ -39,6 +39,7 @@ export const App = () => {
               apiKey={API_KEY}
               baseUrl={baseUrl}
               backdropSize={backdropSize}
+              posterSize={posterSize}
             />
           </Route>
         </Switch>

@@ -1,0 +1,27 @@
+.background {
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+
+.summary-box {
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+  color: white;
+}
+
+.summary-box img {
+  border: 5px solid white;
+}
+
+.description {
+  margin-left: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.description p {
+  max-width: 400px;
+}
