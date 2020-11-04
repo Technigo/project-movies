@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 import { API_KEY } from '../key';
+import Icon from './back_button.svg'
 
 export const MovieDetail = () => {
     const { movieId } = useParams()
@@ -23,10 +25,12 @@ export const MovieDetail = () => {
      <>
 
      <section className="detail-backdrop" style={{  backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` }}>
-        <div className="movie-detail-overlay">  
-        <div className="movie-detail-text-overlay">
-        <Link to ="/" exact='true'>
+        <div className="movie-detail-content">  
+        <div className="movie-detail-back">
 
+        <Link to ="/" className="link" exact='true'>
+        <img className="back-icon" src={Icon} style={ {width:"40px"} }  alt="icon" /> 
+            <div className="back-text">Movies</div>
         </Link>
         <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`} alt={movies.title} /> 
         </div>      
