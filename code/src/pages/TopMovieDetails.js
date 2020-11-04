@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+import { API_KEY } from '../key';
 import { TopMovie } from 'components/TopMovie';
 import { Loading } from 'components/Loading';
-import { API_KEY } from '../key';
 import { NotFound } from 'components/NotFound';
 
 export const TopMovieDetails = () => {
