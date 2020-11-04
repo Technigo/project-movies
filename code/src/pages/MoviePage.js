@@ -22,10 +22,8 @@ return (
     <Link to ="/" exact='true'>
 '      <p>Movies List</p>
 '    </Link>
-          <section className="movie-page">
-            <div 
-              className="movie-page-background" 
-              style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 10%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
+          <section className="movie-page" 
+            style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 10%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
               <div className="movie-page-details">
                 <img className="movie-poster" src= {`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.original_title}/>
                 <div class="details-container">
@@ -34,7 +32,6 @@ return (
                   <p className="movie-overview">{movie.overview}</p>
                 </div>
               </div>
-            </div>
           </section> 
   </>
   );

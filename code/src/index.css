@@ -68,9 +68,6 @@ code {
 
 .movie-page {
   width: 100%;
-}
-
-.movie-page-background {
   background-size: cover;
   min-height: 100vh;
 }
@@ -92,16 +89,19 @@ code {
 
 
 @media (min-width: 1024px) {
-  
+
+  .movie-page { 
+    display: flex;
+  }
+
   .movie-page-details {
     display: flex;
     align-items: flex-end;
+    padding: 30px;
   }
 
   .details-container { 
     width: 30%;
-    flex-direction: row;
-    flex-wrap: wrap;
     padding-bottom: 50px;
   }
 
