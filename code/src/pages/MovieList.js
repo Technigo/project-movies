@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-//import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom' // NavLink?
 //To be able to use <Link> or <NavLink> tags in components (see Damiens first video)
+const API_KEY = '2df2062fe6afeadacbfc1fd0a84167fa'
+const MOVIES_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
 
-const MOVIES_URL = 'https://api.themoviedb.org/3/movie/popular?api_key=2df2062fe6afeadacbfc1fd0a84167fa&language=en-US&page=1'
- // const API_KEY = '2df2062fe6afeadacbfc1fd0a84167fa'
 
  //Here we will do the fetch
 const MovieList = () => {
@@ -18,17 +18,27 @@ const MovieList = () => {
       console.log(json.results);
     })
   }, [])
-  //What is the link on movie-list-movie-wrapper going to go to? Right now it's wrong!
+  
+  //The Link shoud go to the MovieDetails component? <Link to={what to put here?}
   return (
     <div> 
       {movies.map((movie) => (
-        <a className="movie-list-movie-wrapper" href= {`https://image.tmdb.org/t/p/w342${movie.poster_path}`} key={movie.id}>
-          <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-          <div className="movie-list-details"> 
-            <h2 className="movie-list-title">{movie.title}</h2>
-            <p className="movie-list-release">Release-date: {movie.release_date}</p>
-          </div>
-        </a>
+        <div className="list-movie-wrapper" key={movie.id}> 
+          <Link to={`movie/${movie.id}`}> 
+          {/* <a 
+            href= {`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} 
+            > */}
+            <img 
+              className="list-movie-poster" 
+              src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} 
+              alt={movie.title} />
+            <div className="list-details-wrapper"> 
+              <h2 className="list-title">{movie.title}</h2>
+              <p className="list-release">Release-date: {movie.release_date}</p>
+            </div>
+          {/* </a> */}
+          </Link>
+        </div>
       ))}
     </div>
   );
