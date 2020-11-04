@@ -23,7 +23,7 @@ export const MovieDetail = () => {
 
     return(
     <>
-
+    <article className ="details-page">
     <section className="detail-backdrop" style={{  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%),  url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` }}>
         <div className="movie-detail-content">  
             <div className="movie-detail-back">
@@ -33,7 +33,11 @@ export const MovieDetail = () => {
                     <div className="back-text">Movies</div>
                 </Link>
                     <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`} alt={movies.title} /> 
-            </div>      
+
+                    
+
+            </div>  
+             
 
             <div className="movie-detail-text"> 
                 <h1 className="movie-detail-title">{movies.title}
@@ -44,6 +48,8 @@ export const MovieDetail = () => {
 
         </div>
     </section>
+    </article>
+   
     </>
     )
 }

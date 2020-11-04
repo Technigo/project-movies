@@ -80,10 +80,11 @@ code {
 
 
 /***MOVIE DETAIL PAGE*/
-
+.details-page {
+  position: relative;
+}
 
 .detail-backdrop {
-  background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -98,7 +99,7 @@ code {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   margin-left:50px;
   
 }
@@ -114,12 +115,15 @@ code {
 
 .movie-detail-title {
   flex-direction: row;
+  font-size: 25px;
+  margin: 0px
 }
+
 
 .movie-detail-text {
   color: white;
   max-width: 400px;
-  font-size: 18px;
+  font-size: 16px;
   flex-direction: column;
   justify-content: flex-end;
   margin-left: 20px;
