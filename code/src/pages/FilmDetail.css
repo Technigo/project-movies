@@ -1,0 +1,97 @@
+.film-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.back-link {
+    position: absolute;
+    display: inline-flex;
+    color: #fff;
+    font-size: 20px;
+    align-items: center;
+    font-weight: 700;
+    text-decoration: none;
+    left: 50px;
+    top: 40px;
+    background-color: rgba(37, 37, 37, 0.6);
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.back-link:hover {
+    background-color: rgba(37, 37, 37, 0.9);
+    transition: 0.3s ease;
+}
+
+.back-link svg {
+    fill: #fff;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #fff;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.details-container {
+    display: flex;
+    align-items: flex-end;
+    padding: 50px;
+}
+
+.film-poster {
+    margin-right: 20px;
+}
+
+.film-poster img {
+    border: 5px solid #fff;
+}
+
+.film-details {
+    width: 50%;
+    color: #fff;
+    background-color: rgba(37, 37, 37, 0.6);
+    padding: 10px;
+    border-radius: 3px;
+    max-width: 400px;
+}
+
+.film-title-average {
+    display: inline-block;
+}
+
+.film-title-average h3 {
+    font-size: 25px;
+    display: inline;
+    margin-right: 15px;
+}
+
+.film-title-average p {
+    background: rgba(253, 28, 28, 0.548);
+    padding: 7px;
+    border-radius: 3px;
+    font-size: 18px;
+    display: inline;
+    font-weight: 600;
+} 
+
+.background-image {
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
