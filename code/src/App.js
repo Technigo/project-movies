@@ -7,7 +7,7 @@ import { FilmDetail } from 'pages/FilmDetail';
 export const App = () => {
 
   return (
-    <main>
+    <main className="main-container">
       <BrowserRouter>
         <Switch>
           <Route path="/" exact>
