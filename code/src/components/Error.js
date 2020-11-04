@@ -7,7 +7,7 @@ const Error = () => {
 		<>
 			<section>
 				<p>Something went wrong, please try again later</p>
-				<BackButton path={'/'} text="Give it another go!" />
+				<BackButton path={'/'} text={'Give it another go!'} />
 			</section>
 		</>
 	);

@@ -40,7 +40,8 @@ const MoviePage = () => {
 
 	return (
 		<main className="movie-detail">
-			<BackButton path={`/`} text="Home" />
+			{/* <BackButton path={'/'} text={'Home'} /> */}
+			<BackButton text={'Home'} />
 			{loading && <Loader />}
 			{!loading && <MovieDetail {...movieDetail} />}
 		</main>

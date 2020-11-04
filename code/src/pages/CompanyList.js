@@ -11,7 +11,7 @@ import '../styles/MovieList.css';
 const CompanyList = () => {
 	const [companies, setCompanies] = useState();
 	const [loading, setLoading] = useState(true);
-	const { companyId } = useParams();
+	const { companyId, movieId } = useParams();
 
 	const ApiKey = '175ffd5710eba9b52b1d7f46de42a152';
 	const API_URL = `https://api.themoviedb.org/3/discover/movie?api_key=${ApiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_companies=${companyId}`;
@@ -30,7 +30,11 @@ const CompanyList = () => {
 				}
 			})
 			.then(json => {
-				setCompanies(json.results);
+				const filteredCompanyArray = json.results.filter(
+					movie => movie.poster_path != null
+				);
+				//console.log(filteredCompanyArray);
+				setCompanies(filteredCompanyArray);
 				setLoading(false);
 			})
 			.catch(() => {
@@ -40,7 +44,8 @@ const CompanyList = () => {
 
 	return (
 		<main className="movie-list">
-			<BackButton path={`/`} text="Home" />
+			{/* <BackButton path={`/movies/${movieId}/`} text={'Go back to movie'} /> */}
+			<BackButton text={'Go back to movie'} />
 			{loading && <Loader />}
 			{!loading && (
 				<>

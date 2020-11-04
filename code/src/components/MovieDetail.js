@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const MovieDetail = ({
 	backdrop_path,
@@ -11,12 +11,13 @@ const MovieDetail = ({
 	genres,
 	production_companies,
 }) => {
+	//const { movieId } = useParams();
 	return (
 		<>
 			<section
 				className="movie-details-background"
 				style={{
-					backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url("https://image.tmdb.org/t/p/w1280/${backdrop_path}")`,
+					backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 6%, rgb(0, 0, 0) 100%), url("https://image.tmdb.org/t/p/w1280/${backdrop_path}")`,
 				}}
 			>
 				<div className="movie-details-wrapper">
@@ -31,8 +32,12 @@ const MovieDetail = ({
 							<span className="average-vote">{vote_average}/10</span>
 						</h3>
 						<p className="movie-description">{overview}</p>
-						<a href={`https://www.imdb.com/title/${imdb_id}/`} target="blank">
-							IMDB<span className="imdb-link"> 🔗</span>
+						<a
+							href={`https://www.imdb.com/title/${imdb_id}/`}
+							className="imdb-link"
+							target="blank"
+						>
+							IMDB<span> 🔗</span>
 						</a>
 						<div className="genres-wrapper">
 							<p>Genres:</p>
@@ -51,7 +56,11 @@ const MovieDetail = ({
 				<p>Production companies:</p>
 				<div className="companies-wrapper">
 					{production_companies.map(company => (
-						<Link key={company.name} to={`/company/${company.id}`}>
+						<Link
+							key={company.name}
+							to={`/company/${company.id}`}
+							// to={`/movies/${movieId}/company/${company.id}`}
+						>
 							<ul className="production-companies">
 								<li>{company.name}</li>
 							</ul>

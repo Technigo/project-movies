@@ -11,9 +11,8 @@ const MovieList = ({ children }) => {
 	const [loading, setLoading] = useState(true);
 
 	const ApiKey = '175ffd5710eba9b52b1d7f46de42a152';
-	const API_URL = `https://api.themoviedb.org/3/movie/${
-		children ? children : 'now_playing'
-	}?api_key=${ApiKey}&language=en-US`;
+	const API_URL = `https://api.themoviedb.org/3/movie/
+	${children ? children : 'now_playing'}?api_key=${ApiKey}&language=en-US`;
 
 	// 	The React docs say that you can use props.children on
 	//components that represent ‘generic boxes’ and that ‘don’t know their children ahead of time’.
