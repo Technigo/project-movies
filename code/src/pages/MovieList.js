@@ -20,7 +20,7 @@ export const MovieList = () => {
         <Link key={movie.id} to={`/movies/${movie.id}`}>
           <img className="thumbnail" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.original_title} />
             <div className="popular-movie-info">
-              <h2>{movie.original_title}</h2>
+              <h2>{movie.title}</h2>
               <h3>Released {movie.release_date}</h3>
           </div>
         </Link>

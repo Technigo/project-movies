@@ -7,6 +7,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 code {
@@ -37,6 +39,11 @@ header {
 h1 {
   padding-left: 30px;
   margin-bottom: 0;
+}
+
+h4 {
+  margin-left: 100px;
+  font-size: x-large;
 }
 
 /* MOVIE LIST */
@@ -147,6 +154,7 @@ button:hover {
   }
   .summary {
     padding: 7px;
+    margin: 0;
   }
 }
 
@@ -183,7 +191,4 @@ button:hover {
   .overview {
     max-width: 490px;
   }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
 }
