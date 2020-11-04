@@ -24,15 +24,15 @@
   max-width: 300px;
 }
 
-.movieDetailPage .movie-details-text p {
-  max-width: 300px;
-}
-
 .movieDetailPage .movie-rating {
   font-size: 17px;
   color: red;
   font-weight: 400;
   margin-left: 10px;
+}
+
+.movieDetailPage .movie-details-text p {
+  max-width: 300px;
 }
 
 @media (min-width: 668px) {

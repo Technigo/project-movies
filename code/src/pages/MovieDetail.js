@@ -9,7 +9,7 @@ export const MovieDetail = () => {
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
-  const fetchMovie = () => {
+  useEffect(() => {
     fetch(
       `https://api.themoviedb.org/3/movie/${id}?api_key=a4952259f6d389d2957bfec34fa69938&language=en-US`
     )
@@ -19,11 +19,6 @@ export const MovieDetail = () => {
         setMovie(json);
         setLoading(false);
       });
-  };
-
-  useEffect(() => {
-    fetchMovie();
-    // eslint-disable-next-line
   }, [id]);
 
   return (
