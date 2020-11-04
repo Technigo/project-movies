@@ -31,8 +31,8 @@ export const App = () => {
         {
           movies.map(movie => {
             return (
-              <Route path={`/movies/${movie.title}`} exact>
-                <MovieDetails key={movie.id} {...movie} />
+              <Route key={movie.id} path={`/movies/${movie.title}`} exact>
+                <MovieDetails {...movie} />
               </Route>
             )
           })
