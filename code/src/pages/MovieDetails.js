@@ -15,34 +15,34 @@ export const MovieDetails = () => {
   const getMovie = () => {
     fetch(MOVIE_URL)
       .then((response) => response.json())
-      .then((json) => setMovie(json))
+      .then((json) => {
+        setMovie(json)
+      })
   }
 
   useEffect(getMovie, [])
 
-  console.log(movieId)
-  console.log(movie.id)
-
-  if (movieId !== movie.id) {
-    return (
-      <NotFound />
-    )
-  }
-
   return (
-    <div className="movie-details">
-      <img className="backdrop" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title}></img>
-      <div className="details-container">
-        <div>
-          <img className="poster" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}></img>
-        </div>
-        <div className="movie-text">
-          <h1>{movie.title}</h1>
-          <h2>Release date: {movie.release_date}</h2>
-          <p>{movie.overview}</p>
-        </div>
-      </div>
-    </div >
+    <>
+      {parseInt(movieId) === movie.id ? (
+        <div className="movie-details">
+          <img className="backdrop" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title}></img>
+          <div className="details-container">
+            <div>
+              <img className="poster" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}></img>
+            </div>
+            <div className="movie-text">
+              <h1>{movie.title}</h1>
+              <h2>Release date: {movie.release_date}</h2>
+              <p>{movie.overview}</p>
+            </div>
+          </div>
+        </div >
+      ) : (
+          <NotFound />
+        )
+      }
+    </>
   )
 }
 
