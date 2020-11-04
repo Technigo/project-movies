@@ -79,7 +79,8 @@ code {
 }
 
 
-/***MOVIE DETAIL PAGE*/
+/***MOVIE DETAIL PAGE***/
+
 .details-page {
   position: relative;
 }
@@ -107,10 +108,10 @@ code {
 
 .movie-poster h1{
   color: #fff;
-  }
+}
   
 .movie-poster {
-    border: solid white 6px;
+  border: solid white 6px;
 }
 
 .movie-detail-title {
@@ -147,20 +148,18 @@ code {
   color: #fff;
 }
 
-
-
 .movie-detail-back {
   display: flex;
   flex-direction: column;
-
 }
+
 
 .link {
   display: flex;
   flex-direction: row;
   align-items: center;
   text-decoration: none;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 
@@ -226,29 +225,3 @@ code {
 }
 
 
-/*
-@media screen and (max-width: 320px) {
-  .movie-detail-background {
-    
-
-
-.movie-detail-poster {
-  flex-direction: column;
-  align-items: center;
-  margin-left: 0px;
-}
-
-
-
-.movie-detail-overlay {
-  position: relative;
-}
-
-.movie-detail-text-overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-}
-
-*/

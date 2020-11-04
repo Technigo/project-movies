@@ -29,13 +29,10 @@ export const MovieDetail = () => {
             <div className="movie-detail-back">
 
                 <Link to ="/" className="link" exact='true'>
-                    <img className="back-icon" src={Icon} style={ {width:"40px"} }  alt="icon" /> 
+                    <img className="back-icon" src={Icon} style={ {width:"20px"} }  alt="icon" /> 
                     <div className="back-text">Movies</div>
                 </Link>
                     <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`} alt={movies.title} /> 
-
-                    
-
             </div>  
              
 
