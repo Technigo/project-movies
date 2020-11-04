@@ -2,6 +2,8 @@ import React, {useEffect, useState } from 'react';
 
 import { FilmCard } from 'components/FilmCard';
 
+import './FilmList.css'
+
 export const FilmList = () => {
 
     const [FilmList, setFilmList] = useState([]); 
@@ -27,7 +29,7 @@ export const FilmList = () => {
     }, []);
 
     return (
-        <section>
+        <section className="section-container">
             {FilmList.map((films) => (
             <FilmCard key={films.id} {...films} />
             ))}

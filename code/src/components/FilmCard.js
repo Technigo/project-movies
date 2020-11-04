@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import './FilmCard.css'
+
 export const FilmCard = ({
     poster_path,
     title,
@@ -9,10 +11,12 @@ export const FilmCard = ({
 }) => {
     return (
         <Link to={`/films/${id}`}>
-            <article>
-                <img src={`https://image.tmdb.org/t/p/w342${poster_path}`} alt="{title} film poster" />
-                <h1>{title}</h1>
-                <p>Released {release_date}</p>
+            <article className="film-card">
+                <div className="film-card-overlay">
+                    <h1>{title}</h1>
+                    <p>Released {release_date}</p>
+                </div>
+                <img src={`https://image.tmdb.org/t/p/w300${poster_path}`} alt="{title} film poster" />
             </article>
         </Link>
     );

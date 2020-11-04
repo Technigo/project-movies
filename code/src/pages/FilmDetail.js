@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import './FilmDetail.css'
+
 export const FilmDetail = () => {
     const { filmid } = useParams();
 
@@ -27,21 +29,25 @@ export const FilmDetail = () => {
     }, [filmid]);
 
     return (
-        <article>
+        <article className="detail-page">
             <a href="/">
                 Movie list
-            </a>
-            <div>
-                <img src={`https://image.tmdb.org/t/p/w342${FilmDetails.poster_path}`} alt="{title} film poster" />
-                <div>
-                    <img src={`https://image.tmdb.org/t/p/w342${FilmDetails.backdrop_path}`} alt="{title} film poster"/>
-                    <div>
-                        <h3>{FilmDetails.title}</h3>
-                        <p>{FilmDetails.vote_average} / 10</p>
-                        <p>{FilmDetails.overview}</p>
-                    </div>
+            </a>  
+            <div className="background-image">
+                <img src={`https://image.tmdb.org/t/p/original${FilmDetails.backdrop_path}`} alt="{title} film poster"/>
+                <div className="details-container">
+                <div className="film-poster">                
+                    <img src={`https://image.tmdb.org/t/p/w342${FilmDetails.poster_path}`} alt="{title} film poster" className="image-details-background" />
                 </div>
-            </div>            
+                <div className="film-details">
+                    <div className="film-title-average">
+                        <h3>{FilmDetails.title}</h3>
+                        <p>{FilmDetails.vote_average}/10</p>
+                    </div>
+                    <p>{FilmDetails.overview}</p>
+                </div>                
+            </div>
+            </div>          
         </article>
     );
 };
