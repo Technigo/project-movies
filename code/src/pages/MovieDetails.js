@@ -20,8 +20,8 @@ export const MovieDetails = () => {
 
   useEffect(getMovie, [])
 
-  // console.log(movieId)
-  // console.log(movie.id)
+  console.log(movieId)
+  console.log(movie.id)
 
   if (movieId != movie.id) {
     return (
