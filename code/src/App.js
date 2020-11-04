@@ -54,7 +54,7 @@ export const App = () => {
           <Route exact path="/404">
             <NotFound />
           </Route>
-
+          <Redirect from="movies/*" to="/" />
           <Redirect to="/404" />
         </Switch>
       </main>
