@@ -1,0 +1,65 @@
+.not-found-background, body {
+    display: flex;
+    background-color: pink;
+    justify-content: center;
+}
+
+h2.not-found {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: white;
+    padding-top: 100px;
+    margin: 20px;
+}
+
+.not-found-back-arrow {
+    display: inline-flex;
+    width: 40px;
+}
+
+.not-found-text-arrow {
+    display: inline-flex;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: 0px;
+    color: white;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    transition: .8s;
+}
+
+.not-found-text-arrow:hover {
+    margin-left: 20px;   
+}
+
+.not-found-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.not-found-back-link {
+    top: 100px;
+    text-decoration: none;
+    display: inline-flex;
+    border: none;
+    background-color: pink;
+    margin: auto;
+}
+
+@media (min-width: 667px) {
+    h2.not-found {
+    font-size: 46px;
+    margin: 40px;
+    }
+}
+
+@media (min-width: 1120px) {
+    h2.not-found {
+      text-align: center;
+      margin: 0 auto;
+      width: 600px;
+
+
+    }
+}

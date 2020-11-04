@@ -1,33 +1,35 @@
 .list-container {
-    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0 auto;
     background: black;    
+    border: none;
 }
 
 .list-card {
     position: relative;
-    display: inline;
+    flex-grow: 1;
 }
 
 a {
     border: none;
-}
-.list-card img {
+    width: 25%;
     position: relative;
-    border: 5px solid red;
-    border-top: none;
+    border: 2px solid black;
     border-bottom: none;
+    border-top: none;
+}
+
+img {
     width: 100%;
 }
 
-.list-card .list-text {
+.list-text {
     position: absolute;
     color: white;
     padding: 20px;
     bottom: 0;
+    width: 80%;
 }
 
 .list-container img:hover {
