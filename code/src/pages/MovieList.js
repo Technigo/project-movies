@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-import { apiKey } from '../key';
-import { MovieCard } from '../Components/MovieCard';
+import { apiKey } from "../key";
+import { MovieCard } from "../components/MovieCard";
 
 export const MovieList = () => { 
   const [moviesList, setMoviesList] = useState ([]);
@@ -12,15 +12,17 @@ export const MovieList = () => {
         .then((response) => response.json())
         .then ((json) => { 
           setMoviesList(json.results) 
-          console.log(json.results)
+        })
+        .catch((error) => {
+          console.error('Request failed', error)
         })
       }, []);
 
-    return (
-      <section className="movie-cards-container">
-        {moviesList.map((movie) => (
-          <MovieCard key= {movie.id} {...movie} />
+  return (
+    <section className="movie-cards-container">
+      {moviesList.map((movie) => (
+      <MovieCard key= {movie.id} {...movie} />
       ))}
-  </section> 
+    </section> 
   );
 };

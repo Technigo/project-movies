@@ -1,9 +1,9 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import { MovieList } from './pages/MovieList';
-import { MoviePage } from './pages/MoviePage';
-import { Footer } from "./components/Footer"
+import { MovieList } from "./pages/MovieList";
+import { MoviePage } from "./pages/MoviePage";
+import { Footer } from "./components/Footer";
 
 export const App = () => {
   return (
@@ -18,6 +18,5 @@ export const App = () => {
       </Switch>
       <Footer/>
     </BrowserRouter>
-
-  )
-}
+  );
+};

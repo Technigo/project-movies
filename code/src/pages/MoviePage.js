@@ -14,7 +14,9 @@ export const MoviePage = () => {
     .then((response) => response.json())
     .then((json) => {
       setMovie(json)
-      console.log(json)
+    })
+    .catch((error) => {
+      console.error('Request failed', error)
     })
 }, [movieId]);
 
