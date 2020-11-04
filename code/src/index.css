@@ -14,6 +14,8 @@ code {
     monospace;
 }
 
+/* Movie cards styling*/
+
 .movie-cards-container { 
   display: flex;
   width: 100%;
@@ -61,4 +63,53 @@ code {
 .text-overlay:hover {
   opacity: 1;
 }
+
+/* Movie pages Styling */
+
+.movie-page {
+  width: 100%;
+}
+
+.movie-page-background {
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.movie-page-details {
+  color: white;
+  padding: 20px;
+}
+
+.movie-poster {
+  width: 50%;
+  border: 5px solid white;
+  margin: 30px;
+}
+
+.movie-rating {
+  color:#dc1035 ;
+}
+
+
+@media (min-width: 1024px) {
+  
+  .movie-page-details {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .details-container { 
+    width: 30%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+  }
+
+  .movie-poster { 
+    width: 25%;
+  }
+
+  
+
+  }
   
