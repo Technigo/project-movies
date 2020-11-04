@@ -1,3 +1,35 @@
+a {
+    text-decoration: none;
+}
+
 .movie-poster {
-    min-width: 25%;
+    position: relative;
+    width: 25%;
+}
+
+.movie-poster img {
+    width: 100%;
+}
+
+.poster-details {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: white;
+    font-size: 0;
+    padding: 20px;
+}
+
+.poster-details:hover {
+    font-size: initial;
+    background: rgba(0, 0, 0, .75);
+}
+
+.poster-details h2 {
+    margin-block-end: 0px;
 }
