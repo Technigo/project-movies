@@ -1,0 +1,40 @@
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    color: white;
+    padding: 50px;    
+}
+
+.background {
+    box-sizing: border-box;
+    z-index: -1;
+    min-height: 100vh;
+    min-width: 100%;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.back-button {
+    color: white;
+    margin: 40px;
+}
+
+.poster {
+    display: flex;
+    border: 4px solid white;
+}
+
+.movie-info {
+    display: flex;
+    align-items: flex-end;
+    align-self: flex-end;
+}
+
+.details {
+    font-weight: 300;
+}
