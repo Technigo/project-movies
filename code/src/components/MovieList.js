@@ -17,7 +17,7 @@ export const MovieList = () => {
   }, [])
 
   return (
-      <div className='movie-card'>
+      <div className='movie-list-card'>
           {topMovies.map((movie) => (
           <MovieCard key= {movie.id} {...movie} /> 
           ))}

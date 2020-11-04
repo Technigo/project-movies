@@ -13,28 +13,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.all-top-movies {
+/* MOVIE LIST */
+
+.movie-list-card {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: baseline;
-}
-.top-movie-card {
-  display: flex;
-  flex-direction: column;
-  /* margin: 80px 30px;
-  width: 300px; */
-  word-wrap: break-word;
-  line-height: 5%;
+  justify-content: baseline;
+  align-content: center;
 }
 
-.top-movie-card:hover {
-  opacity: 0.5;
+/* MOVIE CARD */
+
+.text-overlay h1 {
+  font-size: 25px;
+}
+.text-overlay p {
+  font-size: 15px;
 }
 
-/* .top-movie-card img {
-  width: 300px;
-  height: 400px;
-  align-items: center;
-} */
+.text-overlay p,
+.text-overlay h1 {
+  color: whitesmoke;
+  text-decoration: none;
+}
+/* MOVIE-PAGE */
+
+.back-button {
+  font-size: 30px;
+  color: whitesmoke;
+  text-decoration: none;
+}
