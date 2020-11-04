@@ -21,34 +21,33 @@ export const MovieDetail = () => {
 
     return(
      <>
-      
-    <div className="movie-detail-overlay">   
-        <img className="movie-detail-background" 
-          src={`https://image.tmdb.org/t/p/w1280${movies.backdrop_path} `} alt={`${`original_title`}poster`}  /> 
 
-<div className="movie-detail-text-overlay">
-        <div className="movie-detail-poster">
-            <img src={`https://image.tmdb.org/t/p/w342/${movies.poster_path}`} 
-              alt={`${`original_title`}poster`} />
-         
-            <div className="movie-detail-text"> 
-            
-             <h1>{movies.title}</h1> 
-             <span className="rating"><p> {movies.vote_average}/10</p></span>
-            
+     <section className="detail-backdrop" style={{  backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` }}>
+        <div className="movie-detail-overlay">  
+        <div className="movie-detail-text-overlay">
+        <Link to ="/" exact='true'>
 
-            <p className="overview">{movies.overview}</p>
-            </div>
-            </div>
-        </div>  
-    </div>     
-    
+        </Link>
+        <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`} alt={movies.title} /> 
+        </div>      
+
+        <div className="movie-detail-text"> 
+        <h1>{movies.title}</h1> 
+        <span className="rating"><p> {movies.vote_average}/10</p></span>
+        <p className="overview">{movies.overview}</p>     
+        </div>
+
+    </div>
+</section>
     </>
     )
 }
 
 /*
-<Link to ="/" exact='true'>
-<button type="button"></button>
-</Link>
+
+
+
+<img className="movie-detail-background" 
+src={`https://image.tmdb.org/t/p/w1280${movies.backdrop_path} `} alt={`${`original_title`}poster`}  /> 
+
 */

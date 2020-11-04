@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
@@ -81,17 +82,101 @@ code {
 /***MOVIE DETAIL PAGE*/
 
 
-.movie-detail-background {
+.detail-backdrop {
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 850px;
+  height: 800px;
   display: flex;
   align-items: flex-end;
-  justify-content: left; 
+  justify-content: left;
 
 }
+
+.movie-detail-overlay {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-bottom: 70px;
+  margin-left:50px;
+  height: 680px;
+}
+
+
+.movie-poster h1{
+  color: #fff;
+  }
+  
+.movie-poster {
+    border: solid white 6px;
+}
+
+.movie-detail-title {
+  flex-direction: row;
+}
+
+.movie-detail-text {
+  color: white;
+  max-width: 400px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 20px;
+  background: rgba(8, 8, 8, 0.565);
+  padding:20px;
+}
+
+.overview  {
+  color: #fff;
+
+}
+.rating  {
+  color: red;
+}
+
+
+/** Media Queiries **/
+
+
+@media (min-width: 300px) and (max-width: 700px) {
+
+  .movie-poster {
+    width: 250px;
+  }
+
+  
+
+  .movie-poster h1 {
+    font-size: 14px;
+  }
+  
+  
+  .overview{
+    font-size: 14px; 
+
+  }
+
+  .rating {
+    display: none;
+  }
+  
+}
+
+
+/*
+@media screen and (max-width: 320px) {
+  .movie-detail-background {
+    
+
+
+.movie-detail-poster {
+  flex-direction: column;
+  align-items: center;
+  margin-left: 0px;
+}
+
 
 
 .movie-detail-overlay {
@@ -105,40 +190,4 @@ code {
   height: 100%;
 }
 
-
-
-.movie-detail-poster {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  margin-bottom: 70px;
-  margin-left:50px;
-  height: 680px;
-}
-
-
-.movie-detail-poster h1{
-  color: #fff;
-  }
-  
-.movie-detail-poster img {
-  border: 4px solid white;
-}
-
-.movie-detail-title {
-  flex-direction: row;
-}
-
-.movie-detail-text {
-  flex-direction: row;
-  max-width: 400px;
-  margin-left: 30px;
-}
-
-.overview  {
-  color: #fff;
-
-}
-.rating  {
-  color: red;
-}
+*/
