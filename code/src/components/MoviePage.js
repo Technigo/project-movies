@@ -20,12 +20,12 @@ export const MoviePage = () => {
 
   return (
     <>
-      <Link to ="/" exact='true'>
+      <Link to ='/' exact='true'>
         <p className='back-button'><span>&lt;</span><span>MOVIE LIST</span></p>
       </Link>
       <section>
         <div 
-          className="movie-page-background" 
+          className='movie-page-background' 
           style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 10%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
           <div>
             <img src= {`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.original_title}/>

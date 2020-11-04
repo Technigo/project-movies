@@ -13,20 +13,41 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Henny+Penny&family=Lobster&display=swap");
+
+/* NAVBAR */
+
+.nav-bar {
+  margin: 0px 30px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Henny Penny";
+}
+
+.nav-bar h1 {
+  margin-left: 90px;
+  font-size: 70px;
+}
+.nav-bar h1 img {
+  height: 100px;
+}
+
 /* MOVIE LIST */
 
 .movie-list-card {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: baseline;
-  align-content: center;
+  word-wrap: break-word;
+  justify-content: center;
+  align-content: baseline;
 }
 
 /* MOVIE CARD */
 
 .text-overlay h1 {
-  font-size: 25px;
+  font-size: 20px;
 }
 .text-overlay p {
   font-size: 15px;
