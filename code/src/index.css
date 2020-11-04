@@ -198,7 +198,7 @@ main {
 
 .not-found--message-img {
   filter: invert(1);
-  width: 20vw;
+  width: 10vw;
 }
 
 .not-found--message-text {
