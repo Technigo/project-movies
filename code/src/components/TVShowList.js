@@ -1,26 +1,43 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-import { API_URL } from '../urls.js';
-import { API_KEY } from '../API_KEY.js';
+import { API_URL, API_IMG_URL } from "../urls.js";
+import { API_KEY } from "../API_KEY.js";
 
 export const TVShowList = () => {
-    // eslint-disable-next-line
-    const [TVShows, setTVShows] = useState([]);
+  // eslint-disable-next-line
+  const [TVShowList, setTVShowList] = useState([]);
 
-    console.log('Render');
+  console.log("Render");
 
-    const fetchTVShows = () => {
-      const TV_URL = `${API_URL}popular?&api_key=${API_KEY}`;
+  const imageURL = `${API_IMG_URL}/w300/`;
 
-      fetch(TV_URL)
-        .then(respons => respons.json())
-        .then(json => console.log(json.results))
-        .catch(error => console.error(error));
-    };
+  const fetchTVShows = () => {
+    const TV_URL = `${API_URL}popular?&api_key=${API_KEY}&page=1`;
 
-    useEffect(() => {
-        fetchTVShows()
-    }, []);
-    
-    return <section> TV-shows go here </section>
-}
+    fetch(TV_URL)
+      .then((respons) => respons.json())
+      .then((data) => {
+        console.log(data.results);
+        setTVShowList(data.results);
+      })
+      .catch((error) => console.error(error));
+  };
+
+  useEffect(() => {
+    fetchTVShows();
+  }, []);
+
+  return (
+    <article className="tvshow__container">
+      {TVShowList.map(tvshow => (
+        <div className="tvshow__wrapper" key={tvshow.id}>
+          <div className="tvshow">
+            <img className="tvshow__image" src={`${imageURL}${tvshow.poster_path}`} alt={tvshow.name} />
+            <h4 className="tvshow__name">{tvshow.name}</h4>
+          </div>
+        </div>
+      ))}
+      )
+    </article>
+  );
+};
