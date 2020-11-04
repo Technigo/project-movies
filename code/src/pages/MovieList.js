@@ -1,4 +1,5 @@
-import React, { useEffect, useState, Link } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
@@ -23,13 +24,13 @@ export const MovieList = ({apiKey, baseUrl, posterSize}) => {
       <Header />
       <section className='movie-list'>
         {movies.map((movie) => (
-          <a key={movie.id} href={`/movies/${movie.id}`}>
+          <Link key={movie.id} to={`/movies/${movie.id}`}>
             <img src={baseUrl + posterSize + `${movie.poster_path}`}/>
             <div className='movie-details'>
               <h1>{movie.original_title}</h1>
               <p>Erschienen {movie.release_date}</p>
             </div>
-          </a>
+          </Link>
         ))}
       </section>
     </>
