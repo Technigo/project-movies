@@ -23,7 +23,7 @@ export const MovieDetails = () => {
   console.log(movieId)
   console.log(movie.id)
 
-  if (movieId != movie.id) {
+  if (movieId !== movie.id) {
     return (
       <NotFound />
     )
