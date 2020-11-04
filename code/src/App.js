@@ -9,16 +9,21 @@ export const App = () => {
   return (
     <Router>
       <Switch>
+
         <Route path='/' exact>
           <MovieList />
         </Route>
+
         <Route path='/movies/:id' exact>
           <MovieDetails />
         </Route>
+
         <Route path='/404'>
           <NotFound />
         </Route>
-        <Redirect to='/404' />
+
+        <Redirect from='/movy' to='/404' />
+
       </Switch>
     </Router>
   )
