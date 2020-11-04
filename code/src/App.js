@@ -10,6 +10,7 @@ export const App = () => {
   return (
     <BrowserRouter>
       <Nav />
+
       <Switch>
         <Route path="/" exact>
           <PopularList sorting="popular" />
