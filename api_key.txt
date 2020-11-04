@@ -1,0 +1,9 @@
+https://www.themoviedb.org/settings/api
+API-nyckel (v3 auth)
+16cd57d89911f5854d96fcf791abf8a9
+
+Exempel på API-begäran
+https://api.themoviedb.org/3/movie/550?api_key=16cd57d89911f5854d96fcf791abf8a9
+
+Läsåtkomsttoken för API (v4 auth)
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNmNkNTdkODk5MTFmNTg1NGQ5NmZjZjc5MWFiZjhhOSIsInN1YiI6IjVmYTAxYzhjNmQ0Yzk3MDAzNzg2Y2Y1ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.uEjXMw9nnrS50WK4FmPx1nOh7yOuu0fktpnfmv8UlR8
