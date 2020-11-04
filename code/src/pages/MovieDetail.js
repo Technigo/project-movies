@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { Loader } from '../components/Loader';
 import '../styles/MovieDetail.css';
 
 export const MovieDetail = () => {
   const [movie, setMovie] = useState([]);
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
   const fetchMovie = () => {
@@ -15,6 +17,7 @@ export const MovieDetail = () => {
       .then((json) => {
         console.log(json);
         setMovie(json);
+        setLoading(false);
       });
   };
 
@@ -24,28 +27,34 @@ export const MovieDetail = () => {
   }, [id]);
 
   return (
-    <section
-      className="movieDetailPage"
-      style={{
-        backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
-      }}>
-      <Link to="/">
-        <p>Movies</p>
-      </Link>
-      <div className="movie-details">
-        <img
-          className="image-poster"
-          src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-          alt={movie.title}
-        />
-        <div className="movie-details-text">
-          <h1>
-            {movie.title}{' '}
-            <span className="movie-rating">{movie.vote_average}/10</span>
-          </h1>
-          <p>{movie.overview}</p>
-        </div>
-      </div>
-    </section>
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <section
+          className="movieDetailPage"
+          style={{
+            backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
+          }}>
+          <Link to="/">
+            <p>Movies</p>
+          </Link>
+          <div className="movie-details">
+            <img
+              className="image-poster"
+              src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+              alt={movie.title}
+            />
+            <div className="movie-details-text">
+              <h1>
+                {movie.title}{' '}
+                <span className="movie-rating">{movie.vote_average}/10</span>
+              </h1>
+              <p>{movie.overview}</p>
+            </div>
+          </div>
+        </section>
+      )}
+    </>
   );
 };

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Loader } from '../components/Loader';
 import '../styles/PopularList.css';
 
 export const PopularList = () => {
   const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchMovies();
@@ -17,25 +19,32 @@ export const PopularList = () => {
       .then((json) => {
         console.log(json);
         setMovies(json.results);
+        setLoading(false);
       });
   };
   return (
-    <main className="popularPage">
-      {movies.map((movie) => (
-        <Link to={`/movies/${movie.id}`} key={movie.id}>
-          <article className="movie-wrapper">
-            <img
-              className="image-poster"
-              src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-              alt={movie.title}
-            />
-            <div className="movie-text">
-              <h1>{movie.title}</h1>
-              <p>Released {movie.release_date}</p>
-            </div>
-          </article>
-        </Link>
-      ))}
-    </main>
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <main className="popularPage">
+          {movies.map((movie) => (
+            <Link to={`/movies/${movie.id}`} key={movie.id}>
+              <article className="movie-wrapper">
+                <img
+                  className="image-poster"
+                  src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+                  alt={movie.title}
+                />
+                <div className="movie-text">
+                  <h1>{movie.title}</h1>
+                  <p>Released {movie.release_date}</p>
+                </div>
+              </article>
+            </Link>
+          ))}
+        </main>
+      )}
+    </>
   );
 };
