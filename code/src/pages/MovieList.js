@@ -33,6 +33,7 @@ export const MovieList = ({apiKey, baseUrl, posterSize}) => {
           </Link>
         ))}
       </section>
+      <Footer />
     </>
   )
 };

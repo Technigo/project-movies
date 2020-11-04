@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+header {
+  height: 220px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: last baseline;
+}
+
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 120px;
+  margin: 0 50px;
+}
+
+header p {
+  margin: 0 50px;
+  font-size: 20px;
+}

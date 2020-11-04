@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 import 'styles/movieDetails.css';
+import 'assets/leftarrow.svg'
 
 export const MovieDetails = ({ apiKey, baseUrl, backdropSize, posterSize }) => {
   const { movieId } = useParams();
@@ -20,12 +21,16 @@ export const MovieDetails = ({ apiKey, baseUrl, backdropSize, posterSize }) => {
 
   return (
     <article className='detail-page'>
+      <Link className='back-link'to='/' >
+        <img src={require('assets/backbutton.svg')}/>
+         Movies
+      </Link>
       <div className='background' style={{backgroundImage: `url(${baseUrl}${backdropSize}${movieDetails.backdrop_path})`}}>
         <div className='summary-box'>
           <img src={`${baseUrl}${posterSize}${movieDetails.poster_path}`}/>
           <article className='description'>
-          <h1>{movieDetails.original_title}</h1>
-          <p>{movieDetails.overview}</p>
+            <h1>{movieDetails.original_title}<span className='rating'>{movieDetails.vote_average}/10</span></h1>
+            <p>{movieDetails.overview}</p>
           </article>
         </div>
       </div>

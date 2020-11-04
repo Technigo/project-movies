@@ -1,3 +1,27 @@
+.detail-page {
+  position: relative;
+}
+
+.back-link {
+  height: 30px;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  text-decoration: none;
+}
+
+.back-link img {
+  margin-right: 5px;
+  transition: margin-right .2s ease-in-out;
+}
+
+.back-link:hover img {
+  margin-right: 10px;
+}
+
 .background {
   min-height: 100vh;
   background-size: cover;
@@ -20,6 +44,13 @@
   margin-left: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
+}
+
+.rating {
+  color: red;
+  font-weight: 300;
+  margin-left: 20px;
+  font-size: 17px;
 }
 
 .description p {
