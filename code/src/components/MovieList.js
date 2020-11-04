@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 // import { Link } from "react-router-dom" 
 import { MovieThumb } from 'components/MovieThumb'
 
+import './MovieList.css'
+
 export const MovieList = () => {
   const baseURL = 'https://api.themoviedb.org'
   const listID = '7063718'
@@ -31,7 +33,7 @@ export const MovieList = () => {
     //     </div>
     //   )}
     // </section>
-    <section>
+    <section className='movie-wraper'>
       {movies.map(movie => (
 				<MovieThumb key={movie.id} {...movie} />
 			))}

@@ -1,20 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
+import './MovieThumbs.css'
 
-export const MovieThumb = ({ id, poster_path, title, vote_average }) => {
+export const MovieThumb = ({ id, poster_path, title, release_date }) => {
   return (
-    <article>
+    <article className='movie-thumb'>
       <Link to={`/movies/${id}`}>
         <img
-          src={`https://image.tmdb.org/t/p/w300/${poster_path}`} // check this
+          src={`https://image.tmdb.org/t/p/w342/${poster_path}`} // check this
           alt={title}
         />
-        <div className='movie-wrapper'>
+        <div className='movie-overlay'>
           <h2>{title}</h2>
-          <p className="movie-rating">{`${vote_average}` / 10}</p>
+          <p className='released-date'>Released {release_date}</p>
         </div>
       </Link>
     </article>
-  );
-};
+  )
+}

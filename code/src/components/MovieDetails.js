@@ -26,8 +26,8 @@ export const MovieDetails = () => {
         className='detail-movie-img'
         src={`https://image.tmdb.org/t/p/w342/${movieDetails.poster_path}`} />
     <h1>{movieDetails.title}</h1>
-    <p>{movieDetails.overview}</p>
-    <p>{movieDetails.vote_average}</p>
+    <p className='movie-details-overview'>{movieDetails.overview}</p>
+    <p className='movie-details-vote'>{movieDetails.vote_average}</p>
     </div>
     </section>
   )

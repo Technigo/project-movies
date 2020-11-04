@@ -11,6 +11,7 @@
   border: 5px solid white;
 }
 
-p{
+.movie-details-overview, 
+.movie-details-vote{
   color: #fff
 }

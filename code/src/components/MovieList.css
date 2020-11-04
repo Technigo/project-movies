@@ -1,0 +1,27 @@
+body{
+  background-color: #000;
+  margin: auto 0;
+}
+
+.movie-wraper{
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+  width: 100%;
+  justify-self: center;
+}
+
+@media screen and (min-width:768px) {
+  .movie-wraper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .movie-wraper {
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(4, 1fr)); */
+    
+
+  }
+}
