@@ -6,6 +6,7 @@ import { MovieDetails } from './pages/MovieDetails.js'
 import { NotFound } from './pages/NotFound.js'
 
 export const App = () => {
+
   return (
     <Router>
       <Switch>
@@ -14,7 +15,8 @@ export const App = () => {
           <MovieList />
         </Route>
 
-        <Route path='/movies/:id' exact>
+        <Route path='/movies/:movieId' exact>
+          {/* "movieId" must be the same varibale name as in MovieDetails useParams */}
           <MovieDetails />
         </Route>
 

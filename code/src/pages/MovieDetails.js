@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
+import { NotFound } from './NotFound.js'
+
 export const MovieDetails = () => {
 
-  const { id } = useParams()
+  const { movieId } = useParams()
+  // "movieId" must be the same variable name as in Route path in App.js, it gets the dynamic variable out of the URL
 
-  const MOVIE_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=c07a4dcb1d91b54eb3b153e458e26489`
+  const MOVIE_URL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=c07a4dcb1d91b54eb3b153e458e26489`
 
   const [movie, setMovie] = useState({})
 
@@ -16,6 +19,15 @@ export const MovieDetails = () => {
   }
 
   useEffect(getMovie, [])
+
+  // console.log(movieId)
+  // console.log(movie.id)
+
+  if (movieId != movie.id) {
+    return (
+      <NotFound />
+    )
+  }
 
   return (
     <div className="movie-details">
@@ -33,6 +45,8 @@ export const MovieDetails = () => {
     </div >
   )
 }
+
+
 
 //movie.vote_average, movie.homepage
 
