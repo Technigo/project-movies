@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom' // NavLink?
 //To be able to use <Link> or <NavLink> tags in components (see Damiens first video)
+import '../styles/MovieList.css'
 const API_KEY = '2df2062fe6afeadacbfc1fd0a84167fa'
 const MOVIES_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
-
 
  //Here we will do the fetch
 const MovieList = () => {
@@ -21,10 +21,10 @@ const MovieList = () => {
   
   //The Link shoud go to the MovieDetails component? <Link to={what to put here?}
   return (
-    <div> 
+    <div className="list-movie-wrapper"> 
       {movies.map((movie) => (
-        <div className="list-movie-wrapper" key={movie.id}> 
-          <Link to={`movie/${movie.id}`}> 
+        <> 
+          <Link to={`movie/${movie.id}`} key={movie.id}> 
           {/* <a 
             href= {`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} 
             > */}
@@ -38,7 +38,7 @@ const MovieList = () => {
             </div>
           {/* </a> */}
           </Link>
-        </div>
+        </>
       ))}
     </div>
   );
