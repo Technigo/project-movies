@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+
+
 import { apiKey } from "key"
+import "./moviesHome.css"
+
 
 
 export const MoviesHome = () => {
