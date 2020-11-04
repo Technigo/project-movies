@@ -12,10 +12,8 @@ export const MovieList = () => {
 
   const getMovies = () => {
     fetch(MOVIES_URL)
-      .then((response) => response.json())
-      .then((json) =>
-        setMovies(json.results)
-      )
+      .then(response => response.json())
+      .then(json => setMovies(json.results))
   }
 
   useEffect(getMovies, [])

@@ -14,9 +14,10 @@ export const MovieDetails = () => {
 
   const getMovie = () => {
     fetch(MOVIE_URL)
-      .then((response) => response.json())
-      .then((json) => {
+      .then(response => response.json())
+      .then(json => {
         setMovie(json)
+        setTimeout(function () { alert("hej") }, 3000)
       })
   }
 
@@ -40,13 +41,13 @@ export const MovieDetails = () => {
         </div >
       ) : (
           <NotFound />
+          // will show NotFound for all movies, as the data takes time to load and hence I will never have a match for movieId and movie.id as of now
+          // will need to google on response.status and setTimeout
         )
       }
     </>
   )
 }
 
-
-
-//movie.vote_average, movie.homepage
+// implement history button
 
