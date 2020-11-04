@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 body {
   margin: 0;
@@ -20,7 +20,7 @@ main {
 }
 
 h1 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 /* NAV */
@@ -47,7 +47,7 @@ h1 {
   background-color: #000000;
 }
 
-.popular-movies a  {
+.popular-movies a {
   color: #ffffff;
   position: relative;
   width: 25%;
@@ -62,19 +62,19 @@ h1 {
   bottom: 0;
   left: 0;
   padding: 20px;
-  background: rgba(0,0,0,.75);
+  background: rgba(0, 0, 0, 0.75);
 }
 
 .popular-movie-info {
- display: none;
- word-break: break-word;
+  display: none;
+  word-break: break-word;
 }
 
 .popular-movies a:hover .popular-movie-info {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: flex-end;  
+  justify-content: flex-end;
 }
 
 .thumbnail {
@@ -99,7 +99,7 @@ h1 {
 
 .overview {
   max-width: 400px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .poster {
@@ -113,7 +113,7 @@ h1 {
 }
 
 .summary {
-  background: rgb(44 43 43/40%);
+  background: rgb(44 43 43/70%);
   color: #ffffff;
   margin: 0 0 0 20px;
   padding: 15px;

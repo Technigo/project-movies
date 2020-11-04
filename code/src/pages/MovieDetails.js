@@ -12,15 +12,14 @@ export const MovieDetails = () => {
       console.log(json)
       setDetails(json)
     })
-  
-  },[])
+  },[id])
 
 
-const movieDetailStyle = {
-  backgroundImage: `url("http://image.tmdb.org/t/p/w1280${details.backdrop_path}")`,
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-}
+  const movieDetailStyle = {
+    backgroundImage: `url("http://image.tmdb.org/t/p/w1280${details.backdrop_path}")`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+  }
 
   return (
     <article className="movie-detail" style={movieDetailStyle} >
