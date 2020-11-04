@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { Loader } from '../components/Loader';
+import { BackArrow } from '../components/BackArrow';
 import '../styles/MovieDetail.css';
 
 export const MovieDetail = () => {
@@ -29,9 +29,10 @@ export const MovieDetail = () => {
         <section
           className="movieDetailPage"
           style={{
-            backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
+            backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
           }}>
-          <Link to="/">
+          <Link to="/" className="back-link">
+            <BackArrow />
             <p>Movies</p>
           </Link>
           <div className="movie-details">
