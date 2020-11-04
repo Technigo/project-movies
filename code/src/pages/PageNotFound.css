@@ -1,7 +1,38 @@
-.not-found-title{
-  color: #fff
+.not-found-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20vh;
 }
 
-.error-icon{
+.not-found-title{
+  color: #fff;
+  text-align: center;
+}
+
+.error-icon svg{
   fill: #fff;
+  max-width: 200px;
+  height: 200px;
+}
+
+.go-back{
+  color: #fff;
+  font-size: 1.5em;
+}
+
+@media screen and (min-width:768px) {
+  .not-found-wrapper{
+    margin-top: 10vh;
+  }
+  .error-icon svg {
+    max-width: 400px;
+    height: 500px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .error-icon svg {
+    max-width: 500px;
+  }
 }
