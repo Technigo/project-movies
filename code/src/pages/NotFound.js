@@ -5,9 +5,10 @@ import "./notFound.css";
 
 const NotFound = () => {
   return (
-    <div>
+    <div className="error-container">
+      <h3>This page doesn't exists</h3>
       <Link to="/">
-        <span className="back">Home</span>
+        <p className="error-go-back">Home</p>
       </Link>
     </div>
   );

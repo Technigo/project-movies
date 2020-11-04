@@ -1,3 +1,15 @@
-h5 {
-  color: white;
+h3 {
+  margin: 0;
+  padding: 6px;
+}
+
+.error-container {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+}
+
+.error-go-back {
+  color: #000;
+  padding-left: 6px;
 }
