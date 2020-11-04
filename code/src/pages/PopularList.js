@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
 import "./popularList.css";
 
-const PopularList = () => {
+const PopularList = ({ sorting }) => {
   const [movies, setMovies] = useState([]);
   const [loading, SetLoading] = useState(true);
 
   const API_KEY = "f7e0c4070f4665dbae6d58fba626cfe4";
-  const URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+  const URL = `https://api.themoviedb.org/3/movie/${sorting}?api_key=${API_KEY}&language=en-US&page=1`;
   // const POSTER = `https://api.themoviedb.org/3/configuration?api_key=${API_KEY}`;
 
   console.log("api", URL);
@@ -25,7 +25,7 @@ const PopularList = () => {
         }, 0);
         console.log("Movies", json.results);
       });
-  }, []);
+  }, [URL]);
 
   return (
     <>
