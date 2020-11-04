@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { MovieList } from './pages/MovieList';
 import { MoviePage } from './pages/MoviePage';
+import { Footer } from "./components/Footer"
 
 export const App = () => {
   return (
@@ -15,6 +16,7 @@ export const App = () => {
         <MoviePage/>
         </Route>
       </Switch>
+      <Footer/>
     </BrowserRouter>
 
   )

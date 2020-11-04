@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { apiKey } from '../key';
-import { MovieCard } from './MovieCard';
+import { MovieCard } from '../Components/MovieCard';
 
 export const MovieList = () => { 
   const [moviesList, setMoviesList] = useState ([]);

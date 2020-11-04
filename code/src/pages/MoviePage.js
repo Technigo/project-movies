@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { Link, useParams } from "react-router-dom"; 
 import { apiKey } from "../key";
-import { BackArrow } from "../Icon/BackArrow";
+import BackArrow from "../assets/back-arrow.svg";
 
 export const MoviePage = () => { 
   const { movieId } = useParams (); 
@@ -16,13 +16,13 @@ export const MoviePage = () => {
       setMovie(json)
       console.log(json)
     })
-}, [movieId])
+}, [movieId]);
 
 return (
   <>
           <section className="movie-page" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 10%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}}>
             <Link className="back-link" to ="/" exact='true'>
-              <BackArrow/>Movies List
+              <img className="back-arrow" src= {BackArrow} alt= "back to movies list"/>Back to Movies List
             </Link>
             <div className="movie-page-details">
               <img className="movie-poster" src= {`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.original_title}/>

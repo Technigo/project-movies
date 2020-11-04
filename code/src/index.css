@@ -65,6 +65,15 @@ code {
 }
 
 /* Movie pages Styling */
+.movie-page { 
+  display: flex;
+}
+
+.movie-page-details {
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+}
 
 .movie-page {
   width: 100%;
@@ -80,21 +89,29 @@ code {
 .movie-poster {
   width: 50%;
   border: 5px solid #fff;
-  margin: 30px;
 }
 
+h2 {
+  margin-left: 10px;
+  margin-bottom: 0;
+}
 .movie-rating {
-  color:#dc1035 ;
+  color:#dc1035;
+  margin-left:10px;
+  margin-top:0;
 }
 
+.movie-overview { 
+  font-size: 14px;
+  padding-left: 10px;
+  margin: 0;
+}
 
-@media (min-width: 1024px) {
+.details-container { 
+  width: 100%;
+}
 
-  .movie-page { 
-    display: flex;
-  }
-
-  .back-link { 
+.back-link { 
   position: absolute;
   text-decoration: none;
   font-size: 20px;
@@ -116,16 +133,46 @@ code {
   }
   
   .back-arrow { 
-    transform: translate(-100%, 91%);
+    transform: translate(-40%, 29%);
     width: 30px;
     height: 30px;
   }
 
-  .movie-page-details {
-    display: flex;
-    align-items: flex-end;
-    padding: 30px;
-  }
+  /* FOOTER */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin-top: 5px;
+  background-color: #ffffff67;
+  width: 100%;
+}
+
+footer p {
+  width: 100%;
+  text-align: center;
+  font-size: 17px;
+  color: rgb(255, 255, 255);
+  margin: 6px;
+}
+
+footer a:link {
+  color: rgb(245, 108, 156);
+}
+
+footer a:visited {
+  color: rgb(130, 149, 228);
+}
+
+footer img {
+  width: 50px;
+}
+
+
+@media (min-width: 1024px) {
 
   .details-container { 
     width: 30%;
@@ -134,6 +181,11 @@ code {
 
   .movie-poster { 
     width: 25%;
+    margin: 30px;
+  }
+
+  .movie-overview { 
+    font-size: 20px;
   }
 
   
