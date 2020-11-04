@@ -8,8 +8,8 @@ export const MoviePage = () => {
   const [movie, setMovie] = useState([]); 
   
   //We use [] in the Use state hook since it will be returning an array
-  const MOVIE_URL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=3bc84b0ae751d27c186bde28023ce8fe&language=en-US`
   useEffect(() => {
+    const MOVIE_URL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=3bc84b0ae751d27c186bde28023ce8fe&language=en-US`
     fetch( MOVIE_URL )
       .then((response) => response.json())
       .then((json) => {
