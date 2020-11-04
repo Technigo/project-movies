@@ -12,8 +12,8 @@ const NotFound = () => {
       <div className="not-found--message-box">
         <img
           className="not-found--message-img"
-          src="./assets/noun_emotion_798837.svg"
-          alt="not found"
+          src={process.env.PUBLIC_URL + '/images/noun_emotion_798837.svg'}
+          alt="Not found"
         />
         <p className="not-found--message-text">
           Oops, this page was not found!
