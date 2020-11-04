@@ -21,16 +21,32 @@ body {
 
 /* Individual movie details*/
 
-.individual-movie-container {
+.backdrop-container {
   width: 100%;
   min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+
+.movie-details {
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
+  min-height: 90vh;
 }
 
+.button-container {
+  display: flex;
+  height: 80px;
+  width: 80px;
+  margin-left: 10px;
+}
+
+.back-button {
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+}
