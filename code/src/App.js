@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 
-import { MoviesHome } from "./components/MoviesHome"
-import { MoviesDetails } from "./components/MoviesDetails"
+import { MoviesHome } from "./pages/MoviesHome"
+import { MoviesDetails } from "./pages/MoviesDetails"
 import { NotFound } from "./NotFound"
 
 export const App = () => {
@@ -13,7 +13,7 @@ export const App = () => {
           <Route path="/" exact>
             <MoviesHome />
           </Route>
-          <Route path="/movies/:movieId" exact>
+          <Route path="/movies/:id" exact>
             <MoviesDetails />
           </Route>
           <Route path="/404">
