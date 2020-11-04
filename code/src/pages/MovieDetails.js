@@ -1,8 +1,10 @@
 import React from 'react'
-
+import { useParams } from 'react-router-dom'
 
 export const MovieDetails = () => {
+    const { id } = useParams()
+
     return (
-        <p>HEllo</p>
+        <section className='movie-details'>{id}</section>
     )
 }

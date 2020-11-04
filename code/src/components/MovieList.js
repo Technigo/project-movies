@@ -14,8 +14,12 @@ const [movies, setMovies] = useState([])
     
     return (
         <section className='movie-list'>
-            {movies.map((movie) => movie.title)}
-            <MovieCard />
+            {movies.map((movie) => (
+            <MovieCard
+            key={movie.id}
+            {...movie}
+             />
+            ))}
         </section>
     )
 }
