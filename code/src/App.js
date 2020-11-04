@@ -6,11 +6,17 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-import { ApiUrl, PosterImgUrl } from './components/ApiUrls';
+// Components
 import TopNav from './components/TopNav';
 import ListedMovie from './components/ListedMovie';
 import MoviePage from './pages/MoviePage';
 import NotFound from './pages/NotFound';
+
+// API-urls
+import { ApiUrl, PosterImgUrl } from './components/ApiUrls';
+
+// Styling
+import 'assets/MediaQueries.css';
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
@@ -26,13 +32,15 @@ export const App = () => {
 
   useEffect(() => {
     getData();
-  }, [categoryUrl]);
+  }, [categoryUrl]); // Get data on every change of categoryUrl
 
   return (
     <Router>
-      <TopNav setCategoryUrl={setCategoryUrl} />
+      {/* Top navigation */}
+      <TopNav setCategoryUrl={setCategoryUrl} getData={getData} />
       <main>
         <Switch>
+          {/* Route to list of movies */}
           <Route exact path="/">
             {movies.map((movie) => {
               return (
@@ -47,14 +55,18 @@ export const App = () => {
             })}
           </Route>
 
+          {/* Route to each single movie */}
           <Route exact path="/movies/:id">
             <MoviePage movies={movies} />
           </Route>
 
+          {/* Route to all pages that aren't specified */}
           <Route exact path="/404">
             <NotFound />
           </Route>
-          <Redirect from="movies/*" to="/" />
+
+          {/* Redirects */}
+          <Redirect from="movies/*" to="/404" />
           <Redirect to="/404" />
         </Switch>
       </main>

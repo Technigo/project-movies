@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Styling
+import 'assets/MovieList.css';
+import 'assets/MediaQueries.css';
+
 const ListedMovie = ({ id, title, releaseDate, posterImgSrc }) => {
   return (
     <section className="movie-list--movie-wrapper">
+      {/* Link to movie-page */}
       <Link key={id} to={`/movies/${id}`}>
         <img className="movie-list--img" src={posterImgSrc} alt={title} />
 

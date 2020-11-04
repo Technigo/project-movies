@@ -1,5 +1,8 @@
 import React from 'react';
 
+// Styling
+import 'assets/MediaQueries.css';
+
 const Movie = ({ posterImg, title, rating, description }) => {
   return (
     <div className="movie--details">

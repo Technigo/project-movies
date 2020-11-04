@@ -8,13 +8,28 @@ import {
   UpcomingApiUrl,
 } from './ApiUrls';
 
+// Styling
+import 'assets/TopNav.css';
+import 'assets/MediaQueries.css';
+
 const TopNav = ({ setCategoryUrl }) => {
   const history = useHistory();
   return (
+    // Home-button (Returns user to list of movies
+    // + rerun fetch on initial API - URL)
     <nav className="top-nav">
       <Link to="/">
-        <img className="top-nav--logo" src="./images/favicon.png" alt="logo" />
+        <img
+          className="top-nav--logo"
+          src={process.env.PUBLIC_URL + '/images/favicon.png'}
+          alt="logo"
+          onClick={() => {
+            setCategoryUrl(ApiUrl); // Set new URL, trigger fetch of default data
+          }}
+        />
       </Link>
+
+      {/* Dropdown to select category + change fetch details */}
       <div className="top-nav--dropdown">
         <label className="top-nav--dropdown--label" htmlFor="categories">
           Category:
@@ -22,7 +37,7 @@ const TopNav = ({ setCategoryUrl }) => {
         <select
           className="top-nav--dropdown--select"
           onChange={(event) => {
-            setCategoryUrl(event.target.value); // Change URL for initial fetch
+            setCategoryUrl(event.target.value); // Change URL and rerun fetch
             history.push('/'); // Send user to movie-list page
           }}
         >

@@ -1,0 +1,55 @@
+/* --- NOT FOUND PAGE --- */
+.not-found--wrapper {
+  width: 100vw;
+  height: calc(100vh - 65px);
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.48783263305322133) 34%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url('/images/charles-deluvio-I6mx55jXOvM-unsplash.jpg');
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found--message-box {
+  background: #000;
+  box-shadow: 0 0 15px #000;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found--message-img {
+  filter: invert(1);
+  width: 10vw;
+}
+
+.not-found--message-text {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 30px;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.not-found--message-button {
+  padding: 10px 50px;
+  font-size: 20px;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.not-found--message-button:hover {
+  border: 1px solid #666;
+  color: #666;
+}

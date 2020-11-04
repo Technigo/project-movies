@@ -1,0 +1,37 @@
+/* -- LOADER -- */
+.spinner--wrapper {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+}
+
+.spinner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  animation: spinner 2s infinite ease-in-out;
+  margin-top: 250px;
+}
+
+.ball {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 10px;
+  box-shadow: 0 0 5px #fff;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
