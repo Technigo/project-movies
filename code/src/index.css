@@ -84,6 +84,26 @@ p {
   color: white;
 }
 
+/*** NOTFOUND COMPONENT ***/
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20vh;
+}
+
+.not-found img {
+  width: 300px;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  margin: 0;
+  margin-top: 10px;
+}
+
 /*** MEDIA QUERIES ***/
 
 @media (min-width: 768px) and (max-width: 1023px) {
