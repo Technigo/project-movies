@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 
+
+
 export const ShowMovie = () => {
     const { id } = useParams()
     const [details, getDetails] = useState({})
-    
-    console.log(id)
 
     useEffect(() => {
 
@@ -16,6 +16,7 @@ export const ShowMovie = () => {
     })
     .then((text) => {
         getDetails(text)
+        console.log(text)
     })
     .catch((error) => {
         console.error('Request failed', error)
@@ -24,7 +25,13 @@ export const ShowMovie = () => {
     }, [])
 
     return  (
-        <div>{details.original_title}</div>
+        <div style={{ backgroundImage: `URL(https://image.tmdb.org/t/p/w1280/${details.backdrop_path})` }} className="individual-movie-container">
+            <p>{details.original_title}</p>
+            <p>Rating: {details.vote_average} / 10</p>
+            <p>{details.tagline}</p>
+            <p>{details.overview}</p>
+        </div>
+
     )
     
 }

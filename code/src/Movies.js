@@ -13,6 +13,7 @@ export const Movies = () => {
         })
         .then((text) => {
             fetchMovies(text.results)
+            console.log(text.results)
         })
         .catch((error) => {
             console.error('Request failed', error)

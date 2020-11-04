@@ -6,9 +6,6 @@ import { ShowMovie } from 'ShowMovie'
 
 export const App = () => {
 
-  
-
-
   return (
    
     <BrowserRouter>
