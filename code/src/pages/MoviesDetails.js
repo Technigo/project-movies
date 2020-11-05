@@ -30,9 +30,9 @@ export const MoviesDetails = () => {
                 <div className="movie-details">
                     <img className="movie-poster" src={`https://image.tmdb.org/t/p/w780/${movies.poster_path}`} alt={movies.original_title} />
 
-                    <div class="details-container">
-                        <h2>{movies.original_title}</h2>
-                        <p className="movie-rating">{`${movies.vote_average} /10`}</p>
+                    <div className="details-container">
+                        <h2>{movies.original_title}
+                            <span className="movie-rating">{`${movies.vote_average} / 10`}</span></h2>
                         <p className="movie-overview">{movies.overview}</p>
                     </div>
                 </div>
