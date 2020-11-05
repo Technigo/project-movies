@@ -1,5 +1,6 @@
 import React from 'react'
 import './Movie.css'
+import { Link } from 'react-router-dom';
 
 export const Movie = ({
     title,
@@ -11,14 +12,23 @@ export const Movie = ({
     return (
         <main
         className="backdrop"
-        style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${backdrop_path})`}}>
-        <div>
-        <h1>{title}</h1>
+        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0) 20%, rgb(0,0,0) 100%), url(https://image.tmdb.org/t/p/w1280${backdrop_path})`}}>
+        <div className="movie-container-one">
+            <Link to="/"> 
+                <button type="button">Back</button>
+            </Link>
         <img src={`https://image.tmdb.org/t/p/w1280${poster_path}`}
-        alt={title} />
-        <span className="rating">{vote_average}/10</span>
+        alt={title} 
+        />
+        </div>
+        <div className="movie-container-two">
+
+        <h1>{title}
+        <span className="rating">
+            {vote_average}/10
+        </span>
+        </h1>
         <p>{overview}</p>
-        <img className="backdrop" src={`https://image.tmdb.org/t/p/w1280${backdrop_path}`}/>
         </div>
         </main>
     )

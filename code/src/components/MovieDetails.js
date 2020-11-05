@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+
 import { API_KEY } from './key';
 import { Movie } from './Movie'
 
@@ -16,16 +16,9 @@ export const MovieDetails = () => {
             setMovies(json)
         })
     }, [id]);
-    
-    console.log(MOVIE_DETAILS); 
 
     return  (
-    <section className="movie-details">
-            <Link to="/"> 
-                <button type="button">Back</button>
-            
-            </Link>
-            
+    <section className="movie-details">          
             <Movie {...movies}/>
             
         </section>
