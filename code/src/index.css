@@ -19,7 +19,6 @@ code {
 /* NAVBAR */
 
 .nav-bar {
-  margin: 0px 30px;
   display: flex;
   justify-content: space-between;
   font-family: "Henny Penny";
@@ -46,9 +45,47 @@ code {
 
 /* MOVIE CARD */
 
+.movie-card {
+  flex-basis: 25%;
+}
+
+.overlay-container {
+  position: relative;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+.text-overlay h1 {
+  position: absolute;
+  bottom: 50px;
+  margin-left: 20px;
+  font-size: 30px;
+}
+
+.text-overlay p {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.text-overlay:hover {
+  opacity: 1;
+}
+
 .text-overlay h1 {
   font-size: 20px;
 }
+
 .text-overlay p {
   font-size: 15px;
 }
@@ -58,10 +95,23 @@ code {
   color: whitesmoke;
   text-decoration: none;
 }
+
 /* MOVIE-PAGE */
 
 .back-button {
   font-size: 30px;
   color: whitesmoke;
   text-decoration: none;
+}
+
+.movie-page-content-container {
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  width: 70%;
+  border: 3px solid white;
+}
+
+.movie-page-poster {
+  width: 300px;
 }
