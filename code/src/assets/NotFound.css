@@ -1,7 +1,15 @@
 /* --- NOT FOUND PAGE --- */
-.not-found--wrapper {
+.not-found--wrapper,
+.no-similar-movies-found--wrapper {
   width: 100vw;
   height: calc(100vh - 65px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found--wrapper {
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
@@ -11,9 +19,18 @@
     url('/images/charles-deluvio-I6mx55jXOvM-unsplash.jpg');
   background-size: cover;
   background-position: right;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.no-similar-movies-found--wrapper {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.48783263305322133) 34%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url('/images/myke-simon-atsUqIm3wxo-unsplash.jpg');
+  background-size: cover;
+  background-position: right;
 }
 
 .not-found--message-box {

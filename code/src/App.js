@@ -10,7 +10,7 @@ import {
 import TopNav from './components/TopNav';
 import ListedMovie from './components/ListedMovie';
 import MoviePage from './pages/MoviePage';
-import NotFound from './pages/NotFound';
+import { NotFound } from './pages/NotFound';
 import SimilarMovies from './pages/SimilarMovies';
 
 // API-urls

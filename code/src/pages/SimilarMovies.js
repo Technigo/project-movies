@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import ListedMovie from '../components/ListedMovie';
+import { NoSimilarMoviesFound } from './NotFound';
 import { RoundBackButton } from '../components/BackButton';
 
 // API Urls
@@ -34,7 +35,8 @@ const SimilarMovies = () => {
       <div className="similar-movies--back-button">
         <RoundBackButton />
       </div>
-
+      {console.log(similarMovies)}
+      {similarMovies.length === 0 && <NoSimilarMoviesFound />}
       {/* List of similar movies */}
       {similarMovies.map((movie) => {
         return (
@@ -49,8 +51,6 @@ const SimilarMovies = () => {
       })}
     </>
   );
-
-  //   return <p>hello</p>;
 };
 
 export default SimilarMovies;
