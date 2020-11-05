@@ -27,7 +27,7 @@ The third component NotFound has a route that redirects the user from a 404 to a
 - useParams, useState and useEffect
 - fetch()
 
-# With a little help from my friends... 🥰
+## With a little help from my friends... 🥰
 
 As always, I have expanded my knowledge with the help of the team, Stackoverflow, Google and our code coaches.
 
