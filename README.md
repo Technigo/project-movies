@@ -1,6 +1,6 @@
 # Project Movies
 
-A multi-page React application with top rated movies. :movie_camera
+A multi-page React application with top rated movies. :movie_camera:
 
 ## :brain: Learning objectives
 - build multi-page application using React Router
