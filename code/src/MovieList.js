@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 export const MovieList = () => {
     const [movies, setMovies] = useState([])
@@ -15,15 +16,17 @@ export const MovieList = () => {
     return (
         <div className="allMovies">
             {movies.map((movies) => (  // map over all movies and for each one display: img, title & release date 
+                <div key={movies.id}>
                 <div className="eachMovie">
-                    <img className="movieThumbnail" src={`https://image.tmdb.org/t/p/w300${movies.poster_path}`} alt="{movies.title}" />
-                        <h1 className="movieTitle1"> {movies.title} </h1>
-                            <p className="releaseDate"> {movies.release_date} </p>    
+                    <Link to={`/movie/${movies.id}`}>
+                        <img className="movieThumbnail" src={`https://image.tmdb.org/t/p/w300${movies.poster_path}`} alt="{movies.title}" />
+                            <h1 className="movieTitle1"> {movies.title} </h1>
+                                <p className="releaseDate"> {movies.release_date} </p>  
+                    </Link>  
+                </div>
                 </div>
             ))}         
         </div> 
     ) 
 
 }
-
-
