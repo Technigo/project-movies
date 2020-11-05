@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
-import Nav from 'components/Nav';
+import ListHeader from 'components/ListHeader';
 import Error from 'components/Error';
 import MovieList from './pages/MovieList';
 import MoviePage from './pages/MoviePage';
 import CompanyList from './pages/CompanyList';
 
 import './styles/styles.scss';
-import './styles/list.scss';
-import './styles/detail.scss';
-import './styles/button.scss';
+// import './styles/detail.scss';
+// import './styles/button.scss';
 
 export const App = () => {
   const [list, setList] = useState();
@@ -25,7 +24,7 @@ export const App = () => {
    <MovieList/>{list}</MovieList>
         </Route> */}
         <Route exact path="/">
-          <Nav onClick={handleClick} />
+          <ListHeader onClick={handleClick} />
           <MovieList>{list}</MovieList>
         </Route>
         {/* <Route exact path="/popular">

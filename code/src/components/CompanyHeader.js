@@ -1,6 +1,6 @@
 import React from 'react';
 
-//import css
+//import '../styles/styles.scss';
 
 const CompanyHeader = ({ homepage, logo_path, name }) => {
   return (

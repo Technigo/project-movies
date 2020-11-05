@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import Loader from '../components/Loader';
 import Error from '../components/Error';
-import Backbutton from '../components/Backbutton';
+import BackButton from '../components/BackButton';
 import MovieDetail from '../components/MovieDetail';
 import { API_KEY } from '../api.js';
 
@@ -12,10 +12,6 @@ const MoviePage = () => {
   const [movie, setMovie] = useState([]);
   const { movieId } = useParams();
   const MOVIE_URL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US`;
-
-  // useEffect(() => {
-  //   fetchMovieDetail();
-  // }, [movieId]);
 
   useEffect(() => {
     fetch(MOVIE_URL)
@@ -34,23 +30,15 @@ const MoviePage = () => {
         window.location.assign('/error');
       });
   }, [MOVIE_URL]);
-  // useEffect(() => {
-
-  // }, [movieId]);
 
   console.log(movie);
 
   return (
-    <main>
-      <Backbutton text={'Home'} />
-      {/* <Link to="/">
-        <button type="button" className="back-button">
-          Home
-        </button>
-      </Link> */}
+    <>
+      <BackButton className={'back-button'} text={'Home'} />
       {isLoading && <Loader />}
       {!isLoading && <MovieDetail {...movie} />}
-    </main>
+    </>
   );
 };
 
