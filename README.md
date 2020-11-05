@@ -1,29 +1,25 @@
 # Project Movies 🎬
-Replace this readme with your own information about your project.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project is a React app with three pages - one showing a list of movies, one showing details about single movies and one showing a 'not-found-page'. I use the themoviedb.org's API to fetch movies and details data for the movies.
 
 ## View it live 👀
+
 https://practical-varahamihira-bdcd3b.netlify.app
 
-- Your app should have at least two pages - one showing a list of movies and one showing details
-- You should follow the design from our example (but it's ok to change things - just try to make it look nice)
+My project meets the requirements of having at least two pages and following the provided design. As an added feature I also have a re-directed 'not found' page if a user enters an invalid movie ID. From this page the user can go back (via Link form react-router-dom) to the movies list page. 
 
-Show a 'not found' page if you try to visit a movie detail page with an invalid movie ID (so the user has tried to enter an ID themselves, most likely).
+For this project I have learnt and practiced:
 
-use themoviedb.org's API to fetch a list of movies (more on which movies further down), display them on a page, and then link to a movie detail page when you click on the movie.
 - How to use React router to create multi-page applications
 - How to use placeholders in urls to pick dynamic parts from urls
-- Practice using APIs in React - combining `useState` with `useEffect`
+- How to use APIs in React - combining `useState`, `useEffect` with `useParams`
 
-*Route: `/`, component: `PopularList`*
+I have also learnt about Route and how to use Link to connect pages together. I created a PopularList component with Route. This route is responsible for the home page. It uses `useEffect` to run an API request to themoviedb.org and fetch popular films in the US, puts them into state using `useState`, and then renders them wrapped in a `Link` from `react-router-dom` to link to the detail page.
 
-This route is responsible for the home page. It uses `useEffect` to run an API request to themoviedb.org and fetch popular films in the US, puts them into state using `useState`, and then renders them wrapped in a `Link` from `react-router-dom` to link to the detail page.
+The second component MoviesDetails has a route that expects a movie ID in the URL and is responsible for showing more details about a movie after you click on it. It uses `useParams` from `react-router-dom` to get the `id` from the URL and then passes that into an API call (within `useEffect`) to themoviedb.org to fetch details about a single movie, then puts the response into state using `useState` and finally renders it onto the page.
 
-*Route: `/movies/:id`, component: `Detail`*
+The third component NotFound has a route that redirects the user from a 404 to a custom page. From here the user can get back to the homepage - I use Link to take the user back.
 
-This route expects a movie ID in the URL and is responsible for showing more details about a movie after you click on it. It uses `useParams` from `react-router-dom` to get the `id` from the URL and then passes that into an API call (within `useEffect`) to themoviedb.org to fetch details about a single movie, then puts the response into state using `useState` and finally renders it onto the page.
-## The problem
 
 ## Methods and Tools
 - Route, Link and Redirect from react and react-router-dom
