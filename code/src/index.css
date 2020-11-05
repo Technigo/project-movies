@@ -78,10 +78,10 @@ code {
 
 .movie-page-text-content {
   width: 342px;
-  margin: px;
+  margin-bottom: 100px;
 }
 
-.movie-page-star {
+.star {
   margin-right: 10px;
 }
 /* BACK ICON */

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 
 import { MovieCard } from './MovieCard'
 
-
 export const MovieList = () => {
   const [topMovies, setTopMovies] = useState([]); 
   //We use [] in the Use state hook since it will be returning an array
@@ -12,17 +11,14 @@ export const MovieList = () => {
       .then((response) => response.json())
       .then((json) => {
         setTopMovies(json.results)
-        console.log(json)
       })
   }, [])
 
   return (
-      <div className='movie-list-card'>
-          {topMovies.map((movie) => (
-          <MovieCard key= {movie.id} {...movie} /> 
-          ))}
-      </div>
-    
-  )
-      
+    <div className='movie-list-card'>
+        {topMovies.map((movie) => (
+        <MovieCard key= {movie.id} {...movie} /> 
+        ))}
+    </div> 
+  )     
 }
