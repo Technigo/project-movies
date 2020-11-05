@@ -6,21 +6,18 @@ export const MovieThumb = ({
   release_date,
   vote_average,
   poster_path,
-  backdrop_path,
   id,
 }) => {
   return (
     <Link to={`/movies/${id}`}>
       <article className="movie-thumb">
-        <img
-          src={`https://image.tmdb.org/t/p/w342/${poster_path}`}
-          alt={title}
-        />
+        <div className="overlay-container">
+          <img
+            src={`https://image.tmdb.org/t/p/w342/${poster_path}`}
+            alt={title}
+          />
+        </div>
       </article>
     </Link>
   );
 };
-
-/*  <p>{title}</p>
-    <p>{release_date}</p>
-    <p>{vote_average} / 10</p>*/

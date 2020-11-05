@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { generatePath, useHistory } from "react-router-dom";
 
 //import { MoviePage } from "react";
 
@@ -8,10 +8,12 @@ export const MovieDetails = ({
   poster_path,
   title,
   vote_average,
-  tagline,
   overview,
+  genres,
 }) => {
   console.log("History:", useHistory());
+  console.log("genere:", { genres });
+  const history = useHistory();
   return (
     <article
       className="movie-details-background"
@@ -19,7 +21,13 @@ export const MovieDetails = ({
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2) 70%, rgb(0, 0, 0) 100%), url("https://image.tmdb.org/t/p/w1280/${backdrop_path}")`,
       }}
     >
-      <button className="back-button" type="button">
+      <button
+        onClick={() => {
+          history.goBack();
+        }}
+        className="back-button"
+        type="button"
+      >
         <div className="left-arrow"></div>
         <p className="button-text">Back</p>
       </button>

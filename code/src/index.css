@@ -21,6 +21,8 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
 }
 
 .nav-list li {
