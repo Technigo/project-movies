@@ -21,15 +21,17 @@ The second component MoviesDetails has a route that expects a movie ID in the UR
 The third component NotFound has a route that redirects the user from a 404 to a custom page. From here the user can get back to the homepage - I use Link to take the user back.
 
 
-## Methods and Tools
+## Methods and Tools 🛠
+
 - Route, Link and Redirect from react and react-router-dom
 - useParams, useState and useEffect
 - fetch()
 
-## With a little help from my friends...
+# With a little help from my friends... 🥰
+
 As always, I have expanded my knowledge with the help of the team, Stackoverflow, Google and our code coaches.
 
-## Next step
+## Next step 🧠
 As a next step, I would like to build larger sites with more pages and more interactivity. 
 
 
