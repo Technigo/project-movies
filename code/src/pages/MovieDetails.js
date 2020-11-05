@@ -18,7 +18,9 @@ export const MovieDetails = () => {
     fetch(MOVIE_URL)
       .then(response => {
         console.log(response.status)
-        setStatus(response.status)
+        setTimeout(() => {
+          (setStatus(response.status))
+        }, 2000)
         return response.json()
       })
       .then(json => {
