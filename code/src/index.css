@@ -170,7 +170,7 @@ code {
 .back-text:hover, .back-text:focus, .back-text:active {
   -webkit-transform: translateX(8px);
   transform: translateX(8px);
-  }
+}
 
 
 /** Media Queiries **/
@@ -178,32 +178,32 @@ code {
 
 @media (min-width: 300px) and (max-width: 700px) {
 
-  .movie-poster {
-    width: 250px;
-  }
- .movie-detail-text {
-   margin-left: 5px;
- }
+.movie-poster {
+  width: 250px;
+}
+.movie-detail-text {
+  margin-left: 5px;
+}
   
- .movie-detail-content {
-   margin-left: 10px;
- }
+.movie-detail-content {
+  margin-left: 10px;
+}
 
-  .movie-poster h1 {
-    font-size: 14px;
-  }
+.movie-poster h1 {
+  font-size: 14px;
+}
   
-  .overview{
-    font-size: 14px; 
-  }
+.overview{
+  font-size: 14px; 
+}
 
-  .rating {
-    display: none;
-  }
+.rating {
+  display: none;
+}
 
-  .link {
-    margin-bottom: 160px;  
-  } 
+.link {
+  margin-bottom: 160px;  
+} 
 }
 
 
