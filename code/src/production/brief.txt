@@ -1,50 +1,21 @@
-> In this week's project, you'll be building your first multi-page React application, and using a fun new API too!
-
-[Technigo/project-movies](https://github.com/Technigo/project-movies)
-
-The goal for this week is to use [themoviedb.org](http://themoviedb.org/)'s API to fetch a list of movies (more on which movies further down), display them on a page, and then link to a movie detail page when you click on the movie.
-
 This time, rather than following designs from a set of images, we'd like you to follow the design which we've created in our example app using the same API:
-
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/64671e62-6fb0-4d0d-902e-a9d75f6c72be/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/64671e62-6fb0-4d0d-902e-a9d75f6c72be/Untitled.png)
-
 ### 🎬🎬🎬 [https://technigo-movies-project.netlify.com/](https://technigo-movies-project.netlify.com/) 🎬🎬🎬
 
-In this app, we've used the API to fetch popular movies in the US. You are free to choose whatever endpoint you'd like to build up your list. You could do the same as us, or you could, for example, show movies which are currently in the cinema or find movies in a particular genre. It's up to you!
+In this app, we've used the API to fetch popular movies in the US. 
+You are free to choose whatever endpoint you'd like to build up your list. You could do the same as us, or you could, for example, show movies which are currently in the cinema or find movies in a particular genre. It's up to you!
 
 ---
-
-## What you will learn 🧠
-
-- How to use React router to create multi-page applications
-- How to use placeholders in urls to pick dynamic parts from urls
-- Practice using APIs in React - combining `useState` with `useEffect`
-
 ## How to get started 💪🏼
-
-1. Fork this repo
-2. Clone this repo into your projects folder on your computer
-3. Open up VS Code
-4. In the terminal, run `cd code` to change into the code folder
-5. Install the dependencies needed for react by running `npm install`
 6. Run the react development server by running `npm start`
 
+
+
 ## Using the API ⚡️
-
-You will need to register an account with [themoviedb.org](https://www.themoviedb.org/) and then register for an API key in order to use the API.
-
-When signing up for an API key, it asks a bunch of questions about what the application is for, but don't worry - we've contacted themoviedb.org and checked that they're OK with you all using the API for this purpose and it's all good in the hood. So, this is what you need to do:
-
-1. Signup for [themoviedb.org](https://www.themoviedb.org/account/signup)
-2. Go to [https://www.themoviedb.org/settings/api/request](https://www.themoviedb.org/settings/api/request)
-3. Select 'developer' & accept the terms
-4. Fill in the form requesting an API. You need to select 'Website' in the dropdown and say the use is for Technigo. Like this: 
-
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/77f1f58e-76e2-4bba-b68f-bde91cf5a6d3/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/77f1f58e-76e2-4bba-b68f-bde91cf5a6d3/Untitled.png)
-
 5. Submit the form and you should be approved automatically. Copy the v3 api key from the following page.
 
 With your freshly minted API key, you're now ready to start making API requests. The API is well documented at [developers.themoviedb.org](https://developers.themoviedb.org/3), and if you click through onto an endpoint, there's a 'try it out' tab where you can paste in your API key and run a request to see what you get in response. These are the endpoints we used in our example application:
+
+
 
 ### *Fetching popular movies for the list page*
 
@@ -52,11 +23,15 @@ With your freshly minted API key, you're now ready to start making API requests.
 
 *Don't forget to replace {api_key} with your API key if you copy and paste this*
 
+
+
 ### *Fetching a movie's details*
 
 [https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US](https://api.themoviedb.org/3/movie/%7Bmovie_id%7D?api_key=%7Bapi_key%7D&language=en-US)
 
 *Don't forget to replace {api_key} with your API key and {movie_id} with the id you get from the url via react-router if you copy and paste this*
+
+
 
 ## Rendering images from the API 🖼
 
@@ -94,6 +69,8 @@ The resulting URL would be [https://image.tmdb.org/t/p/w1280/5myQbDzw3l8K9yofUXR
 
 You do not need to call the configuration endpoint within your app. Just use the sizes which it returns (shown above) to construct a URL with appropriate image sizes.
 
+
+
 ## Hints and tips to complete the project 🤓
 
 As always, start by sketching out your application - not just thinking about design, but how should it be split into components, and how should your routes look?
@@ -108,58 +85,30 @@ This route is responsible for the home page. It uses `useEffect` to run an API
 
 This route expects a movie ID in the URL and is responsible for showing more details about a movie after you click on it. It uses `useParams` from `react-router-dom` to get the `id` from the URL and then passes that into an API call (within `useEffect`) to themoviedb.org to fetch details about a single movie, then puts the response into state using `useState` and finally renders it onto the page.
 
-## How to hand in the code 🎯
 
-- When you’re finished with the project, push your code to GitHub with these commands:
-
-    ```
-    git add .
-    git commit -m "your commit message"
-    git push origin master
-    ```
-
-- Navigate to your repo and create a Pull Request into the Technigo repo (Add a link to your deployed project.)
-- Wait for the code review
-
-## How to get help 🆘
-
-Ask for help and share your knowledge about this project with the 'project-movies' tag on [Stack Overflow](https://stackoverflow.com/c/technigo/questions). Talk to your team on Slack and help each other out. Do some research about your problem, you are surely not the first one with this problem, Google is your friend 🙂. And you can of course also reach out to your teachers.
 
 ---
 
 ## Requirements 🧪
 
-Your project should fulfill the **🔵  Blue Level** and all of the **General Requirements.** Use the **🔴  Red Level** and **⚫  Black Level** to push your knowledge to the next level!
 
 **General Requirements**
-
-- Contribute by helping others with this project on Stack Overflow.
-- If selected; demo your solution for your team.
-- Code follows Technigo’s code guidelines:
-
-[Guidelines for how to write good code](https://www.notion.so/Guidelines-for-how-to-write-good-code-314d3991a6624719a3b8e928ca9ab8b2)
-
 - Publish your site on Netlify.
 
 **🔵  Blue Level (Minimum Requirements)**
-
 - Your app should have at least two pages - one showing a list of movies and one showing details
 - You should follow the design from our example (but it's ok to change things - just try to make it look nice)
 
 Make sure you've committed and pushed a version of your project before starting with the intermediary and advanced goals.
 
 **🔴  Red Level (Intermediary Goals)**
-
 - Show a 'not found' page if you try to visit a movie detail page with an invalid movie ID (so the user has tried to enter an ID themselves, most likely).
     - **Hint**
 - **Handle loading states** - The API responds quite quickly, but if you're on a slow network then you'd be faced with a black screen until the response comes back. During this time, you could show a loading message or spinner of some sort on the page.
     - **Hint**
 
 **⚫  Black Level (Advanced Goals)**
-
 - On the homepage where you list popular movies, you could add a dropdown to change the list. For example, you could toggle between popular, upcoming, and new releases.
     - **Hint**
 - **More pages** - When you load a movie, you get a lot of information in the API response, such as a collection it belongs to, genres it has, or the companies involved with producing the film. Each of these has an API endpoint that can be used to fetch more information about that entity. You could use this data to make links from your movie page to another page. Take a look through the documentation and be creative! 🎨
     - **Example**
-
-🚨 Don't forget to add, commit and push the changes to GitHub when you're done. 🏁
