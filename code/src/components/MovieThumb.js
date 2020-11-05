@@ -1,42 +1,16 @@
-import React from 'react';
+import React from "react";
 // import { Link } from 'react-router-dom';
 
-export const MovieThumb = () => {
+export const MovieThumb = ({name}) => {
+  return ( <section className="movie-thumb">
+      {name}
+      <div className="movie-thumb-image_wrapper">
+    <img className="movie-thumb-image" src="./" alt={name}/>
+<p className="movie-thumb-image-description">4.5</p>
+      </div>
 
-return (  'MovieThumb'
-
-    // <section className="game-thumb">
-
-    //     </section>
-
-)
-}
-
-
-
+      </section>
+);
+};
 
 
-
-
-
-
-//   name,
-//   background_image,
-//   rating,
-//   dominant_color,
-//   slug,
-// }) => {
-//   return (
-//     <Link to={`/games/${slug}`}>
-//       <section className="game-thumb">
-//         <span>
-//           {name} - {dominant_color}
-//         </span>
-//         <div className="game-thumb-image-wrapper">
-//           <img className="game-thumb-image" src={background_image} alt={name} />
-//           <p className="game-thumb-image-description">{rating}</p>
-//         </div>
-//       </section>
-//     </Link>
-//   );
-// };
