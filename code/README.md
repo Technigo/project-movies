@@ -1,19 +1,31 @@
-# Technigo React Starter App
+# Project Movies
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+This project was made during the Technigo Bootcamp!
+The project was made using React and the main goal was to create a multi-page 
+using the MovieDB API. 
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+## The Project
 
-## Usage
+- My home page is PoplularMovieList and there i do a fecth(),i use useState to store the data and useEffect to control the rendering of the page. I also use map() to show all different movies from the API.
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+- I have hover effect on each movie card that displayes the full title of the movie and the release date. 
 
-Alternatively, if you don't want a new git repo on your account;
+- If you click on a movie card you will be redirected to it's own page where i display more info about the movie such as rating and overview. This is possible by creating a new fetch() in MovieDetail with each movies specific id by using params. 
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+- The MovieDetail page also contains a back button so you easily can go back to the home page (PopularMovieList).  
+
+- In App.js you can find the React Router Hook that makes the routes possible. 
+
+
+## TECH 
+- React
+- JSX
+- Javascript
+- API 
+- CSS
+- HTML 
+
+## View it live
+
+Here you can see the live page: 
+https://technigo-movie-project.netlify.app/
