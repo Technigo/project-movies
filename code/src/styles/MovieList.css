@@ -1,4 +1,4 @@
-* {
+/* * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -49,4 +49,4 @@ article:hover .movie-information {
 	.movie-list {
 		grid-template-columns: repeat(4, 1fr);
 	}
-}
+} */

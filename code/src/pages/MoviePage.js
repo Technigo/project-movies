@@ -36,13 +36,8 @@ const MoviePage = () => {
 			});
 	}, [movieId, API_URL]);
 
-	//const fetchMovieDetail = () => {
-
-	//	};
-
 	return (
 		<main className="movie-detail">
-			{/* <BackButton path={'/'} text={'Home'} /> */}
 			<BackButton text={'Back'} />
 			{loading && <Loader />}
 			{!loading && <MovieDetail {...movieDetail} />}

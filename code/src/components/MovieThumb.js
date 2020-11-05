@@ -3,15 +3,16 @@ import { Link } from 'react-router-dom';
 
 const MovieThumb = ({ id, poster_path, name, title, release_date }) => {
 	return (
-		<article>
+		<article className="movie-thumb">
 			<Link to={`/movies/${id}`}>
 				<img
 					src={`https://image.tmdb.org/t/p/w300/${poster_path}`}
 					alt={name}
+					className="movie-thumb__img"
 				/>
-				<div className="movie-information">
+				<div className="movie-thumb__info">
 					<h2>{title}</h2>
-					<p className="release-date">{`Released ${release_date}`}</p>
+					<p>{`Released ${release_date}`}</p>
 				</div>
 			</Link>
 		</article>

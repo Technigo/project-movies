@@ -1,4 +1,4 @@
-header {
+/* header {
 	height: 10vh;
 	display: flex;
 	justify-content: flex-end;
@@ -7,16 +7,12 @@ header {
 	position: relative;
 }
 
-h1 {
-}
 
 a {
 	color: #fff;
 	text-decoration: none;
 }
 
-.logo {
-}
 
 .company-logo {
 	width: unset;
@@ -40,11 +36,9 @@ a {
 }
 
 nav {
-	/* position: relative; */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	/* padding: 20px; */
 	width: 100%;
 }
 .open {
@@ -86,4 +80,5 @@ nav {
 }
 
 @media (min-width: 1024px) {
-}
+} 
+*/

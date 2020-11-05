@@ -5,10 +5,10 @@ const CompanyHeader = ({ homepage, logo_path, name }) => {
 	return (
 		<header>
 			{homepage ? (
-				<a href={homepage} target="blank">
+				<a href={homepage} target="blank" className="company">
 					{logo_path ? (
 						<img
-							className="company-logo"
+							className="company__logo"
 							src={`https://image.tmdb.org/t/p/w185/${logo_path}`}
 							alt={name}
 						/>
@@ -20,7 +20,7 @@ const CompanyHeader = ({ homepage, logo_path, name }) => {
 				<>
 					{logo_path ? (
 						<img
-							className="company-logo"
+							className="company__logo"
 							src={`https://image.tmdb.org/t/p/w45/${logo_path}`}
 							alt={name}
 						/>

@@ -43,7 +43,7 @@ const MovieList = ({ children }) => {
 	}, [API_URL]);
 
 	return (
-		<main className="movie-list">
+		<main className="list">
 			{loading && <Loader />}
 			{!loading && (
 				<>

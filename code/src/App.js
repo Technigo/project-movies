@@ -7,6 +7,8 @@ import CompanyList from './pages/CompanyList.js';
 import Nav from './components/Nav';
 import Error from './components/Error';
 
+import './styles/MovieStyle.css';
+
 export const App = () => {
 	const [movieList, setMovieList] = useState(); //toggle between different movie categories
 
@@ -33,6 +35,7 @@ export const App = () => {
 				<Route exact path="/error">
 					<Error />
 				</Route>
+
 				<Redirect to="/error" />
 			</Switch>
 		</BrowserRouter>

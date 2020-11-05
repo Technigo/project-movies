@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import '../styles/Nav.css';
 
@@ -32,27 +32,30 @@ const Nav = ({ onLinkClick }) => {
 	return (
 		<header>
 			<nav>
-				<Link to="/" className="logo">
+				<Link to="/">
 					<h1>Movie time</h1>
 				</Link>
-				<button className="nav-button" onClick={showBurgerMenu}>
+				<button className="nav__button" onClick={showBurgerMenu}>
 					Category
 				</button>
-				<div className={showBurger ? 'open' : 'closed'}>
+				<div
+					className={showBurger ? 'nav__button--open' : 'nav__button--closed'}
+				>
 					{categories.map(category => {
 						return (
 							<>
-								<NavLink
+								<Link
 									to="/"
+									//eslint-disable-next-line
 									key={category}
-									className="nav-bar-link"
+									className="nav__link"
 									onClick={() => {
 										onLinkClick(`${category.path}`);
 										showBurgerMenu();
 									}}
 								>
 									{category.category}
-								</NavLink>
+								</Link>
 							</>
 						);
 					})}

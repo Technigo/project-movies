@@ -1,0 +1,176 @@
+/***GENERAL***/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	height: 10vh;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 20px;
+	position: relative;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/***NAV***/
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.nav__button {
+	display: inline;
+	border: none;
+	background: transparent;
+	color: #fff;
+	font-size: 16px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.nav__button:hover {
+	background: #1f6f8b;
+}
+
+.nav__button--open {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 10vh;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	background: #000;
+	height: 25vh;
+}
+
+.nav__button--closed {
+	display: none;
+}
+
+.nav__link {
+	padding: 10px;
+	text-align: center;
+}
+
+.nav__link:hover {
+	background: #1f6f8b;
+}
+
+/*-COMPANY HEADER-*/
+.company {
+	height: 100%;
+}
+
+.company__logo {
+	height: 100%;
+	filter: invert(1);
+	color: #000;
+}
+
+/***MOVIELIST***/
+.list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 100%;
+}
+
+/*-MOVIE THUMB-*/
+.movie-thumb {
+	position: relative;
+}
+
+.movie-thumb__img {
+	width: 100%;
+}
+
+.movie-thumb:hover .movie-thumb__info {
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.movie-thumb__info {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+	transition: all 0.5s ease-in-out;
+}
+
+.movie-thumb:hover .movie-thumb__info {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 40px 10px;
+}
+
+/***MOVIEPAGE***/
+
+/***COMPANYLIST***/
+
+/*** ERROR ***/
+.error {
+	background-image: linear-gradient(rgba(0, 0, 0, 0) 10%, rgb(0, 0, 0) 85%),
+		url('./popcorn.jpg');
+	background-size: cover;
+	background-position-x: center;
+	background-position-y: 45%;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.error__text {
+	font-size: 20px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.error__button {
+	background: rgb(216 61 61 / 60%);
+	padding: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+/*** MEDIA ***/
+@media (min-width: 768px) {
+	.nav__button {
+		display: none;
+	}
+
+	.nav__link {
+		font-size: 20px;
+	}
+	.nav__button--open {
+		all: unset;
+	}
+
+	.nav__button--closed {
+		display: block;
+	}
+
+	.list {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (min-width: 1024px) {
+	.list {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
