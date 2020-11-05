@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
 
 .not-found-title{
@@ -14,6 +14,17 @@
   fill: #fff;
   max-width: 200px;
   height: 200px;
+}
+
+.mustache-icon{
+  display:flex;
+  flex-direction: row;
+}
+
+.mustache-icon svg {
+  fill: #767676;
+  width: 50px;
+  margin-right: 10px;
 }
 
 .go-back{

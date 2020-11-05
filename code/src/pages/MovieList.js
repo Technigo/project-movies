@@ -33,7 +33,7 @@ export const MovieList = () => {
     //     </div>
     //   )}
     // </section>
-    <section className='movie-wraper'>
+    <section className='movie-wrapper'>
       {movies.map(movie => (
 				<MovieThumb key={movie.id} {...movie} />
 			))}

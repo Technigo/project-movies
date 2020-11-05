@@ -11,7 +11,7 @@ export const MovieDetails = () => {
   const movieUrlDetails = `${baseURL}/3/movie/${id}?api_key=${apiKey}`
   //I need to change this API key to the correct one
   const [movieDetails, setMovieDetails] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     fetch(movieUrlDetails)
@@ -31,6 +31,8 @@ export const MovieDetails = () => {
     )
   }
 
+  // Check this above it is not working prop
+
   if (!movieDetails.title) {
     return (
       <PageNotFound message={movieDetails.status_message} />
@@ -38,19 +40,21 @@ export const MovieDetails = () => {
   }
 
   return (
-    <section className='Movie-thumb'>
-      <div className="background" 
-      style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.5) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`,
-      backgroundRepeat: 'no-repeat'}}>
-      <img
-        alt={movieDetails.title}
-        className='detail-movie-img'
-        src={`https://image.tmdb.org/t/p/w342/${movieDetails.poster_path}`} />
-    <h1>{movieDetails.title}</h1>
-    <p className='movie-details-overview'>{movieDetails.overview}</p>
-    <p className='movie-details-vote'>{movieDetails.vote_average}</p>
-    </div>
+    <section className='movie-thumb'
+        style={{
+          backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.5) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`
+        }}>
+        <div className='details-wrapper'>
+          <img
+            alt={movieDetails.title}
+            className='detail-movie-img'
+            src={`https://image.tmdb.org/t/p/w342/${movieDetails.poster_path}`} />
+          <div className='detail-text-wrapper'>
+            <h1>{movieDetails.title}</h1>
+            <p className='movie-details-vote'>{movieDetails.vote_average}/10</p>
+            <p className='movie-details-overview'>{movieDetails.overview}</p>
+          </div>
+        </div>
     </section>
   )
-
 }

@@ -1,9 +1,4 @@
-body{
-  background-color: #000;
-  margin: auto 0;
-}
-
-.movie-wraper{
+.movie-wrapper{
   display: grid;
   grid-template-columns: 1fr;
   position: relative;
@@ -13,16 +8,23 @@ body{
 }
 
 @media screen and (min-width:768px) {
-  .movie-wraper {
-    grid-template-columns: repeat(3, 1fr);
+  .movie-wrapper {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width:1024px) {
-  .movie-wraper {
+  .movie-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1370px;
+  }
+}
+
+/* @media screen and (min-width:1300px) {
+  .movie-wrapper {
     grid-template-columns: repeat(4, 1fr);
     max-width: 1370px;
     
 
   }
-}
+} */
