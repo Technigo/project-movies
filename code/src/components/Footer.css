@@ -1,8 +1,9 @@
 footer{
   color: #fff;
   padding: 40px;
-  margin-top: 5vh;
+  margin-top: 15vh;
   text-align: center;
+  position: absolute;
 }
 
 .footer-info{
