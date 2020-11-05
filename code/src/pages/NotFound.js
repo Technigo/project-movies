@@ -6,7 +6,7 @@ import "./notFound.css";
 const NotFound = () => {
   return (
     <div className="error-container">
-      <h3>Not found</h3>
+      <h4>Not found</h4>
       <Link to="/">
         <p className="error-go-back">Home</p>
       </Link>
