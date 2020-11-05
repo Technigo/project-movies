@@ -87,7 +87,11 @@ code {
   color: red;
   font-size: 17px;
   font-weight: 400;
-  margin-left: 10px
+  margin-left: 10px;
+}
+
+.movie-info {
+  max-width: fit-content
 }
 
 .details {
@@ -110,17 +114,21 @@ code {
     width: 25%;
 }
 
+.backdrop-image {
+  min-height: 800px;
+  padding-bottom: 35px;
+}
+
 .image-and-text {
   display: flex;
   flex-direction: row;
-}
-
-.movie-info {
-  width: 400px;
+  align-items: flex-end;
+  padding-top: 380px;
 }
 
 .details {
   margin-left: 20px;
+  width: 400px;
 }
 
 .small-image {

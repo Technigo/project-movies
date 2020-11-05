@@ -14,15 +14,15 @@ export const MovieDetails = () => {
 
     return (
         <article className='movie-details'>
-            <div className='backdrop-image'  style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
-                <div className='image-and-text'>
-                    <img className='small-image' src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title}></img>
-                        <div className='details'>
-                            <h1>{details.title} <span className="rating">{details.vote_average}/10</span></h1>
-                            <p className='movie-info'>{details.overview}</p>                
-                        </div>
-                </div>
+        <div className='backdrop-image'  style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
+            <div className='image-and-text'>
+                <img className='small-image' src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title}></img>
+                    <div className='details'>
+                        <h1>{details.title} <span className="rating">{details.vote_average}/10</span></h1>
+                        <p className='movie-info'>{details.overview}</p>                
+                    </div>
             </div>
-        </article>
-    )
+        </div>
+    </article>
+)
 }
