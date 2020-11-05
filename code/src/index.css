@@ -6,6 +6,8 @@ body {
   background-color: black;
 }
 
+/* Movie list */
+
 .movie-container {
   display: flex;
   width: 100%;
@@ -64,12 +66,38 @@ body {
   background-size: cover;
 }
 
+.movie-details-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
 .movie-details {
   color: white;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 90vh;
+  flex-direction: row;
+  align-items: flex-end;
+  width: 100%;
+  padding: 20px;
+}
+
+.poster {
+  width: 400px;
+  height: 500px;
+  margin: 5px;
+}
+
+.details {
+  width: 50%;
+}
+
+.details h1 {
+  font-size: 48px;
+}
+
+.details p {
+  font-size: 12px;
 }
 
 .button-container {
@@ -84,4 +112,12 @@ body {
   transform: translate(100%, 91%);
   width: 50px;
   height: 50px;
+}
+
+/* mobile view */
+
+@media only screen and (max-width: 400px) {
+  .movie-details img {
+    display: none;
+  }
 }

@@ -24,7 +24,7 @@ export const ShowMovie = () => {
         console.error('Request failed', error)
     })
 
-    }, [id])
+    }, [])
 
     return  (
         <div style={{ backgroundImage: `URL(https://image.tmdb.org/t/p/w1280/${details.backdrop_path})` }} className="backdrop-container">
@@ -32,18 +32,21 @@ export const ShowMovie = () => {
                 <div className="button-container">
                     <Route path="/:id">
                         <Link to="/">
-                        <BackButton />
+                            <BackButton />
                         </Link>
                     </Route>
                 </div>
+            <div className="movie-details-container">
                 <div className="movie-details">
-                    <div>
-                        <p>{details.original_title}</p>
+                <img src={`https://image.tmdb.org/t/p/w500/${details.poster_path}`} className="poster"/>
+                    <div className="details">
+                        <h1>{details.original_title}</h1>
                         <p>Rating: {details.vote_average} / 10</p>
-                        <p>{details.tagline}</p>
+                        <p>"{details.tagline}"</p>
                         <p>{details.overview}</p>
                     </div>
                 </div>
+            </div>
         </div>
 
     )
