@@ -2,7 +2,6 @@ import React from 'react';
 
 // Styling
 import 'assets/Loading.css';
-import 'assets/MediaQueries.css';
 
 const Loading = () => {
   return (

@@ -11,7 +11,6 @@ import { PosterImgUrl, BackdropImgUrl } from '../components/ApiUrls';
 
 // Styling
 import 'assets/MoviePage.css';
-import 'assets/MediaQueries.css';
 
 const MoviePage = ({ movies }) => {
   const params = useParams();

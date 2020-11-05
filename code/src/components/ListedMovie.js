@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 // Styling
 import 'assets/MovieList.css';
-import 'assets/MediaQueries.css';
 
 const ListedMovie = ({ id, title, releaseDate, posterImgSrc }) => {
   return (

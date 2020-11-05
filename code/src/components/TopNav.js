@@ -10,7 +10,6 @@ import {
 
 // Styling
 import 'assets/TopNav.css';
-import 'assets/MediaQueries.css';
 
 const TopNav = ({ setCategoryUrl }) => {
   const history = useHistory();

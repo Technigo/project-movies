@@ -68,3 +68,71 @@
 .movie--back-button:hover .movie--back-button--text {
   margin: 0 0 5px 10px;
 }
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 830px) {
+  .movie--details--textbox {
+    max-width: 300px;
+  }
+
+  .movie--details {
+    position: static;
+  }
+
+  .movie--back-button {
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .movie--wrapper {
+    background-position: center center;
+  }
+
+  .movie-wrapper {
+    padding: 35px 30px;
+  }
+
+  .movie--details {
+    align-items: flex-start;
+    flex-direction: column;
+    bottom: 25px;
+  }
+
+  .movie--details--textbox {
+    max-width: 80vw;
+    margin: 0;
+  }
+
+  .movie--details--image {
+    width: 250px;
+  }
+}
+
+@media (max-width: 380px) {
+  .movie--wrapper {
+    padding: 35px 30px;
+  }
+
+  .movie--details {
+    bottom: 5px;
+  }
+}
+
+@media (max-width: 330px) {
+  .movie--wrapper {
+    padding: 35px 30px;
+  }
+
+  .movie--details {
+    bottom: 5px;
+  }
+
+  .movie--details--title {
+    font-size: 20px;
+  }
+
+  .movie--details--image {
+    width: 150px;
+  }
+}

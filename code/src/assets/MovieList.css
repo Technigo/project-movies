@@ -32,3 +32,16 @@
   justify-content: flex-end;
   cursor: pointer;
 }
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 768px) {
+  .movie-list--movie-wrapper {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-list--movie-wrapper {
+    width: 100vw;
+  }
+}

@@ -15,9 +15,6 @@ import NotFound from './pages/NotFound';
 // API-urls
 import { ApiUrl, PosterImgUrl } from './components/ApiUrls';
 
-// Styling
-import 'assets/MediaQueries.css';
-
 export const App = () => {
   const [movies, setMovies] = useState([]);
   const [categoryUrl, setCategoryUrl] = useState(ApiUrl);

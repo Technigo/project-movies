@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom';
 
 // Styling
 import 'assets/NotFound.css';
-import 'assets/MediaQueries.css';
 
 const NotFound = () => {
   const history = useHistory();
