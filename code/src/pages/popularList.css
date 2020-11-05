@@ -44,6 +44,7 @@ img {
 @media (min-width: 667px) {
     .list-title {
         display: block;
+        color: red;
     }
 }
 
