@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { API_KEY } from './key';
-import { Movie } from './Movie'
+import { Movie } from './Movie';
+import { Error } from './Error'
 
 export const MovieDetails = () => {
     const { id } = useParams();
@@ -17,12 +18,19 @@ export const MovieDetails = () => {
         })
     }, [MOVIE_DETAILS]);
 
-    return  (
-    <section className="movie-details">          
-            <Movie {...movies}/>
-            
-        </section>
-    );   
+    if(movies.backdrop_path === undefined) {
+        return (
+            <Error />
+        )
+        
+    } else {
+        return  (
+        <section className="movie-details">          
+                <Movie {...movies}/>
+                
+            </section>
+        );   
+    };
 };
 
 export default MovieDetails
