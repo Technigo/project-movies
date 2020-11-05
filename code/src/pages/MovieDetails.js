@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { API_KEY } from './MovieList'
+import { MovieBio } from '../components/MovieBio'
 
 
 export const MovieDetails = () => {
@@ -17,10 +18,10 @@ export const MovieDetails = () => {
   useEffect(fetchDetails, [id]);
 
   return (
-    <div>
-      Test
-      <h2>{movie.title}</h2>
-      <p>{movie.overview}</p>
-    </div>
+    <section>
+      <img src={`https://image.tmdb.org/t/p/w342${movie.backdrop_path}`} alt={movie.title}/>
+      < MovieBio {...movie}
+      /> 
+    </section>
   )
 }

@@ -1,5 +1,8 @@
+*, *::before, *::after { box-sizing: border-box; }
+
 body {
   margin: 0;
+  background-color: #000000;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -11,3 +14,65 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.movie-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  width: 100%;
+}
+
+.list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  width: 25%;
+  height: auto;
+  margin: 0;
+}
+
+.poster-image {
+  width: 100%;
+}
+
+.title-release {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #ffffff;
+  opacity: 0;
+  position: absolute;
+  margin: 0 0 45px 20px;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+
+}
+
+.list-container:hover .poster-image {
+  filter: brightness(0.3);
+}
+
+.list-container:hover .title-release {
+  opacity: 1;
+}
+
+.movie-release {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.movie-title {
+  font-size: 32px;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+
+
+
+

@@ -18,16 +18,18 @@ export const MovieList = () => {
   }, [])
 
   return (
-    <div>
+    <section className="movie-section">
       {movies.map((movie) => (
-        <div key={movie.id}>
-          <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title}/>
+        <div className="list-container" key={movie.id}>
             <Link to={`/movie/${movie.id}`}>
-              <h2>{movie.title}</h2>
-              <h3>{movie.release_date}</h3>
+              <img className="poster-image" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}/>
+              <div className="title-release">
+                <h2 className="movie-title">{movie.title}</h2>
+                <h3 className="movie-release">Released {movie.release_date}</h3>
+              </div>
             </Link>
         </div>
       ))}
-    </div>
+    </section>
   )
 }
