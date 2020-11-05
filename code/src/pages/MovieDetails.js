@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { API_KEY } from './MovieList'
 import { MovieBio } from '../components/MovieBio'
+import { ReactComponent as Arrow } from '../components/arrow.svg';
 import './moviedetails.css'
 
 
@@ -19,7 +21,14 @@ export const MovieDetails = () => {
   useEffect(fetchDetails, [id]);
 
   return (
+    
     <section className="detail-section">
+      <div className="return-arrow">
+      <Link to="/" exact="true">
+          <Arrow />
+          <p>Movies</p>
+      </Link>
+      </div>
       <img className="background-image" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title}/>
       < MovieBio {...movie}
       /> 
