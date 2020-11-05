@@ -37,6 +37,11 @@
 .back-link:hover {
   font-size: 18px;
   letter-spacing: 3px;
+  text-shadow: 1.5px 1px 2px #000;
+}
+
+.back-link:hover .left {
+  box-shadow: 1.5px 1px 1px #000;
 }
 
 /* The div including the smaller picture and the text-elements */
@@ -75,6 +80,11 @@
 
 .overview {
   margin: 20px;
+}
+
+/* Hover effect to make it easier to read based on background */
+.movie-heading:hover, .overview:hover {
+  text-shadow: 1.5px 1px 2px #000;
 }
 
 @media (max-width: 668px) { /* Mobile format */

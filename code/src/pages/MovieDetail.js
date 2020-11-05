@@ -55,7 +55,7 @@ export const MovieDetail = () => {
             />
             <div className="text-rating-overview-wrapper">
               <div className="top-info">
-                <h2>{movies.title} 
+                <h2 className="movie-heading">{movies.title} 
                   <span className={movies.vote_average > 8.0 ? "rating high" : "rating low"}>{movies.vote_average}/10</span>
                 </h2>
               </div>
