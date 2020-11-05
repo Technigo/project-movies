@@ -19,6 +19,8 @@
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
   visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 /* 
 .movie-list--details--wrapper:hover {
@@ -33,6 +35,7 @@
 } */
 
 .movie-list--movie-wrapper:hover .movie-list--details--wrapper {
+  opacity: 1;
   visibility: visible;
   display: flex;
   flex-direction: column;
