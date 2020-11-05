@@ -23,18 +23,18 @@ export const MoviesDetails = () => {
 
     return (
         <>
-            <div className="details-container" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 10%, rgb(0, 0, 0) 100%), movieDetailsURL(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` }}>
+            <div className="movie" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 10%, rgb(0, 0, 0) 100%), movieDetailsURL(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` }}>
                 <Link className="back-link" to="/" exact='true'>
                     <img className="back-arrow" src={Arrow} alt="go back to movies" />Movies list
                 </Link>
                 <div className="movie-details">
                     <img className="movie-poster" src={`https://image.tmdb.org/t/p/w780/${movies.poster_path}`} alt={movies.original_title} />
 
-                    {/* <div className="movie-info">
-                        <h1 className="movie-title">{movies.original_title}</h1>
-                        <span className="rating">{movies.vote_average} / 10</span>
-                        <p className="overview">{movies.overview}</p>
-                    </div> */}
+                    <div class="details-container">
+                        <h2>{movies.original_title}</h2>
+                        <p className="movie-rating">{`${movies.vote_average} /10`}</p>
+                        <p className="movie-overview">{movies.overview}</p>
+                    </div>
                 </div>
             </div>
         </>

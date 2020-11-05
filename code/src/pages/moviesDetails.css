@@ -1,4 +1,4 @@
-.details-container {
+.movie {
   display: flex;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,7 +14,9 @@
   display: flex;
   width: 50%;
   border: 5px solid #fff;
+  width: 400px;
 }
+
 .back-arrow {
   transform: translate(-40%, 29%);
   width: 30px;
