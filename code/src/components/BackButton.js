@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
-const BackButton = ({ path, text }) => {
+const BackButton = ({ text }) => {
 	const history = useHistory();
 	return (
 		//<Link to={path} className="back-button-wrapper">

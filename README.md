@@ -1,13 +1,24 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Multi-page React App where you can see information on popular and upcoming movies. The information is fetched with different API endponints from themoviedb.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Had some struggle to get the back button on each page to work. Solved it by adding useHistory hook.
+
+## Learning objectives
+
+- How to make API calls using useEffect in React
+- How to use React Router to create a multi-page App
+- How to follow a design created by someone else
+
+## Tech used
+
+- React
+- React Router
+- JSX
+- API
+- JavaScript
+- CSS
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.

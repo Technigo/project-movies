@@ -11,8 +11,9 @@ const MovieList = ({ children }) => {
 	const [loading, setLoading] = useState(true);
 
 	const ApiKey = '175ffd5710eba9b52b1d7f46de42a152';
-	const API_URL = `https://api.themoviedb.org/3/movie/
-	${children ? children : 'now_playing'}?api_key=${ApiKey}&language=en-US`;
+	const API_URL = `https://api.themoviedb.org/3/movie/${
+		children ? children : 'now_playing'
+	}?api_key=${ApiKey}&language=en-US`;
 
 	// 	The React docs say that you can use props.children on
 	//components that represent ‘generic boxes’ and that ‘don’t know their children ahead of time’.
@@ -22,10 +23,8 @@ const MovieList = ({ children }) => {
 	//to display whatever you include between the opening and closing tags when invoking a component.
 
 	useEffect(() => {
-		fetchMovieList();
-	}, [API_URL]);
+		//fetchMovieList();
 
-	const fetchMovieList = () => {
 		fetch(API_URL)
 			.then(res => {
 				if (res.ok) {
@@ -41,7 +40,7 @@ const MovieList = ({ children }) => {
 			.catch(() => {
 				window.location.assign('/error');
 			});
-	};
+	}, [API_URL]);
 
 	return (
 		<main className="movie-list">

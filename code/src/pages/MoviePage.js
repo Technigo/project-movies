@@ -14,13 +14,11 @@ const MoviePage = () => {
 	const { movieId } = useParams();
 
 	const ApiKey = '175ffd5710eba9b52b1d7f46de42a152';
-	const API_URL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${ApiKey}&language=en-US`;
+	const API_URL = `https://api.themoviedb.org
+	/3/movie/${movieId}?api_key=${ApiKey}&language=en-US`;
 
 	useEffect(() => {
-		fetchMovieDetail();
-	}, [movieId]);
-
-	const fetchMovieDetail = () => {
+		//fetchMovieDetail();
 		fetch(API_URL)
 			.then(res => {
 				if (res.ok) {
@@ -36,12 +34,16 @@ const MoviePage = () => {
 			.catch(() => {
 				window.location.assign('/error');
 			});
-	};
+	}, [movieId, API_URL]);
+
+	//const fetchMovieDetail = () => {
+
+	//	};
 
 	return (
 		<main className="movie-detail">
 			{/* <BackButton path={'/'} text={'Home'} /> */}
-			<BackButton text={'Home'} />
+			<BackButton text={'Back'} />
 			{loading && <Loader />}
 			{!loading && <MovieDetail {...movieDetail} />}
 		</main>

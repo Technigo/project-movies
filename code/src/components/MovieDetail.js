@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const MovieDetail = ({
 	backdrop_path,
@@ -37,7 +37,7 @@ const MovieDetail = ({
 							className="imdb-link"
 							target="blank"
 						>
-							IMDB<span> 🔗</span>
+							IMDB<span> 🔗 </span>
 						</a>
 						<div className="genres-wrapper">
 							<p>Genres:</p>

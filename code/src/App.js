@@ -16,17 +16,16 @@ export const App = () => {
 
 	return (
 		<BrowserRouter>
-			<Nav onLinkClick={handleClick} />
 			<Switch>
 				<Route exact path="/">
+					<Nav onLinkClick={handleClick} />
 					<MovieList>{movieList}</MovieList>
 				</Route>
 
-				<Route exact path="/movies/:movieId">
+				<Route exact path="/movies/:movieId/">
 					<MoviePage />
 				</Route>
 
-				{/* <Route exact path="/movies/:movieId/company/:companyId"> */}
 				<Route exact path="/company/:companyId">
 					<CompanyList />
 				</Route>

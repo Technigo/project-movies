@@ -10,62 +10,52 @@ const Nav = ({ onLinkClick }) => {
 		setShowBurger(!showBurger);
 	};
 
+	const categories = [
+		{
+			category: 'Popular',
+			path: 'popular',
+		},
+		{
+			category: 'Now Playing',
+			path: 'now_playing',
+		},
+		{
+			category: 'Upcoming',
+			path: 'upcoming',
+		},
+		{
+			category: 'Top rated',
+			path: 'top_rated',
+		},
+	];
+
 	return (
 		<header>
 			<nav>
-				<Link to="/">
+				<Link to="/" className="logo">
 					<h1>Movie time</h1>
 				</Link>
 				<button className="nav-button" onClick={showBurgerMenu}>
 					Category
 				</button>
 				<div className={showBurger ? 'open' : 'closed'}>
-					<NavLink
-						to="/"
-						className="nav-bar-link"
-						onClick={() => {
-							onLinkClick('now_playing');
-							showBurgerMenu();
-						}}
-					>
-						Now Playing
-					</NavLink>
-					<NavLink
-						to="/"
-						className="nav-bar-link"
-						onClick={() => {
-							onLinkClick('popular');
-							showBurgerMenu();
-						}}
-						// onClick={() => onLinkClick('popular')}
-						//onClick={() => showBurgerMenu(showBurger)}
-					>
-						Popular
-					</NavLink>
-					<NavLink
-						to="/"
-						className="nav-bar-link"
-						onClick={() => {
-							onLinkClick('upcoming');
-							showBurgerMenu();
-						}}
-						//onClick={() => onLinkClick('upcoming')}
-						//onClick={() => showBurgerMenu(showBurger)}
-					>
-						Upcoming
-					</NavLink>
-					<NavLink
-						to="/"
-						className="nav-bar-link"
-						onClick={() => {
-							onLinkClick('top_rated');
-							showBurgerMenu();
-						}}
-						//onClick={() => onLinkClick('top_rated')}
-						//onClick={() => showBurgerMenu(showBurger)}
-					>
-						Top Rated
-					</NavLink>
+					{categories.map(category => {
+						return (
+							<>
+								<NavLink
+									to="/"
+									key={category}
+									className="nav-bar-link"
+									onClick={() => {
+										onLinkClick(`${category.path}`);
+										showBurgerMenu();
+									}}
+								>
+									{category.category}
+								</NavLink>
+							</>
+						);
+					})}
 				</div>
 			</nav>
 		</header>
