@@ -16,22 +16,6 @@ code {
 
 @import url("https://fonts.googleapis.com/css2?family=Henny+Penny&family=Lobster&display=swap");
 
-/* NAVBAR */
-
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  font-family: "Henny Penny";
-}
-
-.nav-bar h1 {
-  margin-left: 90px;
-  font-size: 70px;
-}
-.nav-bar h1 img {
-  height: 100px;
-}
-
 /* MOVIE LIST */
 
 .movie-list-card {
@@ -44,10 +28,6 @@ code {
 }
 
 /* MOVIE CARD */
-
-.movie-card {
-  flex-basis: 25%;
-}
 
 .overlay-container {
   position: relative;
@@ -68,7 +48,7 @@ code {
   position: absolute;
   bottom: 50px;
   margin-left: 20px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .text-overlay p {
@@ -82,14 +62,6 @@ code {
   opacity: 1;
 }
 
-.text-overlay h1 {
-  font-size: 20px;
-}
-
-.text-overlay p {
-  font-size: 15px;
-}
-
 .text-overlay p,
 .text-overlay h1 {
   color: whitesmoke;
@@ -98,20 +70,49 @@ code {
 
 /* MOVIE-PAGE */
 
-.back-button {
-  font-size: 30px;
-  color: whitesmoke;
-  text-decoration: none;
-}
-
-.movie-page-content-container {
+.movie-page-content {
   display: flex;
   flex-direction: column;
-  word-wrap: break-word;
-  width: 70%;
-  border: 3px solid white;
+  align-items: center;
 }
 
-.movie-page-poster {
+.movie-page-text-content {
+  width: 342px;
+  margin: px;
+}
+
+.movie-page-star {
+  margin-right: 10px;
+}
+/* BACK ICON */
+
+.go-back-text {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 50px;
   width: 300px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+
+.back-arrow {
+  width: 40px;
+  margin-top: 30px;
+  margin-right: 5px;
+}
+
+.go-back-text:hover {
+  font-size: 52px;
+}
+
+@media (min-width: 900px) {
+  .movie-page-content {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .movie-page-text-content {
+    margin: 50px;
+  }
 }
