@@ -2,19 +2,15 @@
   align-self: center;
   justify-self: center;
   position: relative;
-  height: 535px;
+  height: 515px;
+  color: #fff;
 }
 
 a {
   text-decoration: none;
 }
 
-h2,
-.released-date{
-  color: #fff;
-}
-
-h2{
+.movie-thumb-title{
   padding-left: 10px;
   font-size: 2.3em;
 }
@@ -26,6 +22,9 @@ h2{
 }
 
 .movie-overlay{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: absolute;
   opacity: 0;
   top: 0;
@@ -38,11 +37,5 @@ h2{
 }
 
 .movie-overlay:hover{
-  display: flex;
-  flex-direction: column;
-  /* justify-content: flex-end; there is something weird here */
   opacity: 1;
 } 
-
-
-

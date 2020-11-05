@@ -19,6 +19,7 @@
 .mustache-icon{
   display:flex;
   flex-direction: row;
+  align-items:center;
 }
 
 .mustache-icon svg {

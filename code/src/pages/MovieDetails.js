@@ -40,7 +40,7 @@ export const MovieDetails = () => {
   }
 
   return (
-    <section className='movie-thumb'
+    <section className='movie-thumb-wrapper'
         style={{
           backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.5) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`
         }}>
@@ -50,8 +50,8 @@ export const MovieDetails = () => {
             className='detail-movie-img'
             src={`https://image.tmdb.org/t/p/w342/${movieDetails.poster_path}`} />
           <div className='detail-text-wrapper'>
-            <h1>{movieDetails.title}</h1>
-            <p className='movie-details-vote'>{movieDetails.vote_average}/10</p>
+            <h1 className='movie-title'>{movieDetails.title}</h1>
+            <p className='movie-details-vote'>Rating: {movieDetails.vote_average}/10</p>
             <p className='movie-details-overview'>{movieDetails.overview}</p>
           </div>
         </div>
