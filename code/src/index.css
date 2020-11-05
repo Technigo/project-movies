@@ -74,7 +74,7 @@ code {
 /*MOVIE DETAILS*/
 
 .backdrop-image {
-  min-height: 1100px;
+  min-height: 200px;
   background-size: cover;
 }
 
