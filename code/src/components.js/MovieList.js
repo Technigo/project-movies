@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
-import { MovieCard } from 'components/MovieCard'
+import { MovieCard } from 'components.js/MovieCard'
 
-// import {  } from "module";
+import "components.css/movieList.css"
+
 
 export const MovieList = () => {
-  const MOVIES_URL = 'https://api.themoviedb.org/3/movie/top_rated?api_key=636ed5609cbdb1c9a92992698d99fea5&language=en-US&page=1';
+  const MOVIES_URL = 'https://api.themoviedb.org/3/movie/popular?api_key=636ed5609cbdb1c9a92992698d99fea5&language=en-US&page=1&region=US';
   const[movies,setMovies] = useState([]);
 
   
