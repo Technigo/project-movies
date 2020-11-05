@@ -15,12 +15,12 @@
 }
 
 .movie-container-two {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: flex-end;
-margin: 0 0 40px 70px;
-width: 300px; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin: 0 0 40px 70px;
+    width: 300px; 
 }
   
 .movie-details img {
@@ -76,3 +76,26 @@ p {
 a {
     text-decoration: none;
 }
+
+
+@media (max-width: 700px) { 
+
+    .backdrop {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .movie-container-one,
+    .movie-container-two {
+        width: 250px;
+    }
+
+    .movie-details img {
+        width: 200px;
+        height: 350px;
+        margin-top: 20px;
+    }
+
+    
+  
+  }
