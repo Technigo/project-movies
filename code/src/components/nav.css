@@ -1,6 +1,6 @@
-h6 {
-  font-size: 18px;
+h3 {
   margin: 0;
+  font-size: 18px;
   color: #fff;
   font-weight: normal;
 }
@@ -10,65 +10,50 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 5;
   right: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
+  z-index: 5;
 }
 
 .menu-trigger {
-  background: none;
-  width: 250px;
-  cursor: pointer;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  background: none;
+  width: 250px;
+  height: 30px;
+  margin: 8px 20px 8px auto;
   padding: 4px 6px;
-  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); */
   border: none;
   outline: none;
-  /* vertical-align: middle; */
-  /* transition: box-shadow 0.4s ease; */
-  margin-left: auto; /* Strictly for positioning */
-  margin-right: 10px;
+  cursor: pointer;
 }
 
-.menu-trigger:hover {
-  /* box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); */
-}
-
-/* .menu-trigger span {
-  font-weight: 700;
-  vertical-align: middle;
-  font-size: 14px;
-  margin: 0 10px;
-  color: #fff;
-} */
-
-.menu-trigger img {
+.icon {
   height: 32px;
+  fill: #fff;
+  transition: 0.1s ease-in-out;
+}
+
+.menu-trigger:hover .icon {
+  opacity: 0.6;
+  transition: 0.15s ease-in-out;
 }
 
 .menu {
-  background: rgba(0, 0, 0, 0.6);
-
   position: absolute;
-  top: 40px;
-  right: 0;
   width: 250px;
-  /* box-shadow: 0 1px 18px rgba(0, 0, 0, 0.3); */
+  top: 46px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
   opacity: 0;
   visibility: hidden;
-
-  /* transform: translateY(-20px);
-  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s; */
 }
 
 .menu.active {
   opacity: 1;
   visibility: visible;
-
-  /* transform: translateY(0); */
 }
 
 .menu ul {
@@ -79,9 +64,9 @@ h6 {
 
 .menu li {
   box-sizing: border-box;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
   height: 40px;
-  padding-top: 6px;
+  padding-top: 3px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 .menu li:hover {
@@ -90,7 +75,7 @@ h6 {
 }
 
 .menu li a {
+  display: block;
   text-decoration: none;
   padding-left: 15px;
-  display: block;
 }

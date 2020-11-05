@@ -11,8 +11,8 @@
 
 .summery {
   display: flex;
-  box-sizing: border-box;
   align-items: flex-end;
+  box-sizing: border-box;
   padding: 50px;
 }
 
@@ -28,29 +28,29 @@
 }
 
 .movie-details h1 {
-  color: #fff;
-  font-size: 24px;
   margin: 0;
+  font-size: 24px;
+  color: #fff;
 }
 
 .movie-details p {
-  color: #fff;
   font-size: 16px;
+  color: #fff;
 }
 
 .movie-detial-rating {
-  color: #f00;
-  font-size: 17px;
-  font-weight: normal;
   margin: 0 10px;
+  font-size: 17px;
+  color: #f00;
+  font-weight: normal;
 }
 
 .back-to-movies {
   position: absolute;
-  color: #fff;
-  font-weight: 700;
   top: 50px;
   left: 50px;
+  color: #fff;
+  font-weight: 700;
 }
 
 button {
@@ -76,8 +76,8 @@ button {
 /* TABLET */
 @media (max-width: 1024px) {
   .movie-details-container {
-    display: block;
     position: relative;
+    display: block;
   }
 
   .summery {
@@ -93,7 +93,6 @@ button {
 /* MOBILE */
 @media (max-width: 668px) {
   .summery {
-    /* flex-direction: column; */
     padding: 10px;
   }
 
