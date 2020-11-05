@@ -75,6 +75,7 @@ button {
   background: none;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .back-to-movies a {
@@ -117,5 +118,10 @@ button {
 
   .summery img {
     display: none;
+  }
+
+  .back-to-movies {
+    top: 70px;
+    left: 20px;
   }
 }

@@ -6,15 +6,10 @@ import "./popularList.css";
 
 const PopularList = ({ sorting }) => {
   const [movies, setMovies] = useState([]);
-  const [loading, SetLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   const API_KEY = "f7e0c4070f4665dbae6d58fba626cfe4";
   const URL = `https://api.themoviedb.org/3/movie/${sorting}?api_key=${API_KEY}&language=en-US&page=1`;
-
-  // const POSTER = `https://api.themoviedb.org/3/configuration?api_key=${API_KEY}`;
-
-  console.log("api", URL);
-  // console.log("poster", POSTER);
 
   useEffect(() => {
     fetch(URL)
@@ -22,9 +17,8 @@ const PopularList = ({ sorting }) => {
       .then((json) => {
         setMovies(json.results);
         setTimeout(() => {
-          SetLoading(false);
+          setLoading(false);
         }, 0);
-        console.log("Movies", json.results);
       });
   }, [URL]);
 

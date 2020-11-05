@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+// FOUND THIS CODE. WANT TO LEARN MORE ABOUT THIS:
+
 /**
  * Hook for handling closing when clicking outside of an element
  * @param {React.node} el

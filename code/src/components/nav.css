@@ -21,7 +21,7 @@ h3 {
   justify-content: flex-end;
   align-items: center;
   background: none;
-  width: 250px;
+  width: 200px;
   height: 30px;
   margin: 8px 20px 8px auto;
   padding: 4px 6px;
@@ -43,7 +43,7 @@ h3 {
 
 .menu {
   position: absolute;
-  width: 250px;
+  width: 200px;
   top: 46px;
   right: 0;
   background: rgba(0, 0, 0, 0.6);
