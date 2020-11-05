@@ -19,10 +19,6 @@ code {
   background-color: black;
 }
 
-.movie-list a {
-  width: 25%;
-}
-
 .movie-cards {
   position: relative;
 }
@@ -38,7 +34,7 @@ code {
   position: absolute;
   top: 100;
   bottom: 0;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   margin-left: 20px;
 }
 
@@ -47,6 +43,7 @@ code {
   top: 100;
   bottom: 0;
   margin-left: 20px;
+  margin-bottom: 40px;
 }
 
 .movie-text {
@@ -72,3 +69,61 @@ code {
   min-height: 1100px;
   background-size: cover;
 }
+
+.movie-details {
+  position: relative;
+}
+
+.image-and-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.small-image {
+  border: 5px solid #fff;
+}
+
+.rating {
+  color: red;
+  font-size: 17px;
+  font-weight: 400;
+  margin-left: 10px
+}
+
+.details {
+  height: fit-content;
+  background-color: #000000a1;
+  padding: 10px;
+}
+
+.details h1 {
+  color: #fff;
+}
+
+.details p {
+  color: #fff;
+}
+
+
+@media (min-width: 1024px) {
+.movie-list a {
+    width: 25%;
+}
+
+.image-and-text {
+  display: flex;
+  flex-direction: row;
+}
+
+.movie-info {
+  width: 400px;
+}
+
+.details {
+  margin-left: 20px;
+}
+
+.small-image {
+  margin-left: 50px;
+}
+} 
