@@ -11,7 +11,10 @@ export const Nav = () => {
           Now Playing
         </NavLink>
         <NavLink to="/toprated" className="nav-links">
-          Top Rated Movies
+          Top Rated
+        </NavLink>
+        <NavLink to="/upcoming" className="nav-links">
+          Upcoming
         </NavLink>
       </nav>
     </header>

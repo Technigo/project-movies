@@ -3,6 +3,7 @@
   max-width: 100vw;
   background-size: cover;
   padding: 20px;
+  display: flex;
 }
 
 /* Arrows for going back to movies list */
@@ -20,6 +21,11 @@
 .left {
   transform: rotate(-225deg);
   -webkit-transform: rotate(-225deg);
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
 
 .back-link {
@@ -82,9 +88,59 @@
   margin: 20px;
 }
 
+.more-movies {
+  margin-left: 20px;
+  text-decoration-line: none;
+  -moz-text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+  color: #fff;
+  appearance: none;
+  background: rgba(0,0,0,.5);
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.more-movies:hover {
+  font-weight: bold;
+}
+
 /* Hover effect to make it easier to read based on background */
-.movie-heading:hover, .overview:hover {
+.movie-heading:hover, .overview:hover, .more-movies:hover, .similar-movies-heading:hover {
   text-shadow: 1.5px 1px 2px #000;
+}
+
+.similar-movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 300px;
+  margin-top: 70px;
+  /* visibility: hidden; */
+}
+
+.similar-movie-poster-image {
+  height: 110px;
+  margin: 0;
+}
+
+.similar-movie-poster-image:hover {
+  border: 2px solid white;
+}
+
+@media (max-width: 1024px) {
+  .background-picture {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .similar-movies-container{
+    margin: 0 0 20px 0;
+    width: 800px;
+  }
 }
 
 @media (max-width: 668px) { /* Mobile format */
@@ -92,9 +148,15 @@
     margin: 0;
   }
 
+  .back-link {
+    margin-right: -20px;
+    width: 200px;
+  }
+
   .picture-text-rating-wrapper {
     flex-direction: column;
     align-items: center;
+    padding: 50px 0;
   }
 
   .detail-poster-image {
@@ -103,5 +165,9 @@
 
   .text-rating-overview-wrapper {
     width: 250px;
+  }
+
+  .similar-movies-container {
+    width: 300px;
   }
 }

@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { MovieList } from 'components/MovieList';
-import { TopratedMoviesList } from 'components/TopRatedMoviesList';
+import { TopratedMoviesList } from 'pages/TopRatedMoviesList';
+import { UpcomingMoviesList } from 'pages/UpcomingMoviesList';
 import { MovieDetail } from 'pages/MovieDetail';
 import { Nav } from 'components/Nav';
 import { NotFound } from 'components/NotFound';
@@ -19,6 +20,9 @@ export const App = () => {
         </Route>
         <Route path="/toprated" exact>
           <TopratedMoviesList />
+        </Route>
+        <Route path="/upcoming" exact>
+          <UpcomingMoviesList />
         </Route>
         <Route path="/404">
           <NotFound />

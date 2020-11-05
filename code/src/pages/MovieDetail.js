@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { API_KEY } from 'urls'; 
 import { Link } from 'react-router-dom';
 import { NotFound } from 'components/NotFound';
+import { MovieThumbSimilar } from 'components/MovieThumbSimilar';
 import 'styles/moviedetail.css';
 import { Loader } from 'components/Loader';
 
@@ -12,20 +13,29 @@ export const MovieDetail = () => {
   const [loading, setLoading] = useState(true);
 
   // Fecthing detailed information for the choosen movie
-  
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`)
       .then((res) => {
         return  res.json();
       })
       .then((json) => {
-        setMovies(json)
-        setLoading(false)
+        setMovies(json);
+        setLoading(false);
       })
       .catch((error) => {
-        console.log(error)
+        console.log(error);
       })
-  }, [id])
+  }, [id]);
+
+  const [similarmovies, setSimilarMovies] = useState([]);
+  useEffect(() => {
+    fetch(`https://api.themoviedb.org/3/movie/${id}/similar?api_key=${API_KEY}&language=en-US&page=1`)
+      .then(res => res.json())
+      .then(json => {
+        setSimilarMovies(json.results)
+        setLoading(false);
+      })
+  }, [id]);
 
   // Adds loader while the page is loading and until the API is loaded
   if (loading === true) {
@@ -66,6 +76,14 @@ export const MovieDetail = () => {
               <p className="overview">{movies.overview}</p>
             </div>    
           </div>
+        </section>
+        <section className="similar-movies-container">
+          <h3 className="similar-movies-heading">Similar movies to {movies.title}:</h3>
+            <div>
+              {similarmovies.map((movie) => (
+              <MovieThumbSimilar key={movie.id} {...movie} />
+              ))}
+            </div>
         </section>
       </main>
     );

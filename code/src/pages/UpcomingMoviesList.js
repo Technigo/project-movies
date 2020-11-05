@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { TOPRATED_MOVIES_URL } from 'urls';
+import { UPCOMING_MOVIES_URL } from 'urls';
 import 'styles/movielist.css';
 import { MovieThumb } from 'components/MovieThumb';
 
-export const TopratedMoviesList = () => {
-  const [topratedmovies, setTopratedMovies] = useState([]);
+export const UpcomingMoviesList = () => {
+  const [upcomingmovies, setUpcomingMovies] = useState([]);
 
     useEffect(() => {
-    fetch(TOPRATED_MOVIES_URL)
+    fetch(UPCOMING_MOVIES_URL)
     .then(res => res.json())
     .then(json => {
-      setTopratedMovies(json.results)
+      setUpcomingMovies(json.results)
     })
   }, []);
 
@@ -18,10 +18,9 @@ export const TopratedMoviesList = () => {
   // where we pick the objects we need
   return (
     <section className="poster-container">
-      {topratedmovies.map((movie) => (
+      {upcomingmovies.map((movie) => (
         <MovieThumb key={movie.id} {...movie} />
       ))}
     </section>
   );
 };
-
