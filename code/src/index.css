@@ -132,10 +132,6 @@ code {
   padding:5px;
 }
 
-.movie-detail-title {
-  display: flex;
-  flex-direction: row;
-}
 
 .rating  {
   color: red;

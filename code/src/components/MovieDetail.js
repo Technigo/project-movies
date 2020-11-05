@@ -38,7 +38,7 @@ export const MovieDetail = () => {
 
             <div className="movie-detail-text"> 
                 <h1 className="movie-detail-title">{movies.title}
-                <span className="rating"><p> {movies.vote_average}/10</p></span>
+                <span className="rating">{movies.vote_average}/10 </span>
                 </h1> 
                 <p className="overview">{movies.overview}</p>     
             </div>

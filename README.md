@@ -1,10 +1,9 @@
 # Project Movies
 
 This project was made during the Technigo Bootcamp!
-The project was made using React and the main goal was to create 
-using browserRouter, Switch and Route.
+The project was made using React and the main goal was to create a multi-page 
+using the MovieDB API. 
 
-The data comes from themoviedb Api.s
 
 
 ## The problem
