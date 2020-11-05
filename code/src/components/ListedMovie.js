@@ -4,9 +4,20 @@ import { Link } from 'react-router-dom';
 // Styling
 import 'assets/MovieList.css';
 
+// ----------------------------------------------------------------------------------------
+
 const ListedMovie = ({ id, title, releaseDate, posterImgSrc }) => {
+  // const [boxVisibility, setBoxVisibility] = useState('hidden');
+
+  // const handleMouseEnter = () => {
+  //   setBoxVisibility('visible');
+  // };
+
   return (
-    <section className="movie-list--movie-wrapper">
+    <section
+      className="movie-list--movie-wrapper"
+      // onMouseEnter={handleMouseEnter}
+    >
       {/* Link to movie-page */}
       <Link key={id} to={`/movies/${id}`}>
         <img className="movie-list--img" src={posterImgSrc} alt={title} />

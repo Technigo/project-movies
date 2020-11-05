@@ -30,9 +30,10 @@
   border-radius: 4px;
   text-align: left;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .top-nav--dropdown--select:hover {
-  color: #666;
-  border: 1px solid #666;
+  background: #fff;
+  color: #000;
 }

@@ -4,6 +4,8 @@ import { useHistory } from 'react-router-dom';
 // Styling
 import 'assets/NotFound.css';
 
+// ----------------------------------------------------------------------------------------
+
 const NotFound = () => {
   const history = useHistory();
   const handleButton = () => {

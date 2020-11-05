@@ -11,6 +11,8 @@ import {
 // Styling
 import 'assets/TopNav.css';
 
+// ----------------------------------------------------------------------------------------
+
 const TopNav = ({ setCategoryUrl }) => {
   const history = useHistory();
   return (

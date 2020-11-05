@@ -1,4 +1,8 @@
 /* --- MOVIE --- */
+a {
+  text-decoration: none;
+}
+
 .movie--wrapper {
   min-width: 100vw;
   min-height: calc(100vh - 65px);
@@ -7,6 +11,12 @@
   padding: 35px 50px;
   color: #fff;
   background-color: #000;
+}
+
+.movie--buttons--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .movie--details {
@@ -46,28 +56,17 @@
   margin-bottom: 20px;
 }
 
-/* --- BACK - BUTTON --- */
-.movie--back-button {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
+/* FOR SIMILAR MOVIES : Back-button */
+.similar-movies--back-button {
+  z-index: 2;
+  position: fixed;
+  left: 55px;
+  top: 80px;
 }
 
-.movie--back-button--img {
-  width: 30px;
-  filter: invert(1);
-}
+/* .similar-movies--back-button:hover {
 
-.movie--back-button--text {
-  transition: margin 0.2s ease-in-out;
-  margin: 0 0 5px 5px;
-}
-
-.movie--back-button:hover .movie--back-button--text {
-  margin: 0 0 5px 10px;
-}
+} */
 
 /* --- MEDIA QUERIES --- */
 @media (max-width: 830px) {
@@ -77,10 +76,6 @@
 
   .movie--details {
     position: static;
-  }
-
-  .movie--back-button {
-    margin-bottom: 45px;
   }
 }
 

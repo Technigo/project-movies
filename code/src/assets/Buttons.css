@@ -1,0 +1,73 @@
+/* --- BACK - BUTTON --- */
+.movie--back-button,
+.movie--similar-movies-button,
+.movie--similar-movies--back-button {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.movie--similar-movies--back-button {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 5px 0 0;
+  box-shadow: 0 0 5px #fff;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.movie--similar-movies--back-button:hover {
+  background: #fff;
+}
+.movie--similar-movies--back-button:hover
+  .movie--similar-movies--back-button--img {
+  filter: none;
+}
+
+.movie--back-button--img,
+.movie--similar-movies-button--img,
+.movie--similar-movies--back-button--img {
+  width: 30px;
+  filter: invert(1);
+}
+
+.movie--similar-movies-button--img {
+  transform: scaleX(-1);
+}
+
+.movie--back-button--text {
+  transition: margin 0.2s ease-in-out;
+  margin: 0 0 5px 5px;
+}
+
+.movie--back-button:hover .movie--back-button--text {
+  margin: 0 0 5px 10px;
+}
+
+.movie--similar-movies-button--text {
+  margin: 0 5px 5px 0;
+  transition: margin 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.movie--similar-movies-button:hover .movie--similar-movies-button--text {
+  margin: 0 10px 5px 0;
+}
+
+@media (max-width: 830px) {
+  .movie--back-button,
+  .movie--similar-movies-button {
+    margin-bottom: 45px;
+  }
+}

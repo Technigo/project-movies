@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Redirect } from 'react-router-dom';
 
 // Components
 import Movie from '../components/Movie';
 import Loading from '../components/Loading';
+import { BackButton } from '../components/BackButton';
+import SimilarMoviesButton from '../components/SimilarMoviesButton';
 
 // API Urls
 import { ApiKey } from '../components/ApiKeys';
@@ -11,6 +13,8 @@ import { PosterImgUrl, BackdropImgUrl } from '../components/ApiUrls';
 
 // Styling
 import 'assets/MoviePage.css';
+
+// ----------------------------------------------------------------------------------------
 
 const MoviePage = ({ movies }) => {
   const params = useParams();
@@ -25,12 +29,13 @@ const MoviePage = ({ movies }) => {
       .then((json) => {
         setMovieDetails(json);
       });
-  }, [params.id, movies]);
+  }, [params.id]);
 
   return (() => {
     // Check if fetch is done and movieDetails have data
-    // - else return Loader
-    if (movieDetails) {
+    // or if fetch was not successful, return redirect to 404,
+    // else return Loader
+    if (movieDetails.id && !movieDetails.success) {
       return (
         <section
           className="movie--wrapper"
@@ -38,15 +43,11 @@ const MoviePage = ({ movies }) => {
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(${BackdropImgUrl}${movieDetails.backdrop_path})`,
           }}
         >
-          {/* Returns the user to list of movies */}
-          <Link className="movie--back-button" key={movies.id} to="/">
-            <img
-              alt="back-button"
-              className="movie--back-button--img"
-              src="../images/noun_back arrow_2223783.svg"
-            />
-            <span className="movie--back-button--text">Movies</span>
-          </Link>
+          {/* Buttons for moving back + to similar movies */}
+          <div className="movie--buttons--wrapper">
+            <BackButton key={movies.key} />
+            <SimilarMoviesButton />
+          </div>
 
           {/* Movie component page with detailed info */}
           <Movie
@@ -57,6 +58,8 @@ const MoviePage = ({ movies }) => {
           />
         </section>
       );
+    } else if (movieDetails.success === false) {
+      return <Redirect to="/404" />; // Error page
     } else {
       return <Loading />; // Loader animation
     }

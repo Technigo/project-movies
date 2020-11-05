@@ -11,9 +11,12 @@ import TopNav from './components/TopNav';
 import ListedMovie from './components/ListedMovie';
 import MoviePage from './pages/MoviePage';
 import NotFound from './pages/NotFound';
+import SimilarMovies from './pages/SimilarMovies';
 
 // API-urls
 import { ApiUrl, PosterImgUrl } from './components/ApiUrls';
+
+// ----------------------------------------------------------------------------------------
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
@@ -29,6 +32,8 @@ export const App = () => {
 
   useEffect(() => {
     getData();
+    // Disabling error for not declaring function within useEffect below:
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categoryUrl]); // Get data on every change of categoryUrl
 
   return (
@@ -57,13 +62,17 @@ export const App = () => {
             <MoviePage movies={movies} />
           </Route>
 
+          {/* Route to similar movies for each single movie */}
+          <Route exact path="/movies/:id/:similar" name="similar-movies">
+            <SimilarMovies movies={movies} />
+          </Route>
+
           {/* Route to all pages that aren't specified */}
           <Route exact path="/404">
             <NotFound />
           </Route>
 
           {/* Redirects */}
-          <Redirect from="movies/*" to="/404" />
           <Redirect to="/404" />
         </Switch>
       </main>
