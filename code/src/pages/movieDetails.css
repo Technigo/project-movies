@@ -57,7 +57,7 @@
 .details-text {
     margin: 15px;
     max-width: 400px;
-    background: rgb(220, 220, 220, 0.6);
+    background: rgb(8, 8, 8, 0.565);
     padding: 20px;
 }
 
@@ -79,8 +79,6 @@
 
 @media (min-width: 667px) {
 
-    
-
     .details-summary img {
       display: block;
       border: 3px solid white;
@@ -89,7 +87,7 @@
 
     .details-text {
       max-width: 400px;
-      background: rgb(220, 220, 220, 0.6);
+      background: rgb(8, 8, 8, .565);
       padding-bottom: 0px;
       margin-bottom: 0px;
 
