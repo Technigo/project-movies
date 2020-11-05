@@ -4,32 +4,38 @@ import { Link, useHistory } from "react-router-dom";
 
 import "./movieDetail.css";
 import Loading from "../components/Loading";
-import NotFound from "./NotFound";
+// import NotFound from "./NotFound";
 
 const MovieDetail = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState({});
+  const [credits, setCredits] = useState({});
   const [status, setStatus] = useState(200);
-  const [loading, SetLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   const history = useHistory();
 
   const API_KEY = "f7e0c4070f4665dbae6d58fba626cfe4";
   const URL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US`;
+  const URL_CREDITS = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}&language=en-US`;
 
   // console.log("API:", URL);
 
   useEffect(() => {
-    fetch(URL)
+    Promise.all([fetch(URL), fetch(URL_CREDITS)])
       .then((res) => {
-        console.log(res.status);
-        setStatus(res.status);
-        return res.json();
+        return Promise.all(
+          res.map((res) => {
+            setStatus(res.status);
+            return res.json();
+          })
+        );
       })
       .then((json) => {
-        setMovie(json);
+        setMovie(json[0]);
+        setCredits(json[1]);
         setTimeout(() => {
-          SetLoading(false);
+          setLoading(false);
         }, 500);
       })
       .catch((error) => {
@@ -43,6 +49,8 @@ const MovieDetail = () => {
   }
 
   console.log("Movie", movie);
+  console.log("Credits", credits);
+
   return (
     <>
       {loading ? (
@@ -74,6 +82,12 @@ const MovieDetail = () => {
                   {movie.vote_average}/10
                 </span>
               </h1>
+
+              {credits.cast.slice(0, 3).map((actor) => (
+                <Link to={`/person/${actor.id}`}>
+                  <p>{actor.name}</p>
+                </Link>
+              ))}
               <p>{movie.overview}</p>
             </div>
           </div>

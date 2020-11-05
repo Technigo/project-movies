@@ -65,7 +65,7 @@ h3 {
 .menu li {
   box-sizing: border-box;
   height: 40px;
-  padding-top: 3px;
+  padding-top: 8px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.6);
 }
 

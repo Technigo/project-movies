@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import PopularList from "./pages/PopularList";
 import MovieDetail from "./pages/MovieDetail";
 import NotFound from "./pages/NotFound";
+import Person from "./pages/Person";
 import Nav from "./components/Nav";
 
 export const App = () => {
@@ -26,6 +27,9 @@ export const App = () => {
         </Route>
         <Route path="/movies/:movieId">
           <MovieDetail />
+        </Route>
+        <Route path="/person/:personId">
+          <Person />
         </Route>
         <Route path="/404">
           <NotFound />

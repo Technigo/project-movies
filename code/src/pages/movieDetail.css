@@ -42,13 +42,14 @@
   margin: 0 10px;
   font-size: 17px;
   color: #f00;
-  font-weight: normal;
+  font-weight: n500;
 }
 
 .back-to-movies {
   position: absolute;
-  top: 50px;
+  top: 70px;
   left: 50px;
+  font-size: 20px;
   color: #fff;
   font-weight: 700;
 }
@@ -56,6 +57,7 @@
 button {
   background: none;
   border: none;
+  outline: none;
 }
 
 .back-to-movies a {
