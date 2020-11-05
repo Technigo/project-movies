@@ -94,14 +94,7 @@ h4 {
 
 .movie-detail {
   width: 100%;
-}
-
-.movie-detail-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  min-height: 90vh;
+  height: 100vh;
 }
 
 .overview {
@@ -211,6 +204,11 @@ button:hover {
     padding: 7px;
     margin: 0;
   }
+
+  .movie-detail {
+    width: 100%;
+    height: 125vh;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
@@ -234,6 +232,7 @@ button:hover {
     align-items: center;
     padding: 6px;
     flex-direction: column;
+    justify-content: center;
   }
   .poster {
     width: 66%;
