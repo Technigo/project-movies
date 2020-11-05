@@ -15,7 +15,7 @@ export const MovieDetails = () => {
         .then((json) => {
             setMovies(json)
         })
-    }, [id]);
+    }, [MOVIE_DETAILS]);
 
     return  (
     <section className="movie-details">          
