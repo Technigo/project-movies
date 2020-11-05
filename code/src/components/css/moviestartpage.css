@@ -1,4 +1,5 @@
-.movie-list {
+.movie-start-page {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
 }

@@ -1,0 +1,43 @@
+.about-section {
+  display: flex;
+  color: white;
+  min-height: 100vh;
+}
+
+.background-image {
+  position: relative;
+  width: 100%;
+}
+
+.content-container {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+}
+
+.poster-image {
+  border: solid white 6px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 40px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.rating {
+  color: red;
+  font-weight: normal;
+  font-size: 20px;
+  margin-left: 10px;
+  }
+
+.movie-description {
+  width: 35%;
+  font-size: 18px;
+}

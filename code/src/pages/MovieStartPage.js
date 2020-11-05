@@ -17,7 +17,7 @@ export const MovieStartPage = () => {
   }, []);
 
   return (
-    <section className="movie-list">
+    <section className="movie-start-page">
       {movies.map((movie) => (
         <MovieCard key={movie.id} {...movie} />
       ))}

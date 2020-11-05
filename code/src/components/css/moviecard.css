@@ -1,15 +1,43 @@
 .movie-card {
   display: flex;
-  border: blue solid 2px;
-  flex-wrap: wrap;
-  width: 100%;
+  height: auto;
+  position: relative;
+  width: 25%;
 }
 
-.movie-title {
-  font-size: 18px;
-  margin: 0;
+.movie-card:hover .card-content-container {
+  transition: 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.movie-card:hover .movie-image {
+  filter: brightness(0.3);
 }
 
 .movie-image {
   width: 100%;
+}
+
+.card-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 30px;
+}
+
+.movie-title {
+  font-size: 32px;
+  margin: 0;
+}
+
+.release-date {
+  margin: 18px 0;
 }
