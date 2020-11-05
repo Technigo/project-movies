@@ -37,7 +37,7 @@ export const MovieDetails = () => {
               <h3><span className="votes">{details.vote_average}</span> ({details.vote_count} votes) </h3>
               <h3 className="runtime">Runtime {details.runtime} minutes </h3>
               <a className="imdb" href={`https://www.imdb.com/title/${details.imdb_id}`}>
-                <img src="../images/imdb.svg" className="imdb-logo"/></a>
+                <img src="../images/imdb.svg" className="imdb-logo" alt="imdb logo"/></a>
               <p className="overview">{details.overview}</p>
             </div>  
           </div>
