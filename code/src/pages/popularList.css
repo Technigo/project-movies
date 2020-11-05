@@ -16,6 +16,7 @@
     width: 25%;
 }
 
+
 a {
     border: none;
     position: relative;
@@ -41,7 +42,7 @@ img {
 }
 
 @media (min-width: 667px) {
-    h2 {
+    .list-title {
         display: block;
     }
 }
