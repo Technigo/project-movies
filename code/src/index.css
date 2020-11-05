@@ -1,13 +1,115 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  background-color: black;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  position: relative;
+  height: 500px;
+  margin-bottom: 6px;
+}
+
+.card-container:hover>.card-container__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  z-index: 1;
+  color: white;
+  width: 100%;
+  height: 100%;
+  background-color: #0000008c;
+  padding-left: 10px;
+}
+
+.card-container__details {
+  display: none;
+}
+
+.card-container__details>h1 {
+  font-size: xx-large;
+  font-weight: bolder !important;
+}
+
+.card-container__details>h3 {
+  font-weight: 100;
+}
+
+.card-container__img {
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.movie-info-container {
+  min-height: 100vh;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+.movie-info-container .button {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  color: white;
+  border: none;
+  text-decoration: none;
+  font-size: large;
+  font-weight: 700;
+}
+
+.button:hover>.button-text {
+  padding-left: 4px;
+  transition: 0.2s;
+}
+
+.button-text {
+  margin-left: 2px;
+  font-size: medium;
+}
+
+.movie-info-container__details {
+  position: relative
+}
+
+.movie-info__info-img {
+  position: absolute;
+  border: 5px solid white;
+  top: 220px;
+  left: 50px;
+  width: 20%
+}
+
+.details {
+  position: absolute;
+  left: 400px;
+  top: 550px;
+  margin-left: 8px;
+}
+
+.details h2 {
+  font-weight: bold
+}
+
+.rating {
+  font-weight: normal;
+  font-size: 17px;
+  margin-left: 2px;
+  font-weight: 100;
+  color: red;
+}
+
+.details p {
+  max-width: 400px;
+  font-size: medium;
 }
