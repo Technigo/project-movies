@@ -1,44 +1,29 @@
 import React from "react";
-// import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-// import { MovieDetails } from "components/MovieDetails";
+import { MovieDetails } from "pages/MovieDetails";
 import { MovieList } from "components/MovieList";
 // import { NotFound } from "components/NotFound";
 
 
 export const App = () => {
   return (
-<section>
-<MovieList />
 
-</section>
-  
-
-
-
-    // <BrowserRouter>
-    //   <main>
-    //   <Switch>
-    //     <Route path="/" exact>
-    //       <MovieList />
-    //     </Route>
-    //     <Route path="/movie/:id">
-    //       <MovieDetails />
-    //     </Route>
-    //     <Route path="/404">
-    //       <NotFound />
-    //     </Route>
-    //     <Redirect 
-    //     to="404"
-    //      />
-    //   </Switch>
-    //   </main>
-    // </BrowserRouter>
+    <BrowserRouter>
+      <main>
+      <Switch>
+        <Route path="/" exact>
+          <MovieList />
+        </Route>
+        <Route path="/movie/:key" exact>
+          <MovieDetails />
+        </Route>
+      </Switch>
+      </main>
+    </BrowserRouter>
 
  )
 };
 
 
     
-
-
