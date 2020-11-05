@@ -12,5 +12,5 @@ export const NotFound = () => {
         <span className="not-found-text-arrow">{'Movies'}</span>
       </Link>
     </section>
-    );
+  );
 };
