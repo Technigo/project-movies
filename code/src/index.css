@@ -1,21 +1,77 @@
+
+/* * {
+  box-sizing: border-box;
+} */
+
 body {
-  margin: 30;
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
-  color: aliceblue;
-  /* display: flex;
-  flex-wrap:wrap;
-  flex-direction: column; */
-
-
+  background: #000;
+  color: #fff;
 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 50px;
+}
+
+/* grandparent? */
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+/* container parent */
+.movie-thumb{
+  border: blue solid 4px;
+    width: 25%;
+    position: realtive;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+}
+
+/*child syskon1   h1 */
+.movie-name {
+  position: absolute;
+  border:red solid 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* child syskon2 o förälder*/
+.movie-thumb-image_wrapper {
+  border: saddlebrown 5px solid;
+
+}
+ /* child och syskonA bilden */
+.movie-thumb-image {
+  border: yellow 3px solid;
+}
+
+ /* child och syskonB star */
+.movie-thumb-image-voted{
+  border:red solid 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 4px;
+  padding-top: 4px;
+
 }

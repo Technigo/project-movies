@@ -5,10 +5,10 @@ export const MovieThumb = ({name, background_image, voted, key}) => {
   return (
   <Link to={`/movie/${key}`}>
    <section className="movie-thumb">
-      {name}
+     <h1 className="movie-name">{name}</h1> 
       <div className="movie-thumb-image_wrapper">
     <img className="movie-thumb-image" src={`http://image.tmdb.org/t/p/w300/${background_image}`} alt={name}/>
-<p className="movie-thumb-image-description">{voted}</p>
+<p className="movie-thumb-image-voted">{voted} ⭐️ </p>
       </div>
 
       </section>
