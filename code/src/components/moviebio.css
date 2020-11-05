@@ -17,7 +17,7 @@
 }
 
 .bio-container {
-  margin: 0 0 80px 20px;
+  margin: 0 0 100px 20px;
   max-width: 400px;
 }
 
@@ -35,6 +35,6 @@
 
 .detail-overview {
   color: #ffffff;
-  line-height: 1,5;
+  line-height: 1,5px;
 }
 

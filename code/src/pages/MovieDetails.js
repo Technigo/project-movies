@@ -23,12 +23,12 @@ export const MovieDetails = () => {
   return (
     
     <section className="detail-section">
-      <div className="return-arrow">
       <Link to="/" exact="true">
+        <div className="return-arrow">
           <Arrow />
-          <p>Movies</p>
+          <p className="return-text"> Movies</p>
+        </div>
       </Link>
-      </div>
       <img className="background-image" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title}/>
       < MovieBio {...movie}
       /> 
