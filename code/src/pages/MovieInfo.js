@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons'
+import Loader from 'react-loader-spinner'
 
 
 
@@ -15,27 +16,29 @@ export const MovieInfo = () => {
     const history = useHistory();
     const moviesUrl = `${baseAPI}movie/${id}?api_key=${apiKey}&language=en-US`;
     const [movieInfo, setMovieInfo] = useState({});
-
+    const [loader, setLoader] = useState(false)
 
     useEffect(() => {
+        setLoader(true)
         fetch(moviesUrl)
             .then(response => response.json())
             .then(json => {
                 console.log(json)
                 if (json.success === false) {
-                    history.push("/");
+                    history.push("/error");
                 }
                 setMovieInfo(json)
             })
+            .finally(() => setLoader(false))
     }, [id])
 
 
-
-
-    return (
-
+    return loader ? <Loader type="Hearts" color="red" height={400} width={400} className="loader" /> :
         <div className="movie-info-container"
-            style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url('https://image.tmdb.org/t/p/w1280${movieInfo.backdrop_path}')` }}>
+            style={{
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), 
+            url('https://image.tmdb.org/t/p/w1280${movieInfo.backdrop_path}')`
+            }}>
 
             <Link className="button" to={"/"}>
                 <FontAwesomeIcon icon={faChevronCircleLeft} size="lg" />
@@ -43,13 +46,13 @@ export const MovieInfo = () => {
             </Link>
 
             <div className="movie-info-container__details">
-                <img className="movie-info__info-img" src={`https://image.tmdb.org/t/p/w300${movieInfo.poster_path}`} alt={movieInfo.title} />
+                <img className="movie-info__info-img"
+                    src={`https://image.tmdb.org/t/p/w300${movieInfo.poster_path}`}
+                    alt={movieInfo.title} />
                 <div className="details">
                     <h2>{movieInfo.title}  <span className="rating">{movieInfo.vote_average}/10</span></h2>
                     <p>{movieInfo.overview}</p>
                 </div>
             </div>
         </div>
-
-    )
 }

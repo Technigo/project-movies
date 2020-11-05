@@ -113,3 +113,16 @@ body {
   max-width: 400px;
   font-size: medium;
 }
+
+.error {
+  background-color: white;
+  color: red;
+  font-size: xx-large;
+  font-weight: bolder;
+  margin: 300px;
+  max-width: 600px;
+}
+
+.loader {
+  margin: 200px 400px;
+}
