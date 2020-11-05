@@ -13,7 +13,7 @@ export const MovieThumb = ({ id, poster_path, title, release_date }) => {
           alt={title}
         />
         <div className='movie-overlay'>
-          <h2 class='movie-thumb-title'>{title}</h2>
+          <h2 className='movie-thumb-title'>{title}</h2>
           <p className='released-date'>Released {release_date}</p>
         </div>
       </Link>
