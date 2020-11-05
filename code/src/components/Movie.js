@@ -15,8 +15,14 @@ export const Movie = ({
         style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0) 20%, rgb(0,0,0) 100%), url(https://image.tmdb.org/t/p/w1280${backdrop_path})`}}>
         <div className="movie-container-one">
             <Link to="/"> 
-                <button type="button">Back</button>
+                <div className="back-arrow">
+                <p classname="text-animation"><i class="arrow left"></i>
+                    Movies
+                    </p>
+                </div>
+                
             </Link>
+        
         <img src={`https://image.tmdb.org/t/p/w1280${poster_path}`}
         alt={title} 
         />
