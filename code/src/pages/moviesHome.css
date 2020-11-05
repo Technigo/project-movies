@@ -10,6 +10,7 @@ a {
 .movie-wrapper {
   position: relative;
   width: 25%;
+  margin-bottom: -4px;
 }
 .movie-wrapper img {
   width: 100%;
