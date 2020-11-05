@@ -22,12 +22,12 @@ const MovieDetails = ({ title, overview, backdrop_path }) => {
       // .then(data => console.log(data));
       .then(data => setMovie(data));
   }, [id])
-  const BACKDROP_URL = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`;
+  const BACKDROP_URL = `https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`;
   const POSTER_URL = `https://image.tmdb.org/t/p/w342${movie.poster_path}`;
   //onclick(history.goBack)
-  // console.log(movie);
+
   return (
-    <section>
+    <section className="movie-details-main-container">
       <img className="movie-details-background" src={BACKDROP_URL} alt={movie.title} />
       <div className="movie-details">
         <h1>{movie.title}</h1>
