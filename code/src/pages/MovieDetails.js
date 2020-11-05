@@ -2,19 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { API_key } from "../API_info";
-import Button from "components/Button";
+import Button from "../components/Button";
 
 import "./movie-details.css";
 
-//make use of the linked slug here somehow ... props cannot be used
-
-const MovieDetails = ({ title, overview, backdrop_path }) => {
-  // the id is captured by MovieDetails using useParams hook; 
-  //  then we can do whatever we want with it
+const MovieDetails = () => {
   const [movie, setMovie] = useState({});
+  //id is captured by useParams and ready to use
   const { id } = useParams();
-
-  // console.log({ id });
 
   useEffect(() => {
     //API url pasted from API_info and inserted id
@@ -25,7 +20,6 @@ const MovieDetails = ({ title, overview, backdrop_path }) => {
   }, [id])
   const BACKDROP_URL = `https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`;
   const POSTER_URL = `https://image.tmdb.org/t/p/w342${movie.poster_path}`;
-  //onclick(history.goBack)
 
   return (
     <section className="movie-details-main-container">

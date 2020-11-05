@@ -1,5 +1,4 @@
 .movie-card {
-  /* border: 1px solid red; */
   width: 25%;
   position: relative;
   display: flex;
@@ -30,4 +29,12 @@
 .movie-details:hover {
   background: rgba(0, 0, 0, .75);
   opacity: 1;
+}
+
+.movie-details>p {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 30px;
 }

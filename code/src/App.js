@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect, Link } from "react-router-dom";
 
 import MovieList from "./components/MovieList";
 import MovieDetails from "./pages/MovieDetails";
 import { MOVIES_API } from "./API_info";
+import Button from "./components/Button";
 
 export const App = () => {
 

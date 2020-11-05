@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   justify-content: flex-end;
-  border: 1px solid blueviolet;
+  /* border: 1px solid blueviolet; */
 }
 
 .movie-details-background {
@@ -12,15 +12,11 @@
 .poster-and-movie-details {
   position: absolute;
   display: flex;
-  /* flex-direction: column; */
-  /* top: 0;
-  right: 0; */
   bottom: 0;
   left: 0;
-  /* justify-content: flex-end; */
   color: #fff;
   padding: 50px;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 
 .poster-and-movie-details>img {
@@ -34,7 +30,9 @@
   flex-direction: column;
   justify-content: flex-end;
   margin-left: 20px;
-  border: 1px solid green;
+  background: rgba(0, 0, 0, .55);
+  padding: 5px;
+  /* border: 1px solid green; */
 }
 
 h1 {

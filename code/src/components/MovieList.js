@@ -15,12 +15,11 @@ const MovieList = ({ title, vote_average, release_date, poster_path, id }) => {
         <img className="movie-img" src={POSTER_URL} alt={title} />
         <div className="movie-details">
           <h1>{title}</h1>
-          <p>Rating {vote_average}/10</p>
+          {/* <p>Rating {vote_average}/10</p> */}
           <p>Released {release_date}</p>
         </div>
       </Link>
     </div >
-
   );
 };
 
