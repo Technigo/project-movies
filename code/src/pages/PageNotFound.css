@@ -16,24 +16,6 @@
   height: 200px;
 }
 
-.mustache-icon{
-  display:flex;
-  flex-direction: row;
-  align-items:center;
-  margin-top: 2.5vh;
-}
-
-.mustache-icon svg {
-  fill: #767676;
-  width: 50px;
-  margin-right: 10px;
-}
-
-.go-back{
-  color: #fff;
-  font-size: 1.5em;
-}
-
 @media screen and (min-width:768px) {
   .not-found-wrapper{
     margin-top: 10vh;

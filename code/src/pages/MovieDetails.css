@@ -23,13 +23,12 @@
   padding: 50px;
 } 
 
-
 .detail-text-wrapper{
   margin-left: 20px;
 }
 
 .detail-movie-img{
-  width: 83%;
+  width: 70%;
   border: 5px solid white;
 }
 
