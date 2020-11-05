@@ -1,13 +1,23 @@
 .error-div {
-  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .error-text {
   color: white;
 }
 
+.error-gif {
+  margin: 20px;
+  width: 250px;
+}
+
 .back-home-link {
-  text-decoration: none;
+  text-decoration-line: none;
+  -moz-text-decoration-line: none;
+  -webkit-text-decoration-line: none;
   color: white;
   transition: ease 0.2s;
 }
@@ -15,4 +25,12 @@
 .back-home-link:hover {
   font-size: 18px;
   letter-spacing: 1px;
+}
+
+@media (max-width: 668px) {
+  /* Smaller text in mobile format */
+  .error-text {
+    font-size: 22px;
+    margin: 15px;
+  }
 }

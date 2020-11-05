@@ -24,9 +24,11 @@ export const MovieDetail = () => {
       })
   }, [id])
 
-  // Check wheather the movie picture is found in the API or not, 
-  // if not in this API list the user comes to the Not Found page 
+  // Check wheather the movie picture in the API or not, 
+  // if not in this API list the user comes to the Not Found page. 
   // where it is possible to go back to the home page.
+  // Since this is a list of newly released movies I also added a statement checking
+  // the release date, otherwise I got a lot of old movies. 
   if (movies.backdrop_path === null || movies.backdrop_path === undefined) {
     return  <NotFound />
   } else {
@@ -43,7 +45,7 @@ export const MovieDetail = () => {
               <i className="arrow left"></i>
               <i className="arrow left"></i>
             </span>
-            Movies
+            Back to Home Page
           </Link>
           <div className="picture-text-rating-wrapper">
             <img 
@@ -54,7 +56,7 @@ export const MovieDetail = () => {
             <div className="text-rating-overview-wrapper">
               <div className="top-info">
                 <h2>{movies.title} 
-                  <span className="rating">{movies.vote_average}/10</span>
+                  <span className={movies.vote_average > 8.0 ? "rating high" : "rating low"}>{movies.vote_average}/10</span>
                 </h2>
               </div>
               <p className="overview">{movies.overview}</p>

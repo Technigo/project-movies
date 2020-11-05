@@ -1,0 +1,53 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 2px;
+  border-bottom: 3px solid #fff;
+  width: 100vw;
+}
+
+.top-heading {
+  margin: 15px 10px 15px 60px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin: 15px 60px 15px 10px;
+}
+
+.nav-links {
+  padding: 0 20px;
+  text-decoration-line: none;
+  -moz-text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+  color: #fff;
+  font-size: 20px;
+}
+
+a.active { /* When the link is activated different styling is showed */
+  color: #8c0e1b;
+  font-weight: bold;
+}
+
+@media (max-width: 668px) { /* Mobile format */
+  /* The main change for mobile format is that the content in 
+  the top navbar are in column instead of on a row */
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-heading {
+    margin: 20px 0 6px 0;
+  }
+
+  nav {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .nav-links {
+    padding: 6px 0;
+  }
+}

@@ -24,7 +24,9 @@
 
 .back-link {
   color: #fff;
-  text-decoration: none;
+  text-decoration-line: none;
+  -moz-text-decoration-line: none;
+  -webkit-text-decoration-line: none;
   font-weight: bold;
   margin: 0 0 0 50px;
   display: flex;
@@ -60,18 +62,22 @@
 .rating {
   font-size: 17px;
   margin-left: 10px;
+}
+
+/* Different color based on if rating is below or above 8.0 */
+.low {
   color: #ed1909;
+}
+
+.high {
+  color: #278f5c;
 }
 
 .overview {
   margin: 20px;
 }
 
-@media (max-width: 1023px) {
-  
-}
-
-@media (max-width: 668px) {
+@media (max-width: 668px) { /* Mobile format */
   body {
     margin: 0;
   }
