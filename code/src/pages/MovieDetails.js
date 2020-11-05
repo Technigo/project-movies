@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { NotFound } from './NotFound.js'
+import { Loader } from '../components/Loader.js'
 
 export const MovieDetails = () => {
 
@@ -11,13 +12,18 @@ export const MovieDetails = () => {
   const MOVIE_URL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=c07a4dcb1d91b54eb3b153e458e26489`
 
   const [movie, setMovie] = useState({})
+  const [status, setStatus] = useState()
 
   const getMovie = () => {
     fetch(MOVIE_URL)
-      .then(response => response.json())
+      .then(response => {
+        console.log(response.status)
+        setStatus(response.status)
+        return response.json()
+      })
       .then(json => {
         setMovie(json)
-        //setTimeout(function () { alert("hej") }, 3000)
+        // use setTimeout? to have the loader go for a little longer?
       })
   }
 
@@ -25,7 +31,7 @@ export const MovieDetails = () => {
 
   return (
     <>
-      {parseInt(movieId) === movie.id ? (
+      {status === 200 && parseInt(movieId) === movie.id ? (
         <div className="movie-details">
           <img className="backdrop" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title}></img>
           <div className="details-container">
@@ -38,12 +44,19 @@ export const MovieDetails = () => {
               <p>{movie.overview}</p>
             </div>
           </div>
+          {console.log("data fetched and movie match => movie details")}
         </div >
-      ) : (
+      ) : status === 404 ? (
+        <>
           <NotFound />
-          // will show NotFound for all movies, as the data takes time to load and hence I will never have a match for movieId and movie.id as of now
-          // will need to google on response.status and setTimeout
-        )
+          {console.log("data could not be fetched => not found")}
+        </>
+      ) : (
+            <>
+              <Loader />
+              {console.log("else => loader")}
+            </>
+          )
       }
     </>
   )
