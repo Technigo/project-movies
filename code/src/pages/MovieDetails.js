@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 
 import { API_KEY } from './MovieList'
 import { MovieBio } from '../components/MovieBio'
+import './moviedetails.css'
 
 
 export const MovieDetails = () => {
@@ -18,8 +19,8 @@ export const MovieDetails = () => {
   useEffect(fetchDetails, [id]);
 
   return (
-    <section>
-      <img src={`https://image.tmdb.org/t/p/w342${movie.backdrop_path}`} alt={movie.title}/>
+    <section className="detail-section">
+      <img className="background-image" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title}/>
       < MovieBio {...movie}
       /> 
     </section>

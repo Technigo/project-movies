@@ -1,0 +1,8 @@
+.detail-section {
+  display: flex;
+}
+
+.background-image {
+  position: relative;
+  width: 100%;
+}
