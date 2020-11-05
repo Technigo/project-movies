@@ -10,4 +10,6 @@ In this project I used HTML, CSS, JS, React, API, BEM and NPM. This is my first 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://sandra-shumanteva-movie-site.netlify.app/movie/724989
+
+
