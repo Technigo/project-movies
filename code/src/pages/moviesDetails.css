@@ -1,0 +1,15 @@
+.details-container {
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 50px;
+}
+.details-container img {
+}
+.summary {
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+  padding: 50px;
+}
