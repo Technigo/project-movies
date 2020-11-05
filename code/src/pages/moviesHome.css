@@ -39,3 +39,28 @@ p {
 h2 {
   margin-bottom: 1px;
 }
+
+/* MEDIA QUERIES */
+
+@media (min-width: 280px) and (max-width: 668px) {
+  .movie-wrapper {
+    width: 100%;
+  }
+  p {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+}
+@media (min-width: 669px) and (max-width: 1024px) {
+  .movie-wrapper {
+    width: 50%;
+  }
+  p {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+}
