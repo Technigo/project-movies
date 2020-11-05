@@ -1,4 +1,4 @@
-.popularPage {
+.popular-page {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -7,13 +7,13 @@
 }
 
 @media (min-width: 668px) {
-  .popularPage {
+  .popular-page {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 @media (min-width: 1024px) {
-  .popularPage {
+  .popular-page {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }

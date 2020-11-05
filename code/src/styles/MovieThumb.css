@@ -1,9 +1,6 @@
-a {
+.movie-thumb-wrapper {
   color: #fff;
   text-decoration: none;
-}
-
-.movie-thumb-wrapper {
   position: relative;
 }
 
@@ -26,7 +23,7 @@ a {
   text-align: center;
 }
 
-a:hover .movie-text {
+.movie-thumb-wrapper:hover .movie-text {
   display: flex;
 }
 

@@ -4,8 +4,8 @@ import '../styles/MovieThumb.css';
 
 export const MovieThumb = ({ id, poster_path, title, release_date }) => {
   return (
-    <Link to={`/movies/${id}`}>
-      <article className="movie-thumb-wrapper">
+    <Link to={`/movies/${id}`} className="movie-thumb-wrapper">
+      <article>
         <img
           className="image-poster"
           src={`https://image.tmdb.org/t/p/w342${poster_path}`}

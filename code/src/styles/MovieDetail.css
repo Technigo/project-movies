@@ -1,4 +1,4 @@
-.movieDetailPage {
+.movie-detail-page {
   min-height: 100vh;
   background-size: cover;
   background-position: center;
@@ -7,7 +7,7 @@
   justify-content: space-between;
 }
 
-.movieDetailPage .back-link {
+.movie-detail-page .back-link {
   display: inline-flex;
   color: #fff;
   font-weight: bold;
@@ -16,60 +16,60 @@
   padding-left: 10px;
 }
 
-.movieDetailPage .back-link svg {
+.movie-detail-page .back-link svg {
   width: 30px;
   transition: margin-right 0.2s ease-in-out;
 }
 
-.movieDetailPage .back-link:hover svg {
+.movie-detail-page .back-link:hover svg {
   margin-right: 5px;
 }
 
-.movieDetailPage .movie-details {
+.movie-detail-page .movie-details {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 10px;
 }
 
-.movieDetailPage .image-poster {
+.movie-detail-page .image-poster {
   border: 2px solid #fff;
   max-width: 300px;
 }
 
-.movieDetailPage .movie-rating {
+.movie-detail-page .movie-rating {
   font-size: 17px;
   color: red;
   font-weight: 600;
   margin-left: 10px;
 }
 
-.movieDetailPage .movie-details-text p {
+.movie-detail-page .movie-details-text p {
   max-width: 300px;
 }
 
 @media (min-width: 668px) {
-  .movieDetailPage .back-link {
+  .movie-detail-page .back-link {
     padding-top: 40px;
     padding-left: 40px;
   }
 
-  .movieDetailPage .movie-details {
+  .movie-detail-page .movie-details {
     flex-direction: row;
     align-items: flex-end;
     padding: 40px;
   }
 
-  .movieDetailPage .image-poster {
+  .movie-detail-page .image-poster {
     border: 4px solid #fff;
     max-width: 400px;
   }
 
-  .movieDetailPage .movie-details-text {
+  .movie-detail-page .movie-details-text {
     margin-left: 20px;
   }
 
-  .movieDetailPage .movie-details-text p {
+  .movie-detail-page .movie-details-text p {
     max-width: 400px;
   }
 }

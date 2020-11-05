@@ -7,11 +7,11 @@ import '../styles/MovieDetail.css';
 export const MovieDetail = () => {
   const [movie, setMovie] = useState([]);
   const [loading, setLoading] = useState(true);
-  const { id } = useParams();
+  const { movieId } = useParams();
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=a4952259f6d389d2957bfec34fa69938&language=en-US`
+      `https://api.themoviedb.org/3/movie/${movieId}?api_key=a4952259f6d389d2957bfec34fa69938&language=en-US`
     )
       .then((res) => res.json())
       .then((json) => {
@@ -19,15 +19,14 @@ export const MovieDetail = () => {
         setMovie(json);
         setLoading(false);
       });
-  }, [id]);
+  }, [movieId]);
 
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
+      {loading && <Loader />}
+      {!loading && (
         <section
-          className="movieDetailPage"
+          className="movie-detail-page"
           style={{
             backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
           }}>

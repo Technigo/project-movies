@@ -21,10 +21,9 @@ export const PopularList = () => {
 
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <main className="popularPage">
+      {loading && <Loader />}
+      {!loading && (
+        <main className="popular-page">
           {movies.map((movie) => (
             <MovieThumb key={movie.id} {...movie} />
           ))}
