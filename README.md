@@ -28,3 +28,4 @@ using the MovieDB API.
 ## View it live
 
 Here you can see the live page: 
+https://technigo-movie-project.netlify.app/
