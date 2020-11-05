@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { MovieThumb } from "components/MovieThumb";
+import { Header } from "./Header";
 
 export const MovieList = () => {
   const MOVIES_URL =
@@ -14,10 +15,13 @@ export const MovieList = () => {
   }, []);
 
   return (
-    <section className="movie-list">
-      {movies.map(movie => (
-        <MovieThumb key={movie.id} {...movie} />
-      ))}
-    </section>
+    <>
+      <Header />
+      <main className="movie-list">
+        {movies.map(movie => (
+          <MovieThumb key={movie.id} {...movie} />
+        ))}
+      </main>
+    </>
   );
 };
