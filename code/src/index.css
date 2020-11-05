@@ -107,6 +107,7 @@ h4 {
 .overview {
   max-width: 400px;
   font-family: "Ubuntu", sans-serif;
+  line-height: 1.5;
 }
 
 .poster {
@@ -133,10 +134,17 @@ button {
   color: white;
   background-color: black;
   padding-left: 30px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 button:hover {
   cursor: pointer;
+  margin-left: 5px;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 @media (max-width: 600px) {

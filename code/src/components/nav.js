@@ -6,7 +6,7 @@ export const Nav = () => (
     <h1> POPULAR MOVIES</h1>
       <Route path="/movies">
         <Link to="/">
-        <button type="button"><span>⬅</span> Back</button>
+        <button type="button"><span> ⬅</span> Back</button>
         </Link>
       </Route>
   </header>
