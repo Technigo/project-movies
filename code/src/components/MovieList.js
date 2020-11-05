@@ -9,7 +9,7 @@ export const MovieList = () => {
     fetch(MOVIE)
         .then((response) => response.json())
         .then((json) => setMovies(json.results));
-    }, []);
+    }, [MOVIE]);
 
         return (
         <section className="movie-list">
