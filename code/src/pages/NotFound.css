@@ -21,6 +21,11 @@
     margin-top: 5px;
 }
 
+.film {
+    fill: #fff;
+    height: 70px;
+}
+
 .nf-back-link {
     color: #fff;
     font-size: 22px;

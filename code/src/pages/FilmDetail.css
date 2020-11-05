@@ -95,3 +95,32 @@
     height: 100%;
     z-index: -1;
 }
+
+/* Loader */
+
+.loader-article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 23px;
+    padding: 50px;
+    margin-top: 60px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 3px;
+}
+
+.loader-container h3 {
+    margin-top: 5px;
+}
+
+.film {
+    fill: #fff;
+    height: 70px;
+}

@@ -1,4 +1,4 @@
-article img{
+.film-card img{
     width: 100%;   
 }
 
@@ -6,6 +6,7 @@ article img{
     position: relative;
     color: #fff;
     margin-bottom: 0;
+    height: 100%;
     display: flex;
     justify-content: flex-end;
 }
@@ -31,7 +32,6 @@ article img{
 .title-button {
     display: flex;
     align-items: center;
-    /* justify-content: center;  */
 }
 
 .title {
