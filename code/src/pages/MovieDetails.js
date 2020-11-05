@@ -29,24 +29,13 @@ const MovieDetails = ({ title, overview, backdrop_path }) => {
   return (
     <section className="movie-details-main-container">
       <img className="movie-details-background" src={BACKDROP_URL} alt={movie.title} />
-      <div className="movie-details">
+      <div className="poster-and-movie-details">
+        <img src={POSTER_URL} alt={movie.title} />
         <h1>{movie.title}</h1>
         <h2>{movie.original_title}</h2>
         <p>{movie.vote_average}/10</p>
-        <img src={POSTER_URL} alt={movie.title} />
         <article>{movie.overview}</article>
       </div>
-      {/* <div className="movie-details-poster-image">
-        <img src={POSTER_URL} alt={movie.title} />
-      </div> */}
-
-      {/* background w1280 */}
-      {/* {movie.backdrop_path} */}
-
-      {/* smaller image  w185*/}
-      {/* {movie.poster_path} */}
-
-      {/* <article>{movie.overview}</article> */}
     </section>
   );
 };
