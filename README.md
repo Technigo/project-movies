@@ -1,12 +1,12 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This site is about popular movies in the US.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+In this project I used HTML, CSS, JS, React, API, BEM and NPM. This is my first site with multi-page React. I used npm to instal some libraries that were needed for my project like loader and fontawesome. When I had problem I used google and stackoverflow. If I had more time I would done black level :)
+
+
 
 ## View it live
 

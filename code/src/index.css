@@ -21,6 +21,10 @@ body {
 
 .card-container:hover>.card-container__details {
   display: flex;
+}
+
+.card-container .card-container__details {
+  display: none;
   flex-direction: column;
   justify-content: flex-end;
   position: absolute;
@@ -32,20 +36,15 @@ body {
   padding-left: 10px;
 }
 
-.card-container__details {
-  display: none;
-}
-
-.card-container__details>h1 {
+.card-container .card-container__details>h1 {
   font-size: xx-large;
-  font-weight: bolder !important;
 }
 
-.card-container__details>h3 {
+.card-container .card-container__details>h3 {
   font-weight: 100;
 }
 
-.card-container__img {
+.card-container .card-container__img {
   max-height: 100%;
   object-fit: cover;
 }
@@ -57,7 +56,11 @@ body {
   position: relative;
 }
 
-.movie-info-container .button {
+.movie-info-container .movie-info-container__details {
+  position: relative
+}
+
+.movie-info-container .movie-info-container__button {
   position: absolute;
   top: 50px;
   left: 50px;
@@ -68,21 +71,33 @@ body {
   font-weight: 700;
 }
 
-.button:hover>.button-text {
+.movie-info-container .movie-info-container__button:hover>.button-text {
   padding-left: 4px;
   transition: 0.2s;
 }
 
-.button-text {
+.movie-info-container__button .button-text {
   margin-left: 2px;
   font-size: medium;
 }
 
-.movie-info-container__details {
-  position: relative
+.movie-info-container__details .details {
+  position: absolute;
+  left: 400px;
+  top: 550px;
+  margin-left: 8px;
 }
 
-.movie-info__info-img {
+.movie-info-container__details .details h2 {
+  font-weight: bold
+}
+
+.movie-info-container__details .details p {
+  max-width: 400px;
+  font-size: medium;
+}
+
+.movie-info-container__details .movie-img {
   position: absolute;
   border: 5px solid white;
   top: 220px;
@@ -90,28 +105,12 @@ body {
   width: 20%
 }
 
-.details {
-  position: absolute;
-  left: 400px;
-  top: 550px;
-  margin-left: 8px;
-}
-
-.details h2 {
-  font-weight: bold
-}
-
-.rating {
+.movie-info-container__details .rating {
   font-weight: normal;
   font-size: 17px;
   margin-left: 2px;
   font-weight: 100;
   color: red;
-}
-
-.details p {
-  max-width: 400px;
-  font-size: medium;
 }
 
 .error {
@@ -124,5 +123,5 @@ body {
 }
 
 .loader {
-  margin: 200px 400px;
+  text-align: center;
 }
