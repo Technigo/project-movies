@@ -123,3 +123,11 @@ main {
   font-weight: normal;
   margin-left: 10px;
 }
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
