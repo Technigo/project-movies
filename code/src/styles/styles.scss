@@ -31,7 +31,6 @@ body {
 
   &__nav {
     position: relative;
-    text-align: center;
 
     &--open {
       display: flex;
@@ -42,6 +41,7 @@ body {
       left: 0;
       right: 0;
       z-index: 1;
+      text-align: center;
       background: #15173d;
       height: 25vh;
     }
@@ -60,6 +60,7 @@ body {
     text-transform: uppercase;
     font-size: 16px;
     padding: 10px;
+    border-radius: 0px;
     color: #d1ad70;
     cursor: pointer;
 
@@ -173,10 +174,12 @@ body {
   background-position-x: center;
   background-position-y: center;
   background-repeat: no-repeat;
+  color: #cebda3;
 
   &__image {
     display: none;
-    border: 2px solid #d1ad70;
+    margin-right: 20px;
+    border: 2px solid #cebda3;
 
     @include respond(medium) {
       display: flex;
@@ -186,7 +189,11 @@ body {
   &__info-container {
     display: flex;
     align-items: flex-end;
-    padding: 50px;
+    padding: 25px;
+
+    @include respond(medium) {
+      padding: 50px;
+    }
   }
 
   &__vote {
@@ -195,17 +202,39 @@ body {
     color: red;
   }
 
+  &__overview {
+    color: #cebda3;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  &__link {
+    color: #d1ad70;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
   &__company-container {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -10px;
   }
 
   &__company {
+    color: #15173d;
     text-decoration: none;
     padding: 2px 5px;
     background: #87ccb0;
-    font-size: 12px;
-    margin: 5px 8px 5px 0;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 5px 8px 0 0;
+    cursor: pointer;
+
+    &:hover {
+      color: #c0914d;
+      background: #2b6372;
+      // color: #87ccb0;
+      // background: #15173d;
+    }
   }
 }
 
