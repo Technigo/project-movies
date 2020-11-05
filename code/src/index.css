@@ -18,3 +18,14 @@ code {
     monospace;
   margin: 0 auto;
 }
+/* MOVIEINFO */
+.movies-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.movies-card img {
+  width: 100%;
+  margin: 0;
+}

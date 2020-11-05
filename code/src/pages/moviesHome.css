@@ -1,7 +1,8 @@
 .movies-container {
   display: flex;
-  flex-wrap: wrap;
   width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 a {
   color: #fff;
@@ -39,6 +40,15 @@ p {
 }
 h2 {
   margin-bottom: 1px;
+}
+.loader {
+  border: 26px solid rgb(118, 118, 158);
+  border-top: 26px solid rgb(121, 170, 121);
+  border-radius: 50%;
+  margin: 40px auto;
+  width: 100px;
+  height: 100px;
+  animation: spin 1.9s linear infinite;
 }
 
 /* MEDIA QUERIES */
