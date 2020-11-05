@@ -13,13 +13,14 @@ export const MoviePage = () => {
       .then((response) => response.json())
       .then((json) => {
         setMovie(json)
+        console.log(json)
       })
   }, [movieId])
 
   return (
     <div 
       className='movie-page-background' 
-      style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 10%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})` }}>
+      style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 20%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})` }}>
       <Link to ='/' exact='true'>
         <BackIcon />
       </Link>
@@ -27,7 +28,7 @@ export const MoviePage = () => {
         <img className='movie-page-poster' src= {`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt={movie.original_title}/>
         <div className='movie-page-text-content'>
           <h2>{movie.original_title}</h2>
-          <p><span className='star'role='img' aria-label='star'>⭐</span>{`${movie.vote_average} /10`}</p>
+          <p><span className='star' role='img' aria-label='star'>⭐</span>{`${movie.vote_average} /10`}</p>
           <p>{movie.overview}</p>
         </div>
       </div>
