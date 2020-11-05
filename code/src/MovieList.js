@@ -9,7 +9,7 @@ export const MovieList = ({ movies }) => {
             {
                 movies.map(movie => {
                     return (
-                        <MoviePoster {...movie} />
+                        <MoviePoster key={movie.id} {...movie} />
                     )
                 })
             }

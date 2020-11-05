@@ -1,11 +1,11 @@
 
 .movie-details {
     display: flex;
-    flex-direction: column;
+    align-items: flex-end;
     height: 100vh;
-    justify-content: space-between;
     color: white;
-    padding: 50px;    
+    padding: 50px;
+    align-self: flex-start;
 }
 
 .background {
@@ -22,6 +22,12 @@
 .back-button {
     color: white;
     margin: 40px;
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+    left: 50px;
+    top: 50px;
 }
 
 .poster {
@@ -37,4 +43,13 @@
 
 .details {
     font-weight: 300;
+    margin: 0;
+    max-width: 30%;
+    padding: 30px;
+
+}
+
+.vote {
+    font-weight: 200;
+    color: red;
 }

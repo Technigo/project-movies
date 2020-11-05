@@ -14,15 +14,16 @@ export const MovieDetails = ({ title, overview, vote_average, backdrop_path, pos
         <section className='movie-details'>
             <img className="background" src={`${IMAGE_BASE_URL + BACKDROP_SIZE + backdrop_path}`} alt='backdrop'></img>
 
-            <Link to='/'>
-                <p className="back-button">Movies</p>
-            </Link>
 
             <div className="movie-info">
                 <img className="poster" src={`${IMAGE_BASE_URL + POSTER_SIZE + poster_path}`} alt='poster'></img>
-                
+
                 <div className="details">
-                    <h3>{title} <span>{vote_average} / 10</span></h3>                   
+                    <Link to='/'>
+                        <p className="back-button">Movies</p>
+                    </Link>
+
+                    <h3>{title} <span className="vote">{vote_average} / 10</span></h3>
                     <p>{overview}</p>
                 </div>
             </div>
