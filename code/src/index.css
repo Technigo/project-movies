@@ -46,6 +46,14 @@ code {
   margin-bottom: 40px;
 }
 
+.movie-overlay {
+  max-width: 400px;
+}
+
+.movie-image {
+  max-width: 400px;
+}
+
 .movie-text {
   color: #fff;
   display: none;
@@ -78,7 +86,7 @@ code {
   font-weight: 700;
   text-decoration: none;
   left: 50px;
-  top: 50px;
+  top: 30px;
 }
 
 .back-button svg {
@@ -125,6 +133,7 @@ code {
 
 
 @media (min-width: 1024px) {
+
 .movie-list a {
     width: 25%;
 }
@@ -147,5 +156,13 @@ code {
 
 .small-image {
   margin-left: 50px;
+}
+
+.movie-overlay {
+  max-width: 500px;
+}
+
+.movie-image {
+  max-width: 500px;
 }
 } 
