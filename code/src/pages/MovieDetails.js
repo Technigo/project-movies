@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
-import { NotFound } from './NotFound.js'
+import { MovieDetailed } from '../components/MovieDetailed.js'
+import { NotFound } from '../components/NotFound.js'
 import { Loader } from '../components/Loader.js'
 
 export const MovieDetails = () => {
@@ -12,7 +13,7 @@ export const MovieDetails = () => {
   const MOVIE_URL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=c07a4dcb1d91b54eb3b153e458e26489`
 
   const [movie, setMovie] = useState({})
-  const [status, setStatus] = useState()
+  const [status, setStatus] = useState() // used to decide which component to show
 
   const getMovie = () => {
     fetch(MOVIE_URL)
@@ -20,12 +21,12 @@ export const MovieDetails = () => {
         console.log(response.status)
         setTimeout(() => {
           (setStatus(response.status))
-        }, 2000)
+        }, 1990)
+        // puts the setStatus on hold for 1990 milliseconds
         return response.json()
       })
       .then(json => {
         setMovie(json)
-        // use setTimeout? to have the loader go for a little longer?
       })
   }
 
@@ -34,20 +35,10 @@ export const MovieDetails = () => {
   return (
     <>
       {status === 200 && parseInt(movieId) === movie.id ? (
-        <div className="movie-details">
-          <img className="backdrop" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title}></img>
-          <div className="details-container">
-            <div>
-              <img className="poster" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}></img>
-            </div>
-            <div className="movie-text">
-              <h1>{movie.title}</h1>
-              <h2>Release date: {movie.release_date}</h2>
-              <p>{movie.overview}</p>
-            </div>
-          </div>
+        <>
+          <MovieDetailed key={movie.id} {...movie} />
           {console.log("data fetched and movie match => movie details")}
-        </div >
+        </>
       ) : status === 404 ? (
         <>
           <NotFound />

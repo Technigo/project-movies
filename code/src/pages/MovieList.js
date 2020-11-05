@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import { Movie } from '../components/Movie.js'
+import { MovieListed } from '../components/MovieListed.js'
 
 //const API_KEY = 'c07a4dcb1d91b54eb3b153e458e26489'
 
@@ -20,7 +20,7 @@ export const MovieList = () => {
 
   return (
     <>
-      {movies.map(movie => <Movie key={movie.id} {...movie} />)}
+      {movies.map(movie => <MovieListed key={movie.id} {...movie} />)}
     </>
   )
 }

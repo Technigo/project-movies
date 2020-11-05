@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import { MovieList } from './pages/MovieList.js'
 import { MovieDetails } from './pages/MovieDetails.js'
-import { NotFound } from './pages/NotFound.js'
+import { NotFound } from './components/NotFound.js'
 
 export const App = () => {
 
