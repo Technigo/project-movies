@@ -108,6 +108,11 @@ h4 {
   max-width: 400px;
   font-family: "Ubuntu", sans-serif;
   line-height: 1.5;
+  margin: 0;
+}
+
+.runtime {
+  margin-bottom: 0;
 }
 
 .poster {
@@ -127,6 +132,9 @@ h4 {
   padding: 15px;
 }
 
+.imdb-logo {
+  width: 50px;
+}
 /* BUTTON */
 
 button {
