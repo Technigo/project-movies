@@ -7,25 +7,6 @@
   justify-content: space-between;
 }
 
-.movie-detail-page .back-link {
-  display: flex;
-  align-items: center; /* Needed for iPhone ti get arrow and text to be on same row */
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  padding-top: 20px;
-  padding-left: 10px;
-}
-
-.movie-detail-page .back-link svg {
-  width: 30px;
-  transition: margin-right 0.2s ease-in-out;
-}
-
-.movie-detail-page .back-link:hover svg {
-  margin-right: 5px;
-}
-
 .movie-detail-page .movie-details {
   display: flex;
   flex-direction: column;

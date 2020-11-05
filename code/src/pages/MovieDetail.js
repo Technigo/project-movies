@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { NotFound } from '../components/NotFound';
 import { Loader } from '../components/Loader';
-import { BackArrow } from '../components/BackArrow';
+import { BackButton } from '../components/BackButton';
 import '../styles/MovieDetail.css';
 
 export const MovieDetail = () => {
@@ -18,8 +19,15 @@ export const MovieDetail = () => {
         console.log(json);
         setMovie(json);
         setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
       });
   }, [movieId]);
+
+  if (movie.success === false) {
+    return <NotFound />;
+  }
 
   return (
     <>
@@ -30,10 +38,7 @@ export const MovieDetail = () => {
           style={{
             backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
           }}>
-          <Link to="/" className="back-link">
-            <BackArrow />
-            <p>Movies</p>
-          </Link>
+          <BackButton path="/" text="Movies" />
           <div className="movie-details">
             <img
               className="image-poster"
