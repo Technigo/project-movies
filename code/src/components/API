@@ -1,0 +1,15 @@
+The Movie API 
+
+0cb608022c0a0fbef75881f68133d694
+
+https://api.themoviedb.org/3/movie/550?api_key=0cb608022c0a0fbef75881f68133d694
+
+
+
+Fetching popular movies:
+https://api.themoviedb.org/3/movie/popular?api_key={0cb608022c0a0fbef75881f68133d694}&language=en-US&page=1
+
+
+
+Fetching movie details:
+https://api.themoviedb.org/3/movie/{movie_id}?api_key={0cb608022c0a0fbef75881f68133d694}&language=en-US
