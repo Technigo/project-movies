@@ -42,6 +42,11 @@
 
 .back-button svg {
     width: 30px;
+    transition: 0.3s ease;
+}
+
+.back-button:hover svg {
+    margin-right: 5px;
 }
 
 .poster {
@@ -53,12 +58,13 @@
     display: flex;
     align-items: flex-end;
     align-self: flex-end;
+    z-index: 1;
 }
 
 .details {
     font-weight: 300;
     margin: 0;
-    max-width: 30%;
+    max-width: 400px;
     padding: 30px;
 }
 
