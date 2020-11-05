@@ -30,23 +30,14 @@ article img{
 
 .title-button {
     display: flex;
-    align-items: center; 
-}
-
-.arrow {
-    fill: #fff;
-    width: 27px;
-    height: 27px;
-    border: 2px solid #fff;
-    border-radius: 20px;
-    margin-left: 10px;
-    transform: rotate(180deg);
+    align-items: center;
+    /* justify-content: center;  */
 }
 
 .title {
     text-decoration: none;
-    font-size: 25px;
-    margin: 5px 0;  
+    font-size: 26px;
+    margin: 5px 0;
 }
 
 .released {

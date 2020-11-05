@@ -1,7 +1,5 @@
 import React from 'react';
 
-import RGImage from './Images/ryan-gosling-head.png'
-
 import './Header.css'
 
 export const Header = () => {
@@ -11,12 +9,6 @@ export const Header = () => {
     return (
         <header>
             <img src={logo} alt="imdb logo" className="logo"></img>
-
-            <div className="title-wrapper">
-                {/* <img src={RGImage} className="header-image" alt="Ryan Gosling"/> */}
-                <h1>RYAN GOSLING</h1>
-                <h2>popular films</h2>
-            </div>
         </header>
     )
 }

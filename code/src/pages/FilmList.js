@@ -1,6 +1,5 @@
 import React, {useEffect, useState } from 'react';
 
-import { Header } from 'components/Header';
 import { FilmCard } from 'components/FilmCard';
 
 import './FilmList.css'
@@ -31,7 +30,6 @@ export const FilmList = () => {
 
     return (
         <>
-            <Header />
             <section className="section-container">
                 {FilmList.map((films) => (
                 <FilmCard key={films.id} {...films} />

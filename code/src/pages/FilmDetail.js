@@ -8,7 +8,7 @@ import './FilmDetail.css'
 export const FilmDetail = () => {
     const { filmid } = useParams();
 
-    const [FilmDetails, setFilmDetails] = useState(""); 
+    const [FilmDetails, setFilmDetails] = useState({}); 
 
     const fetchFilmId = (filmid) => {
         const api_key = "cf10fb16d5d29cc1bc7eb10f47f96663";
@@ -38,13 +38,13 @@ export const FilmDetail = () => {
             <article className="film-details-container">
                 <Link to="/" className="back-link">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-                    Film list
-                </Link>             
+                    Back to film list
+                </Link>           
                 <div className="details-container">                    
                     <div className="film-poster">                
                         <img src={posterImage} alt="{title} film poster" className="image-details-background" />
                     </div>
-                    <div className="film-details">
+                    <div className="film-details"> 
                         <div className="film-title-average">
                             <h3>{FilmDetails.title}</h3>
                             <p>{FilmDetails.vote_average}/10</p>

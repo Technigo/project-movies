@@ -1,0 +1,41 @@
+.nf-article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.notfound-container {
+    font-size: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 60px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 3px;    
+}
+
+.notfound-container h3 {
+    margin-top: 5px;
+}
+
+.nf-back-link {
+    color: #fff;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.nf-back-link svg {
+    fill: #fff;
+    width: 27px;
+    height: 27px;
+    border: 2px solid #fff;
+    margin-right: 10px;
+    border-radius: 20px;
+}

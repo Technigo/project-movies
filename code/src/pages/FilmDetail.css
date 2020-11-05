@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0) 90%, rgb(0, 0, 0) 100%);
     position: fixed;
     top: 0;
     left: 0;
@@ -20,21 +20,21 @@
     font-weight: 700;
     text-decoration: none;
     left: 50px;
-    top: 40px;
-    background-color: rgba(37, 37, 37, 0.6);
+    top: 66px;
+    background: rgba(0, 0, 0, 0.7);     
     padding: 10px;
     border-radius: 3px;
 }
 
 .back-link:hover {
-    background-color: rgba(37, 37, 37, 0.9);
+    background: rgba(0, 0, 0, 0.9);     
     transition: 0.3s ease;
 }
 
 .back-link svg {
     fill: #fff;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border: 2px solid #fff;
     margin-right: 10px;
     border-radius: 20px;
@@ -51,13 +51,13 @@
 }
 
 .film-poster img {
-    border: 5px solid #fff;
+    border: 7px solid #fff;
 }
 
 .film-details {
     width: 50%;
     color: #fff;
-    background-color: rgba(37, 37, 37, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     padding: 10px;
     border-radius: 3px;
     max-width: 400px;
