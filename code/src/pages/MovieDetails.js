@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { API_key } from "../API_info";
+import Button from "components/Button";
 
 import "./movie-details.css";
 
@@ -28,6 +29,7 @@ const MovieDetails = ({ title, overview, backdrop_path }) => {
 
   return (
     <section className="movie-details-main-container">
+      <Button />
       <img className="movie-details-background" src={BACKDROP_URL} alt={movie.title} />
       <div className="poster-and-movie-details">
         <img src={POSTER_URL} alt={movie.title} />
