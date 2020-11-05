@@ -6,17 +6,21 @@ import { apiKey } from "key"
 import "./moviesHome.css"
 
 
+const URL = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
 
 export const MoviesHome = () => {
     const [movies, setMovies] = useState([])
 
-    const URL = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
-
     useEffect(() => {
         fetch(URL)
-            .then((res) => res.json())
-            .then((json) => {
-                setMovies(json.results)
+            .then((data) => {
+                return data.json()
+            })
+            .then((data) => {
+                setMovies(data.results);
+            })
+            .catch((error) => {
+                console.error(error);
             });
     }, []);
 
