@@ -5,7 +5,6 @@ import MovieDetail from '../components/MovieDetail';
 import Loader from '../components/Loader';
 import Error from '../components/Error';
 import BackButton from '../components/BackButton';
-import '../styles/MovieDetails.css';
 
 const MoviePage = () => {
 	const [movieDetail, setMovieDetail] = useState({});
@@ -37,7 +36,7 @@ const MoviePage = () => {
 	}, [movieId, API_URL]);
 
 	return (
-		<main className="movie-detail">
+		<main>
 			<BackButton text={'Back'} />
 			{loading && <Loader />}
 			{!loading && <MovieDetail {...movieDetail} />}

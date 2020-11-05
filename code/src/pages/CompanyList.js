@@ -6,8 +6,6 @@ import BackButton from '../components/BackButton';
 import Loader from '../components/Loader';
 import MovieThumb from 'components/MovieThumb';
 
-import '../styles/CompanyList.css';
-
 const CompanyList = () => {
 	const [companyMovies, setCompanyMovies] = useState([]);
 	const [companies, setCompanies] = useState([]);

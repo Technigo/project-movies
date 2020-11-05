@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import '../styles/Nav.css';
-
 const Nav = ({ onLinkClick }) => {
 	const [showBurger, setShowBurger] = useState(false);
 
@@ -44,10 +42,9 @@ const Nav = ({ onLinkClick }) => {
 					{categories.map((category, index) => {
 						return (
 							<div className="menu" key={index}>
+								{/* ÄNDRA KLASSNAMN */}
 								<Link
 									to="/"
-									//eslint-disable-next-line
-
 									className="nav__link"
 									onClick={() => {
 										onLinkClick(`${category.path}`);

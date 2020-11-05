@@ -4,18 +4,18 @@ import { useHistory } from 'react-router-dom';
 const BackButton = ({ text }) => {
 	const history = useHistory();
 	return (
-		//<Link to={path} className="back-button-wrapper">
 		<button
 			type="button"
-			className="back-button"
+			className="back__button"
 			onClick={() => history.goBack()}
 		>
-			<span role="img" aria-label="arrow-emoji">
-				←
-			</span>
+			<img
+				src="../Images/arrow.svg"
+				alt="back button arrow"
+				className="back__button--arrow"
+			/>
 			{text}
 		</button>
-		//</Link>
 	);
 };
 export default BackButton;

@@ -4,8 +4,6 @@ import MovieThumb from '../components/MovieThumb';
 import Error from '../components/Error';
 import Loader from '../components/Loader';
 
-import '../styles/MovieList.css';
-
 const MovieList = ({ children }) => {
 	const [movies, setMovies] = useState([]);
 	const [loading, setLoading] = useState(true);
