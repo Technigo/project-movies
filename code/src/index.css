@@ -111,6 +111,12 @@ h4 {
   margin: 0;
 }
 
+.votes {
+  color: #000000;
+  background-color: #ffc107;
+  padding: 0 3px;
+  border-radius: 10%;
+}
 .runtime {
   margin-bottom: 0;
 }
