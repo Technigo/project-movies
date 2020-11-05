@@ -13,13 +13,13 @@ const [movies, setMovies] = useState([])
     }, [] )
     
     return (
-        <section className='movie-list'>
+        <div className='movie-list'>
             {movies.map((movie) => (
             <MovieCard
             key={movie.id}
             {...movie}
              />
             ))}
-        </section>
+        </div>
     )
 }

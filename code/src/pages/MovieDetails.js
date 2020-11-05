@@ -11,13 +11,18 @@ export const MovieDetails = () => {
         fetch(MOVIE_DETAIL_URL)
         .then((response) => response.json())
         .then((json) => setDetails(json))
-    }, [] ) 
+    }, [id] ) 
 
     return (
         <section className='movie-details'>
-            <img className='backdrop-image' src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt={''}></img>
-            <p className='movie-text'>{details.overview}</p>
-            <img className='small-image' src={`https://image.tmdb.org/t/p/w342${details.poster_path}`}></img>
+            <img className='backdrop-image' src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt={details.title}></img>
+                <div className='image-and-text'>
+                    <img className='small-image' src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title}></img>
+                        <div className='Details'>
+                            <h1>{details.title} <span className="rating">{details.vote_average}/10</span></h1>
+                            <p className='movie-text'>{details.overview}</p>                
+                        </div>
+                </div>
         </section>
     )
 }
