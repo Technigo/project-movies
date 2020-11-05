@@ -14,3 +14,28 @@ a {
 .movie-wrapper img {
   width: 100%;
 }
+.movie-info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  padding: 18px;
+}
+.movie-info:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: 0.2s ease-in-out;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+h2 {
+  margin-bottom: 1px;
+}
