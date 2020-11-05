@@ -3,13 +3,44 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  padding: 50px;
 }
-.details-container img {
-}
-.summary {
+.movie-details {
   display: flex;
   align-items: flex-end;
-  box-sizing: border-box;
-  padding: 50px;
+  padding: 20px;
+  color: white;
+}
+.movie-poster {
+  display: flex;
+  width: 50%;
+  border: 5px solid #fff;
+}
+.back-arrow {
+  transform: translate(-40%, 29%);
+  width: 30px;
+  height: 30px;
+}
+.back-link:hover,
+.back-link:focus,
+.back-link:active {
+  -webkit-transform: translateX(8px);
+  transform: translateX(8px);
+  color: rgb(216, 198, 165);
+}
+.back-link {
+  position: absolute;
+  color: #fff;
+  align-items: center;
+  font-weight: 600;
+  margin: 50px;
+  padding-left: 30px;
+  text-decoration: none;
+  font-size: 18px;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
 }
