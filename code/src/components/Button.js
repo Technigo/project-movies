@@ -18,7 +18,6 @@ const Button = () => {
         </div>
       </Link>
     </div>
-
   )
 };
 

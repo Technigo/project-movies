@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "components/movie-list.css";
 
 
-const MovieList = ({ title, vote_average, release_date, poster_path, id }) => {
+const MovieList = ({ title, release_date, poster_path, id }) => {
 
   const POSTER_URL = `https://image.tmdb.org/t/p/w500${poster_path}`;
 
@@ -14,9 +14,12 @@ const MovieList = ({ title, vote_average, release_date, poster_path, id }) => {
       <Link to={`/movies/${id}`} className="link">
         <img className="movie-img" src={POSTER_URL} alt={title} />
         <div className="movie-details">
-          <h1>{title}</h1>
-          {/* <p>Rating {vote_average}/10</p> */}
-          <p>Released {release_date}</p>
+          <h1>
+            {title}
+          </h1>
+          <p>
+            Released {release_date}
+          </p>
         </div>
       </Link>
     </div >
