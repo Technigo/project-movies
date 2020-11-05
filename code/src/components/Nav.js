@@ -41,8 +41,7 @@ const Nav = ({ onLinkClick }) => {
 				>
 					{categories.map((category, index) => {
 						return (
-							<div className="menu" key={index}>
-								{/* ÄNDRA KLASSNAMN */}
+							<div key={index}>
 								<Link
 									to="/"
 									className="nav__link"
