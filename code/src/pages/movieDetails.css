@@ -20,7 +20,7 @@
 
 .back-link {
     position: absolute;
-    top: 50px;
+    top: 10px;
     right: 0px;
     left: 0px;
     padding: 50px;
@@ -87,7 +87,10 @@
 
     .details-text {
       max-width: 400px;
-      background: rgb(220, 220, 220, 0.6)
+      background: rgb(220, 220, 220, 0.6);
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+
     }
 
     .details-summary {
@@ -96,6 +99,9 @@
       padding: 50px;
       color: white;    
     }
-    
 
+    .back-link {
+        top: 50px;
+    
+    }
 }

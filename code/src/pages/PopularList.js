@@ -28,7 +28,7 @@ export const PopularList = () => {
             {
               isShown && 
               <div className="list-text">
-                <h2>{movie.title}</h2>
+                <h2 className="list-title">{movie.title}</h2>
                 <h3>Released {movie.release_date}</h3>
               </div>
             }

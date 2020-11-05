@@ -1,3 +1,8 @@
+.list-title {
+    display: none;
+}
+
+
 .list-container {
     display: flex;
     flex-direction: row;
@@ -9,6 +14,7 @@
 .list-card {
     position: relative;
     flex-grow: 1;
+    width: 25%;
 }
 
 a {
@@ -34,4 +40,11 @@ img {
 .list-container img:hover {
     opacity: .2;
 }
+
+@media (min-width: 667px) {
+    h2 {
+        display: block;
+    }
+}
+
 
