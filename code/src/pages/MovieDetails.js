@@ -34,25 +34,17 @@ export const MovieDetails = () => {
 
   return (
     <>
-      {status === 200 && parseInt(movieId) === movie.id ? (
-        <>
-          <MovieDetailed key={movie.id} {...movie} />
-          {console.log("data fetched and movie match => movie details")}
-        </>
-      ) : status === 404 ? (
-        <>
-          <NotFound />
-          {console.log("data could not be fetched => not found")}
-        </>
-      ) : (
-            <>
-              <Loader />
-              {console.log("else => loader")}
-            </>
+      {status === 200 ? ( // status 200 means we have a match and data is fetched
+        <MovieDetailed key={movie.id} {...movie} />
+      ) : status === 404 ? ( // status 404 means we do not have a match and data is not fetched
+        <NotFound />
+      ) : ( // else
+            <Loader />
           )
       }
     </>
   )
+
 }
 
 // implement history button
