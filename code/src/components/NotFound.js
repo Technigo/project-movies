@@ -6,15 +6,15 @@ export const NotFound = () => {
 
     return (
         <div className="container">
-        <div className="background">
+        
           
 
             <div className="not-found">
 
                 <div className="not-text">404: Page Not Found</div>
-                </div></div>
+                </div>
                 
-                <Link to="/">
+                <Link to="/" className="link">
                     <button className="button">Back to home page</button>
 
                 </Link>
