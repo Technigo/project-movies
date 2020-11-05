@@ -109,11 +109,25 @@ code {
 .not-found-container {
   display: flex;
   align-items: center;
-  height: 200px;
+  height: 500px;
+  justify-content: center;
+}
+
+.not-found-wrapper{
+  border: whitesmoke 1px solid;
+  border-radius: 10px;
+  padding: 50px;
+  text-align: center;
 }
 
 .not-found-container h2 {
   padding-left: 30px;
+  color: whitesmoke;
+}
+
+.not-found-container a {
+  display: flex;
+  justify-content: center;
 }
 
 @media (min-width: 667px) and (max-width: 1024px) {
