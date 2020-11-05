@@ -67,7 +67,7 @@ body {
 }
 
 .movie-details-container {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -86,6 +86,8 @@ body {
   width: 400px;
   height: 500px;
   margin: 5px;
+  border-style: solid;
+  border-color: white;
 }
 
 .details {
@@ -96,8 +98,9 @@ body {
   font-size: 48px;
 }
 
-.details p {
-  font-size: 12px;
+.rating {
+  color: green;
+  font-size: 24px;
 }
 
 .button-container {
@@ -117,7 +120,16 @@ body {
 /* mobile view */
 
 @media only screen and (max-width: 400px) {
+
   .movie-details img {
     display: none;
+  }
+
+  .text-overlay h1 {
+    font-size: 12px;
+  }
+
+  .text-overlay p {
+    font-size: 8px;
   }
 }
