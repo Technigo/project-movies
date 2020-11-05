@@ -1,3 +1,4 @@
+import { BackButton } from 'BackButton';
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
@@ -19,9 +20,14 @@ export const RecommendedMovies = () => {
    })
   },[movieId])
 
-  return (
+  return (<>
+    <header className="app-header"> <BackButton text="Back to movie"></BackButton></header>
     <section className="app-container">
-    <Link className="link-back" to={`/movies/${movieId}`}><span role="img" aria-label="back-arrow">⬅️ </span>Back to movie</Link>
+   {/*
+   <Link className="link-back" to={`/movies/${movieId}`}><span role="img" aria-label="back-arrow">⬅️ </span>Back to movie</Link>
+   
+   */}
+   
     {recommendedMovies.map((movie) => (
         <Link to={`/movies/${movie.id}`} key={movie.id} className="movie-link">
         <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
@@ -31,6 +37,6 @@ export const RecommendedMovies = () => {
         </div>
     </Link>    
     ))}
-    </section>
+    </section></>
   )
 }

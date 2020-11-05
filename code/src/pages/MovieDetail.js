@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-
+import { BackButton } from 'BackButton'
 
 export const MovieDetail = () => {
 
@@ -33,6 +33,7 @@ export const MovieDetail = () => {
 
   return ( <>
   {!isLoading && currentMovie &&
+  
     <section 
       className="movie-detail-container" 
       key={currentMovie.id}
@@ -43,7 +44,13 @@ export const MovieDetail = () => {
       }}
     >
 
-      <Link className="link-back" to="/"><span role="img" aria-label="back-arrow"><span role="img" aria-label="arrow-emoji">⬅️</span> </span>Movies start</Link>
+     {/*
+     <Link className="link-back" to="/">
+        <span role="img" aria-label="back-arrow">
+          <span role="img" aria-label="arrow-emoji">⬅️</span> 
+          </span>Movies start</Link>
+     */ } 
+     <BackButton text="Movies"></BackButton>
         
         <div className="movie-details-wrapper">
        <img className="movie-detail-poster" src={`https://image.tmdb.org/t/p/w342${currentMovie.poster_path}`} alt={currentMovie.title} />
