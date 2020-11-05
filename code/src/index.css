@@ -37,9 +37,8 @@ main {
 
 /* container parent */
 .movie-thumb{
-  border: blue solid 4px;
-    width: 25%;
-    position: realtive;
+    border: blue solid 4px;
+    position: relative;
     color: #fff;
     text-decoration: none;
     display: flex;
@@ -48,21 +47,24 @@ main {
 /*child syskon1   h1 */
 .movie-name {
   position: absolute;
-  border:red solid 4px;
   display: flex;
+  font-size: 30px;
   justify-content: center;
-  align-items: center;
+  align-items: left;
+
   
 }
 
 /* child syskon2 o förälder*/
-.movie-thumb-image_wrapper {
+.movie-thumb-image-wrapper {
   border: saddlebrown 5px solid;
 
 }
  /* child och syskonA bilden */
 .movie-thumb-image {
   border: yellow 3px solid;
+
+ 
 }
 
  /* child och syskonB star */
