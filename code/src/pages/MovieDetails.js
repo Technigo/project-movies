@@ -17,7 +17,7 @@ export const MovieDetails = () => {
       .then(response => response.json())
       .then(json => {
         setMovie(json)
-        setTimeout(function () { alert("hej") }, 3000)
+        //setTimeout(function () { alert("hej") }, 3000)
       })
   }
 
