@@ -18,7 +18,8 @@ export const MovieList = () => {
       {movies.map((movie) => (
        <MovieThumb 
        name={movie.title}
-       key={movie.id}  />
+       key={movie.id}  
+       background_image={movie.poster_path}/>
       ))}
     </section>
   );
