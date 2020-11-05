@@ -1,7 +1,3 @@
-.rating-star {
-  width: 15px;
-}
-
 .movie-backdrop {
   background-size: cover;
   height: 100vh;
@@ -9,52 +5,109 @@
   width: 100%;
 }
 
+.movie-summary {
+  align-items: flex-end;
+  bottom: 30px;
+  display: flex;
+  justify-content: flex-start;
+  left: 40px;
+  position: absolute;
+}
 .movie-title {
-  text-decoration: none;
   font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-.movie-tagline {
-  font-size: 20px;
-  font-style: italic;
-}
-
-.movie-poster {
-  position: absolute;
-  bottom: 25px;
-  left: 50px;
-  border: 4px solid #ffffff;
-}
-
-.movie-description {
-  bottom: 5px;
-  color: #ffffff;
+.movie-rating {
   display: flex;
-  flex-direction: column;
-  left: 420px;
-  position: absolute;
-  width: 50vw;
-}
-
-.movie-extra-info {
-  display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
+.rating-star {
+  margin-right: 8px;
+  margin-left: 20px;
+  height: 19px;
+}
+
+.move-rate-number {
+  color:#FF0000;
+  font-weight: 500;
+}
+
+
+.movie-description-first-row {
+  align-items: flex-end;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.movie-tagline {
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.movie-poster-container {
+  display: flex;
+}
+
+.movie-poster-container:hover {
+  transform: scale(1.05);
+  transition: ease 1s;
+}
+
+.movie-poster {
+  border: 5px solid #ffffff;
+}
+
+.movie-description {
+  color: #ffffff;
+  padding-left: 30px;
+}
+
+
 .movie-genres {
   display: flex;
+  align-items: center;
 }
 
-.rating-star {
-  margin-right: 10px;
+.genres-dot {
+  font-size: 25px;
 }
 
-.cast-list {
+.genre:nth-of-type(n)::after {
+  content: ", ";
+  white-space: pre;
+}
+
+.genre:last-of-type::after {
+  content:"";
+}
+
+.people-link-container {
   display: flex;
+  justify-content: space-evenly;
 }
 
-.cast-full-image-link {
-  display: inline-block;
-  position: relative;
+.movie-people-link,
+.movie-homepage-link {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: ease 0.2s;
+  transform: scale(1);
 }
+
+.movie-people-link:hover,
+.movie-homepage-link:hover {
+  color: #ffff00;
+  transform: scale(1.1);
+}
+
+.movie-people-link:active,
+.movie-homepage-link:active {
+  color: #0000ff;
+} 
+

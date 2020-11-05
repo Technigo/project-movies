@@ -18,6 +18,8 @@
   align-items: flex-start;
 }
 
+
+
 @media screen and (min-width: 600px) {
   .cast-card-container {
     grid-template-columns: 1fr 1fr 1fr;

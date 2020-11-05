@@ -1,0 +1,37 @@
+.page-not-found {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FDD51C;
+}
+
+.error-type {
+  font-size: 100px;
+  font-weight: 900;
+  color: #222222;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.error-title {
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.error-message {
+  font-size: 22px;
+  text-align: center;
+}
+
+.button-on-error {
+  font-size: 20px;
+  background-color: coral;
+  border-color: rgba(0, 0, 0, 0.4);
+  padding: 5px;
+}

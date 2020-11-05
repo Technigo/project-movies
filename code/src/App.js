@@ -5,6 +5,8 @@ import MovieList from './pages/MovieList'
 import MovieDetails from 'pages/MovieDetails'
 import Cast from './pages/Cast'
 import Crew from './pages/Crew'
+import PageNotFound from './pages/PageNotFound'
+// import ListOfMovies from './pages/ListOfMovies'
 
 
 export const App = () => {
@@ -24,11 +26,19 @@ export const App = () => {
         <Route path="/movies/:movieId/cast" exact>
           <Cast />
         </Route>
+        <Route path="/actors/:actorId">
+          <listOfMovies />
+        </Route>
         <Route path="/movies/:movieId/crew" exact>
           <Crew />
         </Route>
+        <Route path="/404">
+          <PageNotFound />
+        </Route>
+        <Redirect 
+          to="/404" 
+        />
       </Switch>
-    
     </BrowserRouter>
   )
 }
