@@ -1,9 +1,8 @@
-import React, { useEffect, useState, Redirect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import Loading from "../components/Loading";
-import NotFound from "./NotFound";
 
 const Person = () => {
   const { personId } = useParams();

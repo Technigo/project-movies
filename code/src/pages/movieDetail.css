@@ -33,9 +33,21 @@
   color: #fff;
 }
 
-.movie-details p {
-  font-size: 16px;
+.credits-name,
+.credits-name a {
+  margin-top: 5px;
+  margin-bottom: 8px;
   color: #fff;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.credits-name a {
+  white-space: nowrap;
+}
+
+.credits-name a:hover {
+  text-decoration: none;
 }
 
 .movie-detial-rating {
@@ -43,6 +55,11 @@
   font-size: 17px;
   color: #f00;
   font-weight: n500;
+}
+
+.movie-overview {
+  font-size: 16px;
+  color: #fff;
 }
 
 .back-to-movies {

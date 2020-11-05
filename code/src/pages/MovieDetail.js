@@ -1,10 +1,9 @@
-import React, { useEffect, useState, Redirect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link, useHistory } from "react-router-dom";
 
 import "./movieDetail.css";
 import Loading from "../components/Loading";
-// import NotFound from "./NotFound";
 
 const MovieDetail = () => {
   const { movieId } = useParams();
@@ -19,7 +18,12 @@ const MovieDetail = () => {
   const URL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US`;
   const URL_CREDITS = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}&language=en-US`;
 
-  // console.log("API:", URL);
+  const punctuation = (index, length) => {
+    if (index === length - 1) return "";
+    if (index === length - 2) return " & ";
+
+    return ", ";
+  };
 
   useEffect(() => {
     Promise.all([fetch(URL), fetch(URL_CREDITS)])
@@ -76,19 +80,23 @@ const MovieDetail = () => {
               alt={movie.title}
             />
             <div className="movie-details">
-              <h1>
-                {movie.title}
-                <span className="movie-detial-rating">
-                  {movie.vote_average}/10
-                </span>
-              </h1>
-
-              {credits.cast.slice(0, 3).map((actor) => (
-                <Link to={`/person/${actor.id}`}>
-                  <p>{actor.name}</p>
-                </Link>
-              ))}
-              <p>{movie.overview}</p>
+              <div>
+                <h1>
+                  {movie.title}
+                  <span className="movie-detial-rating">
+                    {movie.vote_average}/10
+                  </span>
+                </h1>
+                <p className="credits-name">
+                  {credits.cast.slice(0, 5).map((actor, index) => (
+                    <>
+                      <Link to={`/person/${actor.id}`}>{actor.name}</Link>
+                      <span>{punctuation(index, 5)}</span>
+                    </>
+                  ))}
+                </p>
+              </div>
+              <p className="movie-overview">{movie.overview}</p>
             </div>
           </div>
         </div>
