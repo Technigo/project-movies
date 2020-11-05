@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 import useDetectOutsideClick from "./UseDetectOutsideClick";
 import "./nav.css";
 
-// Found how to do this drop down here:
-// https://letsbuildui.dev/articles/building-a-dropdown-menu-component-with-react-hooks
-
 const Nav = () => {
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
