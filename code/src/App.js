@@ -30,6 +30,5 @@ export const App = () => {
         </main>
       </Route>
     </BrowserRouter>
-     
   )
 }
