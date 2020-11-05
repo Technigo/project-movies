@@ -23,8 +23,6 @@ const MovieList = ({ children }) => {
 	//to display whatever you include between the opening and closing tags when invoking a component.
 
 	useEffect(() => {
-		//fetchMovieList();
-
 		fetch(API_URL)
 			.then(res => {
 				if (res.ok) {

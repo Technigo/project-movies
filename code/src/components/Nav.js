@@ -41,13 +41,13 @@ const Nav = ({ onLinkClick }) => {
 				<div
 					className={showBurger ? 'nav__button--open' : 'nav__button--closed'}
 				>
-					{categories.map(category => {
+					{categories.map((category, index) => {
 						return (
-							<>
+							<div className="menu" key={index}>
 								<Link
 									to="/"
 									//eslint-disable-next-line
-									key={category}
+
 									className="nav__link"
 									onClick={() => {
 										onLinkClick(`${category.path}`);
@@ -56,7 +56,7 @@ const Nav = ({ onLinkClick }) => {
 								>
 									{category.category}
 								</Link>
-							</>
+							</div>
 						);
 					})}
 				</div>
