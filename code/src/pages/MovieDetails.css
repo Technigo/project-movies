@@ -38,7 +38,7 @@ font-weight: 800;
 
 .details-wrapper,
 .detail-movie-img{
-  max-width: 300px;
+  max-width: 200px;
 }
 
 @media screen and (min-width:768px) {
