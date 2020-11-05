@@ -34,14 +34,14 @@ span.movie-rating {
   margin-left: 10px;
 }
 p.movie-overview {
-  width: 30%;
+  width: 45%;
 }
 .back-link:hover,
 .back-link:focus,
 .back-link:active {
   -webkit-transform: translateX(8px);
   transform: translateX(8px);
-  color: rgb(216, 198, 165);
+  color: aquamarine;
 }
 .back-link {
   position: absolute;
