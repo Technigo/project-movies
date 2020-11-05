@@ -1,13 +1,27 @@
-# Project Movies
+# Project Movies[View Live!](https://suspicious-pike-e44788.netlify.app/)
+In this week project, I have built my first multi-page React application, using a fun new API from themoviedb.org!
 
-Replace this readme with your own information about your project.
+The goal was to use themoviedb.org's API to fetch a list of movies, in my case Popular movies, display them on a page, and then link to a movie detail page when you click on the movie.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+To do this we have used React Router.
 
-## The problem
+## The process and structure
+I have reached the **RED LEVEL** 🔴
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+TODO  
 
+### Core Tech
+
+* React Router
+* useEffect Hook
+* useState Hook
+* useParams
+* Fetch (GET)
+* CSS3
+
+If I had more time I would have wanted to present more information as for example genres on Movie Detail Page or add a dropdown to choose different categories to list (latest, now playing, top rated or upcoming).
+ 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Let's see which movies are Popular :-) [here](https://suspicious-pike-e44788.netlify.app/)!
+
