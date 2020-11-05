@@ -1,18 +1,20 @@
 import React from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import { MovieList } from './components/MovieList'
-import { MovieThumb } from './components/MovieThumb'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { MovieDetails } from './components/MovieDetails'
+
 
 export const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact>
+        <Route exact path="/">
           <MovieList />
         </Route>
-        <Route path="/movies/:slug" exact >
-          {/* <MovieDetails />  */}
+        <Route exact path="/movies/:movieId">
+          {/* movieId is the name of our varible that we will use in the movieDetails component and we will use it to pull our URL id through useParams */}
+          <MovieDetails />
         </Route>
       </Switch>
     </BrowserRouter>
