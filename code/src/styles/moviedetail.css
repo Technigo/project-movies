@@ -121,7 +121,7 @@
 
 @media (max-width: 900px) {
   .background-picture {
-    height: 200%;
+    height: 1450px;
   }
 
   .similar-movies-container{
@@ -131,7 +131,7 @@
 
 @media (max-width: 700px) {
   .background-picture {
-    height: 250%;
+    height: 1500px;
   }
 }
 
@@ -141,7 +141,7 @@
   }
 
   .background-picture {
-    height: 300%;
+    height: 2200px;
   }
 
   .back-link {
