@@ -1,13 +1,23 @@
-# Project Movies
+## Project 11: Movie listing website.
 
-Replace this readme with your own information about your project.
+This is a multi-page React application, using a movie database API.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## Focus
 
-## The problem
+- Practicing useEffect and useState
+- Learning the usage of Route, Link, useHistory etc.
+- Building multipage apps with React and logic for Page not found etc.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## The process
+
+- I visualized my website on paper and decided on the components and pages I was going to use.
+- Built the components and pages
+- Styled the listing and the Movie details page with CSS adding some hover effect.
+
+## Challenges to solve
+
+Add a Back to movies button and improve the Page not found logic.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://movie-listing-project-liza.netlify.app
