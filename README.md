@@ -1,13 +1,33 @@
-# Project Movies
+# Heimkino - a German movie site
 
-Replace this readme with your own information about your project.
+The site gives the user a collection of movies in German, popular and from all time. There are images, a short summary and a rating for each movie. I did the project during the Technigo Bootcamp for frontend developers in Fall 2020.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## What it does
 
-## The problem
+The movie data is fetched from the API at The Movie Database (https://www.themoviedb.org/). 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+On the front page, the posters of 20 movies are shown. On hover on one poster, the movie's title and release date appear. When clicking on one of the posters, the user is directed to another page, showing details about the chosen movie, i.e. another image, a short description and a rating. 
+
+There is a back button leading back to the list.
+
+## The approach
+
+The site is built in React, using useState, useEffect and Routes. Every time the front page is mounted, data om the collection of movies is fetched from the API. 
+When mounting the details page, another fetch is executed to get detailed data about the choden movie. 
+
+The whole project's design follows basically a given template in desktop view. I additionally made it responsive.
+
+## Browser compatibility
+
+The site is responsive and was tested on Chrome, Firefox and Edge using the respective dev tools. Everything works as expected.
+
+## Tech used
+
+- HTML5
+- CSS3
+- JavaScript ES6
+- React
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Curious about German movies? View the page live here:
