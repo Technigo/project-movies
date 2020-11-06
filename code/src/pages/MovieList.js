@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 import Loader from '../components/Loader';
 import Error from '../components/Error';
-//import BackButton from '../components/BackButton';
 import MovieThumb from '../components/MovieThumb';
 import { API_KEY } from '../api.js';
 

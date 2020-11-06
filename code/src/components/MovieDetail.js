@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import BackButton from './BackButton';
+import Backbutton from './Backbutton';
 
 const MovieDetail = ({
   backdrop_path,
@@ -21,7 +21,7 @@ const MovieDetail = ({
         backgroundImage: `linear-gradient(rgba(21, 23, 61, 0.2) 0, rgb(21, 23, 61) 70%), url('https://image.tmdb.org/t/p/original${backdrop_path}')`,
       }}
     >
-      <BackButton />
+      <Backbutton />
       <section className="detail__info-container">
         <img
           className="detail__image"

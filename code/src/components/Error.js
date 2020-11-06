@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BackButton from './BackButton';
+import Backbutton from './Backbutton';
 
 const Error = () => {
   return (
@@ -9,7 +9,7 @@ const Error = () => {
         <p style={{ color: 'white' }}>
           Something went wrong, please try again later
         </p>
-        <BackButton path={'/'} text="Give it another go!" />
+        <Backbutton path={'/'} text="Give it another go!" />
       </section>
     </>
   );

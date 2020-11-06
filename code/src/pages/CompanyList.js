@@ -5,7 +5,7 @@ import Loader from '../components/Loader';
 import Error from '../components/Error';
 import { API_KEY } from '../api.js';
 import CompanyHeader from '../components/CompanyHeader';
-import BackButton from '../components/BackButton';
+import Backbutton from '../components/Backbutton';
 //import BackButton from '../components/BackButton';
 import MovieThumb from '../components/MovieThumb';
 
@@ -67,7 +67,7 @@ const CompanyList = () => {
         <>
           <CompanyHeader {...company} />
           <main className="list">
-            <BackButton />
+            <Backbutton />
             {companyMovies.map(company => (
               <MovieThumb key={company.id} {...company} />
             ))}
