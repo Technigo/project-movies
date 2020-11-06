@@ -1,8 +1,8 @@
+
 .nav__container {
-    grid-column: span 4;
+    grid-row: 1;
     background: #000;
     display: flex;
-    justify-content: space-between;
     padding: 10px;
 }
 
@@ -28,3 +28,11 @@ a:hover {
 a.active {
     color: #ffe4c4;
 }
+
+/*
+
+@media screen and (min-width: 1024px) {
+    .nav__container {
+        justify-content: space-between;
+    }
+} */
