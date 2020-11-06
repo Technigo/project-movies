@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 
 import "components.css/movieDetails.css"
 
-//fetch according to id 
-//this is the page that shows one movie
+//fetch according to movie id 
+//this is the page that shows one movie with its details
 
 
 export const MovieDetails = () => {
@@ -31,20 +31,18 @@ export const MovieDetails = () => {
   //   )
   // }
 
-console.log(setMovieDetails);
-
 return(
-<article className="movie-details"> 
-  <div className="movie-details-background">
-    <img className="movie-details-backdrop-image" src={`https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`} alt={movieDetails.title}/>
-  <div className="movie-details-container">
-    <img className="movie-details-poster" src={`https://image.tmdb.org/t/p/original${movieDetails.poster_path}`} alt={movieDetails.title}/>
-    <div className="movie-details-information">
-      <h1>{movieDetails.title}
-      <span className="vote-red">{movieDetails.vote_average}</span></h1>
-      <p className="movie-details-overview">{movieDetails.overview}</p>
+  <article className="movie-details"> 
+    <div className="movie-details-background">
+      <img className="movie-details-backdrop-image" src={`https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`} alt={movieDetails.title}/>
+      <div className="movie-details-container">
+        <img className="movie-details-poster" src={`https://image.tmdb.org/t/p/original${movieDetails.poster_path}`} alt={movieDetails.title}/>
+        <div className="movie-details-information">
+          <h1>{movieDetails.title}
+            <span className="vote-red">{movieDetails.vote_average}</span></h1>
+          <p className="movie-details-overview">{movieDetails.overview}</p>
+      </div>
     </div>
-  </div>
   </div>
 </article>
 )
