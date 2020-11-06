@@ -1,0 +1,55 @@
+.movieinfo {
+	background-size: cover;
+	padding: 20px;
+}
+
+.movieinfo button {
+	margin: 20px;
+	background: transparent;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	border-style: none;
+	display: flex;
+	align-items: center;
+}
+
+.movieinfo button svg {
+	height: 30px;
+	padding: 5px;
+}
+
+.movieinfo button h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.movieinfo__container {
+	display: flex;
+}
+
+.movieinfo__container img {
+	border: 5px solid #fff;
+}
+
+.movieinfo__container__description {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	color: #fff;
+	padding: 50px;
+	max-width: 500px;
+}
+
+.movieinfo__container__description__title {
+	display: inline-block;
+}
+
+.movieinfo__container__description h1 {
+	font-size: 30px;
+}
+
+.movieinfo__container__description span {
+	color: #fb2323;
+	font-size: 20px;
+}

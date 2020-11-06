@@ -1,0 +1,32 @@
+.movie__wrapper a {
+	max-width: 25%;
+	height: auto;
+}
+
+.movie__wrapper {
+	position: relative;
+	width: 100%;
+}
+
+.movie__description {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0px;
+	left: 0px;
+	color: #fff;
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-end;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.9);
+	z-index: 1;
+}
+
+.movie__description h1 {
+	margin-bottom: 10px;
+}
+
+.movie__description p {
+	margin-top: 5px;
+}
