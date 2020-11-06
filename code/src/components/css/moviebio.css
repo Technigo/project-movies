@@ -1,4 +1,4 @@
-.about-section {
+.bio-section {
   display: flex;
   color: white;
   align-items: center;
@@ -20,9 +20,9 @@
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  left: 50px;
-  top: 50px;
   font-weight: bold;
+  top: 70px;
+  left: 50px;
 }
 
 .back-button svg {
@@ -61,9 +61,68 @@ h1 {
   font-weight: normal;
   font-size: 16px;
   margin-left: 10px;
-  }
+}
 
 .movie-description {
   width: 400px;
   font-size: 18px;
+}
+
+/* Ipad */
+@media (min-width: 651px) and (max-width: 1025px) {
+
+  .content-container {
+    padding: 0 30px;
+  }
+
+  .movie-description {
+    width: 320px;
+    font-size: 18px;
+  }
+
+  .back-button {
+    top: 90px;
+    left: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  
+  .background-image {
+    display: none;
+  }
+
+  .content-container {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .back-button {
+    left: 100px;
+    top: 1000px;
+    margin-bottom: 50px;
+  }
+  
+  .poster-image {
+    margin-top: 200px;
+  }
+  
+  .text-container {
+    flex-direction: column;
+    margin: 0 40px;
+  }
+  
+  h1 {
+    margin-top: 20px;
+  }
+  
+  .rating {
+    font-size: 16px;
+  }
+  
+  .movie-description {
+    width: 350px;
+    font-size: 18px;
+  }
 }
