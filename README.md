@@ -6,7 +6,7 @@ A dynamic multipage movie application listing top 20 popular movies in the US, b
 
 After sketching the components on paper, and planning on what to include in which, I started building them in React. Once the components and some test content was there I fetched data from themoviedb.org's API. Styling happened last and was inspired by Netflix. 
 
-Next thing to implement: error handling for all movie API endpoints, back to movies link from movie and a similar movies page.
+If I would have had more time: error handling for all movie API endpoints (what happens if there is no backdrop img for example), back to movies link and and a similar movies page.
 
 ## View it live
 
