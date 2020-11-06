@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"; 
 import { apiKey } from "../key";
 import BackArrow from "../assets/back-arrow.svg";
+import { NotFound } from "./NotFound";
 
 export const MoviePage = () => { 
   const { movieId } = useParams (); 
@@ -19,6 +20,12 @@ export const MoviePage = () => {
         console.error('Request failed', error)
       })
   }, [movieId]);
+
+  if (!movie.id) {
+    return (
+      <NotFound/>
+    );
+  };
 
 return (
   <>

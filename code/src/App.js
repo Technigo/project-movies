@@ -19,7 +19,7 @@ export const App = () => {
         <Route path="/404">
           <NotFound />
         </Route>
-        <Redirect to= "/404" />
+        <Redirect to= "/404"/>
       </Switch>
       <Footer />
     </BrowserRouter>
