@@ -41,9 +41,8 @@ const ListHeader = ({ onClick }) => {
       >
         {categories.map(category => {
           return (
-            <>
+            <div key={category.path}>
               <Link
-                key={category}
                 to="/"
                 className="list-header__link"
                 onClick={() => {
@@ -53,7 +52,7 @@ const ListHeader = ({ onClick }) => {
               >
                 {category.category}
               </Link>
-            </>
+            </div>
           );
         })}
         {/* <div
