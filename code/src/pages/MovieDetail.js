@@ -22,6 +22,7 @@ export const MovieDetail = () => {
     })
   },[movieId])
 
+  //move this into a new component ActorList and render ActorList instead
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=303d50a32fc0419fb55796d006e5d6c2&language=en-US`)
     .then((res) => res.json())
@@ -43,29 +44,23 @@ export const MovieDetail = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
+ 
+     <BackButton text="Go back"></BackButton>
 
-     {/*
-     <Link className="link-back" to="/">
-        <span role="img" aria-label="back-arrow">
-          <span role="img" aria-label="arrow-emoji">⬅️</span> 
-          </span>Movies start</Link>
-     */ } 
-     <BackButton text="Movies"></BackButton>
-        
         <div className="movie-details-wrapper">
-       <img className="movie-detail-poster" src={`https://image.tmdb.org/t/p/w342${currentMovie.poster_path}`} alt={currentMovie.title} />
-        <div className="movie-details-text">
-        <h1 className="movie-detail-title">{currentMovie.title}</h1> 
-        <p className="movie-tagline">{currentMovie.tagline}</p>
-          <h2 className="movie-detail-rating">Rating: {currentMovie.vote_average}</h2> 
-          <p className="movie-detail-overview">{currentMovie.overview}</p>
+          <img className="movie-detail-poster" src={`https://image.tmdb.org/t/p/w342${currentMovie.poster_path}`} alt={currentMovie.title} />
+            <div className="movie-details-text">
+              <h1 className="movie-detail-title">{currentMovie.title}</h1> 
+                <p className="movie-tagline">{currentMovie.tagline}</p>
+                <h2 className="movie-detail-rating">Rating: {currentMovie.vote_average}</h2> 
+                <p className="movie-detail-overview">{currentMovie.overview}</p>
 
-         
-          <div className="movie-details-cast-list">
-            {castList.slice(0,5).map((actor,index) => (
-              <Link key={index} className="cast-link" to={`/movies/${movieId}/cast/${actor.id}`}>{actor.name}</Link>
-            ))}
-          </div>
+                  {/*Render an ActorList component here instead */}
+                  <div className="movie-details-cast-list">
+                    {castList.slice(0,5).map((actor,index) => (
+                      <Link key={index} className="cast-link" to={`/movies/${movieId}/cast/${actor.id}`}>{actor.name}</Link>
+                    ))}
+                  </div>
          
           <a className="imdb-link" href={`https://www.imdb.com/title/${currentMovie.imdb_id}/`} alt="imdb-link" target="_blank" rel="noopener noreferrer">IMDB <span role="img" aria-label="link-emoji">🔗</span> </a>
           <Link className="similar-movies-link" to= {`/movies/${movieId}/recommendedMovies`}>Explore recommended movies <span role="img" aria-label="heart-eyes-emoji">😍</span> </Link>
