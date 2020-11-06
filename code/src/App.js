@@ -11,19 +11,17 @@ export const App = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact>
-          <MovieList/>
+          <MovieList />
         </Route>
         <Route path="/movies/:movieId" exact>
-          <MoviePage/>
+          <MoviePage />
         </Route>
         <Route path="/404">
-          <NotFound/>
+          <NotFound />
         </Route>
-        <Redirect
-          to= "/404"
-        />
+        <Redirect to= "/404" />
       </Switch>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 };
