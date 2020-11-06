@@ -1,7 +1,39 @@
 .movie-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
 }
+
+.movie {
+    position: relative;
+    width: 33%;
+}
+
+.poster-image {
+    width: 100%;    
+}
+
+.movie-info {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    display: none;
+}
+
+.movie:hover {
+    filter: brightness(50%);
+}
+
+.movie:hover .movie-info {
+    display: block;
+}
+
+/* .movie-title {
+    position: absolute;
+}
+
+.release-date {
+    position: absolute;
+} */
 
 .movie-thumb {
     width: 40%;
