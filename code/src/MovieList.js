@@ -1,3 +1,4 @@
+import { MovieDetail } from "MovieDetail";
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 
@@ -18,7 +19,7 @@ export const MovieList = () => {
   return(
   <section className="movie-list">
     {movies.map((movie) => (
-      <div>
+      <div key={movie.id}>
           <Link className="list-link" to={`/movies/${movie.id}`}>
         <img className="list-image "src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} />
         </Link>
