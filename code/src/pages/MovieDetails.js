@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { Icon } from './Icon.js'
-import { Link } from 'react-router-dom'
 import { NotFound } from './NotFound.js'
 
 import './MovieDetails.css'
@@ -10,15 +10,26 @@ import './MovieDetails.css'
 export const MovieDetails = () => {
 
   const [details, setDetails] = useState({})
+  const [loading, setLoading] = useState(false)
   const { id } = useParams()
 
   const DETAILS_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=e2eb26a39cdd68b3570a5c1b62c9c638&language=en-US`
 
   useEffect (() => {
+    setLoading(true)
     fetch(DETAILS_URL)  
       .then((response) => response.json())
-      .then((json) => setDetails(json))
+      .then((json) => {
+        setDetails(json)
+        setLoading(false)
+      })
   }, [id])
+
+  if(loading) {
+    return (
+      <div></div>
+    )
+  }
 
   if (details.id) {
     return (
