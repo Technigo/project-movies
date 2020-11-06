@@ -24,11 +24,11 @@ export const TVShowList = () => {
   }, []);
 
   return (
-    <section className="tvshow_list__container">
+    <main className="tvshow_list__container">
       {TVShowList.map(tvshow => (
         <TVShowThumb key={tvshow.id} {...tvshow} />
       ))}
       )
-    </section>
+    </main>
   );
 };

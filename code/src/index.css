@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,4 +16,38 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.tvshow_list__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tvshow__link {
+  width: 25%;
+  position: relative;
+  text-decoration: none;
+}
+
+.tvshow__image {
+  width: 100%;
+  transition: .5s ease-in-out;
+  display: flex;
+}
+
+.tvshow__overlay {
+  display: none;
+}
+
+.tvshow__link:hover 
+.tvshow__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  background: linear-gradient(to bottom, rgba(0,0,0, .3) 0%, rgba(0,0,0, .7) 50%, rgba(0,0,0,1) 100%);
+  font-size: 16px;
+  transition: .5s ease-in-out;
 }
