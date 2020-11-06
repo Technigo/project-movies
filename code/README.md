@@ -1,19 +1,21 @@
-# Technigo React Starter App
+## Project 11: Movie listing website.
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+This is a multi-page React application, using a movie database API.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+## Focus
 
-## Usage
+- Practicing useEffect and useState
+- Learning the usage of Route, Link, useHistory etc.
+- Building multipage apps with React and logic for Page not found etc.
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+## The process
 
-Alternatively, if you don't want a new git repo on your account;
+- I visualized my website on paper and decided on the components and pages I was going to use.
+- Built the components and pages
+- Styled the listing and the Movie details page with CSS adding some hover effect.
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+## Challenges to solve
+
+Add a Back to movies button and improve the Page not found logic.
+
+## View it live
