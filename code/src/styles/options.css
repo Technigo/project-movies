@@ -1,0 +1,17 @@
+.select-wrapper {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.select-movie {
+  padding: 10px;
+  margin: 20px 0 10px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 18px;
+  color: #fff;
+  border: 3px solid #fff;
+  background: #000;
+}

@@ -14,9 +14,7 @@ export const MovieDetail = () => {
   // Fecthing detailed information for the choosen movie
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`)
-      .then((res) => {
-        return  res.json();
-      })
+      .then((res) => res.json())
       .then((json) => {
         setMovies(json);
       })
@@ -38,13 +36,12 @@ export const MovieDetail = () => {
   // Adds loader while the page is loading and until the API is loaded
   if (loading === true) {
     return <Loader />;
-  // Check wheather the movie picture is in the API or not, 
-  // if not in this API list the user comes to the Not Found page. 
-  // where it is possible to go back to the home page.
+  // Check wheather there is errors or not, if the page doesn't exist 
+  // the user gets directed to the Not Found page. 
   } else if (movies.success === false) {
     return <Redirect to="/404" />;
   } else {
-    // If not led to this error page return the movie details: 
+    // If not led to the error page return the movie details: 
     return (
       <main 
         className="background-picture" 

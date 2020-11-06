@@ -3,6 +3,7 @@ import 'styles/header.css';
 import { NavLink } from 'react-router-dom';
 
 export const Nav = () => {
+
   return (
     <header>
       <h1 className="top-heading">MOVIES</h1>
@@ -15,6 +16,9 @@ export const Nav = () => {
         </NavLink>
         <NavLink to="/upcoming" className="nav-links">
           Upcoming
+        </NavLink>
+        <NavLink to="/theme" className="nav-links">
+          Choose movie by theme
         </NavLink>
       </nav>
     </header>

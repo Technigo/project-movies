@@ -6,6 +6,7 @@ import { UpcomingMoviesList } from 'pages/UpcomingMoviesList';
 import { MovieDetail } from 'pages/MovieDetail';
 import { Nav } from 'components/Nav';
 import { NotFound } from 'components/NotFound';
+import { MoviesByTheme } from 'pages/MoviesByTheme';
 
 export const App = () => {
   return (
@@ -23,6 +24,9 @@ export const App = () => {
         </Route>
         <Route path="/upcoming" exact>
           <UpcomingMoviesList />
+        </Route>
+        <Route path="/theme" exact>
+          <MoviesByTheme />
         </Route>
         <Route path="/404">
           <NotFound />
