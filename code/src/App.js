@@ -8,6 +8,7 @@ import { NotFound } from './pages/NotFound'
 export const App = () => {
 
   return (
+
     <BrowserRouter>
         <Switch>
           <Route exact path='/'>
@@ -24,5 +25,6 @@ export const App = () => {
           />
         </Switch>
     </BrowserRouter>
+    
   )
 }

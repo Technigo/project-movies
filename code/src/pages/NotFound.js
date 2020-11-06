@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 export const NotFound = () => {
 
   return (
+
     <div className='not-found-container'>
       <div className='not-found-wrapper'>
         <h2>Oops! The page you're looking for is not here..</h2>
@@ -13,5 +14,6 @@ export const NotFound = () => {
         </Link>
       </div>
     </div>
+    
   )
 }

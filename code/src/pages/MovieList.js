@@ -12,6 +12,7 @@ export const MovieList = () => {
     fetch(MOVIES_URL)
     .then((response) => response.json())
     .then((json) => setMovies(json.results))
+    .catch((error) => console.error(error))
   }
 
   useEffect(() => {

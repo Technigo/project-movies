@@ -134,10 +134,32 @@ code {
     width: 30%;
     flex-grow: 1;
   } 
+
+  .movie-details {
+    width: 90%;
+  }
 }
 
 @media (max-width: 666px) {
   .movie-list a{
     width: 50%;
+  }
+
+  .movie-backdrop {
+   align-items: center;
+  }
+
+  .back-link {
+    align-self: flex-start;
+    padding-left: 20px;
+  }
+  
+  .movie-details-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .movie-details {
+    width: 90%;
   }
 }
