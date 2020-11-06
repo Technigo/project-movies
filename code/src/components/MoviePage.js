@@ -20,7 +20,7 @@ export const MoviePage = () => {
   return (
     <div 
       className='movie-page-background' 
-      style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 20%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})` }}>
+      style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 5%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})` }}>
       <Button />
       <div className='movie-page-content'>
         <img className='movie-page-poster' src= {`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt={movie.original_title}/>
