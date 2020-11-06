@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom"
-import { Link, useHistory } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 import { apiKey } from "key"
 import "./moviesDetails.css"
 import Arrow from "../assets/arrow.svg"
-import { NotFound } from 'NotFound'
 
 export const MoviesDetails = () => {
     const { movieId } = useParams();
     const [movies, setMovies] = useState([])
-    const history = useHistory()
-    const [status, setStatus] = useState(200);
-
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         const movieDetailsURL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`
@@ -23,15 +20,25 @@ export const MoviesDetails = () => {
             .then((json) => {
                 console.log(json)
                 setMovies(json)
+                setLoading(false)
             })
             .catch((error) => {
                 console.error('Bad request', error)
             })
-    }, [movieId])
+    }, [movieId, loading])
 
     if (!movies.id) {
         return (
-            <div>Movie not found</div>
+
+            <div className="not-found">
+                {loading && <div className="loader" />}
+                {}
+                <h3>Movie not found, probably because you searched for a non existing one.</h3>
+                <h4>But check out the movies we do have, just go back.</h4>
+                <Link to="/">
+                    <p className="error-message">Go back home</p>
+                </Link>
+            </div>
         )
     }
 
@@ -52,12 +59,4 @@ export const MoviesDetails = () => {
             </div>
         </div>
     )
-    // } else if (movies.id === false) {
-    //     return (
-    //         <NotFound />
-    //     )
-
-    // } else {
-    //     history.push("/404")
-
 }

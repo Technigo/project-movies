@@ -38,6 +38,12 @@ span.movie-rating {
 p.movie-overview {
   width: 45%;
 }
+h3 {
+  justify-content: center;
+  text-align: center;
+  top: 50;
+  font-size: 20px;
+}
 .back-link:hover,
 .back-link:focus,
 .back-link:active {
