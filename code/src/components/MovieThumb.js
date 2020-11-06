@@ -7,12 +7,12 @@ const MovieThumb = ({ id, poster_path, name, title, release_date }) => {
 			<Link to={`/movies/${id}`}>
 				<img
 					src={`https://image.tmdb.org/t/p/w300/${poster_path}`}
-					alt={name}
+					alt={title}
 					className="movie-thumb__img"
 				/>
 				<div className="movie-thumb__info">
 					<h2>{title}</h2>
-					<p>{`Released ${release_date}`}</p>
+					<p>{`Released: ${release_date}`}</p>
 				</div>
 			</Link>
 		</article>

@@ -7,7 +7,7 @@ const CompanyHeader = ({ homepage, logo_path, name }) => {
 		<header>
 			<Home />
 			{homepage ? (
-				<a href={homepage} target="blank" className="company">
+				<a href={homepage} target="blank" className="company-name">
 					{logo_path ? (
 						<img
 							className="company__logo"

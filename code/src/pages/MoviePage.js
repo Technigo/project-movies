@@ -17,7 +17,6 @@ const MoviePage = () => {
 	/3/movie/${movieId}?api_key=${ApiKey}&language=en-US`;
 
 	useEffect(() => {
-		//fetchMovieDetail();
 		fetch(API_URL)
 			.then(res => {
 				if (res.ok) {

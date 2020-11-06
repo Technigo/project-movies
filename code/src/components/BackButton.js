@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useHistory } from 'react-router-dom';
 
 const BackButton = ({ text }) => {
@@ -9,11 +10,11 @@ const BackButton = ({ text }) => {
 			className="back__button"
 			onClick={() => history.goBack()}
 		>
-			<img
+			{/* <img
 				src="../Images/arrow.svg"
 				alt="back button arrow"
 				className="back__button--arrow"
-			/>
+			/> */}
 			{text}
 		</button>
 	);

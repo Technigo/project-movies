@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
 
 const MovieDetail = ({
@@ -14,60 +15,61 @@ const MovieDetail = ({
 	return (
 		<>
 			<section
-				className="movie__details"
+				className="details"
 				style={{
 					backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 6%, rgb(0, 0, 0) 100%), url("https://image.tmdb.org/t/p/w1280/${backdrop_path}")`,
 				}}
 			>
-				<div className="movie__details--container">
+				<div className="details-container">
 					<img
 						src={`https://image.tmdb.org/t/p/w300/${poster_path}`}
 						alt={`${title}`}
-						className="movie__detail--img"
+						className="details__img"
+						tabIndex="0"
 					/>
-					<div className="movie__detail--info">
-						<h3>
+					<div className="details__info">
+						<h3 tabIndex="0">
 							{title}
-							<span className="movie__detail--rate">{vote_average}/10</span>
+							<span className="details__rate" tabIndex="0">
+								{vote_average}/10
+							</span>
 						</h3>
-						<p className="movie__detail--description">{overview}</p>
+						<p className="movie__details--description" tabIndex="0">
+							{overview}
+						</p>
 						<a href={`https://www.imdb.com/title/${imdb_id}/`} target="blank">
-							<p>
-								IMDB
-								<img
-									src="../Images/link.svg"
-									alt="link direction icon"
-									className="movie__detail--imdb"
-								/>
-							</p>
+							<img
+								src="../Images/imdb.svg"
+								alt="link direction icon"
+								className="details__imdb"
+							/>
 						</a>
-						<div className="movie__detail--tag">
-							<p className="movie__detail--tag--heading">Genres:</p>
-							<div className="movie__detail--tag--list--wrapper">
+						<div className="details__tag-container">
+							<h4 tabIndex="0">Genres:</h4>
+							<div className="details__tag-lists">
 								{genres.map(genre => (
-									<ul
-										className="movie__detail--tag--list grey"
-										key={genre.name}
-									>
-										<li>{genre.name}</li>
+									<ul className="details__tag-list-grey" key={genre.name}>
+										<li tabIndex="0">{genre.name}</li>
 									</ul>
 								))}
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
 
-			<section className="movie__detail--tag--company">
-				<p className="movie__detail--tag--heading">Production companies:</p>
-				<div className="movie__detail--tag--list--wrapper">
-					{production_companies.map(company => (
-						<Link key={company.name} to={`/company/${company.id}`}>
-							<ul className="movie__detail--tag--list purple">
-								<li>{company.name}</li>
-							</ul>
-						</Link>
-					))}
+				<div className="company">
+					<h4 tabIndex="0">Production companies:</h4>
+					<div className="company-container">
+						{production_companies.map(company => (
+							<Link
+								className="company__names"
+								key={company.name}
+								to={`/company/${company.id}`}
+							>
+								{company.name}
+							</Link>
+						))}
+					</div>
 				</div>
 			</section>
 		</>

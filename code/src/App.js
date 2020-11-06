@@ -10,7 +10,7 @@ import Error from './components/Error';
 import './styles/MovieStyle.css';
 
 export const App = () => {
-	const [movieList, setMovieList] = useState(); //toggle between different movie categories
+	const [movieList, setMovieList] = useState();
 
 	const handleClick = selectedList => {
 		setMovieList(selectedList);

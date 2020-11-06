@@ -33,11 +33,8 @@ const Nav = ({ onLinkClick }) => {
 		<header>
 			<nav>
 				<Home />
-				{/* <Link to="/">
-					<h1>Movie time</h1>
-				</Link> */}
 				<button className="nav__button" onClick={showBurgerMenu}>
-					Category
+					<i className="fa fa-bars"></i>
 				</button>
 				<div
 					className={showBurger ? 'nav__button--open' : 'nav__button--closed'}
