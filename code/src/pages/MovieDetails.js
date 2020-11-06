@@ -35,7 +35,7 @@ export const MovieDetails = () => {
         <MovieDetailed key={movie.id} {...movie} />
       ) : status === 404 ? ( // status 404 means we do not have a match and data is not fetched
         <NotFound />
-      ) : ( // else
+      ) : ( // else.. are there more statuses than 200 and 404? if yes, we have an infinite loader here..
             <Loader />
           )
       }

@@ -5,6 +5,8 @@ import { MovieList } from './pages/MovieList.js'
 import { MovieDetails } from './pages/MovieDetails.js'
 import { NotFound } from './components/NotFound.js'
 
+//const API_KEY = 'c07a4dcb1d91b54eb3b153e458e26489'
+
 export const App = () => {
 
   return (
@@ -23,12 +25,6 @@ export const App = () => {
         <Route>
           <NotFound />
         </Route>
-
-        {/* <Route path='/404'>
-          <NotFound />
-        </Route>
-
-        <Redirect to='/404' /> */}
 
       </Switch>
     </Router>
