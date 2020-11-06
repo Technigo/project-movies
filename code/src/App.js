@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
 import { PopularList } from './pages/PopularList';
 import { MovieDetail } from './pages/MovieDetail';
 

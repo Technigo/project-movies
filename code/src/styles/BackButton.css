@@ -1,11 +1,14 @@
+.back-button-wrapper {
+  display: flex;
+}
+
 .back-button-link {
   display: flex;
   align-items: center; /* Needed for iPhone to get arrow and text to be on same row */
   color: #fff;
   font-weight: bold;
   text-decoration: none;
-  padding-top: 20px;
-  padding-left: 10px;
+  padding: 20px 10px 0 10px;
 }
 
 .back-button-link .svg {
@@ -19,7 +22,6 @@
 
 @media (min-width: 668px) {
   .back-button-link {
-    padding-top: 40px;
-    padding-left: 40px;
+    padding: 40px 10px 0 40px;
   }
 }

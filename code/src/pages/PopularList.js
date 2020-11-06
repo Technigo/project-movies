@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+
 import { Loader } from '../components/Loader';
 import { MovieThumb } from '../components/MovieThumb';
+
 import '../styles/PopularList.css';
 
 export const PopularList = () => {

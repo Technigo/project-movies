@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+
 import { NotFound } from '../components/NotFound';
 import { Loader } from '../components/Loader';
 import { BackButton } from '../components/BackButton';
+
 import '../styles/MovieDetail.css';
 
 export const MovieDetail = () => {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import '../styles/MovieThumb.css';
 
 export const MovieThumb = ({ id, poster_path, title, release_date }) => {
