@@ -1,5 +1,5 @@
 import React from "react";
-import { generatePath, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 //import { MoviePage } from "react";
 
