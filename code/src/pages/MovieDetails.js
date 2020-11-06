@@ -6,7 +6,6 @@ import "components.css/movieDetails.css"
 //fetch according to movie id 
 //this is the page that shows one movie with its details
 
-
 export const MovieDetails = () => {
   const {id} = useParams();
 
@@ -24,13 +23,7 @@ export const MovieDetails = () => {
   useEffect (()=> {
     getMovieDetails(id)
   },[id]);  
-console.log(movieDetails);
-  // const movieMatch = movieDetails.find(detail => detail.id = id)
-  // if(!movieMatch) {
-  //   return (
-  //   <div>Not found</div>
-  //   )
-  // }
+  console.log(movieDetails);
 
   return(
     <article className="movie-details"> 
