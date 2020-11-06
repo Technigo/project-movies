@@ -135,6 +135,10 @@ code {
     flex-grow: 1;
   } 
 
+  .movie-backdrop{
+    position: relative;
+  }
+  
   .movie-details {
     width: 90%;
   }
@@ -147,13 +151,14 @@ code {
 
   .movie-backdrop {
    align-items: center;
+   position: relative;
   }
 
   .back-link {
     align-self: flex-start;
     padding-left: 20px;
   }
-  
+
   .movie-details-container {
     flex-direction: column;
     align-items: flex-start;
