@@ -24,7 +24,7 @@ export const MovieDetails = () => {
     return (
       <section className='movie-details'style={{backgroundImage: `url(https://image.tmdb.org/t/p/original/${details.backdrop_path})`}}>
         <Link className='homepage-link' to='/'>
-          <Icon/>
+          <Icon />
           <p className='link-title'>Movies</p>
         </Link>
         <div className='details-summary'>
