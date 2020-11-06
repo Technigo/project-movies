@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
-import 'styles/movieList.css'
+import 'styles/movieList.css';
 
 export const MovieList = ({apiKey, baseUrl, posterSize}) => {
   const [movies, setMovies] = useState([]);
@@ -15,9 +15,7 @@ export const MovieList = ({apiKey, baseUrl, posterSize}) => {
     .then(json => (
       setMovies(json.results)
     ))
-  }, []);
-
-  console.log(movies)
+  }, [MOVIES_URL]);
 
   return (
     <>
@@ -25,10 +23,10 @@ export const MovieList = ({apiKey, baseUrl, posterSize}) => {
       <section className='movie-list'>
         {movies.map((movie) => (
           <Link key={movie.id} to={`/movies/${movie.id}`}>
-            <img src={baseUrl + posterSize + `${movie.poster_path}`}/>
+            <img src={baseUrl + posterSize + `${movie.poster_path}`} alt={`${movie.original_title}`}/>
             <div className='movie-details'>
               <h1>{movie.original_title}</h1>
-              <p>Erschienen {movie.release_date}</p>
+              <p>Released {movie.release_date}</p>
             </div>
           </Link>
         ))}

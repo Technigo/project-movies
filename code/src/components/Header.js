@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <header>
       <h1>Heimkino</h1>
-      <p>You want to practice your German? Make it fun with our collection of German movies!</p>
+      <p>You want to practice your German? Make it fun with our collection of movies in German!</p>
     </header>
   )
 };

@@ -7,7 +7,6 @@
   position: absolute;
   left: 50px;
   top: 50px;
-  color: white;
   font-weight: 700;
   display: flex;
   text-decoration: none;
@@ -16,6 +15,7 @@
 .back-link img {
   margin-right: 5px;
   transition: margin-right .2s ease-in-out;
+  width: 24px;
 }
 
 .back-link:hover img {
@@ -55,4 +55,24 @@
 
 .description p {
   max-width: 400px;
+}
+
+/*media queries*/
+
+@media (max-width: 767px) {
+  .summary-box {
+    flex-wrap: wrap-reverse;
+    margin-top: 100px;
+    justify-content: center;
+  }
+
+  .summary-box img {
+    width: 90%;
+  }
+
+  .description {
+    width: 90%;
+    margin-bottom: 30px;
+    margin-left: 0;
+  }
 }

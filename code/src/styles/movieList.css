@@ -44,9 +44,9 @@
     width: 50%
   }
 }
-/* 
+
 @media (max-width: 767px) {
-  .movie-list a {
-    width: 100%;
+  .movie-details h1 {
+    font-size: 24px;
   }
-} */
+}

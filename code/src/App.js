@@ -16,12 +16,12 @@ export const App = () => {
   useEffect(() => {
     fetch(CONFIG_URL)
     .then(res => res.json())
-    .then(json => (
-      setBaseUrl(json.images.base_url),
-      setPosterSize(json.images.poster_sizes[3]),
+    .then((json) => {
+      setBaseUrl(json.images.base_url)
+      setPosterSize(json.images.poster_sizes[3])
       setBackdropSize(json.images.backdrop_sizes[2])
-    ))
-  }, []);
+    })
+  }, [CONFIG_URL]);
 
   return (
     <BrowserRouter>

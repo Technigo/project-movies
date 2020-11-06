@@ -5,7 +5,7 @@ header {
   background-color: black;
   color: white;
   display: flex;
-  align-items: last baseline;
+  align-items: center;
 }
 
 header h1 {
@@ -48,6 +48,7 @@ header p {
   
   header h1 {
     font-size: 15vw;
+    height: auto;
   }
 
   header p {
