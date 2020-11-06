@@ -14,7 +14,6 @@ export const MovieDetails = () => {
     fetch(DETAILS_URL(movieId))
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
         setDetails(data)
       })
   }, [movieId])

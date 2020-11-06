@@ -11,10 +11,7 @@ export const Nav = () => {
             </h1>
             <ul className='nav__links'>
                 <li>
-                    <Link to='/category/top-rated'>Top Rated</Link>
-                </li>
-                <li>
-                    <Link to='/'></Link>
+                    <Link to='/category/top_rated'>Top Rated</Link>
                 </li>
             </ul>
         </nav>

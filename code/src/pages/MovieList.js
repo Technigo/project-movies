@@ -11,33 +11,21 @@ export const MovieList = () => {
   const [movies, setMovies] = useState([])
   const { category } = useParams();
 
+  const getURL = (category) => {
+    if(category==='top_rated') {
+      return TOP_RATED__URL
+    } return MOVIELIST__URL
+  }
+
   const getMovieList = () => {
-    fetch(MOVIELIST__URL)
-      .then((res) => {
-        return res.json()
-      })
-      .then((data) => {
-        setMovies(data.results)
-      })}
-    /* if(path==='/')
-    {
-    fetch(MOVIELIST__URL)
+    fetch(getURL(category))
       .then((res) => {
         return res.json()
       })
       .then((data) => {
         setMovies(data.results)
       })
-  }else if(path==='/:popular')
-  {
-    fetch(TOP_RATED__URL)
-    .then((res) => {
-      return res.json()
-    })
-    .then((data) => {
-      setMovies(data.results)
-    })
-  }} */
+  }
 
   useEffect(() => {
     getMovieList()

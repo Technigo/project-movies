@@ -14,10 +14,10 @@ export const App = () => {
         <Route path='/' exact>
           <MovieList />
         </Route>
-        <Route path='/movie/:movieId' exact>
-          <MovieDetails />
-        </Route>
         <Route path='/category/:category' exact>
+          <MovieList />
+        </Route>
+        <Route path='/movie/:movieId' exact>
           <MovieDetails />
         </Route>
         <Route path='/404' exact>
