@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+
+import { BackButton } from "components/js/BackButton";
 
 import "components/css/moviedetails.css";
 
@@ -27,6 +29,9 @@ export const MovieDetails = () => {
         src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
         alt={movie.title}
       ></img>
+      <Link className="back-button" to='/'>
+        <BackButton />All movies
+      </Link>
       <div className="content-container">
         <img
           className="poster-image"
