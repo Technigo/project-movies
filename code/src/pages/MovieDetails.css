@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  position: relative;
   min-height: 100vh;
   padding: 30px;
   background-repeat: no-repeat; 
@@ -24,6 +25,7 @@
   color: #ffffff;
   font-weight: bold;
   transition: 0.4s ease;
+  z-index: 1;
 }
 
 .homepage-link:hover .link-title {
@@ -32,17 +34,20 @@
 
 .homepage-link svg {
   margin-right: 3px;
+  z-index: 1;
 }
 
 .details-summary {
   display: flex;
   flex-direction: column;
   width: inherit;
+  z-index: 1;
 }
 
 .details-image {
   border: solid 4px #ffffff;
   width: 80%;
+  z-index: 1;
 }
 
 .details-text {
@@ -70,6 +75,17 @@
   font-weight: normal;
   font-size: 18px;
   margin-left: 10px;
+}
+
+.details-overlay {
+  position: absolute;
+  top:0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  opacity: 0.3;
 }
 
 /* tablet only */

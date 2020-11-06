@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 
 import { Icon } from './Icon.js'
 import { Link } from 'react-router-dom'
+import { NotFound } from './NotFound.js'
 
 import './MovieDetails.css'
 
@@ -19,21 +20,26 @@ export const MovieDetails = () => {
       .then((json) => setDetails(json))
   }, [id])
 
-  console.log(details) // - don't forget to remove
-
-  return (
-    <section className='movie-details'style={{backgroundImage: `url(https://image.tmdb.org/t/p/original/${details.backdrop_path})`}}>
-      <Link className='homepage-link' to='/'>
-        <Icon/>
-        <p className='link-title'>Movies</p>
-      </Link>
-      <div className='details-summary'>
-        <img className="details-image" src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt={details.title}/>
-        <div className ="details-text">
-          <h2>{details.title}<span>{details.vote_average}/10</span></h2>
-          <p>{details.overview}</p>
+  if (details.id) {
+    return (
+      <section className='movie-details'style={{backgroundImage: `url(https://image.tmdb.org/t/p/original/${details.backdrop_path})`}}>
+        <Link className='homepage-link' to='/'>
+          <Icon/>
+          <p className='link-title'>Movies</p>
+        </Link>
+        <div className='details-summary'>
+          <img className="details-image" src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt={details.title}/>
+          <div className ="details-text">
+            <h2>{details.title}<span>{details.vote_average}/10</span></h2>
+            <p>{details.overview}</p>
+          </div>
         </div>
-      </div>
-    </section>
-  )
+        <div className='details-overlay'></div>
+      </section>
+    )
+  } else {
+    return (
+      <NotFound />
+    )
+  }
 }
