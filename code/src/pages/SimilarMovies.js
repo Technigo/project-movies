@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+// Components
 import ListedMovie from '../components/ListedMovie';
 import { NoSimilarMoviesFound } from './NotFound';
 import { RoundBackButton } from '../components/BackButton';
