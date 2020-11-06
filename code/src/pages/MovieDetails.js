@@ -18,16 +18,13 @@ export const MovieDetails = () => {
   const getMovie = () => {
     fetch(MOVIE_URL)
       .then(response => {
-        console.log(response.status)
         setTimeout(() => {
           (setStatus(response.status))
         }, 1990)
         // puts the setStatus on hold for 1990 milliseconds
         return response.json()
       })
-      .then(json => {
-        setMovie(json)
-      })
+      .then(json => setMovie(json))
   }
 
   useEffect(getMovie, [])

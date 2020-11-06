@@ -3,6 +3,7 @@ body {
 }
 
 /*** MOVIE COMPONENT ***/
+
 .movie-card-image {
   width: 25%; 
   margin-bottom: -4px;
@@ -105,6 +106,7 @@ h3 {
 }
 
 /*** LOADER COMPONENT ***/
+
 .loader {
   text-align: center;
   margin-top: 20vh;
