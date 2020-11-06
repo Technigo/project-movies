@@ -35,8 +35,10 @@ const SimilarMovies = () => {
       <div className="similar-movies--back-button">
         <RoundBackButton />
       </div>
-      {console.log(similarMovies)}
+
+      {/* If there are no similar movies, show this error */}
       {similarMovies.length === 0 && <NoSimilarMoviesFound />}
+
       {/* List of similar movies */}
       {similarMovies.map((movie) => {
         return (
