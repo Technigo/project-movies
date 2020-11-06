@@ -13,6 +13,9 @@ export const Nav = () => {
                 <li>
                     <Link to='/category/top_rated'>Top Rated</Link>
                 </li>
+                <li>
+                    <Link to='/category/upcoming'>Upcoming</Link>
+                </li>
             </ul>
         </nav>
     )

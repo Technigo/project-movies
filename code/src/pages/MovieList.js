@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 
 import { Movie } from '../components/Movie'
 import { Nav } from '../components/Nav'
-import { MOVIELIST__URL, TOP_RATED__URL } from '../components/URLS'
+import { MOVIELIST__URL, TOP_RATED__URL, UPCOMING__URL } from '../components/URLS'
 
 import '../styles/movielist.css'
 
@@ -14,6 +14,8 @@ export const MovieList = () => {
   const getURL = (category) => {
     if(category==='top_rated') {
       return TOP_RATED__URL
+    } else if(category==='upcoming'){
+      return UPCOMING__URL
     } return MOVIELIST__URL
   }
 
