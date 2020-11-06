@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const MovieThumbSimilar = ({ title, release_date, poster_path, id,}) => {
+export const MovieThumbSimilar = ({ title, poster_path, id,}) => {
 
   return (
     <Link key={id} to={`/movies/${id}`}> 
-        <img 
-          src={`https://image.tmdb.org/t/p/w500${poster_path}`} 
-          alt={title} 
-          className="similar-movie-poster-image"
-        />
+       <img 
+        src={`https://image.tmdb.org/t/p/w500${poster_path}`} 
+        alt={title} 
+        className="similar-movie-poster-image"
+      />
     </Link>
   );
 };

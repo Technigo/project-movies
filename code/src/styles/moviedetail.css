@@ -18,36 +18,9 @@
   padding: 3px;
 }
 
-.left {
-  transform: rotate(-225deg);
-  -webkit-transform: rotate(-225deg);
-}
-
 .right {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-}
-
-.back-link {
-  color: #fff;
-  text-decoration-line: none;
-  -moz-text-decoration-line: none;
-  -webkit-text-decoration-line: none;
-  font-weight: bold;
-  margin: 0 0 0 50px;
-  display: flex;
-  align-items: center;
-  transition: ease 0.2s;
-}
-
-.back-link:hover {
-  font-size: 18px;
-  letter-spacing: 3px;
-  text-shadow: 1.5px 1px 2px #000;
-}
-
-.back-link:hover .left {
-  box-shadow: 1.5px 1px 1px #000;
 }
 
 /* The div including the smaller picture and the text-elements */
@@ -109,7 +82,7 @@
 }
 
 /* Hover effect to make it easier to read based on background */
-.movie-heading:hover, .overview:hover, .more-movies:hover, .similar-movies-heading:hover {
+.movie-heading:hover, .overview:hover, .more-movies:hover, .similar-movies-heading:hover, .nosimilarmoviesfound-box:hover {
   text-shadow: 1.5px 1px 2px #000;
 }
 
@@ -118,8 +91,7 @@
   flex-wrap: wrap;
   width: 400px;
   height: 300px;
-  margin-top: 70px;
-  /* visibility: hidden; */
+  margin: 70px 0 0 130px;
 }
 
 .similar-movie-poster-image {
@@ -129,6 +101,11 @@
 
 .similar-movie-poster-image:hover {
   border: 2px solid white;
+}
+
+.nosimilarmoviesfound-box {
+  padding: 40px 20px;
+  border: 5px solid #fff;
 }
 
 @media (max-width: 1024px) {

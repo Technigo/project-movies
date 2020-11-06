@@ -1,0 +1,32 @@
+.back-button {
+  padding: 10px;
+  appearance: none;
+  border: none;
+  background: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 0 50px;
+  display: flex;
+  align-items: center;
+  transition: ease 0.2s;
+  cursor: pointer;
+}
+
+.left {
+  transform: rotate(-225deg);
+  -webkit-transform: rotate(-225deg);
+}
+
+.back-button:hover {
+  font-size: 18px;
+  letter-spacing: 3px;
+  text-shadow: 1.5px 1px 2px #000;
+}
+
+.back-button:hover .left {
+  box-shadow: 1.5px 1px 1px #000;
+}
