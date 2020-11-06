@@ -12,7 +12,8 @@ h3 {
 header {
 	height: 10vh;
 	display: flex;
-	justify-content: flex-end;
+	/* justify-content: flex-end; */
+	justify-content: space-between;
 	align-items: center;
 	padding: 20px;
 	position: relative;

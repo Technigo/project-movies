@@ -1,9 +1,11 @@
 import React from 'react';
-//import { Link } from 'react-router-dom';
+
+import Home from './Home';
 
 const CompanyHeader = ({ homepage, logo_path, name }) => {
 	return (
 		<header>
+			<Home />
 			{homepage ? (
 				<a href={homepage} target="blank" className="company">
 					{logo_path ? (

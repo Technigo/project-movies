@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+
 import { Link } from 'react-router-dom';
+import Home from './Home';
 
 const Nav = ({ onLinkClick }) => {
 	const [showBurger, setShowBurger] = useState(false);
@@ -30,9 +32,10 @@ const Nav = ({ onLinkClick }) => {
 	return (
 		<header>
 			<nav>
-				<Link to="/">
+				<Home />
+				{/* <Link to="/">
 					<h1>Movie time</h1>
-				</Link>
+				</Link> */}
 				<button className="nav__button" onClick={showBurgerMenu}>
 					Category
 				</button>
