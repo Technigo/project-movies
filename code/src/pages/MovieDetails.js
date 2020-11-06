@@ -9,12 +9,10 @@ import "components.css/movieDetails.css"
 
 export const MovieDetails = () => {
   const {id} = useParams();
-    console.log(id);
 
   const MOVIE_DETAILS_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=636ed5609cbdb1c9a92992698d99fea5`;
   const [movieDetails, setMovieDetails] = useState({});
-
-
+  
   const getMovieDetails = () => {
     fetch(MOVIE_DETAILS_URL)
       .then(response => response.json())
@@ -22,9 +20,16 @@ export const MovieDetails = () => {
         setMovieDetails(json)
       })
   }
-   useEffect (()=> {
+  useEffect (()=> {
     getMovieDetails()
   },[id]);  
+
+  // const movieMatch = movieDetails.find(movieDetail => movieDetail.id = id)
+  // if(!movieMatch) {
+  //   return (
+  //   <div>Not found</div>
+  //   )
+  // }
 
 console.log(setMovieDetails);
 
@@ -35,8 +40,8 @@ return(
   <div className="movie-details-container">
     <img className="movie-details-poster" src={`https://image.tmdb.org/t/p/original${movieDetails.poster_path}`} alt={movieDetails.title}/>
     <div className="movie-details-information">
-      <h1>{movieDetails.title}</h1>
-      <p className="movie-details-vote">{movieDetails.vote_average}</p>
+      <h1>{movieDetails.title}
+      <span className="vote-red">{movieDetails.vote_average}</span></h1>
       <p className="movie-details-overview">{movieDetails.overview}</p>
     </div>
   </div>

@@ -1,9 +1,3 @@
-/* .movie-card-image {
-  width: 25%;
-}
-.movie-card-link:hover {
-  filter: brightness(60%);
-} */
 .movie-card-image {
   width: 25%;
   margin-bottom: -5px;
@@ -12,23 +6,42 @@
 .movie-card-link:hover {
   filter: brightness(55%);
 }
-/* .movie-card-image-wrapper a {
-  width: 25%;
-  height: auto;
-  position: relative;
-  background-color: red;
-}
 
-.movie-card-image-details {
+@media (min-width: 768px) and (max-width: 1023px) {
+  .movie-card-image {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .movie-card-image {
+    width: 100%;
+  }
+}
+/* .movie-card-image {
+  position: relative;
+}
+.movie-card-details {
+  position: absolute;
+  color: #fff;
+} */
+
+/* .movie-card-details {
   position: absolute;
   top: 0;
-  right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.75);
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
   display: none;
-  padding: 20px;
+  opacity: 0; */
+
+/* transition effect. not necessary */
+/* transition: opacity 0.2s, visibility 0.2s;
 }
-.movie-card-image-details:hover {
+
+.movie-card-link:hover .movie-card-details {
   display: block;
-} */
+  opacity: 1;
+}
+ */
