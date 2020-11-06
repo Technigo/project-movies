@@ -1,7 +1,9 @@
 .not-found {
+  text-align: center;
   width: 100%;
   height: 100vh;
   background: #fff;
+  margin-top: 50px;
 }
 
 h4 {

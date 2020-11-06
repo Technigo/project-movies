@@ -20,10 +20,8 @@ code {
 }
 /* MOVIEINFO */
 .movies-card {
+  flex-basis: 25%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 .movies-card img {
   width: 100%;

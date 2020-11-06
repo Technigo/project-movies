@@ -10,6 +10,7 @@ a {
 }
 .movie-wrapper {
   position: relative;
+  flex-wrap: wrap;
   width: 25%;
   margin-bottom: -4px;
 }
@@ -19,6 +20,7 @@ a {
 .movie-info {
   position: absolute;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-end;
   top: 0;

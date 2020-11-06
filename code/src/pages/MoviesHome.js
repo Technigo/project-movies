@@ -22,9 +22,11 @@ export const MoviesHome = () => {
                 console.error('Bad request', error)
             })
     }, [movies, loading]);
+
     return (
         <div className="movies-container">
             {loading && <div className="loader" />}
+            {}
             {movies.map((movie) => (
                 <MovieInfo key={movie.id} {...movie} />
             ))}
