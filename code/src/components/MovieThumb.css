@@ -14,13 +14,12 @@
   transition: 0.3s ease;
 }
 
-.movie-thumb-wrapper:hover .movie-image {
-  filter: brightness(0.3);
+.movie-thumb-wrapper .movie-image {
+  filter: brightness(0.5);
 }
 
 .movie-description {
   position: absolute;
-  display: none;
   transition: 0.3s ease;
 }
 
@@ -38,10 +37,6 @@
   font-weight: normal;
   margin-top: 15px;
   margin-bottom: 40px;
-}
-
-.movie-thumb-wrapper:hover .movie-description {
-  display: block;
 }
 
 /* iphone 5 & galaxy fold */
@@ -63,6 +58,10 @@
 /* computer only */
 @media (min-width: 1025px) {
 
+  .movie-description {
+    display: none;
+  }
+
   .movie-thumb-wrapper {
     width: 25%;
   }
@@ -74,4 +73,17 @@
   .movie-description h3 {
     font-size: 18px;
   }
+
+  .movie-thumb-wrapper .movie-image {
+    filter: brightness(1);
+  }
+
+  .movie-thumb-wrapper:hover .movie-description {
+    display: block;
+  }
+
+  .movie-thumb-wrapper:hover .movie-image {
+    filter: brightness(0.3);
+  }
+  
 }
