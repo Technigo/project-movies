@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-export const PopularMovieCard = ({id, poster_path, original_title, release_date}) => {
+export const PopularMovieCard = ({id, poster_path, title  ,release_date}) => {
     
 return (
   <>
@@ -13,7 +13,7 @@ return (
             src={`https://image.tmdb.org/t/p/w780/${poster_path}`} 
             alt={`${`original_title`}poster`} />
           <div className="text-overlay">
-            <h1>{original_title}</h1>
+            <h1>{title}</h1>
             <p> Released {release_date}</p>
           </div> 
         </div> 
