@@ -11,13 +11,23 @@ export const RecommendedMovies = () => {
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=303d50a32fc0419fb55796d006e5d6c2&language=en-US`)
-   .then((res) => res.json())
+    .then(res => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        throw new Error('404');
+      }
+    })
    .then((json) => {
      console.log(json.results);
      const resultsFiltered = json.results.filter((movie) =>( movie.poster_path != null ));
      //console.log(newArr);
      setRecommendedMovies(resultsFiltered);
    })
+   .catch(() => {
+     console.error(Error);
+    window.location.assign('/404');
+   });
   },[movieId])
 
   return (<>

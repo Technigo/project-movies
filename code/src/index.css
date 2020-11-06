@@ -202,6 +202,18 @@ option {
 	color: palevioletred;
 }
 
+.not-found-text {
+	color: white;
+	font-size: 24px;
+}
+
+.page-not-found {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+}
 .actor-main-content {
 	min-height: 100vh;
 	width: 100vw;

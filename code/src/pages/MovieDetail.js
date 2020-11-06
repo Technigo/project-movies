@@ -14,22 +14,42 @@ export const MovieDetail = () => {
   //Get the movie detail for the selected movie using the movieID param from the URL
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=303d50a32fc0419fb55796d006e5d6c2&language=en-US`)
-    .then((res) => res.json())
+    .then(res => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        throw new Error('404');
+      }
+    })
     .then((json) => {
       console.log(json);
       setIsLoading(false);
       setcurrentMovie(json);
     })
+    .catch(() => {
+      console.error(Error);
+      window.location.assign('/404');
+    });
   },[movieId])
 
   //move this into a new component ActorList and render ActorList instead
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=303d50a32fc0419fb55796d006e5d6c2&language=en-US`)
-    .then((res) => res.json())
+    .then(res => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        throw new Error('404');
+      }
+    })
     .then((json) => {
       console.log(json);
       setCastList(json.cast);
     })
+    .catch(() => {
+      console.error(Error);
+     window.location.assign('/404');
+    });
   },[movieId])
 
   return ( <>
