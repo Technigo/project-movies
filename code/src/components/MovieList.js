@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
+
 import { MovieThumb } from 'components/MovieThumb'
+
 import './MovieList.css'
 
 export const MovieList = () => {

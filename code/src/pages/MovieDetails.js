@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import './MovieDetails.css'
 import { useParams } from 'react-router-dom'
+
 import { Icon } from './Icon.js'
 import { Link } from 'react-router-dom'
 
+import './MovieDetails.css'
+
 export const MovieDetails = () => {
 
+  const [details, setDetails] = useState({})
   const { id } = useParams()
 
   const DETAILS_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=e2eb26a39cdd68b3570a5c1b62c9c638&language=en-US`
- 
-  const [details, setDetails] = useState([])
 
   useEffect (() => {
     fetch(DETAILS_URL)  
