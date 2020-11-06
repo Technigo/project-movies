@@ -1,25 +1,36 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-import { Movie } from './Movie';
-/* import { DETAILS_URL} from './URLS' */
+import { Movie } from '../components/Movie';
+import { MOVIELIST__URL } from '../components/URLS';
 
 import '../styles/movielist.css';
 
-/* This component should show a list of movies
-Each movie should be a link to a more detailed page about that specific movie */
+export const MovieList = () => {
+  const [movies, setMovies] = useState([]);
 
-export const MovieList = ({ movies, id }) => {
+  const getMovieList = () => {
+    fetch(MOVIELIST__URL)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+          console.log(data.results)
+        setMovies(data.results);
+      });
+  };
 
-    return (
-        <section className='movielist__container'>
-            {movies.map((movie) => (
-                <Link to={`movie/${id}`}>
-                    <Movie
-                        key={movie.id}
-                        {...movie} />
-                </Link>
-            ))}
-        </section>
-    );
+  useEffect(() => {
+    getMovieList();
+  }, []);
+
+  return (
+    <section className='movielist__container'>
+      {movies.map((movie) => (
+        <Link key={movie.id} to={`movie/${movie.id}`}>
+          <Movie {...movie} />
+        </Link>
+      ))}
+    </section>
+  );
 };

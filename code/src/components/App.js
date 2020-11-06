@@ -1,33 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
-import { MOVIELIST__URL } from './URLS.js';
 import { Nav } from './Nav.js';
 import { MovieList } from '../pages/MovieList';
-import { Movie } from '../pages/Movie';
+import { MovieDetails } from '../pages/MovieDetails';
+import { NotFound } from '../pages/NotFound';
 
 import '../styles/app.css';
 
 export const App = () => {
-  const [movies, setMovies] = useState([]);
-
-  const getMovieList = () => {
-    fetch(MOVIELIST__URL)
-    .then(res => {
-      return res.json();
-    })
-    .then(data => {
-      console.log(data.results)
-      setMovies(data.results)
-    })
-  };
-
-useEffect(()=>{
-  getMovieList()
-},[]);
 
   return (
-/* To include: combining useEffect and useState with using API's in react
+    /* To include: combining useEffect and useState with using API's in react
 To use placeholders in urls to pick dynamic parts from urls
 To use React Router to create multi-page applications 
 
@@ -47,18 +31,17 @@ ADD MOVIEDETAILS PAGE WITH DETAILS ABOUT MOVIE*/
 
         <Switch>
           <Route path='/' exact>
-              <MovieList 
-              movies={movies}/>
+            <MovieList/>
           </Route>
-          <Route path='/movie/:slug' exact>
-            <Movie />
+          <Route path='/movie/:movieId' exact>
+            <MovieDetails />
           </Route>
-{/*           <Route path='/short' exact>
-            <Movie />
-          </Route> */}
+          <Route path='/404' exact>
+            <NotFound />
+          </Route>
+          <Redirect to='/404'/>
         </Switch>
       </main>
     </BrowserRouter>
-
   );
 };
