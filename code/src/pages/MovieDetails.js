@@ -16,8 +16,9 @@ const MovieDetails = () => {
         setMovie(json)
         console.log(json);
       })
-  }, [])
+  }, [id]) //I put [id] as a dependency in the arry here. Then the fetch wont have to be excecuted again. Is that right?
 
+  //Move some styles to CSS:
   const movieDetailStyle = {
     backgroundImage: `url("https://image.tmdb.org/t/p/w1280${movie.backdrop_path}")`,
     backgroundSize: "cover",
@@ -46,6 +47,7 @@ const MovieDetails = () => {
             <div className="details-summary-text">
               <h3 className="details-summary-heading">
                 {movie.title}
+                <span className="details-summary-star"> {'⭐️'} </span>
                 <span className="details-summary-rating">
                   {movie.vote_average} /10
                 </span>

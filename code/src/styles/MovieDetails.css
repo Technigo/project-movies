@@ -9,7 +9,7 @@
   display: flex;
   align-items: flex-end;
   z-index: 1;
-  background-position: 15% 0;
+  background-position: 20% 0;
 }
 
 .details-overlay {
@@ -49,7 +49,9 @@
   display: flex;
   align-items: flex-end;
   padding: 5vh 5vw;
+  margin: 0 10vw 5vh 10vw;
   color: #fff;
+  background: rgba(0, 0, 0, 0.4);
   z-index: 3;
 }
 
@@ -58,6 +60,21 @@
 }
 
 .details-summary-text {
-  margin-left: 20px;
+  margin-left: 40px;
   max-width: 600px;
+}
+.details-summary-heading {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 36px;
+}
+
+.details-summary-star,
+.details-summary-rating {
+  margin-left: 8px;
+}
+
+.details-summary-overview {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
 }

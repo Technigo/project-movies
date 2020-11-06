@@ -19,15 +19,11 @@ const MovieList = () => {
     })
   }, [])
   
-  //The Link shoud go to the MovieDetails component? <Link to={what to put here?}
   return (
     <div className="list-movie-wrapper"> 
       {movies.map((movie) => (
         <> 
-          <Link to={`movie/${movie.id}`} key={movie.id}> 
-          {/* <a 
-            href= {`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} 
-            > */}
+          <Link className="list-movie-item" to={`movie/${movie.id}`} key={movie.id}> 
             <img 
               className="list-movie-poster" 
               src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} 
@@ -36,7 +32,6 @@ const MovieList = () => {
               <h2 className="list-title">{movie.title}</h2>
               <p className="list-release">Release-date: {movie.release_date}</p>
             </div>
-          {/* </a> */}
           </Link>
         </>
       ))}
