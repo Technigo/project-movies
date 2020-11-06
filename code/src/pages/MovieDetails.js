@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { PageNotFound } from './PageNotFound'
+import { Footer } from 'components/Footer'
 
 import './MovieDetails.css'
 
@@ -26,14 +27,12 @@ export const MovieDetails = () => {
 
   if (loading) {
     return (
-      <div className="loading-page">
-        <div className="loader"></div>
-        <p>Loading movie...</p>
+      <div className='loading-page'>
+        <div className='loader'></div>
+        <p>Loading epic mustache movie...</p>
       </div>
     )
   }
-
-  // Check this above it is not working prop
 
   if (!movieDetails.title) {
     return (
@@ -42,6 +41,7 @@ export const MovieDetails = () => {
   }
 
   return (
+    <>
     <section className='movie-thumb-wrapper'
         style={{
           backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.5) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`
@@ -57,5 +57,7 @@ export const MovieDetails = () => {
           </div>
         </div>
     </section>
+    <Footer />
+    </>
   )
 }

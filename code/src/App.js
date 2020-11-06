@@ -4,9 +4,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { Header } from 'components/Header'
 import { MovieList } from 'pages/MovieList'
 import { MovieDetails } from 'pages/MovieDetails'
-import { Footer } from 'components/Footer'
+// import { Footer } from 'components/Footer'
 
-import './App.css'
 
 export const App = () => {
   return (
@@ -20,7 +19,7 @@ export const App = () => {
           <MovieDetails />
         </Route>
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   )
 }
