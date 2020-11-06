@@ -1,3 +1,10 @@
+.fix-footer{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .movie-thumb-wrapper{
   display: flex;
   flex-direction: column;

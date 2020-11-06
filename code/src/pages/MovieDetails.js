@@ -41,7 +41,7 @@ export const MovieDetails = () => {
   }
 
   return (
-    <>
+    <div className='fix-footer'>
     <section className='movie-thumb-wrapper'
         style={{
           backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.5) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`
@@ -58,6 +58,6 @@ export const MovieDetails = () => {
         </div>
     </section>
     <Footer />
-    </>
+    </div>
   )
 }
