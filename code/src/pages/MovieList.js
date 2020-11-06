@@ -10,7 +10,7 @@ import {
 import "./movieList.css";
 
 export const MovieList = () => {
-  const [url, setUrl] = useState(POPULAR_URL);
+  // const [url, setUrl] = useState(POPULAR_URL);
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
