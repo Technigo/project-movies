@@ -11,4 +11,4 @@ I feel satisfied with the choice of components because I think it was easy to ha
 
 ## View it live
 
-
+https://moviemoa.netlify.app/
