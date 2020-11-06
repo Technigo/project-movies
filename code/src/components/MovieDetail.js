@@ -7,6 +7,7 @@ const MovieDetail = ({
 	poster_path,
 	title,
 	vote_average,
+	tagline,
 	overview,
 	imdb_id,
 	genres,
@@ -34,6 +35,7 @@ const MovieDetail = ({
 								{vote_average}/10
 							</span>
 						</h3>
+						<p className="details__tagline">{tagline}</p>
 						<p className="movie__details--description" tabIndex="0">
 							{overview}
 						</p>

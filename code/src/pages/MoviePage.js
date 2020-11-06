@@ -44,6 +44,7 @@ const MoviePage = () => {
 					poster_path={movieDetail.poster_path}
 					title={movieDetail.title}
 					vote_average={movieDetail.vote_average}
+					tagline={movieDetail.tagline}
 					overview={movieDetail.overview}
 					imdb_id={movieDetail.imdb_id}
 					genres={movieDetail.genres}
