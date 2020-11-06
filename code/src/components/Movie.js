@@ -1,5 +1,7 @@
 import React from 'react';
 
+// ----------------------------------------------------------------------------------------
+
 const Movie = ({ posterImg, title, rating, description }) => {
   return (
     <div className="movie--details">

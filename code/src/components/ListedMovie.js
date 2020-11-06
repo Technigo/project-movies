@@ -7,12 +7,6 @@ import 'assets/MovieList.css';
 // ----------------------------------------------------------------------------------------
 
 const ListedMovie = ({ id, title, releaseDate, posterImgSrc }) => {
-  // const [boxVisibility, setBoxVisibility] = useState('hidden');
-
-  // const handleMouseEnter = () => {
-  //   setBoxVisibility('visible');
-  // };
-
   return (
     <Link key={id} to={`/movies/${id}`} className="movie-list--movie-wrapper">
       <img className="movie-list--img" src={posterImgSrc} alt={title} />

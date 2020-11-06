@@ -22,6 +22,7 @@ export const App = () => {
   const [movies, setMovies] = useState([]);
   const [categoryUrl, setCategoryUrl] = useState(ApiUrl);
 
+  // Main fetch function
   const getData = () => {
     fetch(categoryUrl)
       .then((results) => results.json())
@@ -67,12 +68,12 @@ export const App = () => {
             <SimilarMovies movies={movies} />
           </Route>
 
-          {/* Route to all pages that aren't specified */}
+          {/* Route to 404-page */}
           <Route exact path="/404">
             <NotFound />
           </Route>
 
-          {/* Redirects */}
+          {/* Redirect to 404-page */}
           <Redirect to="/404" />
         </Switch>
       </main>

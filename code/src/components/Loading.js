@@ -3,6 +3,8 @@ import React from 'react';
 // Styling
 import 'assets/Loading.css';
 
+// ----------------------------------------------------------------------------------------
+
 const Loading = () => {
   return (
     <div className="spinner--wrapper">
