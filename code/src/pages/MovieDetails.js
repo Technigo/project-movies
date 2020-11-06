@@ -11,14 +11,12 @@ export const MovieDetails = () => {
 
   const [details, setDetails] = useState({})
   const [loading, setLoading] = useState(false)
-  
-  const { id } = useParams()
 
-  const DETAILS_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=e2eb26a39cdd68b3570a5c1b62c9c638&language=en-US`
+  const { id } = useParams()
 
   useEffect (() => {
     setLoading(true)
-    fetch(DETAILS_URL)  
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=e2eb26a39cdd68b3570a5c1b62c9c638&language=en-US`)  
       .then((response) => response.json())
       .then((json) => {
         setDetails(json)
