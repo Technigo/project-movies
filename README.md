@@ -1,13 +1,14 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Week 12 at Technigo Bootcamp
+- How to use React router to create multi-page applications
+- How to use placeholders in urls to pick dynamic parts from urls
+- Practice using APIs in React - combining `useState` with `useEffect`
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I feel satisfied with the choice of components because I think it was easy to handle css. My approach was to fetch in each page and then build components outside.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+

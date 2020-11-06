@@ -11,13 +11,13 @@
 
 .poster-detail-image {
   display: flex;
-  width: 25%;
+  width: 300px;
   align-self: center;
   border: solid #ffffff 5px;
 }
 
 .bio-container {
-  margin: 0 0 100px 20px;
+  margin: 0 0 130px 20px;
   max-width: 400px;
 }
 
@@ -36,5 +36,35 @@
 .detail-overview {
   color: #ffffff;
   line-height: 1,5px;
+}
+
+/******** Responsive ***********/
+
+/* For tablet: */
+@media (min-width:700px) and (max-width: 1024px) {
+
+  .bio-section {
+    margin-top: 100px;
+  }
+  
+  .poster-detail-image {
+    margin-left: 10px;
+    width: 300px;
+  }
+
+}
+
+/* For mobile: */
+@media (max-width:699px)  {
+
+  .bio-section {
+    flex-wrap: wrap;
+    margin-top: 100px;
+  }
+
+  .poster-detail-image {
+    width: 220px;
+  }
+
 }
 

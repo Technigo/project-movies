@@ -54,3 +54,23 @@
   padding-bottom: 20px;
   margin: 0;
 }
+
+/******** Responsive ***********/
+
+/* For tablet: */
+@media (min-width:700px) and (max-width: 1024px) {
+
+  .list-container {
+  width: 50%;
+  }
+
+}
+
+/* For mobile: */
+@media (max-width:699px)  {
+  
+  .list-container {
+    width: 100%;
+    }
+
+}

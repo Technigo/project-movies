@@ -8,9 +8,11 @@
 
 .background-image {
   position: relative;
-  width: 100%;
-  height: auto;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   filter: brightness(55%);
+  margin-bottom: -4px;
 }
 
 
@@ -38,6 +40,8 @@ a {
 .return-text:hover {
   transform: translate(10px);
 }
+
+
 
 
 
