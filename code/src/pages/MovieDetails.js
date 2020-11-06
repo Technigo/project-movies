@@ -9,11 +9,9 @@ import './MovieDetails.css'
 
 export const MovieDetails = () => {
   const { id } = useParams()
-  const baseURL = 'https://api.themoviedb.org'
-  // const apiKey = '18fb720a795c179526f7b480bba674dd'
   const apiKey = process.env.REACT_APP_API_KEY_FOR_MOVIE
+  const baseURL = 'https://api.themoviedb.org'
   const movieUrlDetails = `${baseURL}/3/movie/${id}?api_key=${apiKey}`
-  //I need to change this API key to the correct one
   const [movieDetails, setMovieDetails] = useState([])
   const [loading, setLoading] = useState(true)
 

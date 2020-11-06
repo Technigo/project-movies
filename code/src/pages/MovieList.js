@@ -6,12 +6,9 @@ import { Footer } from 'components/Footer'
 import './MovieList.css'
 
 export const MovieList = () => {
+  const apiKey = process.env.REACT_APP_API_KEY_FOR_MOVIE
   const baseURL = 'https://api.themoviedb.org'
   const listID = '7063718'
-
-  const apiKey = process.env.REACT_APP_API_KEY_FOR_MOVIE
-
-  // const apiKey = '18fb720a795c179526f7b480bba674dd'
   const movieUrl = `${baseURL}/3/list/${listID}?api_key=${apiKey}`
   const [movies, setMovies] = useState([])
 
