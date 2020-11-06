@@ -21,13 +21,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
-  padding: 30px;
-
-  &__logo {
-    color: $beige;
-    text-decoration: none;
-  }
+  padding: 40px;
+  font-size: 25px;
 
   &__nav {
     position: relative;
@@ -61,11 +56,11 @@ body {
     font-size: 16px;
     padding: 10px;
     border-radius: 0px;
-    color: $beige;
+    color: $cream;
     cursor: pointer;
 
     &:hover {
-      background: $beige;
+      background: $cream;
       color: $dark-blue;
     }
   }
@@ -77,12 +72,12 @@ body {
 
   &__link {
     text-decoration: none;
-    color: $beige;
+    color: $cream;
     font-weight: bold;
     padding: 10px;
 
     &:hover {
-      background: $beige;
+      background: $cream;
       color: $dark-blue;
     }
   }
@@ -268,17 +263,23 @@ body {
   }
 }
 
-.button__ {
+.button {
   font-family: 'Poiret One';
-  //text-transform: uppercase;
-  //letter-spacing: 8px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
   font-size: 20px;
   position: relative;
   padding: 8px;
   border: none;
-  box-shadow: inset 0 0 0 1px $turquoise;
+  box-shadow: inset 0 0 0 1px $cream;
   background: transparent;
   cursor: pointer;
+
+  &__home {
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+  }
 
   &__label {
     display: block;
@@ -293,7 +294,7 @@ body {
     .button:hover &,
     .button:focus & {
       color: $dark-blue;
-      background: $turquoise;
+      background: $cream;
     }
   }
 

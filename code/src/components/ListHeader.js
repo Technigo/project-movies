@@ -30,7 +30,6 @@ const ListHeader = ({ onClick }) => {
 
   return (
     <header className="list-header">
-      <ButtonBack className={'button'} />
       <ButtonBack className={'button button__home'} />
       {/* <Link className="list-header__logo" to="/">
         <h1>CinemaTech</h1>
