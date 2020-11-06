@@ -45,12 +45,12 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .movie-card-image {
+  .movie-card-link {
     width: 50%;
   }
 }
 @media (max-width: 767px) {
-  .movie-card-image {
+  .movie-card-link {
     width: 100%;
   }
 }
