@@ -30,6 +30,10 @@ export const App = () => {
         <Actor/>
       </Route>
 
+      <Route path="/404">
+        <NotFound />
+      </Route>
+
       {<Route component={NotFound} />}
 
     </Switch>
