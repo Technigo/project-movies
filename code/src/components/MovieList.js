@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react'
 
 import { MOVIES_URL } from '../urls'
 import { MoviePoster } from '../components/MoviePoster'
+import '../styles/MovieList.css'
 
-
-// const API_KEY = "fe9bb5c09e9066da8266038ab1a77a26";
-// const MOVIES_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
 export const MovieList = () => {
 
     const [movies, setMovies] = useState([])
@@ -16,8 +14,7 @@ export const MovieList = () => {
             .then(json => setMovies(json.results))
            }, [])
 
-    return (
-        
+    return (        
          <section className="movies-list">
             {movies.map((movie) => ( 
                <MoviePoster 
