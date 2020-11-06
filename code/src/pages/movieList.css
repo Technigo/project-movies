@@ -14,13 +14,14 @@
 
 .movie-info {
     position: absolute;
-    left: 20px;
-    bottom: 20px;
+    left: 0;
+    bottom: 0;
+    padding: 5px 10px;
     display: none;
 }
 
-.movie:hover {
-    filter: brightness(50%);
+.movie:hover .poster-image {
+    filter: brightness(30%);
 }
 
 .movie:hover .movie-info {
@@ -35,13 +36,15 @@
     position: absolute;
 } */
 
-.movie-thumb {
-    width: 40%;
-    flex-grow: 1;
-    border: 1px solid black;
-    margin-bottom: 10px;
+/* MEDIA QUERIES */
+@media (min-width: 800px) {
+    .movie {
+        width: 25%;
+    }
 }
 
-.moviethumb-image {
-    width: 300px;
+@media (min-width: 1024px) {
+    .movie-title {
+        font-size: 32px;
+    }
 }

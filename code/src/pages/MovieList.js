@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-// import { MovieThumb } from "../components/MovieThumb";
-
+import {
+  POPULAR_URL,
+  // NOWPLAYING_URL,
+  // UPCOMING_URL,
+  // TOPRATED_URL,
+} from ".././urls";
 import "./movieList.css";
 
 export const MovieList = () => {
-  // const MOVIES_URL = "https://api.rawg.io/api/games?ordering=rating0";
-  const MOVIES_URL =
-    "https://api.themoviedb.org/3/discover/movie?api_key=16cd57d89911f5854d96fcf791abf8a9&language=en-US&sort_by=vote_average.desc&include_adult=false&include_video=false&page=1&with_original_language=fr";
+  const [url, setUrl] = useState(POPULAR_URL);
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch(MOVIES_URL)
+    fetch(POPULAR_URL)
       .then((response) => response.json())
       .then((json) => {
         setMovies(json.results);
@@ -32,7 +34,7 @@ export const MovieList = () => {
               alt={movie.title}
             ></img>
             <div className="movie-info">
-              <p className="movie-title">{movie.title}</p>
+              <h2 className="movie-title">{movie.title}</h2>
               <p className="relase-date">Released {movie.release_date}</p>
             </div>
           </article>

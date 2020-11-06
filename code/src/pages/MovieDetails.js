@@ -30,7 +30,7 @@ export const MovieDetails = () => {
     }}>
       
         <Link to="/" className="back-button">
-          <span>&lt;</span>
+          <span className="fas fa-chevron-circle-left"></span>
           Movies
         </Link>
         <div className="movie-details-container">
@@ -40,8 +40,9 @@ export const MovieDetails = () => {
             alt={movie.title}
           ></img>
           <div className="movie-details">
+            <div className="title-rating-container">
             <h2 className="movie-details-title">{movie.title}</h2>
-            <p className="rating">{movie.vote_average}/10</p>
+            <p className="rating">{movie.vote_average}/10</p></div>
             <p className="overview">{movie.overview}</p>
           </div>
         </div>
