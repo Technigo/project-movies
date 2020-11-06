@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-import './MovieDetails.css'
 import { PageNotFound } from './PageNotFound'
+
+import './MovieDetails.css'
+
 
 export const MovieDetails = () => {
   const { id } = useParams()

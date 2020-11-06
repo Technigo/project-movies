@@ -6,6 +6,7 @@ import { MovieList } from 'pages/MovieList'
 import { MovieDetails } from 'pages/MovieDetails'
 import { Footer } from 'components/Footer'
 
+import './App.css'
 
 export const App = () => {
   return (
