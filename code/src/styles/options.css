@@ -14,4 +14,7 @@
   color: #fff;
   border: 3px solid #fff;
   background: #000;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appeareance: none;
 }

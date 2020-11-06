@@ -4,7 +4,7 @@ import 'styles/error.css';
 
 export const NotFound = () => (
   <div className="error-div">
-    <h1 className="error-text">Oops! This page doesn't exists.</h1>
+    <h1 className="error-text" tabIndex="0">Oops! This page doesn't exists.</h1>
     <Link to="/" className="back-home-link">
       <p>
         <span className="arrows-wrapper">

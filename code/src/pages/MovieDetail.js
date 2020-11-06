@@ -57,16 +57,21 @@ export const MovieDetail = () => {
             />
             <div className="text-rating-overview-wrapper">
               <div className="top-info">
-                <h2 className="movie-heading">{movies.title} 
-                  <span className={movies.vote_average > 8.0 ? "rating high" : "rating low"}>{movies.vote_average}/10</span>
+                <h2 className="movie-heading" tabIndex="0">{movies.title} 
+                  <span 
+                    className={movies.vote_average > 8.0 ? "rating high" : "rating low"}
+                    tabIndex="0">
+                    {movies.vote_average}/10
+                  </span>
                 </h2>
               </div>
-              <p className="overview">{movies.overview}</p>
+              <p className="overview" tabIndex="0">{movies.overview}</p>
             </div>    
           </div>
         </section>
         <section className="similar-movies-container">
-          {similarmovies.length > 0 && <h3 className="similar-movies-heading">Similar movies to {movies.title}:</h3>}
+          {similarmovies.length > 0 && 
+            <h3 className="similar-movies-heading" tabIndex="0">Similar movies to {movies.title}:</h3>}
           <div>
             {similarmovies.map((movie) => (
               <MovieThumbSimilar key={movie.id} {...movie} />

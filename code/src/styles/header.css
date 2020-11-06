@@ -24,6 +24,7 @@ nav {
   -webkit-text-decoration-line: none;
   color: #fff;
   font-size: 20px;
+  text-align: center;
 }
 
 a.active { /* When the link is activated different styling is showed */

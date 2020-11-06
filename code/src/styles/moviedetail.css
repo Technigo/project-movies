@@ -1,5 +1,6 @@
 .background-picture {
-  min-height: calc(100vh - 75.4px);
+    min-height: 100vh;
+  height: 400px;
   max-width: 100vw;
   background-size: cover;
   display: flex;
@@ -111,11 +112,17 @@
   .background-picture {
     flex-direction: column;
     align-items: center;
+    height: 1700px;
   }
 
   .similar-movies-container{
     margin: 0 0 20px 0;
     width: 800px;
+  }
+
+  .similar-movie-poster-image {
+    height: auto;
+    width: 20%;
   }
 }
 
@@ -141,7 +148,7 @@
   }
 
   .background-picture {
-    height: 2200px;
+    height: 1950px;
   }
 
   .back-link {
@@ -165,5 +172,10 @@
 
   .similar-movies-container {
     width: 300px;
+  }
+
+  .similar-movie-poster-image {
+    height: auto;
+    width: 32%;
   }
 }

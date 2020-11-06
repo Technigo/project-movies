@@ -15,7 +15,7 @@ export const Options = ({ setThemeUrl }) => {
           setThemeUrl(event.target.value); // Change url based on choosen theme
           }}
         >
-          <option value="">Movies by theme</option>
+          <option value="">Choose movies by theme</option>
           <option value={HalloweenApiUrl}>Halloween</option>
           <option value={ChristmasApiUrl}>Christmas</option>
           <option value={SummerApiUrl}>Summer</option>
