@@ -19,8 +19,8 @@
 }
 
 .details-wrapper img{
-  width:350px;
-  height: 500px;
+  width: 320px;
+  height: 470px;
   border: 5px solid white;
 }
 
@@ -67,6 +67,11 @@ font-weight: 800;
     flex-direction: row;
     align-items: flex-end;
     width: auto;
+  }
+
+  .details-wrapper img{
+    width:350px;
+    height: 500px;
   }
 
   .detail-text-wrapper{
