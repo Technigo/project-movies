@@ -11,11 +11,13 @@ export const MovieThumb = ({
   return (
     <Link to={`/movies/${id}`}>
       <article className="movie-thumb">
-        <div className="overlay-container">
-          <img
-            src={`https://image.tmdb.org/t/p/w342/${poster_path}`}
-            alt={title}
-          />
+        <img
+          src={`https://image.tmdb.org/t/p/w342/${poster_path}`}
+          alt={title}
+        />
+        <div className="movie-thumb-info">
+          <h2>{title}</h2>
+          <p>Release date: {release_date}</p>
         </div>
       </article>
     </Link>
