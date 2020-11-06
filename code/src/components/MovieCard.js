@@ -13,7 +13,7 @@ export const MovieCard = ({id, poster_path, original_title, release_date}) => {
               alt={`${`original_title`}poster`} />
             <div className="text-overlay">
               <h1>{original_title}</h1>
-              <p>{`Released on: ${release_date}`}</p>
+              <p>{`Released Date: ${release_date}`}</p>
             </div>
           </div>
         </Link>

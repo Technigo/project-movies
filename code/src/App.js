@@ -1,8 +1,9 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import { MovieList } from "./pages/MovieList";
 import { MoviePage } from "./pages/MoviePage";
+import { NotFound } from "./pages/NotFound";
 import { Footer } from "./components/Footer";
 
 export const App = () => {
@@ -10,11 +11,17 @@ export const App = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact>
-        <MovieList/>
+          <MovieList/>
         </Route>
         <Route path="/movies/:movieId" exact>
-        <MoviePage/>
+          <MoviePage/>
         </Route>
+        <Route path="/404">
+          <NotFound/>
+        </Route>
+        <Redirect
+          to= "/404"
+        />
       </Switch>
       <Footer/>
     </BrowserRouter>

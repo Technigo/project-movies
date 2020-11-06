@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  margin-bottom: 150px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -7,6 +8,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color:#000;
   text-decoration: none;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
 }
 
 code {
@@ -138,15 +144,44 @@ h2 {
     height: 30px;
   }
 
+  /* NOT FOUND */
+
+  .not-found { 
+    width: 100%;
+    color: white;
+    height: 100vh;
+    text-align: center;
+  }
+
+  h1, h2, h3 {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+
+  h4 {
+    font-size: 20px;
+    margin-top: 0;
+    color: #feb75a;
+    transform: translateX(-65%);
+  }
+
+  .bird-gif {
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+  }
+
+
   /* FOOTER */
 
 footer {
+  position: absolute;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   padding: 0px;
-  margin-top: 5px;
   background-color: #ffffff67;
   width: 100%;
 }
@@ -174,6 +209,24 @@ footer img {
 
 @media (min-width: 1024px) {
 
+  h1, h2, h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    font-size: 50px;
+    margin-top: 0;
+    color: #feb75a;
+    transform: translateX(-65%);
+  }
+
+  .bird-gif {
+    width: 600px;
+    height: 400px;
+    margin: 50px;
+  }
+
   .details-container { 
     width: 30%;
     padding-bottom: 50px;
@@ -187,8 +240,6 @@ footer img {
   .movie-overview { 
     font-size: 20px;
   }
-
-  
 
   }
   
