@@ -15,6 +15,13 @@ The fetches are done in the seperate movie pages to get the data needed and then
 I also implemented a loader that is displayed before the fetch for each page is done.
 For the css, I maninly worked with flex-box to structure the layout. I learned a lot about working with different layers and getting them to cover the entire container/page. The team shared a lot of css-tricks on slack this week which was super helpful!
 
+## TECH 
+- React
+- JSX
+- Javascript
+- API 
+- CSS
+- HTML 
 
 ## View it live
 
