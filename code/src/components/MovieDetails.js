@@ -18,11 +18,15 @@ export const MovieDetails = () => {
         .then((res) => res.json())
         .then((json) => {
             setMovies(json);
-            setLoading(false);
-        })
-        .catch(error => console.log(error));
+        
+        });
+        // .catch((error) => console.log(error) 
 
     }, [MOVIE_DETAILS]);
+
+    useEffect(() => {
+        setLoading(false);
+    }, [movies]);
 
     if (loading) {
         return (
