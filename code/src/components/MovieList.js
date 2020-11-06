@@ -5,9 +5,10 @@ import MovieCard from './MovieCard';
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
 
-  useEffect(() => {
-    fetchMovies();
-  }, []);
+  // const api_key = '54ee7f54ed9c2538cd37d709a09a6ca2';
+  // const POPULAR_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=1`;
+  // const UPCOMING_URL = `https://api.themoviedb.org/3/movie/upcoming?api_key=${api_key}&language=en-US&page=1`;
+  // const TOP_URL = `https://api.themoviedb.org/3/movie/tv/top_rated?api_key=${api_key}&language=en-US&page=1`;
 
   const fetchMovies = () => {
     const api_key = '54ee7f54ed9c2538cd37d709a09a6ca2';
@@ -18,6 +19,10 @@ const MovieList = () => {
       .then(json => setMovies(json.results))
       .catch(error => console.error(error));
   };
+
+  useEffect(() => {
+    fetchMovies();
+  }, []);
 
   return (
     <section className="popular-page">
