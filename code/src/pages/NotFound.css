@@ -5,7 +5,7 @@
     color: #fff;
 }
 
-.notfound-container {
+.nf-container {
     font-size: 23px;
     display: flex;
     flex-direction: column;
@@ -17,8 +17,9 @@
     border-radius: 3px;    
 }
 
-.notfound-container h3 {
+.nf-container h3 {
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .film {

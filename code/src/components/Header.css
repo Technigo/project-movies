@@ -1,9 +1,26 @@
 header {
-    color: #fff;
     padding: 7px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
+}
+
+.header-title-container {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.film-icon {
+    fill: #fff;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header-title {
+    color: #fff;
+    margin: 0;
+    font-size: 24px;
 }
 
 .logo {
