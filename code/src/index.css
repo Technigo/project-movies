@@ -24,6 +24,7 @@ code {
 }
 
 .tvshow__link {
+  color: #fff;
   width: 25%;
   position: relative;
   text-decoration: none;
@@ -47,7 +48,18 @@ code {
   bottom: 0;
   left: 0;
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
   background: linear-gradient(to bottom, rgba(0,0,0, .3) 0%, rgba(0,0,0, .7) 50%, rgba(0,0,0,1) 100%);
   font-size: 16px;
   transition: .5s ease-in-out;
+}
+
+.tvshow__textbox {
+  padding: 15px 20px;
+  margin-bottom: 25px;
+}
+
+.tvshow__heading {
+  padding: 15px 0;
 }

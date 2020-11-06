@@ -15,7 +15,7 @@ export const TVShowThumb = ({ name, id, first_air_date, poster_path }) => {
           />
           <div className="tvshow__overlay">
             <div className="tvshow__textbox">
-                <h4 className="tvshow__name">{name}</h4>
+                <h2 className="tvshow__heading">{name}</h2>
                 <p className="tvshow__text">First aired: {first_air_date}</p>
             </div>
           </div>
