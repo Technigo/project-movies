@@ -4,10 +4,7 @@ import { IMAGE_URL } from './URLS'
 
 import '../styles/movie.css'
 
-/* TO FIX: poster-image should take up att space and have no whitespace */
 export const Movie = ({ title, poster_path, release_date }) => {
-  /* Where should I do this fetch? */
-
   return (
     <section className='movie__card'>
       <div className='movie__overlay'>

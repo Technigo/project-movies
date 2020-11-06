@@ -1,20 +1,19 @@
 .movielist__container {
-  width: 100%;
-  grid-row: 2;
-  background: #000;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+    justify-content: center;
 }
 
 @media (min-width: 768px) {
     .movielist__container {
-        display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: min-content;
     }
 }
 
 @media (min-width: 1024px) {
     .movielist__container {
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: min-content;
     }
 }

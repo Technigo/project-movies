@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import { Movie } from '../components/Movie'
+import { Nav } from '../components/Nav'
 import { MOVIELIST__URL } from '../components/URLS'
 
 import '../styles/movielist.css'
@@ -15,7 +16,6 @@ export const MovieList = () => {
         return res.json()
       })
       .then((data) => {
-        console.log(data.results)
         setMovies(data.results)
       })
   }
@@ -25,12 +25,15 @@ export const MovieList = () => {
   }, [])
 
   return (
-    <section className='movielist__container'>
-      {movies.map((movie) => (
-        <Link key={movie.id} to={`movie/${movie.id}`}>
-          <Movie {...movie} />
-        </Link>
-      ))}
-    </section>
+    <main className='main__grid'>
+      <Nav/>
+      <section className='movielist__container'>
+        {movies.map((movie) => (
+          <Link key={movie.id} to={`movie/${movie.id}`}>
+            <Movie {...movie} />
+          </Link>
+        ))}
+      </section>
+    </main>
   )
 }
