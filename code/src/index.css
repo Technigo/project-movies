@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #000
 }
 
 code {
@@ -19,6 +20,11 @@ code {
 .movie-list {
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
+}
+
+.movie-wrapper {
+  width: 25%
 }
 
 .list-link {
@@ -27,7 +33,7 @@ code {
 }
 
 .list-image {
-  max-width: 100%;
+  width: 100%;
 }
 
 .detail-backdrop {
