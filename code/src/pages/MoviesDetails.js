@@ -18,7 +18,6 @@ export const MoviesDetails = () => {
         const movieDetailsURL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`
         fetch(movieDetailsURL)
             .then((res) => {
-                setStatus(res.status);
                 return res.json()
             })
             .then((json) => {
@@ -29,12 +28,12 @@ export const MoviesDetails = () => {
                 console.error('Bad request', error)
             })
     }, [movieId])
-    useEffect(() => {
-        if (status === 404) {
-            console.log("Status 404")
-            history.push("/404")
-        }
-    }, [status])
+
+    if (!movies.id) {
+        return (
+            <div>Movie not found</div>
+        )
+    }
 
     return (
 

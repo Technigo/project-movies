@@ -20,8 +20,7 @@ code {
 }
 /* MOVIEINFO */
 .movies-card {
-  flex-basis: 25%;
-  width: 100%;
+  width: 25%;
 }
 .movies-card img {
   width: 100%;

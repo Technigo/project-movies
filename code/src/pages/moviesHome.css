@@ -1,7 +1,6 @@
 .movies-container {
   display: flex;
   width: 100%;
-  flex-direction: column;
   flex-wrap: wrap;
 }
 a {
@@ -11,7 +10,6 @@ a {
 .movie-wrapper {
   position: relative;
   flex-wrap: wrap;
-  width: 25%;
   margin-bottom: -4px;
 }
 .movie-wrapper img {
