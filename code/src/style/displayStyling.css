@@ -1,0 +1,43 @@
+.display-image {
+  width: 100%
+}
+
+.display-movie-list {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.display-cards {
+  align-items: center;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.display-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+}
+
+.role {
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .display-card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .display-card-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
