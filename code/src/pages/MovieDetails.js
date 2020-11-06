@@ -47,7 +47,6 @@ export const MovieDetails = () => {
         <div className='details-wrapper'>
           <img
             alt={movieDetails.title}
-            className='detail-movie-img'
             src={`https://image.tmdb.org/t/p/w342/${movieDetails.poster_path}`} />
           <div className='detail-text-wrapper'>
             <h1 className='movie-title'>{movieDetails.title}</h1>
