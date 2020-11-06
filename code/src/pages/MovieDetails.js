@@ -20,9 +20,9 @@ export const MovieDetails = () => {
         setMovieDetails(json)
       })
   }
-    
+  
   useEffect (()=> {
-    getMovieDetails
+    getMovieDetails()
   },[id]);  
 
   // const movieMatch = movieDetails.find(movieDetail => movieDetail.id = id)
