@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 
-import { API_URL, API_IMG_URL } from "../urls.js";
+import { API_URL } from "../urls.js";
 import { API_KEY } from "../API_KEY.js";
+import { TVShowThumb } from "./TVShowThumb.js";
 
 export const TVShowList = () => {
   // eslint-disable-next-line
   const [TVShowList, setTVShowList] = useState([]);
 
   console.log("Render");
-
-  const imageURL = `${API_IMG_URL}/w300/`;
 
   const fetchTVShows = () => {
     const TV_URL = `${API_URL}popular?&api_key=${API_KEY}&page=1`;
@@ -28,19 +27,11 @@ export const TVShowList = () => {
   }, []);
 
   return (
-    <article className="tvshow__container">
+    <section className="tvshow_list__container">
       {TVShowList.map(tvshow => (
-        <div className="tvshow__wrapper" key={tvshow.id}>
-          <div className="tvshow">
-            <img className="tvshow__image" src={`${imageURL}${tvshow.poster_path}`} alt={tvshow.name} />
-            <div className="tvshow__textbox">
-              <h4 className="tvshow__name">{tvshow.name}</h4>
-              <p className="tvshow__text">First aired: {tvshow.first_air_date}</p>
-            </div>
-          </div>
-        </div>
+        <TVShowThumb key={tvshow.id} {...tvshow} />
       ))}
       )
-    </article>
+    </section>
   );
 };
