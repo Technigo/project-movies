@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { MovieStartPage } from "./pages/MovieStartPage";
-import { MovieDetails } from "../src/pages/MovieDetails"
+import { MovieBio } from "./pages/MovieBio"
 
 // just for showing data while working
 const API_KEY = "88b00ce6c0c72d59de65e4b1fcce3a85";
@@ -24,7 +24,7 @@ export const App = () => { //Exact - if this path matches exact, then render the
           <MovieStartPage />
         </Route>
         <Route path="/movies/:id" exact>
-          <MovieDetails/>
+          <MovieBio/>
         </Route>
       </Switch>
     </BrowserRouter>

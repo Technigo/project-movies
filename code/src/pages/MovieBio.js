@@ -3,11 +3,11 @@ import { useParams, Link } from "react-router-dom";
 
 import { BackButton } from "components/js/BackButton";
 
-import "components/css/moviedetails.css";
+import "components/css/moviebio.css";
 
-export const MovieDetails = () => {
+export const MovieBio = () => {
   const { id } = useParams();
-  const [movie, setMovie] = useState([]);
+  const [bio, setBio] = useState({});
   const API_KEY = "88b00ce6c0c72d59de65e4b1fcce3a85";
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export const MovieDetails = () => {
     fetch(URL_MOVIE_DETAILS)
       .then((response) => response.json())
       .then((json) => {
-        setMovie(json);
+        setBio(json);
       })
       .catch((error) => {
         console.error("Bad request", error);
@@ -26,8 +26,8 @@ export const MovieDetails = () => {
     <section className="about-section">
       <img
         className="background-image"
-        src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
-        alt={movie.title}
+        src={`https://image.tmdb.org/t/p/original${bio.backdrop_path}`}
+        alt={bio.title}
       ></img>
       <Link className="back-button" to='/'>
         <BackButton />All movies
@@ -35,15 +35,15 @@ export const MovieDetails = () => {
       <div className="content-container">
         <img
           className="poster-image"
-          src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-          alt={movie.title}
+          src={`https://image.tmdb.org/t/p/w342${bio.poster_path}`}
+          alt={bio.title}
         ></img>
         <div className="text-container">
           <h1>
-            {movie.title}
-            <span className="rating">{movie.vote_average}/10</span>
+            {bio.title}
+            <span className="rating">{bio.vote_average}/10</span>
           </h1>
-          <p className="movie-description">{movie.overview}</p>
+          <p className="movie-description">{bio.overview}</p>
         </div>
       </div>
     </section>
