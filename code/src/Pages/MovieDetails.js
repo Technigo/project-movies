@@ -15,18 +15,9 @@ const MovieDetails = () => {
         fetch(MOVIE_URL)
             .then(response => response.json())
             .then(data => {
-                setMovie(data)
+                setMovie(data);
             })
     }, [MOVIE_URL]);
-
-    //const moviesMatch = moviesList.find(())
-    // const idMatch = (movie.id === id);
-
-    // if (!idMatch) {
-    //     return (
-    //         <div>Not found</div>
-    //     )
-    // }
 
     const background = `https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`;
     
@@ -40,9 +31,13 @@ const MovieDetails = () => {
                     </div>   
                 </Link>
                 <div className="detail-info-container">
-                    <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}></img>
+                    <img
+                        className="movie-poster"
+                        src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+                        alt={movie.title}></img>
                     <div className="movie-detail-text-container">
-                        <h1 className="movie-title">{movie.title} <span className="rating">{movie.vote_average} / 10</span></h1>
+                        <h1 className="movie-title">{movie.title} <span className="rating">{movie.vote_average} / 10</span>
+                        </h1>
                         <h2>{movie.tagline}</h2>
                         <p className="overview-text">{movie.overview}</p>
                     </div>

@@ -62,7 +62,7 @@ select {
   color: white;
   background: #4070f3; /*#737770*/
   padding: 6px 6px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 10px 50px;
 }
 /***************** MOVIES LIST *****************/
@@ -108,14 +108,11 @@ select {
 
 /*********** MOVIE DETAILS PAGE ************************/
 .movie-detail-page {
-  height: 100vh;
+  height: 100%;
   background: black;
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  position: relative;
   background-size: cover;
+  position: relative;
 }
 
 .image-background {
@@ -124,12 +121,14 @@ select {
 
 .movie-poster {
   border: 5px solid white;
+  align-self: center;
 }
 
 .detail-info-container {
   display: flex;
+  flex-direction: column;
   padding: 10px 50px 50px 50px;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .movie-detail-text-container {
@@ -149,6 +148,7 @@ select {
   display: flex;
   align-items: center;
   text-shadow: 3px 3px #000;
+  position: relative;
 }
 
 .back-link img {
@@ -184,6 +184,7 @@ footer {
   padding: 30px 100px;
   background: black;
   color: white;
+  position: relative;
 }
 
 footer a {
@@ -226,5 +227,21 @@ footer a:hover {
 @media (min-width: 1024px) {
   .movie-wrapper {
     width: 25%;
+  }
+/* /* ********details  */
+  .movie-detail-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .detail-info-container {
+    flex-direction: row; 
+    align-items: flex-end;
+  }
+
+  .back-link-wrapper {
+    position: static;
   }
 }

@@ -18,7 +18,7 @@ const MovieList = () => {
                 setTimeout(() => {
                     setMovieList(data.results)
                     setLoading(false); // Hide loader
-                }, 1500)
+                }, 1000)
             })
     }, [choosenAPI]);
 
