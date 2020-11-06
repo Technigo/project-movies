@@ -24,16 +24,27 @@ code {
 }
 
 .movie-wrapper {
-  width: 25%
+  /* width: 25% */
 }
 
 .list-link {
   max-width: 25%;
   height: auto;
+  position: relative;
 }
 
 .list-image {
   width: 100%;
+}
+
+.list-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+
 }
 
 .detail-backdrop {
