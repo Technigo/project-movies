@@ -1,28 +1,52 @@
 
+
 .movie-card-container {
-  /* align-items: center; */
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center; */
-  /* grid-template-columns: 1fr; */
 }
 
 .loading-container {
-  height: 100vh;
-  width: 100vw;
   display: flex;
   justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .loading-note {
-  text-align: center;
   color: #0000ff;
   font-size: 22px;
+  text-align: center;
+}
+
+.select-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 100vw;
+}
+.select-input {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid #ffffff;
+  box-shadow:  rgba(92, 78, 78, 0.3) 0 2px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  height: 35px;
+  text-align: bottom;
+}
+
+@media screen and (min-width: 500px) {
+  .select-input {
+    width: 70%;
+    font-size: 18px;
+  }
 }
 
 .movie-card-item {
-  flex: 1;
   display: flex;
+  flex: 1;
   flex-basis: 24%;
   flex-direction: column;
 }

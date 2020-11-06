@@ -1,3 +1,22 @@
+.back-link {
+  align-items: center;
+  color: #fff;
+  display: inline-flex;
+  font-weight: 700;
+  left: 60px;
+  position: absolute;
+  top: 60px;
+  z-index: 3;
+}
+
+.back-link-svg {
+  width: 30px;
+}
+
+.back-link-svg:hover {
+  transition: margin-right .2s ease-in-out;
+  margin-right: 10px;
+}
 .movie-backdrop {
   background-size: cover;
   height: 100vh;

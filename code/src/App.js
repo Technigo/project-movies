@@ -6,7 +6,8 @@ import MovieDetails from 'pages/MovieDetails'
 import Cast from './pages/Cast'
 import Crew from './pages/Crew'
 import PageNotFound from './pages/PageNotFound'
-// import ListOfMovies from './pages/ListOfMovies'
+import MovieProjectsByCast from './pages/MovieProjectsByCast'
+import MovieProjectsByCrew from './pages/MovieProjectsByCrew'
 
 
 export const App = () => {
@@ -26,11 +27,14 @@ export const App = () => {
         <Route path="/movies/:movieId/cast" exact>
           <Cast />
         </Route>
-        <Route path="/actors/:actorId">
-          <listOfMovies />
+        <Route path="/profile/cast/:castId">
+          <MovieProjectsByCast />
         </Route>
         <Route path="/movies/:movieId/crew" exact>
           <Crew />
+        </Route>
+        <Route path="/profile/crew/:crewId">
+          <MovieProjectsByCrew />
         </Route>
         <Route path="/404">
           <PageNotFound />
