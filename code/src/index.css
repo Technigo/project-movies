@@ -130,8 +130,20 @@ code {
   justify-content: center;
 }
 
+.loading-container {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  align-items: center;
+  background: white;
+}
+
+.loading-container h2 {
+  font-size: 50px;
+}
+
 @media (min-width: 667px) and (max-width: 1024px) {
-  
+
   .movie-list a {
     width: 30%;
     flex-grow: 1;

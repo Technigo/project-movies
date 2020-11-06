@@ -2,33 +2,42 @@ import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { NotFound } from './NotFound'
 
+import { Loader } from 'components/Loader'
+ 
 export const MovieDetails = () => {
   const { id } = useParams()
   const [movie, setMovie] = useState([])
+  const [loading, setLoading] = useState(false)
 
-  /*same as in Movielist, but created function with param to avoid having the function being dependent on data from outside scope*/  
+  /* same as in Movielist, but created function with param to avoid having the function being dependent on data from outside scope*/  
   const fetchMovieDetails = (movieId) => {
     const API_KEY = `625126cdbe1a2a3d2d941c58292f85ef`
     const MOVIE_DETAIL_URL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US`
 
     fetch(MOVIE_DETAIL_URL)
       .then((response) => response.json())
-      .then((json) => setMovie(json))
+      .then((json) => {
+        setMovie(json)
+        setLoading(false)
+      })
       .catch((error) => console.error(error))
   }
 
   /* fetchMovieDetails is invoked with the id as a param. */ 
   /* id as dependency = updates when the id changes */
   useEffect(() => {
+    setLoading(true)
     fetchMovieDetails(id)
   }, [id]) 
 
   /*redirects the user to the Notfound page if the url is /movies and then something not matching to an acutal film. */
   if (movie.success === false){
 
-    return (
-      <NotFound />
-    )
+    return <NotFound />
+  /*loading is set to true than the loader will show*/  
+  } else if (loading) {
+
+    return <Loader />
 
   } else {
 

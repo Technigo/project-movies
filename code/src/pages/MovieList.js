@@ -1,24 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 
+import { Loader } from 'components/Loader'
+
 export const MovieList = () => {
   const [movies, setMovies] = useState([])
-  /*created function for fetch instead of having it in useEffect to avoid warning about the useEffect needing data from outside of the scope(api key this time and movies_url this time)*/
+  const [loading, setLoading] = useState(false)
+
+  /* created function for fetch instead of having it in useEffect to avoid warning about the useEffect needing data from outside of the scope(api key this time and movies_url this time)*/
   const fetchMovies = () => {
     const API_KEY = `625126cdbe1a2a3d2d941c58292f85ef`
     const MOVIES_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
 
     fetch(MOVIES_URL)
     .then((response) => response.json())
-    .then((json) => setMovies(json.results))
+    .then((json) => {
+      setMovies(json.results)
+      setLoading(false)
+    })
     .catch((error) => console.error(error))
   }
 
   useEffect(() => {
+    setLoading(true)
     fetchMovies()
   }, [])
 
-  return(
+  if (loading) {
+
+    return <Loader />
+
+  } 
+
+  return (
 
     <section className='movie-list'>
       {movies.map((movie) => (
