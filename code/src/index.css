@@ -193,4 +193,127 @@ font-size: 13px;
   color: red;
   }
 
- 
+  @media (min-width: 300px) and (max-width: 700px) {
+
+    .movie-backdrop {
+      /* border: solid blue 2px; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .movie-content {
+      /* border: solid red 2px; */
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 70px;
+      margin-left:0px;
+      height: 680px;
+      }
+      
+      .movie-poster {
+        border: solid white 6px;
+        width: 250px;
+        margin-left:40px;
+      }
+      
+      
+      .movie-info {
+      color: white;
+      /* border: solid green 2px; */
+      max-width: 400px;
+      font-size: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-left: 20px;
+      background: rgba(8, 8, 8, 0.565);
+      padding:10px;
+      width: 300px;
+      }
+      
+      .link {
+      display: flex;
+      flex-direction: row;
+      text-decoration:none;
+      outline:none;
+      align-items: center;
+      margin-left:10px;
+      margin-bottom: 20px;
+      }
+      
+      .back-movies {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      /* border:solid pink 1px; */
+      }
+      
+      .back-text  {
+        opacity:1;
+      color: white;
+      margin-left: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+      } 
+      
+      
+      .back-text:hover, .back-text:focus, .back-text:active {
+      -webkit-transform: translateX(8px);
+      transform: translateX(8px);
+      }
+      
+      h1 {
+        margin:0;
+      }
+      
+      .movie-homepage a{
+      color: white;
+      text-decoration:none;
+      outline:none;
+      font-size: 13px;
+      }
+      
+      .movie-homepage a:hover{
+        border-bottom: solid red 1px;
+        color: red;
+        }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+    .movie-backdrop {
+      /* border: solid blue 2px; */
+      display: flex;
+      justify-content: center;
+
+    }
+    .movie-content {
+      /* border: solid red 2px; */
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      margin-bottom: 70px;
+      margin-left:50px;
+      height: 680px;
+      width: 1000px;
+      }
+      .movie-poster {
+        width: 280px;
+      }
+
+      .movie-info {
+        margin-top: 200px;
+        }
+
+      
+  }

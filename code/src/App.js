@@ -9,6 +9,7 @@ import './index.css'
 export const App = () => {
   return (
     <BrowserRouter>
+ 
     <Switch>
       <Route path="/" exact>
       <PopularList />
