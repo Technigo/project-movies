@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
-import { Link, useParams } from 'react-router-dom'
-import { BackIcon } from './Back'
+import { useParams } from 'react-router-dom'
+import { Button } from './Button'
 
 export const MoviePage = () => {
   const { movieId } = useParams()
@@ -21,9 +21,7 @@ export const MoviePage = () => {
     <div 
       className='movie-page-background' 
       style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 20%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})` }}>
-      <Link to ='/' exact='true'>
-        <BackIcon />
-      </Link>
+      <Button />
       <div className='movie-page-content'>
         <img className='movie-page-poster' src= {`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt={movie.original_title}/>
         <div className='movie-page-text-content'>
