@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { useParams } from 'react-router-dom'
+import { NotFound } from './NotFound'
 import Loader from '../components/Loader'
 
 export const MovieDetails = () => {
@@ -25,6 +26,12 @@ export const MovieDetails = () => {
     backgroundRepeat: "no-repeat",
   }
   
+  if (!details.id) {
+    return (
+      <NotFound />
+    )
+  }
+
   return (
     <>
     {loading && <Loader /> }

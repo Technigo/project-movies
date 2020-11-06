@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import { MovieList } from 'pages/MovieList'
 import { MovieDetails } from 'pages/MovieDetails'
 import { Nav } from 'components/nav'
-import NotFound from './pages/NotFound';
+import { NotFound } from './pages/NotFound';
 
 export const App = () => {
   return (

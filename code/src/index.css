@@ -14,9 +14,9 @@ body {
 }
 
 main {
-  display: flex;
+  /*display: flex;
   flex-direction: row;
-  height: 90vh;
+  height: 90vh;*/
 }
 
 h1 {
@@ -149,7 +149,7 @@ h4 {
 
 /* BUTTON */
 
-button {
+.nav-button {
   font-family: "Ubuntu", sans-serif;
   font-size: 18px;
   border: none;
@@ -162,7 +162,7 @@ button {
   transition: 0.3s ease-in-out;
 }
 
-button:hover {
+.nav-button:hover {
   cursor: pointer;
   margin-left: 5px;
   -webkit-transform: scale(1.1);
@@ -200,8 +200,37 @@ button:hover {
 
 /* ERROR PAGE*/
 
+.error-image {
+  margin: 50px;
+}
+
 .error {
-  background-color: #000000;
+  display:flex;
+	justify-content: center;
+	align-items: center;
+  flex-direction: column; 
+}
+
+.error-button {
+  margin: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 25px;
+  border: none;
+  color: white;
+  background-color: black;
+  padding: 5px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+
+}
+
+.error-button:hover {
+  background: linear-gradient(45deg, #d1f875, #fcc662, #fc9874, #ff6f91, #d661b3, #8762c4);
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* MEDIA */
