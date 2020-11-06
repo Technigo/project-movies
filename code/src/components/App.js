@@ -1,15 +1,14 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
-import { Nav } from './Nav.js';
-import { MovieList } from '../pages/MovieList';
-import { MovieDetails } from '../pages/MovieDetails';
-import { NotFound } from '../pages/NotFound';
+import { Nav } from './Nav.js'
+import { MovieList } from '../pages/MovieList'
+import { MovieDetails } from '../pages/MovieDetails'
+import { NotFound } from '../pages/NotFound'
 
-import '../styles/app.css';
+import '../styles/app.css'
 
 export const App = () => {
-
   return (
     /* To include: combining useEffect and useState with using API's in react
 To use placeholders in urls to pick dynamic parts from urls
@@ -31,7 +30,7 @@ ADD MOVIEDETAILS PAGE WITH DETAILS ABOUT MOVIE*/
 
         <Switch>
           <Route path='/' exact>
-            <MovieList/>
+            <MovieList />
           </Route>
           <Route path='/movie/:movieId' exact>
             <MovieDetails />
@@ -39,9 +38,9 @@ ADD MOVIEDETAILS PAGE WITH DETAILS ABOUT MOVIE*/
           <Route path='/404' exact>
             <NotFound />
           </Route>
-          <Redirect to='/404'/>
+          <Redirect to='/404' />
         </Switch>
       </main>
     </BrowserRouter>
-  );
-};
+  )
+}

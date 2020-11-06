@@ -1,0 +1,21 @@
+.details__wrapper {
+    width: 100vw;
+}
+.details__wrapper .details__background-img{
+    width: 100%;
+    position: relative;
+}
+
+.details__info-box {
+    display: flex;
+    position: absolute;
+    top: 50%
+}
+
+/*TO FIX: contain p-element*/
+.details__info-text {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    background-color: #000;
+}
