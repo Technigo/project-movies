@@ -28,7 +28,7 @@ return (
       </Link>
       <div className="movie-page-details">
         <img className="movie-poster" src= {`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.original_title}/>
-        <div class="details-container">
+        <div className="details-container">
           <h2>{movie.original_title}</h2>
           <p className="movie-rating">{`${movie.vote_average} /10`}</p>
           <p className="movie-overview">{movie.overview}</p>
