@@ -27,7 +27,7 @@ export const App = () => {
     <BrowserRouter>
       <main>
         
-        <Nav />
+        {/* <Nav /> */}
         <Switch>
           <Route path="/" exact>
             <PopularMovieList movieArray={movies}/>
