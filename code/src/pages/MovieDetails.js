@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 
 import { BackButton } from 'icons/BackButton'
-
+/* The id parameter is from the APP component line 14 */
 export const MovieDetails = () => {
     const { id } = useParams()
     const [details, setDetails] = useState([])

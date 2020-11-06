@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+/* Here we are choosing which props to use from MovieList component {...movie} */
 export const MovieCard = ({id, title, release_date, poster_path}) => {
     return (
         <Link to={`/movies/${id}`}>
