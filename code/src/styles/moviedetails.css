@@ -1,15 +1,21 @@
 .details__wrapper {
     width: 100vw;
 }
-.details__wrapper .details__background-img{
-    width: 100%;
+
+.details__overlay-container {
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .details__info-box {
     display: flex;
     position: absolute;
-    top: 50%
+    top: 10%;
+}
+
+.details__info-box img {
+    height: 400px;
 }
 
 /*TO FIX: contain p-element*/
@@ -17,5 +23,7 @@
     display: flex;
     flex-direction: column;
     color: #fff;
-    background-color: #000;
+    width: 50%;
+    justify-content: flex-end;
+    padding: 10px;
 }

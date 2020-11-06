@@ -3,4 +3,5 @@ export const MOVIELIST__URL = `https://api.themoviedb.org/3/movie/popular?api_ke
 export let DETAILS_URL = (id) =>
   `https://api.themoviedb.org/3/movie/${id}?api_key=${API__KEY}&language=en-US`
 
-export const IMAGE_URL = `https://image.tmdb.org/t/p/w500`
+export const IMAGE_URL = 'https://image.tmdb.org/t/p/w500'
+export const BACKGROUND_URL = 'https://image.tmdb.org/t/p/w1280'
