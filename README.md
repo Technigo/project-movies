@@ -1,13 +1,19 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+Here's an app with multiple pages where I listed trending movies using API information fetched from the https://www.themoviedb.org/. 
+The site shows a series of posters on different film and when you click on one you get to another side where you can read about the movie and see the ratings. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Design provided by Technigo - https://technigo-movies-project.netlify.app/
 
-## The problem
+Built using React Router. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## The problem / Approach
+
+I started the project sketching the final page and then breaked it up in smaller pieces. 
+Decided how many components and the pieces of information that goes in them. 
+
+With this approach I felt like I had something to look back on when I felt lost and/or overwhelmed and made the path a little easier and clearer. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://saras-trending-movies.netlify.app/
