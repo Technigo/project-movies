@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import BackButton from '../components/BackButton';
+import BackButton from './BackButton';
 
 const MovieDetail = ({
   backdrop_path,
