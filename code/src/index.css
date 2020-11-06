@@ -11,14 +11,10 @@ body {
   color: #ffffff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 main {
   display: flex;
   flex-direction: row;
+  height: 90vh;
 }
 
 h1 {
@@ -110,6 +106,7 @@ h4 {
   padding: 0 3px;
   border-radius: 10%;
 }
+
 .runtime {
   margin-bottom: 0;
 }
@@ -122,6 +119,7 @@ h4 {
   display: flex;
   align-items: flex-end;
   padding: 50px;
+  justify-content: center;
 }
 
 .summary {
@@ -154,64 +152,58 @@ button:hover {
   transform: scale(1.1);
 }
 
-/* LOADER */
+@keyframes load {
+  0%{
+    opacity: 0.08;
+    font-size: 30px; 
+    filter: blur(5px);
+    letter-spacing: 3px;
+  }
 
-.loader-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
+  100%{
+      opacity: 1;
+      font-size: 100px;
+      filter: blur(0); 
+    }
 }
-
-/*LOADING SPINNER*/
 
 .loader {
-  position: absolute;
-	border: 5px solid #f2f0f0;
-	border-radius: 50%;
-	border-top: 6px solid #ea86b6;
-	width: 150px;
-	height: 150px;
-  top: 200px;
-  left: 42%;
-	animation: spin 2s linear infinite;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	animation: load 1.2s infinite 0s ease-in-out;
+	animation-direction: alternate;
+	text-shadow: 0 0 1px white;
 }
 
-/*Animation for loader when waiting for the fetch*/
-@keyframes spin {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
 
 @media (max-width: 600px) {
+
   .popular-movies a {
     width: 100%;
   }
+
   .details {
     display: flex;
     align-items: center;
     padding: 6px;
     flex-direction: column;
   }
+
   .poster {
-    width: 88%;
+    width: 50%;
   }
+
   .summary {
     padding: 7px;
     margin: 0;
   }
 
-  .movie-detail {
-    width: 100%;
-    height: 125vh;
-  }
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
+
   h2 {
     font-size: 16px;
   }
@@ -227,22 +219,25 @@ button:hover {
   .popular-movies a {
     width: 50%;
   }
+
   .details {
     display: flex;
     align-items: center;
     padding: 6px;
     flex-direction: column;
-    justify-content: center;
   }
+
   .poster {
-    width: 66%;
+    width: 50%;
   }
+
   .summary {
     padding: 7px;
     margin: 0;
     font-size: x-large;
   }
+
   .overview {
-    max-width: 490px;
+    max-width: 605px;
   }
 }
