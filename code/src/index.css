@@ -1,3 +1,5 @@
+/* GENERAL */
+
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 body {
@@ -21,7 +23,7 @@ h1 {
   font-family: "Ubuntu", sans-serif;
 }
 
-/* NAV */
+/* HEADER NAV */
 
 header {
   margin: 0;
@@ -93,6 +95,18 @@ h4 {
   height: 100vh;
 }
 
+.title {
+  font-family: "Ubuntu", sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.title:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .overview {
   max-width: 400px;
   font-family: "Ubuntu", sans-serif;
@@ -132,9 +146,12 @@ h4 {
 .imdb-logo {
   width: 50px;
 }
+
 /* BUTTON */
 
 button {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
   border: none;
   color: white;
   background-color: black;
@@ -152,6 +169,8 @@ button:hover {
   transform: scale(1.1);
 }
 
+/* LOADING ANIMATION*/
+
 @keyframes load {
   0%{
     opacity: 0.08;
@@ -167,6 +186,8 @@ button:hover {
     }
 }
 
+/* LOADER */
+
 .loader {
 	display:flex;
 	justify-content: center;
@@ -177,6 +198,13 @@ button:hover {
 	text-shadow: 0 0 1px white;
 }
 
+/* ERROR PAGE*/
+
+.error {
+  background-color: #000000;
+}
+
+/* MEDIA */
 
 @media (max-width: 600px) {
 
