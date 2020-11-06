@@ -1,0 +1,11 @@
+nav {
+    background-color: black;
+    padding: 15px;
+}
+
+.nav-links {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 25px;
+}
