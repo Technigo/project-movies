@@ -27,7 +27,7 @@ const MovieThumb = ({ id, poster_path, name, title, release_date }) => {
         />
         <div className="movie-thumb__overlay">
           <h2 className="movie-thumb__title">{title}</h2>
-          <p>{`Released ${release_date}`}</p>
+          {release_date && <p>{`Released ${release_date}`}</p>}
         </div>
       </Link>
     </article>

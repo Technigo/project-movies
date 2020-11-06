@@ -32,7 +32,7 @@ const ListHeader = ({ onClick }) => {
         <h1>CinemaTech</h1>
       </Link>
       <button className="list-header__button" onClick={onMenuClick}>
-        <i class="fas fa-bars"></i>
+        <i className="list-header__menu fa fa-bars"></i>
       </button>
       <nav
         className={
@@ -43,6 +43,7 @@ const ListHeader = ({ onClick }) => {
           return (
             <>
               <Link
+                key={category}
                 to="/"
                 className="list-header__link"
                 onClick={() => {

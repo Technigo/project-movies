@@ -1,45 +1,68 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import BackButton from '../components/BackButton';
+
 const MovieDetail = ({
   backdrop_path,
   poster_path,
+  homepage,
   title,
   vote_average,
   tagline,
   overview,
   imdb_id,
-  genres,
   production_companies,
 }) => {
   return (
     <main
       className="detail"
       style={{
-        backgroundImage: `linear-gradient(rgba(21, 23, 61, 0.2) 0, rgb(21, 23, 61) 80%), url('https://image.tmdb.org/t/p/original/${backdrop_path}')`,
+        backgroundImage: `linear-gradient(rgba(21, 23, 61, 0.2) 0, rgb(21, 23, 61) 70%), url('https://image.tmdb.org/t/p/original${backdrop_path}')`,
       }}
     >
+      <BackButton />
       <section className="detail__info-container">
         <img
           className="detail__image"
           src={`https://image.tmdb.org/t/p/w342/${poster_path}`}
           alt={`${title}`}
         />
-        <div className="detail__summary-container">
-          <h2 className="detail__title">
-            {title}
-            <span className="detail__vote">{vote_average}/10</span>
-          </h2>
-          <h3 className="detail__tagline">{tagline}</h3>
+        {/* <div className="detail__summary-container"> */}
+        <div>
+          {homepage ? (
+            <a
+              className="detail__title"
+              target="_blank"
+              href={homepage}
+              rel="noopener noreferrer"
+            >
+              <h2 className="detail__title">{title}</h2>
+            </a>
+          ) : (
+            <h2 className="detail__title">{title}</h2>
+          )}
+
+          {tagline && <h3 className="detail__tagline">- {tagline} -</h3>}
+          <p>
+            <i className="detail__star fa fa-star"></i>
+            <span className="detail__vote"> {vote_average}/10</span>
+          </p>
+
           <p className="detail__overview">{overview}</p>
           <a
             className="detail__link"
             href={`https://www.imdb.com/title/${imdb_id}/`}
             target="blank"
           >
-            Imdb
+            <i className="detail__logo fa fa-imdb"></i>
+            {/* <img
+              className="detail__logo"
+              src="../assets/imdb.svg"
+              alt="Imdb Logo"
+            /> */}
           </a>
-          <p>Production Companies: </p>
+          <h4 className="detail__subheader">Production Companies: </h4>
           <div className="detail__company-container">
             {production_companies.map(company => (
               <Link

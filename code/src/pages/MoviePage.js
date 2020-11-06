@@ -35,7 +35,7 @@ const MoviePage = () => {
 
   return (
     <>
-      <BackButton className={'back-button'} text={'Home'} />
+      {/* <BackButton /> */}
       {isLoading && <Loader />}
       {!isLoading && <MovieDetail {...movie} />}
     </>
