@@ -22,8 +22,8 @@ export const MovieDetails = () => {
   }
     
   useEffect (()=> {
-    getMovieDetails()
-  },[]);  
+    getMovieDetails
+  },[id]);  
 
   // const movieMatch = movieDetails.find(movieDetail => movieDetail.id = id)
   // if(!movieMatch) {
