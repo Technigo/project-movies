@@ -18,11 +18,13 @@ export const MovieDetails = () => {
       })
   }, [movieId])
 
-  console.log(BACKGROUND_URL, details.backdrop_path)
-
-  /* const movieDet = {
-    backgroundImage: `url(${BACKGROUND_URL}${details.backdrop_path})`
-  } */
+  const generateRateClass = () => {
+    if(details.vote_average < 3) {
+      return 'details__low-rating'
+    } else if (details.vote_average < 7) {
+      return 'details__medium-rating'
+    } return 'details__high-rating'
+  }
 
   /* I'd like to display spoken_languages, need a map for that? */
 
@@ -57,7 +59,7 @@ export const MovieDetails = () => {
         <div className='details__info-text'>
           <h2>{details.title}</h2>
           <p>
-            <span>Rating</span>: {details.vote_average} /10
+            <span>Rating</span>: <span className={generateRateClass()}>{details.vote_average}</span>/10
           </p>
           <h4>{details.tagline}</h4>
           <p>
