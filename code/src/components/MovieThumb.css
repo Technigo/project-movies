@@ -1,4 +1,4 @@
-.movie-thumb-wrapper{
+.movie-thumb-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -24,16 +24,16 @@
   transition: 0.3s ease;
 }
 
-h2, h3 {
+.movie-description h2, h3 {
   z-index: 1;
   margin: 0 20px;
 }
 
-h2 {
+.movie-description h2 {
   font-size: 22px;
 }
 
-h3 {
+.movie-description h3 {
   font-size: 14px;
   font-weight: normal;
   margin-top: 15px;
@@ -63,15 +63,15 @@ h3 {
 /* computer only */
 @media (min-width: 1025px) {
 
-  .movie-thumb-wrapper{
+  .movie-thumb-wrapper {
     width: 25%;
   }
   
-  h2 {
+  .movie-description h2 {
     font-size: 32px;
   }
   
-  h3 {
+  .movie-description h3 {
     font-size: 18px;
   }
 }

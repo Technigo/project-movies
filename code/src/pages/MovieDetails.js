@@ -26,9 +26,7 @@ export const MovieDetails = () => {
   }, [id])
 
   if(loading) {
-    return (
-      <div></div>
-    )
+    return <div>Loading...</div>
   }
 
   if (details.id) {
@@ -36,12 +34,17 @@ export const MovieDetails = () => {
       <section className='movie-details'style={{backgroundImage: `url(https://image.tmdb.org/t/p/original/${details.backdrop_path})`}}>
         <Link className='homepage-link' to='/'>
           <Icon />
-          <p className='link-title'>Movies</p>
+          <p className='link-title'>
+            Movies
+          </p>
         </Link>
         <div className='details-summary'>
           <img className="details-image" src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt={details.title}/>
           <div className ="details-text">
-            <h2>{details.title}<span>{details.vote_average}/10</span></h2>
+            <h2>
+              {details.title}
+              <span>{details.vote_average}/10</span>
+            </h2>
             <p>{details.overview}</p>
           </div>
         </div>
