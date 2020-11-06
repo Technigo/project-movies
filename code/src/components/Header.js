@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
 
-import { ReactComponent as Mustache } from "media/mustache.svg"
+import { ReactComponent as Mustache } from 'media/mustache.svg'
 
 import './Header.css'
 

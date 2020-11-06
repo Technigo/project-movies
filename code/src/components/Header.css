@@ -10,7 +10,7 @@ header{
   /* margin-top: 5vh; */
 }
 
-.mustache-icon svg {
+.mustache-icon svg{
   fill: #767676;
   width: 50px;
   margin-right: 10px;
@@ -28,7 +28,7 @@ header{
   margin: 20px;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:768px){
   .mustache-icon{
     /* margin-top: 2.5vh; */
   }

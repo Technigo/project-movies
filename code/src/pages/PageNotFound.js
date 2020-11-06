@@ -2,9 +2,7 @@ import React from 'react'
 
 import { Footer } from 'components/Footer'
 
-import { ReactComponent as Error } from "media/404_error.svg"
-
-
+import { ReactComponent as Error } from 'media/404_error.svg'
 import './PageNotFound.css'
 
 export const PageNotFound = () => {

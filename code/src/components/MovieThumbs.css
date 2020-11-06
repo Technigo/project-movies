@@ -6,7 +6,7 @@
   color: #fff;
 }
 
-a {
+a{
   text-decoration: none;
 }
 
@@ -33,7 +33,6 @@ a {
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   transition: all 0.3s ease-in-out;
-  /* // dont forget to add hover effect for safari usage too! */
 }
 
 .movie-overlay:hover{
