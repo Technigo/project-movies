@@ -11,7 +11,6 @@ export const App = () => {
   return (
     <BrowserRouter>
       <Header />
-      <main>
       <Switch>
         <Route path='/' exact>
           <MovieList />
@@ -20,7 +19,6 @@ export const App = () => {
           <MovieDetails />
         </Route>
       </Switch>
-      </main>
       <Footer />
     </BrowserRouter>
   )
