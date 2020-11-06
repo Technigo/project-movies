@@ -1,13 +1,15 @@
-# Project Movies
+# Project Movies 🎬 🍿
 
-Replace this readme with your own information about your project.
+This week's project was the movies release project. Inspired by the movies' database, this app features a list of popular movies that are clickable and provide descriptions, titles and rating of the movies.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+When the user chooses a non-existant path or movie id, they are redirected and presented with a home button that leads them to the start page!
 
-## The problem
+## Tech-stack used:
+🧩 HTML
+🌈 CSS
+🧠 JavaScript
+👾 React.js
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## View it live 💀
 
-## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Check it out here: 
