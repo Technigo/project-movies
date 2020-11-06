@@ -63,12 +63,13 @@
 
 .details {
     font-weight: 300;
-    margin: 0;
+    margin-left: 25px;
     max-width: 400px;
-    padding: 30px;
 }
 
 .vote {
-    font-weight: 200;
+    font-weight: 300;
+    font-size: 17px;
     color: red;
+    margin-left: 10px;
 }

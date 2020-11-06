@@ -13,7 +13,7 @@ export const MovieDetails = ({ title, overview, vote_average, backdrop_path, pos
 
     return (
         <section className='movie-details'>
-            
+
             <div className="overlay">
                 <img className="background" src={`${IMAGE_BASE_URL + BACKDROP_SIZE + backdrop_path}`} alt='backdrop'></img>
             </div>
@@ -26,7 +26,7 @@ export const MovieDetails = ({ title, overview, vote_average, backdrop_path, pos
                         <BackButton /> Movies
                     </Link>
 
-                    <h3>{title} <span className="vote">{vote_average} / 10</span></h3>
+                    <h1>{title} <span className="vote">{vote_average}/10</span></h1>
                     <p>{overview}</p>
                 </div>
             </div>
