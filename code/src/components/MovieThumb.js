@@ -1,7 +1,8 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
 
-const MovieThumb = ({ id, poster_path, name, title, release_date }) => {
+const MovieThumb = ({ id, poster_path, title, release_date }) => {
 	return (
 		<article className="movie-thumb">
 			<Link to={`/movies/${id}`}>
@@ -19,5 +20,3 @@ const MovieThumb = ({ id, poster_path, name, title, release_date }) => {
 	);
 };
 export default MovieThumb;
-
-//used in MovieList and CompanyList

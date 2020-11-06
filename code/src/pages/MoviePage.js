@@ -38,7 +38,18 @@ const MoviePage = () => {
 		<main>
 			<BackButton text={'Back'} />
 			{loading && <Loader />}
-			{!loading && <MovieDetail {...movieDetail} />}
+			{!loading && (
+				<MovieDetail
+					backdrop_path={movieDetail.backdrop_path}
+					poster_path={movieDetail.poster_path}
+					title={movieDetail.title}
+					vote_average={movieDetail.vote_average}
+					overview={movieDetail.overview}
+					imdb_id={movieDetail.imdb_id}
+					genres={movieDetail.genres}
+					production_companies={movieDetail.production_companies}
+				/>
+			)}
 		</main>
 	);
 };

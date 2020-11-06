@@ -13,7 +13,8 @@ h2 {
 	margin-bottom: 10px;
 }
 
-h3 {
+h3,
+h4 {
 	margin-bottom: 10px;
 }
 
@@ -302,6 +303,18 @@ nav {
 @media (min-width: 768px) {
 	h1 {
 		font-size: 32px;
+	}
+
+	h3 {
+		font-size: 26px;
+	}
+
+	h4 {
+		font-size: 20px;
+	}
+
+	p {
+		font-size: 18px;
 	}
 	.nav__button {
 		display: none;

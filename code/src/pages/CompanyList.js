@@ -26,7 +26,6 @@ const CompanyList = () => {
 				}
 			})
 			.then(json => {
-				console.log(json);
 				setCompanies(json);
 				setLoading(false);
 			})
@@ -48,7 +47,6 @@ const CompanyList = () => {
 				const filteredCompanyArray = json.results.filter(
 					movie => movie.poster_path != null
 				);
-				console.log(filteredCompanyArray);
 				setCompanyMovies(filteredCompanyArray);
 				setLoading(false);
 			})
@@ -62,11 +60,21 @@ const CompanyList = () => {
 			{loading && <Loader />}
 			{!loading && (
 				<>
-					<CompanyHeader {...companies} />
+					<CompanyHeader
+						homepage={companies.homepage}
+						logo_path={companies.logo_path}
+						name={companies.name}
+					/>
 					<main className="list">
 						<BackButton text={'Go back to movie'} />
 						{companyMovies.map(company => (
-							<MovieThumb key={company.id} {...company} />
+							<MovieThumb
+								key={company.id}
+								id={company.id}
+								poster_path={company.poster_path}
+								title={company.title}
+								release_date={company.release_date}
+							/>
 						))}
 					</main>
 				</>
