@@ -1,5 +1,12 @@
 import React from 'react'
 
+import '../styles/notfound.css'
+
 export const NotFound = () => {
-  return <div>Oops! That movie doesn't exist in our library</div>
+  return (
+    <section>
+      <h2>Oops!</h2>
+      <p>That movie doesn't exist in our library</p>
+    </section>
+  )
 }
