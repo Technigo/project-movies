@@ -70,6 +70,7 @@ code {
 }
 
 .movie-backdrop {
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -130,6 +131,7 @@ code {
 }
 
 @media (min-width: 667px) and (max-width: 1024px) {
+  
   .movie-list a {
     width: 30%;
     flex-grow: 1;
@@ -138,13 +140,14 @@ code {
   .movie-backdrop{
     position: relative;
   }
-  
+
   .movie-details {
     width: 90%;
   }
 }
 
 @media (max-width: 666px) {
+
   .movie-list a{
     width: 50%;
   }
@@ -152,6 +155,7 @@ code {
   .movie-backdrop {
    align-items: center;
    position: relative;
+   width: fit-content;
   }
 
   .back-link {
