@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+//import Backbutton from './Backbutton';
+import ButtonBack from './ButtonBack';
 
 const ListHeader = ({ onClick }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -28,9 +30,11 @@ const ListHeader = ({ onClick }) => {
 
   return (
     <header className="list-header">
-      <Link className="list-header__logo" to="/">
+      <ButtonBack className={'button'} />
+      <ButtonBack className={'button button__home'} />
+      {/* <Link className="list-header__logo" to="/">
         <h1>CinemaTech</h1>
-      </Link>
+      </Link> */}
       <button className="list-header__button" onClick={onMenuClick}>
         <i className="list-header__menu fa fa-bars"></i>
       </button>
@@ -55,52 +59,6 @@ const ListHeader = ({ onClick }) => {
             </div>
           );
         })}
-        {/* <div
-          className={
-            showMenu ? 'list-header__nav--open' : 'list-header__nav--closed'
-          }
-        > */}
-        {/* <Link
-          to="/"
-          className="list-header__link"
-          onClick={() => {
-            onClick('now_playing');
-            onMenuClick();
-          }}
-        >
-          Now Playing
-        </Link>
-        <Link
-          to="/"
-          className="list-header__link"
-          onClick={() => {
-            onClick('popular');
-            onMenuClick();
-          }}
-        >
-          Popular
-        </Link>
-        <Link
-          to="/"
-          className="list-header__link"
-          onClick={() => {
-            onClick('upcoming');
-            onMenuClick();
-          }}
-        >
-          Upcoming
-        </Link>
-        <Link
-          to="/"
-          className="list-header__link"
-          onClick={() => {
-            onClick('top_rated');
-            onMenuClick();
-          }}
-        >
-          Top Rated
-        </Link> */}
-        {/* </div> */}
       </nav>
     </header>
   );

@@ -8,8 +8,6 @@ import MoviePage from './pages/MoviePage';
 import CompanyList from './pages/CompanyList';
 
 import './styles/styles.scss';
-// import './styles/detail.scss';
-// import './styles/button.scss';
 
 export const App = () => {
   const [list, setList] = useState();
@@ -20,22 +18,10 @@ export const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        {/* <Route exact path="/">
-   <MovieList/>{list}</MovieList>
-        </Route> */}
         <Route exact path="/">
           <ListHeader onClick={handleClick} />
           <MovieList>{list}</MovieList>
         </Route>
-        {/* <Route exact path="/popular">
-          <MovieList>popular</MovieList>
-        </Route>
-        <Route exact path="/top_rated">
-          <MovieList>top_rated</MovieList>
-        </Route>
-        <Route exact path="/upcoming">
-          <MovieList>upcoming</MovieList>
-        </Route> */}
         <Route exact path="/movies/:movieId">
           <MoviePage />
         </Route>

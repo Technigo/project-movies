@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Backbutton from './Backbutton';
+import ButtonBack from './ButtonBack';
 
 const MovieDetail = ({
   backdrop_path,
@@ -21,14 +21,13 @@ const MovieDetail = ({
         backgroundImage: `linear-gradient(rgba(21, 23, 61, 0.2) 0, rgb(21, 23, 61) 70%), url('https://image.tmdb.org/t/p/original${backdrop_path}')`,
       }}
     >
-      <Backbutton />
+      <ButtonBack className={'button'} />
       <section className="detail__info-container">
         <img
           className="detail__image"
           src={`https://image.tmdb.org/t/p/w342/${poster_path}`}
           alt={`${title}`}
         />
-        {/* <div className="detail__summary-container"> */}
         <div>
           {homepage ? (
             <a
@@ -56,11 +55,6 @@ const MovieDetail = ({
             target="blank"
           >
             <i className="detail__logo fa fa-imdb"></i>
-            {/* <img
-              className="detail__logo"
-              src="../assets/imdb.svg"
-              alt="Imdb Logo"
-            /> */}
           </a>
           <h4 className="detail__subheader">Production Companies: </h4>
           <div className="detail__company-container">
@@ -76,16 +70,6 @@ const MovieDetail = ({
           </div>
         </div>
       </section>
-      {/* <div>
-        <p>Genres: </p>
-        {genres.map(genre => (
-          <Link key={genre.name} to={`/genre/${genre.id}`}>
-            <ul>
-              <li>{genre.name}</li>
-            </ul>
-          </Link>
-        ))}
-      </div> */}
     </main>
   );
 };

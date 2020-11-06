@@ -5,8 +5,7 @@ import Loader from '../components/Loader';
 import Error from '../components/Error';
 import { API_KEY } from '../api.js';
 import CompanyHeader from '../components/CompanyHeader';
-import Backbutton from '../components/Backbutton';
-//import BackButton from '../components/BackButton';
+import ButtonBack from '../components/ButtonBack';
 import MovieThumb from '../components/MovieThumb';
 
 const CompanyList = () => {
@@ -67,7 +66,9 @@ const CompanyList = () => {
         <>
           <CompanyHeader {...company} />
           <main className="list">
-            <Backbutton />
+            <ButtonBack
+              className={'button-container button-container--absolute'}
+            />
             {companyMovies.map(company => (
               <MovieThumb key={company.id} {...company} />
             ))}
@@ -77,4 +78,5 @@ const CompanyList = () => {
     </>
   );
 };
+
 export default CompanyList;

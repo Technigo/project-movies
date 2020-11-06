@@ -1,15 +1,24 @@
 import React from 'react';
-
-//import '../styles/styles.scss';
+import { Link } from 'react-router-dom';
+import ButtonBack from './ButtonBack';
 
 const CompanyHeader = ({ homepage, logo_path, name }) => {
   return (
-    <header>
+    <header className="list-header">
+      <ButtonBack className="button-container" />
+      <Link className="list-header__logo" to="/">
+        <h1>CinemaTech</h1>
+      </Link>
       {homepage ? (
-        <a href={homepage} target="_blank" rel="noopener noreferrer">
+        <a
+          className="list-header__logo"
+          href={homepage}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {logo_path ? (
             <img
-              className=""
+              className="list-header__image"
               src={`https://image.tmdb.org/t/p/w185/${logo_path}`}
               alt={name}
             />

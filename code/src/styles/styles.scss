@@ -13,7 +13,7 @@ body {
   color: $beige;
 }
 
-/*** MOVIE LIST PAGE ***/
+/*** LIST PAGEs ***/
 
 /*--- List Header ---*/
 
@@ -22,7 +22,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  padding: 20px;
+  padding: 30px;
 
   &__logo {
     color: $beige;
@@ -87,6 +87,12 @@ body {
     }
   }
 
+  &__image {
+    height: 100%;
+    filter: invert(1);
+    color: #000;
+  }
+
   @include respond(medium) {
     &__nav {
       display: flex;
@@ -94,6 +100,7 @@ body {
 
     &__nav--open {
       all: unset;
+      display: flex;
     }
 
     &__nav--closed {
@@ -115,10 +122,6 @@ body {
   width: 100%;
 
   @include respond(medium) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @include respond(large) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -255,19 +258,20 @@ body {
 
 /*** BACK BUTTON ***/
 
-$button--color-1: #f5deb3;
-$button--color-2: #000;
-//$button--ornament-offset: -0.5em;
-$button--ornament-offset: -10px;
-
 .button-container {
-  padding-top: calc(5% + 10px);
+  padding-top: 2%;
   padding-left: calc(5% + 10px);
+
+  &--absolute {
+    position: absolute;
+    z-index: 1;
+  }
 }
 
-.button {
-  text-transform: uppercase;
-  letter-spacing: 8px;
+.button__ {
+  font-family: 'Poiret One';
+  //text-transform: uppercase;
+  //letter-spacing: 8px;
   font-size: 20px;
   position: relative;
   padding: 8px;
@@ -281,6 +285,10 @@ $button--ornament-offset: -10px;
     color: $cream;
     padding: 8px;
     transition: color 500ms ease, background-color 500ms ease;
+
+    &--blue {
+      color: $dark-blue;
+    }
 
     .button:hover &,
     .button:focus & {

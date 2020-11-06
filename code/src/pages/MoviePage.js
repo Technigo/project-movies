@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 
 import Loader from '../components/Loader';
 import Error from '../components/Error';
-//import BackButton from '../components/BackButton';
 import MovieDetail from '../components/MovieDetail';
 import { API_KEY } from '../api.js';
 
@@ -31,11 +30,8 @@ const MoviePage = () => {
       });
   }, [MOVIE_URL]);
 
-  console.log(movie);
-
   return (
     <>
-      {/* <BackButton /> */}
       {isLoading && <Loader />}
       {!isLoading && <MovieDetail {...movie} />}
     </>

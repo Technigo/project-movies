@@ -1,11 +1,11 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-const Backbutton = () => {
+const Backbutton = ({ className }) => {
   const history = useHistory();
 
   return (
-    <div className="button-container">
+    <div className={className}>
       <button className="button" type="button" onClick={() => history.goBack()}>
         <div className="button__ornament button__ornament--vertical">
           <div className="button__ornament-top-bottom"></div>
@@ -16,17 +16,10 @@ const Backbutton = () => {
           <div className="button__ornament-top-bottom"></div>
           <div className="button__ornament-left-right"></div>
         </div>
-        <span className="button__label">back</span>
+        <span className="button__label">CinemaTech</span>
       </button>
     </div>
-    // <button
-    //   className={className}
-    //   type="button"
-    //   onClick={() => history.goBack()}
-    // >
-    //   <span>←</span>
-    //   {text}
-    // </button>
   );
 };
+
 export default Backbutton;

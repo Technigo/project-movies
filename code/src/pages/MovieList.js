@@ -28,7 +28,6 @@ const MovieList = ({ children }) => {
         }
       })
       .then(json => {
-        console.log(json.results);
         setMovies(json.results);
         setLoading(false);
       })
@@ -36,25 +35,6 @@ const MovieList = ({ children }) => {
         window.location.assign('/error');
       });
   }, [MOVIES_URL]);
-
-  // const getMovieList = () => {
-  //   fetch(API_URL)
-  //     .then(result => {
-  //       if (result.ok) {
-  //         return result.json();
-  //       } else {
-  //         throw new Error('404');
-  //       }
-  //     })
-  //     .then(json => {
-  //       console.log(json.results);
-  //       setMovies(json.results);
-  //       setLoading(false);
-  //     })
-  //     .catch(() => {
-  //       window.location.assign('/error');
-  //     });
-  // };
 
   return (
     <main className="list">
