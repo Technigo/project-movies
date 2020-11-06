@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.allMovies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 1352px;
+}
+
+.eachMovie {
+ display: block;
+ word-wrap: break-word;
+ position: relative;
+ width: 338px;
+ height: 508px;
+}
+
+.movieThumbnail {
+  width: 100%;
+  height: 100%;
+}
+
+.movieDetails {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: flex-end;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
+  width: 338px;
+  height: 508px;
+  padding-left: 15px;
+  opacity: 0;
+  border: yellow solid 1px;
+}
+
+.movieDetails:hover {
+  opacity: 1;
+}
+
+.movieTitle1 {
+  font-size: 35px;
+  color: #fff;
+  margin: 0;
+}
+
+.releaseDate {
+  color: #fff;
+  padding-bottom: 15px;
+}
+
+.eachMovie:hover  {
+  opacity: 0.5;
+}

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
+import './MovieDetails.css'
+
 export const MovieDetails = () => {
     const { movieID } = useParams()
     const [movieDetails, setMovieDetails] = useState({})
