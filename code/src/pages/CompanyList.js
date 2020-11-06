@@ -66,7 +66,7 @@ const CompanyList = () => {
         <>
           <CompanyHeader {...company} />
           <main className="list">
-            <BackButton text={'Go Back!'} />
+            <BackButton />
             {companyMovies.map(company => (
               <MovieThumb key={company.id} {...company} />
             ))}
