@@ -7,7 +7,9 @@ export const Error = () => {
         <section className="error">
             <Link to="/" exact="true">
             <div className="back-arrow">
-                    <p classname="text-animation"><i class="arrow left"></i>
+                    
+                    <i class="arrow left"></i>
+                    <p classname="text-animation">
                         Back to movies
                         </p>
                     </div>

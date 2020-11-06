@@ -16,13 +16,14 @@ export const Movie = ({
         <div className="movie-container-one">
             <Link to="/"> 
                 <div className="back-arrow">
-                <p classname="text-animation"><i class="arrow left"></i>
+                <p classname="text-animation">
+                <i class="arrow left"></i>
                     Movies
                     </p>
                 </div>
                 
             </Link>
-        
+            
         <img src={`https://image.tmdb.org/t/p/w1280${poster_path}`}
         alt={title} 
         />
