@@ -11,9 +11,8 @@ export const MovieDetails = ({
   overview,
   genres,
 }) => {
-  console.log("History:", useHistory());
-  console.log("genere:", { genres });
   const history = useHistory();
+
   return (
     <article
       className="movie-details-background"
@@ -41,7 +40,7 @@ export const MovieDetails = ({
         <div className="movie-details-text">
           <h1>
             {title}
-            <span>{vote_average}/10</span>
+            <span>Rating: {vote_average}/10</span>
           </h1>
           <p>{overview}</p>
         </div>
