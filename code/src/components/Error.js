@@ -8,8 +8,8 @@ export const Error = () => {
             <Link to="/" exact="true">
             <div className="back-arrow">
                     
+                    <p classname="error-animation">
                     <i class="arrow left"></i>
-                    <p classname="text-animation">
                         Back to movies
                         </p>
                     </div>

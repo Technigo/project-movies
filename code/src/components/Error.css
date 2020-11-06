@@ -1,7 +1,7 @@
 .error {
     background: black; 
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 25px;
@@ -12,4 +12,18 @@
     font-size: 50px;
     align-self: center;
     justify-self: center;
+    text-align: center;
 }
+
+@media (max-width: 700px) { 
+
+    .error-text {
+        font-size: 25px;
+    
+    }
+
+    .error {
+        
+    }
+  
+  }
