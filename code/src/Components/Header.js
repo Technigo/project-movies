@@ -29,6 +29,7 @@ const Header = ({ reachAPIValue }) => {
                     })}
                 </select>
             </form>
+            <h1>Movies</h1>
         </header>
     )
 }
