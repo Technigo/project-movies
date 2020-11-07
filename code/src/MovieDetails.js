@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Link, useParams, useHistory } from 'react-router-dom';
+import { Route, Link, useParams } from 'react-router-dom';
 import { apiKey } from './Key';
 import { BackButton } from './BackButton';
-
-import 'pages/moviedetails.css';
+import 'moviedetails.css';
 
 
 export const MovieDetails = () => {
