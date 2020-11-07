@@ -14,6 +14,10 @@ export const Navbar = () => {
             <Link to="/" className="nav-links">
                 Popular movies
             </Link>
+
+            <Link to="/upcoming" className="nav-links">
+                Upcoming movies
+            </Link>
             </nav>
         </header>
     );

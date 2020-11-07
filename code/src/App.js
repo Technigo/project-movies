@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import MovieList from './components/MovieList.js';
 import MovieDetails from './components/MovieDetails.js';
 import { Trending } from 'components/Trending.js';
+import { Upcoming } from 'components/Upcoming.js';
 import { Navbar } from './components/Navbar';
 
 export const App = () => {
@@ -18,6 +19,9 @@ export const App = () => {
       </Route>
       <Route path="/trending" exact>
         <Trending />
+      </Route>
+      <Route path="/upcoming" exact>
+        <Upcoming />
       </Route>
      </Switch>
     </BrowserRouter>
