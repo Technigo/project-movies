@@ -1,13 +1,13 @@
 # Project Movies
-
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Week 11 at Technigo Bootcamp
+– Practicing React state skills by fetching and posting data to an API. 
+– Learned about components life cycles
+– Learned how to use the useEffect hook in React to perform actions when components mount, unmount, or when state changes.
+– Learned how to call APIs from React and put the data into state.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I solved this weeks project by fetching data in the pages that should show data and kept the App.js clean and easy to read.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
