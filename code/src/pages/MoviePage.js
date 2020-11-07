@@ -27,7 +27,7 @@ export const MoviePage = () => {
   }
   return (
     <main className="movie-error-message">
-      <h2>Sorry, we could not find this movie - Please try again</h2>
+      <h2>Sorry, we could not find that movie - Please try again</h2>
       <BackButton className="movies-back-button" history={history} />
     </main>
   );
