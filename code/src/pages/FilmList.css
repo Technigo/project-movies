@@ -4,5 +4,17 @@
 }
 
 .section-container a {
-    width: 25%;
+    width: 100%;
+}
+
+@media (min-width: 550px) {
+    .section-container a {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section-container a {
+        width: 25%;
+    }
 }

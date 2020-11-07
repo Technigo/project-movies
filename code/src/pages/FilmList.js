@@ -38,3 +38,5 @@ export const FilmList = () => {
         </>
     );
 };
+
+/* {...films} the spread operator ... is sending into the FilmCard the data from each of the array objects. In the FilmCard, the one's that want to be used are sent as destructure (i think) props */
