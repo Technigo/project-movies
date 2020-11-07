@@ -105,9 +105,7 @@ a.active {
   top: 0;
   height: 100%;
   width: 100%;
-  padding: 13px 15px;
   color: #fff;
-  text-decoration: none;
   object-fit: cover;
   overflow: hidden;
   display: flex;
@@ -118,6 +116,12 @@ a.active {
   transition: 0.5s ease;
 }
 
+.text-wrapper {
+  margin: 0 0 13px 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
 h2 {
   font-size: 21px;
   margin: 0;
@@ -125,7 +129,7 @@ h2 {
 
 p {
   margin: 0;
-  padding-bottom: 32px;
+  padding-top: 6px;
   font-size: 13px;
 }
 
@@ -135,11 +139,10 @@ p {
 }
 
 /* Movie Detail */
-.container .background {
-  min-height: 100vh;
+.container {
   display: flex;
-  background-size: cover;
   justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .info {
@@ -154,10 +157,8 @@ p {
 }
 
 .details {
-  margin: 150px 0 0 34px;
+  margin-left: 34px;
   line-height: 41px;
-  display: flex;
-  flex-flow: column nowrap;
   align-content: flex-end;
 }
 

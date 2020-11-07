@@ -13,8 +13,10 @@ export const MovieThumb = ({
       <article className="thumb-container">
         <img className="cover" alt={title} src={`https://image.tmdb.org/t/p/w342/${poster_path}`} />
         <div className="hover-layer">
-          <h2>{title}</h2>
-          <p>Released: {release_date}</p>
+          <div className="text-wrapper">
+            <h2>{title}</h2>
+            <p>Released: {release_date}</p>
+          </div>
         </div>
       </article>
     </Link>
