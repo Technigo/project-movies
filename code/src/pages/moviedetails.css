@@ -21,10 +21,19 @@
     top: 50px;
 }
 
+.backLink {
+    position: absolute;
+    margin-left: 23px;
+    margin-top: 18px;
+    z-index: 5;
+
+}
+
 .backLink:hover svg {
     margin-right: 5px;
     transition: margin-right 0.2s cubic-bezier(0.42, 0, 0.21, 0.99);
 }
+
 
 
 .details_background {
@@ -65,8 +74,8 @@
 .details_page   .movie-poster {
     border: 5px solid #fff;
     position: relative;
-    /* margin-right: 50px; */
-    /* margin-top: 70px; */
+    margin-right: 50px;
+    margin-top: 30px;
 }
 
 h1 {
