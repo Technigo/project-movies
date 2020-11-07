@@ -9,4 +9,4 @@ I created the components and pages and needed and started with the movielist com
 
 ## View it live
 
-
+https://mostpopularmovies.netlify.app/
