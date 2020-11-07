@@ -12,7 +12,6 @@ export const MovieDetails = () => {
     const [movie, setMovie] = useState([])
     const [error, setError] = useState('')
     const [isLoading, setIsLoading] = useState(true)
-    console.log(movieID)
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -24,19 +23,15 @@ export const MovieDetails = () => {
 
         })
         .catch((err)=>{setError(err.success)})
-        // .catch((err) => setError(err))
     }, [movieID])
 
     
-
-    console.log(error)
     if (isLoading) {
         return (
             <Loading />
         )
-    }
-
-    else if(movie.success !== false) {
+        
+    } else if(movie.success !== false) {
         return(
             <section className="movie" style={{backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.7) 25%, rgba(0,0,0,0.0) 40%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}}>
                 <BackLink />

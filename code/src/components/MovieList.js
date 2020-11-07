@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 
 export const MovieList = () => {
     const [movies, setMovies] = useState([]);
-    // const movieKey = "868bb0ec2938c0c650aeb654eb40061d";
 
     useEffect(() => {
         fetch ("https://api.themoviedb.org/3/movie/popular?api_key=868bb0ec2938c0c650aeb654eb40061d&language=en-US&page=1")
