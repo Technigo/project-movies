@@ -33,7 +33,7 @@ code {
   height: 100%;
 }
 
-.movieDetails {
+.movieDetails1 {
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -46,10 +46,9 @@ code {
   height: 508px;
   padding-left: 15px;
   opacity: 0;
-  border: yellow solid 1px;
 }
 
-.movieDetails:hover {
+.movieDetails1:hover {
   opacity: 1;
 }
 

@@ -16,16 +16,14 @@ export const MovieDetails = () => {
     }, [movieID]);
 
     return (
-        <div className="movieContainer">
+        <div className="movieContainer" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`}} alt={`${movieDetails.title}`}>
                 <>
-                
-                <div className="movieDetails1">
-                    <img className="movieDetailsThumbnail" src={`https://image.tmdb.org/t/p/w300${movieDetails.poster_path}`} alt="{movieDetails.title}" />
-                </div>
+                <div className="summary">
+                    <img className="movieDetailsThumbnail" src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`} alt={`${movieDetails.title}`} />
                     <div className="movieDetails2">
-                        <h2 className="movieTitle2"> {movieDetails.title}</h2>
-                            <p className="averageVote"> {movieDetails.vote_average} / 10 </p>
+                        <h2 className="movieTitle"> {movieDetails.title} <span className="averageVote">{movieDetails.vote_average}/10 </span></h2>
                                 <p className="movieDescription"> {movieDetails.overview} </p>
+                    </div>
                     </div>
                 </>
         </div>
