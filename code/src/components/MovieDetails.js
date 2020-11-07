@@ -20,16 +20,21 @@ export const MovieDetails = () => {
 
   return (
     <>
-      <Link to={`/movies${details.id}`}>
-        <section className="details-site">
-          <img className="movie-background"
-            src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`}
-            alt={details.id}>
-          </img>
-          <img className="movie-post"
-            src={`https://image.tmdb.org/t/p/w1280${details.poster_path}`}
-            alt={details.id}>
-          </img>
+      <section className="details-site">
+        <div className="button-back">
+          <Link to="/">
+            <div className="text-back">Back</div>
+          </Link>
+        </div>
+        <img className="movie-background"
+          src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`}
+          alt={details.id}>
+        </img>
+        <img className="movie-post"
+          src={`https://image.tmdb.org/t/p/w1280${details.poster_path}`}
+          alt={details.id}>
+        </img>
+        <div className="detail-section">
           <div className="detail-text">
             <h1>{details.title}</h1>
             <p className="vote-count">{details.vote_count}/10</p>
@@ -37,9 +42,8 @@ export const MovieDetails = () => {
           <div className="overview-text">
             <p>{details.overview}</p>
           </div>
-        </section>
-      </Link>
-
+        </div>
+      </section>
     </>
   )
 }
