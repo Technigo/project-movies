@@ -87,7 +87,7 @@ main {
   transition: margin-right 0.2s ease-in-out;
 }
 
-.detail-page .back-link:hover svg {
+.detail-page .back-link:hover img {
   margin-right: 5px;
 }
 
@@ -99,7 +99,7 @@ main {
   justify-content: flex-end;
 }
 
-.detail-page img {
+.detail-page .summary img {
   border: 5px solid #fff;
 }
 
