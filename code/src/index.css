@@ -74,3 +74,32 @@ code {
   flex-direction: column;
   justify-content: flex-end;
 }
+
+.detail_info--container {
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+}
+
+.detail_info__image {
+  border: 5px solid #fff;
+}
+
+.detail_info__textbox {
+  margin-left: 20px;
+  color: #fff;
+}
+
+.detail_info_textbox__heading {
+  font-size: 24px;
+}
+
+.red__text {
+  margin-left: 20px;
+  color: #d01616;
+  font-weight: 400;
+}
+
+.detail_info_textbox__text {
+  margin: 15px 0;
+}

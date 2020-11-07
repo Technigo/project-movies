@@ -2,7 +2,7 @@ import React from 'react';
 import { BACKGROUND_IMAGE_URL, POSTER_IMAGE_URL } from '../urls.js';
 
 
-export const TvShowDetails = ({ name, backdrop_path, poster_path }) => {
+export const TvShowDetails = ({ name, backdrop_path, poster_path, vote_average, overview }) => {
     console.log(backdrop_path);
     return (
         <section 
@@ -15,10 +15,16 @@ export const TvShowDetails = ({ name, backdrop_path, poster_path }) => {
         >
           <article className="detail_info--container">
               <img
-                className="detal_info__image"
+                className="detail_info__image"
                 src={`${POSTER_IMAGE_URL}${poster_path}`}
                 alt={name}
               />
+              <div className="detail_info__textbox">
+                  <h1 className="detail_info_textbox__heading">{name}
+                    <span className="detail_info_textbox__heading red__text">{vote_average}/10</span>
+                  </h1>
+                  <p className="detail_info_textbox__text">{overview}</p>
+              </div>
           </article>
         </section>
     )
