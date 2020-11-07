@@ -3,7 +3,7 @@ import { useParams, useRouteMatch } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 import '../style/movieDetails.css'
-import PageNotFound from './PageNotFound';
+import PageNotFound from './PageNotFound'
 
 const MovieDetails = () => {
   const match = useRouteMatch();
@@ -18,6 +18,7 @@ const MovieDetails = () => {
     .then((res) => res.json())
     .then((json) => {
       console.log("json", json)
+      //catch any error in promises//
       if(json.success === false) {
         throw new Error(json.status_message)
       }
@@ -26,7 +27,7 @@ const MovieDetails = () => {
     })
       .catch (error => {
         setErrorMessage(error);
-      })
+      });
   }, [movieId]);
 
   return ( 

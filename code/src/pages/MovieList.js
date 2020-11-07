@@ -31,7 +31,7 @@ const MovieList = () => {
     .then((json) => {
       setMovies(json.results)
       setLoading(false);
-    })
+    });
   }, [apiFilter]);
 
   return (
@@ -51,22 +51,22 @@ const MovieList = () => {
         </select>
       </div>
       <div className="movie-card-container">
-      {loading ?
-      <div className="loading-container">
-        <p className="loading-note">Get yourself a drink and enjoy your movie time...</p>
+        {loading ?
+        <div className="loading-container">
+          <p className="loading-note">Get yourself a drink and enjoy your movie time...</p>
+        </div>
+        :
+        movies.map((movie) => (
+          <Link to={`/movies/${movie.id}`} key={movie.id} className="movie-card-item">
+            <article className="movie-cards" >
+              <img 
+                src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} 
+                alt={movie.title} 
+              />
+            </article>
+          </Link>
+        ))}
       </div>
-      :
-      movies.map((movie) => (
-        <Link to={`/movies/${movie.id}`} key={movie.id} className="movie-card-item">
-          <article className="movie-cards" >
-            <img 
-              src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} 
-              alt={movie.title} 
-            />
-          </article>
-        </Link>
-      ))}
-    </div>
     </div>
     );
 };

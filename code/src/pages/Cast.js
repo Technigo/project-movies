@@ -16,7 +16,7 @@ const Cast = () => {
     .then((json) => {
       console.log(json, "castList")
       setCastList(json.cast)
-    })
+    });
   }, [movieId]);
   return (
     <div className="display-card-container">
@@ -36,7 +36,6 @@ const Cast = () => {
           </article>
         </Link>
       ))}
-
     </div>
    );
 };

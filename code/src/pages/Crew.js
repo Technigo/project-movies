@@ -9,14 +9,11 @@ const Crew = () => {
   const [crewList, setCrewList] = useState([]);
 
   useEffect(() => {
-    console.log("hellooo")
     fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=fd00bf32c04d62eccaf294e2d6aa9fa6`)
-
-    .then((res) => res.json())
-    .then((json) => {
-      console.log(json, "crewList")
-      setCrewList(json.crew)
-    })
+      .then((res) => res.json())
+      .then((json) => {
+        setCrewList(json.crew)
+      });
   }, [movieId]);
 
   return ( 
@@ -38,6 +35,6 @@ const Crew = () => {
       ))}
     </div>
    );
-}
+};
  
 export default Crew;

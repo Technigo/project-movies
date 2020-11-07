@@ -14,9 +14,10 @@
 }
 
 .back-link-svg:hover {
-  transition: margin-right .2s ease-in-out;
   margin-right: 10px;
+  transition: margin-right .2s ease-in-out;
 }
+
 .movie-backdrop {
   background-size: cover;
   height: 100vh;
@@ -30,8 +31,13 @@
   display: flex;
   justify-content: flex-start;
   left: 40px;
+  max-width: 1200px;
   position: absolute;
+  width: 90%;
 }
+
+
+
 .movie-title {
   font-size: 30px;
   margin-bottom: 10px;
@@ -39,15 +45,17 @@
 }
 
 .movie-rating {
+  align-items: center;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 .rating-star {
+  height: 19px;
   margin-right: 8px;
   margin-left: 20px;
-  height: 19px;
 }
 
 .move-rate-number {
@@ -55,11 +63,10 @@
   font-weight: 500;
 }
 
-
 .movie-description-first-row {
-  align-items: flex-end;
+  align-items: flex-start;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
 }
 
 .movie-tagline {
@@ -69,23 +76,26 @@
 }
 
 .movie-poster-container {
-  display: flex;
+  opacity: 1;
 }
 
 .movie-poster-container:hover {
+  opacity: 0.7;
   transform: scale(1.05);
   transition: ease 1s;
 }
 
 .movie-poster {
   border: 5px solid #ffffff;
+  height: 100%;
+  object-fit: cover;
+  width: 342px;
 }
 
 .movie-description {
   color: #ffffff;
   padding-left: 30px;
 }
-
 
 .movie-genres {
   display: flex;
@@ -129,4 +139,76 @@
 .movie-homepage-link:active {
   color: #0000ff;
 } 
+
+@media screen and (max-width: 760px) {
+  .movie-summary {
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20px;
+    left: 0;
+  }
+
+  .movie-poster {
+    width: 250px;
+  }
+
+  .movie-title {
+    color: #ffff00;
+    font-size: 22px;
+  }
+
+  .movie-description {
+    padding-left: 0;
+  }
+
+  .movie-genres {
+    align-items: flex-start;
+    font-size: 17px;
+  }
+
+  .genres-dot {
+    font-size: 17px;
+  }
+
+  .rating-star {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .movie-summary {
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 5px;
+    left: 0;
+  }
+
+  .movie-poster {
+    width: 195px;
+  }
+
+  .movie-title {
+    color: #ffff00;
+    font-size: 20px;
+  }
+
+  .movie-description {
+    font-size: 15px;
+    padding-left: 0;
+  }
+
+  .movie-genres {
+    align-items: flex-start;
+    font-size: 15px;
+  }
+
+  .genres-dot {
+    font-size: 15px;
+  }
+
+  .rating-star {
+    margin-left: 0;
+  }
+}
 
