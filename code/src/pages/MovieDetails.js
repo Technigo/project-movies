@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-//import { MoviePage } from "react";
+import { BackButton } from "../components/BackButton";
 
 export const MovieDetails = ({
   backdrop_path,
@@ -10,6 +10,8 @@ export const MovieDetails = ({
   vote_average,
   overview,
   genres,
+  runtime,
+  imdb_id,
 }) => {
   const history = useHistory();
 
@@ -20,17 +22,7 @@ export const MovieDetails = ({
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2) 70%, rgb(0, 0, 0) 100%), url("https://image.tmdb.org/t/p/w1280/${backdrop_path}")`,
       }}
     >
-      <button
-        onClick={() => {
-          history.goBack();
-        }}
-        className="back-button"
-        type="button"
-      >
-        <div className="left-arrow"></div>
-        <p className="button-text">Back</p>
-      </button>
-
+      <BackButton className="movies-back-button" history={history} />
       <div className="movie-details-wrapper">
         <img
           className="movie-poster-image"
@@ -42,7 +34,20 @@ export const MovieDetails = ({
             {title}
             <span>Rating: {vote_average}/10</span>
           </h1>
-          <p>{overview}</p>
+          <p className="movie-length">Length: {runtime} minutes</p>
+          <a href={`https://www.imdb.com/title/${imdb_id}/`} target="blank">
+            <img
+              className="imdb-logo"
+              src="../images/imdb-image.png"
+              alt="imdb logo"
+            />
+          </a>
+          <p className="movie-overview">{overview}</p>
+          <ul className="genres">
+            {genres.map(item => (
+              <li key={item.id}>{item.name}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </article>

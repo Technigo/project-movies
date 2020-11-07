@@ -16,7 +16,7 @@ code {
   background-color: #000;
   color: #fff;
   margin: 0;
-  padding: 0 15px;
+  padding: 15px;
   height: 10vh;
   display: flex;
   justify-content: space-between;
@@ -53,7 +53,7 @@ code {
 }
 
 .movie-thumb-info {
-  background-color: rgba(17, 69, 226, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   position: absolute;
   top: 0;
@@ -73,33 +73,45 @@ code {
 
 /* MOVIE DETAILS PAGE */
 
-.back-button {
+.movies-back-button {
   width: 100px;
-  background-color: #fff;
-  color: #000;
-  border: none;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 2px solid black;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 600;
   position: relative;
   cursor: pointer;
-  margin-left: 60px;
+  margin: 0 0 5px 0;
   border-radius: 10px;
   padding: 6px;
+}
+
+.movies-back-button:hover .left-arrow {
+  animation-name: arrow-slide;
+  animation-duration: 250ms;
+}
+.movies-back-button:hover {
+  border-color: #fff;
 }
 
 .button-text {
   position: absolute;
   right: 10px;
-  top: -2px;
+  top: -4px;
 }
 
 .left-arrow {
-  border-color: transparent rgb(7, 7, 7);
+  border-color: transparent rgb(255, 255, 255);
   border-style: solid;
   border-width: 20px 20px 20px 0px;
   height: 0px;
   width: 0px;
+  position: absolute;
+  left: 12px;
+  top: 4px;
 }
 
 .movie-details-background {
@@ -141,11 +153,85 @@ code {
   margin: 4px 0;
 }
 
+.movie-details-text a {
+  width: 10%;
+}
+
 .movie-details-text span {
   color: rgb(253, 138, 6);
   margin-left: 10px;
   font-size: 16px;
 }
+
+.movie-length {
+  margin: 0;
+  font-size: 15px;
+}
+
+.imdb-logo {
+  width: 100%;
+}
+
+.movie-overview {
+  margin: 0;
+}
+
+.genres {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.genres li {
+  display: inline;
+  margin: 8px 8px 0 0;
+  background-color: rgba(17, 69, 226, 0.7);
+  padding: 0 5px;
+  font-size: 14px;
+}
+
+/* ERROR PAGE */
+
+.error-message {
+  height: 100vh;
+  background-image: url("./cinema-image.jpg");
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.movie-error-message {
+  height: 100vh;
+  background-image: url("../src/cinema-image.jpg");
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+}
+
+/* ANIMATION */
+
+@keyframes arrow-slide {
+  0% {
+    transform: translateX(-6px);
+  }
+  100% {
+    transform: translateX(-12px);
+  }
+}
+
+/* MEDIA QUERIES */
 
 @media (min-width: 768px) {
   .movie-list {
@@ -165,7 +251,11 @@ code {
     align-items: flex-end;
   }
 
-  .movie-poster-image {
+  .movies-back-button {
+    margin: 2px 0 0 30px;
+  }
+
+  .movie .movie-poster-image {
     width: inherit;
   }
 
@@ -174,7 +264,6 @@ code {
   }
 
   .movie-details-text {
-    max-width: 400px;
     margin: 0 0 0 20px;
   }
 }
@@ -186,5 +275,13 @@ code {
 
   .movie-details-wrapper {
     padding: 50px;
+  }
+
+  .movie-details-text {
+    max-width: 450px;
+  }
+
+  .movies-back-button {
+    margin: 20px 0 0 50px;
   }
 }
