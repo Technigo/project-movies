@@ -21,11 +21,11 @@ export const App = () => {
             <MovieList />
           </Route>
           {/* top rated */}
-          <Route path="/top" exact>
+          <Route path="/top">
             <MoviesTop />
           </Route>
           {/* coming soon */}
-          <Route path="/soon" exact>
+          <Route path="/soon">
             <MoviesSoon />
           </Route>
 
