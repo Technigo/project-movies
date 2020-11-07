@@ -5,8 +5,6 @@ import { MovieList } from "./MovieList";
 import { MovieDetail } from "./MovieDetail";
 
 export const App = () => {
-  
-
   return (
     <BrowserRouter>
       <Switch>

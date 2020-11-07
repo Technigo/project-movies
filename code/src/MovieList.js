@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -14,19 +13,21 @@ export const MovieList = () => {
       .then((data) => setMovies(data.results));
   }, []);
 
-  return(
-  <section className="movie-list">
-    {movies.map((movie) => (<Link className="list-link" to={`/movies/${movie.id}`}>
-      
-          
-        <img className="list-image "src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} />
-        <div className="list-text">{movie.title}</div>
-        
-      </Link>
-    ))}
-  </section>
-  )}
-
-  //<div className="movie-wrapper" key={movie.id}></div>
-  //</div>
-
+  return (
+    <section className="movie-list">
+      {movies.map((movie) => (
+        <Link key={movie.id} className="list-link" to={`/movies/${movie.id}`}>
+          <img
+            className="list-image "
+            src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+            alt={movie.title}
+          />
+          <div className="list-text">
+            <h1>{movie.title}</h1>
+            <p>Released: {movie.release_date}</p>
+          </div>
+        </Link>
+      ))}
+    </section>
+  );
+};
