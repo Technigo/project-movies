@@ -11,6 +11,7 @@ h1 {
 
 h2 {
 	margin-bottom: 10px;
+	font-size: 22px;
 }
 
 h3,
@@ -185,7 +186,7 @@ nav {
 	flex-wrap: wrap;
 }
 
-.details__tag-list-grey {
+.details__tag-list-color {
 	list-style: none;
 	padding: 3px;
 	margin: 5px 5px 10px 0;

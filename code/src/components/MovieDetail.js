@@ -50,7 +50,7 @@ const MovieDetail = ({
 							<h4 tabIndex="0">Genres:</h4>
 							<div className="details__tag-lists">
 								{genres.map(genre => (
-									<ul className="details__tag-list-grey" key={genre.name}>
+									<ul className="details__tag-list-color" key={genre.name}>
 										<li tabIndex="0">{genre.name}</li>
 									</ul>
 								))}
