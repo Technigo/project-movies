@@ -195,6 +195,12 @@ body {
     margin-bottom: 0px;
     text-decoration: none;
     color: $cream;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+      transform: scale(1.01);
+    }
   }
 
   &__star {
@@ -221,6 +227,11 @@ body {
     color: #c0914b;
     font-size: 35px;
     background: transparent;
+    transition: 0.2s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   &__subheader {
@@ -265,20 +276,26 @@ body {
 
 .button {
   font-family: 'Poiret One';
-  text-transform: uppercase;
-  letter-spacing: 8px;
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 4px;
   position: relative;
+  // text-transform: uppercase;
+  // letter-spacing: 8px;
+  // font-size: 20px;
   padding: 8px;
   border: none;
   box-shadow: inset 0 0 0 1px $cream;
   background: transparent;
   cursor: pointer;
 
-  &__home {
-    font-size: 30px;
-    font-weight: 600;
-    text-decoration: none;
+  &-back {
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-size: 20px;
+    box-shadow: inset 0 0 0 1px $turquoise;
+    background: $turquoise;
   }
 
   &__label {

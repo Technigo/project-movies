@@ -5,10 +5,10 @@ import ButtonBack from './ButtonBack';
 const CompanyHeader = ({ homepage, logo_path, name }) => {
   return (
     <header className="list-header">
-      <ButtonBack className="button-container" />
-      <Link className="list-header__logo" to="/">
+      <ButtonBack className="button" />
+      {/* <Link className="list-header__logo" to="/">
         <h1>CinemaTech</h1>
-      </Link>
+      </Link> */}
       {homepage ? (
         <a
           className="list-header__logo"

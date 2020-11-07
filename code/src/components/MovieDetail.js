@@ -21,7 +21,7 @@ const MovieDetail = ({
         backgroundImage: `linear-gradient(rgba(21, 23, 61, 0.2) 0, rgb(21, 23, 61) 70%), url('https://image.tmdb.org/t/p/original${backdrop_path}')`,
       }}
     >
-      <ButtonBack className={'button'} />
+      <ButtonBack className={'button button-back'} />
       <section className="detail__info-container">
         <img
           className="detail__image"
