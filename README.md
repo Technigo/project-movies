@@ -1,13 +1,15 @@
-# Project Movies
+# Project Movies 🍿
 
-Replace this readme with your own information about your project.
+The goal for this week was to create a multipage React application using React router and themoviedb.org's API to fetch a list of popular movies, display them on a page, and then link to a detail page for each movie when you click on them.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## Solving the assignment / What I've learned 🦉
 
-## The problem
+In this project I've learned about React router and how to create multipage applications in React. I've also gained a deeper understanding of the useState and useEffect hooks. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+- I started out with planning and structuring the content of my project into components for the list of movies and the movie details (components MovieList and MovieThumb). 
 
-## View it live
+- 
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+## View it live 👩‍💻
+Link to the deployed project on Netlify: 
+
