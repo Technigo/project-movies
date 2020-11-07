@@ -18,7 +18,7 @@ code {
     monospace;
 }
 
-.tvshow_list__container {
+.tvshow-list--container {
   display: flex;
   flex-wrap: wrap;
 }
@@ -32,7 +32,6 @@ code {
 
 .tvshow__image {
   width: 100%;
-  transition: .5s ease-in-out;
   display: flex;
 }
 
@@ -40,8 +39,7 @@ code {
   display: none;
 }
 
-.tvshow__link:hover 
-.tvshow__overlay {
+.tvshow__link:hover .tvshow__overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -50,9 +48,14 @@ code {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  background: linear-gradient(to bottom, rgba(0,0,0, .3) 0%, rgba(0,0,0, .7) 50%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
   font-size: 16px;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .tvshow__textbox {
@@ -62,4 +65,9 @@ code {
 
 .tvshow__heading {
   padding: 15px 0;
+}
+
+.detail--container {
+  height: 100vh;
+  width: 100vw;
 }

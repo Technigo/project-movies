@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import { TVShowDetails } from './pages/TVShowDetails';
-import { TVShowList } from './pages/TVShowList';
+import { DetailPage } from './pages/DetailPage';
+import { TvShowList } from './pages/TvShowList';
 
 export const App = () => {
   return (
@@ -10,11 +10,11 @@ export const App = () => {
       <BrowserRouter>
         <header>My header</header>
         <Switch>
-          <Route path="/" exact>
-            <TVShowList />
+          <Route exact path="/" >
+            <TvShowList />
           </Route>
-          <Route path="/tv/:id" exact>
-            <TVShowDetails />
+          <Route exact path="/tv/:id" >
+            <DetailPage />
           </Route>
         </Switch>
       </BrowserRouter>

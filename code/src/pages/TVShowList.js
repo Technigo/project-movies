@@ -1,34 +1,33 @@
 import React, { useEffect, useState } from "react";
 
-import { API_URL } from "../urls.js";
 import { API_KEY } from "../API_KEY.js";
-import { TVShowThumb } from "../components/TVShowThumb.js";
+import { API_URL } from "../urls.js";
+import { TvShowThumb } from "../components/TvShowThumb.js";
 
-export const TVShowList = () => {
-  const [TVShowList, setTVShowList] = useState([]);
+export const TvShowList = () => {
+  const [tvShowList, setTvShowList] = useState([]);
 
-  const fetchTVShows = () => {
-    const TV_URL = `${API_URL}popular?&api_key=${API_KEY}&page=1`;
-
+  const fetchTvShows = () => {
+  const TV_URL = `${API_URL}popular?&api_key=${API_KEY}&page_1`;
+    
     fetch(TV_URL)
       .then((res) => res.json())
-      .then((TVShowList) => {
-        console.log(TVShowList.results);
-        setTVShowList(TVShowList.results);
+      .then((tvShowList) => {
+        console.log(tvShowList.results);
+        setTvShowList(tvShowList.results);
       })
       .catch((error) => console.error(error));
   };
 
   useEffect(() => {
-    fetchTVShows();
+    fetchTvShows();
   }, []);
 
   return (
-    <main className="tvshow_list__container">
-      {TVShowList.map(tvshow => (
-        <TVShowThumb key={tvshow.id} {...tvshow} />
+    <section className="tvshow-list--container">
+      {tvShowList.map(tvshow => (
+        <TvShowThumb key={tvshow.id} {...tvshow} />
       ))}
-      )
-    </main>
+    </section>
   );
 };
