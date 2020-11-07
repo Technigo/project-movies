@@ -15,65 +15,18 @@ body {
 
 }
 
+h2 {
+  color: #fff;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 main {
-  max-width: 1200px;
+  /* max-width: 1800px; */
   margin: 0 auto;
   width: 100%;
   padding: 0 50px;
-}
-
-/* grandparent? */
-.movie-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-
-
-/* container parent */
-.movie-thumb{
-    border: blue solid 4px;
-    position: relative;
-    color: #fff;
-    text-decoration: none;
-    display: flex;
-}
-
-/*child syskon1   h1 */
-.movie-name {
-  position: absolute;
-  display: flex;
-  font-size: 30px;
-  justify-content: center;
-  align-items: left;
-
-  
-}
-
-/* child syskon2 o förälder*/
-.movie-thumb-image-wrapper {
-  border: saddlebrown 5px solid;
-
-}
- /* child och syskonA bilden */
-.movie-thumb-image {
-  border: yellow 3px solid;
-
- 
-}
-
- /* child och syskonB star */
-.movie-thumb-image-voted{
-  border:red solid 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-right: 4px;
-  padding-top: 4px;
-
 }

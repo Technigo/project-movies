@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { MovieThumb } from "components/MovieThumb";
 
+import "./movieThumb.css";
+
 export const MovieList = () => {
   const MOVIES_URL =
     "https://api.themoviedb.org/3/movie/popular?api_key=9dbb13757543047a90651a50d540380e&language=en-US&page=1";
@@ -16,10 +18,11 @@ export const MovieList = () => {
     <section className="movie-list">
       {movies.map((movie) => (
       <MovieThumb  
-            key={movie.id}  
+            key={movie.id} 
+            id={movie.id} 
              name={movie.title}
              background_image={movie.poster_path}
-             voted={movie.vote_average}/>
+             releseDate={`Released ${movie.release_date}`} />
       ))}
     </section>
   );

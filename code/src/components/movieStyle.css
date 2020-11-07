@@ -1,0 +1,190 @@
+.all-movies {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 300px;
+    line-height: 25px;
+    color: white;
+  }
+
+  .movie-info-box {
+      /* border: greenyellow solid 3px; */
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.623);
+      font-family: "Lucida Console", Courier, monospace;
+    
+  }
+  
+  .back-btn a {
+    font-size: 28px;
+    color: white;
+    text-decoration: none;
+    padding: 30px;
+    font-family: "Lucida Console", Courier, monospace;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .back-btn span {
+    text-decoration: none;
+    margin-left: 20px;
+    border: greenyellow solid;
+ 
+  }
+
+  .path {
+      margin-top: 40px;
+  }
+  
+  .back-btn svg {
+      margin-top: 40px;
+    transition: .4s ease-in-out;
+  }
+  
+  .back-btn svg:hover {
+    background-color: greenyellow;
+    border-radius: 80%;
+    -webkit-animation: jello 0.9s infinite both;
+    animation: jello 0.9s infinite both;
+  }
+  
+  @-webkit-keyframes jello {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+  }
+  @keyframes jello {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  .single-movie{
+    margin-top: 50px;
+    height: 100%;
+    margin-left: 0;
+    bottom: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  
+  .movie-title {
+    color: white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.521);
+    padding: 10px;
+    font-size: 32px;
+    line-height: 30px;
+    margin: 10px;
+   
+  }
+  
+  .single-movie img {
+    filter: brightness(80%);
+    margin: 20px;
+    border: solid rgba(245, 222, 179, 0.377) 3px;
+  }
+  
+  .overview {
+    padding: 10px;
+    width: 30%;
+    font-family: "Lucida Console", Courier, monospace;
+    
+  }
+  
+  .background-linear-gradient {
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.274), black);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .voted {
+    font-size: 20px;
+    color: rgb(194, 189, 189);
+    font-weight: bold;
+  }
+  
+  .voted-stars {
+    font-size: 20px;
+    margin-right: 5px;
+  }
+  
+  @media (max-width: 1024px) {
+    .single-movie{
+      width: 80%;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      margin-top: 30px;
+      margin-left: 10px;
+    }
+  
+    .overview {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 680px) {
+    .overview {
+      width: 90%;
+    }
+  }

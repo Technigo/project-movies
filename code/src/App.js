@@ -1,10 +1,10 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect} from "react-router-dom";
 
-import { MovieDetails } from "pages/MovieDetails";
+// import { MovieDetails } from "pages/MovieDetails";
 import { MovieList } from "components/MovieList";
-// import { NotFound } from "components/NotFound";
-
+import { NotFound } from "components/NotFound";
+import { MovieDetails } from  "components/MovieDetails";
 
 export const App = () => {
   return (
@@ -15,9 +15,13 @@ export const App = () => {
         <Route path="/" exact>
           <MovieList />
         </Route>
-        <Route path="/movie/:key" exact>
+        <Route path="/movie/:movieId" exact>
           <MovieDetails />
         </Route>
+        <Route path="/404">
+        <NotFound />
+       </Route>
+       <Redirect to="/404" />
       </Switch>
       </main>
     </BrowserRouter>
