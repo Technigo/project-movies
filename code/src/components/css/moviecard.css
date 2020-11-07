@@ -42,6 +42,14 @@
   margin: 18px 0;
 }
 
+/* Tablet */
+@media (min-width: 651px) and (max-width: 1024px) {
+  .movie-title {
+    font-size: 20px;
+    margin: 0;
+  }
+}
+
 /* Mobile */
 @media (max-width: 650px) {
   .movie-card {

@@ -13,7 +13,7 @@ export const MovieStartPage = () => {
 
     fetch(URL_MOVIES)
       .then((response) => response.json())
-      .then((json) => setMovie(json.results));     
+      .then((json) => setMovie(json.results));
   }, []);
 
   return (

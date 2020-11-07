@@ -31,7 +31,8 @@ export const MovieBio = () => {
         alt={bio.title}
       ></img>
       <Link className="back-button" onClick={() => history.goBack()}>
-        <BackButton />All movies
+        <BackButton />
+        All movies
       </Link>
       <div className="content-container">
         <img
