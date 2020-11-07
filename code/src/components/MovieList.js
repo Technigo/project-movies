@@ -15,9 +15,7 @@ const MovieList = () => {
     return (
         <section className="movie-list">
             {movies.map((movie) => (
-                <div>
                     <Movie key={movie.id} {...movie}/>
-                </div>
             ))}
         </section>
     )

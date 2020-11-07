@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Movie = ({ original_title, id, poster_path }) => {
+const Movie = ({ title, id, poster_path, release_date }) => {
 
     return (
         <Link to={`/movie/${id}`}>
-            <div className="movie-card">
                 <img
-                    src={`http://image.tmdb.org/t/p/w300${poster_path}`}
-                    alt={`poster of ${original_title}`}
+                    src={`http://image.tmdb.org/t/p/w342${poster_path}`}
+                    alt={`poster of ${title}`}
                 />
-                <h2>{original_title}</h2>
-                
-            </div>
+                <div className="movie-card-details">
+                    <h1>{title}</h1>
+                    <p>Released: {release_date}</p>
+                </div>
         </Link>
     )
 }

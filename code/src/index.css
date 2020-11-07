@@ -7,12 +7,124 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 50px;
+}
+
+/*MovieList styling*/
+
 .movie-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap:wrap
 }
+
+.movie-list a {
+  width: 25%;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.movie-list a img {
+  width: 100%;
+}
+
+.movie-list .movie-card-details {
+  position: absolute;
+  padding: 20px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.75);
+  padding: 20px;
+  display: none;
+}
+
+.movie-list .movie-card-details h1 {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.movie-list a:hover .movie-card-details {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/*MovieDetail styling*/
+
+.movie-details {
+  position: relative;
+}
+
+.movie-details .back-link {
+  position: absolute;
+  display: inline-flex;
+  color: white;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
+  left: 50px;
+  top: 50px;
+}
+
+.movie-details .back-link svg {
+  width: 30px;
+  transition: margin-right 0.2s ease-in-out;
+}
+
+.movie-details .back-link:hover svg {
+  margin-right: 5px;
+}
+
+.movie-details .movie-details-background {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.movie-details-image {
+  border: 5px solid white;
+}
+
+.movie-details-summary-container {
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+}
+
+.movie-details .movie-details-text-box{
+  margin-left: 20px;
+}
+
+.movie-title {
+  color: white;
+  font-weight: bold;
+}
+
+.movie-rating {
+  color: red;
+  margin-left: 10px;
+}
+
+.movie-overview {
+  color: white;
+  max-width: 400px;
+}
+
