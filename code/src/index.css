@@ -68,6 +68,9 @@ code {
 }
 
 .detail--container {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
 }
