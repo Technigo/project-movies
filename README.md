@@ -1,7 +1,7 @@
 # Project Movies - Overview
 Project done as a part of Technigo bootcamp.
 
-Use [themoviedb.org](http://themoviedb.org/)'s API to fetch a list of movies (more on which movies further down), display them on a page, and then link to a movie detail page when you click on the movie. This time, rather than following designs from a set of images, we'd like you to follow the design which we've created using the same API.
+Use [themoviedb.org](http://themoviedb.org/)'s API to fetch a list of movies, display them on a page, and then link to a movie detail page when you click on the movie. This time, rather than following designs from a set of images, we'd like you to follow the design which we've created using the same API.
 
 
 Learning Objectives:
@@ -13,25 +13,19 @@ Learning Objectives:
 
 
 ## Core Tech
+- React
+- JSX
 - CSS
 - API
-- React
-- React Hooks
-- React router
-- JSX
-
 
 
 ## Requirements Completed
 🔵  Blue Level
-<!-- - Your app should have at least two pages - one showing a list of movies and one showing details -->
-<!-- - You should follow the design from our example (but it's ok to change things - just try to make it look nice) -->
+- Your app should have at least two pages - one showing a list of movies and one showing details
+- You should follow the design from our example (but it's ok to change things - just try to make it look nice)
 
 🔴  Red Level (Intermediary Goals)
-<!-- - Show a 'not found' page if you try to visit a movie detail page with an invalid movie ID (so the user has tried to enter an ID themselves, most likely).
-    - **Hint**
-
-        In this case, when you send a movie detail request with a movie ID which doesn't exist in the API, the API returns with a 404 response. You can use `.catch()` on your promise to catch this exception and toggle some sort of 'error' state which can be used to show an error page. -->
+- Show a 'not found' page if you try to visit a movie detail page with an invalid movie ID (so the user has tried to enter an ID themselves, most likely).
 
 <!-- - **Handle loading states** - The API responds quite quickly, but if you're on a slow network then you'd be faced with a black screen until the response comes back. During this time, you could show a loading message or spinner of some sort on the page.
     - **Hint**
@@ -40,7 +34,7 @@ Learning Objectives:
 
         You could also investigate how to handle the loading of images - or show plain text by default and then use CSS to place the image over the text (using absolute positioning). This way, if the images take a long time to load, the user still sees something relevant. -->
 
-⚫  Black Level (Advanced Goals)
+<!-- ⚫  Black Level (Advanced Goals) -->
 <!-- - On the homepage where you list popular movies, you could add a dropdown to change the list. For example, you could toggle between popular, upcoming, and new releases.
     - **Hint**
 

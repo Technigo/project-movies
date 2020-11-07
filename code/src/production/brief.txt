@@ -1,46 +1,3 @@
-This time, rather than following designs from a set of images, we'd like you to follow the design which we've created in our example app using the same API:
-### 🎬🎬🎬 [https://technigo-movies-project.netlify.com/](https://technigo-movies-project.netlify.com/) 🎬🎬🎬
-
-In this app, we've used the API to fetch popular movies in the US. 
-You are free to choose whatever endpoint you'd like to build up your list. You could do the same as us, or you could, for example, show movies which are currently in the cinema or find movies in a particular genre. It's up to you!
-
----
-## How to get started 💪🏼
-6. Run the react development server by running `npm start`
-
-
-
-## Using the API ⚡️
-5. Submit the form and you should be approved automatically. Copy the v3 api key from the following page.
-
-With your freshly minted API key, you're now ready to start making API requests. The API is well documented at [developers.themoviedb.org](https://developers.themoviedb.org/3), and if you click through onto an endpoint, there's a 'try it out' tab where you can paste in your API key and run a request to see what you get in response. These are the endpoints we used in our example application:
-
-
-
-### *Fetching popular movies for the list page*
-
-[https://api.themoviedb.org/3/movie/popular?api_key={api_key}&language=en-US&page=1](https://api.themoviedb.org/3/movie/popular?api_key=%7Bapi_key%7D&language=en-US&page=1)
-
-*Don't forget to replace {api_key} with your API key if you copy and paste this*
-
-
-
-### *Fetching a movie's details*
-
-[https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US](https://api.themoviedb.org/3/movie/%7Bmovie_id%7D?api_key=%7Bapi_key%7D&language=en-US)
-
-*Don't forget to replace {api_key} with your API key and {movie_id} with the id you get from the url via react-router if you copy and paste this*
-
-
-
-## Rendering images from the API 🖼
-
-Each movie comes with a 'poster', which looks like a cover you'd find in a DVD, and a 'backdrop' which is more like a screen capture from a scene in the film. In the API response you get for a movie or list of movies, each one has a property for these images, but it looks like this 
-`"backdrop_path": "/5myQbDzw3l8K9yofUXRJ4UTVgam.jpg",`
-That path to the image is incomplete - it needs a full URL.
-
-To get the full URL, we need to decide what size of the image we'd like, and the API has a bunch of options for that. You can find the full list of sizes by loading the API endpoint [https://api.themoviedb.org/3/configuration?api_key={api_key}](https://api.themoviedb.org/3/configuration?api_key=%7Bapi_key%7D) (don't forget to put your API key in place of {api_key}). That response looks something like this:
-
 ```json
 {
   "images": {
@@ -63,29 +20,7 @@ For example, if we get this in a movie response
 
 and we want the backdrop at 1280px, we could build up a URL like this:
 
-`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`
-
-The resulting URL would be [https://image.tmdb.org/t/p/w1280/5myQbDzw3l8K9yofUXRJ4UTVgam.jpg](https://image.tmdb.org/t/p/w1280/5myQbDzw3l8K9yofUXRJ4UTVgam.jpg)
-
-You do not need to call the configuration endpoint within your app. Just use the sizes which it returns (shown above) to construct a URL with appropriate image sizes.
-
-
-
-## Hints and tips to complete the project 🤓
-
-As always, start by sketching out your application - not just thinking about design, but how should it be split into components, and how should your routes look?
-
-In the example application we've linked to for you to follow the design from, it's built using two routes which each have one component as a child (it's up to you if you want to use this approach!):
-
-*Route: `/`, component: `PopularList`*
-
-This route is responsible for the home page. It uses `useEffect` to run an API request to themoviedb.org and fetch popular films in the US, puts them into state using `useState`, and then renders them wrapped in a `Link` from `react-router-dom` to link to the detail page.
-
-*Route: `/movies/:id`, component: `Detail`*
-
-This route expects a movie ID in the URL and is responsible for showing more details about a movie after you click on it. It uses `useParams` from `react-router-dom` to get the `id` from the URL and then passes that into an API call (within `useEffect`) to themoviedb.org to fetch details about a single movie, then puts the response into state using `useState` and finally renders it onto the page.
-
-
+`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`
 
 ---
 
@@ -98,17 +33,3 @@ This route expects a movie ID in the URL and is responsible for showing more det
 **🔵  Blue Level (Minimum Requirements)**
 - Your app should have at least two pages - one showing a list of movies and one showing details
 - You should follow the design from our example (but it's ok to change things - just try to make it look nice)
-
-Make sure you've committed and pushed a version of your project before starting with the intermediary and advanced goals.
-
-**🔴  Red Level (Intermediary Goals)**
-- Show a 'not found' page if you try to visit a movie detail page with an invalid movie ID (so the user has tried to enter an ID themselves, most likely).
-    - **Hint**
-- **Handle loading states** - The API responds quite quickly, but if you're on a slow network then you'd be faced with a black screen until the response comes back. During this time, you could show a loading message or spinner of some sort on the page.
-    - **Hint**
-
-**⚫  Black Level (Advanced Goals)**
-- On the homepage where you list popular movies, you could add a dropdown to change the list. For example, you could toggle between popular, upcoming, and new releases.
-    - **Hint**
-- **More pages** - When you load a movie, you get a lot of information in the API response, such as a collection it belongs to, genres it has, or the companies involved with producing the film. Each of these has an API endpoint that can be used to fetch more information about that entity. You could use this data to make links from your movie page to another page. Take a look through the documentation and be creative! 🎨
-    - **Example**

@@ -1,13 +1,102 @@
 body {
-  margin: 0;
+  margin: 0 16px 16px 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  background: #000;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  margin-top: 16px;
+  height: 45px;
+  border-bottom: 0.5px solid #333;
+}
+ a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #990000;
+ }
+
+
+/* Movie List */
+.movie-list {
+  width:100%;
+  background: #4d4d4d;
+  display: flex;
+  flex-flow: row wrap;
+  /* align-content: center;
+  align-items: center; */
+  justify-content: center;
+}
+
+/* Movie Thumb */
+.thumb-container {
+  /* width: 25%; */
+  left: 0;
+  position: relative;
+  background: green;
+  overflow: hidden;
+}
+
+.cover {
+  display: block;
+  object-fit: cover;
+  background: hotpink;
+}
+
+.hover-layer {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* font-size: 20px; */
+  color: #fff;
+  padding: 6px;
+  object-fit: cover;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-content: flex-end;
+  position: absolute;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.thumb-container:hover .hover-layer {
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 100%;
+  display: block;
+  text-decoration: none;
+}
+
+
+/* Footer */
+footer {
+  margin: 60px 0 6px 0;
+  font-size: 14px;
+  display: flex;
+  /* justify-content: flex-end; */
+  align-items: flex-end;
+}
+
+footer a {
+  text-decoration: none;
+  cursor: pointer;
+  color:#ccc;
+}
+
+footer a:hover {
+  color: #990000;
 }
