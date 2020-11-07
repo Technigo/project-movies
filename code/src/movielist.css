@@ -1,0 +1,60 @@
+.movie-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.movie-container {
+  width: 25%;
+  position: relative;
+}
+
+.list-img {
+  width: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.movie-container:hover .list-img {
+  opacity: 0.3;
+}
+
+.movie-container:hover .list-img {
+  opacity: 0.2;
+}
+
+.movie-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  visibility: hidden;
+  opacity: 0;
+  padding-left: 10px;
+}
+
+.movie-container:hover .movie-info {
+  visibility: visible;
+  opacity: 1;
+}
+
+.movie-name {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+.movie-img {
+  border: 2px solid #ffffff;
+}
+
+.release-text {
+  font-size: 12px;
+  font-weight: 500;
+}
