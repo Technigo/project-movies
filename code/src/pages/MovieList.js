@@ -32,17 +32,19 @@ export const MovieList = () => {
             dropDownChosenMovieList={dropDownChosenMovieList}
             chosenList={chosenList}
           />
-          <div>
+          <div className="movie-list">
             {movies.map((movie) => (
               <div key={movie.id}>
-                <Link to={`/movies/${movie.id}`}>
+                <Link className="movie-link" to={`/movies/${movie.id}`}>
                   <img
                     src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-                    alt={movie.original_title}
+                    alt={movie.title}
                   />
+                  <div className="movie-details">
+                    <h2>{movie.title}</h2>
+                    <p>Released:{movie.release_date}</p>
+                  </div>
                 </Link>
-                <h2>{movie.original_title}</h2>
-                <h3>{movie.release_date}</h3>
               </div>
             ))}
           </div>
