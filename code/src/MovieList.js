@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { apiKey } from './Key';
 import { Link } from 'react-router-dom';
-
 import './movielist.css';
 
 export const MovieList = () => {
