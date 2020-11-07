@@ -31,6 +31,7 @@ export const MovieList = () => {
 
   useEffect(() => {
     getMovieList()
+    // eslint-disable-next-line
   }, [])
 
   return (
