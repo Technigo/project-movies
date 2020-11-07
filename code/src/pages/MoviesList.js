@@ -13,13 +13,12 @@ export const MoviesList = () => {
     fetch(POPLIST_API) 
       .then(res => res.json())
       .then(data => {
-        // console.log(data);
         setMoviesList(data.results) //get list of movies frm api and pute data in movielist state 
       });
   }, [])
 
   return (
-//map over state to render
+//map over state to render chosen elemnts
     <div className="movies_list">
       {moviesList.map(({id, poster_path, title, release_date}) => (
         <div key={id} className="movie_wrapper">

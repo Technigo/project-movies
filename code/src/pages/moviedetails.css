@@ -5,7 +5,27 @@
 .details_page {
     position: relative;
     color: #fff;
+    align-items: center;
+    font-weight: 700;
+    text-decoration: none;
 }
+
+.details_page  .backLink {
+    position: absolute;
+    display: inline-flex;
+    color: #fff;
+    align-items: center;
+    font-weight: 700;
+    text-decoration: none;
+    left: 50px;
+    top: 50px;
+}
+
+.backLink:hover svg {
+    margin-right: 5px;
+    transition: margin-right 0.2s cubic-bezier(0.42, 0, 0.21, 0.99);
+}
+
 
 .details_background {
     min-height: 100vh;
@@ -36,14 +56,7 @@
     text-decoration: none;
 }
 
-.details_page .backLink {
-    color: #fff;
-    align-items: center;
-    font-weight: 700;
-    text-decoration: none;
-    /* left: 50px; */
-    /* top: 50px; */
-}
+
 
 .details_page .details_page_details {
     margin-left: 20px;
@@ -69,6 +82,7 @@ h1 {
     font-weight: 400;
     margin-left:  25px;
 }
+
 
  
 

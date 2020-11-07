@@ -13,20 +13,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-
-
-
-
-.details_page {
-  position: relative;
-
-}
-
-.details_backgrd {
-  min-height: 100vh;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
