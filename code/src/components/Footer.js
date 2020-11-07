@@ -1,11 +1,19 @@
-import React from 'react'
+import React from "react";
+
+import TechnigoLogo from "../img/technigo.svg";
+import './footer.css'
 
 export const Footer = () => {
-  return (
-    <div>
-      <p>© Karan Mann</p>
-      <p>Made as part of the Technigo Bootcamp<img url=''></img></p>
-      
-    </div>
-  )
-}
+    return (  
+    <footer>
+      <p>© 2020 Karan Mann <span role="img" aria-label="emoji">👨‍🍳</span></p>
+      <p>
+          <a href="https://www.linkedin.com/in/karanmann84/"target="_blank" rel="noopener noreferrer">Linkedin</a>
+          |
+          <a href="https://github.com/karanmann" target="_blank" rel="noopener noreferrer" >GitHub</a>
+      </p>
+      <img src= {TechnigoLogo} alt="technigo logo" />
+      <p>Project developed during the Technigo Frontend development bootcamp</p>
+    </footer>
+  );
+};

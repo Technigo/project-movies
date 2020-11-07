@@ -1,0 +1,30 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin-top: 220px;
+  background-color: #ffffff67;
+  width: 100%;
+}
+
+footer p {
+  width: 100%;
+  text-align: center;
+  font-size: 17px;
+  color: rgb(255, 255, 255);
+  margin: 6px;
+}
+
+footer a:link {
+  color: rgb(245, 108, 156);
+}
+
+footer a:visited {
+  color: rgb(130, 149, 228);
+}
+
+footer img {
+  width: 50px;
+}
