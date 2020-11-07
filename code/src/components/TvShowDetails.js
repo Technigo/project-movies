@@ -1,9 +1,7 @@
 import React from 'react';
 import { BACKGROUND_IMAGE_URL, POSTER_IMAGE_URL } from '../urls.js';
 
-
 export const TvShowDetails = ({ name, backdrop_path, poster_path, vote_average, overview }) => {
-    console.log(backdrop_path);
     return (
         <section 
           className="detail--container" 

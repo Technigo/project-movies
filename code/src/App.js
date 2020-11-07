@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { DetailPage } from './pages/DetailPage';
-import { TvShowList } from './pages/TvShowList';
+import { ListPage } from './pages/ListPage';
 
 export const App = () => {
   return (
@@ -11,7 +11,7 @@ export const App = () => {
         <header>My header</header>
         <Switch>
           <Route exact path="/" >
-            <TvShowList />
+            <ListPage />
           </Route>
           <Route exact path="/tv/:id" >
             <DetailPage />

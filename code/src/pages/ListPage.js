@@ -4,7 +4,7 @@ import { API_KEY } from "../API_KEY.js";
 import { API_URL } from "../urls.js";
 import { TvShowThumb } from "../components/TvShowThumb.js";
 
-export const TvShowList = () => {
+export const ListPage = () => {
   const [tvShowList, setTvShowList] = useState([]);
 
   const fetchTvShows = () => {
