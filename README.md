@@ -1,9 +1,8 @@
 # Project Movies
-Week 11 at Technigo Bootcamp
-– Practicing React state skills by fetching and posting data to an API. 
-– Learned about components life cycles
-– Learned how to use the useEffect hook in React to perform actions when components mount, unmount, or when state changes.
-– Learned how to call APIs from React and put the data into state.
+Week 12 at Technigo Bootcamp
+– By using themoviedb.org's API I fetched a list of movies, displayed them on a page and then linked to a movie detail page when you click on the movie.
+– I learned how to build multi-page applications using React Router.
+– I learned how to pass information such as product ids, or blog post titles in the url and pick this up in React router to load dynamic content.
 
 ## The problem
 
