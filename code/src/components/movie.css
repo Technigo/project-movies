@@ -1,14 +1,14 @@
-.movie__wrapper a {
+.moviewrapper a {
 	max-width: 25%;
 	height: auto;
 }
 
-.movie__wrapper {
+.moviewrapper {
 	position: relative;
 	width: 100%;
 }
 
-.movie__description {
+.moviewrapper__description {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -23,10 +23,10 @@
 	z-index: 1;
 }
 
-.movie__description h1 {
+.moviewrapper__description h1 {
 	margin-bottom: 10px;
 }
 
-.movie__description p {
+.moviewrapper__description p {
 	margin-top: 5px;
 }

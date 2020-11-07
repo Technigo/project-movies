@@ -10,13 +10,13 @@ export const Movie = ({ id, title, release_date, poster_path }) => {
 			to={`/movies/${id}`}
 			onMouseOver={() => setShowTitle(true)}
 			onMouseLeave={() => setShowTitle(false)}>
-			<article className="movie__wrapper">
+			<article className="moviewrapper">
 				<img
 					src={`https://image.tmdb.org/t/p/w342${poster_path}`}
 					alt="Movie poster"
 				/>
 				{showTitle && (
-					<div className="movie__description">
+					<div className="moviewrapper__description">
 						<h1>{title}</h1>
 						<p>Released {release_date}</p>
 					</div>

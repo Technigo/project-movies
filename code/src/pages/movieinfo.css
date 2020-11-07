@@ -3,27 +3,6 @@
 	padding: 20px;
 }
 
-.movieinfo button {
-	margin: 20px;
-	background: transparent;
-	color: white;
-	font-size: 20px;
-	font-weight: bold;
-	border-style: none;
-	display: flex;
-	align-items: center;
-}
-
-.movieinfo button svg {
-	height: 30px;
-	padding: 5px;
-}
-
-.movieinfo button h2 {
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
 .movieinfo__container {
 	display: flex;
 }

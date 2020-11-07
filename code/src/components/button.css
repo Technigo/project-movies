@@ -1,0 +1,20 @@
+button {
+	margin: 20px;
+	background: transparent;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	border-style: none;
+	display: flex;
+	align-items: center;
+}
+
+button svg {
+	height: 30px;
+	padding: 5px;
+}
+
+button h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+}

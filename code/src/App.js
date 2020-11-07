@@ -4,10 +4,12 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { MovieList } from './pages/MovieList';
 import { MovieInfo } from './pages/MovieInfo';
 import { PageNotFound } from './pages/PageNotFound';
+import { Header } from './components/Header';
 
 export const App = () => {
 	return (
 		<BrowserRouter>
+			<Header />
 			<Switch>
 				<Route path="/" exact>
 					<MovieList />
