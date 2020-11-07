@@ -17,11 +17,9 @@ export const MoviePage = () => {
       .then(response => response.json())
       .then(json => {
         setMovieDetails(json);
-        console.log(json);
       });
   }, [id]);
 
-  console.log("movie details", movieDetails);
   if (movieDetails.id) {
     return <MovieDetails {...movieDetails} />;
   }
