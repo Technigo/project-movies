@@ -35,7 +35,7 @@ export const FilmDetail = () => {
 
     /*
     1. So what is useEffect doing? 
-    In the above useEffect the fetchFilm function, which houses the fetch, is called passing the filmid into it which I believe relates to the filmid field in useParams. The component is mounted and the FilmDetails state is set. Once this is done the useEffect is executed. UseEffect will only be executed after the initial mount and everytime the FilmDetails state is updated in this specific scenario.   
+    In the above useEffect the fetchFilm function, which houses the fetch, is called passing the filmid into it which I believe relates to the filmid field in useParams. The component is mounted and the FilmDetails state is set. Once this is done the useEffect is executed. UseEffect will only be executed after the initial mount and everytime the FilmDetails state is updated in this specific scenario.  
     
     2. Why do we have the [] at the end of the useEffect?
     UseEffects needs either nothing, and empty array or array brackets with specific props that are used to pass data into the function that's doing the fetch. Whatever is specified at the end of the useEffect helps the useEffect to be executed whenever the component is mounted or updated. 
