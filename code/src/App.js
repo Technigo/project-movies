@@ -36,10 +36,9 @@ export const App = () => {
         <Route path="/movies/:id">
           <MovieDetails />
         </Route>
-        <Route path="/404">
-          {/* <NotFound /> */}
-        </Route>
-        <Redirect to="/404" />
+        <Redirect
+          to="/404"
+        />
       </Switch>
     </BrowserRouter>
   );

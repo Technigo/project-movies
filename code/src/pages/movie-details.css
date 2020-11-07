@@ -1,22 +1,25 @@
 .movie-details-main-container {
   position: relative;
   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   justify-content: flex-end;
-  /* border: 1px solid blueviolet; */
+  background-size: cover;
 }
 
 .movie-details-background {
-  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
 }
 
 .poster-and-movie-details {
-  position: absolute;
   display: flex;
-  bottom: 0;
-  left: 0;
+  align-items: flex-end;
   color: #fff;
-  padding: 50px;
-  /* border: 1px solid yellow; */
+  padding: 0 0 30px 50px;
 }
 
 .poster-and-movie-details>img {
@@ -32,7 +35,6 @@
   margin-left: 20px;
   background: rgba(0, 0, 0, .55);
   padding: 5px;
-  /* border: 1px solid green; */
 }
 
 h1 {
@@ -44,7 +46,9 @@ span {
   color: red;
   font-size: 17px;
   margin-left: 10px;
-  font-weight: 400;
+  font-weight: 500;
+  background: rgb(255, 255, 255, 0.8);
+  padding: 0 2px;
 }
 
 h2 {

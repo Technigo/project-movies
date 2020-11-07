@@ -26,22 +26,29 @@ const MovieDetails = () => {
   return (
     <section className="movie-details-main-container">
       <Button />
-      <img className="movie-details-background" src={BACKDROP_URL} alt={movie.title} />
-      <div className="poster-and-movie-details">
-        <img src={POSTER_URL} alt={movie.title} />
-        <div className="title-rate-overview">
-          <h1>
-            {movie.title} <span>{movie.vote_average}/10</span>
-          </h1>
-          <h2>
-            ({movie.original_title})
-          </h2>
-          <p>
-            {movie.overview}
-          </p>
+      <div
+        className="movie-details-background"
+        style={{
+          backgroundImage: `url(${BACKDROP_URL})`
+        }}
+      >
+        <div className="poster-and-movie-details">
+          <img src={POSTER_URL} alt={movie.title} />
+          <div className="title-rate-overview">
+            <h1>
+              {movie.title} <span>{movie.vote_average}/10</span>
+            </h1>
+            <h2>
+              ({movie.original_title})
+            </h2>
+            <p>
+              {movie.overview}
+            </p>
+          </div>
         </div>
       </div>
-    </section>
+
+    </section >
   );
 };
 
