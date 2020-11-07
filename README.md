@@ -34,16 +34,14 @@ Learning Objectives:
 
         You could also investigate how to handle the loading of images - or show plain text by default and then use CSS to place the image over the text (using absolute positioning). This way, if the images take a long time to load, the user still sees something relevant. -->
 
-<!-- ⚫  Black Level (Advanced Goals) -->
+⚫  Black Level (Advanced Goals)
 <!-- - On the homepage where you list popular movies, you could add a dropdown to change the list. For example, you could toggle between popular, upcoming, and new releases.
     - **Hint**
 
         To implement this, you'd need a new item in your state and connect it to a `<select>`. When the value changes (`useEffect`), you can send a new API request to the appropriate API endpoint and replace your list of movies with the new data. -->
 
-<!-- - **More pages** - When you load a movie, you get a lot of information in the API response, such as a collection it belongs to, genres it has, or the companies involved with producing the film. Each of these has an API endpoint that can be used to fetch more information about that entity. You could use this data to make links from your movie page to another page. Take a look through the documentation and be creative! 🎨
-    - **Example**
+- More pages
 
-        The new Spider-Man film has a list of production companies. You could iterate over this list and add a link to each production company to your page. Then, when the user clicks the link, they go to another page which loads information about that production company and perhaps a list of films which they've produced. -->
 
 ## View it live
 <!-- link goes here -->

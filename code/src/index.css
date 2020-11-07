@@ -16,78 +16,131 @@ code {
     monospace;
 }
 
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#not-found-header {
+  font-size: 88px;
+  font-weight: 900;
+}
+
+#not-found-smaller {
+  font-size: 30px;
+  padding-bottom: 60px;
+}
+
+#not-found a {
+  font-size: 30px;
+  line-height: 30px;
+  color: #990000;
+  text-decoration: underline;
+}
+
+
+/* Nav bar */
+nav {
+  height: 57px;
+  margin-bottom: 29px;
+  border-bottom: 0.5px solid #333;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
 h1 {
   margin-top: 16px;
   height: 45px;
-  border-bottom: 0.5px solid #333;
+  
 }
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  margin-left: 10px;
+}
+
  a {
+  font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  color: #990000;
+  color: #fff;
  }
 
+a.active {
+  text-transform: uppercase;
+  color: #990000;
+}
 
 /* Movie List */
 .movie-list {
   width:100%;
-  background: #4d4d4d;
   display: flex;
-  flex-flow: row wrap;
-  /* align-content: center;
-  align-items: center; */
-  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.movie-list a {
+  width: 25%;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Movie Thumb */
 .thumb-container {
-  /* width: 25%; */
+  width: 100%;
   left: 0;
   position: relative;
-  background: green;
   overflow: hidden;
 }
 
-.cover {
-  display: block;
-  object-fit: cover;
-  background: hotpink;
+.thumb-container .cover {
+  width: 100%;
 }
 
 .hover-layer {
-  width: 100%;
-  height: 100%;
   top: 0;
-  left: 0;
-  /* font-size: 20px; */
+  height: 100%;
+  width: 100%;
+  padding: 13px 15px;
   color: #fff;
-  padding: 6px;
+  text-decoration: none;
   object-fit: cover;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  align-content: flex-end;
+  flex-flow: column wrap;
+  justify-content: flex-end;
   position: absolute;
-  background: rgba(0, 0, 0, 0);
   opacity: 0;
   transition: 0.5s ease;
+}
+
+h2 {
+  font-size: 21px;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding-bottom: 32px;
+  font-size: 13px;
 }
 
 .thumb-container:hover .hover-layer {
   background: rgba(0, 0, 0, 0.75);
   opacity: 100%;
-  display: block;
-  text-decoration: none;
 }
-
 
 /* Footer */
 footer {
   margin: 60px 0 6px 0;
   font-size: 14px;
   display: flex;
-  /* justify-content: flex-end; */
   align-items: flex-end;
 }
 

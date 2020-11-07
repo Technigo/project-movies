@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 
 import { MovieThumb } from './MovieThumb'
 
-export const MovieList = () => {
+export const MoviesTop = () => {
   const [list, setList] = useState([])
 
   useEffect(() => {
     const APIKey = 'c03059469ca2a2b2651ea90d6f8361ab'
-    const listAPI = `https://api.themoviedb.org/3/movie/upcoming?api_key=${APIKey}&language=en-US&page=1`
+    const listAPI = `https://api.themoviedb.org/3/movie/top_rated?api_key=${APIKey}&language=en-US&region-se&page=1`
 
     fetch(listAPI)
       .then((response) => response.json())
@@ -24,4 +24,3 @@ export const MovieList = () => {
     </section>
   )
 }
-// top rated

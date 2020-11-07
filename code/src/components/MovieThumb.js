@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 export const MovieThumb = ({
   id,
   title,
-  vote_average,
   release_date,
   poster_path
 }) => {
@@ -14,8 +13,8 @@ export const MovieThumb = ({
       <article className="thumb-container">
         <img className="cover" alt={title} src={`https://image.tmdb.org/t/p/w342/${poster_path}`} />
         <div className="hover-layer">
-          <h2>{title} - {vote_average}</h2>
-          <p>{release_date}</p>
+          <h2>{title}</h2>
+          <p>Released: {release_date}</p>
         </div>
       </article>
     </Link>

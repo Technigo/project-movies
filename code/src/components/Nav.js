@@ -1,13 +1,34 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 export const Nav = () => {
   return (
-    <div className="nav">
-      <h1>What's on: Sweden</h1>
-      <h1>Now Playing</h1>
-      <h1>Top Rated</h1>
-      <h1>Coming Soon</h1>
-    </div>
+    <nav className="nav">
+      <h1>
+        <NavLink to="/">
+          What's on: Sweden
+        </NavLink>
+      </h1>
+
+      <ul>
+        <li>
+          <NavLink to="/" exact>
+            Now Playing
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="top">
+            Top Rated
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="soon">
+            Coming Soon
+          </NavLink>
+        </li>
+
+      </ul>
+    </nav>
   )
 }

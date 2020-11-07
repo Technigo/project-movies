@@ -24,4 +24,3 @@ export const MovieList = () => {
     </section>
   )
 }
-// update this file to show Now Playing
