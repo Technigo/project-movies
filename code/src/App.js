@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import MovieList from "./components/MovieList";
 import MovieDetails from "./pages/MovieDetails";
@@ -9,7 +9,6 @@ export const App = () => {
 
   const [movies, setMovies] = useState([]);
 
-  console.log("Render 1");
   //fetch top rated movies
   useEffect(() => {
     fetch(MOVIES_API)
@@ -17,8 +16,6 @@ export const App = () => {
       .then(data => setMovies(data.results));
 
   }, []);
-
-  console.log("Render 2");
 
   return (
     <BrowserRouter>
@@ -36,9 +33,6 @@ export const App = () => {
         <Route path="/movies/:id">
           <MovieDetails />
         </Route>
-        <Redirect
-          to="/404"
-        />
       </Switch>
     </BrowserRouter>
   );

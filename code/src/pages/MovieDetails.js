@@ -16,8 +16,8 @@ const MovieDetails = () => {
     //API url pasted from API_info + inserted id
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_key}&language=en-US&page=1`)
       .then(response => response.json())
-      //.then(data => console.log(data));
       .then(data => setMovie(data));
+    //on every id update -> useEffect executes
   }, [id])
 
   const BACKDROP_URL = `https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`;
@@ -28,6 +28,8 @@ const MovieDetails = () => {
       <Button />
       <div
         className="movie-details-background"
+
+        //two curlies: one for JS + one for styling properties - an object
         style={{
           backgroundImage: `url(${BACKDROP_URL})`
         }}
@@ -51,6 +53,5 @@ const MovieDetails = () => {
     </section >
   );
 };
-
 
 export default MovieDetails;
