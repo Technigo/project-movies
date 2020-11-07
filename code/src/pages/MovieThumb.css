@@ -1,0 +1,59 @@
+.movie-thumb-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 25%;
+  position: relative;
+  background-color: black;
+}
+
+.movie-image {
+  width: 100%;
+}
+
+.movie-description {
+  position: absolute;
+  margin-left: 20px;
+  display: none;
+}
+
+.movie-description h2 {
+  font-size: 28px;
+}
+
+.movie-description h3 {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.movie-thumb-wrapper .movie-image {
+  filter: brightness(1);
+}
+
+.movie-thumb-wrapper:hover .movie-description {
+  display: block;
+  color: white;
+}
+
+.movie-thumb-wrapper:hover .movie-image {
+  filter: brightness(0.3);
+}
+
+/* TABLET */
+@media (max-width: 668px) {
+
+  .movie-thumb-wrapper {
+    width: 50%;
+  }
+
+}
+
+/* DESKTOP */
+@media (max-width: 1024px) {
+
+  .movie-thumb-wrapper {
+    width: 100%;
+  }
+  
+}

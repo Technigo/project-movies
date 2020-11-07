@@ -1,0 +1,43 @@
+.movie-details {
+  display: flex;
+  position: relative;
+}
+
+.movie-details-container {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  left: 50px;
+  bottom: 50px;
+}
+
+.movie-details-backdrop-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.movie-details-poster {
+  width: 350px;
+  border: 5px solid #fff;
+}
+
+.title {
+  margin-left: 20px;
+  color: white;
+}
+
+span.vote {
+  color: red;
+  margin-left: 20px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.movie-details-overview {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: white;
+  max-width: 400px;
+}
+

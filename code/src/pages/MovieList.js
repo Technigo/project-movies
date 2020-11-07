@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { MovieThumb } from 'pages/MovieThumb'
 
+import './MovieList.css'
+
 export const MovieList = () => {
   const [movies, setMovies] = useState ([])
-
-  // const API_KEY = "2daaca936846f43789b6e1ecfb7b4249"
-  // const URL = 'https://api.themoviedb.org/3/movie/popular?api_key=2daaca936846f43789b6e1ecfb7b4249&language=en-US&page=1'    
-  
 
   useEffect(() => {
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=2daaca936846f43789b6e1ecfb7b4249&language=en-US&page=1')
@@ -23,24 +21,9 @@ export const MovieList = () => {
         {...movie}
       />
         ))}
-        {/* // <div key={movie.id}>
-        //   <h2>{}</h2>
-        //   <h3>
-        //     <Link>
-        //       {results.title}
-        //     </Link>
-        //     </h3>
-        // </div> */}
     </section>
     )
 }
-
-
-
-
-
-
-
 
 
 
