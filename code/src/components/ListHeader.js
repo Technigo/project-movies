@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-//import Backbutton from './Backbutton';
+
 import ButtonBack from './ButtonBack';
 
 const ListHeader = ({ onClick }) => {
@@ -30,10 +30,7 @@ const ListHeader = ({ onClick }) => {
 
   return (
     <header className="list-header">
-      <ButtonBack className={'button'} />
-      {/* <Link className="list-header__logo" to="/">
-        <h1>CinemaTech</h1>
-      </Link> */}
+      <ButtonBack className={'button'} text="CinemaTech" />
       <button className="list-header__button" onClick={onMenuClick}>
         <i className="list-header__menu fa fa-bars"></i>
       </button>
