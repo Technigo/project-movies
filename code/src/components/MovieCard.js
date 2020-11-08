@@ -7,10 +7,14 @@ export const MovieCard = (props) => {
       <div className="movie-card">
         <div className="movie-card-overlay">
           <h2>{props.title}</h2>
-          <p className="movie-card-subtitle">{props.release_date}</p>
-          <div className="rating-tag">{props.vote_average}</div>
+          <div className="row movie-card-extra-info">
+            <p className="movie-card-subtitle">{props.release_date}</p>
+            <div className="rating-tag">
+              <span className="movie-card-rating">{props.vote_average}<span className="subtle">/10</span></span>
+            </div>
+          </div>
         </div>
-        <img src={`https://image.tmdb.org/t/p/w500${props.poster_path}`} alt={props.title}/>
+        <img src={`https://image.tmdb.org/t/p/w500${props.poster_path}`} alt={props.title} />
       </div>
     </Link>
   )

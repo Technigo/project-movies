@@ -10,9 +10,7 @@
 
 body {
   margin: 0;
-  font-family: 'Source Sans Pro', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,18 +19,18 @@ body {
   font-size: 20px;
 }
 
-h2, p {
-  margin: 0;
-}
-
-.movie-card-subtitle {
-  font-size: 18px;
-  opacity: 0.65;
-}
 
 h1, h2, h3, h4, h5 {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
+}
+
+h2, p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 32px;
 }
 
 a[href]:not([class]) {
@@ -40,11 +38,78 @@ a[href]:not([class]) {
   text-decoration: none;
 }
 
+.full-screen {
+  /* border: 1px dashed greenyellow; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.header-nav{
+  height: 80px;
+  width: 100%;
+  /* border: 1px dashed salmon; */
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10,10,10,1);
+  box-shadow: inset 0 4px 0 0 #FFA800;
+}
+
+.header-nav {
+  align-self: auto;
+}
+
 .movie-grid {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   display: grid;
   grid-template-columns: repeat(4, 0fr);
+  padding-top: 80px;
 }
+
+.movie-details-page button {
+  align-self: flex-start;
+  padding: 8px 12px 8px 4px;
+}
+
+button {
+  background: rgba(0,0,0,0.2);
+  border: 0;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px 8px 12px;
+  border-radius: 4px;
+}
+
+button:hover {
+  background: rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+button:active {
+  background: rgba(0,0,0,0.4);
+  cursor: pointer;
+  outline: none;
+}
+
+button p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #FFA800;
+  margin-bottom: 2px;
+}
+
+button img {
+  margin: 40px, 0, 4px, 0;
+}
+
+
+
 
 /* Set height and width to a 4:3 ratio. 25vw means it'll be 25% of the viewport width (and since the image is in 4:3 ratio, the height should be 1.33 times larger than the width */
 .movie-card {
@@ -81,8 +146,30 @@ a[href]:not([class]) {
   opacity: 1;
 }
 
-.movie-details-page {
+.movie-card-subtitle {
+  font-size: 18px;
+  opacity: 0.65;
+}
+
+.rating-tag {
+  border: 1px solid rgba(255,255,255,0.75);
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  padding: 0px 5px 1px 5px;
+  border-radius: 2px;
+}
+
+.movie-card-rating {
+  font-size: 14px;
   
+}
+
+.subtle {
+  opacity: 0.5;
+}
+
+.movie-details-page {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 32.29%, rgba(0, 0, 0, 0.8) 88.02%), rgba(0, 0, 0, 0.15);
 
   padding: 48px;
@@ -90,7 +177,7 @@ a[href]:not([class]) {
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
 
   /* This will make the <main> cover the whole page */
   position: fixed;
@@ -130,8 +217,22 @@ a[href]:not([class]) {
 }
 
 .movie-details-info-container-top {
-  /* border: 1px dashed red; */
   flex-direction: row;
+  display: flex;
+}
+
+.movie-card-extra-info {
+  justify-content: space-between;
+}
+
+.row {
+  flex-direction: row;
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+  display: flex;
 }
 
 .movie-details-poster {
@@ -175,7 +276,6 @@ a[href]:not([class]) {
   flex-direction: column;
   line-height: 150%;
   opacity: 0.87;
-  
 }
 
 .movie-details-extra-info {
@@ -184,10 +284,14 @@ a[href]:not([class]) {
   font-size: 18px;
 }
 
-.movie-details-extra-info * {
-  margin-right: 8px;
+.movie-details-extra-info > p  {
   color: rgba(255,255,255,0.75);
 }
+
+.margin-right {
+  margin-right: 8px;
+}
+
 
 .movie-details-extra-info a {
   font-weight: 500;
