@@ -45,7 +45,7 @@ const MovieDetail = () => {
       .catch((error) => {
         console.log("error", error);
       });
-  }, [movieId, URL]);
+  }, [movieId, URL, URL_CREDITS]);
 
   if (status === 404) {
     console.log("Status 404");
@@ -63,7 +63,7 @@ const MovieDetail = () => {
         <div
           className="movie-details-container"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%),
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 5%, rgb(0, 0, 0) 100%),
             url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
           }}
         >
