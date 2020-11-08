@@ -6,7 +6,7 @@ import './MovieDetails.css'
 
 export const MovieDetails = () => {
     const { movieID } = useParams()
-    const [movieDetails, setMovieDetails] = useState({})
+    const [movieDetails, setMovieDetails] = useState({}) // curly brackets in useState sincee it's an object we're mapping over
 
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/${movieID}?api_key=b230af0ba5dd0959429a398c958e6e4e&language=en-US&page=1`)
@@ -16,15 +16,14 @@ export const MovieDetails = () => {
             })
     }, [movieID]);
 
-    return (
+    return (  
         <div className="movieContainer" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`}} alt={`${movieDetails.title}`}>
-                <> 
+            <>
                 <Link to="/">
                     <div className="button">
-                        <p className="buttonText"><span className="icon" role="img">⬅️ </span> Movies</p>
+                        <p className="buttonText"><span className="icon" role="img" aria-label="icon">⬅️ </span> Movies</p>
                     </div>
-                </Link>
-
+                </Link> 
                 <div className="summary">
                     <img className="movieDetailsThumbnail" src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`} alt={`${movieDetails.title}`} />
                     <div className="movieDetails2">
@@ -32,7 +31,7 @@ export const MovieDetails = () => {
                                 <p className="movieDescription"> {movieDetails.overview} </p>
                     </div>
                     </div>
-                </>
+            </>       
         </div>
         
     )

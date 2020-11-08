@@ -8,9 +8,10 @@
 }
 
 .button {
-    margin-left: 50px;
-    width: 160px;
-    height: 50px;
+    position: absolute;
+    margin: 10px 0 0 70px;
+    width: 90px;
+    height: 30px;
 }
 
 a {
@@ -24,6 +25,7 @@ a {
 .buttonText {
     color: #fff;
     font-weight: bold;
+    margin: 0;
 } 
 
 .summary { /* wraps Thumbnail, title, average vote & description */
@@ -44,14 +46,11 @@ a {
 }
 
 .movieDetails2 { /* wraps movie title, average vote & description */
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left:0;
+    color: #fff;
     max-width: 400px;
     min-height: 180px;
     margin: 0 25px 25px 25px;
-    color: #fff;
+    
 }
 
 .averageVote {
@@ -68,6 +67,10 @@ a {
     min-width: 768px; 
 }
     
+.button {
+    margin: 10px 0 0 80px;
+}
+
 .movieDetailsThumbnail {
     width: 242px;
     height: 343px;
@@ -87,7 +90,11 @@ a {
 .movieContainer {
     min-width: 1024px;
 }
-    
+
+.button {
+    margin: 10px 0 0 50px;
+}
+
 .movieDetailsThumbnail {
     width: 352px;
     height: 523px;
@@ -97,8 +104,7 @@ a {
 .movieDetails2 {
     max-width: 400px;
     min-height: 180px;
-    margin-left: 430px;
-    margin-bottom: 20px;
+    margin: 0 0 20px 430px;
 } 
 
 }
