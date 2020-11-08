@@ -11,11 +11,11 @@ export const MovieList = () => {
   const { category } = useParams();
 
   const getURL = (category) => {
-    if(category==='top_rated') {
+    if (category === 'top_rated') {
       return TOP_RATED__URL
-    } else if(category==='upcoming'){
+    } else if (category === 'upcoming') {
       return UPCOMING__URL
-    }  else if(category==='now_playing'){
+    } else if (category === 'now_playing') {
       return NOW_PLAYING__URL
     }
     return MOVIELIST__URL
@@ -37,13 +37,15 @@ export const MovieList = () => {
   }, [])
 
   return (
-   
-      <section className='movielist__container'>
-        {movies.map((movie) => (
-          <Link key={movie.id} to={`movie/${movie.id}`}>
+
+    <section className='movielist__container'>
+      {movies.map((movie) => (
+        <span key={movie.id}>
+          <Link to={`movie/${movie.id}`}>
             <Movie {...movie} />
           </Link>
-        ))}
-      </section>
+        </span>
+      ))}
+    </section>
   )
 }
