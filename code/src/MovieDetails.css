@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     position: relative;
+    min-width: 375px;
     min-height: 100vh;
     background-size: cover;  
 }
@@ -17,9 +18,9 @@
     right: 0;
     bottom: 0;
     left:0;
-    width: 352px;
-    height: 523px;
-    margin: 50px 50px 10px 50px;
+    width: 226px;
+    height: 310px;
+    margin: 150px 60px 0px 70px;
     border: #fff solid 5px;
 }
 
@@ -30,8 +31,7 @@
     left:0;
     max-width: 400px;
     min-height: 180px;
-    margin-left: 430px;
-    margin-bottom: 20px;
+    margin: 0 25px 25px 25px;
     color: #fff;
 }
 
@@ -40,4 +40,46 @@
     font-size: 17px;
     font-weight: 400;
     margin-left: 10px;
+}
+
+/* TABLET VIEW */
+@media screen and (min-width: 768px) {
+
+.movieContainer {
+    min-width: 768px; 
+}
+    
+.movieDetailsThumbnail {
+    width: 242px;
+    height: 343px;
+    margin: 50px 60px 0px 80px;
+}
+    
+.movieDetails2 {
+    max-width: 600px;
+    margin: 0 55px 35px 80px;
+}   
+
+}
+
+/* DESKTOP VIEW */
+@media screen and (min-width: 1024px) {
+
+.movieContainer {
+    min-width: 1024px;
+}
+    
+.movieDetailsThumbnail {
+    width: 352px;
+    height: 523px;
+    margin: 50px 50px 10px 50px;
+}
+    
+.movieDetails2 {
+    max-width: 400px;
+    min-height: 180px;
+    margin-left: 430px;
+    margin-bottom: 20px;
+} 
+
 }

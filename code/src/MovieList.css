@@ -61,8 +61,8 @@ code {
 @media screen and (min-width: 1024px) {
 
 .allMovies {
-    min-width: 1352px;
-  }
+  min-width: 1352px;
+}
   
 .eachMovie {
   width: 338px;
