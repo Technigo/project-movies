@@ -1,19 +1,11 @@
-# Technigo React Starter App
+# Project Movies
+Create a movie multi-page React application using themoviedb.org API. 
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+## The problem
+Technologies used: React, React Router, API, Dev tools 
+I did prepare for adding a "page not found", if I had more time I would also add a loading message, a dropdown and more pages. I would also make it responsive and accessible.
+Would like to know if there's an easy way to add url component, in order to keep code tighter.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
 
-## Usage
-
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
-
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+## View it live
+https://laughing-ardinghelli-d65cab.netlify.app/
