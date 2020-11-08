@@ -1,13 +1,12 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project was about building a multipage site in React, using the API from themoviedb.org
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started by creating the landing page with a list of movie poster, and then added a detail-page, where you land when clicking one of the posters. I also added a "not found page".
+The I built a header with navigation. The navigation takes the user to differen sites based on different search criterias (different endpoints in the API). What I'm planning to improve is to make the different search pages into one component, since they basically contain the same code, just different urls.  
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://checkout-movies.netlify.app/jgjf
