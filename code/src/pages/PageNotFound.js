@@ -1,11 +1,17 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
 
 const PageNotFound = () => {
   return (
-    <article>
-      <h1>Page not found</h1>
-      <Link to="/">back to movies</Link>
+    <article className="try-again">
+      <h1>
+        Oops! Page not found <span>😱</span>
+      </h1>
+      <h3>Try again</h3>
+      <Link className="back-button-not-found" to="/">
+        back to movies
+      </Link>
     </article>
   );
 };

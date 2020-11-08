@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
+
+import { Link } from "react-router-dom";
 import { NavBar } from "components/NavBar";
 
 export const MovieList = () => {
@@ -34,7 +35,7 @@ export const MovieList = () => {
           />
           <div className="movie-list">
             {movies.map((movie) => (
-              <div key={movie.id}>
+              <div className="movie" key={movie.id}>
                 <Link className="movie-link" to={`/movies/${movie.id}`}>
                   <img
                     src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}

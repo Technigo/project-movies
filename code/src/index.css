@@ -20,69 +20,118 @@ code {
   box-sizing: border-box;
 }
 
-main {
+.movie-list{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
-.menu-button {
+.movie {
+  width: 25%;
+  position: relative;
   color: #fff;
 }
 
-.movie-list {
+a {
+ text-decoration: none;
+ color: white;
+}
+
+.movie-list a img {
+  width: 100%;
+}
+
+.movie-list .movie-details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  padding: 20px;
+}
+
+.movie-list .movie-details h2 {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.movie-list a:hover .movie-details {
   display: flex;
   flex-wrap: wrap;
-  margin: auto;
-}
-
-.movie-details, a {
-  text-decoration: none;
-  color: #fff;
-}
-
-
-
-
-
-
-
-
-.details .background-img {
-
-  display: flex;
-  background-size: cover;
   flex-direction: column;
   justify-content: flex-end;
 }
 
+.back-button-not-found a {
+  text-decoration:underline;
+}
+
+.details .background-img {
+  display: flex;
+  background-size: cover;
+}
+
 .details img {
   border: 5px solid #fff;
+  width: 25%;
+  margin: 20px;
 }
 
-.details .summary {
-  display: flex;
-  align-items: flex-end;
+.summary {
+  align-items: center;
   padding: 50px;
+  position: relative;
+  max-width:400px
 }
 
-.details .details {
-  margin-left: 20px;
-}
-
-.details .details p {
+.details.summary p {
   max-width: 400px;
 }
 
 .details .rating {
   font-size: 17px;
   color: red;
-  font-weight: normal;
+  font-weight: 900;
   margin-left: 10px;
 } 
 
+.back-to-list {
+  position: absolute;
+  display: inline-flex;
+  color: #fff;
+  align-items: center;
+  font-weight: 700;
+  text-decoration: none;
+  left: 50px;
+  top: 50px;
+}
 
+.back-button svg {
+  width: 30px;
+  transition: 0.3s ease;
+}
 
+.back-button:hover svg {
+  margin-right: 5px;
+}
+
+.try-again{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  margin:20px
+}
+
+.company-info, li {
+  color: #fff;
+  list-style-type: none;
+}
+
+.company-details, .logo {
+  padding: 25px;
+}
 
 
 
