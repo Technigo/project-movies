@@ -1,0 +1,23 @@
+/* Style for back-button */
+
+.back-button {
+    position: absolute;
+    display: inline-flex;
+    color: #fff;
+    align-items: center;
+    font-weight: 700;
+    text-decoration: none;
+    left: 50px;
+    top: 50px;
+}
+
+.fa {
+    padding-right: 10px;
+    font-size:34px;
+    color: #f3f3f3;
+}
+
+.back-button:hover .fa {
+    padding-right: 30px;
+    transition: ease-in-out 0.4s;
+} 
