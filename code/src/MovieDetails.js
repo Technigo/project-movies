@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import './MovieDetails.css'
 
@@ -18,6 +19,12 @@ export const MovieDetails = () => {
     return (
         <div className="movieContainer" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`}} alt={`${movieDetails.title}`}>
                 <>
+                <Link to="/">
+                    <div className="button">
+                        <p className="buttonText"><span className="icon" role="img">⬅️ </span> Movies</p>
+                    </div>
+                </Link>
+
                 <div className="summary">
                     <img className="movieDetailsThumbnail" src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`} alt={`${movieDetails.title}`} />
                     <div className="movieDetails2">

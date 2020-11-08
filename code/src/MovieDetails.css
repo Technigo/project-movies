@@ -7,6 +7,25 @@
     background-size: cover;  
 }
 
+.button {
+    margin-left: 50px;
+    width: 160px;
+    height: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.buttonText {
+    color: #fff;
+    font-weight: bold;
+}
+
 .summary { /* wraps Thumbnail, title, average vote & description */
     display: flex;
     align-items: flex-end;
@@ -20,7 +39,7 @@
     left:0;
     width: 226px;
     height: 310px;
-    margin: 110px 60px 0px 70px;
+    margin: 90px 60px 0px 70px;
     border: #fff solid 5px;
 }
 
