@@ -6,19 +6,19 @@ import './movielist.css'
 const POPLIST_API = "https://api.themoviedb.org/3/movie/popular?api_key=ab5cef50889fc06c1a1e75470eefe28b&language=en-US&page=1";
 
 export const MoviesList = () => {
-  const [moviesList, setMoviesList] = useState([]);  //useState store movies
+  const [moviesList, setMoviesList] = useState([]);  // stores moviesList
 
 
   useEffect(() => {
     fetch(POPLIST_API) 
       .then(res => res.json())
       .then(data => {
-        setMoviesList(data.results) //get list of movies frm api and pute data in movielist state 
+        setMoviesList(data.results) //get list of movies frm api and pute data in state 
       });
   }, [])
 
   return (
-//map over state to render chosen elemnts
+//map over state to render chosen elements
     <div className="movies_list">
       {moviesList.map(({id, poster_path, title, release_date}) => (
         <div key={id} className="movie_wrapper">
