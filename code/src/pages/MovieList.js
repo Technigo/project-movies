@@ -7,8 +7,8 @@ import { MOVIELIST__URL, NOW_PLAYING__URL, TOP_RATED__URL, UPCOMING__URL } from 
 import '../styles/movielist.css'
 
 export const MovieList = () => {
-  const [movies, setMovies] = useState(['popular'])
-  const { category } = useParams();
+  const [movies, setMovies] = useState([])
+  const { category } = useParams(); 
 
   const getURL = (category) => {
     if (category === 'top_rated') {
@@ -21,6 +21,7 @@ export const MovieList = () => {
     return MOVIELIST__URL
   }
 
+
   const getMovieList = () => {
     fetch(getURL(category))
       .then((res) => {
@@ -31,10 +32,10 @@ export const MovieList = () => {
       })
   }
 
-  useEffect(() => {
+  useEffect(() => {   
     getMovieList()
     // eslint-disable-next-line
-  }, [])
+  }, [category])
 
   return (
 

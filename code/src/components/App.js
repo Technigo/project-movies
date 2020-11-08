@@ -6,8 +6,6 @@ import { MovieDetails } from '../pages/MovieDetails'
 import { NotFound } from '../pages/NotFound'
 import { Nav } from './Nav'
 
-import '../styles/app.css'
-
 export const App = () => {
 
   return (
@@ -16,10 +14,10 @@ export const App = () => {
       <Nav/>
       <Switch>
         <Route path='/' exact>
-          <MovieList />
+          <MovieList/>
         </Route>
         <Route path='/category/:category' exact>
-          <MovieList />
+          <MovieList/>
         </Route>
         <Route path='/movie/:movieId' exact>
           <MovieDetails />
