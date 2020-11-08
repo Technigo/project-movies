@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import { MovieCard } from 'components/MovieCard'
 import { Link } from 'react-router-dom'
 
 export const MovieList = () => {
     const [movies, setMovies] = useState([])
+
 
 const FetchMovies = () => {
     const API = `0cb608022c0a0fbef75881f68133d694`
@@ -21,7 +23,8 @@ const FetchMovies = () => {
     <section className='movie-list'>
       {movies.map((movie) => (
           <Link key={movie.id} to={`/movies/${movie.id}`}>
-              <div>
+              <div key={movie.id}>
+                <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.poster_path}/>
                 <h1>{movie.original_title}</h1>
                 <p>{movie.vote_average}<span role="img" aria-label="star emoji"> ⭐︎ </span></p>
               </div>
