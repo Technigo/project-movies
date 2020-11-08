@@ -44,7 +44,7 @@ const ListHeader = ({ onClick }) => {
       >
         {categories.map(category => {
           return (
-            <div key={category.path}>
+            <div className="list-header__link-container" key={category.path}>
               <Link
                 to="/"
                 className="list-header__link"

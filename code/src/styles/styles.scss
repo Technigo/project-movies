@@ -21,8 +21,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px;
-  font-size: 25px;
+  padding: calc(4% + 10px);
+  padding-right: 4%;
+  font-size: 20px;
+  height: 15vh;
+
+  @include respond(large) {
+    font-size: 25px;
+  }
 
   &__nav {
     position: relative;
@@ -32,13 +38,13 @@ body {
       flex-direction: column;
       justify-content: space-evenly;
       position: absolute;
-      top: 9vh;
+      top: 14vh;
       left: 0;
       right: 0;
       z-index: 1;
       text-align: center;
       background: $dark-blue;
-      height: 25vh;
+      height: 35vh;
     }
 
     &--closed {
@@ -70,11 +76,17 @@ body {
     font-weight: 400;
   }
 
+  &__link-container {
+    display: flex;
+    justify-content: center;
+  }
+
   &__link {
     text-decoration: none;
     color: $cream;
     font-weight: bold;
     padding: 10px;
+    width: 100%;
 
     &:hover {
       background: $cream;
@@ -86,6 +98,10 @@ body {
     height: 100%;
     filter: invert(1);
     color: #000;
+  }
+
+  &__name {
+    font-size: 15px;
   }
 
   @include respond(medium) {
@@ -104,6 +120,10 @@ body {
 
     &__button {
       display: none;
+    }
+
+    &__name {
+      font-size: 20px;
     }
   }
 }
@@ -276,7 +296,7 @@ body {
 
 .button {
   font-family: 'Poiret One';
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 600;
   text-decoration: none;
   letter-spacing: 4px;

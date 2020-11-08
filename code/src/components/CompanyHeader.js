@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import ButtonBack from './ButtonBack';
 
 const CompanyHeader = ({ homepage, logo_path, name }) => {
@@ -23,7 +22,7 @@ const CompanyHeader = ({ homepage, logo_path, name }) => {
               alt={name}
             />
           ) : (
-            <h2>{name}</h2>
+            <h2 className="list-header__name">{name}</h2>
           )}
         </a>
       ) : (
@@ -35,7 +34,7 @@ const CompanyHeader = ({ homepage, logo_path, name }) => {
               alt={name}
             />
           ) : (
-            <h2>{name}</h2>
+            <h2 className="list-header__name">{name}</h2>
           )}
         </>
       )}
