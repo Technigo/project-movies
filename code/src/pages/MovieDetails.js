@@ -39,7 +39,7 @@ const MovieDetails = () => {
           </path>
         </svg>
         {/* <img className="back-icon" src="./arrow-icon.svg" /> */}
-        Back to Movie List
+        <h3 className="back-link-heading">Back to Movie List</h3>
       </Link>
           <div className="details-summary">
             <img

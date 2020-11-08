@@ -33,6 +33,7 @@
   display: inline-flex;
   align-items: center;
   z-index: 3;
+  transition: all .5s ease; 
 }
 
 .back-link svg {
@@ -41,9 +42,13 @@
   height: 30px;
 }
 
-/* back-link:hover {
+.back-link h3 {
+  transition: all .5s ease; 
+}
 
-} */
+.back-link:hover .back-link-heading {
+  transform: translateX(15px);
+}
 
 .details-summary {
   display: flex;
