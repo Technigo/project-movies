@@ -1,10 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
 
-
-import { MovieList } from 'componet/MovieList'
+import { MovieList } from 'component/MovieList'
 import { MovieDetail } from 'pages/MovieDetail'
-import { NotFound404 } from 'componet/NotFound404'
+import { NotFound404 } from 'pages/NotFound404'
 
 export const App = () => {
 

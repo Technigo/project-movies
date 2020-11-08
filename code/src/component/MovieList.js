@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
-import { MovieContainer } from 'componet/MovieContainer';
-import { Nav } from 'componet/Nav'
+import { MovieContainer } from 'component/MovieContainer';
+import { Nav } from 'component/Nav'
 
 export const MovieList = ({ list }) => {
     const [movies, setMovies] = useState([]);

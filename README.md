@@ -1,13 +1,11 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Create a multi-page movie site using React. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started sketching up the site. Trying to structure what component I will need and what to pass onto what. Then fetching all the data I will need. If I had more time I would have like to add more pages on the site and maybe structure it in another way. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+movie-and-popcorn.netlify.app
