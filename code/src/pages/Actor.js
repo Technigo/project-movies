@@ -20,7 +20,6 @@ export const Actor = () => {
      setActor(json);
    })
    .catch(() => {
-    console.error(Error);
     window.location.assign('/404');
   });
   },[actorID])

@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react'
+
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { BackButton } from 'BackButton'
 
 export const MovieDetail = () => {
-
-  //get the parameter from the URL
   const { movieId } = useParams();
   const [currentMovie, setcurrentMovie] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [castList, setCastList] = useState([]);
 
-  //Get the movie detail for the selected movie using the movieID param from the URL
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=303d50a32fc0419fb55796d006e5d6c2&language=en-US`)
     .then(res => {
@@ -22,17 +20,14 @@ export const MovieDetail = () => {
       }
     })
     .then((json) => {
-      console.log(json);
       setIsLoading(false);
       setcurrentMovie(json);
     })
     .catch(() => {
-      console.error(Error);
       window.location.assign('/404');
     });
   },[movieId])
 
-  //move this into a new component ActorList and render ActorList instead
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=303d50a32fc0419fb55796d006e5d6c2&language=en-US`)
     .then(res => {
@@ -43,18 +38,15 @@ export const MovieDetail = () => {
       }
     })
     .then((json) => {
-      console.log(json);
       setCastList(json.cast);
     })
     .catch(() => {
-      console.error(Error);
      window.location.assign('/404');
     });
   },[movieId])
 
   return ( <>
   {!isLoading && currentMovie &&
-  
     <section 
       className="movie-detail-container" 
       key={currentMovie.id}
@@ -65,8 +57,7 @@ export const MovieDetail = () => {
       }}
     >
  
-     <BackButton text="Go back"></BackButton>
-
+      <BackButton text="Go back"></BackButton>
         <div className="movie-details-wrapper">
           <img className="movie-detail-poster" src={`https://image.tmdb.org/t/p/w342${currentMovie.poster_path}`} alt={currentMovie.title} />
             <div className="movie-details-text">
@@ -75,16 +66,15 @@ export const MovieDetail = () => {
                 <h2 className="movie-detail-rating">Rating: {currentMovie.vote_average}</h2> 
                 <p className="movie-detail-overview">{currentMovie.overview}</p>
 
-                  {/*Render an ActorList component here instead */}
                   <div className="movie-details-cast-list">
                     {castList.slice(0,5).map((actor,index) => (
                       <Link key={index} className="cast-link" to={`/movies/${movieId}/cast/${actor.id}`}>{actor.name}</Link>
                     ))}
                   </div>
          
-          <a className="imdb-link" href={`https://www.imdb.com/title/${currentMovie.imdb_id}/`} alt="imdb-link" target="_blank" rel="noopener noreferrer">IMDB <span role="img" aria-label="link-emoji">🔗</span> </a>
-          <Link className="similar-movies-link" to= {`/movies/${movieId}/recommendedMovies`}>Explore recommended movies <span role="img" aria-label="heart-eyes-emoji">😍</span> </Link>
-        </div>
+                <a className="imdb-link" href={`https://www.imdb.com/title/${currentMovie.imdb_id}/`} alt="imdb-link" target="_blank" rel="noopener noreferrer">IMDB <span role="img" aria-label="link-emoji">🔗</span> </a>
+                <Link className="similar-movies-link" to= {`/movies/${movieId}/recommendedMovies`}>Explore recommended movies <span role="img" aria-label="heart-eyes-emoji">😍</span> </Link>
+            </div>
         </div>
     </section>}
     </>

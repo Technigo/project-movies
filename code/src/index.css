@@ -7,14 +7,14 @@ body {
 	font-family: "Nunito", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: black;
+	background-color: #000;
 }
+
 .root {
-	background-color: black;
+	background-color: #000;
 }
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -32,7 +32,6 @@ code {
 }
 
 .app-header {
-	/* flex-basis: 100%; */
 	height: 60px;
 }
 
@@ -42,13 +41,13 @@ code {
 	font-size: 20px;
 	background: transparent;
 	font-family: "Dosis", sans-serif;
-	color: white;
+	color: #ffffff;
 }
 
 option {
-	background: black;
+	background: #000;
 	font-family: "Dosis", sans-serif;
-	color: white;
+	color: #ffffff;
 }
 
 .movie-link {
@@ -78,7 +77,7 @@ option {
 
 .movie-title {
 	font-size: 35px;
-	color: white;
+	color: #ffffff;
 	margin: 0;
 }
 
@@ -86,21 +85,20 @@ option {
 .movie-tagline,
 .movie-detail-overview {
 	font-size: 16px;
-	color: white;
+	color: #ffffff;
 }
 
 .movie-tagline {
 	font-style: italic;
 }
 
-/*Details page*/
 .movie-backdrop-image {
 	height: 100vh;
 	filter: brightness(0.5);
 }
 
 .movie-detail-container {
-	background-color: black;
+	background-color: #000;
 	height: 100vh;
 	width: 100vw;
 }
@@ -109,7 +107,7 @@ option {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	color: white;
+	color: #ffffff;
 	padding: 16px;
 }
 
@@ -120,28 +118,24 @@ option {
 	right: 0;
 	bottom: 0;
 	left: 22px;
-	color: white;
+	color: #ffffff;
 	cursor: pointer;
 	width: 155px;
 	height: 50px;
 	text-decoration: none;
 	background: rgba(0, 0, 0, 0.3);
 	font-weight: 800;
-	/* z-index: 1; */
 	font-size: 15px;
-	/* display: flex; */
-	/* align-items: center; */
-	/* justify-content: center; */
 	border: 1px solid;
 }
 
 .link-back:hover {
 	background-color: rgba(255, 255, 255, 0.3);
-	color: black;
+	color: #000;
 }
 
 .movie-detail-poster {
-	border: 3px solid white;
+	border: 3px solid #ffffff;
 	height: 100%;
 }
 
@@ -151,7 +145,7 @@ option {
 .movie-detail-rating {
 	margin: 0;
 	font-size: 18px;
-	color: cadetblue;
+	color: #5f9ea0;
 	margin-top: 10px;
 }
 .movie-details-wrapper {
@@ -165,7 +159,6 @@ option {
 	height: 60vh;
 	margin: 0;
 	background: rgba(0, 0, 0, 0.7);
-	/* width: 70%; */
 	margin-right: 89px;
 }
 
@@ -178,7 +171,7 @@ option {
 }
 
 .cast-link {
-	color: white;
+	color: #ffffff;
 	padding: 10px 5px;
 	border: 1px solid rgb(255 255 255 / 21%);
 	text-decoration: none;
@@ -188,12 +181,12 @@ option {
 
 .cast-link:hover {
 	background-color: rgba(255, 255, 255, 0.6);
-	color: black;
+	color: #000;
 }
 .imdb-link,
 .similar-movies-link {
 	text-decoration: none;
-	color: white;
+	color: #ffffff;
 	font-weight: 800;
 }
 
@@ -203,7 +196,7 @@ option {
 }
 
 .not-found-text {
-	color: white;
+	color: #ffffff;
 	font-size: 24px;
 }
 
@@ -218,8 +211,6 @@ option {
 	min-height: 100vh;
 	width: 100vw;
 	display: flex;
-	/* align-items: center; */
-	/* justify-content: center; */
 	background-image: url(/pictures/cinema.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -228,14 +219,12 @@ option {
 }
 
 .actor-container {
-	color: white;
+	color: #ffffff;
 	margin-bottom: 16px;
 	display: flex;
 	flex-direction: row;
 	max-width: 70vw;
-	/* max-height: 70vh; */
 	background-color: rgba(0, 0, 0, 0.7);
-	/* background-color: transparent; */
 	align-self: center;
 	margin-top: 100px;
 }
@@ -285,23 +274,12 @@ option {
 		background: rgba(0, 0, 0, 0.7);
 	}
 
-	.link-back {
-		/* left: 15px;
-		top: 15px; */
-	}
-
-	.movie-details-text {
-		/* margin-bottom: 65px; */
-	}
-
 	.actor-main-content {
-		/* width: 100%; */
 		height: 100%;
 	}
 	.actor-container {
 		flex-direction: column;
 		max-height: -moz-fit-content;
-		/* max-height: fit-content; */
 		max-width: 96vw;
 		padding: 20px;
 		margin-top: 0;
@@ -314,14 +292,6 @@ option {
 	}
 	.select-list-type {
 		width: 100%;
-	}
-
-	.actor-main-content {
-		/* height: auto; */
-	}
-
-	.actor-poster {
-		/* width: 300px; */
 	}
 
 	.actor-text {

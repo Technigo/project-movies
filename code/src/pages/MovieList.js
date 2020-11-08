@@ -1,9 +1,8 @@
 import React, { useState , useEffect } from 'react'
+
 import { Link } from 'react-router-dom'
 
-
 export const MovieList = () => {
-
   const[movies,setMovies] = useState([]);
   const[listType, setListType] = useState("top_rated");
 
@@ -18,7 +17,6 @@ export const MovieList = () => {
 const handleListTypeChange = (event) => {
     setListType(event.target.value);
 }
-
   return (<>
     <header className="app-header">
     <select className="select-list-type"
