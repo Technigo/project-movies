@@ -28,9 +28,17 @@ main {
 header {
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
-  padding: 20px;
+  padding-right: 20px;
   min-height: 6vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header label {
@@ -157,7 +165,6 @@ header select {
 @media (max-width: 1023px) {
   header {
     font-size: 16px;
-    padding: 15px;
   }
 
   header select {
@@ -173,7 +180,6 @@ header select {
 @media (max-width: 767px) {
   header {
     font-size: 12px;
-    padding: 10px;
   }
 
   header select {
