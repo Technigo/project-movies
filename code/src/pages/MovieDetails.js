@@ -4,11 +4,8 @@ import { useParams, Link, Redirect } from "react-router-dom";
 import "../css/movieDetails.css";
 
 export const MovieDetails = () => {
-  const { movieId, title } = useParams();
-  console.log("movieId: " + movieId);
-  console.log("title: " + title);
+  const { movieId } = useParams();
   const [movie, setMovie] = useState([]);
-  //const history = useHistory();
 
   useEffect(() => {
     fetch(
@@ -17,7 +14,6 @@ export const MovieDetails = () => {
       .then((res) => res.json())
       .then((json) => {
         setMovie(json);
-        console.log(json);
       });
   }, [movieId]);
 
@@ -46,6 +42,13 @@ export const MovieDetails = () => {
               <h2 className="movie-details-title">{movie.title}</h2>
               <p className="rating">{movie.vote_average}/10</p>
             </div>
+            {movie.original_language === "fr" ? (
+              <p className="original-title">
+                Original title: <strong>{movie.original_title}</strong>
+              </p>
+            ) : (
+              <></>
+            )}
             <p className="overview">{movie.overview}</p>
           </div>
         </div>

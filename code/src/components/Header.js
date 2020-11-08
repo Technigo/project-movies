@@ -1,28 +1,46 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-import {
-  POPULAR_URL,
-  NOWPLAYING_URL,
-  UPCOMING_URL,
-  TOPRATED_URL,
-} from ".././urls";
+import { POPULAR_URL, SCIFI_URL, FRENCH_URL, TOPRATED_URL } from ".././urls";
 import "../css/header.css";
 
-export const Header = () => {
-  const [url, setUrl] = useState({POPULAR_URL});
-  
+export const Header = ({ getUrl }) => {
+  const [prefix, setPrefix] = useState("POPULAR ");
+
+  const checkPrefix = (url) => {
+    if (url === POPULAR_URL) setPrefix("POPULAR ");
+    else if (url === SCIFI_URL) setPrefix("SCI-FI ");
+    else if (url === FRENCH_URL) setPrefix("FRENCH ");
+    else setPrefix("TOP RATED ");
+  };
+
   const handleOnclick = (url) => {
-    setUrl(url)
-  }
+    getUrl(url);
+    checkPrefix(url);
+  };
 
   return (
     <header>
-      <h1>MOVIES</h1>
+      <h1>{prefix}MOVIES</h1>
       <div className="buttons">
-        <button onClick = { () => handleOnclick(POPULAR_URL) } className="popular">Popular</button>
-        <button onClick = { () => handleOnclick(NOWPLAYING_URL) } className="now-playing">Now playing</button>
-        <button onClick = { () => handleOnclick(UPCOMING_URL) } className="upcoming">Upcoming</button>
-        <button onClick = { () => handleOnclick(TOPRATED_URL) } className="top-rated">Top rated</button>
+        <button onClick={() => handleOnclick(POPULAR_URL)} className="popular">
+          <Link to="/">Popular</Link>
+        </button>
+        <button
+          onClick={() => handleOnclick(SCIFI_URL)}
+          className="now-playing"
+        >
+          <Link to="/">Sci-Fi</Link>
+        </button>
+        <button onClick={() => handleOnclick(FRENCH_URL)} className="upcoming">
+          <Link to="/">French</Link>
+        </button>
+        <button
+          onClick={() => handleOnclick(TOPRATED_URL)}
+          className="top-rated"
+        >
+          <Link to="/">Top rated</Link>
+        </button>
       </div>
     </header>
   );

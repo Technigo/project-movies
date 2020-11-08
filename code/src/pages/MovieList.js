@@ -1,30 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import {
-  POPULAR_URL,
-  // NOWPLAYING_URL,
-  // UPCOMING_URL,
-  // TOPRATED_URL,
-} from ".././urls";
 import "../css/movieList.css";
 
-export const MovieList = () => {
+export const MovieList = ({ url }) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch(POPULAR_URL)
+    fetch(url)
       .then((response) => response.json())
       .then((json) => {
         setMovies(json.results);
-        // console.log(json.results);
       });
-  }, []);
+  }, [url]);
 
   return (
     <section className="movie-list">
       {movies.map((movie) => (
-        // <MovieThumb key={movie.id} {...movie} />
         <Link key={movie.id} to={`/movies/${movie.id}`} className="movie">
           <article>
             <img
