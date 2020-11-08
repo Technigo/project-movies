@@ -21,7 +21,6 @@ export const DetailPage = () => {
       return (
       <main className="detail-page">
         <TvShowDetails {...tvShowDetails} />
-        {/* <LastEpisodeDetails {...lastEpisode} />     */}
       </main>
       );
     };
