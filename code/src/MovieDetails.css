@@ -42,7 +42,7 @@ a {
     left:0;
     width: 226px;
     height: 310px;
-    margin: 90px 60px 0px 70px;
+    margin: 50px 60px 0px 70px;
     border: #fff solid 5px;
 }
 
@@ -50,7 +50,7 @@ a {
     color: #fff;
     max-width: 400px;
     min-height: 180px;
-    margin: 0 25px 25px 25px;
+    margin: 0 25px 25px 70px;
     
 }
 
