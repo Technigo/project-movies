@@ -22,54 +22,67 @@ code {
   flex-direction: row;
   position: relative;
   z-index: 0;
-  height: 100%;
-  width: ;
+}
+
+.movie-section {
+  width: 25%;
 }
 
 .movies-background-img {
   width: 100%;
+  height: 100%;
   z-index: -1;
+  background-attachment: fixed;
 }
 
 .movie-section .movie-text {
-  padding-bottom: 10px;
-  padding-left: 20px;
-  height: 510px;
+  padding-left: 15px;
   width: 100%;
   right: 0;
   bottom: 0;
   left: 0;
   position: absolute;
   color: white;
-  display: flex;
 }
 
 .movie-text h1 {
-  font-size: 35px;
+  font-size: 15px;
+  padding-right: 20px;
+  margin: 0;
 }
 
 .movie-text h2 {
-  font-size: 15px;
+  font-size: 10px;
+  padding-right: 20px;
+  padding-bottom: 50px;
 }
 
 .movie-text {
   opacity: 0;
   z-index: 1;
+  bottom: 0;
+  position: absolute;
 }
+
+.movie-section:hover .movies-background-img { 
+  opacity: 0.3;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.75);
+}
+
 
 .movie-section:hover .movie-text {
   display: block;
   cursor: pointer;
   opacity: 1;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.5);
 }
 
 /* moviedetail css */
 
 .movie-background {
   width: 100%;
-  height: 800px;
+  height: 1100px;
   bottom: 80%;
   position: relative;
   background-attachment: fixed;
@@ -77,7 +90,7 @@ code {
 
 .movie-post {
   border: 5px solid white;
-  width: 35%;
+  width: 30%;
   height: 65%;
   position: absolute;
   top: 30%;
@@ -87,7 +100,10 @@ code {
 
 .detail-section {
   position: absolute;
-  top: 66%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  top: 70%;
   left: 45%;
   right: 15%;
   color: white;
@@ -105,6 +121,11 @@ code {
   flex-direction: row;
 }
 
+.overview-text {
+  display: flex;
+  flex-direction: column;
+}
+
 .button-back {
   text-decoration: none;
   font-weight: bolder;
@@ -120,8 +141,8 @@ code {
   width: 80px;
   top: 30px;
   left: 90px;
- border: 5px solid white;
- color: white;
+  border: 5px solid white;
+  color: white;
   border-radius: 50%;
   display: inline-block;
   z-index: 1;
