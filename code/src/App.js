@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import Header from './components/Header';
 import MovieList from './components/MovieList';
+import Footer from './components/Footer';
 import MovieDetails from './pages/MovieDetails';
 import NotFound from './pages/NotFound';
 
@@ -28,6 +29,7 @@ export const App = () => {
         </Route>
         <Redirect to='/404'></Redirect>
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 };

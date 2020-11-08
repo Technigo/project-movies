@@ -1,0 +1,40 @@
+footer {
+  width: 100%;
+  min-height: 12vh;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer div {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.signature {
+  font-size: 12px;
+  margin: 0 10px;
+  width: 100%;
+}
+
+.attribution {
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+  .signature {
+    font-size: 15px;
+  }
+
+  .attribution {
+    font-size: 12px;
+  }
+}

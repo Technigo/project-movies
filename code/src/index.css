@@ -25,6 +25,26 @@ main {
   padding: 0 50px;
 }
 
+header {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  min-height: 6vh;
+}
+
+header label {
+  margin-right: 15px;
+}
+
+header select {
+  height: 30px;
+  width: 200px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 .popular-page {
   display: flex;
   flex-wrap: wrap;
@@ -92,7 +112,7 @@ main {
 }
 
 .detail-page .background {
-  min-height: 100vh;
+  min-height: 84vh;
   display: flex;
   background-size: cover;
   flex-direction: column;
@@ -130,4 +150,62 @@ main {
   justify-content: center;
   align-items: center;
   height: 50vh;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1023px) {
+  header {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  header select {
+    height: 25px;
+    width: 175px;
+  }
+
+  .popular-page a {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  header select {
+    height: 20px;
+    width: 150px;
+  }
+
+  .popular-page a {
+    width: 100%;
+  }
+
+  .detail-page .back-link {
+    left: 20px;
+    top: 20px;
+  }
+
+  .detail-page .summary {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .detail-page .summary img {
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .detail-page .details {
+    margin-left: 0;
+  }
+
+  .detail-page .details p {
+    max-width: 100%;
+  }
 }
