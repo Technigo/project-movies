@@ -1,13 +1,13 @@
-# Project Movies
+# Project Movies 🍿
 
 Replace this readme with your own information about your project.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
+A movie review website - like IMDB - where u can see todays most popular movies!
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Had problems with the hover-effect and make it the right size, but google it and found a page at m3schools and solved the problem thanks to that! 😄
+I made my own button with a hover-effect, was thinking about designing my own button in illustrator first but wanted to practice my design skills in code - which is not my best - but still 100% code!
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://moviemakers.netlify.app/
