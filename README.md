@@ -24,8 +24,9 @@ In this project I've learned about React router and how to create multi-page app
 ## Tech
 - React
 - JSX
+- HTML
 - CSS
+- Responsive design
 
 ## View it live 👩‍💻
-Link to the deployed project on Netlify: 
 https://movie-toplist.netlify.app/
