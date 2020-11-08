@@ -2,7 +2,7 @@ import React from 'react'
 
 import { MovieContainer } from 'componet/MovieContainer';
 
-export const PopularMovieList = ({ movieArray }) => {
+export const MovieList = ({ movieArray }) => {
     return (
         <section className="movie-list">
             {movieArray.map(movie => {
