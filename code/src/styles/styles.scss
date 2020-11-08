@@ -13,7 +13,7 @@ body {
   color: $cream;
 }
 
-/*** LIST PAGEs ***/
+/*** LIST PAGES ***/
 
 /*--- List Header ---*/
 
@@ -143,7 +143,7 @@ body {
   }
 }
 
-/*--- List ---*/
+/*--- List Grid ---*/
 
 .list {
   display: grid;
@@ -198,8 +198,6 @@ body {
 }
 
 /*** MOVIE DETAIL PAGE ***/
-
-/*--- List Header ---*/
 
 .detail {
   display: grid;
@@ -313,6 +311,7 @@ body {
 }
 
 /*** LOADER PAGE ***/
+
 .loader {
   display: flex;
   justify-content: center;
@@ -349,9 +348,6 @@ body {
   text-decoration: none;
   letter-spacing: 4px;
   position: relative;
-  // text-transform: uppercase;
-  // letter-spacing: 8px;
-  // font-size: 20px;
   padding: 8px;
   border: none;
   box-shadow: inset 0 0 0 1px $cream;
@@ -470,7 +466,7 @@ body {
   }
 }
 
-/*Loader animation*/
+/*** ANIMATIONS ***/
 @keyframes spin {
   0% {
     transform: rotate(0deg);

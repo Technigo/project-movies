@@ -18,4 +18,5 @@ const MovieThumb = ({ id, poster_path, name, title, release_date }) => {
     </article>
   );
 };
+
 export default MovieThumb;

@@ -12,12 +12,6 @@ const MovieList = ({ children }) => {
     children ? children : 'now_playing'
   }?api_key=${API_KEY}&language=en-US&page=1`;
 
-  // 	The React docs say that you can use props.children on
-  //components that represent ‘generic boxes’ and that ‘don’t know their children ahead of time’.
-  //For me, that didn’t really clear things up.
-  //I’m sure for some, that definition makes perfect sense but it didn’t for me.
-  // My simple explanation of what this.props.children does is that it is used
-  //to display whatever you include between the opening and closing tags when invoking a component.
   useEffect(() => {
     fetch(MOVIES_URL)
       .then(result => {

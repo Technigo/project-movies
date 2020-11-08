@@ -9,6 +9,7 @@ const ListHeader = ({ onClick }) => {
   const onMenuClick = () => {
     setShowMenu(!showMenu);
   };
+
   const categories = [
     {
       category: 'Popular',

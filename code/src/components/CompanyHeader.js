@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ButtonBack from './ButtonBack';
 
 const CompanyHeader = ({ homepage, logo_path, name }) => {
