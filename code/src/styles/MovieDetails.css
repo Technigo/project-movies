@@ -87,6 +87,7 @@
   .details-poster {
     align-self: center;
     position: relative;
+    width: 200px;
   }
 
   .details-container {
@@ -102,9 +103,6 @@
 }
 
 @media (max-width: 523px) {
-  .details-poster {
-    width: 220px;
-  }
   .details-container {
     font-size: 12px;
   }
@@ -118,5 +116,9 @@
   .back-link {
     margin-top: 30px;
     margin-left: 100px;
+  }
+
+  .details-poster {
+    width: 180px;
   }
 }
