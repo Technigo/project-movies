@@ -3,20 +3,17 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { MovieList } from './Components/MovieList'
 import { MovieDetails } from './Components/MovieDetails'
 
-export const App = () => {
-  return (
-    <div>
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" exact>
-            <MovieList />
-          </Route>
-          <Route path="/movie/:movieId">
-            <MovieDetails />
-          </Route>
-        </Switch>
-      </BrowserRouter>
-    </div>
-
-  )
-}
+export const App = () => (
+  <div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact>
+          <MovieList />
+        </Route>
+        <Route path="/movie/:movieId">
+          <MovieDetails />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  </div>
+)

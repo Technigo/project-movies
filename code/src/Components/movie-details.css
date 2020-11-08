@@ -1,5 +1,5 @@
-.details-page{
-  min-height: 100vh;
+.details-page {
+  height: 100vh;
   background-size: cover;
   box-sizing: border-box;
   display: flex;
@@ -7,6 +7,7 @@
   justify-content: flex-end;
   position: relative;
   color: white;
+  background-color: black;
 }
 
 .homepage-link {
@@ -25,8 +26,7 @@
   transition: 0.3s ease;
 }
 
-
-.back-button:hover {
+.homepage-link:hover .back-button {
   margin-right: 5px;
 }
 
@@ -49,10 +49,7 @@
 .movie-title {
   display: block;
   font-size: 2em;
-  margin-block-start: 0.67em;
-  margin-block-end: 0.67em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  margin-top: 0.67em 0;
   font-weight: bold;
 }
 
@@ -66,8 +63,5 @@
 .movie-overview {
   max-width: 400px;
   display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  margin-top: 1em 0;
 }
