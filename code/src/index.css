@@ -1,40 +1,237 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
- background-color: black;
- box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1{
+  color:white;
 }
 
-.movie-list{
-  display:flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  
- 
+.movie-cards-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.movie-card{
-  
+
+.movie-card {
+  width: 100%;
+  position: relative;
+}
+
+.movie-card img {
   width: 100%;
 }
-.movie-card-details{
-  display:none;
-}
-.movie-card-container:hover .movie-card-details{
-  display:flex;
+
+.text-over-movie-card {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
+  display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: flex-end;
+}
+
+.movie-card:hover .text-over-movie-card {
+  visibility: visible;
+  opacity: 1;
+}
+
+.text-over-movie-card h2 {
+  margin-bottom: 0;
+  font-size: 25px;
+  margin-left: 50px;
   
 }
-.movie-card-container:hover .movie-card-img {
-  filter: brightness(40%);
+
+.text-over-movie-card p {
+  margin-left: 45px;
+  margin-top: 10px;
+  margin-bottom: 70px;
+}
+
+.movie-details-page {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
+
+.movie-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.movie-details-container img {
+  width: 60%;
+  border: 4px solid white;
+}
+
+.movie-rating-text {
+  color: #db2500;
+  text-align: center;
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.movie-overview-text {
+  text-align: center;
+  padding: 20px;
+  margin-top: 0;
+  font-size: 17px;
+}
+
+.movie-details-text {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  width: 50%;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.movie-details-container h2 {
+  font-size: 30px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.movie-details-page a {
+  text-decoration: none;
+}
+
+.arrow {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.back-movies-text {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.back-movies-text:hover {
+  margin-left: 10px;
+}
+
+.back-arrow-text {
+  display: flex;
+  height: 20px;
+  padding-top: 15px;
+  margin-left: 15px;
+  margin-bottom: 30px;
+}
+
+/* Styling for tablet view */
+@media (min-width: 667px) and (max-width: 1024px) {
+  
+  .movie-card {
+    width: 50%;
+  }
+
+  .text-over-movie-card h2 {
+    font-size: 30px;
+    margin-left: 25px;
+    margin-bottom: 0;
+  }
+
+  .text-over-movie-card p {
+    margin-left: 25px;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  .movie-cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .movie-details-text {
+    width: 50%;
+    padding: 10px;
+    margin: 20px 0;
+  }
+}
+
+/* Styling for desktop view */
+@media (min-width: 1024px) {
+
+  .movie-card {
+    width: 25%;
+  }
+
+  .text-over-movie-card h2 {
+    margin-bottom: 0;
+    font-size: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .text-over-movie-card p {
+    margin-left: 25px;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  .movie-cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .arrow {
+    width: 35px;
+    margin-right: 17px;
+  }
+  
+  .back-movies-text {
+    font-size: 25px;
+    margin-top: 5px;
+  }
+  
+  .back-arrow-text {
+    height: 35px;
+  }
+
+  .movie-details-container {
+    margin-top: 250px;
+    margin-left: 120px;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  
+  .movie-details-container img {
+    width: 20%;
+    min-width: 350px;
+    border: 5px solid white;
+  }
+
+  .movie-details-text {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-left: 30px;
+  }
+
+  .movie-rating-text, .movie-details-text h2, .movie-overview-text {
+    text-align: left;
+  }
+
+  .movie-overview-text {
+    padding: 15px 0;
+  }
+ 
 }
