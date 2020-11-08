@@ -4,12 +4,16 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import { MovieList } from '../pages/MovieList'
 import { MovieDetails } from '../pages/MovieDetails'
 import { NotFound } from '../pages/NotFound'
+import { Nav } from './Nav'
 
 import '../styles/app.css'
 
 export const App = () => {
+
   return (
     <BrowserRouter>
+    <main className='main__grid'>
+      <Nav/>
       <Switch>
         <Route path='/' exact>
           <MovieList />
@@ -25,6 +29,7 @@ export const App = () => {
         </Route>
         <Redirect to='/404' />
       </Switch>
+      </main>
     </BrowserRouter>
   )
 }

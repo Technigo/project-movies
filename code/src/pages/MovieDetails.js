@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { DETAILS_URL, IMAGE_URL, BACKGROUND_URL } from '../components/URLS'
-import { Nav } from '../components/Nav'
 
 import '../styles/moviedetails.css'
 
@@ -27,8 +26,7 @@ export const MovieDetails = () => {
   }
 
   return (
-    <main className='main__grid'>
-      <Nav />
+    
       <section
         className='details__background'
         style={
@@ -39,8 +37,6 @@ export const MovieDetails = () => {
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              /* backgroundAttachment: 'fixed',
-              position: 'relative' */
             }
         }
       >
@@ -70,6 +66,5 @@ export const MovieDetails = () => {
           </div>
         </div>
       </section>
-    </main>
   )
 }

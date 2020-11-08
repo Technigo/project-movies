@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 import { Movie } from '../components/Movie'
-import { Nav } from '../components/Nav'
-import { MOVIELIST__URL, TOP_RATED__URL, UPCOMING__URL } from '../components/URLS'
+import { MOVIELIST__URL, NOW_PLAYING__URL, TOP_RATED__URL, UPCOMING__URL } from '../components/URLS'
 
 import '../styles/movielist.css'
 
 export const MovieList = () => {
-  const [movies, setMovies] = useState([])
+  const [movies, setMovies] = useState(['popular'])
   const { category } = useParams();
 
   const getURL = (category) => {
@@ -16,7 +15,10 @@ export const MovieList = () => {
       return TOP_RATED__URL
     } else if(category==='upcoming'){
       return UPCOMING__URL
-    } return MOVIELIST__URL
+    }  else if(category==='now_playing'){
+      return NOW_PLAYING__URL
+    }
+    return MOVIELIST__URL
   }
 
   const getMovieList = () => {
@@ -35,8 +37,7 @@ export const MovieList = () => {
   }, [])
 
   return (
-    <main className='main__grid'>
-      <Nav/>
+   
       <section className='movielist__container'>
         {movies.map((movie) => (
           <Link key={movie.id} to={`movie/${movie.id}`}>
@@ -44,6 +45,5 @@ export const MovieList = () => {
           </Link>
         ))}
       </section>
-    </main>
   )
 }
