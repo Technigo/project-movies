@@ -29,13 +29,9 @@
   margin: 45px;
   position: absolute;
   color: #fff;
-
-  /* Start as invisible */
-  visibility: hidden;
+  visibility: hidden;  /* Start as invisible */
   opacity: 0;
-  
-  /* Specifies the animation time */
-  -webkit-transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out; /* Specifies the animation time */
   -moz-transition: opacity 0.4s ease-in-out;
   -o-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;

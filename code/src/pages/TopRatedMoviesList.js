@@ -10,7 +10,7 @@ export const TopratedMoviesList = () => {
     fetch(TOPRATED_MOVIES_URL)
     .then(res => res.json())
     .then(json => {
-      setTopratedMovies(json.results)
+      setTopratedMovies(json.results);
     })
   }, []);
 

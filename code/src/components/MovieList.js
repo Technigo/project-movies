@@ -15,7 +15,7 @@ export const MovieList = () => {
   }, []);
 
   // Send the results array to MovieThumb component 
-  // where we pick the objects we need
+  // where we pick the objects we want to display
   return (
     <section className="poster-container">
       {movies.map((movie) => (

@@ -11,7 +11,7 @@ export const MoviesByTheme = () => {
     fetch(themeUrl)
     .then(res => res.json())
     .then(json => {
-      setThemeMovies(json.results)
+      setThemeMovies(json.results);
     })
   }, [themeUrl]);
 

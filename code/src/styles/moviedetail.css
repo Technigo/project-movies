@@ -61,31 +61,12 @@
   margin: 20px;
 }
 
-.more-movies {
-  margin-left: 20px;
-  text-decoration-line: none;
-  -moz-text-decoration-line: none;
-  -webkit-text-decoration-line: none;
-  color: #fff;
-  appearance: none;
-  background: rgba(0,0,0,.5);
-  border: none;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  sans-serif;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.more-movies:hover {
-  font-weight: bold;
-}
-
 /* Hover effect to make it easier to read based on background */
-.movie-heading:hover, .overview:hover, .more-movies:hover, .similar-movies-heading:hover, .nosimilarmoviesfound-box:hover {
+.movie-heading:hover, .overview:hover, .similar-movies-heading:hover {
   text-shadow: 1.5px 1px 2px #000;
 }
 
+/* Container with similar movies */
 .similar-movies-container {
   display: flex;
   flex-wrap: wrap;
@@ -101,11 +82,6 @@
 
 .similar-movie-poster-image:hover {
   border: 3px solid white;
-}
-
-.nosimilarmoviesfound-box {
-  padding: 40px 20px;
-  border: 5px solid #fff;
 }
 
 @media (max-width: 1024px) {
@@ -148,7 +124,7 @@
   }
 
   .background-picture {
-    height: 2250px;
+    height: 2000px;
   }
 
   .back-link {

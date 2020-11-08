@@ -19,10 +19,10 @@ export const MovieDetail = () => {
         setMovies(json);
       })
       .catch((error) => {
-        console.log(error);
       })
   }, [id]);
 
+  // Fetching similar movies API based on the id of the currently showed movie
   const [similarmovies, setSimilarMovies] = useState([]);
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}/similar?api_key=${API_KEY}&language=en-US&page=1`)

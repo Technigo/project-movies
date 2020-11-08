@@ -21,6 +21,7 @@
   -webkit-transform: rotate(-225deg);
 }
 
+/* When hovering the back-button */
 .back-button:hover {
   font-size: 18px;
   letter-spacing: 3px;
