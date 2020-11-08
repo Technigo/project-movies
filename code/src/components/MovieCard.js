@@ -11,7 +11,7 @@ const MovieCard = ({
     <Link to={`/movies/${id}`}>
       <img src={`https://image.tmdb.org/t/p/w342${poster_path}`} alt={title} ></img>
       <div className="details">
-        <h1 className='title'>{title}</h1>
+        <h1>{title}</h1>
         <p>Released: {release_date}</p>
       </div>
     </Link>

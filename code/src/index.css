@@ -25,6 +25,8 @@ main {
   padding: 0 50px;
 }
 
+/* HEADER */
+
 header {
   font-size: 20px;
   font-weight: bold;
@@ -52,6 +54,8 @@ header select {
   font-size: inherit;
   font-weight: inherit;
 }
+
+/* MOVIE LIST */
 
 .popular-page {
   display: flex;
@@ -95,6 +99,8 @@ header select {
   justify-content: flex-end;
 }
 
+/* MOVIE DETAILS */
+
 .detail-page {
   position: relative;
 }
@@ -120,7 +126,7 @@ header select {
 }
 
 .detail-page .background {
-  min-height: 84vh;
+  min-height: 82vh;
   display: flex;
   background-size: cover;
   flex-direction: column;
@@ -152,12 +158,14 @@ header select {
   margin-left: 10px;
 }
 
+/* LOADING AND NOT FOUND */
+
 .message {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 82vh;
 }
 
 /* MEDIA QUERIES */

@@ -44,9 +44,9 @@ const MovieDetails = () => {
           </a>
           <div className='background' style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
             <div className='summary'>
-              <img className='cover' src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} ></img>
+              <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} ></img>
               <div className="details">
-                <h1 className='title'>
+                <h1>
                   {movie.title}
                   <span className='rating'>{movie.vote_average}/10</span>
                 </h1>
