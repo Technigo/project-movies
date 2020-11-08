@@ -8,7 +8,7 @@ export const MovieDetails = () => {
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=057cd4e552ae112195cad4ea9c32ccdb&language=en-US`)
+    fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=10f97b185c42758de306cf613370d0c8&language=en-US`)
       .then((res) => res.json())
       .then((json) => {
           setMovies(json)

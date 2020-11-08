@@ -1,11 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0px;
     background-color: black;
     color: white;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 .movie-section {
