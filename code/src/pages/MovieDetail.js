@@ -25,6 +25,8 @@ const MovieDetail = () => {
     return ", ";
   };
 
+  // testing this double fetch-style:
+
   useEffect(() => {
     Promise.all([fetch(URL), fetch(URL_CREDITS)])
       .then((res) => {
@@ -48,12 +50,8 @@ const MovieDetail = () => {
   }, [movieId, URL, URL_CREDITS]);
 
   if (status === 404) {
-    console.log("Status 404");
     history.push("/404");
   }
-
-  console.log("Movie", movie);
-  console.log("Credits", credits);
 
   return (
     <>

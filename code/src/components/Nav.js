@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import useDetectOutsideClick from "./UseDetectOutsideClick";
 import "./nav.css";
 
+// I wanted to do a dropdown, found this "dropdownRef"-code below and tryed it out!
+
 const Nav = () => {
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
