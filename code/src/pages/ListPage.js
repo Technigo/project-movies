@@ -8,8 +8,8 @@ export const ListPage = () => {
   const [tvShowList, setTvShowList] = useState([]);
 
   const fetchTvShows = () => {
-  const TV_URL = `${API_URL}popular?&api_key=${API_KEY}&page_1`;
-    
+    const TV_URL = `${API_URL}popular?&api_key=${API_KEY}&page_1`;
+
     fetch(TV_URL)
       .then((res) => res.json())
       .then((tvShowList) => {
@@ -25,7 +25,7 @@ export const ListPage = () => {
 
   return (
     <section className="tvshow-list--container">
-      {tvShowList.map(tvshow => (
+      {tvShowList.map((tvshow) => (
         <TvShowThumb key={tvshow.id} {...tvshow} />
       ))}
     </section>

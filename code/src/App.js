@@ -8,7 +8,16 @@ export const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <header>My header</header>
+        <nav className="navbar--container">
+          <p className="navbar_info">Popular tv-shows 
+            <span 
+              role="img" 
+              aria-label="popcorn-emoji" 
+              className="emoji"
+            > 🍿
+            </span>
+          </p>
+        </nav>
         <Switch>
           <Route exact path="/" >
             <ListPage />

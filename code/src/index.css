@@ -18,12 +18,34 @@ code {
     monospace;
 }
 
+.navbar--container {
+  position: relative;
+  height: 40px;
+}
+
+.navbar_info {
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+.emoji {
+  margin-left: 6px;
+}
 .tvshow-list--container {
   display: flex;
   flex-wrap: wrap;
 }
 
-.tvshow__link {
+.tvshow--link {
   color: #fff;
   width: 25%;
   position: relative;
@@ -69,13 +91,10 @@ code {
 
 .detail--container {
   min-height: 100vh;
-  display: flex;
   background-size: cover;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 
-.detail_info--container {
+.detail-info--container {
   display: flex;
   align-items: flex-end;
   padding: 50px;
@@ -86,11 +105,15 @@ code {
 }
 
 .detail_info__textbox {
+  /*width: 40%;*/
   margin-left: 20px;
   color: #fff;
+
+  display: flex;
+  flex-direction: column;
 }
 
-.detail_info_textbox__heading {
+.detail_info_overview_textbox__heading {
   font-size: 24px;
 }
 
@@ -102,4 +125,8 @@ code {
 
 .detail_info_textbox__text {
   margin: 15px 0;
+}
+
+.detail_info_textbox__subheader {
+  font-size: 20px;
 }
