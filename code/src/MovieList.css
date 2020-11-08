@@ -64,6 +64,11 @@ code {
   min-width: 1352px;
 }
   
+.eachMovieContainer { /* wraps eachMovie and details */
+  position: relative;
+  background: #000;
+}
+
 .eachMovie {
   width: 338px;
   height: 508px;
@@ -85,6 +90,7 @@ code {
 }
   
 .movieDetails1:hover {
+  transition: 0.4s ease-in-out;
   opacity: 1;
 }
   

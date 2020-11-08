@@ -19,7 +19,8 @@ export const MovieList = () => {
         <div className="allMovies">
             {movies.map((movies) => (  // map over all movies and for each one display: img, title & release date 
                 <div key={movies.id}>
-                <div className="eachMovie">
+                <div className="eachMovieContainer">
+                    <div className="eachMovie">
                     <Link to={`/movie/${movies.id}`}>
                         <img className="movieThumbnail" src={`https://image.tmdb.org/t/p/w780${movies.poster_path}`} alt="{movies.title}" />
                             <div className="movieDetails1">
@@ -27,6 +28,7 @@ export const MovieList = () => {
                                     <p className="releaseDate"> Released {movies.release_date} </p>
                             </div>
                     </Link>  
+                    </div>
                 </div>
                 </div>
             ))}         

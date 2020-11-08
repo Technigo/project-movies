@@ -1,3 +1,4 @@
+/* MOBILE VIEW */
 .movieContainer {
     display: flex;
     flex-direction: row;
@@ -10,7 +11,7 @@
 .button {
     position: absolute;
     margin: 10px 0 0 70px;
-    width: 90px;
+    width: 130px;
     height: 30px;
 }
 
