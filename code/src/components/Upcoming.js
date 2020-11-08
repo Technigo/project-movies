@@ -12,7 +12,7 @@ export const Upcoming = () => {
         .then((json) => {
             setUpcoming(json.results)
         });
-}, []);
+}, [UPCOMING]);
 return (
     <section className="movie-list">
         {upcoming.map((movie) => (

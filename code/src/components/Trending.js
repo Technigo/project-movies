@@ -12,7 +12,7 @@ export const Trending = () => {
         .then((json) => {
             setTrending(json.results)
         });
-    }, []);
+    }, [TRENDING]);
 
     return (
         <section className="movie-list">
