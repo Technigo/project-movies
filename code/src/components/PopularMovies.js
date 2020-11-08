@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
 
-import { MOVIES_URL } from '../urls'
-import { MoviePoster } from '../components/MoviePoster'
+import { POPULAR_URL } from '../urls'
+import { MoviePoster } from './MoviePoster'
 import '../styles/MovieList.css'
 
-export const MovieList = () => {
+export const PopularMovies = () => {
 
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
-        fetch(MOVIES_URL)
+        fetch(POPULAR_URL)
             .then(response => response.json())
             .then(json => setMovies(json.results))
            }, [])

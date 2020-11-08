@@ -1,72 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Signika:wght@700&display=swap");
+
 .movies-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .movie-poster-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-  }
-  
-  .poster-wrapper {
-    position: relative;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 1) 12%,
-      rgba(72, 72, 72, 1) 46%,
-      rgba(24, 24, 24, 1) 79%
-    );
-  }
-  .movie-poster {
-     object-fit: cover;
-    -webkit-transition: opacity 0.4s ease-in-out;
-    -moz-transition: opacity 0.4s ease-in-out;
-    -o-transition: opacity 0.4s ease-in-out;
-    transition: opacity 0.4s ease-in-out;
-  }
-  
-  .poster-wrapper:hover .movie-poster {
-    opacity: 0.5;
-  }
-  
-  .poster-description {
-    /*  overlay  */
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 10px;
-  
-    /* position the content */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-  
-    /* Other styling  */
-    color: #fff;
-    font-size: 32px;
-  
-    /* Start as invisible */
-    visibility: hidden;
-    opacity: 0;
-  
-    /* Specify the animation time */
-    -webkit-transition: opacity 0.4s ease-in-out;
-    -moz-transition: opacity 0.4s ease-in-out;
-    -o-transition: opacity 0.4s ease-in-out;
-    transition: opacity 0.4s ease-in-out;
-  }
-  
-  .release {
-    font-size: 20px;
-  }
-  .poster-wrapper:hover .poster-description {
-    visibility: visible;
-    opacity: 1;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-poster-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poster-wrapper {
+  position: relative;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 12%,
+    rgba(72, 72, 72, 1) 46%,
+    rgba(24, 24, 24, 1) 79%
+  );
+  margin: 15px;
+}
+
+.movie-poster {
+  background-size: cover;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.poster-wrapper:hover .movie-poster {
+  opacity: 0.5;
+}
+
+.poster-description {
+  color: #fff;
+  font-size: 32px;
+
+  /*  overlay  */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 10px;
+  font-family: "Signika", sans-serif;
+
+  /* position the content */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  /* Start as invisible */
+  visibility: hidden;
+  opacity: 0;
+
+  /* Specify the animation time */
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.release {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+.poster-wrapper:hover .poster-description {
+  visibility: visible;
+  opacity: 1;
+}

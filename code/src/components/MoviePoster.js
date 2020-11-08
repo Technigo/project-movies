@@ -15,6 +15,6 @@ export const MoviePoster = ({ title, release_date, poster_path, id  }) => {
                 </div>
             </div>
         </section>
-        </Link>
+        </Link> 
     )
 }

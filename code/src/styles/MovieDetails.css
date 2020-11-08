@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&family=Montserrat&display=swap");
+
 .background-image {
   background-size: cover;
   position: relative;
   background-repeat: no-repeat;
-  /* background-color: linear-gradient(rgba(0,0,0,0) 20%, rgb(0,0,0) 100%); */
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .movie-detail-page {
@@ -10,8 +13,9 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  height: 90vh;
+  height: 75vh;
   color: #fff;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 .details-container {
@@ -27,16 +31,24 @@
   color: #fff;
   margin-left: 30px;
   justify-content: flex-end;
+  font-size: 17px;
 }
 
 .details-poster {
   border: 4px solid #fff;
 }
 
+.title {
+  font-size: 25px;
+}
 .vote {
-  font-size: 17px;
+  font-size: 15px;
   color: #8b0000;
   margin-left: 10px;
+}
+
+.overview {
+  font-family: "Montserrat", sans-serif;
 }
 
 .back-link {
@@ -57,13 +69,17 @@
   margin-right: 10px;
 }
 
-@media (max-width: 633px) {
+@media (max-width: 678px) {
   .title {
     display: flex;
     flex-direction: column;
   }
   .details-poster {
-    width: 250px;
+    width: 240px;
+  }
+
+  .movie-detail-page {
+    justify-content: center;
   }
 }
 
@@ -77,20 +93,29 @@
     flex-direction: column;
     font-size: 15px;
   }
-  
-  .back-link{
+
+  .back-link {
     position: absolute;
     margin-left: 150px;
     z-index: 1;
   }
 }
 
-@media (max-width: 380px){
+@media (max-width: 523px) {
   .details-poster {
-    height: 320px; 
+    width: 220px;
+  }
+  .details-container {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 472px) {
+  .details {
+    font-size: 12px;
   }
 
-  .back-link{
+  .back-link {
     margin-top: 30px;
     margin-left: 100px;
   }
