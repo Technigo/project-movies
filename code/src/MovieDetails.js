@@ -18,7 +18,7 @@ export const MovieDetails = () => {
 
     return (
         <div className="movieContainer" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`}} alt={`${movieDetails.title}`}>
-                <>
+                <> 
                 <Link to="/">
                     <div className="button">
                         <p className="buttonText"><span className="icon" role="img">⬅️ </span> Movies</p>
