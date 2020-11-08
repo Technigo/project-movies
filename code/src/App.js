@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Redirect} from "react-router-dom";
 
-// import { MovieDetails } from "pages/MovieDetails";
+
 import { MovieList } from "components/MovieList";
 import { NotFound } from "components/NotFound";
 import { MovieDetails } from  "components/MovieDetails";

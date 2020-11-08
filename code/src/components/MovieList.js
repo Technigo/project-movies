@@ -28,12 +28,14 @@ export const MovieList = () => {
   );
 };
 
-// Exp: deconstructed props as we send them in to moviethumb, gives acess to more API... 
-// {/* <MovieThumb  key={movie.id} {...movie} /> */} why did this not show all in the browser for me?
+// --------------------saved notes -----------
 
-//  to render something for each movie need Map, we have to store the jsoan/list of movies so useState is needed, variabel for rendering and and a function to set that variabel.
-// initial value fro list of movies lika med [].
-// want to render same comp/html for each Gamepad, but use specific info for each Gamepad.apply, Mag gives us ability to put out muliply pices och info.
-// useffect = only do this one time waint until dependencis scahnge thaen do thia again.....
+// Exp: deconstructed props as we send them into moviethumb, gives acess to more API... 
+// {/* <MovieThumb  key={movie.id} {...movie} /> */} 
+
+//  to render something for each movie needs Map, we have to store the json/list of movies so useState is needed, variabel for rendering and a function to set that variabel.
+// initial value from list of movies, empty array[].
+// want to render same comp/html for each movie, but use specific info for each, map gives us ability to put out muliply pices och info.
+// useffect = only do this one time waint until dependencis change then try again.....
 
 

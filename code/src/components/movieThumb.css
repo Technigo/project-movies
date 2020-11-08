@@ -1,56 +1,81 @@
-
-/* grandparent? */
 .movie-list {
   /* border: greenyellow solid; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  /* justify-content: space-evenly; */
   width: 100%;
   margin: 0px;
   padding: 0px;
-  }
+  word-wrap: break-word;
+}
 
-  .movie-image{
-    /* border: blue solid; */
-    position: relative;
-    text-decoration: none;
-    z-index: 1;
-  }
-  
-  
-  .movie-image:hover  {
-    filter: brightness(40%);
-    width: 100%;
-    z-index: 0;
-    transition: all .4s ease-in-out;
-  }
-  
-  .movie-image:hover .movie-name {
-    display: block;
-  }
-  
+.movie-image {
+  /* border: blue solid; */
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+  margin: 0px;
+  padding: 0px;
+}
 
-  .title-relasedate-box {
-      position: absolute;
-      /* display: none; */
-      z-index: 2;
-      text-decoration: none;
-      color: white;
-      padding: 15px;
-    }
+.movie img {
+  width: 100%;
+  z-index: 0;
+  transition: all 0.3s ease-in-out;
+  margin: 0px;
+  padding: 0px;
+}
 
-    
-  
-  /*child syskon1   h1 */
-  .movie-name {
-    position: absolute;
-    /* display: none; */
-    /* text-decoration: none; */
-    color: white;
-    padding: 15px;
-    border: greenyellow solid;
+.movie-image:hover {
+  filter: brightness(50%);
+}
 
+.movie-image:hover + .title-relasedate-box {
+  display: block;
+}
+
+.title-relasedate-box {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  text-decoration: none;
+  color: white;
+  padding-right: 20px;
+  background-color: rgba(0, 0, 0, 0.131);
+  align-content: flex-start;
+  /* display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; */
+}
+
+.movie-release {
+  color: white;
+
+  font-size: 25px;
+  padding-left: 40px;
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+.movie-name {
+  color: white;
+  font-family: "Lucida Console", Courier, monospace;
+  /* border: greenyellow solid;  */
+  font-size: 40px;
+  max-width: 480px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .movie-list {
+    width: 33%;
   }
- 
+}
+
+@media (max-width: 680px) {
+  .movie-list {
+    width: 50%;
+  }
+}
