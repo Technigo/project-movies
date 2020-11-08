@@ -3,6 +3,10 @@ footer {
   min-height: 12vh;
   text-align: center;
   padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 footer div {
