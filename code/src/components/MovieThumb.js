@@ -1,28 +1,27 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-export const MovieThumb = ({name, background_image, release_date, id}) => {
+export const MovieThumb = ({ name, background_image, releseDate, id }) => {
   return (
-  <Link to={`/movie/${id}`}>
-   <section className="movie-thumb">
-     <h1 className="movie-name">{name}</h1> 
-      <div className="movie-thumb-image-wrapper">
-    <img className="movie-thumb-image" src={`http://image.tmdb.org/t/p/w300/${background_image}`} alt={name}/>
-<p className="movie-thumb-image-voted">{release_date} 
-</p>
-      </div>
-
-      </section>
-      </Link>
-);
+   
+    <Link to={`/movie/${id}`}>
+       <section className="movie-list">
+          <img
+            className="movie-image"
+            src={`http://image.tmdb.org/t/p/w342/${background_image}`}
+            alt={name}
+          />
+          <div className="title-relasedate-box">
+          <p className="movie-release">{releseDate}</p>
+          <h1 className="movie-name">{name}</h1>
+        
+          </div>
+          
+          </section>
+    </Link>
+  
+  );
 };
-
-
-
-
-
-
-
 
 // Notes------------------------------
 
