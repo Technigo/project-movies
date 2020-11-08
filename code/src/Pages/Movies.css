@@ -1,0 +1,64 @@
+body {
+    margin: 0px;
+    background-color: black;
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.movie-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie-section a {
+    width: 100%;
+    text-decoration: none;
+    position: relative;
+}
+
+.movie-poster {
+    width: 100%;
+    float: left;
+}
+
+.movie-info h1 {
+    font-size: 3vw;
+}
+
+.movie-info h2 {
+    font-size: 2vw;
+}
+
+.movie-info {
+    display: block;
+    color: white; 
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    z-index: 2;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.movie-link:hover img {
+    filter: brightness(20%);
+}
+
+.movie-link:hover .movie-info {
+   opacity: 1;
+}
+
+@media (min-width: 768px){
+    .movie-section a {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px){
+    .movie-section a {
+        width: 25%;
+    }
+}
