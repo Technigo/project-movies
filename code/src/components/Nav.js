@@ -13,21 +13,20 @@ export const Nav = () => {
 
       <ul>
         <li>
-          <NavLink to="/" exact>
+          <NavLink to="/">
             Now Playing
           </NavLink>
         </li>
         <li>
-          <NavLink to="top">
+          <NavLink to="../top">
             Top Rated
           </NavLink>
         </li>
         <li>
-          <NavLink to="soon">
+          <NavLink to="../soon">
             Coming Soon
           </NavLink>
         </li>
-
       </ul>
     </nav>
   )
