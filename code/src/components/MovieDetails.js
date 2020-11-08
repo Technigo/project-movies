@@ -18,9 +18,9 @@ export const MovieDetails = () => {
         .then((res) => res.json())
         .then((json) => {
             setMovies(json);
-        
-        });
-        // .catch((error) => console.log(error) 
+        })
+        .catch((error) => { 
+        })
 
     }, [MOVIE_DETAILS]);
 
@@ -28,7 +28,7 @@ export const MovieDetails = () => {
         setLoading(false);
     }, [movies]);
 
-    if (loading) {
+    if (loading === true) {
         return (
             <Loader />
         )

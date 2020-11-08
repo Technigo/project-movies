@@ -11,3 +11,18 @@ nav {
     margin: 25px;
     font-size: 25px;
 }
+
+@media (max-width: 700px) { 
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .nav-links {
+        font-size: 10px;
+    }
+}
