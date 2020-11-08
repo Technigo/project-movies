@@ -1,13 +1,18 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+With React and fetching from a movie API this weeks assignment were to create a multi-page movie site with different fetches from different APIS as well as one page for the movie details. The key were to work with:
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+  - Fetch from API's in React
+  - useEffect
+  - useState
+  - BrowserRouter, Switch and Route
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I think React is super fun and great to work with. This week my biggest challenge has been to understand the API I'm fetching from, how to navigate and find the right link and get the key to work. I have also have had some styling challenges as we got a set-style to try to adapt as good as we could. 
+
+If I would have more time I'd defenitely add the "select" to scroll between different pages, I would also have invested some more time with styling my "loader" and "error" page, for now I just kept them plain. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+http://watchamovie.netlify.app/
