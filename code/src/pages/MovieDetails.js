@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Link, useParams } from 'react-router-dom';
 
+
 import './moviedetails.css';
-import BackArrow from '../components/BackArrow';
+import BackArrow  from '../components/BackArrow';
 
 
 export const MovieDetails = () => {
@@ -21,7 +22,7 @@ export const MovieDetails = () => {
     .then(data => {
       setMovieDetails(data)
   });
-}, [URL_DETAILS]);
+}, [URL_DETAILS, movieId]);
   // }, [URL_DETAILS,movieId]) it asked specififically for the url dependendencie... at first I had movieId, but why?
 
   return (
