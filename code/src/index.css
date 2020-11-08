@@ -61,7 +61,7 @@ p {
 }
 
 .movie-in-list:hover .list-details {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .movie-in-list:hover .movie-poster {
