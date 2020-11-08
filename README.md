@@ -6,9 +6,9 @@ The goal for this week was to create a multipage React application using React r
 - I started out with planning and structuring the contents of my project into two components (MovieList and MovieThumb). I also added separate components for header and the previous/back-button. After that I also added seperate pages for the movie details and a 404/not-found-page.  
 
 - The fetch of information from the API is done in two steps: 
--- The list of movies is fetched in the MovieList component, using useState to store the information from the API, useEffect and then .map() to render the list of movies, mounting the MovieThumb-component and showing each movie in a section on the page. 
+The list of movies is fetched in the MovieList component, using useState to store the information from the API, useEffect and after that .map() to render the list of movies, mounting the MovieThumb-component and showing each movie in a section on the page. 
 
--- The fetch for the details about each movie is done in the movie details-page, using the useParams hook to get the id for the path to each movie.
+- The fetch for the details about each movie is done in the MovieDetails-page, using the useParams hook and id for each movie + a specific url to collect the data and then displaying the information about the choosen movie connected to the specific id. 
 
 - React router is used in App.js to create the paths for the start-page and movie-details page. 
 
