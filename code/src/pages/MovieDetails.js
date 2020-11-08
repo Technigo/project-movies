@@ -2,7 +2,7 @@ import LoadingSpinner from "components/LoadingSpinner";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PageNotFound from "./PageNotFound";
-import { Link } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import { Button } from "components/Button";
 import { CompanyInfo } from "./CompanyInfo";
 
