@@ -1,5 +1,4 @@
 .movie-list {
-  /* border: greenyellow solid; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -8,10 +7,12 @@
   margin: 0px;
   padding: 0px;
   word-wrap: break-word;
+  
 }
 
 .movie-image {
-  /* border: blue solid; */
+  display: flex;
+  flex-grow: 1;
   position: relative;
   text-decoration: none;
   z-index: 1;
@@ -44,10 +45,6 @@
   padding-right: 20px;
   background-color: rgba(0, 0, 0, 0.131);
   align-content: flex-start;
-  /* display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column; */
 }
 
 .movie-release {
@@ -61,21 +58,25 @@
 .movie-name {
   color: white;
   font-family: "Lucida Console", Courier, monospace;
-  /* border: greenyellow solid;  */
   font-size: 40px;
   max-width: 480px;
   text-align: center;
   font-weight: bold;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 680px) {
   .movie-list {
-    width: 33%;
+    display: flex;
+    flex-direction: column;
+    
   }
 }
 
-@media (max-width: 680px) {
+@media (min-width: 1024px) {
   .movie-list {
-    width: 50%;
+    display: flex;
+    flex-direction: row;
+
   }
 }
+
