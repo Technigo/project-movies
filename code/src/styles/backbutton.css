@@ -9,6 +9,7 @@
     text-decoration: none;
     left: 50px;
     top: 50px;
+    cursor: pointer;
 }
 
 .fa {

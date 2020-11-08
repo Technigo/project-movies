@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { movies_url } from 'Urls';
+import { movieList_url } from 'Urls';
 
 import { MovieThumb } from 'components/MovieThumb';
 
@@ -12,7 +12,7 @@ export const MovieList = () => {
 
     // Fetching list of movies from API
     useEffect(() => {
-        fetch(movies_url)
+        fetch(movieList_url)
             .then((response) => response.json())
             .then((json) => setMovieList(json.results));
         }, []);

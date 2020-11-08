@@ -1,0 +1,37 @@
+/* Style for detailed movie page */
+.movie-details__background {
+    display: flex;
+    background-size: cover;
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+.movie-details__container {
+    display: flex;
+    align-items: flex-end;
+    padding: 50px;
+}
+
+.movie-details__poster {
+    border: 4px solid #f0f0f0;
+}
+
+.movie-details__info {
+    max-width: 450px;
+}
+
+.movie-details__title-rating {
+    display: inline-flex;
+    align-items: center;
+    margin: 20px 20px 0px 20px;
+}
+
+.movie-details__rating {
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+.movie-details__overview {
+    margin: 0px 20px 20px 20px;
+    line-height: 1.2;
+}
