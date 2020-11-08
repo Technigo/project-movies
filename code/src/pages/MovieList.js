@@ -14,7 +14,6 @@ const MovieList = () => {
     .then(response => response.json())
     .then(json => {
       setMovies(json.results)
-      console.log(json.results);
     })
   }, [])
   

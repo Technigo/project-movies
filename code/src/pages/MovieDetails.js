@@ -16,7 +16,6 @@ const MovieDetails = () => {
       .then(response => response.json())
       .then(json => {
         setMovie(json)
-        console.log(json);
       })
   }, [id]) //Should [id] be here as a dependency in the arry? Then the fetch wont have to be excecuted again? Is that right?
 
