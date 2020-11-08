@@ -1,13 +1,19 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+A multi-page application using React Router to browse movies fetched from themoviedb.org's API. Using placeholders in urls to access specific movies based on their ID.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The app fetches the data when components mounts using useEffect and stores it with useState. useParams from react-router-dom gets the move id from the url, so additional information can be fetched when visiting a specific movie page.
 
-## The problem
+Also added a loading state that shows a spinner while fetching new information and a drop down menu.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## CORE TECH
+
+- React
+- React Router
+- useEffect
+- useState
+- useParams
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://jonnas-movies.netlify.app/
