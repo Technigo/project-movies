@@ -17,4 +17,4 @@ None aware of.
 
 ## View it live
 
-View the project live here: https://thehappythoughts.netlify.app/
+View the project live here: https://marjaanasmovies.netlify.app/
