@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Redirect } from "react-router-dom";
 
-import "./movieDetails.css";
+import "../css/movieDetails.css";
 
 export const MovieDetails = () => {
   const { movieId, title } = useParams();
   console.log("movieId: " + movieId);
   console.log("title: " + title);
   const [movie, setMovie] = useState([]);
+  //const history = useHistory();
 
   useEffect(() => {
     fetch(
@@ -20,15 +21,16 @@ export const MovieDetails = () => {
       });
   }, [movieId]);
 
-  if (!movie.id) {
-    return <p>Not found!</p>;
-  }
-
-  return (
-    <section className="details-page" style={{
-      backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
-    }}>
-      
+  if (movie.status_code === 34) {
+    return <Redirect to="/404" />;
+  } else {
+    return (
+      <section
+        className="details-page"
+        style={{
+          backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
+        }}
+      >
         <Link to="/" className="back-button">
           <span className="fas fa-chevron-circle-left"></span>
           Movies
@@ -41,12 +43,13 @@ export const MovieDetails = () => {
           ></img>
           <div className="movie-details">
             <div className="title-rating-container">
-            <h2 className="movie-details-title">{movie.title}</h2>
-            <p className="rating">{movie.vote_average}/10</p></div>
+              <h2 className="movie-details-title">{movie.title}</h2>
+              <p className="rating">{movie.vote_average}/10</p>
+            </div>
             <p className="overview">{movie.overview}</p>
           </div>
         </div>
-      
-    </section>
-  );
+      </section>
+    );
+  }
 };

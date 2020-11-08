@@ -7,10 +7,9 @@ import {
   // UPCOMING_URL,
   // TOPRATED_URL,
 } from ".././urls";
-import "./movieList.css";
+import "../css/movieList.css";
 
 export const MovieList = () => {
-  // const [url, setUrl] = useState(POPULAR_URL);
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -35,7 +34,7 @@ export const MovieList = () => {
             ></img>
             <div className="movie-info">
               <h2 className="movie-title">{movie.title}</h2>
-              <p className="relase-date">Released {movie.release_date}</p>
+              <p className="release-date">Released {movie.release_date}</p>
             </div>
           </article>
         </Link>
