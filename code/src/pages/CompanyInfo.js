@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
-import { MovieDetails } from "./MovieDetails";
 import { Link } from "react-router-dom";
 import PageNotFound from "./PageNotFound";
 
@@ -72,10 +71,9 @@ export const CompanyInfo = () => {
                   replace
                 >
                   {company.poster_path === null ? (
-                    <h1 className="Movie-title">{company.title}</h1>
+                    <h1>{company.title}</h1>
                   ) : (
                     <img
-                      className="movieCardPoster"
                       src={`https://image.tmdb.org/t/p/w342${company.poster_path}`}
                       alt={company.title}
                     />
