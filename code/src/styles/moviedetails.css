@@ -35,3 +35,26 @@
     margin: 0px 20px 20px 20px;
     line-height: 1.2;
 }
+
+/* Media queries - responsive styling */
+
+@media (max-width: 767px) {
+    .movie-details__background {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-details__container { 
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin-top: 40%;       
+    }
+}
+
+@media (max-width: 320px) {
+
+    .movie-details__poster {
+        width: 300px;
+    }
+}
