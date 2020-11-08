@@ -10,7 +10,7 @@ What I've used:
 - React router
 - Javascript
 
-cd 
+ 
 ## View it live
+https://johannarexinprojectmovie.netlify.app/
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
