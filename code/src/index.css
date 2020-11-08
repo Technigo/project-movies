@@ -52,22 +52,19 @@ a[href]:not([class]) {
   /* border: 1px dashed salmon; */
   position: fixed;
   z-index: 2;
+  padding-left: 24px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: rgba(10,10,10,1);
+  justify-content: flex-start;
+  background: rgba(10,10,10,0.2);
   box-shadow: inset 0 4px 0 0 #FFA800;
-}
-
-.header-nav {
-  align-self: auto;
 }
 
 .movie-grid {
   /* margin: 0 auto; */
   display: grid;
   grid-template-columns: repeat(4, 0fr);
-  padding-top: 80px;
+  padding-top: 0px;
 }
 
 .movie-details-page button {
@@ -76,12 +73,13 @@ a[href]:not([class]) {
 }
 
 button {
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.5);
   border: 0;
   display: flex;
   align-items: center;
   padding: 8px 12px 8px 12px;
   border-radius: 4px;
+  margin-right: 8px;
 }
 
 button:hover {
