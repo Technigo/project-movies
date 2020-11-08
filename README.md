@@ -2,7 +2,7 @@
 
 A multipage site that shows the current most popluar movies and a details page about the selected movie when clicked. Built in React with data from the TMDB API (https://www.themoviedb.org/)
 
-## The problem
+## The process and problems
 
 The point was to use React Router to build a site with multiple pages. The detail pages about each movie is fetched dynamically using useEffect and useParams, to get the movie ID from the URL and be able to fetch the right data from the API. 
 
