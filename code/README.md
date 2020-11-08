@@ -1,19 +1,7 @@
 # Technigo React Starter App
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
-
-Add components in the `src` folder and use them in `src/app.js` to get started.
+This is an app in which you can browse 20 popular movies on a list. You can see some details on the movies by clicking them. I wanted to show upcoming movies and movies with the best rating as well so I took some inspiration from Materials UI and implemented a dropdown menu so you can filter on these preferences. I also wanted to add additional information on the page with the movie details. I decided to list the production companies so the user can filter on other movies from the company. This proved to be the hardest task in this project. I am able to show these details but only by manipulating the id of a company in the browser. I am going to fix this so the user will be able to see this page through the provided link. 
 
 ## Usage
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
 
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`

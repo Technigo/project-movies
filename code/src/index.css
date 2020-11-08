@@ -66,29 +66,32 @@ a {
 .back-button-not-found a {
   text-decoration:underline;
 }
-
-.details .background-img {
+.container{
   display: flex;
+    padding-top: 65px;
+}
+.details .background-img {
   background-size: cover;
+  height: 100vh;
 }
 
 .details img {
   border: 5px solid #fff;
-  width: 25%;
   margin: 20px;
 }
 
 .summary {
-  align-items: center;
-  padding: 50px;
-  position: relative;
-  max-width:400px
+  padding: 20px;
+  position: relative;  
 }
 
 .details.summary p {
-  max-width: 400px;
+  width: 400px;
 }
-
+.mini-poster{
+  width: 40vw;
+    height: fit-content;
+}
 .details .rating {
   font-size: 17px;
   color: red;
@@ -133,9 +136,14 @@ a {
   padding: 25px;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+.mini-poster{
+  width: 200px;
+  height: 300px;
+}  
 
-
-
+}
 
 
 

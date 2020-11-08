@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Arrow } from "../components/Arrow.svg";
 export const Button = () => {
   return (
-    <section className="backWrapper">
+    <section className="back-wrapper">
       <Link to="/">
         <div
           className="back-to-list"

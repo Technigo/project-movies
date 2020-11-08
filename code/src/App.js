@@ -5,8 +5,6 @@ import { MovieList } from "pages/MovieList";
 import { MovieDetails } from "pages/MovieDetails";
 import { CompanyInfo } from "pages/CompanyInfo";
 
-// api-key 995425e2e6cd0fcf599ff795098e1e8b
-
 export const App = () => {
   return (
     <BrowserRouter>

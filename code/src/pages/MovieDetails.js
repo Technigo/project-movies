@@ -43,29 +43,30 @@ export const MovieDetails = () => {
             alt={detail.title}
           >
             <Button />
-            <img
-              className="mini-poster"
-              src={`https://image.tmdb.org/t/p/w342${detail.poster_path}`}
-              alt={detail.title}
-            />
-            <div className="summary">
-              <h1 className="movie-title">
-                {detail.title}{" "}
-                <span className="rating">{detail.vote_average}/10</span>
-              </h1>
-              <p>{detail.overview}</p>
-              <div>
-                <h4>Produced by:</h4>
-
-                {detail.production_companies.map((company) => (
-                  <Link
-                    className="company-info"
-                    key={company.id}
-                    to={`/company/${company.id}`}
-                  >
-                    <li>{company.name}</li>
-                  </Link>
-                ))}
+            <div className="container">
+              <img
+                className="mini-poster"
+                src={`https://image.tmdb.org/t/p/w342${detail.poster_path}`}
+                alt={detail.title}
+              />
+              <div className="summary">
+                <h1 className="movie-title">
+                  {detail.title}{" "}
+                  <span className="rating">{detail.vote_average}/10</span>
+                </h1>
+                <p>{detail.overview}</p>
+                <div>
+                  <h4>Produced by:</h4>
+                  {detail.production_companies.map((company) => (
+                    <Link
+                      className="company-info"
+                      key={company.id}
+                      to={`/company/${company.id}`}
+                    >
+                      <li>{company.name}</li>
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
