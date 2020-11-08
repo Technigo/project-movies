@@ -1,13 +1,14 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is a multi-page react application that fetch data from themoviedb.org API and presents movie lists in various categories. When clicking on a movie the user is sent to a details page. If the user enters an incorrect address, a 404 page will is displayed.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started with creating the Routes and made sure that the links to the different pages worked as expected before I started with the styling.
+This week, the styling was the most difficult, it was a real challenge to get the content to end up where it supposed to.
+
+When most of the styling was done I created buttons in the header to be able to change the movie category.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://projectmovies.netlify.app/
