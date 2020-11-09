@@ -17,5 +17,3 @@ export const MovieDetailed = ({ backdrop_path, poster_path, homepage, title, rel
     </div >
   )
 }
-
-//handle the endpoints here, both missing and empty

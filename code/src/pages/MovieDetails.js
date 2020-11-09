@@ -16,7 +16,6 @@ export const MovieDetails = () => {
   const [loading, setLoading] = useState(false)
   const [status, setStatus] = useState(false)
 
-
   const getMovie = () => {
     setLoading(true)
     fetch(MOVIE_URL)
