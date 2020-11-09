@@ -1,8 +1,25 @@
 .movie-list {
 display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   width: 100%;
 
 }
+
+@media (min-width: 667px) and (max-width: 1024px) {
+    .movie-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 0.5rem;
+    }
+    
+  }
+  
+  @media (min-width: 1025px) {
+    .movie-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0.5rem;
+    }
+    
+  }

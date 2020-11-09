@@ -1,17 +1,33 @@
 .movie-thumb {
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
 }
 
-.movie-thumb-image-wrapper {
-
+.movie-thumb-wrapper {
+    position: absolute;
+    z-index: 1;
+    text-decoration: none;
+    padding: 20px;
+    max-width: 350px;
+    word-wrap: break-word;
+    display: none;
 }
+.movie-thumb-image:hover + .movie-thumb-wrapper {
+    display: block;
+}
+.movie-thumb-image:hover {
+    filter: brightness(30%);
+    cursor: pointer;
+}
+
 
 .movie-thumb-image {
-       
-      
-
+    position: relative;
+    z-index: 0;   
 }
 
-.movie-thumb-release {
-
+.movie-thumb-title {
+    font-size: 50px;
 }
