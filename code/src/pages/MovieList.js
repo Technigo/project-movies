@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react'
 
 import { MovieListed } from '../components/MovieListed.js'
 
-//const API_KEY = 'c07a4dcb1d91b54eb3b153e458e26489'
-
 export const MovieList = () => {
 
   const MOVIES_URL = 'https://api.themoviedb.org/3/discover/movie?api_key=c07a4dcb1d91b54eb3b153e458e26489&language=en-US&region=US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1'

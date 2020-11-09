@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import { MovieList } from './pages/MovieList.js'
 import { MovieDetails } from './pages/MovieDetails.js'
-import { NotFound } from './components/NotFound.js'
+import { NotFound } from './pages/NotFound.js'
 
 //const API_KEY = 'c07a4dcb1d91b54eb3b153e458e26489'
 
