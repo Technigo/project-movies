@@ -13,32 +13,27 @@ export const MovieDetails = () => {
   const MOVIE_URL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=c07a4dcb1d91b54eb3b153e458e26489`
 
   const [movie, setMovie] = useState({})
-  const [loading, setLoading] = useState(false)
-  const [status, setStatus] = useState(false)
+  const [status, setStatus] = useState(null)
 
   const getMovie = () => {
-    setLoading(true)
     fetch(MOVIE_URL)
       .then(response => {
-        setStatus(response.ok) // ok goes for status messages 200-299 (everything went ok), boolean value
+        setTimeout(() => {
+          setStatus(response.ok) // ok goes for status messages 200-299 (everything went ok), boolean value
+        }, 1990) // puts the setLoading on hold for 1990 milliseconds
         return response.json()
       })
-      .then(json => {
-        setMovie(json)
-        setTimeout(() => {
-          setLoading(false)
-        }, 1990) // puts the setLoading on hold for 1990 milliseconds
-      })
+      .then(json => setMovie(json))
   }
 
   useEffect(getMovie, [])
 
   return (
     <>
-      {loading ? <Loader /> :
+      {status === null ? <Loader /> :
         status ? <MovieDetailed key={movie.id} {...movie} /> :
           !status ? <NotFound /> :
-            null
+            <Loader />
       }
     </>
   )
