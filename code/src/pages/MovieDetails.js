@@ -42,7 +42,7 @@ export const MovieDetails = () => {
               <h2 className="movie-details-title">{movie.title}</h2>
               <p className="rating">{movie.vote_average}/10</p>
             </div>
-            {movie.original_language === "fr" ? (
+            {movie.original_language !== "en" ? (
               <p className="original-title">
                 Original title: <strong>{movie.original_title}</strong>
               </p>
