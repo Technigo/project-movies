@@ -18,15 +18,19 @@ const MovieDetails = () => {
         setMovie(json)
       })
   }, [id]) //Should [id] be here as a dependency in the arry? Then the fetch wont have to be excecuted again? Is that right?
+  //Is id really necessary since everytime I click on a movie in the list a new fetch is performed? 
+  //What would be the benefit of having id here then?
 
-  //Something is wrong with the backdrop_path below. Gets an error in the console, says undefined. 
-  //But picture still shows? What's wrong here?
   const movieDetailStyle = {
-    backgroundImage: `url("https://image.tmdb.org/t/p/w1280${movie.backdrop_path}")`,
+    backgroundImage: "",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat"
   }
 
+  if (movie.backdrop_path) {
+    movieDetailStyle.backgroundImage = `url("https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}")`
+  }
+  
   return (
     <article className="details-page" style={movieDetailStyle}>
       <div className="details-overlay"></div>
@@ -41,11 +45,13 @@ const MovieDetails = () => {
         <h3 className="back-link-heading">Back to Movie List</h3>
       </Link>
       <div className="details-summary">
-        <img
+        {movie.poster_path && 
+          (<img
           className="details-summary-poster"
           src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
           alt={movie.title}
-        />
+        />)
+        }
         <div className="details-summary-text">
           <h3 className="details-summary-heading">
             {movie.title}

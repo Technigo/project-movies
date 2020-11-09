@@ -20,7 +20,6 @@ const MovieList = () => {
   return (
     <div className="list-movie-wrapper"> 
       {movies.map((movie) => (
-        <> 
           <Link className="list-movie-item" to={`movie/${movie.id}`} key={movie.id}> 
             <img 
               className="list-movie-poster" 
@@ -31,7 +30,6 @@ const MovieList = () => {
               <p className="list-release">Release date: {movie.release_date}</p>
             </div>
           </Link>
-        </>
       ))}
     </div>
   );
