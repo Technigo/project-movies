@@ -33,7 +33,7 @@ export const MovieDetails = () => {
       {status === null ? <Loader /> :
         status ? <MovieDetailed key={movie.id} {...movie} /> :
           !status ? <NotFound /> :
-            <Loader />
+            null
       }
     </>
   )
