@@ -26,7 +26,9 @@ export const MovieDetails = () => {
       })
       .then(json => {
         setMovie(json)
-        setTimeout(() => { setLoading(false) }, 1990) // puts the setLoading on hold for 1990 milliseconds
+        setTimeout(() => {
+          setLoading(false)
+        }, 1990) // puts the setLoading on hold for 1990 milliseconds
       })
   }
 
