@@ -15,8 +15,22 @@ export const MoviePage = () => {
 
  
     return (
-        <section>
-        {movie.name}
-        </section>
+        
+        <section className='movie-page-background' 
+        style={{backgroundImage:`linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}}>
+
+        
+        <div className='movie-page-container'>
+          <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}/>
+          <div className='movie-details'>
+            <h1>{movie.title}
+              <span className='movie-rating'>
+                {movie.vote_average}
+              </span>
+            </h1>
+            <p>{movie.overview}</p>
+          </div>
+        </div>
+      </section>
           );
         };

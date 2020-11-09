@@ -12,7 +12,7 @@ export const App = () => {
         <Route path="/" exact>
           <MovieList />
         </Route>
-        <Route path="/movie/:id" exact>
+        <Route path="/movie/:id">
           <MoviePage />
         </Route>
         <Route path="/404">
