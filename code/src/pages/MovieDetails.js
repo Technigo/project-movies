@@ -19,6 +19,8 @@ const MovieDetails = () => {
       })
   }, [id]) //Should [id] be here as a dependency in the arry? Then the fetch wont have to be excecuted again? Is that right?
 
+  //Something is wrong with the backdrop_path below. Gets an error in the console, says undefined. 
+  //But picture still shows? What's wrong here?
   const movieDetailStyle = {
     backgroundImage: `url("https://image.tmdb.org/t/p/w1280${movie.backdrop_path}")`,
     backgroundSize: "cover",
