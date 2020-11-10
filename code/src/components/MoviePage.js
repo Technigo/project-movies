@@ -1,6 +1,8 @@
 import React, { useEffect, useState} from 'react';
 import {  useParams } from 'react-router-dom';
 
+import './moviePage.css'
+
 export const MoviePage = () => {
     const { id } = useParams();
     const [movie, setMovie] = useState({});
@@ -23,9 +25,9 @@ export const MoviePage = () => {
         <div className='movie-page-container'>
           <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}/>
           <div className='movie-details'>
-            <h1>{movie.title}
+            <h1 className="movie-page-header">{movie.title}
               <span className='movie-rating'>
-                {movie.vote_average}
+                {movie.vote_average} {"⭐︎"}
               </span>
             </h1>
             <p>{movie.overview}</p>

@@ -23,6 +23,7 @@ export const MovieList = () => {
                 name={movie.title} 
                 background_image={movie.poster_path}
                 release={movie.release_date}
+                id={movie.id}
                 />
              ))}
         </section>
