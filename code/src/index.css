@@ -13,6 +13,7 @@ code {
 }
 
 /*MOVIE LIST*/
+
 .movie-list {
   display: flex;
   flex-wrap: wrap;
@@ -51,7 +52,7 @@ code {
 }
 
 .movie-image {
-  max-width: 400px;
+  width: 100%;
 }
 
 .movie-text {
