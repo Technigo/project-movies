@@ -9,16 +9,12 @@ export const MovieList = () => {
     const MOVIE_URL = 'https://api.themoviedb.org/3/discover/movie?api_key=3bc84b0ae751d27c186bde28023ce8fe&language=en-us&sort_by=popularity.desc&include_adult=false&include_video=false&page=1'
     fetch(MOVIE_URL)
       .then((response) => response.json())
-      .then((json) => {
-        setTopMovies(json.results)
-      })
+      .then((json) => setTopMovies(json.results))
   }, [])
 
   return (
     <div className='movie-list-card'>
-        {topMovies.map((movie) => (
-        <MovieCard key= {movie.id} {...movie} /> 
-        ))}
+      {topMovies.map((movie) => <MovieCard key= {movie.id} {...movie} /> )}
     </div> 
   )     
 }

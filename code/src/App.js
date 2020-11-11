@@ -9,15 +9,15 @@ import { Footer } from './components/Footer'
 export const App = () => {
   return (
     <BrowserRouter>
-    <Switch>
-      <Route path='/' exact>
-      <MovieList/>
-      </Route>
-      <Route path='/movies/:movieId' exact>
-      <MoviePage/>
-      </Route>
-    </Switch>
-    <Footer />
-  </BrowserRouter>
+      <Switch>
+        <Route path='/' exact>
+        <MovieList/>
+        </Route>
+        <Route path='/movies/:movieId' exact>
+        <MoviePage/>
+        </Route>
+      </Switch>
+      <Footer />
+    </BrowserRouter>
   )
 }

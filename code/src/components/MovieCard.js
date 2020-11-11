@@ -15,7 +15,7 @@ export const MovieCard = ({id, poster_path, original_title, release_date}) => {
             <h1>{original_title}</h1>
             <p>{`Release Date: ${release_date}`}</p>
           </div>
-          </div>
+        </div>
       </Link>
     </div>
   )
