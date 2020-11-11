@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../style/movieList.css'
 import { MOVIES_API } from '../constant'
-
 import {
         upComingMovies,
         nowPlayMovies,
