@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom'
 import '../styles/nav.css'
 
 export const Nav = () => {
-    const movielists = [
+    const categories = [
         {
-            category: 'Top Rated',
+            name: 'Top Rated',
             path: 'top_rated'
         },
         {
-            category: 'Upcoming',
+            name: 'Upcoming',
             path: 'upcoming'
         },
         {
-            category: 'Now Playing',
+            name: 'Now Playing',
             path: 'now_playing'
         }
     ]
@@ -25,9 +25,9 @@ export const Nav = () => {
                 <Link to='/'>Popular Movies</Link>
             </h1>
             <ul className='nav__links'>
-                {movielists.map(list => (
-                    <li key={list.path}>
-                        <Link to={`/category/${list.path}`}>{list.category}</Link>
+                {categories.map(category => (
+                    <li key={category.path}>
+                        <Link to={`/category/${category.path}`}>{category.name}</Link>
                     </li>
                 ))}
             </ul>
