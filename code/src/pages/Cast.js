@@ -8,16 +8,15 @@ const Cast = () => {
   const { movieId } = useParams();
   const [castList, setCastList] = useState([]);
 
-
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=fd00bf32c04d62eccaf294e2d6aa9fa6`)
 
     .then((res) => res.json())
     .then((json) => {
-      console.log(json, "castList")
       setCastList(json.cast)
     });
   }, [movieId]);
+  
   return (
     <div className="display-card-container">
       {castList.map((cast) => (
