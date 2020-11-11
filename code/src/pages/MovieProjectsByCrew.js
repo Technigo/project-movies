@@ -14,14 +14,12 @@ const ListOfMovies = () => {
     fetch(`https://api.themoviedb.org/3/person/${crewId}?api_key=fd00bf32c04d62eccaf294e2d6aa9fa6&language=en-US`)
       .then((res) => res.json())
       .then((json) => {
-        console.log("Crew biography", json)
         setCrewProfile(json)
       })
   }, [crewId]);
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/person/${crewId}/combined_credits?api_key=fd00bf32c04d62eccaf294e2d6aa9fa6&language=en-US`)
-
     .then((res) => res.json())
     .then((json) => {
       setMoviesByCrew(json.crew)
