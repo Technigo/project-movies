@@ -56,14 +56,14 @@ code {
   position: absolute;
   bottom: 50px;
   margin-left: 20px;
-  font-size: 20px;
+  font-size: 12px;
 }
 
 .text-overlay p {
   position: absolute;
   bottom: 0;
   margin-left: 20px;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .text-overlay:hover {
@@ -100,6 +100,7 @@ code {
 h2 {
   margin-left: 10px;
   margin-bottom: 0;
+  font-size: 15px;
 }
 
 .movie-rating {
@@ -154,7 +155,7 @@ h2 {
   text-align: center;
 }
 
-h1, h2, h3 {
+.not-found h1, .not-found h2, .not-found h3 {
   font-size: 20px;
   margin-bottom: 0px;
 }
@@ -206,7 +207,15 @@ footer img {
 }
 
 @media (min-width: 1024px) {
+
+  .text-overlay h1 {
+    font-size: 40px;
+  }
   
+  .text-overlay p { 
+    font-size: 20px;
+  }
+
   h1, h2, h3 {
     font-size: 40px;
     margin-bottom: 10px;
