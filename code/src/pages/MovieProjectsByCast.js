@@ -14,14 +14,12 @@ const ListOfMovies = () => {
     fetch(`https://api.themoviedb.org/3/person/${castId}?api_key=fd00bf32c04d62eccaf294e2d6aa9fa6&language=en-US`)
       .then((res) => res.json())
       .then((json) => {
-        console.log("Cast biography", json)
         setCastProfile(json)
       });
   }, [castId]);
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/person/${castId}/combined_credits?api_key=fd00bf32c04d62eccaf294e2d6aa9fa6&language=en-US`)
-
     .then((res) => res.json())
     .then((json) => {
       console.log(json, "list of acting projects")
