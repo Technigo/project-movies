@@ -17,7 +17,7 @@ export const Button = () => {
 	);
 
 	const handleClick = () => {
-		return history.goBack();
+		return history.push('/');
 	};
 
 	return (
