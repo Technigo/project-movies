@@ -16,7 +16,6 @@ const MovieDetails = () => {
     fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=fd00bf32c04d62eccaf294e2d6aa9fa6&language=en-US`)
     .then((res) => res.json())
     .then((json) => {
-      console.log("json", json)
       //catch any error in promises//
       if(json.success === false) {
         throw new Error(json.status_message)
