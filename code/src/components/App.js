@@ -19,6 +19,9 @@ export const App = () => {
         <Route path='/category/:category' exact>
           <MovieList/>
         </Route>
+        <Route path='/category/movie/:movieId' exact>
+          <MovieDetails />
+        </Route>
         <Route path='/movie/:movieId' exact>
           <MovieDetails />
         </Route>
