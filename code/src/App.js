@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import { MovieList } from './pages/MovieList';
 import { MovieInfo } from './pages/MovieInfo';
-import { PageNotFound } from './pages/PageNotFound';
+import { PageNotFound } from './PageNotFound';
 
 export const App = () => {
 	return (

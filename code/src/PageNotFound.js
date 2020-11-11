@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Button } from '../components/Button';
+import { Button } from './components/Button';
 
-import './pagenotfound.css';
+import './pages/pagenotfound.css';
 
 export const PageNotFound = () => {
 	return (
