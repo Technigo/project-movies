@@ -30,7 +30,6 @@ const ListOfMovies = () => {
         }
         return movies;
       }, []);
-
       setMoviesByActor(uniqueMovies)
     });
   }, [castId]);
