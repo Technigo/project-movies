@@ -17,7 +17,7 @@ export const Button = () => {
 	);
 
 	const handleClick = () => {
-		return history.push('https://condescending-fermat-253ba9.netlify.app/');
+		return history.goBack();
 	};
 
 	return (
