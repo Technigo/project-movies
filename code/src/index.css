@@ -135,15 +135,15 @@ h2 {
   transition-property: transform;
 }
 
-  .back-link:hover, .back-link:focus, .back-link:active {
+.back-link:hover, .back-link:focus, .back-link:active {
   -webkit-transform: translateX(8px);
   transform: translateX(8px);
   }
   
-  .back-arrow { 
-    transform: translate(-40%, 29%);
-    width: 30px;
-    height: 30px;
+.back-arrow { 
+  transform: translate(-40%, 29%);
+  width: 30px;
+  height: 30px;
   }
 
   /* NOT FOUND */
@@ -206,7 +206,7 @@ footer img {
 }
 
 @media (min-width: 1024px) {
-
+  
   h1, h2, h3 {
     font-size: 40px;
     margin-bottom: 10px;
@@ -224,17 +224,14 @@ footer img {
     height: 400px;
     margin: 50px;
   }
-
   .details-container { 
     width: 30%;
     padding-bottom: 50px;
   }
-
   .movie-poster { 
     width: 25%;
     margin: 30px;
   }
-
   .movie-overview { 
     font-size: 20px;
   }
