@@ -10,7 +10,6 @@ const Cast = () => {
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=fd00bf32c04d62eccaf294e2d6aa9fa6`)
-
     .then((res) => res.json())
     .then((json) => {
       setCastList(json.cast)
