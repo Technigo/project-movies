@@ -37,6 +37,7 @@ code {
    width: 100%;
    margin: 0;
 }
+
 .overlay-container {
   position: relative;
 }
@@ -56,14 +57,14 @@ code {
   position: absolute;
   bottom: 50px;
   margin-left: 20px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .text-overlay p {
   position: absolute;
   bottom: 0;
-  padding: 20px;
-  font-size: 17px;
+  margin-left: 20px;
+  font-size: 15px;
 }
 
 .text-overlay:hover {
@@ -71,6 +72,7 @@ code {
 }
 
 /* Movie pages Styling */
+
 .movie-page { 
   display: flex;
 }
@@ -101,6 +103,7 @@ h2 {
   margin-left: 10px;
   margin-bottom: 0;
 }
+
 .movie-rating {
   color:#dc1035;
   margin-left:10px;
@@ -133,6 +136,7 @@ h2 {
   -webkit-transition-property: transform;
   transition-property: transform;
 }
+
   .back-link:hover, .back-link:focus, .back-link:active {
   -webkit-transform: translateX(8px);
   transform: translateX(8px);
@@ -171,7 +175,6 @@ h2 {
     margin: 20px;
   }
 
-
   /* FOOTER */
 
 footer {
@@ -206,7 +209,6 @@ footer img {
   width: 50px;
 }
 
-
 @media (min-width: 1024px) {
 
   h1, h2, h3 {
@@ -240,6 +242,5 @@ footer img {
   .movie-overview { 
     font-size: 20px;
   }
-
   }
   

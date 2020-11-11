@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-
 import { Link, useParams } from "react-router-dom"; 
+
 import { apiKey } from "../key";
 import BackArrow from "../assets/back-arrow.svg";
 import { NotFound } from "./NotFound";
@@ -25,7 +25,7 @@ export const MoviePage = () => {
     return (
       <NotFound/>
     );
-  };
+  }
 
 return (
   <>
