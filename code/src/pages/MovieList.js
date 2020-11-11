@@ -10,6 +10,7 @@ import {
         topRatedMovies }
 from '../constant'
 
+//different list of movies base on different url, with placeholder in Select input//
 const FILTER_OPTIONS = [ 
   {name: "Select your movie list", apiUrl:"disable, selected, hidden"},
   {name: "Popular movies", apiUrl: MOVIES_API},

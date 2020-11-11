@@ -2,7 +2,7 @@ import React from 'react'
 
 import '../style/pageNotFound.css'
 
-
+//404 page//
 const PageNotFound = (errorMessage) => {
   return (
     <div className="page-not-found">
