@@ -22,7 +22,6 @@ const ListOfMovies = () => {
     fetch(`https://api.themoviedb.org/3/person/${castId}/combined_credits?api_key=fd00bf32c04d62eccaf294e2d6aa9fa6&language=en-US`)
     .then((res) => res.json())
     .then((json) => {
-      console.log(json, "list of acting projects")
       //this code is to remove duplicate movieId and return an array with unique id for each movie//
       const uniqueMovies = json.cast.reduce((movies, currentMovie) => {
         const exists = movies.find((movie) => movie.id === currentMovie.id);
