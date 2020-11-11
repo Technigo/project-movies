@@ -21,7 +21,6 @@ code {
 }
 
 /* Movie cards styling*/
-
 .movie-cards-container { 
   display: flex;
   width: 100%;
@@ -72,7 +71,6 @@ code {
 }
 
 /* Movie pages Styling */
-
 .movie-page { 
   display: flex;
 }
@@ -149,34 +147,32 @@ h2 {
   }
 
   /* NOT FOUND */
+.not-found { 
+  width: 100%;
+  color: white;
+  height: 100vh;
+  text-align: center;
+}
 
-  .not-found { 
-    width: 100%;
-    color: white;
-    height: 100vh;
-    text-align: center;
-  }
+h1, h2, h3 {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
 
-  h1, h2, h3 {
-    font-size: 20px;
-    margin-bottom: 0px;
-  }
+h4 {
+  font-size: 20px;
+  margin-top: 0;
+  color: #feb75a;
+  transform: translateX(-65%);
+}
 
-  h4 {
-    font-size: 20px;
-    margin-top: 0;
-    color: #feb75a;
-    transform: translateX(-65%);
-  }
+.bird-gif {
+  width: 300px;
+  height: 200px;
+  margin: 20px;
+}
 
-  .bird-gif {
-    width: 300px;
-    height: 200px;
-    margin: 20px;
-  }
-
-  /* FOOTER */
-
+/* FOOTER */
 footer {
   position: absolute;
   height: 150px;
