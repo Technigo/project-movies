@@ -3,4 +3,4 @@
 [build]
   base = "code/"
   publish = "build/"
-  command = "CI = false && npm run build"
+  command = "npm run build"
