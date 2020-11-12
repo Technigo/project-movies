@@ -12,9 +12,11 @@ export const MovieDetail = () => {
   const [loading, setLoading] = useState(true);
   const { movieId } = useParams();
 
+  const apiKey = process.env.REACT_APP_API_KEY_FOR_MOVIE;
+
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/${movieId}?api_key=a4952259f6d389d2957bfec34fa69938&language=en-US`
+      `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`
     )
       .then((res) => res.json())
       .then((json) => {
@@ -25,7 +27,7 @@ export const MovieDetail = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [movieId]);
+  }, [movieId, apiKey]);
 
   if (movie.success === false) {
     return <NotFound />;

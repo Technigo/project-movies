@@ -9,9 +9,11 @@ export const PopularList = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const apiKey = process.env.REACT_APP_API_KEY_FOR_MOVIE;
+
   useEffect(() => {
     fetch(
-      'https://api.themoviedb.org/3/movie/popular?api_key=a4952259f6d389d2957bfec34fa69938&language=en-US&page=1'
+      `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
     )
       .then((res) => res.json())
       .then((json) => {
@@ -19,7 +21,7 @@ export const PopularList = () => {
         setMovies(json.results);
         setLoading(false);
       });
-  }, []);
+  }, [apiKey]);
 
   return (
     <>
