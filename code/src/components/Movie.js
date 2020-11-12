@@ -15,6 +15,6 @@ const Movie = ({ title, id, poster_path, release_date }) => {
                 </div>
         </Link>
     )
-}
+};
 
 export default Movie;

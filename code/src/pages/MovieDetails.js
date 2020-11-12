@@ -13,7 +13,7 @@ const MovieDetails = () => {
         fetch(DETAILS_URL)
             .then(response => response.json())
             .then(json => setMovieDetails(json));
-    }, [movieId])
+    }, [movieId]);
 
     return (
         <section className="movie-details" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%) ,url(https://image.tmdb.org/t/p/w1280${MovieDetails.backdrop_path})`}}>
@@ -37,6 +37,6 @@ const MovieDetails = () => {
             </div>  
         </section>
     )    
-}
+};
 
 export default MovieDetails;

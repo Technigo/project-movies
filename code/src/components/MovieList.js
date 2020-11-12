@@ -10,7 +10,7 @@ const MovieList = () => {
     fetch(POPULAR_LIST_URL)
         .then((response) => response.json())
         .then((json) => setMovies(json.results));
-    },[])  
+    },[]);  
  
     return (
         <section className="movie-list">
@@ -20,7 +20,7 @@ const MovieList = () => {
         </section>
     )
 
-}
+};
 
 
 export default MovieList;
