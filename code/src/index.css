@@ -106,14 +106,13 @@ a.active {
   height: 100%;
   width: 100%;
   color: #fff;
+  opacity: 0;
   object-fit: cover;
   overflow: hidden;
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-end;
   position: absolute;
-  opacity: 0;
-  transition: 0.5s ease;
 }
 
 .text-wrapper {
@@ -133,9 +132,10 @@ p {
   font-size: 13px;
 }
 
-.thumb-container:hover .hover-layer:hover {
+.thumb-container:hover .hover-layer {
+  opacity: 100;
+  transition: opacity 0.4s ease-in;
   background: rgba(0, 0, 0, 0.75);
-  opacity: 100%;
 }
 
 /* Movie Detail */
