@@ -29,7 +29,6 @@ export const MovieDetail = () => {
       }}>
       <article className="info">
         <img className="poster" alt={info.title} src={`https://image.tmdb.org/t/p/w342/${info.poster_path}`} />
-
         <div className="details">
           <h3>{info.title}</h3>
           <h4>{info.tagline}</h4>
