@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import 'styles/movielist.css';
+
 import { MovieThumb } from 'components/MovieThumb';
 import { Options } from 'components/Options';
+
+import 'styles/movielist.css';
 
 export const MoviesByTheme = () => {
   const [thememovies, setThemeMovies] = useState([]);

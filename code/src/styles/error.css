@@ -14,19 +14,6 @@
   width: 250px;
 }
 
-.back-home-link {
-  text-decoration-line: none;
-  -moz-text-decoration-line: none;
-  -webkit-text-decoration-line: none;
-  color: white;
-  transition: ease 0.2s;
-}
-
-.back-home-link:hover {
-  font-size: 18px;
-  letter-spacing: 1px;
-}
-
 @media (max-width: 668px) {
   /* Smaller text in mobile format */
   .error-text {

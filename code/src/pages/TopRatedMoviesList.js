@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+
 import { TOPRATED_MOVIES_URL } from 'urls';
-import 'styles/movielist.css';
 import { MovieThumb } from 'components/MovieThumb';
+
+import 'styles/movielist.css';
 
 export const TopratedMoviesList = () => {
   const [topratedmovies, setTopratedMovies] = useState([]);

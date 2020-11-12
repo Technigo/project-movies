@@ -11,7 +11,7 @@
   transition: opacity 0.4s ease-in-out;
 }
 
-.details {
+.movie-details {
   display: flex;
   flex-flow: column;
   background: rgba(0,0,0,.75);
@@ -53,12 +53,12 @@
 }
 
 /* When hovering over each movie image - makes the text visible */
-.details:hover .movie-title  {
+.movie-details:hover .movie-title  {
   visibility: visible;
   opacity: 1;
 }
 
-.details:hover .movie-release {
+.movie-details:hover .movie-release {
   visibility: visible;
   opacity: 1;
 }

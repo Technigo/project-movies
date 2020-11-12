@@ -1,15 +1,18 @@
 import React, { useEffect, useState} from 'react';
 import { useParams, Redirect } from 'react-router-dom';
+
 import { API_KEY } from 'urls'; 
 import { MovieThumbSimilar } from 'components/MovieThumbSimilar';
-import 'styles/moviedetail.css';
 import { Loader } from 'components/Loader';
 import { BackButton } from 'components/BackButton';
+
+import 'styles/moviedetail.css';
 
 export const MovieDetail = () => {
   const { id } = useParams();
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [similarmovies, setSimilarMovies] = useState([]);
 
   // Fecthing detailed information for the choosen movie
   useEffect(() => {
@@ -18,12 +21,9 @@ export const MovieDetail = () => {
       .then((json) => {
         setMovies(json);
       })
-      .catch((error) => {
-      })
   }, [id]);
 
   // Fetching similar movies API based on the id of the currently showed movie
-  const [similarmovies, setSimilarMovies] = useState([]);
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}/similar?api_key=${API_KEY}&language=en-US&page=1`)
       .then(res => res.json())

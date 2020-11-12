@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+
 import { UPCOMING_MOVIES_URL } from 'urls';
-import 'styles/movielist.css';
 import { MovieThumb } from 'components/MovieThumb';
+
+import 'styles/movielist.css';
 
 export const UpcomingMoviesList = () => {
   const [upcomingmovies, setUpcomingMovies] = useState([]);

@@ -1,7 +1,9 @@
 import React from 'react';
-import 'styles/header.css';
 import { NavLink } from 'react-router-dom';
+
 import { HalloweenApiUrl, ChristmasApiUrl, SummerApiUrl, LoveApiUrl } from 'urls';
+
+import 'styles/header.css';
 import 'styles/options.css';
 
 export const Options = ({ setThemeUrl }) => {
