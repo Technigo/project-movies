@@ -1,36 +1,32 @@
-# Project Movies
+# Movies fetched from an API
 
-This project was to create a multi-paged website using React Router. Movies are fetched with different API endpoints. 
+In this project I created a multi-paged website using React Router. Movies are fetched from different API endpoints. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started writing the different routes I wanted to have and making the structure in App.js. I then created the component 'MovieList' to fetch the API with movies Now playing. The information gotten are then sent to another component 'MovieThumb' that picks out the data I want to show from the API on my page. 
 
-I started writing the different routes I wanted and making the structure in App.js. I then created the component 'MovieList' to fetch the API with movies now playing. The information gotten are then sent to another component 'MovieThumb' that pick out the data I want to show on my page from the API. 
+Next I created the page 'MovieDetail' using params to get to the right site for each movie. On this page I fetch details for the particular movie clicked on in the Movie list. In each detailed movie page it is possible to click on a link to get back to the home page.
 
-Next I created the page 'MovieDetail' using params to get to the right site for each movie. On this page I fetch details above the particular movie clicked on in the previous page. In each detailed movie page it is possible to click on a link to get back to the home page.
+The hardest part was the styling of both the first page and the detailed page where different elements where to be put above each other. Here I learned new ways ot use CSS, by making element visible and not.
 
-The hardest part was the styling of both the first page and the detailed page where different elements where to be put above each other. 
+I added a component for page 'Not Found' when the users hits an URL that doesn't relate to a movie in the API. There is thousands of movies to quite hard to hit a 'wrong' url.. 
 
-I added a component for page Not Found but have some problems getting right directions to that page. Since the API for movie details includes thousands and thousands of movie id's there is hard to write a id not existing.. 
+I did also add a Header text and a Navigation bar. Here I linked more components fetching Movies from other endpoints, like Top Rated Movies and Upcoming Movies. I the navbar it is possible to see which list you are showing currently and it is also possible to click among the different movie lists. In the end I added movies by Theme where I learned to add a <select> element to choose among different themes that fetches different URL's.
 
-I did also add a Header text and a Navbar. Here I linked another component fetching Top Rated Movies. I the navbar it is possible to see which list you are showing and it is also possible to click among the different movie lists. 
-
-For me it was really fun using React router to finally be able to create multi-page websites. For me that is more useful since in most cases that is how webpages work. Right now I just want to create a lot of pages connecting in the App file to really make it multi-paged.
+For me it was really fun using React router to finally be able to create multi-paged websites. For me that is more useful since in most cases that is how webpages work. Right now I just want to create a lot of pages connecting in the App file to really make it multi-paged.
 
 ## Learning Objectives
 
 - Using React router to create multi-page webpages
 
-- Use placeholders in urls to pick dynamic parts from urls
+- Use placeholders in url's to pick dynamic parts from url's
 
 - Using API's in React combining 'useState' with 'useEffect'
 
 ## Tech
 
-- React 
-
-- JSX
+- React JS
 
 - CSS
 
