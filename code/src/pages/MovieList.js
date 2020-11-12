@@ -41,11 +41,11 @@ export const MovieList = () => {
 
     <section className='movielist__container'>
       {movies.map((movie) => (
-        <span key={movie.id}>
+        <div key={movie.id}>
           <Link to={`movie/${movie.id}`}>
             <Movie {...movie} />
           </Link>
-        </span>
+        </div>
       ))}
     </section>
   )

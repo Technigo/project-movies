@@ -16,6 +16,21 @@
   background: rgba(0, 0, 0, 0.4);
 }
 
+.details__low-rating {
+  color: #be3c00;
+  font-weight: 600;
+}
+
+.details__medium-rating {
+  color: #c59328;
+  font-weight: 600;
+}
+
+.details__high-rating {
+  color: #e9de40;
+  font-weight: 600;
+}
+
 p, h4 {
   margin: 2px;
 }
@@ -23,7 +38,6 @@ p, h4 {
 h4 {
   font-style: italic;
 }
-
 
 .details__img-container img {
   width: auto;
