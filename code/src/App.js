@@ -13,7 +13,6 @@ export const App = () => {
   return (
     <BrowserRouter>
       <Nav />
-
       <main>
         <Switch>
           {/* default: now playing */}
@@ -28,18 +27,15 @@ export const App = () => {
           <Route path="/soon">
             <MoviesSoon />
           </Route>
-
           <Route path="/movies/:id" exact>
             <MovieDetail />
           </Route>
-
           <Route path="/404">
             <NotFound />
           </Route>
           <Redirect to="/404" />
         </Switch>
       </main>
-
       <Footer />
     </BrowserRouter>
   )

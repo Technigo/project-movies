@@ -133,7 +133,7 @@ p {
   font-size: 13px;
 }
 
-.thumb-container:hover .hover-layer {
+.thumb-container:hover .hover-layer:hover {
   background: rgba(0, 0, 0, 0.75);
   opacity: 100%;
 }
