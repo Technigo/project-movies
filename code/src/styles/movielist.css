@@ -79,10 +79,10 @@
 
 @media (max-width: 668px) {
   .movie-title {
-    font-size: 14px;
+    font-size: 11px;
   }
   
   .movie-release {
-    font-size: 12px;
+    font-size: 9px;
   }
 }
