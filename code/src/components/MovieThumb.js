@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const MovieThumb = ({ title, release_date, poster_path, id,}) => {
+export const MovieThumb = ({ title, release_date, poster_path, id, }) => {
 
   return (
     <Link key={id} to={`/movies/${id}`}> 
