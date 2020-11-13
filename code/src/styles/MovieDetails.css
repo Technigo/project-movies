@@ -2,30 +2,24 @@
 
 .background-image {
   background-size: cover;
-  position: relative;
-  background-repeat: no-repeat;
   min-height: 100vh;
-  min-width: 100vw;
-}
-
-.movie-detail-page {
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  height: 75vh;
-  color: #fff;
+  
+}
+
+.movie-detail-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 70px;
+  margin-top: 80px;
+  margin-left: 80px;
   font-family: "Merriweather Sans", sans-serif;
 }
 
-.details-container {
-  display: flex;
-  margin: 50px;
-  margin-bottom: 50px;
-}
-
 .details {
-  max-width: 400px;
+  max-width: 360px;
   display: flex;
   flex-direction: column;
   color: #fff;
@@ -54,6 +48,7 @@
 .back-link {
   text-decoration: none;
   color: #fff;
+  margin-left: 60px;
 }
 
 .link-text {
@@ -69,56 +64,23 @@
   margin-right: 10px;
 }
 
-@media (max-width: 678px) {
-  .title {
-    display: flex;
+/* .....Media queries */
+
+ @media (max-width: 761px) {
+  .movie-detail-container {
     flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
   }
   .details-poster {
-    width: 240px;
+    width: 350px;
   }
+} 
 
-  .movie-detail-page {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 585px) {
+@media (max-width: 535px) {
   .details-poster {
-    align-self: center;
-    position: relative;
-    width: 200px;
+    width: 300px;
   }
+} 
 
-  .details-container {
-    flex-direction: column;
-    font-size: 15px;
-  }
 
-  .back-link {
-    position: absolute;
-    margin-left: 150px;
-    z-index: 1;
-  }
-}
-
-@media (max-width: 523px) {
-  .details-container {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 472px) {
-  .details {
-    font-size: 12px;
-  }
-
-  .back-link {
-    margin-top: 30px;
-    margin-left: 100px;
-  }
-
-  .details-poster {
-    width: 180px;
-  }
-}

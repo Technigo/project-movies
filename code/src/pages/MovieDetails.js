@@ -29,20 +29,18 @@ export const MovieDetails = () => {
                     <h3 tabIndex="0">Movies</h3>
                 </div>
             </Link>
-            <section className="movie-detail-page" >
-                <article className="details-container">
-                    <img className="details-poster" src={poster} alt={movie.title} />
-                    <div className="details">
-                        <h1 tabIndex="0" className="title">
-                            {movie.title}
-                            <span className="vote" tabIndex="0">{movie.vote_average} / 10
+            <section className="movie-detail-container" >
+                <img className="details-poster" src={poster} alt={movie.title} />
+                <div className="details">
+                    <h1 tabIndex="0" className="title">
+                        {movie.title}
+                        <span className="vote" tabIndex="0">{movie.vote_average} / 10
                         </span>
-                        </h1>
-                        <p className="overview" tabIndex="0">
-                            {movie.overview}
-                        </p>
-                    </div>
-                </article>
+                    </h1>
+                    <p className="overview" tabIndex="0">
+                        {movie.overview}
+                    </p>
+                </div>
             </section>
         </main>
     )
