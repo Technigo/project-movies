@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
-import { BackButton } from 'BackButton'
+import { BackButton } from '../BackButton';
 
 export const Actor = () => {
   const { actorID } = useParams();
@@ -22,11 +22,11 @@ export const Actor = () => {
    .catch(() => {
     window.location.assign('/404');
   });
-  },[actorID])
+  },[actorID]);
 
 return (
   <section className="actor-main-content">
-    <header className="app-header"> <BackButton text="Back to movie"></BackButton></header>
+    <header className="app-header"> <BackButton text="Back to movie"/></header>
       <div className="actor-container">
         <div className="actor-text">
           <h1>{actor.name}</h1>
@@ -39,5 +39,5 @@ return (
      </div>
     </div>
   </section>
-)
+);
 }

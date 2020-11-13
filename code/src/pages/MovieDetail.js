@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 
-import { useParams } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-import { BackButton } from 'BackButton'
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { BackButton } from '../BackButton';
 
 export const MovieDetail = () => {
   const { movieId } = useParams();
@@ -26,7 +26,7 @@ export const MovieDetail = () => {
     .catch(() => {
       window.location.assign('/404');
     });
-  },[movieId])
+  },[movieId]);
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=303d50a32fc0419fb55796d006e5d6c2&language=en-US`)
@@ -43,7 +43,7 @@ export const MovieDetail = () => {
     .catch(() => {
      window.location.assign('/404');
     });
-  },[movieId])
+  },[movieId]);
 
   return ( <>
   {!isLoading && currentMovie &&
@@ -61,7 +61,7 @@ export const MovieDetail = () => {
         <div className="movie-details-wrapper">
           <img className="movie-detail-poster" src={`https://image.tmdb.org/t/p/w342${currentMovie.poster_path}`} alt={currentMovie.title} />
             <div className="movie-details-text">
-              <h1 className="movie-detail-title">{currentMovie.title}</h1> 
+              <h2 className="movie-detail-title">{currentMovie.title}</h2> 
                 <p className="movie-tagline">{currentMovie.tagline}</p>
                 <h2 className="movie-detail-rating">Rating: {currentMovie.vote_average}</h2> 
                 <p className="movie-detail-overview">{currentMovie.overview}</p>
@@ -78,5 +78,5 @@ export const MovieDetail = () => {
         </div>
     </section>}
     </>
-  )
+  );
 }

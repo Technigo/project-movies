@@ -1,6 +1,6 @@
-import React, { useState , useEffect } from 'react'
+import React, { useState , useEffect } from 'react';
 
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 export const MovieList = () => {
   const[movies,setMovies] = useState([]);
@@ -12,11 +12,12 @@ export const MovieList = () => {
     .then((json) => {
      setMovies(json.results);
    })
-  },[listType])
+  },[listType]);
 
 const handleListTypeChange = (event) => {
     setListType(event.target.value);
-}
+};
+
   return (<>
     <header className="app-header">
     <select className="select-list-type"
@@ -42,5 +43,5 @@ const handleListTypeChange = (event) => {
         </Link>    
     ))}
     </section></>
-  )
+  );
 }

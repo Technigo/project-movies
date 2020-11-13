@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 
-import { useParams } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { BackButton } from 'BackButton';
 
 export const RecommendedMovies = () => {
@@ -24,7 +24,7 @@ export const RecommendedMovies = () => {
    .catch(() => {
     window.location.assign('/404');
    });
-  },[movieId])
+  },[movieId]);
 
   return (<>
     <header className="app-header"> <BackButton text="Back to movie"></BackButton></header>
@@ -40,5 +40,5 @@ export const RecommendedMovies = () => {
     </Link>    
     ))}
     </section></>
-  )
+  );
 }

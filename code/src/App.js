@@ -1,12 +1,12 @@
 
-import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import { NotFound } from 'pages/NotFound'
-import { MovieDetail } from 'pages/MovieDetail';
-import { MovieList } from 'pages/MovieList'
-import { RecommendedMovies } from 'pages/RecommendedMovies'
-import { Actor } from 'pages/Actor';
+import { NotFound } from './pages/NotFound';
+import { MovieDetail } from './pages/MovieDetail';
+import { MovieList } from './pages/MovieList';
+import { RecommendedMovies } from './pages/RecommendedMovies';
+import { Actor } from './pages/Actor';
 
 export const App = () => {
   return (
@@ -27,8 +27,8 @@ export const App = () => {
       <Route path="/404">
         <NotFound />
       </Route>
-      {<Route component={NotFound} />}
+      <Route component={NotFound} />
     </Switch>
     </BrowserRouter>
-  )
+  );
 }
