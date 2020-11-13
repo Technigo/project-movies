@@ -1,4 +1,4 @@
-# Project Movies
+# Project Movies&ensp;|&ensp;[View Live &#10132;](https://jonnas-movies.netlify.app/)
 
 A multi-page application using React Router to browse movies fetched from themoviedb.org's API. Using placeholders in urls to access specific movies based on their ID.
 
@@ -13,6 +13,10 @@ Also added a loading state that shows a spinner while fetching new information a
 - useEffect
 - useState
 - useParams
+
+## Screenshot
+
+![Screenshot](screenshot.jpg)
 
 ## View it live
 
