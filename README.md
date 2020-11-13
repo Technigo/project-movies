@@ -1,13 +1,10 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+In this app the user can filter through three different views that all display movies. When clicking a movie, details about the movie will be shown. From there the user can see an overview, rating and the production companies. When clicking on the production company, the user can see additional movies from that company.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The biggest problem was getting the link to the movie company to work, that took me a lot of time. After inspecting the code for quite a while I realised that it was a simple typeerror and was able to solve it!
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://nostalgic-einstein-d16863.netlify.app/
