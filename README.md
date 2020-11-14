@@ -12,14 +12,14 @@ I also created x2 error pages, which return errors if the page url 
 
 ## Tech
 
-- React Router
-- useHistory hook
-- useParams hook
-- JSX
-- JavaScript
-- API
-- CSS Flexbox
-- CSS Grid
+- React Router
+- useHistory hook
+- useParams hook
+- JSX
+- JavaScript
+- API
+- CSS Flexbox
+- CSS Grid
 
 ## View it live
 
