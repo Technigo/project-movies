@@ -11,6 +11,7 @@ Each movie details page displays the information pulled from the movie
 I also created x2 error pages, which return errors if the page url is incorrect or an incorrect movie name/id is entered in the url.
 
 ## Tech
+
 - React Router
 - useHistory hook
 - useParams hook
