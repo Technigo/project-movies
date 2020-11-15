@@ -26,7 +26,8 @@ const MovieDetails = () => {
             <div className="info">
                 <Link className="back-link" to="/">
                     <div className="back-link-wrapper">
-                        <img src={icon} alt="Arrow link"></img>
+                        <img src={icon} alt="Arrow link">
+                        </img>
                         <p>Movies</p>
                     </div>   
                 </Link>
@@ -34,7 +35,8 @@ const MovieDetails = () => {
                     <img
                         className="movie-poster"
                         src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-                        alt={movie.title}></img>
+                        alt={movie.title}>
+                    </img>
                     <div className="movie-detail-text-container">
                         <h1 className="movie-title">{movie.title} <span className="rating">{movie.vote_average} / 10</span>
                         </h1>

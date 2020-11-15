@@ -194,6 +194,7 @@ footer {
 
 footer a {
   text-decoration: none;
+  color: lightblue;
 }
 
 footer a:hover {

@@ -26,8 +26,9 @@ const Footer = () => {
           <a
             target="_blank"
             href="https://icons8.com/icons/set/popcorn"
-            rel=" noopener noreferrer">
-          Popcorn icon
+            rel=" noopener noreferrer"
+          >
+            Popcorn icon
           </a> icon by <a target="_blank" href="https://icons8.com" rel="noopener noreferrer"> Icons8</a>
         </p>
       </footer>
