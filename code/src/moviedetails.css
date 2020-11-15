@@ -31,7 +31,6 @@
 
 .back-text {
   text-decoration: none;
-  color: #ffffff;
   margin: 0;
   font-weight: 500;
 }
@@ -62,6 +61,6 @@
     width: 50%;
   }
   .movie-plot {
-    font-size: 12x;
+    font-size: 12px;
   }
 }

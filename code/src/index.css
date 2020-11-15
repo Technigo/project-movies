@@ -14,18 +14,10 @@ a {
   text-decoration: none;
 }
 
-p {
-  color: #ffffff;
-}
-
-h1 {
-  color: #ffffff;
-}
-
-h3 {
-  color: #ffffff;
-}
-
+p,
+h1,
+h2,
+h3,
 h4 {
-  color: #ffffff;
+  color: #fff;
 }
