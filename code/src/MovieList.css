@@ -90,6 +90,7 @@ code {
 }
   
 .movieDetails1:hover {
+  background: rgba(0,0,0,.75);
   transition: 0.4s ease-in-out;
   opacity: 1;
 }
@@ -105,10 +106,6 @@ code {
   display: flex;
   color: #fff;
   padding-bottom: 15px;
-}
-  
-.eachMovie:hover  {
-  opacity: 0.5;
 }
 
 }
