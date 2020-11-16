@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 export const MovieCard = ({id, poster_path, original_title, release_date}) => {
 
   return (
-    <>
       <div className="movie-card">
         <Link to={`/movies/${id}`}>
           <div className="overlay-container">
@@ -18,7 +17,6 @@ export const MovieCard = ({id, poster_path, original_title, release_date}) => {
           </div>
         </Link>
       </div>
-    </>
   );
 };
 

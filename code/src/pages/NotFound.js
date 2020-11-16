@@ -10,7 +10,7 @@ export const NotFound = () => {
       <h2>We couldn't find the movie you're looking for  <span role="img" aria-label="ups emoji"> {"🧐"} </span></h2>
       <img className="bird-gif" src= {BirdGif} alt= "bird gif"/>
       <h3> Get that Popcorn popping and check our Movies List</h3>
-      <Link className="back-link" to ="/" exact='true'>
+      <Link className="back-link" to ="/">
         <h4 className="back-not-found">
           <span role="img" aria-label="popcorn emoji"> {"🍿"} </span>
             Back to Movies
