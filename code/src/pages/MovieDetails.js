@@ -22,8 +22,8 @@ export const MovieDetails = () => {
      .then((json) => {
        setMovie(json)
      })
-     .catch((err) => {
-       console.log(err)
+     .catch(() => {
+       console.error()
      })
   }, [movieID])
 

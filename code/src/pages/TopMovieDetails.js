@@ -16,8 +16,8 @@ export const TopMovieDetails = () => {
      .then((json) => {
       setTopMovie(json)
      })
-     .catch((err) => {
-       console.log(err)
+     .catch(() => {
+       console.error()
      })
   }, [topMovieID])
 
