@@ -7,8 +7,8 @@ import { NoSimilarMoviesFound } from './NotFound';
 import { RoundBackButton } from '../components/BackButton';
 
 // API Urls
-import { ApiKey } from '../components/ApiKeys';
-import { PosterImgUrl } from '../components/ApiUrls';
+import { APIKEY } from '../components/ApiKeys';
+import { POSTER_IMG_URL } from '../components/ApiUrls';
 
 // Styling
 import 'assets/MoviePage.css';
@@ -22,7 +22,7 @@ const SimilarMovies = () => {
   // Fetch details for selected movie
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/${params.id}/similar?api_key=${ApiKey}&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/${params.id}/similar?api_key=${APIKEY}&language=en-US&page=1`
     )
       .then((results) => results.json())
       .then((json) => {
@@ -48,7 +48,7 @@ const SimilarMovies = () => {
             id={movie.id}
             title={movie.title}
             releaseDate={movie.release_date}
-            posterImgSrc={`${PosterImgUrl}${movie.poster_path}`}
+            posterImgSrc={`${POSTER_IMG_URL}${movie.poster_path}`}
           />
         );
       })}

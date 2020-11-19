@@ -64,10 +64,6 @@ a {
   top: 80px;
 }
 
-/* .similar-movies--back-button:hover {
-
-} */
-
 /* --- MEDIA QUERIES --- */
 @media (max-width: 830px) {
   .movie--details--textbox {

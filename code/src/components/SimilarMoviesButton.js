@@ -6,12 +6,12 @@ import 'assets/Buttons.css';
 
 // ----------------------------------------------------------------------------------------
 
-const SimilarMoviesButton = (key) => {
+const SimilarMoviesButton = () => {
   const params = useParams();
-  const url = params.id + '/similar';
+  const URL = params.id + '/similar';
 
   return (
-    <Link key={key} to={url}>
+    <Link to={URL}>
       <button className="movie--similar-movies-button">
         <span className="movie--similar-movies-button--text">
           Find similar movies

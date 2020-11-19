@@ -14,13 +14,13 @@ import { NotFound } from './pages/NotFound';
 import SimilarMovies from './pages/SimilarMovies';
 
 // API-urls
-import { ApiUrl, PosterImgUrl } from './components/ApiUrls';
+import { APIURL, POSTER_IMG_URL } from './components/ApiUrls';
 
 // ----------------------------------------------------------------------------------------
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
-  const [categoryUrl, setCategoryUrl] = useState(ApiUrl);
+  const [categoryUrl, setCategoryUrl] = useState(APIURL);
 
   // Main fetch function
   const getData = () => {
@@ -52,7 +52,7 @@ export const App = () => {
                   id={movie.id}
                   title={movie.title}
                   releaseDate={movie.release_date}
-                  posterImgSrc={`${PosterImgUrl}${movie.poster_path}`}
+                  posterImgSrc={`${POSTER_IMG_URL}${movie.poster_path}`}
                 />
               );
             })}

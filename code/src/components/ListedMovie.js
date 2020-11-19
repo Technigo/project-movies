@@ -8,7 +8,7 @@ import 'assets/MovieList.css';
 
 const ListedMovie = ({ id, title, releaseDate, posterImgSrc }) => {
   return (
-    <Link key={id} to={`/movies/${id}`} className="movie-list--movie-wrapper">
+    <Link to={`/movies/${id}`} className="movie-list--movie-wrapper">
       <img className="movie-list--img" src={posterImgSrc} alt={title} />
 
       {/* Content for hover-effect */}

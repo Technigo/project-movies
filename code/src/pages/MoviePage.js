@@ -8,8 +8,8 @@ import { BackButton } from '../components/BackButton';
 import SimilarMoviesButton from '../components/SimilarMoviesButton';
 
 // API Urls
-import { ApiKey } from '../components/ApiKeys';
-import { PosterImgUrl, BackdropImgUrl } from '../components/ApiUrls';
+import { APIKEY } from '../components/ApiKeys';
+import { POSTER_IMG_URL, BACKDROP_IMG_URL } from '../components/ApiUrls';
 
 // Styling
 import 'assets/MoviePage.css';
@@ -23,7 +23,7 @@ const MoviePage = ({ movies }) => {
   // Fetch details for selected movie
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/${params.id}?api_key=${ApiKey}&language=en-US`
+      `https://api.themoviedb.org/3/movie/${params.id}?api_key=${APIKEY}&language=en-US`
     )
       .then((results) => results.json())
       .then((json) => {
@@ -40,18 +40,18 @@ const MoviePage = ({ movies }) => {
         <section
           className="movie--wrapper"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(${BackdropImgUrl}${movieDetails.backdrop_path})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(${BACKDROP_IMG_URL}${movieDetails.backdrop_path})`,
           }}
         >
           {/* Buttons for moving back + to similar movies */}
           <div className="movie--buttons--wrapper">
-            <BackButton key={movies.key} />
+            <BackButton />
             <SimilarMoviesButton />
           </div>
 
           {/* Movie component page with detailed info */}
           <Movie
-            posterImg={`${PosterImgUrl}${movieDetails.poster_path}`}
+            posterImg={`${POSTER_IMG_URL}${movieDetails.poster_path}`}
             title={movieDetails.title}
             rating={movieDetails.vote_average}
             description={movieDetails.overview}

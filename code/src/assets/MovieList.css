@@ -22,17 +22,6 @@
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
-/* 
-.movie-list--details--wrapper:hover {
-  animation: opacityfade 0.3s ease-in-out;
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-}
-
-.movie-list--details--title {
-  padding: 10px 0;
-  font-size: 32px;
-} */
 
 .movie-list--movie-wrapper:hover .movie-list--details--wrapper {
   opacity: 1;
@@ -43,23 +32,6 @@
   justify-content: flex-end;
   cursor: pointer;
 }
-/* 
-@keyframes opacityfade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes opacityfadeout {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-} */
 
 /* --- MEDIA QUERIES --- */
 @media (max-width: 768px) {

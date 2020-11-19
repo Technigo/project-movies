@@ -1,11 +1,11 @@
 import React from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import {
-  ApiUrl,
-  HarryPotterApiUrl,
-  ChristmasApiUrl,
-  TopRatedApiUrl,
-  UpcomingApiUrl,
+  APIURL,
+  APIURL_HARRYPOTTER,
+  APIURL_CHRISTMAS,
+  APIURL_TOPRATED,
+  APIURL_UPCOMING,
 } from './ApiUrls';
 
 // Styling
@@ -25,7 +25,7 @@ const TopNav = ({ setCategoryUrl }) => {
           src={process.env.PUBLIC_URL + '/images/favicon.png'}
           alt="logo"
           onClick={() => {
-            setCategoryUrl(ApiUrl); // Set new URL, trigger fetch of default data
+            setCategoryUrl(APIURL); // Set new URL, trigger fetch of default data
           }}
         />
       </Link>
@@ -42,11 +42,11 @@ const TopNav = ({ setCategoryUrl }) => {
             history.push('/'); // Send user to movie-list page
           }}
         >
-          <option value={ApiUrl}>Popular movies</option>
-          <option value={HarryPotterApiUrl}>✦ Harry Potter ✦</option>
-          <option value={ChristmasApiUrl}>✴︎ Christmas ✴︎</option>
-          <option value={TopRatedApiUrl}>Top-rated</option>
-          <option value={UpcomingApiUrl}>Upcoming</option>
+          <option value={APIURL}>Popular movies</option>
+          <option value={APIURL_HARRYPOTTER}>✦ Harry Potter ✦</option>
+          <option value={APIURL_CHRISTMAS}>✴︎ Christmas ✴︎</option>
+          <option value={APIURL_TOPRATED}>Top-rated</option>
+          <option value={APIURL_UPCOMING}>Upcoming</option>
         </select>
       </div>
     </nav>
