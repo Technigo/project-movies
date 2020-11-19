@@ -2,7 +2,6 @@
 
 This project was to fetch api from MovieDB and create a multi-page application. Fetching one or many lists and displaying them on different pages.
 
-
 ## Tech
 
 - React
@@ -12,4 +11,4 @@ This project was to fetch api from MovieDB and create a multi-page application. 
 
 ## View it live
 
-https://time-for-movies.netlify.app/
+View my movie site [here](https://time-for-movies.netlify.app/)
