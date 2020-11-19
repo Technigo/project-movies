@@ -34,7 +34,7 @@ export const MovieDetail = () => {
   }, [id]);
 
   // Adds loader while the page is loading and until the API is loaded
-  if (loading === true) {
+  if (loading) {
     return <Loader />;
   // Check wheather there is errors or not, if the page doesn't exist 
   // the user gets directed to the Not Found page. 
@@ -48,7 +48,7 @@ export const MovieDetail = () => {
         style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` }}
       >
         <section className="detailed-card">
-          <BackButton key={movies.key}/>
+          <BackButton />
           <div className="picture-text-rating-wrapper">
             <img 
                 src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`} 

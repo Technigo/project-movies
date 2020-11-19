@@ -13,7 +13,7 @@ export const Options = ({ setThemeUrl }) => {
       <NavLink to="/theme" className="nav-links">
         <select 
           className="select-movie"
-          onChange={(event) => {
+          onChange={event => {
           setThemeUrl(event.target.value); // Change url based on choosen theme
           }}
         >
