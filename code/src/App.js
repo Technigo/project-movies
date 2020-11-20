@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import { Header } from 'components/Header'
-import { MovieList } from 'pages/MovieList'
-import { MovieDetails } from 'pages/MovieDetails'
+import { Header } from './components/Header'
+import { MovieList } from './pages/MovieList'
+import { MovieDetails } from './pages/MovieDetails'
 
 export const App = () => {
   return (

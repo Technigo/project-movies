@@ -10,8 +10,10 @@ export const Header = () => {
     <header>
       <h1 className='page-title'>Epic mustaches movies list!</h1>
       <Route path='/movies'>
-      <Link to={"/"}>
-      <span className='mustache-icon'><Mustache /><p className='go-back'>Go back to movies</p></span>
+        <Link to="/">
+          <div className='mustache-icon'><Mustache />
+            <p className='go-back'>Go back to movies</p>
+          </div>
         </Link>
       </Route>
     </header>
