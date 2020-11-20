@@ -17,7 +17,7 @@ export const MovieDetails = () => {
   }, [DETAILS_API, movieId]);
 
     return (
-      <div key={movie.id}>
+      <div>
         <div className="background-img" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }} alt={movie.title}>
             <Route path='/movies'>
               <Link to='/' className='back-menu'>
@@ -26,7 +26,11 @@ export const MovieDetails = () => {
               </Link>
             </Route>
             <div className='movie-details'>
-              <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} className='movie-img' />
+              <img
+                src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+                alt={movie.title}
+                className='movie-img'
+              />
               <div className='movie-detail-container'>
                 <h1 className='movie-title'>{movie.title}
                   <span className='rating-text'>
