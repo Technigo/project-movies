@@ -166,7 +166,7 @@
   font-weight: bold;
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .single-movie {
     width: 80%;
     flex-direction: column;
@@ -184,5 +184,5 @@
 @media (max-width: 680px) {
   .overview {
     width: 90%;
-  }
-}
+  } */
+/* }  */

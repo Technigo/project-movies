@@ -5,14 +5,12 @@
   align-items: center;
   width: 100%;
   margin: 0px;
-  padding: 0px;
-  word-wrap: break-word;
-  
+  padding: 0px; 
 }
 
 .movie-image {
   display: flex;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   position: relative;
   text-decoration: none;
   z-index: 1;
@@ -63,8 +61,8 @@
   text-align: center;
   font-weight: bold;
 }
-
-@media (min-width: 680px) {
+/* 
+@media (max-width: 680px) {
   .movie-list {
     display: flex;
     flex-direction: column;
@@ -72,11 +70,11 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .movie-list {
     display: flex;
     flex-direction: row;
 
   }
-}
+} */
 
