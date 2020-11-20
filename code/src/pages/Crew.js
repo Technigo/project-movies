@@ -19,7 +19,8 @@ const Crew = () => {
   return ( 
     <div className="display-card-container">
       {crewList.map((crew) => (
-        <Link 
+        <Link
+          key={crew.credit_id}
           className="links" 
           to={`/profile/crew/${crew.id}`}>
           <article key={crew.id} className="display-cards">
