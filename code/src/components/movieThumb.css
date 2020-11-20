@@ -10,31 +10,27 @@
 
 .movie-image {
   display: flex;
-  /* flex-grow: 1; */
   position: relative;
   text-decoration: none;
   z-index: 1;
   margin: 0px;
   padding: 0px;
-}
-
-.movie img {
   width: 100%;
-  z-index: 0;
-  transition: all 0.3s ease-in-out;
-  margin: 0px;
-  padding: 0px;
 }
 
+
+.movie-link{
+  width: 100%;
+}
 .movie-image:hover {
   filter: brightness(50%);
 }
 
-.movie-image:hover + .title-relasedate-box {
+.movie-image:hover + .title-release-box {
   display: block;
 }
 
-.title-relasedate-box {
+.title-release-box {
   position: absolute;
   display: none;
   z-index: 1;
@@ -47,7 +43,6 @@
 
 .movie-release {
   color: white;
-
   font-size: 25px;
   padding-left: 40px;
   font-family: "Lucida Console", Courier, monospace;
@@ -61,20 +56,33 @@
   text-align: center;
   font-weight: bold;
 }
-/* 
-@media (max-width: 680px) {
-  .movie-list {
-    display: flex;
-    flex-direction: column;
-    
-  }
+
+@media (min-width: 680px) {
+  .movie-link{
+  width: 50%;
+}
+.movie-release {
+  font-size: 20px;
+
+}
+.movie-name {
+  font-size: 30px;
+ 
+
+}
+}
+@media (min-width: 1024px) {
+  .movie-link{
+  width: 25%;
+}
+.movie-release {
+  font-size: 15px;
+ 
+}
+.movie-name{
+  font-size: 20px;
+  padding-left: 35px;
+ 
 }
 
-@media (max-width: 1024px) {
-  .movie-list {
-    display: flex;
-    flex-direction: row;
-
-  }
-} */
-
+} 

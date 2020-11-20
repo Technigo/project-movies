@@ -21,7 +21,7 @@ export const MovieList = () => {
             id={movie.id} 
              name={movie.title}
              background_image={movie.poster_path}
-             releseDate={`Released ${movie.release_date}`}/>
+             releaseDate={`Released ${movie.release_date}`}/>
       ))}
     </section>
   );
