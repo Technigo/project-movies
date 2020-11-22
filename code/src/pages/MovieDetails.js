@@ -11,9 +11,6 @@ export const MovieDetails = () => {
   const API_KEY = "0db2a5ac0c510ce6221cadf605f4d3e6"
   const MOVIE_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`
   const [movie, setMovie] = useState({})
-  
-
-  console.log(`Id is: ${id}`)
 
   useEffect(() => {
     fetch(MOVIE_URL)
@@ -29,9 +26,7 @@ export const MovieDetails = () => {
   const genres = movie.genres
 
   return (<>
-    <main
-      className="movie-details-page"
-    >
+    <main className="movie-details-page">
       <BackButton />
 
       <div className="movie-details-info-container">
@@ -49,12 +44,6 @@ export const MovieDetails = () => {
         <div className="movie-details-overview">
           <p>{movie.overview}</p>
           <div className="movie-details-extra-info">
-            {/* 
-            This is code for mapping through genres I couldn't get working. It's supposed to map through the array of genres, but I can't for the life of me figure out why it won't. I ~think~ I'm trying to map through something that isn't an array (it works when I map through a predefined array of [1,2,3], for example), but it really looks like an array in the GET request. Anyway – omitting this for the submission, and maybe get back to it later. If the person reading this can figure out why it doesn't work, I'd appreciate it. 
-            <p>
-              { genres.map(genre => console.log(genre.name)) }
-            </p>
-            <img src={diamond} /> */}
             <div className="rating-tag margin-right">
               <span className="movie-card-rating">{movie.vote_average}<span className="subtle">/10</span></span>
             </div>

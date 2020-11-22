@@ -19,7 +19,6 @@ body {
   font-size: 20px;
 }
 
-
 h1, h2, h3, h4, h5 {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
@@ -103,9 +102,6 @@ button p {
 button img {
   margin: 40px, 0, 4px, 0;
 }
-
-
-
 
 /* Set height and width to a 4:3 ratio. 25vw means it'll be 25% of the viewport width (and since the image is in 4:3 ratio, the height should be 1.33 times larger than the width */
 .movie-card {
@@ -279,7 +275,6 @@ button img {
 .margin-right {
   margin-right: 8px;
 }
-
 
 .movie-details-extra-info a {
   font-weight: 500;
