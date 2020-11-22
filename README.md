@@ -1,13 +1,11 @@
 # Project Movies
-
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Create a movie multi-page React application using themoviedb.org API. 
 
 ## The problem
+Technologies used: React, React Router, API, Dev tools 
+I did prepare for adding a "page not found", if I had more time I would also add a loading message, a dropdown and more pages. I would also make it responsive and accessible.
+Would like to know if there's an easy way to add url component, in order to keep code tighter.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://laughing-ardinghelli-d65cab.netlify.app/

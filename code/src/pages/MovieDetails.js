@@ -30,12 +30,10 @@ export const MovieDetails = () => {
 
     return (
       <article className="details_page">
-        <Route path='/movies'>
           <Link className="backLink" to={`/`}>
             <BackArrow />
               <h3>Movies</h3>
             </Link>
-        </Route>
         <div className="details_background" 
               style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})` }} 
               alt={movieDetails.title}>
