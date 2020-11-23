@@ -1,5 +1,5 @@
 /* MOBILE VIEW */
-.movieContainer {
+.movie-container {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -23,7 +23,7 @@ a {
   margin-right: 10px;
 }
 
-.buttonText {
+.button-text {
   color: #fff;
   font-weight: bold;
   margin: 0;
@@ -34,7 +34,7 @@ a {
   align-items: flex-end;
 }
 
-.movieDetailsThumbnail {
+.movie-details-thumbnail {
   position: absolute;
   top: 0;
   right: 0;
@@ -46,14 +46,14 @@ a {
   border: #fff solid 5px;
 }
 
-.movieDetails2 { /* wraps movie title, average vote & description */
+.movie-details2 { /* wraps movie title, average vote & description */
   color: #fff;
   max-width: 400px;
   min-height: 180px;
   margin: 0 25px 25px 70px;  
 }
 
-.averageVote {
+.average-vote {
   color: #FF0000;
   font-size: 17px;
   font-weight: 400;
@@ -63,7 +63,7 @@ a {
 /* TABLET VIEW */
 @media screen and (min-width: 768px) {
 
-.movieContainer {
+.movie-container {
   min-width: 768px; 
 }
 
@@ -71,13 +71,13 @@ a {
   margin: 10px 0 0 80px;
 }
 
-.movieDetailsThumbnail {
+.movie-details-thumbnail {
   width: 242px;
   height: 343px;
   margin: 50px 60px 0px 80px;
 }
     
-.movieDetails2 {
+.movie-details2 {
   max-width: 600px;
   margin: 0 55px 35px 80px;
 }   
@@ -87,7 +87,7 @@ a {
 /* DESKTOP VIEW */
 @media screen and (min-width: 1024px) {
 
-.movieContainer {
+.movie-container {
   min-width: 1024px;
 }
 
@@ -95,13 +95,13 @@ a {
   margin: 10px 0 0 50px;
 }
 
-.movieDetailsThumbnail {
+.movie-details-thumbnail {
   width: 352px;
   height: 523px;
   margin: 50px 50px 10px 50px;
 }
     
-.movieDetails2 {
+.movie-details2 {
   max-width: 400px;
   min-height: 180px;
   margin: 0 0 20px 430px;
