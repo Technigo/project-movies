@@ -13,7 +13,7 @@ export const MoviePage = () => {
         .then((json) => {
             setMovie(json)
         });
-    }, []);
+    }, );
 
  
     return (
