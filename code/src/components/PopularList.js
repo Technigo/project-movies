@@ -10,7 +10,6 @@ export const PopularList = () => {
         .then((res) => res.json())
         .then((json) => {
             setMovies(json.results)
-            console.log(json)
         })
     }, [])
 

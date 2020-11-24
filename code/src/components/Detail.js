@@ -18,21 +18,19 @@ export const Detail = () => {
 
     return (
 
-    <section className="movie-backdrop"  style={{  backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` }}>
-      
+        <section className="movie-backdrop" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` }}>
+
             <div className="movie-content">
-            <div className="back-movies">
+                <div className="back-movies">
                     <Link to="/" className="link">
-                    <img src={Icon} style={ {width:"40px"} }  alt="icon" /> 
-                    <div className="back-text">Movies</div>
+                        <img src={Icon} style={{ width: "40px" }} alt="icon" />
+                        <div className="back-text">Movies</div>
                     </Link>
                     <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`} alt={movies.title} />
-            </div>
-               
-               
+                </div>
                 <div className="movie-info">
-                 <h1>{movies.title} <span className="movie-vote">{movies.vote_average}/10</span></h1> 
-                 <span className="movie-homepage"><a href={movies.homepage} target="blank">{movies.homepage}</a></span>
+                    <h1>{movies.title} <span className="movie-vote">{movies.vote_average}/10</span></h1>
+                    <span className="movie-homepage"><a href={movies.homepage} target="blank">{movies.homepage}</a></span>
                     <span className="movie-status">- {movies.status} -</span>
                     <p>{movies.overview}</p>
                 </div>
