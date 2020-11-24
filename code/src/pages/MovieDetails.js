@@ -28,6 +28,7 @@ export const MovieDetails = () => {
         }}
       >
         <Link to="/" className="back-button">
+          {/* Import go-back-icon from fontawesome */}
           <span className="fas fa-chevron-circle-left"></span>
           Movies
         </Link>

@@ -9,7 +9,7 @@ import {
 } from ".././urls";
 import "../css/header.css";
 
-export const Header = ({getUrl}) => {
+export const Header = ({setCurrentUrl}) => {
   const [prefix, setPrefix] = useState("POPULAR ");
   
   const checkPrefix = (url) => {
@@ -20,7 +20,7 @@ export const Header = ({getUrl}) => {
   }
   
   const handleOnclick = (url) => {
-    getUrl(url);
+    setCurrentUrl(url);
     checkPrefix(url);
   }
 

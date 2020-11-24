@@ -51,12 +51,15 @@ button a {
   header {
     height: 110px;
   }
+
   .buttons {
     padding: 0 5px;
   }
+
   button {
     font-size: 13px;
   }
+  
   button a {
     padding: 8px 12px;
   }

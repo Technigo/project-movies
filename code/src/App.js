@@ -10,13 +10,13 @@ import { POPULAR_URL } from "./urls";
 export const App = () => {
   const [url, setUrl] = useState(POPULAR_URL);
 
-  const getUrl = (url) => {
+  const setCurrentUrl = (url) => {
     setUrl(url);
   };
 
   return (
     <BrowserRouter>
-      <Header getUrl={getUrl} />
+      <Header setCurrentUrl={setCurrentUrl} />
       <main>
         <Switch>
           <Route path="/" exact>
