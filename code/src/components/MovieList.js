@@ -6,10 +6,10 @@ export const MovieList = () => {
   const [list, setList] = useState([])
 
   useEffect(() => {
-    const APIKey = 'c03059469ca2a2b2651ea90d6f8361ab'
-    const listAPI = `https://api.themoviedb.org/3/movie/now_playing?api_key=${APIKey}&language=en-US&region-SE&page=1`
+    const API_KEY = 'c03059469ca2a2b2651ea90d6f8361ab'
+    const LIST_API = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&region-SE&page=1`
 
-    fetch(listAPI)
+    fetch(LIST_API)
       .then((response) => response.json())
       .then((json) => {
         setList(json.results)

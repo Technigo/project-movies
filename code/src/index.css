@@ -21,17 +21,17 @@ main {
   margin: 0 auto;
 }
 
-#not-found-header {
+.not-found-header {
   font-size: 88px;
   font-weight: 900;
 }
 
-#not-found-smaller {
+.not-found-smaller {
   font-size: 30px;
   padding-bottom: 60px;
 }
 
-#not-found a {
+.not-found a {
   font-size: 30px;
   line-height: 30px;
   color: #990000;

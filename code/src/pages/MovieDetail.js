@@ -6,11 +6,18 @@ export const MovieDetail = () => {
   const { id } = useParams()
   const [info, setInfo] = useState([])
 
-  useEffect(() => {
-    const APIKey = 'c03059469ca2a2b2651ea90d6f8361ab'
-    const movieAPI = `https://api.themoviedb.org/3/movie/${id}?api_key=${APIKey}&language=en-US`
+  const detailStyling = {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) -70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280/${info.backdrop_path})`,
+    minHeight: '100vh',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat'
+  }
 
-    fetch(movieAPI)
+  useEffect(() => {
+    const API_KEY = 'c03059469ca2a2b2651ea90d6f8361ab'
+    const MOVIE_API = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`
+
+    fetch(MOVIE_API)
       .then((res) => res.json())
       .then((json) => {
         setInfo(json)
@@ -21,12 +28,7 @@ export const MovieDetail = () => {
     <section
       className="container"
       key={id}
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) -70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280/${info.backdrop_path})`,
-        minHeight: '100vh',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
-      }}>
+      style={detailStyling}>
       <article className="info">
         <img className="poster" alt={info.title} src={`https://image.tmdb.org/t/p/w342/${info.poster_path}`} />
         <div className="details">
