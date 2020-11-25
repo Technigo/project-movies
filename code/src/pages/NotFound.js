@@ -3,9 +3,9 @@ import React from 'react'
 
 export const NotFound = () => {
   return (
-    <div id="not-found-header"> WRONG WAY, <br /> GO BACK!
-      <p id="not-found-smaller">This page doesn't exist.</p>
-      <p id="not-found"><a href="/" tabIndex="0">Take me back home.</a></p>
+    <div className="not-found-header"> WRONG WAY, <br /> GO BACK!
+      <p className="not-found-smaller">This page doesn't exist.</p>
+      <p className="not-found"><a href="/" tabIndex="0">Take me back home.</a></p>
     </div>
   )
 }

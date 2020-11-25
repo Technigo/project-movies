@@ -27,7 +27,7 @@ export const App = () => {
           <Route path="/soon">
             <MoviesSoon />
           </Route>
-          <Route path="/movies/:id" exact>
+          <Route path="/movies/:id">
             <MovieDetail />
           </Route>
           <Route path="/404">

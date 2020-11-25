@@ -18,12 +18,12 @@ export const Nav = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="../top">
+          <NavLink to="/top">
             Top Rated
           </NavLink>
         </li>
         <li>
-          <NavLink to="../soon">
+          <NavLink to="/soon">
             Coming Soon
           </NavLink>
         </li>
