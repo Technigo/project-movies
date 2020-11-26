@@ -16,6 +16,7 @@ I did also add a Header text and a Navigation bar. Here I linked more components
 
 For me it was really fun using React router to finally be able to create multi-paged websites. For me that is more useful since in most cases that is how webpages work. Right now I just want to create a lot of pages connecting in the App file to really make it multi-paged.
 
+##
 ## Learning Objectives
 
 - Using React router to create multi-page webpages
@@ -24,11 +25,13 @@ For me it was really fun using React router to finally be able to create multi-p
 
 - Using API's in React combining 'useState' with 'useEffect'
 
+
 ## Tech
 
 - React JS
 
 - CSS
+
 
 ## View it live
 
