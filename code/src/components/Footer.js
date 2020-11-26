@@ -8,7 +8,21 @@ const Footer = () => {
         <p className='signature'>&#169; 2020 Sandrine Elander</p>
       </div>
       <p tabIndex='0' className='attribution'>
-        <a target='_blank' rel='noopener noreferrer' href='https://icons8.com/icon/111180/clapperboard--v2'>Clapperboard icon</a> by <a target='_blank' rel='noopener noreferrer' href='https://icons8.com'>Icons8</a>
+        <a
+          target='_blank'
+          rel='noopener noreferrer'
+          href='https://icons8.com/icon/111180/clapperboard--v2'
+        >
+          Clapperboard icon
+        </a>
+        by
+        <a
+          target='_blank'
+          rel='noopener noreferrer'
+          href='https://icons8.com'
+        >
+          Icons8
+        </a>
       </p>
     </footer>
   );

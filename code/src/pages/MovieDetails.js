@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import Loading from '../components/Loading';
 import NotFound from './NotFound';
-import Arrow from '../icons/arrow.svg';
+import arrow from '../icons/arrow.svg';
 
 const MovieDetails = () => {
   const { id } = useParams();
@@ -39,12 +39,12 @@ const MovieDetails = () => {
       return (
         <article className='detail-page'>
           <a className='back-link' href='/'>
-            <img src={Arrow} alt='back arrow' />
+            <img src={arrow} alt='back arrow' />
             Movies
           </a>
           <div className='background' style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
             <div className='summary'>
-              <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} ></img>
+              <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
               <div className="details">
                 <h1>
                   {movie.title}
