@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import Icon from "./arrow.png";
+import icon from "./arrow.png";
 
 export const Detail = () => {
     const apiKey = "3c9451d52520351f0a27222d2fb5cbb2"
@@ -23,7 +23,7 @@ export const Detail = () => {
             <div className="movie-content">
                 <div className="back-movies">
                     <Link to="/" className="link">
-                        <img src={Icon} style={{ width: "40px" }} alt="icon" />
+                        <img className="arrow-icon" src={icon} alt="icon" />
                         <div className="back-text">Movies</div>
                     </Link>
                     <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`} alt={movies.title} />

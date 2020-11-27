@@ -40,7 +40,7 @@ code {
  .movies-poster {
   z-index: 0;
   width: 100%;
-
+ 
  }
 
 .movies-info .movies-text {
@@ -89,7 +89,6 @@ h3 {
 
 /*Detail.js*/
 .movie-backdrop {
-  /* border: solid blue 2px; */
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
@@ -101,13 +100,12 @@ h3 {
 }
 
 .movie-content {
-/* border: solid red 2px; */
-display: flex;
-flex-direction: row;
-align-items: flex-end;
-margin-bottom: 70px;
-margin-left:50px;
-height: 680px;
+ display: flex;
+ flex-direction: row;
+ align-items: flex-end;
+ margin-bottom: 70px;
+ margin-left:50px;
+ height: 680px;
 }
 
 .movie-poster {
@@ -115,18 +113,20 @@ height: 680px;
   width: 380px;
 }
 
+.arrow-icon {
+  width: 40px;
+}
 
 .movie-info {
-color: white;
-/* border: solid green 2px; */
-max-width: 400px;
-font-size: 18px;
-display: flex;
-flex-direction: column;
-justify-content: flex-end;
-margin-left: 20px;
-background: rgba(8, 8, 8, 0.565);
-padding:20px;
+ color: white;
+ max-width: 400px;
+ font-size: 18px;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
+ margin-left: 20px;
+ background: rgba(8, 8, 8, 0.565);
+ padding:20px;
 }
 
 .movie-vote {
@@ -141,40 +141,39 @@ padding:20px;
 }
 
 .link {
-display: flex;
-flex-direction: row;
-text-decoration:none;
-outline:none;
-align-items: center;
-margin-bottom: 120px;
+ display: flex;
+ flex-direction: row;
+ text-decoration:none;
+ outline:none;
+ align-items: center;
+ margin-bottom: 120px;
 }
 
 .back-movies {
-display: flex;
-flex-direction: column;
+ display: flex;
+ flex-direction: column;
 }
 
 .back-text  {
   opacity:1;
-color: white;
-margin-left: 10px;
-font-size: 20px;
-font-weight: bold;
-display: inline-block;
-vertical-align: middle;
--webkit-transform: perspective(1px) translateZ(0);
-transform: perspective(1px) translateZ(0);
-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
--webkit-transition-duration: 0.3s;
-transition-duration: 0.3s;
--webkit-transition-property: transform;
-transition-property: transform;
+ color: white;
+ margin-left: 10px;
+ font-size: 20px;
+ font-weight: bold;
+ display: inline-block;
+ vertical-align: middle;
+ -webkit-transform: perspective(1px) translateZ(0);
+ transform: perspective(1px) translateZ(0);
+ box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+ -webkit-transition-duration: 0.3s;
+ transition-duration: 0.3s;
+ -webkit-transition-property: transform;
+ transition-property: transform;
 } 
 
-
 .back-text:hover, .back-text:focus, .back-text:active {
--webkit-transform: translateX(8px);
-transform: translateX(8px);
+ -webkit-transform: translateX(8px);
+ transform: translateX(8px);
 }
 
 h1 {
@@ -191,7 +190,7 @@ font-size: 13px;
 .movie-homepage a:hover{
   border-bottom: solid red 1px;
   color: red;
-  }
+}
 
   @media (min-width: 300px) and (max-width: 700px) {
 
