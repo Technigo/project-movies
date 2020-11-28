@@ -7,7 +7,6 @@ import { ShowMovie } from 'ShowMovie'
 export const App = () => {
 
   return (
-   
     <BrowserRouter>
       <Switch>
         <Route path="/" exact>
@@ -18,6 +17,5 @@ export const App = () => {
         </Route>
       </Switch>
     </BrowserRouter>
-    
   )
 }

@@ -4,11 +4,9 @@ import { Route, Link} from 'react-router-dom'
 
 import { BackButton } from 'BackButton'
 
-
-
 export const ShowMovie = () => {
     const { id } = useParams()
-    const [details, getDetails] = useState([])
+    const [details, getDetails] = useState({})
 
     useEffect(() => {
 
@@ -18,19 +16,16 @@ export const ShowMovie = () => {
     })
     .then((text) => {
         getDetails(text)
-        console.log(text)
     })
     .catch((error) => {
         console.error('Request failed', error)
     })
-
     }, [])
 
     return  (
         <div style={{ backgroundImage: `URL(https://image.tmdb.org/t/p/w1280/${details.backdrop_path})` }} className="backdrop-container">
-            
                 <div className="button-container">
-                    <Route path="/:id">
+                    <Route path="/:id" exact>
                         <Link to="/">
                             <BackButton />
                         </Link>
@@ -48,7 +43,5 @@ export const ShowMovie = () => {
                 </div>
             </div>
         </div>
-
     )
-    
 }
