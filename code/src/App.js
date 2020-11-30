@@ -28,15 +28,9 @@ export const App = () => {
           <MovieList movies={movies} />
         </Route>
 
-        {
-          movies.map(movie => {
-            return (
-              <Route key={movie.id} path={`/movies/${movie.title}`} exact>
-                <MovieDetails {...movie} />
-              </Route>
-            )
-          })
-        }
+        <Route path="/movies/:movieId" exact>
+          <MovieDetails />
+        </Route>
 
       </Switch>
     </BrowserRouter>
