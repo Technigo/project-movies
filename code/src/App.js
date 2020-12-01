@@ -10,25 +10,25 @@ import CompanyList from './pages/CompanyList';
 import './styles/styles.scss';
 
 export const App = () => {
-  const [list, setList] = useState();
-  const handleClick = selectedList => {
-    setList(selectedList);
+  const [movieList, setMovieList] = useState();
+  const handleListType = selectedList => {
+    setMovieList(selectedList);
   };
 
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          <ListHeader onClick={handleClick} />
-          <MovieList>{list}</MovieList>
+          <ListHeader onClick={handleListType} />
+          <MovieList>{movieList}</MovieList>
         </Route>
-        <Route exact path="/movies/:movieId">
+        <Route path="/movies/:movieId">
           <MoviePage />
         </Route>
-        <Route exact path="/company/:companyId">
+        <Route path="/company/:companyId">
           <CompanyList />
         </Route>
-        <Route exact path="/error">
+        <Route path="/error">
           <Error />
         </Route>
         <Redirect to="/error" />

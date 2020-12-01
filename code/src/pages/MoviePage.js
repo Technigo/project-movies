@@ -30,12 +30,7 @@ const MoviePage = () => {
       });
   }, [MOVIE_URL]);
 
-  return (
-    <>
-      {isLoading && <Loader />}
-      {!isLoading && <MovieDetail {...movie} />}
-    </>
-  );
+  return <>{isLoading ? <Loader /> : <MovieDetail {...movie} />}</>;
 };
 
 export default MoviePage;

@@ -225,7 +225,7 @@ body {
 
   &__title {
     text-transform: uppercase;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     text-decoration: none;
     color: $cream;
     transition: 0.2s ease-in-out;
@@ -280,7 +280,7 @@ body {
   }
 
   &__company {
-    color: #15173d;
+    color: $dark-blue;
     text-decoration: none;
     padding: 2px 5px;
     background: $turquoise;

@@ -32,8 +32,9 @@ const MovieList = ({ children }) => {
 
   return (
     <main className="list">
-      {isLoading && <Loader />}
-      {!isLoading && (
+      {isLoading ? (
+        <Loader />
+      ) : (
         <>
           {movies.map(movie => (
             <MovieThumb key={movie.id} {...movie} />

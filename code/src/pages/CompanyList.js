@@ -27,7 +27,6 @@ const CompanyList = () => {
         }
       })
       .then(json => {
-        console.log(json);
         setCompany(json);
         setLoading(false);
       })
@@ -46,12 +45,10 @@ const CompanyList = () => {
         }
       })
       .then(json => {
-        console.log(json);
         const filteredArray = json.results.filter(
           movie => movie.poster_path != null
         );
         setCompanyMovies(filteredArray);
-        console.log(filteredArray);
         setLoading(false);
       })
       .catch(() => {
