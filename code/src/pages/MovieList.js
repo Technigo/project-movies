@@ -10,11 +10,11 @@ export const MovieList = () => {
   const[movies,setMovies] = useState([]);
 
   
-useEffect(() =>{
-  fetch(MOVIES_URL)
+  useEffect(() =>{
+    fetch(MOVIES_URL)
     .then((response) => response.json())
     .then (json => setMovies(json.results));
-},[]);
+  },[]);
 
   return (
     <section className="movies-list">
