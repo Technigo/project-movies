@@ -8,20 +8,20 @@ import { NotFound } from "pages/NotFound"
 export const App = () => {
   return (
     <BrowserRouter>
-    <Switch>
-      <Route path="/"exact>
-        <MovieList />
-      </Route>
-      <Route path="/movies/:id" exact>
-        <MovieDetails />
-      </Route>
-      <Route path="/404">
-        <NotFound />
-      </Route>
-      <Redirect 
-      to="/404"
-      />
-    </Switch>
+      <Switch>
+        <Route path="/"exact>
+         <MovieList />
+         </Route>
+        <Route path="/movies/:id" exact>
+         <MovieDetails />
+        </Route>
+        <Route path="/404">
+         <NotFound />
+       </Route>
+        <Redirect 
+          to="/404"
+        />
+     </Switch>
     </BrowserRouter>
   )
 }
