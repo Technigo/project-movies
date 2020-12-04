@@ -12,4 +12,4 @@ When the user chooses a non-existant path or movie id, they are redirected and p
 
 ## View it live 💀
 
-Check it out here: 
+Check it out here: https://project-movie-releases-kat.netlify.app/
