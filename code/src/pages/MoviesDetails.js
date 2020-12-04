@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from "react-router-dom"
-import { Link } from "react-router-dom"
+import { useParams, Link} from "react-router-dom"
 
 import { apiKey } from "key"
 import "./moviesDetails.css"
@@ -18,15 +17,14 @@ export const MoviesDetails = () => {
                 return res.json()
             })
             .then((json) => {
-                console.log(json)
                 setMovies(json)
                 setLoading(false)
             })
             .catch((error) => {
-                console.error('Bad request', error)
             })
     }, [movieId, loading])
 
+    //The brackets are here because VS code was complaining and giving me an error when I didn't have them :)
     if (!movies.id) {
         return (
 
@@ -45,7 +43,7 @@ export const MoviesDetails = () => {
     return (
 
         <div className="movie" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 10%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` }}>
-            <Link className="back-link" to="/" exact='true'>
+            <Link className="back-link" to="/">
                 <img className="back-arrow" src={Arrow} alt="go back to movies" />Movies list
                 </Link>
             <div className="movie-details">
