@@ -7,7 +7,7 @@ export const TvShowThumb = ({ name, id, first_air_date, poster_path }) => {
   const imageURL = `${API_IMG_URL}/w300`;
 
   return (
-    <Link to={`/tv/${id}`} className="tvshow--link">
+    <Link to={`/tv/${id}`} className="tvshow__link">
       <img
         className="tvshow__image"
         src={`${imageURL}${poster_path}`}

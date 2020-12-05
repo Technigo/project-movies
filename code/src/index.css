@@ -45,7 +45,7 @@ code {
   flex-wrap: wrap;
 }
 
-.tvshow--link {
+.tvshow__link {
   color: #fff;
   width: 25%;
   position: relative;
