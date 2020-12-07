@@ -17,16 +17,16 @@ export const App = () => {
         <Route path="/" exact>
           <MovieList />
         </Route>
-        <Route path="/movies/:id" exact>
+        <Route path="/movies/:id">
           <MovieDetail />
         </Route>
-        <Route path="/toprated" exact>
+        <Route path="/toprated">
           <TopratedMoviesList />
         </Route>
-        <Route path="/upcoming" exact>
+        <Route path="/upcoming">
           <UpcomingMoviesList />
         </Route>
-        <Route path="/theme" exact>
+        <Route path="/theme">
           <MoviesByTheme />
         </Route>
         <Route path="/404">
