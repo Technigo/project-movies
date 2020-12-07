@@ -25,10 +25,12 @@ For me it was really fun using React router to finally be able to create multi-p
 - Using API's in React combining 'useState' with 'useEffect'
 
 ## Tech
+## Tech
 
 - React JS
 
 - CSS
+
 
 ## View it live
 
