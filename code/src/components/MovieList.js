@@ -15,7 +15,6 @@ export const MovieList = () => {
     return (
         <section className="movie-list">
          {movies.map((movie) => {      
-            console.log(movie)
          return ( 
             <Link to={`/movies/${movie.id}`} key={movie.id} className="movie-in-list">
                 <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} className="movie-poster"/>

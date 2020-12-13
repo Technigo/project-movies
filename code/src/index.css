@@ -13,13 +13,10 @@ code {
     monospace;
 }
 
-h2 {
+h2, p {
   color: white;
 }
 
-p {
-  color: white;
-}
 
 .movie-list {
   display: flex;
@@ -46,13 +43,10 @@ p {
 
 }
 
-.list-details h2 {
+.list-details h2, .list-details p {
   margin: 5px 0;
 }
 
-.list-details p {
-  margin: 5px 0;
-}
 
 .movie-poster {
   width: 100%;

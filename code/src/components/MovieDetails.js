@@ -10,7 +10,6 @@ export const MovieDetails = () => {
     const params = useParams()
     const movieID = params.movieID
     const [movie, setMovie] = useState([])
-    // const [error, setError] = useState('')
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
@@ -20,9 +19,7 @@ export const MovieDetails = () => {
         .then((json) => {
             setMovie(json)
             setIsLoading(false)
-
         })
-        // .catch((err)=>{setError(err.success)})
     }, [movieID])
 
     
@@ -31,7 +28,7 @@ export const MovieDetails = () => {
             <Loading />
         )
 
-    } else if(movie.success !== false) {
+    } else if(movie.success) {
         return(
             <section className="movie" style={{backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.7) 25%, rgba(0,0,0,0.0) 40%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}}>
                 <BackLink />
