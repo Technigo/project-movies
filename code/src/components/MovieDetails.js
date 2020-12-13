@@ -28,7 +28,7 @@ export const MovieDetails = () => {
             <Loading />
         )
 
-    } else if(movie.success) {
+    } else if(movie.id) {
         return(
             <section className="movie" style={{backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.7) 25%, rgba(0,0,0,0.0) 40%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}}>
                 <BackLink />
