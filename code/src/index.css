@@ -93,6 +93,7 @@ code {
   animation-name: arrow-slide;
   animation-duration: 250ms;
 }
+
 .movies-back-button:hover {
   border-color: #fff;
 }

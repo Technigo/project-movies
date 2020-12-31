@@ -7,7 +7,6 @@ import { BackButton } from "../components/BackButton";
 export const MoviePage = () => {
   const { id } = useParams();
   const history = useHistory();
-
   const [movieDetails, setMovieDetails] = useState({});
 
   useEffect(() => {
