@@ -1,13 +1,22 @@
-# Project Movies
+# Project Movies/TV-shows
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to use themoviedb.org's API to fetch a list of movies or TV-shows, display them on a page and link to a movie detail page when you click on the movie. The styling was impolemented from an example app using the same API.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started with analyzing the example app and the API documentation to find the building blocks I'd need for my components. Then I did a sketch of the flow of the app from the App.js to the pages and main components. A lot of time was speant trying to find out how to access props without having to send down each single one. The spread operator finally sorted out all the questions marks.
+
+## Learning objectives
+
+- using React router to create multi-page applications
+- using placeholders in urls to pick dymanic parts from it
+- pratice using APIs in React and combining useState with useEffect
+## Tech
+
+- React
+- React router
+- CSS
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://popular-tv-shows.netlify.app/
