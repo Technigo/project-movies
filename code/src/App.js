@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 /*Inner Dependencies*/
 import { MovieList } from './pages/MovieList';
+import { MovieDetails } from './pages/MovieDetails';
 
 export const App = () => {
   return (
@@ -13,9 +14,9 @@ export const App = () => {
           <Route path='/' exact>
             <MovieList />
           </Route>
-          {/* <Route path='/detail' exact>
-            <MovieDetail />
-          </Route> */}
+          <Route path='/details/:id'>
+            <MovieDetails />
+          </Route>
         </Switch>
       </BrowserRouter>
     </>

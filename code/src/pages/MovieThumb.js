@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const MovieThumb = ({ title, release_date, poster_path }) => {
+export const MovieThumb = ({ title, release_date, poster_path, id }) => {
   return (
     <section className='movie-thumb'>
       {title}

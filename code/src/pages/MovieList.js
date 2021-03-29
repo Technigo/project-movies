@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { MovieThumb } from './MovieThumb';
+import { MOVIES_URL } from 'reusable/urls';
 
 export const MovieList = () => {
-  const MOVIES_URL =
-    'https://api.themoviedb.org/3/movie/popular?api_key=f86cf72a5f604a49cde375a4fa2c6d61&language=en-US&page=1';
-
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -20,7 +18,9 @@ export const MovieList = () => {
   return (
     <section className='movie-list'>
       {movies.map((movie) => (
-        <MovieThumb {...movie} />
+        <Link key={movie.id} to={`/details/${movie.id}`}>
+          <MovieThumb {...movie} />
+        </Link>
       ))}
     </section>
   );
