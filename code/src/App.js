@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import { MovieList } from "./pages/MovieList";
 
-// const DETAIL_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`;
+import { Details } from './pages/Details'
 
 export const App = () => {
   return (
@@ -13,9 +13,9 @@ export const App = () => {
           <Route path="/" exact>
             <MovieList />
           </Route>
-          {/* <Route path="/movies/:id">
+          <Route path="/movies/:id">
             <Details />
-          </Route> */}
+          </Route>
         </Switch>
       </BrowserRouter>
     </div>

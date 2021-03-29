@@ -12,3 +12,80 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.movielist-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-card {
+  width: 25%;
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+
+.movie-image {
+  width: 100%;
+}
+
+.movie-card-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  padding: 20px;
+}
+
+.movie-card:hover .movie-card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.movie-title {
+  margin: 0;
+}
+
+.release-title {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.background-image {
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.movie-details {
+  display: flex;
+  padding: 50px;
+}
+
+.details-text {
+  max-width: 500px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.poster-image {
+  border: 5px solid white;
+}
+
+.movie-detail-title {
+
+}
+
+.overview {
+
+}
+
+.rating {
+  
+}
