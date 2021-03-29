@@ -1,24 +1,32 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 
 const MovieDetail = () => {
     const { id } = useParams()
-    const [movies2, setMovies2] = useState([])
+    const [movies, setMovies2] = useState([])
 
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=2e6a7b75ad4d088fae1f52620044bef7&language=en-US`)
         .then((res) => res.json())
         .then((json) => setMovies2(json))
     },[])
-
-    console.log(movies2)
+ //backgroundImage: "url(" + Background + ")"
+    console.log(movies)
     return (
-        <div>
-            {movies2.map((y) => (
-                <div>
-                    <h1>{y.movies2.original_title}</h1>
-                </div>
-            ))}
+        <div className='details-wrapper' 
+        style={{
+            backgroundImage: "url(https://image.tmdb.org/t/p/w1280" + movies.backdrop_path
+            
+            }}
+            >
+            <img src={`https://image.tmdb.org/t/p/w300${movies.poster_path}`} alt={movies.title} />
+            <h1>{movies.original_title}</h1>
+            <h3>{movies.overview}</h3>
+            <h4>{movies.vote_average}</h4>
+            <Link to={`/`}>       
+                <button>BACK</button>
+            </Link>
+           
         </div>
     )
 }

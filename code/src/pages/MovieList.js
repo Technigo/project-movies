@@ -11,20 +11,29 @@ const MovieList = () => {
         .then((res) => res.json())
         .then((json) => setMovies(json.results))
     }, [])
+    
 
-    console.log(movies)
+    const Pic = `https://image.tmdb.org/t/p/w1200${movies.backdrop_path}`
+    //console.log(movies)
+//url=(`https://image.tmdb.org/t/p/w1200${movie.backdrop_path}`
 
     return (
         <div>
             {movies.map((movie) => (
                 <div key={movie.id}>
-                    <img src={movie.poster_path} alt={movie.title} />
-                    <h2>
+                    <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} />
+                
                         <Link to={`/details/${movie.id}`}>
-                            {movie.original_title}
+                            
+                            <h2>{movie.original_title}</h2>
+                            <h3>{movie.release_date}</h3>
+
                         </Link>
-                    </h2>
-                    <h3>{movie.release_date}</h3>
+                    
+                    
+
+                  
+            
                 </div>
             ))}
         </div>

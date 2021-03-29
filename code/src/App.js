@@ -1,3 +1,7 @@
+// TO DO:
+// [] Bakåt knapp
+// [] background page
+
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
