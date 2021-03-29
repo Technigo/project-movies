@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
 }
 
 code {
@@ -16,6 +17,43 @@ code {
   display: grid;
   grid-template-columns: 1fr;
 }
+
+.movie-card {
+  position: relative;
+}
+
+.movie-poster {
+  width: 100%;
+}
+
+.movie-card:hover .title-release-container {
+  display: block;
+}
+
+.movie-card:hover .movie-poster {
+ filter: brightness(50%);
+}
+
+.title-release-container {
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  color: #ffffff;
+  display: none;
+}
+
+.movie-title {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.movie-release {
+  font-size: 30px;
+}
+
+
+
+
 
 @media (min-width: 768px) {
   .movies-container {
