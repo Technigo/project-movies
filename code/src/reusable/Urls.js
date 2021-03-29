@@ -1,0 +1,2 @@
+export const MOVIE_LIST_URL = "https://api.themoviedb.org/3/movie/popular?api_key=54b9b4273ba4db041df9f1cbf5f6875f&language=en-US&page=1"
+export const MOVIE_DETAILS_URL = "https://api.themoviedb.org/3/movie/{movie_id}?api_key=54b9b4273ba4db041df9f1cbf5f6875f&language=en-US"
