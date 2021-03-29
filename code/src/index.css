@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.movie-thumb-img {
+  width: 100%;
+  height: 100%;
+}
+
+.position-relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.text-realeased-content {
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+}
+
+.text-to-bottom {
+  bottom: 0;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.hidden-shown {
+  opacity: 0;
+}
+
+.hidden-shown:hover {
+  opacity: 1;
+}
