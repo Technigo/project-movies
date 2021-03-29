@@ -1,6 +1,6 @@
 import React, {useState, useEffect } from 'react'
 
-import { MOVIE_LIST_URL } from '../reusable/Urls.js'
+import { MOVIE_LIST_URL, MOVIE_BACKDROP_URL } from '../reusable/Urls.js'
 
 
 /* results": [
@@ -45,14 +45,13 @@ console.log(movies)
   
       <section>
        movielist: {movies.map(movie => (
-         <div key={movie.id}>
+         <section key={movie.id}>
+           <img src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`}/>
            {movie.title}
-
-         </div>
+           {movie.release_date}
+         </section>
       ))}
-
       </section>
-   
   )
 } 
 
