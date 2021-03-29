@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 export const MovieDetails = () => {
-  //   const [details, setDetails] = useState();
+  const [details, setDetails] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
@@ -11,9 +11,25 @@ export const MovieDetails = () => {
     )
       .then((res) => res.json())
       .then((json) => {
-        console.log(json);
+        setDetails(json);
       });
   }, [id]);
 
-  return <h2>hej igen</h2>;
+  return (
+    <div className='details-container'>
+      <img
+        className='details-background-image'
+        src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`}
+        alt='backdrop'
+      />
+      <img
+        className='details-poster'
+        src={`https://image.tmdb.org/t/p/w780${details.poster_path}`}
+        alt='poster'
+      />
+      <h1 className='details-title'>{details.original_title}</h1>
+      <h2 className='details-rating'>{details.vote_average}/10</h2>
+      <p className='details-overview'>{details.overview}</p>
+    </div>
+  );
 };
