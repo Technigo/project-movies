@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.movies-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .movies-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1224px) {
+    .movies-container {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
