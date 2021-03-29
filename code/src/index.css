@@ -20,4 +20,25 @@ code {
 .movie-card {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.movie-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  background-color: rgba(0,0,0,.75);
+  padding: 20px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.movie-card:hover .movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
 }
