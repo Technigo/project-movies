@@ -17,19 +17,27 @@ export const MovieDetails = () => {
 
   return (
     <div className='details-container'>
-      <img
+      <div
         className='details-background-image'
-        src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`}
-        alt='backdrop'
-      />
-      <img
-        className='details-poster'
-        src={`https://image.tmdb.org/t/p/w780${details.poster_path}`}
-        alt='poster'
-      />
-      <h1 className='details-title'>{details.original_title}</h1>
-      <h2 className='details-rating'>{details.vote_average}/10</h2>
-      <p className='details-overview'>{details.overview}</p>
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})`,
+        }}
+      ></div>
+      <div className='details-summary-container'>
+        <img
+          className='details-poster'
+          src={`https://image.tmdb.org/t/p/w342${details.poster_path}`}
+          alt='poster'
+        />
+        <div className='details-texts'>
+          <h1 className='details-title'>
+            {details.original_title}{' '}
+            <span className='details-rating'>{details.vote_average}/10</span>
+          </h1>
+
+          <p className='details-overview'>{details.overview}</p>
+        </div>
+      </div>
     </div>
   );
 };
