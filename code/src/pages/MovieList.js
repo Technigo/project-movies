@@ -17,8 +17,6 @@ export const MovieList = () => {
       });
   }, []);
 
-  console.log(movies);
-
   return (
     <Grid container justifiy="center">
       {movies.map((movie) => (

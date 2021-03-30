@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 export const MovieThumb = ({ id, title, poster_path, release_date }) => {
   return (
     <Grid item xs={3}>
-      <Link to={`/movies/${id}`}>
+      <Link to={`/${id}`}>
         <div className="position-relative">
           <Grid
             container
