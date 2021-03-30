@@ -1,6 +1,9 @@
 // TO DO:
-// [] Bakåt knapp
-// [] background page
+// [X] Back button
+// [X] background page
+// [] Format first page according to guidelines
+// [] Format second page according to guidelines
+// [] Add a rating
 
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'

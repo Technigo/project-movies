@@ -18,15 +18,28 @@ const MovieList = () => {
 //url=(`https://image.tmdb.org/t/p/w1200${movie.backdrop_path}`
 
     return (
-        <div>
+        <div className="movies-wrapper">
             {movies.map((movie) => (
-                <div key={movie.id}>
-                    <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} />
-                
+                <div 
+                key={movie.id}
+                className="container"
+                >
+                    
+                        <img className="image" src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} />
+        
+                            <div className="middle"> 
+                                <div className="text">
+                                    <h1>{movie.original_title}</h1>
+                                    <h3>{movie.release_date}</h3>
+                                </div>
+                            </div>
+
+        
                         <Link to={`/details/${movie.id}`}>
                             
-                            <h2>{movie.original_title}</h2>
-                            <h3>{movie.release_date}</h3>
+                            <div className="bleb">
+                                
+                            </div>
 
                         </Link>
                     

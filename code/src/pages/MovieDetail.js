@@ -10,7 +10,7 @@ const MovieDetail = () => {
         .then((res) => res.json())
         .then((json) => setMovies2(json))
     },[])
- //backgroundImage: "url(" + Background + ")"
+
     console.log(movies)
     return (
         <div className='details-wrapper' 
