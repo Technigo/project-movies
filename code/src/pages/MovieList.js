@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
-import './MovieList.css'
+import { Link } from 'react-router-dom'
 
 import { MovieCard } from '../components/MovieCard'
 
@@ -16,7 +15,11 @@ export const MovieList = () => {
 
   return (
     <section className="movie-list-wrapper">
-      {movies.map(movie => <MovieCard {...movie} />)}
+      {movies.map(movie => (
+        <Link key={movie.id} to={`/movies/${movie.id}`}>
+          <MovieCard {...movie} />
+        </Link>
+      ))}
     </section>
   )
 

@@ -15,7 +15,16 @@ export const MovieDetails = () => {
 
 
   return (
-    <p>{movieDetails.title}</p>
+    <>
+      <img className="backdrop-image" src={`http://image.tmdb.org/t/p/original/${movieDetails.backdrop_path}`} alt="Backdrop from the film" />
+      <div className="summary">
+        <img className="poster-image" src={`http://image.tmdb.org/t/p/w342/${movieDetails.poster_path}`} alt={movieDetails.title} />
+        <div className="details">
+          <h3>{movieDetails.title} <span className="rating">{`${movieDetails.vote_average}/10`}</span></h3>
+          <p className="movie-info">{movieDetails.overview}</p>
+        </div>
+      </div>
+    </>
   )
 }
 
