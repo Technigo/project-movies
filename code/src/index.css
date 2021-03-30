@@ -17,6 +17,47 @@ code {
 }
 
 /*Styling MovieDetails Page*/
+.movie-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.thumb-container {
+  position: relative;
+  width: 25vw;
+  text-decoration: none;
+  color: white;
+}
+
+.thumb-image {
+  width: 100%;
+}
+
+/* .thumb-title {
+
+} */
+
+.thumb-release-date {
+  font-size: 18px;
+}
+
+.movie-list-text {
+  display: none;
+  position: absolute;
+  top: 40;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 28px;
+  margin: 20px;
+}
+
+.movie-list-text:hover {
+  display: flex;
+}
+
+/*Styling MovieDetails Page*/
 .details-background-image {
   position: relative;
   min-height: 100vh;

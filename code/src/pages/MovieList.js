@@ -14,7 +14,7 @@ export const MovieList = () => {
   }, []);
 
   return (
-    <section className='movie-list'>
+    <section className='movie-list-container'>
       {movies.map((movie) => (
         <Link key={movie.id} to={`/details/${movie.id}`}>
           <MovieThumb {...movie} />
