@@ -53,13 +53,49 @@ code {
 
 .info-container {
   color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.529) 70%, rgb(0, 0, 0) 100%);
 }
 
+.summary{
+  padding: 15px;
+}
 
+.info-poster {
+  border: 2px solid #ffffff;
+}
+
+.info-rating {
+  color: #ff0000;
+}
 
 @media (min-width: 768px) {
   .movies-container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .summary {
+    display: flex;
+    padding: 50px;
+    align-items: flex-end;
+  }
+
+  .details {
+    padding-left: 20px;
+  }
+
+  .info-title {
+    font-size: 40px;
+  }
+
+  .info-overview, .info-rating {
+    font-size: 22px;
   }
 }
 
