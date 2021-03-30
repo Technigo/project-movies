@@ -22,46 +22,15 @@ code {
 }
 
 .movies-wrapper {
-  border: 3px solid black;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
 }
-
-/*.movie {
-  border: 3px solid red;
-  
-}
-
-
-.movie img {
-  position: relative;
-  width: 100%;
-  
-}
-
-.contents {
-  position: absolute;
-  z-index: 10;
-}
-
-.contents .test {
-  word-break: break-word; 
-}*/
-
 
 .container {
   position: relative;
   width: 100%;
   background-color: black;
-
 }
-
-
-/*.image {
-  display: block;
-  width: 100%;
-  height: auto;
-}*/
 
 .image {
   opacity: 1;
@@ -78,42 +47,16 @@ code {
   position: absolute;
   bottom: 0%;
   left: 0%;
-
+  display: none;
 }
 
-
-/*
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
+.middle-mobile {
   transition: .5s ease;
-  background-color: #008CBA;
-}*/
-/*
-.container:hover .overlay {
-  opacity: 0.5;
-  font-size: large;
-}
-
-.container:hover .overlay .text {
-  opacity: 1;
-}
-
-.text {
-  color: white;
-  font-size: 20px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}*/
+  bottom: 0%;
+  left: 0%;
+
+}
 
 .container:hover .image {
   opacity: 0.3;
@@ -125,7 +68,96 @@ code {
 
 .text {
   font-size: 16px;
-  padding: 16px 32px;
+  padding: 15px;
   width: 100%;
   color: white;
+}
+
+.text-mobile {
+  padding: 5px 0px 15px 15px;
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0px 20px 0px 0px;
+
+}
+
+.text-mobile h1 {
+  font-size: 26px;
+}
+
+.text-mobile h3 {
+  font-size: 20px;
+}
+
+/*
+.text {
+  font-size: 16px;
+  padding: 16px 32px;
+  width: 85%;
+  color: white;
+}
+
+
+*/
+
+@media (min-width: 500px) {
+
+  .text-mobile h1 {
+    font-size: 30px;
+  }
+  
+  .text-mobile h3 {
+    font-size: 26px;
+  }
+  
+
+}
+
+@media (min-width: 600px) {
+
+  .movies-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .text {
+    padding: 15px;
+  }
+
+  .text-mobile h1 {
+    font-size: 22px;
+  }
+  
+  .text-mobile h3 {
+    font-size: 18px;
+  }
+  
+
+}
+
+@media (min-width: 900px) {
+  .movies-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  
+}
+
+
+@media (min-width: 1300px) {
+  .movies-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .middle {
+    display: block;
+  }
+
+  .text-mobile {
+    display: none;
+  }
 }

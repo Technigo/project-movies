@@ -15,41 +15,36 @@ const MovieList = () => {
 
     const Pic = `https://image.tmdb.org/t/p/w1200${movies.backdrop_path}`
     //console.log(movies)
-//url=(`https://image.tmdb.org/t/p/w1200${movie.backdrop_path}`
+    //url=(`https://image.tmdb.org/t/p/w1200${movie.backdrop_path}`
 
     return (
         <div className="movies-wrapper">
             {movies.map((movie) => (
-                <div 
-                key={movie.id}
-                className="container"
-                >
-                    
+                <Link to={`/details/${movie.id}`}>
+                     <div 
+                    key={movie.id}
+                    className="container"
+                    >
                         <img className="image" src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} />
-        
-             
-                                <div className="middle"> 
-                                   
-                                    <div className="text">
-                                        <h1>{movie.original_title}</h1>
-                                        <h3>{movie.release_date}</h3>
-                                    </div>
-                                  
+                            <div className="middle-mobile">
+                                <div className="text-mobile">
+                                    <h1>{movie.original_title}</h1>
+                                    <h3>{movie.release_date}</h3>
                                 </div>
-  
-
-        
-                        <Link to={`/details/${movie.id}`}>
+                            </div>
+                            <div className="middle"> 
+                                
+                                <div className="text">
+                                    <h1>{movie.original_title}</h1>
+                                    <h3>{movie.release_date}</h3>
+                                </div>
+                                
+                            </div>
+                    </div>       
                             
-                            
 
-                        </Link>
-                    
-                    
-
-                  
-            
-                </div>
+                </Link>
+                
             ))}
         </div>
     )
