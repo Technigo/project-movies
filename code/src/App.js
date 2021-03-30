@@ -4,7 +4,7 @@ export const App = () => {
   return (
     <div>
       Testing this shizzle for Anna!
+      <button>Hello</button>
     </div>
-    <div>Yo... is this shizzle really working</div>
   )
 }
