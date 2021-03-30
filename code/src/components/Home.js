@@ -3,8 +3,9 @@ import { useState, useEffect } from 'react'
 
 import { MOVIE_LIST_URL, MOVIE_DETAIL_URL, MOVIE_BACKDROP } from './API_URL'
 
+import { MovieTable } from './MovieTable'
 
-export const Home = () => {
+    export const Home = () => {
     const [ movieList, setMovieList ] = useState([])
 
     const fetchMovieList = () => {
@@ -21,12 +22,9 @@ export const Home = () => {
         console.log(movieList)
 
     return (
-        <div>
-            {movieList.map(movie => {
-                return(
-                    <img src={MOVIE_BACKDROP(movie.poster_path)} />
-                )
-            })}
-        </div>
+        <>
+        <MovieTable {...movie} />
+
+        </>
     )
 }
