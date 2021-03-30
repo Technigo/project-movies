@@ -1,0 +1,1 @@
+export const DETAIL_API = (id) => `https://api.themoviedb.org/3/movie/${id}?api_key=bf4522dc489e8ffdfd36be08819077b1&language=en-US`
