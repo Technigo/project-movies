@@ -21,43 +21,46 @@ code {
   display: flex;
   flex-wrap: wrap;
   width: 100vw;
+  background-color: black;
 }
 
 .thumb-container {
   position: relative;
-  width: 25vw;
+  width: 100vw;
   text-decoration: none;
   color: white;
+}
+
+.thumb-container:hover .thumb-image {
+  opacity: 0.5;
 }
 
 .thumb-image {
   width: 100%;
 }
 
-/* .thumb-title {
-
-} */
-
 .thumb-release-date {
   font-size: 18px;
 }
 
 .movie-list-text {
-  display: none;
   position: absolute;
   top: 40;
   left: 0;
   right: 0;
   bottom: 0;
-  font-size: 28px;
-  margin: 20px;
-}
-
-.movie-list-text:hover {
-  display: flex;
+  font-size: 40px;
+  padding: 20px;
+  padding-bottom: 60px;
+  margin-bottom: 0;
 }
 
 /*Styling MovieDetails Page*/
+.details-container {
+  background-color: black;
+  height: 800px;
+}
+
 .details-background-image {
   position: relative;
   min-height: 100vh;
@@ -69,23 +72,24 @@ code {
 
 .details-poster {
   border: 5px solid white;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 .details-summary-container {
   display: flex;
-  align-items: flex-end;
   position: absolute;
   top: 0;
-  bottom: 7vh;
-  left: 50px;
   color: white;
-  width: 60%;
+  flex-direction: column;
 }
 
 .details-texts {
   display: flex;
   flex-direction: column;
   margin: 20px;
+  font-size: 16px;
 }
 
 .details-rating {
@@ -97,4 +101,63 @@ code {
 
 .details-title {
   font-size: 22px;
+}
+
+/*** MEDIA QUERIES ***/
+
+@media (min-width: 768px) {
+  .thumb-container {
+    width: 25vw;
+  }
+
+  .movie-list-text {
+    opacity: 0;
+    font-size: 35px;
+  }
+
+  .movie-list-text:hover {
+    opacity: 1;
+    transition: 0.2s ease;
+  }
+
+  .details-summary-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50px;
+    color: white;
+    width: 60%;
+  }
+
+  .details-background-image {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .details-poster {
+    border: 5px solid white;
+    width: auto;
+    margin: 0 auto;
+    margin-top: auto;
+  }
+
+  .details-summary-container {
+    align-items: flex-end;
+    bottom: 7vh;
+    left: 50px;
+    width: 80%;
+    min-width: 600px;
+    max-width: 1000px;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1200px) {
 }
