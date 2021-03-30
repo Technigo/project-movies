@@ -8,10 +8,7 @@
 }
 body {
   font-family: var(--primaryFont);
-  text-align: center;
-  height: 100vh;
-  display: grid;
-  align-items: center;
+  display: flex;
 }
 
 a {

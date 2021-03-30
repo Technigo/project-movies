@@ -1,7 +1,7 @@
 {
   "parser": "babel-eslint",
   "extends": [
-    "airbnb"
+    "airbnb", "prettier"
   ],
   "globals": {
     "document": true,

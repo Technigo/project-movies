@@ -10,8 +10,8 @@ function App() {
     <>
       <Switch>
         <Route path="/" component={MoviesList} exact />
+        <Route path="/movie/:id/:title" component={MoviesDetails} exact />
         <Route component={NotFound} />
-        <Route path="/movies/:id" component={MoviesDetails} exact />
       </Switch>
     </>
   );
