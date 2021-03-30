@@ -9,7 +9,9 @@ const MovieDetails = ({ match }) => {
   useEffect(() => {
     fetch(API_DETAILS_URL)
       .then((response) => response.json())
-      .then((json) => setMovieDetails(json));
+      .then((json) => {
+        setMovieDetails(json);
+      });
   }, []);
 
   console.log(movieDetails);
