@@ -10,6 +10,7 @@ const MovieDetails = ({ match }) => {
     fetch(API_DETAILS_URL)
       .then((response) => response.json())
       .then((json) => setMovieDetails(json));
+    // eslint-disable-next-line
   }, []);
 
   return (
