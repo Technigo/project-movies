@@ -9,9 +9,7 @@ const MovieDetails = ({ match }) => {
   useEffect(() => {
     fetch(API_DETAILS_URL)
       .then((response) => response.json())
-      .then((json) => {
-        setMovieDetails(json);
-      });
+      .then((json) => setMovieDetails(json));
   }, []);
 
   return (
@@ -19,7 +17,7 @@ const MovieDetails = ({ match }) => {
       <h1>{movieDetails.title}</h1>
       <img
         className="movie-thumb-img"
-        src={`https://image.tmdb.org/t/p/w780${movieDetails.poster_path}`}
+        src={`https://image.tmdb.org/t/p/original${movieDetails.poster_path}`}
         alt={movieDetails.title}
       />
     </div>
