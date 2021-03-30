@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-export const App = () => {
+import NotFound from "./pages/not-found/not-found.component";
+
+function App() {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  )
+    <>
+      <Switch>
+        <Route path="/" exact />
+        <Route component={NotFound} />
+      </Switch>
+    </>
+  );
 }
+
+export default App;
