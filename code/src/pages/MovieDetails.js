@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-// import { DETAIL_API_URL } from '../reusable/urls'
-//{/* {movieDetails.map((details) => (
-//     <div key={details.id}>
-//     <h1>{details.original_title}</h1>
-// </div>
-// ))} */}
+//title, rating, overview, img, backdrop
+import BackButton from '../components/BackButton'
 
 export const MovieDetails = () => {
     const { movieId } = useParams()
@@ -24,9 +20,14 @@ export const MovieDetails = () => {
     return (
         <div>
             <section>
+                <BackButton />
             {movieDetails.map((details) => (
                 <div key={details.id}>
+                <img src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} />
                 <h1>{details.original_title}</h1>
+                <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} />
+                <p>{details.overview}</p>
+                <p>{details.vote_average}/10</p>
             </div>
             ))}
             </section>
