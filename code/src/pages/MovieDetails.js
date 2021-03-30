@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+import BackLink from "../components/BackLink";
+
 const MovieDetails = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState([]);
@@ -14,11 +16,12 @@ const MovieDetails = () => {
 
   useEffect(() => {
     fetchMovieDetails();
-  }, []);
+  }, [setMovie]);
 
   console.log(movie);
   return (
-    <section className="movie-details">
+    <article className="movie-details">
+      <BackLink />
       <div className="movie-details-wrapper">
         <picture className="movie-details__background">
           <source
@@ -37,18 +40,17 @@ const MovieDetails = () => {
             ></img>
           </div>
           <div className="movie-details-info__text-container">
-          <h1 className="movie-details-info__title">
-            {movie.original_title}
-            <span className="movie-details-info__votes">
-              {movie.vote_average}/10
-            </span>
-          </h1>
-          <p className="movie-details-info__overview">{movie.overview}</p>
-        </div>
+            <h1 className="movie-details-info__title">
+              {movie.original_title}
+              <span className="movie-details-info__votes">
+                {movie.vote_average}/10
+              </span>
+            </h1>
+            <p className="movie-details-info__overview">{movie.overview}</p>
+          </div>
         </div>
       </div>
-      <div className=""></div>
-    </section>
+    </article>
   );
 };
 

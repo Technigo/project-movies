@@ -15,7 +15,7 @@ const PopularList = () => {
 
   useEffect(() => {
     fetchPopularList();
-  }, []);
+  }, [setPopularList]);
 
   return (
     <section className="popular-list">
