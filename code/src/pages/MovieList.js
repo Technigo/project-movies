@@ -27,19 +27,21 @@ const MovieList = () => {
                     
                         <img className="image" src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} />
         
-                            <div className="middle"> 
-                                <div className="text">
-                                    <h1>{movie.original_title}</h1>
-                                    <h3>{movie.release_date}</h3>
+             
+                                <div className="middle"> 
+                                   
+                                    <div className="text">
+                                        <h1>{movie.original_title}</h1>
+                                        <h3>{movie.release_date}</h3>
+                                    </div>
+                                  
                                 </div>
-                            </div>
+  
 
         
                         <Link to={`/details/${movie.id}`}>
                             
-                            <div className="bleb">
-                                
-                            </div>
+                            
 
                         </Link>
                     
