@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import { API_URL, POSTER_URL } from '../utils/urls'
 
@@ -16,11 +17,11 @@ const PopularList = () => {
     return (
         <section>
             {popularMovies.map(movie => (
-                <div key={movie.id}>
+                <Link to={`/movies/${movie.id}`} key={movie.id} >
                     <h2>{movie.title}</h2>
                     <img src={POSTER_URL(movie.poster_path)} alt={movie.title} />
                     <p>{movie.release_date}</p>
-                </div>
+                </Link>
             ))}
         </section>
     )
