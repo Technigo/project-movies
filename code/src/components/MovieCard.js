@@ -1,7 +1,11 @@
 import React from 'react'
 
-export const MovieCard = ({title, release_date, poster_path}) => {
+import { useParams, Link } from 'react-router-dom'
+
+export const MovieCard = ({title, release_date, poster_path, id}) => {
   return (
+    <>
+    <Link to={`/movies/${id}`}>
     <div>
       <img src={`http://image.tmdb.org/t/p/w342/${poster_path}`} />
       <h2>
@@ -11,7 +15,8 @@ export const MovieCard = ({title, release_date, poster_path}) => {
         {`Released ${release_date}`} 
         </h3>
     </div>
-
+    </Link>
+    </>
   )
 }
 

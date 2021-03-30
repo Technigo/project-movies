@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Switch, Route} from 'react-router-dom'
 
 import { MovieList } from './pages/MovieList'
+import { MovieDetails } from './pages/MovieDetails'
 
 export const App = () => {
   return (
@@ -11,7 +12,7 @@ export const App = () => {
           <MovieList />
         </Route>
         <Route path="/movies/:id" exact>
-
+          <MovieDetails />
         </Route>
       </Switch>
     </BrowserRouter>
