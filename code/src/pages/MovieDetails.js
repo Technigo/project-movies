@@ -14,8 +14,6 @@ const MovieDetails = ({ match }) => {
       });
   }, []);
 
-  console.log(movieDetails);
-
   return (
     <div>
       <h1>{movieDetails.title}</h1>
