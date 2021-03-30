@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
+import './MovieList.css'
+
 import { MovieCard } from '../components/MovieCard'
 
 export const MovieList = () => {
@@ -13,7 +15,7 @@ export const MovieList = () => {
   },[])
 
   return (
-    <section>
+    <section className="movie-list-wrapper">
       {movies.map(movie => <MovieCard {...movie} />)}
     </section>
   )

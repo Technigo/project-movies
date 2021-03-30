@@ -1,0 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+.movie-list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
