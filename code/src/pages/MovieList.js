@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { MovieThumb } from "./MovieThumb";
+import { MovieThumb } from "../components/MovieThumb";
 import Grid from "@material-ui/core/Grid";
 
 export const MovieList = () => {
@@ -16,6 +16,8 @@ export const MovieList = () => {
         setMovies(json.results);
       });
   }, []);
+
+  console.log(movies);
 
   return (
     <Grid container justifiy="center">
