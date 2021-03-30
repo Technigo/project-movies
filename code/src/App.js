@@ -1,12 +1,20 @@
-import React from 'react'
-import PopularList from './components/PopularList'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-const API_KEY = "9e2d991bdc86d11d2a7e1e110ef63aac"
+import PopularList from "./pages/PopularList";
+import MovieDetails from "./pages/MovieDetails";
 
 export const App = () => {
   return (
-    <div>
-      <PopularList />
-    </div>
-  )
-}
+    <Router>
+      <Switch>
+        <Route path="/" exact>
+          <PopularList />
+        </Route>
+        <Route path="/movies/:id" exact>
+          <MovieDetails />
+        </Route>
+      </Switch>
+    </Router>
+  );
+};
