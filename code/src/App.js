@@ -5,6 +5,7 @@ export const App = () => {
     <div>
       Testing this shizzle for Anna!
       <button>Hello</button>
+      <p>some text again</p>
     </div>
   )
 }
