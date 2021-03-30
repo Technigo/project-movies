@@ -13,7 +13,7 @@ const MovieList = () => {
         .then(response => response.json())
         .then(receivedMovies => setMovies(receivedMovies.results))
     },[])
-    //console.log (movies)
+    console.log (movies)
     
     return (
         <div className="movies-container"> 
