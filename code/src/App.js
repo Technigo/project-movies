@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 import NotFound from "./pages/not-found/not-found.component";
 import MoviesList from "./pages/MoviesList/MoviesList.component";
-import MoviesDetails from "./pages/MovieDetails/Movie.component";
+import MoviesDetails from "./pages/MovieDetails/MovieDetails.component";
 
 function App() {
   return (
