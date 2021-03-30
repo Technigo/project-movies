@@ -1,6 +1,10 @@
 import React, {useState, useEffect } from 'react'
 
+
+import { MovieCard } from './MovieCard'
+
 import { MOVIE_LIST_URL, MOVIE_BACKDROP_URL } from '../reusable/Urls.js'
+
 
 
 /* results": [
@@ -43,17 +47,17 @@ console.log(movies)
 
   return (
   
-      <section>
-       movielist: {movies.map(movie => (
-         <section key={movie.id}>
-           <img src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`}/>
-           {movie.title}
-           {movie.release_date}
-         </section>
-      ))}
-      </section>
+  
+        <section>
+         {movies.map((movie) => <MovieCard key={movie.id} {...movie} movie_title={movie.title}/>
+         
+         )}
+         
+        </section>
+   
+
+            
+
   )
 } 
-
-
 
