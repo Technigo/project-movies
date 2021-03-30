@@ -1,0 +1,24 @@
+.movie-thumb-wrapper{
+  position: relative;
+}
+
+.movie-thumb-content{
+    display: none;
+    flex-direction: column;;
+    position: absolute;
+    color: white;
+    top: 70%;
+   opacity: 0;
+}
+
+.movie-thumb-content:hover{
+    display: flex;
+    flex-direction: column;
+    column-gap: 40px;
+    position: absolute;
+    color: white;
+    top: 70%;
+    filter: brightness(25%);
+    opacity: 1; 
+}
+
