@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { API_URL } from '../reusable/urls'
+import { Link } from 'react-router-dom'
+
+import MovieElement from './MovieElement'
 
 const MovieList = () => {
   const [movieList, setMovieList] = useState([])
@@ -17,17 +20,11 @@ const MovieList = () => {
     
     return (
      <section className="movie-container">
-      {
-        movieList.map((movies) => {
-          return(
-            <div className="movie-container-two" key={movies.id}>
-              <p>{movies.original_title}</p>
-              <p>{movies.release_date}</p>
-              <img className="movie-img" src={`https://image.tmdb.org/t/p/w780${movies.poster_path}`} alt={movies.original_title}/>
-            </div>
-          )
-        })
-      }          
+        {movieList.map(movie =>
+          <Link key={movie.id} to= {`/movie/${movie.id}`}>  
+            <MovieElement {...movie} />
+          </Link>
+        )}      
       </section>
     )
 }

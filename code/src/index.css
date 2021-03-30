@@ -1,27 +1,141 @@
-body {
- background: black;
- color: white;
+* {
+  box-sizing: border-box;
 }
 
-.main-container{
-  width: 100%;
-  height: 100%;
+body {
+ margin: 0;
+ background: #000;
+ color: #fff;
+ font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 .movie-container {
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.movie-container-two {
-  display: flex;
-  flex-wrap: wrap;
+.popular-movie {
+  position: relative;
+  color: #fff;
 }
 
 .movie-img {
   width: 100%;
-  object-fit: cover;
+}
+
+.details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  background: rgba(0,0,0,.75);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.details:hover {
+  opacity: 1;
+}
+
+h1 {
+  margin-top: auto;
+  margin-bottom: 0;
+  font-size: 35px;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.background-img {
+  width: 100%;
+  height: 98%;
+} 
+
+.other-information{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  position: absolute;
+  display: inline-flex;
+  left: 50px;
+  top: 50px;
+  align-items: center;
+
+}
+
+.link:last-child:hover {
+  animation: 3s linear 0s alternate move;
+}
+
+@keyframes move {
+  0%,
+  25% {
+    transform: translateX(0%);
+    left: 0%;
+  }
+ 
 }
 
 
+.test {
+  width: 100%;
+  position: fixed;
+  bottom: 30px;
+  display: flex;
+  height: 68%;
+  padding:0px 50px;
+}
+
+.detail-content {
+  width: 25%;
+  position: fixed;
+  bottom: 30px;
+  left: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.poster-image {
+  border: 5px solid #fff;
+}
+
+.header-rating {
+  width: 100%;
+  display: flex; 
+}
+
+.raiting {
+  color: red;
+  font-weight: 300;
+  background-color: #fff;
+  margin-left: 5px;
+}
+
+/* @media (min-width: 768px) {
+  .movie-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .movie-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+} */
