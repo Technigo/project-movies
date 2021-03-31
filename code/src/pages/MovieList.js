@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 
 import { MOVIES_URL } from "reusable/urls"
+import { MovieThumb } from "components/MovieThumb"
 
 
 export const MovieList = () => {    
@@ -17,8 +18,12 @@ export const MovieList = () => {
     
     return ( 
         <>
-            <section className="movie-list">
-                Movies List: {movies.original_title}
+            <section className="movie-list" > 
+                {movies.map((movie)=> (
+                    <div key= {movie.id}>
+                        <MovieThumb {...movie} />
+                    </div>
+                 ))}
             </section>
         </> 
     )

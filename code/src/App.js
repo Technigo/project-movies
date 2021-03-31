@@ -7,7 +7,6 @@ import { MovieList } from "./pages/MovieList"
 export const App = () => {
   return (
     <>
-      <h1>hi </h1>
       <MovieList />
     </>
   )
