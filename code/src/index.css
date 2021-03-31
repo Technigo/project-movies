@@ -11,3 +11,200 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  color: #fff;
+  background-color:#000;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #000;
+  margin: 0;
+}
+
+.main a {
+  width: 25%;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+}
+
+.main a img {
+  width: 100%;
+}
+
+.main .details {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,.75);
+  display: none;
+  padding: 20px;
+}
+
+.main a:hover .details {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.main .details h1 {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+/*DETAIL PAGE*/
+
+.detail-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.background{
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height:100vh;
+}
+
+.detail-page .back-button {
+  display: inline-flex;
+  align-items: center;
+
+  position: absolute;
+  width: 90px;
+  top: 50px;
+  left: 50px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+i {
+  font-size: 25px;
+}
+
+.back-button p {
+  position: relative;
+  transition: all 0.2s ease;
+  margin-left: 3px;
+}
+
+.back-button:hover p {
+  margin-left: 6px;
+}
+
+.detail-page img {
+  border: solid 5px #fff;
+}
+
+.detail-page .summary {
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+}
+
+.rating {
+  color: red;
+  font-size: 17px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.movie-details {
+  margin-left: 20px;
+}
+
+.summary p {
+  max-width: 400px;
+  margin: 16px 0;
+}
+
+@media (max-width: 766px) {
+
+  .main a {
+    width: 50%;
+  }
+
+  .detail-page {
+    height: 100%;
+  }
+
+  .detail-page .back-button {
+    position:absolute;
+    top: 30px;
+    left: 20px;
+  }
+
+  .detail-page .summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+  }
+
+  .detail-page img {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .detail-page .movie-details {
+    margin: auto;
+    width: 80%;
+  }
+
+  .detail-page .background {
+    display: flex;
+    justify-content: center;
+
+    background-image: none !important;
+    background-color: #000;
+    height: 100%;
+  }
+
+}
+
+@media (max-width: 1025px) {
+
+  .main a {
+    width: 50%;
+  }
+
+  .detail-page .summary {
+    justify-content: center;
+  }
+
+  .detail-page img {
+    width: 80%;
+  }
+
+  .detail-page .background {
+    display: flex;
+    justify-content: center;
+
+    background-image: none !important;
+    background-color: #000;
+    height: 100vh;
+  }
+
+}

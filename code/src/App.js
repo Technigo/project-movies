@@ -7,13 +7,13 @@ import { MovieDetails } from './pages/MovieDetails'
 
 export const App = () => {
   return (
-    <div>
+    <div className='main'>
     <BrowserRouter>
       <Switch>
         <Route path='/' exact>
           <MovieList />
         </Route>
-        <Route path='/movies/:title' exact>
+        <Route path='/movie/:id'>
           <MovieDetails />
         </Route>
       </Switch>
