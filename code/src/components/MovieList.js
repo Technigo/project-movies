@@ -3,8 +3,7 @@ import React, {useState, useEffect } from 'react'
 
 import { MovieCard } from './MovieCard'
 
-import { MOVIE_LIST_URL, MOVIE_BACKDROP_URL } from '../reusable/Urls.js'
-
+import { MOVIE_LIST_URL } from '../reusable/Urls.js'
 
 
 /* results": [
@@ -30,10 +29,6 @@ import { MOVIE_LIST_URL, MOVIE_BACKDROP_URL } from '../reusable/Urls.js'
     "vote_count": 3942 */
 
 
-    
-
-
-
 export const MovieList = () => {
   const [movies, setMovies] = useState([])
 
@@ -46,18 +41,12 @@ export const MovieList = () => {
 console.log(movies)
 
   return (
-  
-  
+
         <section>
-         {movies.map((movie) => <MovieCard key={movie.id} {...movie} movie_title={movie.title}/>
+         {movies.map((movie) => <MovieCard key={movie.id} {...movie}/>
          
          )}
-         
         </section>
-   
-
-            
-
   )
 } 
 
