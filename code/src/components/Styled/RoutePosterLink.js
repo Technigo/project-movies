@@ -5,7 +5,7 @@ const RoutePosterLink = styled(Link)`
   position: relative;
   text-decoration: none;
   color: white;
-  margin: 1em;
+  margin: ${(props) => (props.wrapped ? '0' : '1em')};
 
   ::before {
     content: '';

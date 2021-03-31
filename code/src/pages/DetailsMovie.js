@@ -7,6 +7,7 @@ import { useFetch } from 'utils/hooks';
 import ReturnButton from 'components/ReturnButton';
 import LoaderSpinner from 'components/LoaderSpinner';
 import SectionDetails from 'components/SectionDetails';
+import SectionCollection from 'components/SectionCollection';
 import MainWrap from 'components/Styled/MainWrap';
 
 const Movie = () => {
@@ -24,7 +25,9 @@ const Movie = () => {
           {console.log(data)}
           <ReturnButton path="/" />
           <SectionDetails {...data} />
-
+          {data.belongs_to_collection !== null && (
+            <SectionCollection {...data.belongs_to_collection} />
+          )}
           {/* SectionCollection if(data.belongs_to_collection !== null) */}
         </>
       )}
