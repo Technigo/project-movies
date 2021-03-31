@@ -14,7 +14,7 @@ export const MovieThumb = ({ id, title, poster_path, release_date }) => {
             className="position-absolute hidden-shown text-realeased-content"
           >
             <h1>{title}</h1>
-            <h5>{release_date}</h5>
+            <h5>Released {release_date}</h5>
           </Grid>
           <img
             className="movie-thumb-img"
