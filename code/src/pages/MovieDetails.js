@@ -2,18 +2,21 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 export const MovieDetails = () => {
-  const DETAILS_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=e7fa02905a065e6c75198742ec299b55&language=en-US`;
+  const DETAILS_URL = `https://api.themoviedb.org/3/movie/399566?api_key=40162efa089492073c3b7dbba9617e0b&language=en-US`;
   const [movieDetails, setMovieDetails] = useState([]);
   const { id } = useParams
+  console.log(DETAILS_URL)
+  // try to add a specific id to the url and see what happens. And cosnole.log url
+
 
   useEffect(() => {
     fetch(DETAILS_URL)
     .then(response => response.json())
     .then(json => setMovieDetails(json.results))
-  },[id]);
+  }, [DETAILS_URL, id]); //Have URL instead of id?
 
   return(
-    <>
+    <> 
     <section className="movies-list">
     <img className="movie-thumb-image" src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`} alt={movieDetails.title}></img>
     {movieDetails.title} - {movieDetails.vote_average}

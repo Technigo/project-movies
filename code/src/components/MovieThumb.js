@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 
 export const MovieThumb = ({name, background_image, rating, released, id}) =>{
   return (
-//    <Link to={`/movies/${id}`}>
+    <Link to={`/movies/${id}`}>
     <section className="movie-thumb">
       {name} - {released}
       <div className="movie-thumb-image-wrapper">
@@ -11,7 +11,7 @@ export const MovieThumb = ({name, background_image, rating, released, id}) =>{
         <p className="movie-thumb-iamge-description">{rating}</p>
       </div>
     </section>
-//  </Link>
+  </Link>
   );
 }
 
