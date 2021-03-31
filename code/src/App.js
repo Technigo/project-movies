@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react"
+import { BrowserRouter, Switch, Route } from "react-router-dom"
+
+import { MovieList } from "./pages/MovieList"
+
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <>
+      <h1>hi </h1>
+      <MovieList />
+    </>
   )
-}
+} 
