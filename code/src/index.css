@@ -5,9 +5,97 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-thumb-image-wrapper {
+  position: relative;
+  opacity: 1;
+}
+
+.text-container:hover {
+  opacity: 1;
+}
+
+.text-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  opacity: 0;
+  z-index: 1;
+}
+
+.movie-title {
+  font-size: 30px;
+  margin: 0;
+}
+
+.movie-thumb-image {
+  width: 100%;
+}
+
+.movie-thumb-image:hover {
+  opacity: 0.3;
+}
+
+a {
+  width: 25%;
+}
+
+.movie-detail-image {
+  background-color: white;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.movie-rating {
+  color: red;
+  align-self: center;
+  font-size: 17px;
+  padding-left: 20px;
+  padding-top: 3px;
+}
+
+.movie-detail-container {
+  display: flex;
+  padding: 50px;
+  height: 100vh;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.title-headings {
+  display: flex;
+}
+
+.movie-detail-title {
+  font-size: 25px;
+}
+
+.movie-overview {
+  max-width: 400px;
+}
+
+.detail-text-container {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 20px;
 }
