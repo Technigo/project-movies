@@ -7,7 +7,6 @@ const MovieDetails = ({ match }) => {
 
   const API_DETAILS_URL = `https://api.themoviedb.org/3/movie/${match.params.movieID}?api_key=180969109de0f1c45ba2c80ba35bd8c7&language=en-US`;
 
-  console.log(match);
   useEffect(() => {
     fetch(API_DETAILS_URL)
       .then((response) => response.json())
@@ -18,7 +17,7 @@ const MovieDetails = ({ match }) => {
     <div className="position-relative">
       <Link to="/">
         <div className="back-link">
-          <i class="fas fa-chevron-circle-left"></i>&nbsp;
+          <i className="fas fa-chevron-circle-left"></i>&nbsp;
           <span className="back-link-margin">Movies</span>
         </div>
       </Link>

@@ -20,7 +20,7 @@ export const MovieList = () => {
   return (
     <Grid container justifiy="center">
       {movies.map((movie) => (
-        <MovieThumb {...movie} />
+        <MovieThumb {...movie} key={movie.id} />
       ))}
     </Grid>
   );
