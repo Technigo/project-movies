@@ -1,5 +1,13 @@
+:root {
+  --primary: #3D50FA;
+  --secondary: #3442B4;
+  --dark1: #2E2F35;
+  --dark2: #191A20;
+}
+
 body {
   margin: 0;
+  background-color: var(--dark2);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -7,7 +15,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+  font-size: 32px;
+}
+
+h1 > span {
+  font-size: .8em;
+  color: grey;
+  margin: 0 .5em;
 }
