@@ -1,19 +1,12 @@
-# Technigo React Starter App
+# Movie project
+By Sara Carlstein, Maria Bergman, Vladimir Bykov
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+In this project, a multi-page React, we've used the API to fetch popular movies in the US using themoviedb.org's API.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+## The build and challanges 
+We practiced using APIs in React and combining 'useState' and 'useEffect'
+The app has  two pages - one showing a list of movies and one showing details
 
-## Usage
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
-
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+### Usage
+https://admiring-hugle-678c60.netlify.app
