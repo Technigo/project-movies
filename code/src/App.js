@@ -1,23 +1,22 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Detail from './pages/Detail'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import MovieList from './components/MovieList'
+import Detail from './pages/Detail'
+import MovieList from './pages/MovieList'
 
 export const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <main>
         <Switch>
-          <Route path='/' exact>
+          <Route exact path='/'>
             <MovieList />
           </Route>
-          <Route path='/movie/:id' exact>
+          <Route path='/movie/:id'>
             <Detail />
           </Route>
         </Switch>
       </main>
-    </Router>
-
+    </BrowserRouter>
   )
 }
