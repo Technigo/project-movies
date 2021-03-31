@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
+import '../index.css'
+
 //title, rating, overview, img, backdrop
 import BackButton from '../components/BackButton'
+import { DETAIL_API_URL } from 'reusable/urls'
 
 export const MovieDetails = () => {
     const { movieId } = useParams()
     const [movieDetails, setMovieDetails] = useState([])
 
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=50eb4adf4920d3714372a2ce134f64ac&language=en-US`)
+        fetch(DETAIL_API_URL)
             .then((res) => res.json())
             .then(json => {
-                console.log(json)
                 setMovieDetails([json])
             })
-    }, [movieId])
+    }, [movieId, DETAIL_API_URL])
 
     return (
         <div>
