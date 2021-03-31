@@ -17,7 +17,7 @@ const MovieDetails = () => {
 
 
     return (
-        <div className="movie-details-container" style={{ backgroundImage: `url(${BACKDROP_URL(movieDetails.backdrop_path)})` }}>
+        <div className="movie-details-container" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(${BACKDROP_URL(movieDetails.backdrop_path)})` }}>
             <Link to="/">
                 <img src="./icons/arrow-left-circle.svg" alt="arrow-icon" />
                 Movies
