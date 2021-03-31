@@ -13,8 +13,7 @@ export const MovieDetails = () => {
       .then(res => res.json())
       .then(json => setMovieDetails(json))
       .catch(err => console.err(err))
-  },[setMovieDetails])
-
+  },[id])
 
   return (
     <>
