@@ -24,20 +24,6 @@ code {
   width: 100vw;
 }
 
-.back-link-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.back-link {
-  color: white;
-  font-size: 22px;
-  text-decoration: none;
-}
-
 .thumb-container {
   position: relative;
   width: 100vw;
@@ -77,6 +63,32 @@ code {
   height: 800px;
 }
 
+.links-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  height: 20px;
+}
+
+.back-link {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  transition: margin-right 0.2s ease-in-out;
+}
+
+.back-link:hover {
+  margin-left: 5px;
+}
+
+.backlink-arrow {
+  width: 25px;
+  padding-right: 5px;
+}
+
 .details-background-image {
   position: relative;
   min-height: 100vh;
@@ -91,6 +103,7 @@ code {
   width: 80%;
   margin: 0 auto;
   margin-top: 30px;
+  margin-left: 20px;
 }
 
 .details-summary-container {
@@ -127,12 +140,17 @@ code {
   }
 
   .movie-list-text {
-    font-size: 28px;
+    font-size: 24px;
+    margin-top: 30px;
   }
 
   .movie-list-text:hover {
     opacity: 1;
     transition: 0.2s ease;
+  }
+  .links-wrapper {
+    margin-bottom: 70px;
+    margin-left: 0;
   }
 
   .details-summary-container {
@@ -175,6 +193,7 @@ code {
 }
 
 @media (min-width: 1200px) {
+  /*hover only available on desktop, not on smaller screens*/
   .thumb-container:hover .thumb-image {
     opacity: 0.5;
   }
