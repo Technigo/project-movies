@@ -51,6 +51,28 @@ code {
   font-size: 30px;
 }
 
+.loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 30%;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  color: #ffffff;
+  margin: 15px;
+  font-weight: bold;
+  background-color: #0000007e;
+}
+
+.svg {
+  width: 30px;
+}
+
 .info-container {
   color: #ffffff;
   background-repeat: no-repeat;
@@ -60,6 +82,7 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.529) 70%, rgb(0, 0, 0) 100%);
 }
 
@@ -75,6 +98,12 @@ code {
   color: #ff0000;
 }
 
+@media (max-width: 370px) {
+.info-poster {
+  width: 200px;
+}
+}
+
 @media (min-width: 768px) {
   .movies-container {
     grid-template-columns: 1fr 1fr;
@@ -84,6 +113,10 @@ code {
     display: flex;
     padding: 50px;
     align-items: flex-end;
+  }
+
+  .button-container {
+    margin-left: 50px;
   }
 
   .details {
