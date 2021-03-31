@@ -12,10 +12,9 @@ const MovieList = () => {
         .then((json) => setMovies(json.results))
     }, [])
     
-
-    const Pic = `https://image.tmdb.org/t/p/w1200${movies.backdrop_path}`
-    //console.log(movies)
-    //url=(`https://image.tmdb.org/t/p/w1200${movie.backdrop_path}`
+    console.log(movies)
+ 
+    
 
     return (
         <div className="movies-wrapper">
