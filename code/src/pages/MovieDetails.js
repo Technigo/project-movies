@@ -19,7 +19,7 @@ return(
     <h2>{details.original_title}</h2>
     <h2>{details.overview}</h2>
     <h2>{details.vote_average}</h2>
-    <img src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt=" small movie poster"/>
+    <img className='small-movie-poster' src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt=" small movie poster"/>
     <img src={`https://image.tmdb.org/t/p/w1280${details.poster_path}`} alt="background movie poster"/>
   </div>
 )
