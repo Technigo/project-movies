@@ -6,7 +6,7 @@ const RatingCircle = styled.svg`
   width: 100px;
   margin: 1em;
   transform: rotate(270deg);
-  stroke-dasharray: 251; /* (2pie * radius) */
+  stroke-dasharray: 271; /* (2pie * radius) */
   stroke-dashoffset: ${(props) => props.ratingVal};
 
   & > circle {
@@ -19,7 +19,7 @@ const RatingCircle = styled.svg`
 `;
 
 const Rating = ({ rating }) => {
-  const ratingDegree = 100 - rating * 10;
+  const ratingDegree = 360 - (360 * (rating / 10));
   console.log(ratingDegree);
   return (
     <>
