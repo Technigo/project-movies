@@ -23,15 +23,13 @@ export const MovieDetails = () => {
   return (
     <div>
       <Link to={"/"}>
-        <h3>Go Back</h3>
+        <div className="back-link"><img className="back-link-icon"/><h3>Movies</h3></div>
       </Link>
       <img className="detail-backdrop" src={`https://image.tmdb.org/t/p/original/${details.backdrop_path}`} alt={details.title}/>
       <img className="detail-movie-poster" src={`https://image.tmdb.org/t/p/w500/${details.poster_path}`} alt={details.title}/>
-      <h2>{details.title}</h2>
-      <h3>{details.tagline}</h3>
-      <h3>Genres: {details.genres.map(genre => genre.name).join(", ")}</h3>
-      <h3>Rating: {details.vote_average}/10</h3>
-      <p>{details.overview}</p>
+      <h2 className="detail-title">{details.title}</h2>
+      <h3 className="detail-rating">{details.vote_average}/10</h3>
+      <p className="detail-summary">{details.overview}</p>
       
     </div>
   )
