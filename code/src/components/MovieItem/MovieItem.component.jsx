@@ -9,12 +9,7 @@ import {
   ReleaseDate,
 } from "./MovieItem.style";
 
-const MovieItem = ({
-  id,
-  original_title: title,
-  poster_path: image,
-  release_date,
-}) => {
+const MovieItem = ({ id, title, poster_path: image, release_date }) => {
   return (
     <MovieItemContainer>
       <Link to={`/movie/${id}/${title}`}>
