@@ -52,6 +52,7 @@ opacity: 1;
 .back-icon {
   width: 25px;
   margin-right: 3px;
+  transition: margin-right .2s ease-in-out;
 }
 
 .back-container span {
