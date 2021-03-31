@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
+import {Link} from 'react-router-dom';
 
 import { LoadingSpinner } from '../components/LoadingSpinner'
 
@@ -21,6 +22,9 @@ export const MovieDetails = () => {
 
   return (
     <div>
+      <Link to={"/"}>
+        <h3>Go Back</h3>
+      </Link>
       <img className="detail-backdrop" src={`https://image.tmdb.org/t/p/original/${details.backdrop_path}`} alt={details.title}/>
       <img className="detail-movie-poster" src={`https://image.tmdb.org/t/p/w500/${details.poster_path}`} alt={details.title}/>
       <h2>{details.title}</h2>
