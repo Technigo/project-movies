@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
+
+import { MovieList } from './Pages/MovieList';
 
 export const App = () => {
   return (
     <div>
-      Testing this shizzle for Anna!
-      <button>Hello</button>
-      <p>some text again</p>
+      <MovieList />
     </div>
   )
 }
