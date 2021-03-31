@@ -13,7 +13,7 @@ const ReturnButton = ({ path }) => {
   return (
     <>
       <Button type="button" onClick={handleClick}>
-        <i className="fa fa-arrow-left" /> Home
+        <i className="fa fa-arrow-left" /> Back
       </Button>
     </>
   );

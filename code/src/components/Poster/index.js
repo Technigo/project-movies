@@ -6,6 +6,7 @@ import { IMAGE_URLS } from 'utils/apiConfig';
 const PosterImage = styled.img`
   width: fit-content;
   height: fit-content;
+  align-self: center;
 `;
 
 const Poster = ({ id, title, ...other }) => {

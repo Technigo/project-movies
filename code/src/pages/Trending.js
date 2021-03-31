@@ -4,6 +4,7 @@ import { URL_TRENDING } from 'utils/apiConfig';
 import { useFetch } from 'utils/hooks';
 
 import List from 'components/Styled/List';
+import MainWrap from 'components/Styled/MainWrap';
 import RoutePosterLink from 'components/Styled/RoutePosterLink';
 import Poster from 'components/Poster';
 import LoaderSpinner from 'components/LoaderSpinner'
@@ -13,7 +14,7 @@ const Trending = () => {
     `${URL_TRENDING}?api_key=ad4add0250df7c550404efa399902a8a`
   );
   return (
-    <>
+    <MainWrap>
       {loading ? (
         <LoaderSpinner />
       ) : (
@@ -25,7 +26,7 @@ const Trending = () => {
           ))}
         </List>
       )}
-    </>
+    </MainWrap>
   );
 };
 

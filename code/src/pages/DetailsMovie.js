@@ -7,6 +7,7 @@ import { useFetch } from 'utils/hooks';
 import ReturnButton from 'components/ReturnButton';
 import LoaderSpinner from 'components/LoaderSpinner';
 import SectionDetails from 'components/SectionDetails';
+import MainWrap from 'components/Styled/MainWrap';
 
 const Movie = () => {
   const { id } = useParams();
@@ -15,18 +16,19 @@ const Movie = () => {
   );
 
   return (
-    <>
+    <MainWrap>
       {loading ? (
         <LoaderSpinner />
       ) : (
-        <div>
+        <>
           {console.log(data)}
           <ReturnButton path="/" />
           <SectionDetails {...data} />
+
           {/* SectionCollection if(data.belongs_to_collection !== null) */}
-        </div>
+        </>
       )}
-    </>
+    </MainWrap>
   );
 };
 

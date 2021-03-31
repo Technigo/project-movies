@@ -1,7 +1,7 @@
 :root {
   --primary: #3D50FA;
   --secondary: #3442B4;
-  --dark1: #2E2F35;
+  --dark1: #212125;
   --dark2: #191A20;
 }
 
@@ -19,8 +19,15 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+p {
+  margin: 0;
+}
+
 h1 {
   font-family: 'Raleway', sans-serif;
+  
+  margin:0;
+  padding: 1em 0;
   font-weight: normal;
   font-size: 32px;
 }
