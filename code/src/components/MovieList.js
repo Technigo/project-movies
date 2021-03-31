@@ -14,14 +14,14 @@ export const MovieList = () =>{
   return(
     <>
     <section className="movies-list">
-      {movies.map(movie => {
+      {movies.map(movie => (
         <MovieThumb
           key={movie.id}
           name={movie.title}
-          background_image={movie.poster_path}
+          poster_image={movie.poster_path}
           released={movie.release_date}
           id={movie.id} />
-      })}
+      ))}
     </section>
     </>
   )
