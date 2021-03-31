@@ -4,9 +4,12 @@
   height: 100vh;
   object-fit: cover;
   position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   /* z-index: -1;
   background: rgb(254,254,254); */
-  background: linear-gradient(180deg, rgba(254,254,254,0) 46%, rgba(0,0,0,1) 100%);
+  /* background: linear-gradient(180deg, rgba(254,254,254,0) 46%, rgba(0,0,0,1) 100%); */
 }
 
 .main {
