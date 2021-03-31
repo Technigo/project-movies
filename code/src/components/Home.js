@@ -7,7 +7,7 @@ import MovieElement from './MovieElement'
 
 export const Home = () => {
 const [ movieList, setMovieList ] = useState([])
-
+ 
     const fetchMovieList = () => {
         fetch(MOVIE_LIST_URL) 
         .then(res => res.json())
@@ -20,7 +20,7 @@ const [ movieList, setMovieList ] = useState([])
         fetchMovieList()   
     }, [])
 
-    
+    console.log(movieList)
     return (
         <>    
             {movieList.map(movie => {  
