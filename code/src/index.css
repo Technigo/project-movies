@@ -76,7 +76,6 @@ body {
   background-size: cover;
   flex-direction: column;
   justify-content: flex-end;
-
   position: absolute;
   top: 0;
   bottom: 0;
@@ -88,7 +87,6 @@ body {
 .detail-page .back-button {
   display: inline-flex;
   align-items: center;
-
   position: absolute;
   width: 90px;
   top: 50px;
@@ -181,7 +179,6 @@ i {
     background-color: #000;
     height: 100%;
   }
-
 }
 
 @media (max-width: 1025px) {
@@ -206,5 +203,4 @@ i {
     background-color: #000;
     height: 100vh;
   }
-
 }

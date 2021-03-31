@@ -1,7 +1,6 @@
 import React, { useEffect, useState} from 'react'
 
 import { MovieCard } from './MovieCard'
-
 import { MOVIE_URL } from '../reusables/urls'
 
 export const MovieList = () => {
