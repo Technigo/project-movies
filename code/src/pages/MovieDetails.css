@@ -23,7 +23,7 @@
 .movie-title-container{
     display: flex;
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 30%;
     color: white;
 }
@@ -32,7 +32,7 @@
     display: flex;
     position: absolute;
     width: 500px;
-    top: 68%;
+    top: 58%;
     left:30%;
     color:white;
 }
