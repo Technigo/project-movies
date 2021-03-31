@@ -1,0 +1,11 @@
+.movie-poster {
+  position: relative;
+}
+
+.title-date {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+
+}
