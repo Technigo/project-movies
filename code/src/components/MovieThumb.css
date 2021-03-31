@@ -3,22 +3,25 @@
 }
 
 .movie-thumb-content{
-    display: none;
+    display: flex;
     flex-direction: column;;
     position: absolute;
     color: white;
     top: 70%;
-   opacity: 0;
+    opacity: 0;
+    margin-left:2%;
 }
 
-.movie-thumb-content:hover{
-    display: flex;
-    flex-direction: column;
-    column-gap: 40px;
-    position: absolute;
-    color: white;
-    top: 70%;
-    filter: brightness(25%);
-    opacity: 1; 
-}
+.movie-thumb-wrapper:hover .movie-thumb-img{
+    opacity: 0.2;
+  }
+  
+.movie-thumb-wrapper:hover .movie-thumb-content{
+    opacity: 1;
+  }
 
+button{
+  display: flex;
+  position: aboslute;
+  top: 3%;
+}

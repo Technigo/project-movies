@@ -1,6 +1,13 @@
+.movie-list-headline{
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 15px 50px;
+}
 .movie-list{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     background-color: black;
     color: white;
 }

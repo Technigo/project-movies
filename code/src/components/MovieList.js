@@ -15,9 +15,10 @@ useEffect(() => {
 
 return (
     <>
-    <section className="movie-list">
-        {movies.map(movie => <MovieThumb {...movie} /> )}
-    </section>
+        <h1 className="movie-list-headline">Movies <span>🍿</span></h1>
+        <section className="movie-list">
+            {movies.map(movie => <MovieThumb {...movie} /> )}
+        </section>
     </>
 ) 
 }

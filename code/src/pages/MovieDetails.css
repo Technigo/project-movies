@@ -1,0 +1,51 @@
+.movie-details {
+    width: 100vw;
+    height: 100vh;
+}
+
+.movie-image-background{
+    display: flex;
+    position: relative; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-image-poster{
+    display: flex;
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    border: 4px solid white;
+}
+
+
+.movie-title-container{
+    display: flex;
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    color: white;
+}
+
+.movie-overview{
+    display: flex;
+    position: absolute;
+    width: 500px;
+    top: 68%;
+    left:30%;
+    color:white;
+}
+
+.vote-average{
+    font-size: 17px;
+    padding-left: 10px;
+    color: red;
+}
+
+button {
+    display: flex;
+    position: absolute;
+    top: 5%;
+    left:5%;
+}

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import {useParams, Link} from "react-router-dom"
 import { BackIcon } from "./icons/Back"
+import "./MovieDetails.css"
+
 const MovieDetails = () => {
     const {id}= useParams();
     const [poster, setPoster]= useState([])
@@ -11,19 +13,22 @@ const MovieDetails = () => {
         .then((json) => {
             setPoster(json)
         })
-
     }, [])
 
     return (
-    <section className="movie-details"> 
-    <Link to="/" className="backLink">
-        <BackIcon /> 
-      </Link>
-    <img src={`https://image.tmdb.org/t/p/w1280${poster.backdrop_path}`} />
-    <img src={`https://image.tmdb.org/t/p/w300${poster.poster_path}`} />
-    <h1>{poster.original_title}</h1> <p>{poster.vote_average}</p>
-    <p>{poster.overview}</p>
-    </section>
+        <>
+            <section className="movie-details" /* style={{backgroundImage: `url({https://image.tmdb.org/t/p/original${poster.backdrop_path})` }} */> 
+                <img className="movie-image-background" src={`https://image.tmdb.org/t/p/w1280${poster.backdrop_path}`} />
+                <Link to="/" className="backLink">
+                    <BackIcon /> 
+                </Link>
+                <img className="movie-image-poster"src={`https://image.tmdb.org/t/p/w200${poster.poster_path}`} />
+                <div className="movie-title-container">
+                <h2 className="movie-title">{poster.original_title}<span className="vote-average">{poster.vote_average}</span></h2> 
+                </div>
+                <p className="movie-overview">{poster.overview}</p>
+            </section>
+        </>
     )
 }
 
