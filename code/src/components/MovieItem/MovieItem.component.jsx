@@ -12,7 +12,7 @@ import {
 const MovieItem = ({ id, title, poster_path: image, release_date }) => {
   return (
     <MovieItemContainer>
-      <Link to={`/movie/${id}/${title}`}>
+      <Link to={`/movie/${id}`}>
         <Image src={`https://image.tmdb.org/t/p/w342/${image}`} alt={title} />
         <MovieDetailsContainer>
           <Title>{title}</Title>
