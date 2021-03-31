@@ -13,6 +13,10 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+}
+
 .popular-list {
 display:grid;
 grid-template-columns: repeat(4, 1fr);
@@ -34,6 +38,25 @@ opacity: 1;
 
 .movie-wrapper:hover img {
   opacity: 0.3;
+}
+
+.back-container {
+  display: flex;
+  align-items: center;
+}
+
+.back-container:hover .back-icon {
+  margin-right: 8px;
+}
+
+.back-icon {
+  width: 25px;
+  margin-right: 3px;
+}
+
+.back-container span {
+  color: white;
+  font-weight: 700;
 }
 
 .details {
