@@ -10,6 +10,7 @@ const MovieList = () => {
         fetch("https://api.themoviedb.org/3/movie/popular?api_key=2e6a7b75ad4d088fae1f52620044bef7&language=en-US&page=1")
         .then((res) => res.json())
         .then((json) => setMovies(json.results))
+        .catch((err) => console.error(err))
     }, [])
     
     console.log(movies)

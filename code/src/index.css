@@ -21,6 +21,20 @@ code {
   
 }
 
+.error {
+  background-color: black;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.error h1 {
+  position: absolute;
+  color: #ffffff;
+}
+
 .movies-wrapper {
   display: grid;
   grid-template-columns: 1fr;
