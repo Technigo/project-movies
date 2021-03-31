@@ -1,11 +1,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-const MovieDetails = ({ match }) => {
+const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState({});
 
-  const API_DETAILS_URL = `https://api.themoviedb.org/3/movie/${match.params.movieID}?api_key=180969109de0f1c45ba2c80ba35bd8c7&language=en-US`;
+  const { movieID } = useParams();
+
+  const API_DETAILS_URL = `https://api.themoviedb.org/3/movie/${movieID}?api_key=180969109de0f1c45ba2c80ba35bd8c7&language=en-US`;
 
   useEffect(() => {
     fetch(API_DETAILS_URL)
