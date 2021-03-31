@@ -15,12 +15,14 @@ export const MovieDetails = () => {
   }, [movie_id])
 
 return(
-  <div>
-    <h2>{details.original_title}</h2>
-    <h2>{details.overview}</h2>
-    <h2>{details.vote_average}</h2>
-    <img className='small-movie-poster' src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt=" small movie poster"/>
-    <img src={`https://image.tmdb.org/t/p/w1280${details.poster_path}`} alt="background movie poster"/>
-  </div>
+  <>
+    <div className='details-container'>
+      <h2 className='movie-title'>{details.original_title}</h2>
+      <h2 className='overview'>{details.overview}</h2>
+      <h2 className='rating'>{details.vote_average}</h2>
+      <img className='small-movie-poster' src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt=" small movie poster"/>
+    </div>
+    <img className='background-movie-poster' src={`https://image.tmdb.org/t/p/w1280${details.poster_path}`} alt="background movie poster"/>
+  </>
 )
 }

@@ -58,3 +58,24 @@
 .image-details:hover {
   opacity: 1;
 }
+
+/*MOVIE DETAILS PAGE*/
+
+.background-movie-poster {
+  position: absolute;
+  z-index: -1;
+}
+
+.details-container{
+  position: absolute;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.overview {
+  width: 400px;
+  
+}
