@@ -42,3 +42,18 @@ code {
   justify-content: flex-end;
   cursor: pointer;
 }
+
+.backdrop-container {
+  width: 100vw;
+  width: 100vh;
+  position: absolute;
+  background-size: cover;
+}
+
+.poster-image-container {
+  position: relative;
+}
+
+.poster-image {
+  border: 3px solid rgb(165, 32, 32);
+}

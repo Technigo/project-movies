@@ -13,3 +13,5 @@ Describe how you approached to problem, and what tools and techniques you used t
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
 
 - content is too wide
+- move all urls to separate file
+- move files between compontents/and pages
