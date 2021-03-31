@@ -1,2 +1,2 @@
 export const POPULAR_API_URL = ('https://api.themoviedb.org/3/movie/popular?api_key=50eb4adf4920d3714372a2ce134f64ac&language=en-US&page=1') 
-export const DETAIL_API_URL = (movieId) => `https://api.themoviedb.org/3/movie/${movieId}?api_key=50eb4adf4920d3714372a2ce134f64ac&language=en-US`
+// export const DETAIL_API_URL = (movieId) => `https://api.themoviedb.org/3/movie/${movieId}?api_key=50eb4adf4920d3714372a2ce134f64ac&language=en-US`

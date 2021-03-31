@@ -24,7 +24,6 @@ export const MovieList = () => {
             {movieList.map((movie) => (
                     <Link to={`/movies/${movie.id}`} key={movie.id} className="movie-card-container">
                         <img className="poster-image" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title}/>
-                        <div className="image-overlay">
                             <div className="image-overlay-text">
                                 <h1>
                                     {movie.original_title}
@@ -33,7 +32,6 @@ export const MovieList = () => {
                                     {movie.release_date}
                                 </h2>
                             </div>
-                        </div>
                     </Link>
             ))}
         </section>
