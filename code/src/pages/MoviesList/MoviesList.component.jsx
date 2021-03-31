@@ -15,8 +15,6 @@ const MoviesList = () => {
       .then((json) => setMoviesList(json.results));
   }, []);
 
-  console.log(moviesList);
-
   return (
     <MovieListContainer>
       {moviesList.map((movie) => {

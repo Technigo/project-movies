@@ -1,7 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import NotFound from "./pages/not-found/not-found.component";
 import MoviesList from "./pages/MoviesList/MoviesList.component";
 import MoviesDetails from "./pages/MovieDetails/MovieDetails.component";
 
@@ -11,7 +10,6 @@ function App() {
       <Switch>
         <Route path="/" component={MoviesList} exact />
         <Route path="/movie/:id" component={MoviesDetails} exact />
-        <Route component={NotFound} />
       </Switch>
     </>
   );

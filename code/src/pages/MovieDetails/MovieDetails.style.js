@@ -1,4 +1,18 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
+const BackButton = styled(Link)`
+  font-size: 30px;
+  color: #fff;
+`;
+
+const Details = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  min-height: 85vh;
+`;
 
 const MoviePageContainer = styled.section`
   background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%),
@@ -7,10 +21,6 @@ const MoviePageContainer = styled.section`
   background-size: cover;
   padding: calc(var(--spacing) * 12);
   min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end;
 `;
 
 const DetailsContainer = styled.div`
@@ -41,10 +51,12 @@ const MovieOverview = styled.p`
 `;
 
 export {
+  BackButton,
   MoviePageContainer,
   DetailsContainer,
   MovieImage,
   MovieTitle,
   MovieRate,
   MovieOverview,
+  Details,
 };
