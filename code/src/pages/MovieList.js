@@ -32,7 +32,6 @@ export const MovieList = () => {
                                     {movie.release_date}
                                 </h2>
                             </div>
-
                     </Link>
             ))}
         </section>

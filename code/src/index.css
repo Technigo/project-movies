@@ -57,6 +57,69 @@ code {
   padding: 10px;
 }
 
+/* Movie details page */
+
+.background-image {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.3);
+  display: block;
+}
+
+.movie-details-page {
+  position: relative;
+}
+
+.back-button-container {
+  position: absolute;
+  margin: 15px;
+  z-index: 1;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: flex;
+}
+
+.back-button {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.movie-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 65px;
+  /* flex-direction: row; */
+}
+
+.poster-details-image {
+  width: 70%;
+  /* width: 30%; */
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 0;
+  max-width: 70%;
+  color: white;
+  /* max-width: 60%; */
+  /* margin-left: 15px; */
+}
+
+.movie-title {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.rating {
+  color:rgb(211, 67, 67);
+}
+
 @media (min-width: 768px) {
   .movie-list-container {
     flex-wrap: wrap;
@@ -65,6 +128,27 @@ code {
 
   .movie-card-container {
     width: 50%;
+  }
+
+  .movie-details-container {
+    flex-direction: row;
+    bottom: 50px;
+    top: auto;
+    margin-left: 50px;
+
+  }
+
+  .poster-details-image {
+    width: 30%;
+  }
+
+  .movie-info {
+    max-width: 45%;
+    margin-left: 15px;
+  }
+  
+  .movie-title {
+    justify-content: space-between;
   }
 }
 
