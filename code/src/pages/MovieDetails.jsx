@@ -1,5 +1,8 @@
 import React, { useEffect, useState} from 'react'
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
+
+import { FaChevronCircleLeft } from 'react-icons/fa';
+
 
 import './MovieDetails.css'
 
@@ -22,11 +25,15 @@ export const MovieDetails = () => {
 
     }, [MOVIE_URL])
 
-    
 
     return (
-        <div className='main'>
-                <img className='background-image' style={`background: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%)`} src={`https://image.tmdb.org/t/p/w1280${movies.backdrop_path}`}  />
+        <div >
+            
+            <img className='background-image' src={`https://image.tmdb.org/t/p/w1280${movies.backdrop_path}`}/>
+            <Link className="back-arrow" to={`/`}>
+                <FaChevronCircleLeft/>
+                <span className="icon-text">Movies</span>
+            </Link>
             <div className="movie-details-container">
                 <img src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`}/>
                 <div className="movie-details">
@@ -37,5 +44,4 @@ export const MovieDetails = () => {
         </div>
     )
 }
-
 
