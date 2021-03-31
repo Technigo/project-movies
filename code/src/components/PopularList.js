@@ -15,16 +15,21 @@ const PopularList = () => {
 
 
     return (
-        <section>
+        <section className="popular-list">
             {popularMovies.map(movie => (
-                <Link to={`/movies/${movie.id}`} key={movie.id} >
-                    <h2>{movie.title}</h2>
+                <Link className="movie-wrapper" to={`/movies/${movie.id}`} key={movie.id} >
                     <img src={POSTER_URL(movie.poster_path)} alt={movie.title} />
-                    <p>{movie.release_date}</p>
+                    <div className="movie-details">
+                        <h2>{movie.title}</h2>
+                        <p>Released {movie.release_date}</p>
+                    </div>
                 </Link>
             ))}
         </section>
     )
 }
+
+
+
 
 export default PopularList
