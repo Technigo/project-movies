@@ -17,7 +17,7 @@ main {
   max-width: 1200px;
   margin: 0, auto;
   width: 100%;
-  padding: 0 ,50px;
+  padding: 0 50px;
 }
 
 code {
@@ -26,12 +26,18 @@ code {
 }
 
 .heroImage {
-  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0));
   position: relative;
   top: 0;
-  left: 0;
+  left: 0px;
 }
 
+.homeLink {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  color: #fff;
+}
 .cardImage img {
   position: absolute;
   top: 200px;
@@ -44,6 +50,12 @@ code {
   position: absolute;
   left: 15px;
   bottom: 20px;
+}
+
+.votes {
+  color: red;
+  font-size: 17px;
+  font-weight: normal;
 }
 
 .movieOverview {
