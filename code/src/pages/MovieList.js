@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { MovieCard } from './MovieCard';
+import { MovieCard } from '../components/MovieCard';
 
 
 export const MovieList = () => {
