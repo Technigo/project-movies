@@ -2,21 +2,25 @@ import React, { useState, useEffect } from 'react'
 import { API_URL } from '../reusable/urls'
 import { Link } from 'react-router-dom'
 
-import MovieElement from './MovieElement'
+import MovieElement from '../components/MovieElement'
 
 const MovieList = () => {
   const [movieList, setMovieList] = useState([])
 
   useEffect (() => {
-   fetchMovieList()
+   /* fetchMovieList() */
+   fetch(API_URL)
+      .then(response => response.json())
+      .then(data => setMovieList(data.results))
+      .catch (err => console.dirr(err))
   }, [])
 
-  const fetchMovieList = () => {
+ /*  const fetchMovieList = () => {
     fetch(API_URL)
       .then(response => response.json())
       .then(data => setMovieList(data.results))
       .catch (err => console.dirr(err))
-     }
+     } */
     
     return (
      <section className="movie-container">
