@@ -19,14 +19,16 @@ export const MovieDetails = () => {
     return (
         <article>
        { movie && (
-        <div>
+        <div className="heroImage">
             <img src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.title} />
-        <div>
+        <div className="cardImage">
             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
         </div>
+        <div className="movieDetails">
         <h1>{movie.title}</h1>
         <p>{movie.vote_average}/10</p>
-        <p>{movie.overview}</p>
+        <p className="movieOverview">{movie.overview}</p>
+        </div>
         </div> 
        )}
        </article>           
