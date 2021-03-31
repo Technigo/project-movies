@@ -1,6 +1,8 @@
 import React, { useEffect, useState} from 'react'
 import { useParams } from "react-router-dom"
 
+import './MovieDetails.css'
+
 
 export const MovieDetails = () => {
     const { id } = useParams()
@@ -18,21 +20,20 @@ export const MovieDetails = () => {
                 setMovies(json)
             })
 
-    }, [id])
+    }, [MOVIE_URL])
 
     
 
     return (
-        <div>
-                <div>
-                    <h1>{movies.original_title}<span>{movies.vote_average}/10</span></h1>
-                    <img src={`https://image.tmdb.org/t/p/w500${movies.backdrop_path}`}  />
-                    <img src={`https://image.tmdb.org/t/p/w500${movies.poster_path}`}  />
+        <div className='main'>
+                <img className='background-image' style={`background: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%)`} src={`https://image.tmdb.org/t/p/w1280${movies.backdrop_path}`}  />
+            <div className="movie-details-container">
+                <img src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`}/>
+                <div className="movie-details">
+                    <h1>{movies.original_title} <span className="votes"> {movies.vote_average}/10</span></h1>
                     <p>{movies.overview}</p>
-                    
-                    
                 </div>
-                
+            </div>
         </div>
     )
 }
