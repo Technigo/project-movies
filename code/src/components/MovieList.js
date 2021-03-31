@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { MovieThumb } from "./MovieThumb"
 
 export const MovieList = () =>{
@@ -15,12 +16,14 @@ export const MovieList = () =>{
     <>
     <section className="movies-list">
       {movies.map(movie => {
-        return <MovieThumb
+        <Link to={`/movies/${movie.id}`}>
+        <MovieThumb
           key={movie.id}
           name={movie.title}
           background_image={movie.poster_path}
           released={movie.release_date}
           id={movie.id} />
+        </Link>
       })}
     </section>
     </>
