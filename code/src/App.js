@@ -8,16 +8,6 @@ import { Home } from  './components/Home'
 
 export const App = () => {
   return (
-    <BrowserRouter>
-      <Route path="/" exact>
-        <Home />
-      </Route>
-
-
-
-
-
-
-    </BrowserRouter>
+    <Home />
   )
 }
