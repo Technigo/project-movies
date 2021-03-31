@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { MOVIE_URL, POSTER_URL, BACKDROP_URL } from '../utils/urls'
 
@@ -17,6 +18,9 @@ const MovieDetails = () => {
 
     return (
         <div style={{ backgroundImage: `url(${BACKDROP_URL(movieDetails.backdrop_path)})` }}>
+            <Link to="/">
+                <img src="./icons/arrow-left-circle.svg" alt="arrow-icon" />
+                Movies</Link>
             <h2>{movieDetails.title}</h2>
             <p>{movieDetails.vote_average}</p>
             <p>{movieDetails.overview}</p>
