@@ -6,13 +6,77 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
-  color: white;}
+  color: white;
+  font-family: 'francois one';
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+/* Header with title and dropdown for sorting movies */
+.movie-time-title {
+  margin: 0px;
+  color: #09B5E0;
+  outline: none;
+  padding: 0 4px;
+}
+
+.movie-time-title:focus {
+  outline: 2px solid #09B5E0;  
+}
+
+.navigation {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Dropdown */
+.sort-movie {
+  font-size: 18px;
+  background-color: rgb(61, 61, 61);
+  color: white;
+  padding: 2px 5px;
+  border: none;
+  font-family: 'francois one';
+  letter-spacing: 1.05px;
+  outline: none;
+}
+
+.sort-movie:focus {
+  outline: 2px solid #09B5E0;
+}
+
+/* Loading Spinner */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loading-spinner {
+  margin-top: 250px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: solid 15px rgb(61, 61, 61);
+  border-top: 15px solid #09B5E0;
+  animation: loading 1.5s linear infinite;
+}
+
+@keyframes loading {
+  from {transform:rotate(0deg)}
+  to {transform:rotate(360deg)}
+}
+
+/* Main content with all the movies */
 .movielist-container {
   display: flex;
   flex-wrap: wrap;
@@ -23,6 +87,7 @@ code {
   position: relative;
   text-decoration: none;
   color: white;
+  outline: none;
 }
 
 .movie-image {
@@ -37,33 +102,82 @@ code {
   left: 0;
   display: none;
   padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .movie-card:hover .movie-card-text {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+}
+
+.movie-card:focus .movie-card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 2px solid #09B5E0;
 }
 
 .movie-title {
   margin: 0;
+  font-family: 'francois one';
 }
 
 .release-title {
   font-size: 18px;
   font-weight: 200;
+  font-family: 'francois one';
 }
 
+
+/* Details page */
 .background-image {
   background-size: cover;
   height: 100vh;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+/* Return to movielist button */
+.return {
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  outline: none;
+  padding: 5px;
+}
+
+.return:hover {
+  opacity: 0.8;
+}
+
+.return:focus {
+  outline: 2px solid white;
+}
+
+.fa-chevron-circle-left {
+  font-size: 38px;
+}
+
+.return-text {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.return:hover .return-text {
+  margin-left: 20px;
+}
+
+/* Movie image and details */
 .movie-details {
   display: flex;
-  padding: 50px;
+  margin: 50px;
+  padding: 10px;
 }
 
 .details-text {
@@ -76,16 +190,175 @@ code {
 
 .poster-image {
   border: 5px solid white;
+  outline: none;
+}
+
+.poster-image:focus {
+  outline: 5px solid white;
 }
 
 .movie-detail-title {
-
+  margin: 0px;
+  margin-bottom: 10px;
 }
 
-.overview {
+.rating-imdb {
+ display: flex;
+ align-items: center;
+ margin-bottom: 10px;
+}
 
+.imdb {
+  background-color: #E2B616;
+  text-decoration: none;
+  color: black;
+  padding: 2px 6px;
+  margin: 0 0 0 15px;
+  font-weight: 800;
+  border-radius: 3px;
+  font-size: 20px;
+}
+
+.imdb:hover {
+  opacity: 0.7;
 }
 
 .rating {
-  
+  background-color:  white;
+  text-decoration: none;
+  color: black;
+  padding: 2px 6px;
+  font-weight: 800;
+  border-radius: 3px;
+  font-size: 20px;
+  margin: 0px;
 }
+
+.rating-total {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.movie-genres {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.genre {
+  padding-right: 7px;
+  display: flex;
+  margin: 0px;
+  font-size: 17px;
+}
+
+.genre:not(:last-child):after {
+  content: ' • ';
+  padding-left: 7px;
+}
+
+.runtime {
+  margin: 0;
+  font-size: 16px;
+}
+
+.overview {
+  margin: 0px;
+  margin-top: 20px;
+  font-family: 'Open sans';
+  margin-bottom: 2px;
+}
+
+/* Footer */
+.footer {
+  background-color: black;
+  padding: 3px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logos .fa {
+  padding: 4px;
+  margin: 0 4px;
+  font-size: 22px;
+  cursor: pointer;
+  outline: none;
+}
+
+.logos .fa:hover {
+  color: #09B5E0;
+}
+
+.logos .fa:focus {
+  color: #09B5E0;
+  outline: 2px solid #09B5E0;
+}
+
+.copyright {
+  font-family: 'Open sans';
+  font-size: 13px;
+  outline: none;
+}
+
+.copyright:focus {
+  color: #09B5E0;
+}
+
+/* Media queries for phones */
+@media (max-width: 767px) {
+  .loading-spinner {
+    margin-top: 150px;
+  }
+
+  .movie-card {
+    width: 50%;
+  }
+
+  .poster-image {
+    display: none;
+  }
+
+  .return {
+    margin: 20px;
+  }
+
+  .movie-details {
+    margin: 20px;
+  }
+
+  .details-text {
+    margin: 0px;
+  }
+
+  .genre, .runtime {
+    font-size: 15px;
+  }
+
+  .footer {
+    padding: 0 10px;
+  }
+
+  .logos .fa {
+    padding: 5px;
+  }
+}
+
+/* Media query for iphone 5 and smaller */
+@media (max-width: 320px) {
+  .movie-details {
+    margin: 12px;
+  }
+
+  .return {
+    margin: 12px;
+  }
+
+  .genre, .runtime {
+    font-size: 12px;
+  }
+  .overview {
+    font-size: 14px;
+  }
+
+}
+
