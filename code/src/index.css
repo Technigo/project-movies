@@ -24,7 +24,7 @@ position: relative;
 color: white;
 }
 
-.movie-wrapper:hover .movie-details{
+.movie-wrapper:hover .details {
 opacity: 1;
 }
 
@@ -36,7 +36,7 @@ opacity: 1;
   opacity: 0.3;
 }
 
-.movie-details {
+.details {
 position: absolute;
 top: 0;
 bottom:0;
@@ -56,3 +56,47 @@ h2 {
   font-size: 32px;
 }
 
+.movie-details-container {
+  height: 100vh;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+
+.movie-details h2 {
+display:inline-block;
+font-size: 24px;
+
+}
+
+.movie-details span {
+  color:red;
+  margin-left: 17px;
+  font-size: 17px;;
+}
+
+.movie-details-poster {
+  width: 352px;
+  border: 5px solid white;
+  box-sizing: border-box;
+}
+
+.movie-details-summary {
+  display: flex;
+  align-items: flex-end;
+  
+}
+
+.movie-details {
+  padding-left: 20px;
+}
+
+.movie-details p {
+  width: 400px;
+  margin-top: 20px;
+}

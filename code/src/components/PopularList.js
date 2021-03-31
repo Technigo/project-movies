@@ -19,7 +19,7 @@ const PopularList = () => {
             {popularMovies.map(movie => (
                 <Link className="movie-wrapper" to={`/movies/${movie.id}`} key={movie.id} >
                     <img src={POSTER_URL(movie.poster_path)} alt={movie.title} />
-                    <div className="movie-details">
+                    <div className="details">
                         <h2>{movie.title}</h2>
                         <p>Released {movie.release_date}</p>
                     </div>

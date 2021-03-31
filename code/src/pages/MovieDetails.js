@@ -17,15 +17,19 @@ const MovieDetails = () => {
 
 
     return (
-        <div style={{ backgroundImage: `url(${BACKDROP_URL(movieDetails.backdrop_path)})` }}>
+        <div className="movie-details-container" style={{ backgroundImage: `url(${BACKDROP_URL(movieDetails.backdrop_path)})` }}>
             <Link to="/">
                 <img src="./icons/arrow-left-circle.svg" alt="arrow-icon" />
-                Movies</Link>
-            <h2>{movieDetails.title}</h2>
-            <p>{movieDetails.vote_average}</p>
-            <p>{movieDetails.overview}</p>
-            <img src={POSTER_URL(movieDetails.poster_path)} alt={movieDetails.title} />
-
+                Movies
+                </Link>
+            <div className="movie-details-summary">
+                <img className="movie-details-poster" src={POSTER_URL(movieDetails.poster_path)} alt={movieDetails.title} />
+                <div className="movie-details">
+                    <h2>{movieDetails.title}</h2>
+                    <span>{movieDetails.vote_average}/10</span>
+                    <p>{movieDetails.overview}</p>
+                </div>
+            </div>
         </div >
     )
 }
