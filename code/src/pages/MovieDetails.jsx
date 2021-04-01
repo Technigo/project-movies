@@ -9,10 +9,8 @@ import './MovieDetails.css'
 
 export const MovieDetails = () => {
     const { id } = useParams()
-    // const history = useHistory();
     const [pageNotFound, setPageNotFound] = useState(false)
     const [movies, setMovies] = useState()
-
 
     const MOVIE_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=d1212c48c1a2b13b12dd27882d072960&language=en-US`
     

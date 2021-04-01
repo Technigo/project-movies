@@ -13,7 +13,7 @@
 }
 
 .card-image:hover {
-  opacity: 30%;
+  opacity: 30% !important;
 }
 
 .card-image:hover ~  .title-date {
