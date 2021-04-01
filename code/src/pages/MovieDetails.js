@@ -22,7 +22,7 @@ const MovieDetails = () => {
                 <Link to="/" className="backLink">
                     <BackIcon /> 
                 </Link>
-                <img className="movie-image-poster" alt="poster"src={`https://image.tmdb.org/t/p/w200${poster.poster_path}`} />
+                <img className="movie-image-poster" alt="poster"src={`https://image.tmdb.org/t/p/w300${poster.poster_path}`} />
                 <div className="movie-title-container">
                 <h2 className="movie-title">{poster.original_title}<span className="vote-average">{`${poster.vote_average} /10`}</span></h2> 
                 </div>

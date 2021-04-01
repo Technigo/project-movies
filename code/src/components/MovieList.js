@@ -15,7 +15,7 @@ useEffect(() => {
 
 return (
     <>
-        <h1 className="movie-list-headline">Movies <span role="img" aria-label="image">🍿</span></h1>
+        <h1 className="movie-list-headline">Top Movies <span role="img" aria-label="image">🍿</span></h1>
         <section className="movie-list">
             {movies.map(movie => <MovieThumb {...movie} key={movie.id} /> )}
         </section>
