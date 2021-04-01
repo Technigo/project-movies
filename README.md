@@ -1,12 +1,11 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is a multi-page project built in React, where a list of movies is fetched from an API and rendered on a page.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started with fetching all movies in MoviesList and displaying them on the start page. We then used react router to build links between the main page and each individual movie page. On each movie page we fetch som details from the API for each movie, passing movie id as a prop to create custom Urls.
+Each movie page has a back button linking to start page.
 
 ## View it live
 
