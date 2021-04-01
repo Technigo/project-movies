@@ -23,6 +23,10 @@ export const MovieDetails = () => {
             .catch((error) => console.log(error))
     }, [MOVIE_URL, history])
 
+    if (movies === undefined) {
+        return <></>
+    }
+
     
 
     return (
