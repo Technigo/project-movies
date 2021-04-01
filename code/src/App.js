@@ -14,6 +14,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import MovieList from './pages/MovieList'
 import MovieDetail from './pages/MovieDetail'
 import Error from './pages/Error'
+import Companies from './pages/Companies'
 
 export const App = () => {
   return (
@@ -27,6 +28,9 @@ export const App = () => {
         </Route>
         <Route path="/error" exact>
           <Error />
+        </Route>
+        <Route path="/companies/:comp" exact>
+          <Companies />
         </Route>
       </Switch>
     </BrowserRouter>
