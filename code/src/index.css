@@ -45,15 +45,24 @@ code {
 }
 
 .movie-list-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
 }
 
-.movie-list-wrapper a {
+.movie-list a {
   width: 25%;
   position: relative;
   color: white;
   text-decoration: none;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-title {
+  color: white;
 }
 
 .movie-cover {
