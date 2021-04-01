@@ -31,7 +31,7 @@
 .movie-overview{
     display: flex;
     position: absolute;
-    width: 500px;
+    width: 350px;
     top: 58%;
     left:30%;
     color:white;
@@ -58,6 +58,7 @@ button {
     width: 100px;
     transition: all 0.5s;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
     margin: 5px;
 }
 
