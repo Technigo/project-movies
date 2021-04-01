@@ -48,7 +48,7 @@ export const Search = () => {
         <>
           <h2 className="list-title">Search results</h2>
           <section className="movie-list">
-            {id.slice(0, 8).map(movie => (
+            {id.slice(0, 4).map(movie => (
               <Link key={movie.id} to={`/movies/${movie.id}`}>
               <MovieCard {...movie} />
             </Link>
