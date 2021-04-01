@@ -31,11 +31,13 @@ export const MovieDetails = () => {
             <img
               className="background-image"
               src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`}
+              alt={details.original_title}
             />
             <div className="movie-details-container">
               <img
-                className="poster-ditails-image"
+                className="poster-details-image"
                 src={`https://image.tmdb.org/t/p/w342${details.poster_path}`}
+                alt={details.original_title}
               />
               <div className="movie-info">
                 <h1 className="movie-title">
