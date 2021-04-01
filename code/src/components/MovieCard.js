@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const MovieCard = ({title, release_date, poster_path, id}) => {
+export const MovieCard = ({title, release_date, poster_path}) => {
   return (
     <div className="movie-cover">
       <img src={`http://image.tmdb.org/t/p/w342/${poster_path}`} alt={title} />
