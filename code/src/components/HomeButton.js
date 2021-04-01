@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const HomeButton = () => {
     return (
-        <Link to="/" className="home-button-container">
+        <Link to="/">
             <button className="home-button">
                 <img src="/icons/arrow-left-circle.svg" alt="arrow-icon" className="home-icon" />
                 <span>Back to main page</span>

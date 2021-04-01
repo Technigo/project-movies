@@ -36,9 +36,9 @@ const MovieDetails = () => {
                 <img className="movie-details-poster" src={POSTER_URL(movieDetails.poster_path)} alt={movieDetails.title} />
                 <div className="movie-details">
                     <h2>{movieDetails.title}</h2>
-                    <span>{movieDetails.vote_average}/10</span>
+                    <span className="movie-details-rating">{movieDetails.vote_average}/10</span>
                     <p>{movieDetails.overview}</p>
-                    <Link to={`/cast/${movieDetails.id}`}>See the cast</Link>
+                    <Link to={`/cast/${movieDetails.id}`}><span>See the cast</span><img src="/icons/arrow-right-circle.svg" alt="arrow-icon" className="right-icon" /></Link>
                 </div>
             </div>
         </div >
