@@ -25,7 +25,6 @@ const Collection = () => {
         <LoaderSpinner />
       ) : (
         <>
-          {console.log(data)}
           <ReturnButton />
           <SectionDetails {...data} />
           {/* list of movies in collection */}

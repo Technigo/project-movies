@@ -22,7 +22,6 @@ const Movie = () => {
         <LoaderSpinner />
       ) : (
         <>
-          {console.log(data)}
           <ReturnButton path="/" />
           <SectionDetails {...data} />
           {data.belongs_to_collection !== null && (
