@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
-import '../style/MovieDetails.css'
-
+import { BackButton } from '../components/BackButton';
+import '../style/MovieDetails.css';
 import { API_KEY } from 'reuseables/APIs';
 
 export const MovieDetails = () => {
@@ -19,6 +19,9 @@ useEffect(() => {
 
     return (
         <section className="movie-details-container">
+            <Link to="/" className="BackButton">
+                <BackButton />
+            </Link>
             <img 
             src={`https://image.tmdb.org/t/p/original/${details.backdrop_path}`} 
             alt={details.title} 
