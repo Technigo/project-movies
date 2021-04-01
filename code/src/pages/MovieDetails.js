@@ -21,7 +21,7 @@ export const MovieDetails = () => {
     return (
         <article>
        { movie && (
-        <div className="heroImage sideCrop">
+        <div className="heroImage">
             <img src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.title} />
         <div className="cardImage">
             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />

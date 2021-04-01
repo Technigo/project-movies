@@ -56,17 +56,43 @@ code {
   color: #fff;
 }
 
-.movie-img-list:hover {
+/* Overlay on hover over movie image */
+
+.movie-list-overlay {
+  position: relative;
+}
+
+.movie-overlay {
+  position: absolute;
+  color:#fff;
   background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.5); 
-    transition: .5s ease;
-    opacity: 0.4;
+  background: rgba(0, 0, 0, 0.5); 
+  transition: .5s ease;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left:0;
+  /* Flexbox for the text on the image on hover */
+  display: flex;
+  align-items: flex-start; 
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 20px;
+}
+
+.movie-overlay:hover {
+  opacity: 4;
+}
+
+.movieTitle {
+  font-size: 24px;
+  margin-bottom: 0;
 }
 
 .movies a {
   text-decoration: none;
   color: #fff;
-
 }
 
 .cardImage img {
@@ -108,7 +134,6 @@ code {
     width: 10%;
     left: 10px;
     top: 400px;
-
   }
   
   .cardImage a {
@@ -123,7 +148,6 @@ code {
     left: 200px;
     top: 400px;
   }
-
 }
 
 
