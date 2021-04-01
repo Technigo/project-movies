@@ -1,5 +1,5 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, useHistory } from 'react-router-dom';
 
 import { URL_MOVIE } from 'utils/apiConfig';
 import { useFetch } from 'utils/hooks';
@@ -12,9 +12,14 @@ import MainWrap from 'components/Styled/MainWrap';
 
 const Movie = () => {
   const { id } = useParams();
+  const history = useHistory();
   const { data, loading } = useFetch(
     `${URL_MOVIE(id)}?api_key=ad4add0250df7c550404efa399902a8a`
   );
+
+  useEffect(() => {
+    if (data.success === false) history.push('/');
+  });
 
   return (
     <MainWrap>

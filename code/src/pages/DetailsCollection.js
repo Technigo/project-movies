@@ -1,5 +1,5 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, useHistory } from 'react-router-dom';
 
 import { URL_COLLECTION } from 'utils/apiConfig';
 import { useFetch } from 'utils/hooks';
@@ -15,9 +15,14 @@ import Poster from 'components/Poster';
 
 const Collection = () => {
   const { id } = useParams();
+  const history = useHistory();
   const { data, loading } = useFetch(
     `${URL_COLLECTION(id)}?api_key=ad4add0250df7c550404efa399902a8a`
   );
+
+  useEffect(() => {
+    if (data.success === false) history.push('/');
+  });
 
   return (
     <MainWrap>
@@ -27,7 +32,6 @@ const Collection = () => {
         <>
           <ReturnButton />
           <SectionDetails {...data} />
-          {/* list of movies in collection */}
           <List pageSection>
             {data.parts.map((movie) => (
               <RoutePosterLink key={movie.id} to={`/movies/${movie.id}`}>

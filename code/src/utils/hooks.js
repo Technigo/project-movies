@@ -11,7 +11,6 @@ function useFetch(url) {
         setData(json);
         setLoading(false);
       });
-    // .catch((err) => setErrors(err));
   }, [url]);
 
   useEffect(() => {
