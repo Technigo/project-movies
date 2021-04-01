@@ -19,6 +19,60 @@ code {
   box-sizing: border-box;
 }
 
+/* First Loading Page and loading spinner */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.loading-title {
+  font-size: 70px;
+  color: #09B5E0;
+  animation: title 2.2s ease-out;
+}
+
+@keyframes title {
+  from {
+    opacity: 0;
+    transform: scale(1.0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.5)
+  }
+}
+
+.loading-spinner {
+  margin-bottom: 200px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: solid 15px rgb(61, 61, 61);
+  border-top: 15px solid #09B5E0;
+  animation: loading 1.5s linear infinite;
+  opacity: 0;
+}
+
+.first-spinner {
+  margin: 0;
+  width: 100px;
+  height: 100px;
+  animation: loading 1.5s linear infinite 1s;
+}
+
+@keyframes loading {
+  from {
+    opacity: 1;
+    transform:rotate(0deg)}
+  to {
+    opacity: 1;
+    transform:rotate(360deg)}
+}
+
 /* Header with title and dropdown for sorting movies */
 .movie-time-title {
   margin: 0px;
@@ -54,28 +108,6 @@ code {
   outline: 2px solid #09B5E0;
 }
 
-/* Loading Spinner */
-.loading-container {
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-}
-
-.loading-spinner {
-  margin-top: 250px;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: solid 15px rgb(61, 61, 61);
-  border-top: 15px solid #09B5E0;
-  animation: loading 1.5s linear infinite;
-}
-
-@keyframes loading {
-  from {transform:rotate(0deg)}
-  to {transform:rotate(360deg)}
-}
-
 /* Main content with all the movies */
 .movielist-container {
   display: flex;
@@ -88,6 +120,28 @@ code {
   text-decoration: none;
   color: white;
   outline: none;
+}
+
+/* Playing with the cards */
+@keyframes card {
+  from {opacity: 0; transform: scale(0.1)}
+  to {opacity: 1; transform: scale(1)}
+}
+
+.movie-card:nth-of-type(1n) {
+  animation: card 1.2s ease-out;
+}
+
+.movie-card:nth-of-type(2n) {
+  animation: card 1.4s ease-out;
+}
+
+.movie-card:nth-of-type(3n) {
+  animation: card 1.7s ease-out;
+}
+
+.movie-card:nth-of-type(4n) {
+  animation: card 2s ease-out;
 }
 
 .movie-image {
@@ -109,7 +163,6 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
 }
 
 .movie-card:focus .movie-card-text {
@@ -125,11 +178,11 @@ code {
 }
 
 .release-title {
+  margin-top: 0;
   font-size: 18px;
   font-weight: 200;
   font-family: 'francois one';
 }
-
 
 /* Details page */
 .background-image {
@@ -208,26 +261,11 @@ code {
  margin-bottom: 10px;
 }
 
-.imdb {
-  background-color: #E2B616;
-  text-decoration: none;
-  color: black;
-  padding: 2px 6px;
-  margin: 0 0 0 15px;
-  font-weight: 800;
-  border-radius: 3px;
-  font-size: 20px;
-}
-
-.imdb:hover {
-  opacity: 0.7;
-}
-
 .rating {
   background-color:  white;
   text-decoration: none;
   color: black;
-  padding: 2px 6px;
+  padding: 1px 6px;
   font-weight: 800;
   border-radius: 3px;
   font-size: 20px;
@@ -237,6 +275,21 @@ code {
 .rating-total {
   font-size: 14px;
   font-weight: 200;
+}
+
+.imdb {
+  background-color: #E2B616;
+  text-decoration: none;
+  color: black;
+  padding: 1px 6px;
+  margin: 0 0 0 15px;
+  font-weight: 800;
+  border-radius: 3px;
+  font-size: 20px;
+}
+
+.imdb:hover {
+  opacity: 0.7;
 }
 
 .movie-genres {
@@ -266,6 +319,42 @@ code {
   margin-top: 20px;
   font-family: 'Open sans';
   margin-bottom: 2px;
+}
+
+/* Error page */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.error-title {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.error-text {
+  font-size: 50px;
+}
+
+.error-return {
+  margin: 0;
+}
+
+.error-return:hover {
+  color: #09B5E0;
+}
+
+.error-return .fas {
+  font-size: 50px;
+}
+
+.error-return .return-text {
+  font-size: 30px;
 }
 
 /* Footer */
@@ -306,8 +395,13 @@ code {
 
 /* Media queries for phones */
 @media (max-width: 767px) {
-  .loading-spinner {
-    margin-top: 150px;
+  .loading-title {
+    font-size: 40px;
+  }
+
+  .first-spinner {
+    width: 70px;
+    height: 70px;
   }
 
   .movie-card {
@@ -332,6 +426,19 @@ code {
 
   .genre, .runtime {
     font-size: 15px;
+  }
+
+  .error-text {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .error-return .fas {
+    font-size: 40px;
+  }
+
+  .error-return .return-text {
+    font-size: 24px;
   }
 
   .footer {
@@ -359,6 +466,5 @@ code {
   .overview {
     font-size: 14px;
   }
-
 }
 
