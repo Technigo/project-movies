@@ -32,7 +32,6 @@ export const MovieDetails = () => {
           </div>
         </>
       )}
-
     </>
   )
 }
