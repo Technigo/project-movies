@@ -5,33 +5,24 @@ import { MovieThumb } from "components/MovieThumb"
 
 
 export const MovieList = () => {    
-    const [movies, setMovies] = useState([])
-
-//poster_path, original_title, release_date
-
+  const [movies, setMovies] = useState([])
     useEffect(() => {
-        fetch (MOVIES_URL)
-        .then(res => res.json())
-        .then(json => setMovies(json.results))  
-        .catch(err => console.error(err))   
+      fetch (MOVIES_URL)
+      .then(res => res.json())
+      .then(json => setMovies(json.results))  
+      .catch(err => console.error(err))   
     }, [])
-    
+
     return ( 
-        <>
-            <section className="movie-list" > 
-                {movies.map((movie)=> (
-                    <div key= {movie.id}>
-                        <MovieThumb {...movie} />
-                    </div>
-                 ))}
-            </section>
-        </> 
-    )
-        
+      <>
+        <section className="movie-list"> 
+          {movies.map((movie)=> (
+            <div key= {movie.id}>
+              <MovieThumb {...movie} />
+            </div>
+          ))}
+        </section>
+      </> 
+    )       
 }
-
-
-        
-
-    
 

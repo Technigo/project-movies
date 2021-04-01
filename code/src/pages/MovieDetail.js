@@ -18,7 +18,13 @@ export const MovieDetail = () => {
   }, [MOVIE_DETAIL_URL])
     
     return (
-        <section className = "movie-detail">
+      <section className="movie-details-page" style={{backgroundImage:`url(https://image.tmdb.org/t/p/w1280/${movieDetail.backdrop_path})`}}> 
+        <Link to={`/home`}>
+          <div className="back-arrow">
+            <img className="back-arrow-icon" src={arrow} alt="back-arrow"/> 
+            <p className="back-arrow-text">Movies</p>
+          </div>
+        </Link> 
           <div className="movie-details-container">
             <h2 className="movie-title">{movieDetail.original_title}</h2>
             <p className="movie-title">{movieDetail.vote_average}/10</p>
