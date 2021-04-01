@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 import { MOVIE_URL, POSTER_URL, BACKDROP_URL } from '../utils/urls'
 import Loader from '../components/Loader'
+import HomeButton from "../components/HomeButton"
 
 
 const MovieDetails = () => {
@@ -30,16 +31,14 @@ const MovieDetails = () => {
 
     return (
         <div className="movie-details-container" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(${BACKDROP_URL(movieDetails.backdrop_path)})` }}>
-            <Link to="/" className="back-container">
-                <img src="/icons/arrow-left-circle.svg" alt="arrow-icon" className="back-icon" />
-                <span>Movies</span>
-            </Link>
+            <HomeButton />
             <div className="movie-details-summary">
                 <img className="movie-details-poster" src={POSTER_URL(movieDetails.poster_path)} alt={movieDetails.title} />
                 <div className="movie-details">
                     <h2>{movieDetails.title}</h2>
                     <span>{movieDetails.vote_average}/10</span>
                     <p>{movieDetails.overview}</p>
+                    <Link to={`/cast/${movieDetails.id}`}>See the cast</Link>
                 </div>
             </div>
         </div >
