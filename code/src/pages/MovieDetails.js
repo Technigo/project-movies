@@ -3,9 +3,7 @@ import { useParams } from "react-router-dom";
 
 import "../index.css";
 
-//title, rating, overview, img, backdrop
 import BackButton from "../components/BackButton";
-// import { DETAIL_API_URL } from 'reusable/urls'
 
 export const MovieDetails = () => {
   const { movieId } = useParams();
@@ -50,5 +48,5 @@ export const MovieDetails = () => {
           </div>
         ))}
     </section>
-  );
-};
+  )
+}
