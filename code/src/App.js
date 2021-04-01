@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import { MovieList } from './components/MovieList'
 import { MovieDetails } from './pages/MovieDetails'
-
+import { PageNotFound } from './components/PageNotFound'
 
 export const App = () => {
   
@@ -16,6 +16,9 @@ export const App = () => {
           </Route>
           <Route path='/movie/:id' exact>
             <MovieDetails />
+          </Route>
+          <Route path="/404" exact>
+            <PageNotFound />
           </Route>
         </Switch>
       </BrowserRouter>

@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { useParams, Link, useHistory } from "react-router-dom"
+import { useParams, Link, Redirect } from "react-router-dom"
 
 import { FaChevronCircleLeft } from 'react-icons/fa';
 
 
 import './MovieDetails.css'
-
-import { PageNotFound } from '../components/PageNotFound'
 
 
 export const MovieDetails = () => {
@@ -22,14 +20,14 @@ export const MovieDetails = () => {
         fetch(MOVIE_URL)
             .then((res) => res.json())
             .then((json) => {
-                (json.success === false) ? setPageNotFound(true) : setMovies(json)
+                json.statusCode === 34 ? setPageNotFound(true) : setMovies(json) // Status code 34 is 404 - Not found in the api response
             })
     }, [id])
 
 
     return (
         <>
-            {pageNotFound && <PageNotFound/>}
+            {pageNotFound && <Redirect to="/404" />}
             {movies && (
                <div >
                 <div className='background-image' style={{
