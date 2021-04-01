@@ -3,11 +3,12 @@ import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 import { MOVIE_URL, POSTER_URL, BACKDROP_URL } from '../utils/urls'
+import Loader from '../components/Loader'
 
 
 const MovieDetails = () => {
     const { id } = useParams()
-    const [movieDetails, setMovieDetails] = useState([])
+    const [movieDetails, setMovieDetails] = useState()
 
     useEffect(() => {
         fetch(MOVIE_URL(id))
@@ -15,6 +16,9 @@ const MovieDetails = () => {
             .then(data => setMovieDetails(data))
     }, [id])
 
+    if (movieDetails === undefined) {
+        return (<Loader />)
+    }
 
     return (
         <div className="movie-details-container" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(${BACKDROP_URL(movieDetails.backdrop_path)})` }}>

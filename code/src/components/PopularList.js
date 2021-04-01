@@ -2,17 +2,20 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { API_URL, POSTER_URL } from '../utils/urls'
+import Loader from './Loader'
 
 const PopularList = () => {
-    const [popularMovies, setPopularMovies] = useState([])
+    const [popularMovies, setPopularMovies] = useState()
 
     useEffect(() => {
-        console.log(API_URL)
         fetch(API_URL)
             .then(res => res.json())
             .then(data => setPopularMovies(data.results))
     }, [])
 
+    if (popularMovies === undefined) {
+        return (<Loader />)
+    }
 
     return (
         <section className="popular-list">
