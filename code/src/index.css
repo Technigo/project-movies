@@ -12,6 +12,8 @@ code {
     monospace;
 }
 
+/*********MOVIE LIST***********/
+
 .movies-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -43,17 +45,41 @@ code {
   cursor: pointer;
 }
 
-.backdrop-container {
-  width: 100vw;
-  width: 100vh;
-  position: absolute;
-  background-size: cover;
-}
+/*********MOVIE DETAILS***********/
 
-.poster-image-container {
+.backdrop-container {
+  min-height: 100vh;
+  background-size: cover;
   position: relative;
 }
 
-.poster-image {
-  border: 3px solid rgb(165, 32, 32);
+.movie-summary {
+  display: flex;
+  position: absolute;
+  align-items: flex-end;
+  padding: 50px;
+  color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
+
+.poster-image-container img {
+  border: 5px solid #fff;
+  width: 342px;
+  
+}
+
+.summary-text {
+  padding-left: 20px;
+  width: 400px;
+}
+
+.movie-rating {
+  color: rgb(170, 8, 8);
+  font-size: 17px;
+  margin-left: 10px;
+  
+}
+
