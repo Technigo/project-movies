@@ -17,19 +17,32 @@ export const MovieDetail = () => {
     })
   }, [MOVIE_DETAIL_URL])
     
+
+  // I had issues to bring back the background image for the ipad and the desktop
+  // with it in within the image tab so I put it back inside the section tag. 
+  // I actually think the dark filter for the description works fine so it is
+  // easy to read and we keep the design's uniformoty for all views :) . 
+
+  //LEFT TO DO:
+  // Styling for movieDetail for ipad and desktop
+  // Fixing the titles in the home page for each movie-thumb. I actually only notice japanese characters overlapping
+  // Removing the color blue from the movie titles  in home page
+  
     return (
-      <section className="movie-details-page">
-      <img style={{backgroundImage:`url(https://image.tmdb.org/t/p/w1280/${movieDetail.backdrop_path})`}}/> 
-        <Link to={`/home`}>
-          <div className="back-arrow">
+      <section className="movie-details-page" style={{backgroundImage:`url(https://image.tmdb.org/t/p/w1280/${movieDetail.backdrop_path})`}}>
+      {/* <img style={{backgroundImage:`url(https://image.tmdb.org/t/p/w1280/${movieDetail.backdrop_path})`}}/>  */}
+        <Link to={`/home`} style={{ textDecoration: 'none' }}>
+          <div className="back-arrow-wrapper">
             <img className="back-arrow-icon" src={arrow} alt="back-arrow"/> 
             <p className="back-arrow-text">Movies</p>
           </div>
         </Link> 
-          <div className="movie-details-container">
-            <h2 className="movie-title">{movieDetail.original_title}</h2>
-            <p className="movie-title">{movieDetail.vote_average}/10</p>
-            <p className="movie-title">{movieDetail.overview}</p>
+          <div className="movie-details-card">
+            <div className="movie-details-text"> 
+              <h2 className="movie-title">{movieDetail.original_title}</h2>
+              <p className="movie-vote">{movieDetail.vote_average}/10</p>
+              <p className="movie-overview">{movieDetail.overview}</p>
+            </div> 
             <img className="movie-poster" src={`https://image.tmdb.org/t/p/w300${movieDetail.poster_path}`} alt="movie poster"/>
           </div>
       </section>

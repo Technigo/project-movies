@@ -14,15 +14,15 @@ export const MovieList = () => {
     }, [])
 
     return ( 
-      <>
+      
         <section className="movie-list-container"> 
           {movies.map((movie)=> (
-            <div key= {movie.id}>
+            <div key= {movie.id} className="movie-thumb">
               <MovieThumb {...movie} />
             </div>
           ))}
         </section>
-      </> 
+      
     )       
 }
 
