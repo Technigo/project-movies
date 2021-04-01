@@ -4,24 +4,16 @@ import { Link } from 'react-router-dom'
 
 import MovieElement from '../components/MovieElement'
 
-const MovieList = () => {
+const MovieList = ({filterType}) => {
   const [movieList, setMovieList] = useState([])
 
   useEffect (() => {
-   /* fetchMovieList() */
-   fetch(API_URL)
+   fetch(API_URL(filterType))
       .then(response => response.json())
       .then(data => setMovieList(data.results))
       .catch (err => console.dirr(err))
-  }, [])
+  }, [filterType])
 
- /*  const fetchMovieList = () => {
-    fetch(API_URL)
-      .then(response => response.json())
-      .then(data => setMovieList(data.results))
-      .catch (err => console.dirr(err))
-     } */
-    
     return (
      <section className="movie-container">
         {movieList.map(movie =>
