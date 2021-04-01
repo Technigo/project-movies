@@ -7,7 +7,7 @@ import BackButton from "../components/BackButton";
 
 export const MovieDetails = () => {
   const { movieId } = useParams();
-  const [movieDetails, setMovieDetails] = useState();
+  const [movieDetails, setMovieDetails] = useState([]);
 
   useEffect(() => {
     fetch(
@@ -23,7 +23,7 @@ export const MovieDetails = () => {
     <section className="movie-details-page">
       <BackButton />
       {/* conditional rendering */}
-      {movieDetails &&
+      {movieDetails.length !== 0 &&
         movieDetails.map((details) => (
           <div key={details.id} className="container">
             <img
