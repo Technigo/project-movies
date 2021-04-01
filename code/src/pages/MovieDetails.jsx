@@ -25,7 +25,6 @@ export const MovieDetails = () => {
 
     }, [MOVIE_URL])
 
-    // https://image.tmdb.org/t/p/w342/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg
 
     return (
         <div >
