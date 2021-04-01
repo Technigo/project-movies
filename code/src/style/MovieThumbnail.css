@@ -1,51 +1,49 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 .movie-thumbnail-container {
-    width: 25%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
+  width: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
 }
 
 .movie-link {
-    position: relative;
-    width: 100%;
-    color: #fff;
-    text-decoration: none;
+  position: relative;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
 }
-
 
 /*fix this name*/
 
 .movie-poster-image {
-    width: 100%;
+  width: 100%;
 }
 
-.movie-thumbnail-container .movie-text-container{
-    position: absolute;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6);
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    display: none;
-    padding: 20px;
-
+.movie-thumbnail-container .movie-text-container {
+  position: absolute;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  padding: 20px;
 }
 .movie-thumbnail-container:hover .movie-text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;       
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .movie-text-container h1 {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .movie-text-container p {
-    font-size: 16px;
+  font-size: 16px;
 }
