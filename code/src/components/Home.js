@@ -26,9 +26,9 @@ const [ movieList, setMovieList ] = useState([])
             {movieList.map(movie => {  
                 return (
 
-                    <MovieElement 
-                    movie = {movie}
-                    key = {movie.id} /> 
+                    <MovieElement                     
+                    {...movie}
+                     /> 
                 )
             })}
         </>
