@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
@@ -12,6 +13,124 @@ code {
     monospace;
 }
 
-.bg-img {
-  height: 100vh;
+/* MOVIE LIST */
+
+.movie-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  word-wrap: break-word;
 }
+
+.list-title {
+font-size: 2em;
+font-weight: bold;
+}
+
+.list-p {
+
+}
+
+/* MOVIE CARD */
+
+.movie-card-overlay {
+  position: relative;
+}
+
+.text-overlay {
+  position: absolute;
+  color:#fff;
+  background: rgba(0, 0, 0, 0.45);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.4s ease;
+  bottom: 0;
+  top: 0;
+  left:0;
+  right:0;
+
+}
+
+.text-overlay h1 {
+  position: absolute;
+  bottom: 50px;
+  color:#fff;
+  font-size: 20px;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.text-overlay p {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.text-overlay:hover {
+  opacity: 1;
+}
+
+/* MOVIE PAGE */
+
+.movie-bg-img {
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  background-size: cover;
+}
+
+.movie-page-box {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  padding: 50px;
+
+}
+
+.movie-page-poster {
+  border: solid #fff 3px;
+}
+
+.movie-page-text {
+  color: #fff;
+  max-width: 400px;
+  margin-left: 20px;
+
+}
+
+/* BUTTON BACK */
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  position: absolute;
+  top: 40px;
+  left: 40px;  
+  padding: 8px;
+  
+
+}
+
+.arrow-back {
+  width: 40px;
+  height: 40px;
+}
+
+.button-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 2px;
+}
+
+.button-text:hover {
+  margin-left: 7px;
+  transition: 0.3s ease-in-out;
+}
+
