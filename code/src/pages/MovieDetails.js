@@ -7,7 +7,7 @@ import BackButton from "../components/BackButton";
 
 export const MovieDetails = () => {
   const { movieId } = useParams();
-  const [movieDetails, setMovieDetails] = useState([]);
+  const [movieDetails, setMovieDetails] = useState();
 
   useEffect(() => {
     fetch(
