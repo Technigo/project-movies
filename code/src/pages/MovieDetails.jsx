@@ -18,7 +18,11 @@ export const MovieDetails = () => {
         fetch(MOVIE_URL)
             .then((res) => res.json())
             .then((json) => {
-                (json.success === false) ? history.push('/') : setMovies(json)
+                if (json.success === false) {
+                    history.push('/')
+                } else {
+                    setMovies(json)
+                }
             })
             .catch((error) => console.err(error))
     }, [MOVIE_URL, history])
