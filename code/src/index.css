@@ -45,18 +45,21 @@ code {
 .movie-title {
   font-size: 30px;
   margin: 0;
+  color: white;
 }
 
 .movie-thumb-image {
   width: 100%;
 }
 
-.movie-thumb-image:hover {
-  opacity: 0.3;
-}
 
 a {
   width: 25%;
+  text-decoration: none;
+}
+
+.movie-thumb-container:hover img {
+  opacity: 0.3;
 }
 
 .movie-detail-image {
@@ -79,6 +82,8 @@ a {
   height: 100vh;
   background-size: cover;
   box-sizing: border-box;
+  flex-direction: column;
+  padding-top: 0;
 }
 
 .title-headings {
@@ -98,4 +103,48 @@ a {
   justify-content: flex-end;
   flex-direction: column;
   padding: 20px;
+}
+
+.movie-released {
+  color: white;
+}
+
+.back-button {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  width: 50px;
+  margin-bottom: 50px;
+}
+
+.back-button:hover {
+ cursor: pointer;
+ margin-right: 8px; 
+}
+
+.back-button img {
+  align-self: center;
+  margin-right: 5px;
+}
+
+.back-button img:hover {
+  transition: margin-right .2s ease-in-out; 
+}
+
+.detail-wrapper {
+  display: flex;
+}
+
+#backgroundImage {
+  background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 100%);
+}
+
+@media (max-width: 1280px) {
+  .back-button {
+    margin-bottom: 0;
+  }
 }
