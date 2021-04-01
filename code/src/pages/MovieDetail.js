@@ -13,7 +13,7 @@ const MovieDetail = () => {
     const [loading, setLoading] = useState(true)
     
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=2e6a7b75ad4d088fae1f52620044bef7&language=en-US`)
+        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=2365aea36d60ef1f206bd1bdf23fd999&language=en-US`)
         .then((res) => {
             setStatusCode(res.status)
 
@@ -26,9 +26,9 @@ const MovieDetail = () => {
         )
         .then((json) => setDetails(json))
     },[])
-
+// || id.length > 19
     useEffect(() => {
-        if (statusCode !== 200 || id.length > 19) {
+        if (statusCode !== 200) {
             console.log("IS ERROR")
             history.push("/error")
             console.log(loading)

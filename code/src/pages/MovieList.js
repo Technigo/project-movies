@@ -18,7 +18,7 @@ const MovieList = () => {
     // Latest movies => https://api.themoviedb.org/3/movie/latest?api_key=2e6a7b75ad4d088fae1f52620044bef7&language=en-US
     // Popular movies => https://api.themoviedb.org/3/movie/popular?api_key=2e6a7b75ad4d088fae1f52620044bef7&language=en-US&page=1
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/${filter}?api_key=2365aea36d60ef1f206bd1bdf23fd999&language=en-US&page=1`)
+        fetch(`https://api.themoviedb.org/3/movie/${filter}?api_key=2365aea36d60ef1f206bd1bdf23fd999`)
         .then((res) => res.json())
         .then((json) => setMovies(json.results))
         .catch((err) => console.error(err))

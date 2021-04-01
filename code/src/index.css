@@ -12,6 +12,22 @@ code {
     monospace;
 }
 
+/*------------- Landing/sorting page -------------*/
+
+.sort-by {
+  color: #ffffff;
+  background-color: #000000;
+  padding: 10px 20px 15px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.sort-by select {
+  margin-left: 15px;
+ 
+}
+
+/*------------- Details page -------------*/
 .details-wrapper {
   color: #ffffff;
   height: 100vh;
