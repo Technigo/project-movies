@@ -28,7 +28,7 @@ useEffect(() => {
             />
             <div className="poster-container">
                 <img 
-                className="movie-poster-image"
+                className="poster-image"
                 src={`https://image.tmdb.org/t/p/original/${details.poster_path}`} 
                 alt={details.title} />
                 <div>

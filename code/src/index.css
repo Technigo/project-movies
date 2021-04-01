@@ -16,5 +16,4 @@ code {
 .movie-list-container {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-}
+  }
