@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link } from "react-router-dom"
 
 import './MovieCard.css'
 
-export const MovieCard = ({ title, release_date, poster_path, id}) => {
+
+export const MovieCard = ({ title, release_date, poster_path}) => {
     return (
             <> 
                 <img className ='card-image' src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt=""/>
