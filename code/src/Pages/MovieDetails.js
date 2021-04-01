@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
-import { BackButton } from '../components/BackButton';
+
+import { BackButton } from '../components/BackButton.js';
 import '../style/MovieDetails.css';
 import { API_KEY } from 'reuseables/APIs';
 
@@ -23,33 +24,26 @@ useEffect(() => {
 
     return (
         <article className="movie-details-container">
-            <Link to="/" className="back-button">
-                <BackButton />
+            <Link to="/" className="back-link">
+                <BackButton /> 
             </Link>
-                {/* <div
-                className="backdrop-image"
-                style={{backgroundImage: ` linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), 
-                url(https://image.tmdb.org/t/p/original/${details.backdrop_path})`}} 
-                alt={details.title}
-                > */}
-
             <img 
-            className="backdrop-image"
-            src={`https://image.tmdb.org/t/p/original/${details.backdrop_path}`} 
-            alt={details.title} 
-            />
-                <div className="poster-container">
-                    <img 
+                className="backdrop-image"
+                src={`https://image.tmdb.org/t/p/original/${details.backdrop_path}`} 
+                alt={details.title} 
+                />
+            <div className="poster-container">
+                <img 
                     className="poster-image"
                     src={`https://image.tmdb.org/t/p/original/${details.poster_path}`} 
                     alt={details.title} />
-                    <div className="movie-infomation-container">
-                        <h1>
-                            {details.title} 
+                <div className="movie-infomation-container">
+                    <h1>
+                        {details.title} 
                         <span className="movie-rating">
                             {details.vote_average}/10
                         </span>
-                        </h1>
+                    </h1>
                         <p>{details.overview}</p>
                     </div>
                 </div>            

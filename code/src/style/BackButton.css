@@ -1,0 +1,33 @@
+.button-container {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;   
+    align-items: flex-end;
+}
+
+
+.icon-svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    transition: 0.4s;
+}
+
+.button-container p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;   
+    transition-property: margin-left;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0;
+}
+
+
+.button-container:hover .icon-svg {
+    transform: rotate(180deg);
+}
+
+.button-container:hover p {
+    margin-left: 6px;
+}
