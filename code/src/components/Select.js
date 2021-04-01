@@ -1,22 +1,22 @@
 import React, { useState } from 'react'
 
-const SelectMovie = ({onFilterChange}) => {
+const SelectMovie = ({onFilterChange, popularity, TopRated, upcomingMovies, filter}) => {
     //const [select, setSelect] = useState("popular")
-
+    
     return(
+        
         <section>
             <label>
-            <p id="size">Type: {movieSelected} </p> 
+            <p id="size">Type:  </p> 
 
           <select 
-            onChange={onFilterChange} 
-            value={sizeSelected}
+            onChange={e => onFilterChange(e)} 
+            value={filter}
             name="movie"
           >
-            <option disabled value="">Select Size:</option>
-            <option value="upcoming">Upcoming</option>
-            <option value="popular">Popular</option>
-            <option value="latest">Latest</option>
+            <option value={popularity}>Popular</option>
+            <option value={upcomingMovies}>Upcoming</option>
+            <option value={TopRated}>Top Rated</option>
           </select>
       </label>
         </section>
