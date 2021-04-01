@@ -1,0 +1,29 @@
+@import "./fonts.css";
+@import "./variables.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--primaryFont);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  line-height: 26px;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}

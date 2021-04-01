@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-export const App = () => {
+import MoviesList from "./pages/MoviesList/MoviesList.component";
+import MoviesDetails from "./pages/MovieDetails/MovieDetails.component";
+
+function App() {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  )
+    <>
+      <Switch>
+        <Route path="/" component={MoviesList} exact />
+        <Route path="/movie/:id" component={MoviesDetails} exact />
+      </Switch>
+    </>
+  );
 }
+
+export default App;
