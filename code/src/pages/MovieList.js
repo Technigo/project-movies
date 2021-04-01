@@ -15,7 +15,7 @@ export const MovieList = () => {
 
     return ( 
       <>
-        <section className="movie-list"> 
+        <section className="movie-list-container"> 
           {movies.map((movie)=> (
             <div key= {movie.id}>
               <MovieThumb {...movie} />
