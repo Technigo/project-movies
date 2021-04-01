@@ -18,7 +18,8 @@ export const MovieDetail = () => {
   }, [MOVIE_DETAIL_URL])
     
     return (
-      <section className="movie-details-page" style={{backgroundImage:`url(https://image.tmdb.org/t/p/w1280/${movieDetail.backdrop_path})`}}> 
+      <section className="movie-details-page">
+      <img style={{backgroundImage:`url(https://image.tmdb.org/t/p/w1280/${movieDetail.backdrop_path})`}}/> 
         <Link to={`/home`}>
           <div className="back-arrow">
             <img className="back-arrow-icon" src={arrow} alt="back-arrow"/> 
@@ -31,6 +32,6 @@ export const MovieDetail = () => {
             <p className="movie-title">{movieDetail.overview}</p>
             <img className="movie-poster" src={`https://image.tmdb.org/t/p/w300${movieDetail.poster_path}`} alt="movie poster"/>
           </div>
-        </section>
+      </section>
     )
 }

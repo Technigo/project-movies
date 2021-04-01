@@ -4,12 +4,60 @@ body {
 	margin: 0;
 	background-color: black;
 	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
 }
 
 .movie-list-container {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+}
+
+.movie-thumb {
+	width: 100%;
+}
+
+.movie-thumb:hover {
+	opacity: 0.5;
+}
+
+.thumb-img {
+	width: 100%;
+	position: relative;
+}
+
+.movie-thumb-text {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 230px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Movie Details */
+
+.movie-details-page {
+	margin: 20px;
+}
+
+.movie-details-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	color: white;
+}
+
+.movie-poster {
+	width: 200px;
+	border: 2px solid white;
+}
+
+.background-img {
+	display: none;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
