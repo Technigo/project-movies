@@ -16,10 +16,6 @@ export const MoviePage = () => {
    .catch((error) => console.log('Request failed', error))
  }, [id])
 
-
- console.log(MOVIE_DETAILS_URL(id))
-
-
  return (
   <>
     <div className='movie-bg-img'
@@ -33,8 +29,6 @@ export const MoviePage = () => {
           </div>
         </div>
     </div>
-   
-
   </>
  )
 }

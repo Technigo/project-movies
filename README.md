@@ -1,15 +1,20 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+In this week's project, we will be building our first multi-page React application.
+The goal for this week is to use [themoviedb.org]s API to fetch a list of movies, display them on a page, and then link to a movie detail page when you click on the movie.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+1. We started out studying the given design and functionality and wrote down the detalils and elements wee needed to display the correct data
+2. We went on creating the MovieList component that is responsible for showing the gallery of movies.
+3. We created resuables out the needed links in the project and wrote the first data fetch. 
+4. Moved on to the second fetch, wrote it in the right way but had some issues with constructing our second api as an function which would accept an movie id. Got helt both from the group and one of the code coaches and got this sorted out.
+5. from here on it was pretty much repeating what we had done in the first steps and we got all neccessary data.
+6. Moved on to styles, and implemented the given design with some tweaks of our own (yay Yennie! :)
+
 
 ## View it live
 
 https://sharp-snyder-c8367c.netlify.app/
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+

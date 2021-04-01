@@ -6,10 +6,8 @@ import { MoviePage } from './components/MoviePage'
 
 export const App = () => {
   return (
-    
-    
+
       <BrowserRouter>
-        
           <Switch>
             <Route exact path="/">
               <MovieList />
@@ -18,10 +16,7 @@ export const App = () => {
                <MoviePage />
             </Route>
            </Switch>
-        
       </BrowserRouter>
-       
-    
   )
 }
 

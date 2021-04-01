@@ -23,8 +23,6 @@ code {
   word-wrap: break-word;
 }
 
-
-
 /* MOVIE CARD */
 
 .movie-card-overlay {
@@ -43,7 +41,6 @@ code {
   top: 0;
   left:0;
   right:0;
-
 }
 
 .text-overlay h1 {
@@ -83,7 +80,6 @@ code {
   align-items: flex-end;
   width: 100%;
   padding: 50px;
-
 }
 
 .movie-page-poster {
@@ -97,10 +93,10 @@ code {
 }
 
 .rating {
-font-size: 17px;
-color: #FEB12F;
-font-weight: 400;
-margin-left: 10px;
+  font-size: 17px;
+  color: #FEB12F;
+  font-weight: 400;
+  margin-left: 10px;
 }
 
 /* BUTTON BACK */
@@ -113,8 +109,6 @@ margin-left: 10px;
   top: 40px;
   left: 40px;  
   padding: 8px;
-  
-
 }
 
 .arrow-back {

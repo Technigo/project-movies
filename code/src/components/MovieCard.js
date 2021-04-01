@@ -8,7 +8,8 @@ export const  MovieCard = ({id, poster_path, title, release_date}) => {
         <section className='movie-card-container'>
             <Link to={`/movies/${id}`}>
                 <div className='movie-card-overlay'>
-                    <img className='movie-card-image'src={`https://image.tmdb.org/t/p/w342${poster_path}`}
+                    <img className='movie-card-image'
+                        src={`https://image.tmdb.org/t/p/w342${poster_path}`}
                         alt={`${`title`}`}/>
                     <div className='text-overlay'>
                         <h1 className='list-title'>{title}</h1>
@@ -17,7 +18,6 @@ export const  MovieCard = ({id, poster_path, title, release_date}) => {
                 </div>
             </Link>
         </section>
-
     )
 }
  

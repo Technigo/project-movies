@@ -1,6 +1,5 @@
 import React, {useState, useEffect } from 'react'
 
-
 import { MovieCard } from './MovieCard'
 
 import { MOVIE_LIST_URL } from '../reusable/Urls.js'
@@ -13,8 +12,6 @@ export const MovieList = () => {
         .then(res => res.json())
         .then(json => setMovies(json.results))
   },[])
-
-
 
   return (
 
