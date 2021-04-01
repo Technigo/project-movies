@@ -1,22 +1,21 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
 
 import { FaChevronCircleLeft } from 'react-icons/fa';
 
 import './PageNotFound.css'
 
 export const PageNotFound = () => {
-    return (
+  return (
     <>
-        <Link className="back-arrow" to={`/`}>
-            <FaChevronCircleLeft/>
-            <span className="icon-text">Main List</span>
-        </Link>
-        <div >
-            <h1 className='page-not-found'>PAGE NOT FOUND</h1>
-        </div>
+      <Link className="back-arrow" to="/">
+        <FaChevronCircleLeft />
+        <span className="icon-text">Main List</span>
+      </Link>
+      <div>
+        <h1 className="page-not-found">PAGE NOT FOUND</h1>
+      </div>
     </>
-    )
+  )
 }
-
 

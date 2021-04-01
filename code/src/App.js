@@ -6,15 +6,14 @@ import { MovieDetails } from './pages/MovieDetails'
 import { PageNotFound } from './components/PageNotFound'
 
 export const App = () => {
-  
   return (
     <div>
       <BrowserRouter>
-        <Switch> 
-          <Route path='/' exact>
+        <Switch>
+          <Route path="/" exact>
             <MovieList />
           </Route>
-          <Route path='/movie/:id' exact>
+          <Route path="/movie/:id" exact>
             <MovieDetails />
           </Route>
           <Route path="/404" exact>
@@ -22,7 +21,7 @@ export const App = () => {
           </Route>
         </Switch>
       </BrowserRouter>
-      
+
     </div>
   )
 }
