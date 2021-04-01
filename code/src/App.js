@@ -1,8 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import { MovieList } from './components/MovieList'
-import { MovieDetails } from './components/MovieDetails'
+import { MovieList } from './pages/MovieList'
+import { MovieDetails } from './pages/MovieDetails'
+// import { BackButton } from './components/BackButton'
 
 
 

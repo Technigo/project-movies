@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
+import { BackButton } from '../components/BackButton'
+
 
 
 export const MovieDetails = () => {
@@ -22,7 +24,10 @@ useEffect(() => {
  }
  
   return (
+  <>
+    <BackButton />
     <section>
+     
       <div className="backdrop-container" style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`}}>
       </div>
       <div className="movie-summary">
@@ -33,9 +38,9 @@ useEffect(() => {
             <h1>{movie.title}<span className="movie-rating">{movie.vote_average}/10</span></h1>
             <p>{movie.overview}</p>
           </div>
-      </div>
-      
+      </div>      
     </section>
+  </>
   )
 }
 

@@ -15,3 +15,4 @@ Every project should be deployed somewhere. Be sure to include the link to the d
 - content is too wide
 - move all urls to separate file
 - move files between compontents/and pages
+- transition on button slow back

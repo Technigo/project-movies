@@ -83,3 +83,31 @@ code {
   
 }
 
+/*********BUTTONS***********/
+
+.backbutton-link {
+  text-decoration: none;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  left: 50px;
+  top: 50px;
+  font-weight: 700;
+ 
+}
+
+svg {
+  width: 30px;
+}
+
+.backbutton-link-container {
+  
+  align-items: center;
+  display: inline-flex;
+  
+}
+
+.backbutton-link:hover p {
+  transform: translateX(5px);
+  transition: all 0.5s linear;
+}
