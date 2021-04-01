@@ -11,6 +11,25 @@ body {
 }
 
 /*** FIRST PAGE STYLING ***/
+.filter-btn-container {
+  height: 50px;
+}
+
+.filter-btn {
+  margin: 10px;
+  padding: 8px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px; 
+  font-weight: bold;
+  transition: 0.1s ease-in;
+}
+
+.filter-btn:hover {
+  background-color: red;
+  color: #fff;
+}
+
 .movie-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -78,6 +97,16 @@ body {
   top: 50px;
 }
 
+.other-page-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  position: absolute;
+  display: inline-flex;
+  left: 50px;
+  top: 100px;
+}
+
 .link-title:hover {
   animation: move 0.5s forwards 1;
   position: relative;
@@ -88,22 +117,8 @@ body {
   to {left: 10px;}
 } 
 
-.detail-container {
-  width: 100%;
-  position: absolute;
-  bottom: 40px;
-  padding: 0 50px;
-}
-
 .poster-img {
   border: 5px solid #fff;
-}
-
-.detail-content {
-  width: 28%;
-  position: absolute;
-  bottom: 40px;
-  left: 30%;
 }
 
 .header-rating {
@@ -116,6 +131,7 @@ body {
   font-weight: 300;
   margin-left: 15px;
 }
+
 .error{
   margin-top: 100px;
   height: 100%;
@@ -148,12 +164,43 @@ body {
   width: 100%;
 }
 
+/*** Other movies ***/
+.other-movies-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.other-movies-title {
+  border-bottom: 2px solid red;
+}
+
 /*** RESPONSIVE ***/
  @media (min-width: 768px) {
   .movie-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  
+  .detail-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px;
+  }
+
+  .detail-content {
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+  }
+ 
 }
 
 @media (min-width: 1200px) {
@@ -161,4 +208,9 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+
+  .detail-container, .detail-content {
+    margin-top: 100px;
+  }
+
 } 
