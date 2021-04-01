@@ -14,4 +14,4 @@ If we had more time we would added more data.
 
 ## View it live
 
-
+View it live at Netlify: https://peaceful-sinoussi-3ac3ce.netlify.app/movies/791373
