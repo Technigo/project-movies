@@ -4,7 +4,6 @@ import { useParams, useHistory } from 'react-router-dom'
 import Loader from "react-loader-spinner";
 
 import { MOVIE_URL } from '../reusables/urls'
-import BackButton from "../components/BackButton";
 
 const MovieInfo = () => {
   const { id } = useParams()
@@ -57,7 +56,6 @@ const MovieInfo = () => {
             className="info-container"
             style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 100%), url(${`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`})` }}
           >
-            {/*<BackButton />*/}
             <div className="summary">
               <img className="info-poster" src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt={movie.title} />
               <div className="details">

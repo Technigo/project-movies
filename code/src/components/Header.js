@@ -2,12 +2,16 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 
 import BackButton from './BackButton'
+import Selector from './Selector'
 
-const Header = () => {
+const Header = ({ movieListType, setMovieListType }) => {
     return (
-        <header>
+        <header className="header">
             <Route path="/" exact> 
-                <div>selector</div>
+                <Selector
+                    movieListType={movieListType}
+                    setMovieListType={setMovieListType}
+                />
             </Route>
             <Route path="/movies">
                 <div>
