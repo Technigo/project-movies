@@ -23,14 +23,7 @@ code {
   word-wrap: break-word;
 }
 
-.list-title {
-font-size: 2em;
-font-weight: bold;
-}
 
-.list-p {
-
-}
 
 /* MOVIE CARD */
 
@@ -57,9 +50,10 @@ font-weight: bold;
   position: absolute;
   bottom: 50px;
   color:#fff;
-  font-size: 20px;
+  font-size: 2em;
+  font-weight: bold;
   text-decoration: none;
-  margin-left: 15px;
+  margin:20px 0 10px 15px;
 }
 
 .text-overlay p {
@@ -68,7 +62,7 @@ font-weight: bold;
   color: #fff;
   font-size: 15px;
   text-decoration: none;
-  margin-left: 15px;
+  margin: 5px 0 20px 15px
 }
 
 .text-overlay:hover {
@@ -98,9 +92,15 @@ font-weight: bold;
 
 .movie-page-text {
   color: #fff;
-  max-width: 400px;
+  max-width: 450px;
   margin-left: 20px;
+}
 
+.rating {
+font-size: 17px;
+color: #FEB12F;
+font-weight: 400;
+margin-left: 10px;
 }
 
 /* BUTTON BACK */

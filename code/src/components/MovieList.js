@@ -14,7 +14,7 @@ export const MovieList = () => {
         .then(json => setMovies(json.results))
   },[])
 
-console.log(movies)
+
 
   return (
 

@@ -28,9 +28,8 @@ export const MoviePage = () => {
         <div className='movie-page-box'>
           <img className='movie-page-poster'src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title}/> 
           <div className='movie-page-text'>
-            <h2>{movie.title}</h2>
+            <h2>{movie.title} <span className='rating'>{`${movie.vote_average} /10`}</span></h2>
             <p>{movie.overview}</p>
-            <p>{movie.vote_average}</p>
           </div>
         </div>
     </div>
