@@ -9,11 +9,11 @@ export const PageNotFound = () => {
     return (
     <>
         <Link className="back-arrow" to={`/`}>
-                    <FaChevronCircleLeft/>
-                    <span className="icon-text">Main List</span>
-                </Link>
-        <div>
-            <h1>PAGE NOT FOUND</h1>
+            <FaChevronCircleLeft/>
+            <span className="icon-text">Main List</span>
+        </Link>
+        <div >
+            <h1 className='page-not-found'>PAGE NOT FOUND</h1>
         </div>
     </>
     )

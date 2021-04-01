@@ -1,8 +1,9 @@
-body {
+body{
     background-color: black;
+    height: 100vh;
 }
 
-h1 {
+.page-not-found {
     color: white;
     height: 100vh;
     display: flex;
