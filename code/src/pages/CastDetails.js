@@ -16,22 +16,12 @@ const CastDetails = () => {
       .then(res => res.json())
       .then(data => {
         if (data.status_message) {
-          console.log(data)
-          setCast(data)
-        } else if (data.cast) {
+          history.push("/notfound")
+        } else {
           setCast(data.cast)
         }
       })
-  }, [id])
-
-  // NOT WORKING :(
-
-  useEffect(() => {
-    if (cast && cast.status_message === "The resource you requested could not be found.") {
-      console.log("inside useEffect for not found")
-      history.push("/notfound")
-    }
-  }, [cast, history])
+  }, [id, history])
 
   if (cast === undefined) {
     return (<Loader />)

@@ -15,15 +15,21 @@ const MovieDetails = () => {
     useEffect(() => {
         fetch(MOVIE_URL(id))
             .then(res => res.json())
-            .then(data => setMovieDetails(data))
+            .then(data => {
+                if (data.status_message) {
+                    history.push("/notfound")
+                } else {
+                    setMovieDetails(data)
+                }
+            })
             .catch(err => console.log(err))
-    }, [id])
+    }, [id, history])
 
-    useEffect(() => {
-        if (movieDetails && movieDetails.status_message === "The resource you requested could not be found.") {
-            history.push("/notfound")
-        }
-    }, [movieDetails, history])
+    // useEffect(() => {
+    //     if (movieDetails && movieDetails.status_message === "The resource you requested could not be found.") {
+    //         history.push("/notfound")
+    //     }
+    // }, [movieDetails, history])
 
     if (movieDetails === undefined) {
         return (<Loader />)
