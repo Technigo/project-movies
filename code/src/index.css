@@ -75,14 +75,35 @@ body {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 21px;
   z-index: 2;
   bottom: 10px;
   margin-left: 240px;
+  width: 150px;
+}
+.back-button-link svg {
+  width: 30px;
+  margin: 0;
+}
+.back-button-link p {
+  margin: 0;
+  transition: 0.3s ease-in-out;
+}
+.back-button-link:hover p {
+  margin-left: 10px;
 }
 
 .back-button-link svg {
-  width: 40px;
+  width: 30px;
+  margin-right: 5px;
+}
+
+.movies-link {
+  transition: margin-right 0.2s ease-in-out;
+}
+
+.movies-link:hover {
+  margin-right: 5px;
 }
 
 .details-page-wrapper {
@@ -171,11 +192,15 @@ body {
 }
 
 /*MOVIE DETAILS PAGE*/
-  .back-button-link {
-    top: 50px;
-    left: 50px;
-    margin-left: 0;
-  }
+.back-button-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  left: 50px;
+  top: 50px;
+  margin-left: 0;
+}
 
   .details-container{
     flex-direction: row;

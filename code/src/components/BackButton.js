@@ -13,7 +13,7 @@ export const BackButton = () => {
           fillRule="evenodd"
         ></path>
       </svg>
-      <p>Movies</p>
+      <p className='movies-link'>Movies</p>
     </a>
   )
 }
