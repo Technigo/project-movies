@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  margin-top: 40px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -17,37 +18,39 @@ code {
   box-sizing: border-box;
 }
 
-.back-button {
-  height: 50px;
-  padding: 20px;
-  position: absolute;
-}
+/******** SEARCH SECTION ********/
 
-.back-button a {
-  color: white;
-  text-decoration: none;
-  font-size: 12px;
+.search-wrapper {
+  margin: auto;
   display: flex;
-  justify-content: baseline;
-  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid white;
+  width: 300px;
 }
 
-.back-button-text {
-  margin: 0;
-  padding: 0;
-  transition: margin-left 0.5s ease-in-out;
-  font-size: 16px;
-  font-weight: bold;
+.search-field {
+  border-style: hidden;
+  background: black;
+  color: white;
+  font-size: 1.5em;
 }
 
-.back-button-text:hover {
-  margin-left: 10px;
+input:focus {
+  outline: none;
 }
 
-.movie-list-wrapper {
-  /* display: flex;
-  flex-wrap: wrap; */
+.search-button {
+  margin-left: 20px;
+  border-style: hidden;
+  cursor: pointer;
+  background: none;
 }
+
+i {
+  color: white;
+}
+
+/******** MOVIE LIST SECTION ********/
 
 .movie-list a {
   width: 25%;
@@ -65,19 +68,7 @@ code {
   color: white;
 }
 
-.movie-cover {
-  /* -webkit-filter: brightness(100%); */
-}
-
-.movie-cover:hover {
-  /* background-color: rgba(0, 0, 0, 0.537); */
-  /* -webkit-filter: brightness(30%); */
-}
-
-img {
-  width: 100%;
-  height: 100%;
-}
+/******** MOVIE CARD  ********/
 
 .movie-card-text {
   position: absolute;
@@ -94,6 +85,11 @@ img {
 
 .movie-cover:hover .movie-card-text {
   display: flex;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
 
 .movie-card-text h2 {
@@ -155,4 +151,33 @@ svg {
 .poster-image {
   width: 352px;
   border: 4px solid white;
+}
+
+/* BACK BUTTON */
+
+.back-button {
+  height: 50px;
+  padding: 20px;
+  position: absolute;
+}
+
+.back-button a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.back-button-text {
+  margin: 0;
+  padding: 0;
+  transition: margin-left 0.5s ease-in-out;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.back-button-text:hover {
+  margin-left: 10px;
 }

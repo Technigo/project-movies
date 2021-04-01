@@ -5,6 +5,7 @@ import { MOVIE_LIST_API, SIRI_LIST_API, IDA_LIST_API } from '../reusables/urls'
 
 
 import { MovieCard } from '../components/MovieCard'
+import { Search } from '../components/Search'
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([])
@@ -34,6 +35,7 @@ export const MovieList = () => {
 
   return (
     <>
+    <Search />
     <section className="movie-list-wrapper">
       <h2 className="list-title">Popular Movies</h2>
       <section className="movie-list">
