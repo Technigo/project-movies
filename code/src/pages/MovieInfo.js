@@ -16,7 +16,11 @@ const MovieInfo = () => {
   useEffect(() => {
     setLoading(true)
     fetch(MOVIE_URL(id))
-      .then(response => response.json())
+      .then(response => {
+        if (response.ok) {
+          return response.json()
+        } else throw new Error(response.statusText)
+      })
       .then(receivedMovie => {
         setMovie(receivedMovie)
         setLoading(false)
@@ -27,25 +31,33 @@ const MovieInfo = () => {
       })
   }, [id])
   //console.log(movie)
+  useEffect(() => {
+    if (error) {
+      history.push("/")
+    }
+  }, [error, history])
 
-  return (
-    <>
-      {error ? history.push("/") : loading ?
-        <div className="loading-text">
-          <Loader
-            className="loader"
-            type="ThreeDots"
-            color="#ffffff"
-            width={100}
-            height={100}
-          />
-        </div> :
-        movie && (
+  if (loading) {
+    return (
+      <div className="loading-text">
+        <Loader
+          className="loader"
+          type="ThreeDots"
+          color="#ffffff"
+          width={100}
+          height={100}
+        />
+      </div>
+    )
+  } else {
+    return (
+      <>
+        {movie && (
           <div
             className="info-container"
             style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 100%), url(${`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`})` }}
           >
-            <BackButton />
+            {/*<BackButton />*/}
             <div className="summary">
               <img className="info-poster" src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt={movie.title} />
               <div className="details">
@@ -56,8 +68,9 @@ const MovieInfo = () => {
             </div>
           </div>
         )}
-    </>
-  )
+      </>
+    )
+  }
 }
 export default MovieInfo
 

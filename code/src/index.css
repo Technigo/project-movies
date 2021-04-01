@@ -58,6 +58,7 @@ code {
 }
 
 .button-container {
+  z-index: 2;
   display: flex;
   align-items: center;
   text-decoration: none;
