@@ -5,6 +5,7 @@ import Header from 'components/Header'
 
 import Trending from 'pages/Trending';
 import Movie from 'pages/DetailsMovie';
+import Collection from 'pages/DetailsCollection';
 
 export const App = () => {
   return (
@@ -16,6 +17,9 @@ export const App = () => {
         </Route>
         <Route path="/movies/:id">
           <Movie />
+        </Route>
+        <Route path="/collections/:id">
+          <Collection />
         </Route>
       </Switch>
     </BrowserRouter>

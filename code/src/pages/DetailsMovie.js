@@ -28,7 +28,6 @@ const Movie = () => {
           {data.belongs_to_collection !== null && (
             <SectionCollection {...data.belongs_to_collection} />
           )}
-          {/* SectionCollection if(data.belongs_to_collection !== null) */}
         </>
       )}
     </MainWrap>

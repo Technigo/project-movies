@@ -1,30 +1,31 @@
 import React from 'react';
 
-import { IMAGE_URLS } from 'utils/apiConfig';
+import { IMAGE_BACKDROP } from 'utils/apiConfig';
 
 import Poster from 'components/Poster';
 import Rating from 'components/Rating';
 import { Pills, Pill } from 'components/Styled/Pills';
 
-import { DetailsWrapper, DetailsText } from './style'
+import { DetailsWrapper, DetailsText } from './style';
 
-const SectionDetails = ({ id, title, overview, genres, ...other }) => {
-  const props = { id, title, ...other };
-
+const SectionDetails = ({ id, title, overview, genres, name, ...other }) => {
+  const posterProps = { id, title, ...other };
   return (
-    <DetailsWrapper backdrop={`${IMAGE_URLS.backdrop}${other.backdrop_path}`}>
-      <Poster {...props} />
+    <DetailsWrapper backdrop={`${IMAGE_BACKDROP(other.backdrop_path)}`}>
+      <Poster {...posterProps} />
       <DetailsText>
         <h1>
-          {title}
-          <span>({other.release_date})</span>
+          {title || name}
+          {other.release_date && <span>({other.release_date})</span>}
         </h1>
-        <Pills>
-          {genres.slice(0, 3).map((genre) => (
-            <Pill key={genre.id}>{genre.name}</Pill>
-          ))}
-        </Pills>
-        <Rating rating={other.vote_average} />
+        {genres && (
+          <Pills>
+            {genres.slice(0, 3).map((genre) => (
+              <Pill key={genre.id}>{genre.name}</Pill>
+            ))}
+          </Pills>
+        )}
+        {other.vote_average && <Rating rating={other.vote_average} />}
         <p>{overview}</p>
       </DetailsText>
     </DetailsWrapper>

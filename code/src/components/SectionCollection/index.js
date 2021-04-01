@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLayerGroup, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-import { IMAGE_URLS } from 'utils/apiConfig';
+import { IMAGE_BACKDROP } from 'utils/apiConfig';
 
 import RouteBackdropLink from 'components/Styled/RouteBackdropLink';
 
@@ -37,8 +37,8 @@ const SectionCollection = ({ id, name, ...other }) => {
         <FontAwesomeIcon icon={faLayerGroup} />
       </div>
       <RouteBackdropLink
-        backdrop={`${IMAGE_URLS.backdrop}${other.backdrop_path}`}
-        to={`/collection/${id}`}>
+        backdrop={`${IMAGE_BACKDROP(other.backdrop_path)}`}
+        to={`/collections/${id}`}>
         <h1>Part of the {name}</h1>
         <FontAwesomeIcon className="icon--show-on-hover" icon={faArrowRight} />
       </RouteBackdropLink>

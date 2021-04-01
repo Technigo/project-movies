@@ -5,11 +5,11 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 import Button from 'components/Styled/Button';
 
-const ReturnButton = ({ path }) => {
+const ReturnButton = () => {
   const history = useHistory();
 
   const handleClick = () => {
-    history.push(path);
+    history.goBack();
   };
 
   return (
