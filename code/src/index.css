@@ -99,7 +99,6 @@ code {
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.529) 70%, rgb(0, 0, 0) 100%);
 }
 
 .summary{
@@ -115,9 +114,9 @@ code {
 }
 
 @media (max-width: 370px) {
-.info-poster {
-  width: 200px;
-}
+  .info-poster {
+    width: 200px;
+  }
 }
 
 @media (min-width: 768px) {
