@@ -20,7 +20,7 @@ export const MovieDetails = () => {
             .then((json) => {
                 (json.success === false) ? history.push('/') : setMovies(json)
             })
-            .catch((error) => console.log(error))
+            .catch((error) => console.err(error))
     }, [MOVIE_URL, history])
 
     if (movies === undefined) {
