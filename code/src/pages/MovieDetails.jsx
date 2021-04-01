@@ -31,7 +31,7 @@ export const MovieDetails = () => {
           <div
             className="background-image"
             style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})`
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 60%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})`
             }} />
           <Link className="back-arrow" to="/">
             <FaChevronCircleLeft />
