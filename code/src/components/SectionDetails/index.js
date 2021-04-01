@@ -26,7 +26,11 @@ const SectionDetails = ({ id, title, overview, genres, name, ...other }) => {
             ))}
           </Pills>
         )}
-        {other.vote_average && <Rating rating={other.vote_average} />}
+        {other.vote_average ? (
+          <Rating rating={other.vote_average} />
+        ) : (
+          <i>No current voting average</i>
+        )}
         <p>{overview}</p>
       </DetailsText>
     </DetailsWrapper>

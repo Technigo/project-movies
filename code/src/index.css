@@ -14,8 +14,12 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-p {
-  margin: 0;
+i {
+  color: gray;
+}
+
+p, i {
+  margin: 1em 0;
 }
 
 h1 {
