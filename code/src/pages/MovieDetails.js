@@ -16,7 +16,7 @@ export const MovieDetails = () => {
 
   return(
     <> 
-      <div className="movie-detail-container" style={{ backgroundImage: `background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})` }}>
+      <div className="movie-detail-container" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})` }}>
         <HomeButton/>
         <div className="detail-wrapper">
           <img className="movie-detail-image" src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`} alt={movieDetails.title}></img>
