@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import { URL_COLLECTION } from 'utils/apiConfig';
 import { useFetch } from 'utils/hooks';
+import { getYear } from 'utils/helpers';
 
 import ReturnButton from 'components/ReturnButton';
 import LoaderSpinner from 'components/LoaderSpinner';
@@ -31,7 +32,7 @@ const Collection = () => {
           <List pageSection>
             {data.parts.map((movie) => (
               <RoutePosterLink key={movie.id} to={`/movies/${movie.id}`}>
-                <p>{movie.release_date || 'TBA'}</p>
+                <p>{movie.release_date ? getYear(movie.release_date) : 'TBA'}</p>
                 <Poster {...movie} />
               </RoutePosterLink>
             ))}

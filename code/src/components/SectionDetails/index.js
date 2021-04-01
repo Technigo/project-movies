@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { IMAGE_BACKDROP } from 'utils/apiConfig';
+import { getYear } from 'utils/helpers';
 
 import Poster from 'components/Poster';
 import Rating from 'components/Rating';
@@ -16,7 +17,7 @@ const SectionDetails = ({ id, title, overview, genres, name, ...other }) => {
       <DetailsText>
         <h1>
           {title || name}
-          {other.release_date && <span>({other.release_date})</span>}
+          {other.release_date && <span>({getYear(other.release_date)})</span>}
         </h1>
         {genres && (
           <Pills>
