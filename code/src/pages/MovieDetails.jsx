@@ -6,11 +6,15 @@ import { FaChevronCircleLeft } from 'react-icons/fa';
 
 import './MovieDetails.css'
 
+import { PageNotFound } from '../components/PageNotFound'
+
 
 export const MovieDetails = () => {
     const { id } = useParams()
-    const history = useHistory();
-    const [movies, setMovies] = useState([])
+    // const history = useHistory();
+    const [pageNotFound, setPageNotFound] = useState(false)
+    const [movies, setMovies] = useState()
+
 
     const MOVIE_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=d1212c48c1a2b13b12dd27882d072960&language=en-US`
     
@@ -18,23 +22,16 @@ export const MovieDetails = () => {
         fetch(MOVIE_URL)
             .then((res) => res.json())
             .then((json) => {
-                if (json.success === false) {
-                    history.push('/')
-                } else {
-                    setMovies(json)
-                }
+                (json.success === false) ? setPageNotFound(true) : setMovies(json)
             })
-            .catch((error) => console.err(error))
-    }, [MOVIE_URL, history])
+    }, [id])
 
-    if (movies === undefined) {
-        return <></>
-    }
-
-    
 
     return (
-            <div >
+        <>
+            {pageNotFound && <PageNotFound/>}
+            {movies && (
+               <div >
                 <div className='background-image' style={{
                     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})`
                 }}></div>
@@ -49,7 +46,10 @@ export const MovieDetails = () => {
                         <p>{movies.overview}</p>
                     </div>
                 </div>
-            </div>
+            </div> 
+            )}
+            
+        </>
     )
 }
 
