@@ -1,13 +1,17 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is a project built during Technigo Bootcamp. The project consisted in building a multi-page React application. The focuse was to practice how to use React router to create multi-page applications, using placeholders in urls to pick dynamic parts from urls and using APIs in React - combining `useState` with `useEffect`
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started by thinking what the apps would show and how to strucutre the content with pages and components. 
+
+The problems we ran in to were:
+-  that the API response for movie details was an object and needed to be converted into an array to use .map, we solved it by adding [] in the second .then around json, but we are sure it could be solved in another way. 
+- that we tried to store the API for the movie details in a variable but we got error messages in the console and the fetch could not be completed. We decided to keep it in the fetch. 
+
+If we had more time we would added more data. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
