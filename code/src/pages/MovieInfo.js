@@ -29,7 +29,6 @@ const MovieInfo = () => {
         setError(true)
       })
   }, [id])
-  //console.log(movie)
   useEffect(() => {
     if (error) {
       history.push("/")
