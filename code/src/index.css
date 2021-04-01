@@ -1,7 +1,7 @@
-* {
+/** {
   box-sizing: border-box;
+}*/
 
-}
   body {
   margin: 0;
   color: #fff;
@@ -14,10 +14,11 @@
 }
 
 main {
-  max-width: 1200px;
+  /*max-width: 1200px;*/
   margin: 0, auto;
-  width: 100%;
-  padding: 0 50px;
+  padding: 0;
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
 }
 
 code {
@@ -25,24 +26,62 @@ code {
     monospace;
 }
 
+.movies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /*width: 100%;*/
+}
+
+/*.movies a {
+  width: 100%;
+  
+}*/
+
+.movies a img {
+  width: 100%;
+}
+
 .heroImage {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0));
   position: relative;
   top: 0;
-  left: 0px;
+  left: 0;
 }
 
 .homeLink {
   position: absolute;
-  top: 200px;
+  padding-top: 0;
+  top: 20px;
   left: 20px;
   color: #fff;
 }
+
+.movie-img-list:hover {
+  background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); 
+    transition: .5s ease;
+    opacity: 0.4;
+}
+
+.movies a {
+  text-decoration: none;
+  color: #fff;
+
+}
+
 .cardImage img {
   position: absolute;
   top: 200px;
   left: 10px;
   bottom: 10px;
+}
+
+.cardImage a {
+  width: 100%;
+}
+
+.cardImage a img {
+  width: 100%;
   border: solid #fff;
 }
 
@@ -63,6 +102,29 @@ code {
   overflow: hidden;
 }
 
+@media only screen and (min-width: 992px) {
+  
+  .cardImage img {
+    width: 10%;
+    left: 10px;
+    top: 400px;
+
+  }
+  
+  .cardImage a {
+    width: 10%;
+  }
+  .cardImage a img {
+    width: 25%;
+  }
+
+  .movieDetails {
+    position: absolute;
+    left: 200px;
+    top: 400px;
+  }
+
+}
 
 
 

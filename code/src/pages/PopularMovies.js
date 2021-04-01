@@ -15,12 +15,14 @@ export const PopularMovies = () => {
     }, [])
 
     return (
-        <main className="movies">
+        <div className="movies">
             {movies.map((movie) => (
                 <Link key={movie.id} to={`/movies/${movie.id}`}> 
-                    <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+                    <p className="movieTitle">{movie.title}</p>
+                    <p className="movieReleaseDate">{movie.release_date}</p>
+                    <img className="movie-img-list"src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
                 </Link>
             ))}
-        </main>    
+        </div>    
     )
 }
