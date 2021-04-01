@@ -91,12 +91,13 @@ button {
 
   @media (max-width:770px){
     .movie-image-poster{
-        top: 20%;
+        top: 15%;
         left: 5%;
     }
     .movie-title-container{
         top: 65%;
         left: 12%;
+        font-size: 17px;
     }
 
     .movie-overview{
@@ -104,6 +105,7 @@ button {
         top: 75%;
         left:12%;
         margin-top:0;
+        font-size: 14px;
     }
 
     button{
