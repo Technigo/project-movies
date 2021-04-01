@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import RouteHeaderLink from 'components/Styled/RouteHeaderLink'
+
 const HeaderSection = styled.header`
   background: var(--dark1);
-  color: var(--secondary);
   display: flex;
-  justify-content: center;
-  text-shadow: 2px 2px var(--dark2);
+  justify-content: center;  
 `;
 
 const Header = () => {
   return (
     <HeaderSection>
-      <h1>Filmoona</h1>
+      <RouteHeaderLink to="/">Filmoona</RouteHeaderLink>
     </HeaderSection>
   )
 }
