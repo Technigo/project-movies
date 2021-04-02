@@ -7,7 +7,7 @@ const MovieCard = ({ poster_path, original_title, release_date, id }) => {
       <Link to={`/movies/${id}`}>
         <div className="movie-card__image-container">
           <img
-            src={`http://image.tmdb.org/t/p/w500${poster_path}`}
+            src={`https://image.tmdb.org/t/p/w500${poster_path}`}
             alt={original_title}
           ></img>
         </div>

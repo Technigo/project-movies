@@ -25,18 +25,18 @@ const MovieDetails = () => {
           <div className="movie-details-wrapper">
             <picture className="movie-details__background">
               <source
-                srcSet={`http://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+                srcSet={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
                 media="(min-width: 1024px)"
               />
               <img
-                src={`http://image.tmdb.org/t/p/w1280${movie.backdrop_path}`}
+                src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`}
                 alt={movie.original_title}
               />
             </picture>
             <div className="movie-details-info">
               <div className="movie-details-info__image-container">
                 <img
-                  src={`http://image.tmdb.org/t/p/w342${movie.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
                   alt={movie.original_title}
                 ></img>
               </div>

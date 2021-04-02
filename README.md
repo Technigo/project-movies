@@ -16,4 +16,4 @@ Techniques: CSS, HTML5, JavaScript, JSX, React, React Router DOM, API.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://caroline-pauline-movies.netlify.app/
