@@ -1,6 +1,6 @@
 # Project Movies 🎥🎞️
 
-The goal for this project was to build our first multi-page React application using themoviedb.org's API tofetch a list of movies. We fetch a list of movies, display them on a page, and then link to a movie detail page when you click on the movie: we are to achieve this using React Router.
+The goal for this project was to build our first multi-page React application, in the pair-programming modality, using themoviedb.org's API to fetch a list of movies. We fetch a list of movies, display them on a page, and then link to a movie detail page when you click on the movie: we are to achieve this using React Router.
 
 ## The problem and how we solved it 💪
 
@@ -17,7 +17,7 @@ A lot of time has gone into this project's styling as well: We used mainly Flexb
 
 If we had more time, we would like to continue to add more details and capacities to the site: not found customized site, other movie lists classified per genre, etc.
 
-<h2>Technologies used</h2> ⚙️
+<h2>Technologies used⚙️</h2> 
 <ul>
   <li>React</li>
   <li>React router</li>
