@@ -12,7 +12,7 @@ Then, we used the map method on the movies array to generate the different movie
 
 On the MovieDetails page, we did a new fetch according to the id of the movie that the user has clicked on. It is determined which movie it is by the use of params. 
 
-A lot of time has gone into this project's styling as well: We used mainly Flexboxes to resize the movie cards depending on the device. We also learned more about hovering effects showing text. 
+A lot of time has gone into this project's styling as well: We used mainly Flexboxes to resize the movie cards depending on the device. We also learned more about hovering effects showing text. We were also able to add a loading spinner.
 
 If we had more time, we would like to continue to add more details and capacities to the site: not found customized site, other movie lists classified per genre, etc.
 
