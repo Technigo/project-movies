@@ -22,7 +22,7 @@ const [ movieList, setMovieList ] = useState([])
 
     console.log(movieList)
     return (
-        <>    
+        <div className="movie-list-container">    
             {movieList.map(movie => {  
                 return (
 
@@ -31,6 +31,6 @@ const [ movieList, setMovieList ] = useState([])
                      /> 
                 )
             })}
-        </>
+        </div>
     )
 }

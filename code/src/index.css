@@ -11,3 +11,64 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.movie-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.movie {
+  width: 25%;
+  position: relative;
+  text-decoration: none;
+}
+
+.poster-image {
+  width: 100%;
+  display: block;
+}
+
+
+.overlay {
+  display: inline-block;
+  flex-direction: column;
+  position: absolute;
+  top: 75%;
+  left: 1%;
+  z-index: 1;
+  color: white;
+}
+
+
+
+
+
+.movie-title {
+  font-size: 30px;
+}
+
+.button-back {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 2px;
+  align-items: center;
+}
+
+.arrow {
+  text-decoration: none;
+  background-color: black;
+  font-size: 16px;
+  width: 2%;
+  border-radius: 50%;
+  text-align: center;
+  margin: 10px
+}
+
+.arrow p {
+  color: white;
+}
+
+
+
+
