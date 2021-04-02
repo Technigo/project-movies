@@ -5,9 +5,8 @@
 
 :root {
   font-size: 10px;
-  line-height: 30px; /*Check this later maybe */
+  line-height: 30px; 
 }
-
 
 body {
   margin: 0;
@@ -22,7 +21,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 
 .main {
   width: 100%;
@@ -85,21 +83,33 @@ code {
   z-index: -1;
 }
 
-
 /* Movies */
 .movies-section {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  /* justify-content: space-evenly;
-  align-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 10px;
   padding-top: 100px;
   background: #000;
 }
 
+.page-not-found {
+  background: #000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-not-found-text {
+  color: #fff;
+  font-size: 4.8rem;
+  margin: 0;
+}
+
 .movie-wrapper {
   display: flex;
-  width: 25%;
   position: relative;
 }
 
@@ -138,17 +148,9 @@ code {
   opacity: 1;
 }
 
-
 /* Movie details*/
-.movie-details-section {
-  /* padding-top: 100px; */
-}
-
-
 .back-link {
   position: fixed;
-  /* left: 50px;
-  top: 50px; */
   margin-left: 30px;
   display: inline-flex;
   align-items: center;

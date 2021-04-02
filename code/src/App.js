@@ -7,7 +7,6 @@ import MovieDetails from './pages/MovieDetails'
 
 export const App = () => {
   const [movies, setMovies] = useState([])
-  const [chosenList, setChosenList] = useState("")
 
   return (
     <BrowserRouter>
@@ -20,8 +19,6 @@ export const App = () => {
             <MovieList 
             movies={movies}
             setMovies={setMovies}
-            chosenList={chosenList}
-            setChosenList={setChosenList}
             />
           </Route>
           <Route path="/movies/:list/:id" exact>

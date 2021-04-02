@@ -5,27 +5,29 @@ import { API_URL_MOVIES } from '../reusables/Urls'
 import TopBar from '../components/TopBar'
 import MovieCard from '../components/MovieCard'
 
-const MovieList = ({ movies, setMovies, chosenList, setChosenList }) => {
+const MovieList = ({ movies, setMovies }) => {
   const {list} = useParams()
 
   useEffect(() => {
     fetch(API_URL_MOVIES(list))
       .then(response => response.json())
-      .then((json) => {
-        setMovies(json.results)
-        setChosenList(list)
-      })
+      .then(json => setMovies(json.results))
       .catch(err => console.error(err))
-  }, [list, setMovies, setChosenList])
+  }, [list, setMovies])
 
 
-  console.log(chosenList)
+  if (!movies) {
+    return (
+      <section className="page-not-found">
+        <p className="page-not-found-text">Page not found</p>
+      </section>
+    )
+  }
 
   return (
     <>
       <TopBar 
         list={list}
-        chosenList={chosenList}
       />
       <section className="movies-section">
         {movies.map(movie => <MovieCard list={list} key={movie.id} {...movie} />)}

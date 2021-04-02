@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const BackLink = ({ chosenList }) => {
-console.log(chosenList)
+const BackLink = () => {
 
   return (
-    <Link className="back-link" to={`/movies/${chosenList}`}>
+    <Link className="back-link" to={`/movies/popular`}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
         <path
           fill="#fff"
