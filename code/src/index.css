@@ -210,7 +210,7 @@ code {
 }
 
 .return:focus {
-  outline: 2px solid white;
+  color: #09B5E0;
 }
 
 .fa-chevron-circle-left {
@@ -222,7 +222,7 @@ code {
   margin-left: 10px;
 }
 
-.return:hover .return-text {
+.return:hover .return-text, .return:focus .return-text {
   margin-left: 20px;
 }
 
@@ -247,12 +247,13 @@ code {
 }
 
 .poster-image:focus {
-  outline: 5px solid white;
+  border: 5px solid #09B5E0;
 }
 
 .movie-detail-title {
   margin: 0px;
   margin-bottom: 10px;
+  outline: none;
 }
 
 .rating-imdb {
@@ -268,8 +269,10 @@ code {
   padding: 1px 6px;
   font-weight: 800;
   border-radius: 3px;
+  border: 3px solid transparent;
   font-size: 20px;
   margin: 0px;
+  outline: none;
 }
 
 .rating-total {
@@ -282,19 +285,26 @@ code {
   text-decoration: none;
   color: black;
   padding: 1px 6px;
-  margin: 0 0 0 15px;
+  margin: 0 0 0 10px;
   font-weight: 800;
   border-radius: 3px;
+  border: 3px solid transparent;
   font-size: 20px;
+  outline: none;
 }
 
 .imdb:hover {
   opacity: 0.7;
 }
 
+.rating:focus, .imdb:focus {
+  border: 3px solid #09B5E0;
+}
+
 .movie-genres {
   display: flex;
   flex-wrap: wrap;
+  outline: none;
 }
 
 .genre {
@@ -312,6 +322,11 @@ code {
 .runtime {
   margin: 0;
   font-size: 16px;
+  outline: none;
+}
+
+.movie-detail-title:focus, .movie-genres:focus, .runtime:focus {
+  color: #09B5E0;
 }
 
 .overview {
@@ -319,6 +334,11 @@ code {
   margin-top: 20px;
   font-family: 'Open sans';
   margin-bottom: 2px;
+  outline: none;
+}
+
+.overview:focus {
+  font-weight: bold;
 }
 
 /* Error page */
@@ -421,7 +441,7 @@ code {
   }
 
   .details-text {
-    margin: 0px;
+    margin: 0 0 80px 0;
   }
 
   .genre, .runtime {
