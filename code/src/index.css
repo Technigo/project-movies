@@ -21,7 +21,6 @@ code {
 .company-logo {
   background-color: #fff;
   padding: 20px;
-  margin: 15px;
   border-radius: 25px;
 }
 
@@ -34,17 +33,27 @@ code {
   text-decoration: none;
   color: #fff;
   cursor: pointer;
+  width: 100%;
 }
 
 .company-page-container {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-color: #000;
+  height: 100vh;
+  background-size: cover;
 }
 
-.company-page-container-desktop {
-  display: none;
-}
+/*.containerish {
+  background-color: #000;
+  height: 100vh;
+  background-size: cover;
+}*/
+
+
+
 
 /*------------- Landing/sorting page -------------*/
 
@@ -347,6 +356,10 @@ code {
     color: red;
     font-weight: 200;
     padding: 0px 0px 0px 20px;
+  }
+
+  .text-wrapper a {
+    display: inline-block;
   }
 
 }

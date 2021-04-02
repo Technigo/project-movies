@@ -81,45 +81,53 @@ const MovieDetail = () => {
             
             <div className="mobile-version">
                 <img src={details.poster_path === null ? "../assets/poster_not_found.png" : `https://image.tmdb.org/t/p/w300${details.poster_path}`} alt={details.title}/>
-                <h1>{details.original_title} <span>{details.vote_average}/10</span></h1>
+                <h1>{details.original_title} <span>{details.vote_average}/10</span></h1> {/*missing styling for this span?*/}
                 <p>{details.overview}</p>
                 
                     {prodComp.map(comp => {
-                        return <Link to={`/companies/${comp.id}`}>{comp.name}</Link>
-                    }
-                        
-                    )} 
+                        return (
+                            <li>
+                                <Link to={`/companies/${comp.id}`}>    
+                                
+                                    {comp.name}
+                                
+                                </Link>
+                            </li>
+                        )
+                    })} 
             </div>
 
+
             <div className="desktop-version">
-                <div className="information-wrapper">
-                    <div className="image-wrapper">
-                        
+                <div className="information-wrapper"> {/*unique to desktop ver. and could be handy in the phone version too*/}
+                    <div className="image-wrapper"> {/*unique to desktop ver. and applies styling difference*/}        
                         <img src={details.poster_path === null ? "../assets/poster_not_found.png" : `https://image.tmdb.org/t/p/w300${details.poster_path}`} alt={details.title}/>
-                        
-                        
+ 
                     </div>
                     <div className="text-wrapper">
                         <h1>{details.original_title}<span>{details.vote_average}/10</span></h1>
                         <p>{details.overview}</p>
 
-                        {prodComp.map(comp => {
-                        return <Link to={`/companies/${comp.id}`}>{comp.name}</Link>
-                    }
-                        
-                    )} 
-                       
-                        {/*<Link to={`/companies/${prodComp.id}`}>
-                            {prodComp.map(y => (
-                                <p>{y.name}</p>
-                            ))} 
-                        </Link> */}
-                        
-                        
-                        
+                        <ul>
+                            {prodComp.map(comp => {
+                                return (
+                                    <li>
+                                        <Link to={`/companies/${comp.id}`}>    
+                                        
+                                            {comp.name}
+                                        
+                                        </Link>
+                                    </li>
+                                )
+                            })} 
+                        </ul>
                     </div>
                 </div>
             </div>
+
+           
+
+
 
            
         </div>
