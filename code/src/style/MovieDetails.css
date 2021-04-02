@@ -34,7 +34,7 @@
 
 .poster-image {
   border: 5px solid #fff;
-  width: 400px;
+  max-width: 300px;
   height: auto;
 }
 
