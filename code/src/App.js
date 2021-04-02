@@ -5,12 +5,12 @@ import { MovieList } from "./pages/MovieList"
 import { MovieDetail } from "./pages/MovieDetail"
 
 export const App = () => {
-  
+
   return (
     <>
       <BrowserRouter>
         <Switch>
-          <Route path="/home" exact>
+          <Route path="/" exact>
             <MovieList />
           </Route>
           <Route path="/movies/:id">

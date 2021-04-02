@@ -32,7 +32,7 @@ export const MovieDetail = () => {
       <div> {movieDetail.length===0 ?<></> :    
         <section className="movie-details-page" style={{backgroundImage:`url(https://image.tmdb.org/t/p/w1280/${movieDetail.backdrop_path})`}}>
         {/* <img style={{backgroundImage:`url(https://image.tmdb.org/t/p/w1280/${movieDetail.backdrop_path})`}}/>  */}
-            <Link to={`/home`} style={{ textDecoration: 'none' }}>
+            <Link to={`/`} style={{ textDecoration: 'none' }}>
             <div className="back-arrow-wrapper">
                 <img className="back-arrow-icon" src={arrow} alt="back-arrow"/> 
                 <p className="back-arrow-text">Movies</p>

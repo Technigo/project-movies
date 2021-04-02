@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 import { MOVIES_URL } from "reusable/urls"
 import { MovieThumb } from "components/MovieThumb"
@@ -18,7 +19,13 @@ export const MovieList = () => {
         <section className="movie-list-container"> 
           {movies.map((movie)=> (
             <div key= {movie.id} className="movie-thumb">
-              <MovieThumb {...movie} />
+              <Link to={`/movies/${movie.id}`} style={{ textDecoration: 'none' }}>
+                <img className="thumb-img" src= {`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.original_title}/>
+                <div className="movie-thumb-text"> 
+                    <h1 className="thumb-title">{movie.original_title}</h1>
+                    <h2 className="release-date">Released: {movie.release_date}</h2>
+                </div> 
+              </Link> 
             </div>
           ))}
         </section>
