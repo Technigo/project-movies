@@ -11,7 +11,7 @@ export const MovieThumb = ({ poster_path, original_title, release_date, id }) =>
 
         //I dont know why the -text decoration none - doesnt work in this Link but it does work
         //in the movieDetail Link
-        
+
         <Link to={`/movies/${id}`} style={{ textDecoration: 'none' }}>
           <img className="thumb-img" src= {`https://image.tmdb.org/t/p/w300${poster_path}`} alt={original_title}/>
             <div className="movie-thumb-text"> 
