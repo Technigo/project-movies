@@ -61,3 +61,33 @@
 .movie-infomation-container p {
   max-width: 400px;
 }
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 768px){
+  .backdrop-image {
+    background-attachment: fixed;
+  }
+  .poster-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    top: 150px;
+  }
+
+  .poster-image {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .movie-infomation-container {
+    margin-bottom: 30px;
+    margin-left: 0;
+  }
+
+  .back-link {
+    margin: 16px;
+  }
+}

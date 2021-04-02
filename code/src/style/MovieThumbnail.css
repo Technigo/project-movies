@@ -52,7 +52,7 @@
 
 @media (max-width: 768px) {
   .movie-thumbnail-container {
-    width: 100%;
+    width: 80%;
   }
 
   .movie-text-container h1 {
