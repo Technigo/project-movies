@@ -1,3 +1,14 @@
+@font-face { 
+  font-family: "Changa";
+  src: url("/assets/Changa/Changa-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+  font-size: 10px;
+  line-height: 30px; /*Check this later maybe */
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,4 +21,192 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+.main {
+  width: 100%;
+}
+
+/* Top bar */
+.top-bar-color {
+  background: #000;
+  height: 100px;
+  width: 100%;
+  display: flex; 
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+}
+
+.top-bar-transparant {
+  background: transparent;
+  height: 100px;
+  width: 100%;
+  display: flex; 
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+}
+
+.top-bar-color .popflix-logo {
+  margin-right: 20px;
+}
+
+.top-bar-transparant .popflix-logo {
+  margin-left: auto;
+}
+
+/* Nav bar */
+.nav-bar-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-right: 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-bar-link:hover, .nav-bar-link:focus {
+  color: #979797;
+}
+
+/* Landing page */
+.landing-page-section {
+  position: absolute;
+  background-image: url(/assets/felix-mooneeram-evlkOfkQ5rE-unsplash-large.jpg);
+  background-size: cover;
+  background-position: bottom;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+
+/* Movies */
+.movies-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-evenly;
+  align-content: space-between; */
+  padding-top: 100px;
+  background: #000;
+}
+
+.movie-wrapper {
+  display: flex;
+  width: 25%;
+  position: relative;
+}
+
+.movie-poster {
+  width: 100%;
+}
+
+.movie-details {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  padding: 20px;
+}
+
+.movie-title {
+  margin-top: auto;
+  margin-bottom: 0;
+  font-size: 3.2rem;
+}
+
+.movie-release-date {
+  font-size: 1.6rem;
+  margin: 16px 0px;
+}
+
+.movie-details:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+}
+
+
+/* Movie details*/
+.movie-details-section {
+  /* padding-top: 100px; */
+}
+
+
+.back-link {
+  position: fixed;
+  /* left: 50px;
+  top: 50px; */
+  margin-left: 30px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.back-link svg {
+  width: 30px;
+}
+
+.back-link span {
+  transition: margin-left 0.2s ease-in-out;
+  margin-left: 5px;
+}
+
+.back-link:hover span {
+  margin-left: 10px;
+}
+
+.backdrop-img {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.summary-wrapper {
+  display: flex;
+  align-items: flex-end;
+  margin: 50px;
+}
+
+.summary-poster {
+  width: 25%;
+  border: 3px solid #fff; 
+}
+
+.summary-text-wrapper {
+  width: 30%;
+  color: #fff;
+  margin-left: 20px;
+}
+
+.summary-title {
+  font-size: 3rem;
+}
+
+.summary-rating {
+  font-size: 2.4rem;
+  color: #ffe600;
+  margin: 10px;
+}
+
+.summary-overview {
+  font-size: 1.8rem;
 }
