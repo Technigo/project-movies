@@ -153,6 +153,10 @@ code {
   color: gray;
 }
 
+.homepage-link:hover{
+  text-decoration: underline;
+}
+
 @media (max-width: 370px) {
   .info-poster {
     width: 200px;
