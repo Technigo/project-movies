@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom' 
 
-const HomeButton = () => {
+export const HomeButton = () => {
+  
   return (
     <Link to="/">
       <button className="back-button">
@@ -11,5 +12,3 @@ const HomeButton = () => {
     </Link>
   )
 }
-
-export default HomeButton

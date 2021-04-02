@@ -1,7 +1,8 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 
-export const MovieThumb = ({name, poster_image, rating, released, id}) =>{
+export const MovieThumb = ({name, poster_image, released, id}) =>{
+  
   return (
     <Link to={`/movies/${id}`}>
     <section className="movie-thumb-container">
