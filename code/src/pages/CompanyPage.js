@@ -56,7 +56,7 @@ const CompanyPage = () => {
               <a href={company.homepage} className="homepage-link">Homepage (external link)</a>
             </div>
             {company.logo_path && <img className="company-logo" src={`https://image.tmdb.org/t/p/original${company.logo_path}`} alt={company.name} />}
-            
+
           </section>
         )}
       </>

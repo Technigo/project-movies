@@ -114,10 +114,11 @@ code {
   color: #ff0000;
 }
 
+/* Companies list */
+
 .company-link {
   color: gray;
   text-decoration: none;
-  margin: 5px;
 }
 
 .company-link:hover {
@@ -139,6 +140,8 @@ code {
 
 .company-logo {
   width: 100px;
+  filter: invert(100%);
+  background-color: rgba(240, 235, 235, 0.132);
 }
 
 .company-details {
