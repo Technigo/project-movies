@@ -4,7 +4,7 @@
 
 .backdrop-image {
   width: 100vw;
-  height: auto;
+  height: 100vh;
   object-fit: cover;
 }
 
@@ -15,8 +15,11 @@
   right: 0;
   left: 0;
   text-decoration: none;
-  z-index: 1;
+  z-index: 1; 
+  width: 120px;
+  height: 80px;
 }
+
 
 .poster-container {
   position: absolute;
