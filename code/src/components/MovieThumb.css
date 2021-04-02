@@ -1,0 +1,22 @@
+.movie-thumb-wrapper{
+  position: relative;
+}
+
+.movie-thumb-content{
+    display: flex;
+    flex-direction: column;;
+    position: absolute;
+    color: white;
+    top: 70%;
+    opacity: 0;
+    margin-left:2%;
+}
+
+.movie-thumb-wrapper:hover .movie-thumb-img{
+    opacity: 0.2;
+  }
+  
+.movie-thumb-wrapper:hover .movie-thumb-content{
+    opacity: 1;
+  }
+
