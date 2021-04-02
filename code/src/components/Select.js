@@ -1,26 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const SelectMovie = ({onFilterChange, popularity, TopRated, upcomingMovies, filter}) => {
-    //const [select, setSelect] = useState("popular")
-    
-    return(
-        
+const SelectMovie = ({onFilterChange, popularity, topRated, upcomingMovies, filter}) => {
+    return(  
         <section className="sort-by">
-            <h3 id="size">Sort by:  </h3> 
-            <select 
-              onChange={e => onFilterChange(e)} 
-              value={filter}
-              name="movie"
-            >
-              <option value={popularity}>Popular</option>
-              <option value={upcomingMovies}>Upcoming</option>
-              <option value={TopRated}>Top Rated</option>
-            </select>
+          <h3 id="size">Sort by:  </h3> 
+          <select 
+            onChange={e => onFilterChange(e)} 
+            value={filter}
+            name="movie"
+          >
+            <option value={popularity}>Popular</option>
+            <option value={upcomingMovies}>Upcoming</option>
+            <option value={topRated}>Top Rated</option>
+          </select>
         </section>
-
-
-
-
     )
 }
 

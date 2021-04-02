@@ -12,6 +12,8 @@ code {
     monospace;
 }
 
+/*------------- Components -------------*/
+
 .company-page {
   background-color: #000;
   color: #fff;
@@ -46,14 +48,26 @@ code {
   background-size: cover;
 }
 
-/*.containerish {
-  background-color: #000;
-  height: 100vh;
-  background-size: cover;
-}*/
+.back-btn {
+  position: absolute;
+  margin: 15px;
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
 
+.back-btn p {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+}
 
-
+.svg {
+  width: 40px;
+}
 
 /*------------- Landing/sorting page -------------*/
 
@@ -67,17 +81,16 @@ code {
 
 .sort-by select {
   margin-left: 15px;
- 
 }
 
 /*------------- Details page -------------*/
+
 .details-wrapper {
   color: #ffffff;
   height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  
 }
 
 .loading {
@@ -141,7 +154,6 @@ code {
   position: absolute;
   bottom: 0%;
   left: 0%;
-
 }
 
 .container:hover .image {
@@ -165,7 +177,6 @@ code {
   color: white;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 0px 20px 0px 0px;
-
 }
 
 .text-mobile h1 {
@@ -175,20 +186,6 @@ code {
 .text-mobile h3 {
   font-size: 20px;
 }
-
-/*
-.text {
-  font-size: 16px;
-  padding: 16px 32px;
-  width: 85%;
-  color: white;
-}
-
-
-*/
-
-
-/* Movie Detail section */
 
 .details-wrapper img {
   width: 100%;
@@ -200,31 +197,12 @@ code {
   opacity: 1;
 }
 
-.back-btn {
-  position: absolute;
-  margin: 15px;
-  width: 40px;
-  height: 40px;
-  z-index: 10;
-}
-
-.back {
-  display: flex;
- 
-}
-
-/*obsolete mobile specific stylings:*/
-
-
-/*apply the above mobile rules to the below wrappers*/
-
 .image-wrapper img {
   border: none;
   object-fit: cover;
 }
 
 .text-wrapper {
-  /*width: 90%;*/
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -233,21 +211,15 @@ code {
   box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.7);
 }
 
-.text-wrapper h1 {
-  /*padding: 0px 30px 0px 30px;*/
-}
-
 .text-wrapper p {
-  /*padding: 0px 30px 0px 30px;*/
   font-size: 18px;
 }
 
 .text-wrapper span {
-  font-size: 17px; /* kan kommenteras ut */ 
+  font-size: 17px;
   color: red;
-  font-weight: 200; /* kan kommenteras ut */ 
+  font-weight: 200;
   padding: 0px 0px 0px 20px
-  /*padding: 0px 0px 0px 20px; /* kan kommenteras ut */ 
 }
 
 .text-wrapper ul {
@@ -266,7 +238,6 @@ code {
 .text-wrapper a:hover { 
   text-decoration: underline;
   color: #fff;
-
 }
 
 
@@ -284,7 +255,6 @@ code {
     background-color: black;
   }
   
-
 }
 
 @media (min-width: 600px) {
@@ -311,54 +281,57 @@ code {
 
 
 @media (min-width: 900px) {
+  
   .movies-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  
-
-  
 }
 
 
 @media (min-width: 1300px) {
+
+  .moving-right {
+    position: absolute;
+    padding-left: 45px;
+    transition: transform 0.3s ease;
+    transform: translateX(0px);
+    z-index: 50;
+  }
+  
+  .moving-right:hover {
+    transform: translateX(10px);
+  
+  }
+
   .movies-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  /*activate desktop layout*/
-
   .middle {
     display: block;
   }
 
-  .text-mobile {
+  .text-mobile, .mobile-version {
     display: none;
   }
 
-
-  .mobile-version {
-    display: none;
-  }
-  
-  
   .details-content {
     display: block;
-     height: 100%;
+    height: 100%;
     background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
-    background-color: rgba(0,0,0,0);;
+    background-color: rgba(0,0,0,0);
   }
-
 
   .details-wrapper img {
     width: 100%;
-  
   }
 
   .image-wrapper {
     z-index: 50;
+    width: 300px
   }
 
   .image-wrapper img {
@@ -377,7 +350,6 @@ code {
     display: flex;
     flex-direction: column;
     padding: 0 0 0 40px
-    /*padding-left: 40px;*/
   }
 
   .text-wrapper h1 {
