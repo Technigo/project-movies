@@ -6,9 +6,8 @@ The goal for this project was to build our first multi-page React application, i
 
 We used the provided API To fetch popular movies in the US to show whatever endpoint we wanted to build our list up. We registered to get the API persmissions and started creating the pages. Once we did the fetch, we were able to render the movie's data right away. The main challenge was learning how to use placeholders in the url to pick dynamic parts from the urls in order to make specific selections.
 
-The landing page is defined in App.js, which is also where we include my main React Router Switch, with all the different pages available.
+In order to get the list of movies showing, we moved into the MoviesList component, which is where we did the main fetch and get data listing all the movies. For this we used the useEffect and stored the data by setting up a state.
 
-In order to get the list of movies showing, I move into the MoviesList component, which is where I do the main fetch and get data listing all the movies. For this this we used the useEffect and stored the data by setting up a state.
 Then, we used the map method on the movies array to generate the different movie cards. Users will be able to click on the different movie cards in order to go to a page showing the movie details.
 
 On the MovieDetails page, we did a new fetch according to the id of the movie that the user has clicked on. It is determined which movie it is by the use of params. 
