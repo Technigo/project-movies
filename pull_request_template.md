@@ -1,5 +1,12 @@
-Link to my deployed project:
+Link to our deployed project
+https://musing-noether-fb9258.netlify.app/
 
-My reflections on how this week's project turned out:
+Our reflections on how this week's project turned out
+It was a fun and challenging project! React Router is a great feature, can't wait to deep dive more into React!
 
-Things I'd like to have clarified or explained in more detail:
+One problem that we encountered was when we tried to move the useParams from the components MovieList and MovieDetails to App.js, it made the node_modules crash. We tried to fix it but ended up moving our code to a new repo instead.
+
+
+Things we'd like to have clarified or explained in more detail
+We would've like to hear more about useHistory and its different methods and use cases. We know that our component BackLink isn't working as we would've wanted it (it's not dynamic). 
+
