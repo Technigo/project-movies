@@ -6,13 +6,13 @@ export const Pills = styled.ul`
   margin: 0;
   color: white;
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
 `;
 
 export const Pill = styled.li`
   background: var(--primary);
   padding: 1em;
-  margin: 0 0.5em;
+  margin: 0.5em;
   border-radius: 2em;
   font-size: .8em;
 `;

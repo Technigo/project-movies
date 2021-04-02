@@ -24,6 +24,11 @@ const Wrapper = styled.section`
   & > .side-icon > svg {
     height: 100%;
   }
+  @media only screen and (max-width: 768px) {
+    & > .side-icon {
+      font-size: 50px;
+    }
+  }
   
 `;
 

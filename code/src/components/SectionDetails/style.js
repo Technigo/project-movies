@@ -16,11 +16,15 @@ export const DetailsWrapper = styled.section`
     height: 100%;
     background: url(${(props) => props.backdrop}) no-repeat;
     background-size: cover;
-    background-position: center;    
+    background-position: center;
   }
 
   & > * {
     position: relative;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 1em 2em;
   }
 `;
 
@@ -30,6 +34,6 @@ export const DetailsText = styled.div`
   color: white;
 
   & > h1 {
-    padding: 1em 0 0.5em 0;
+    padding: 0.5em 0;
   }
 `;
