@@ -38,7 +38,7 @@ const MovieDetail = () => {
 
 
     useEffect(() => {
-        if (statusCode !== 200 || id.length > 19) {
+        if (statusCode !== 200 || id.length > 19) {//
             console.log("IS ERROR")
             history.push("/error")
             console.log(loading)
@@ -104,7 +104,7 @@ const MovieDetail = () => {
                         <p>{details.overview}</p>
 
                         {prodComp.map(comp => {
-                        return <Link to={`/companies/${comp.name}`}>{comp.name}</Link>
+                        return <Link to={`/companies/${comp.id}`}>{comp.name}</Link>
                     }
                         
                     )} 

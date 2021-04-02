@@ -12,6 +12,40 @@ code {
     monospace;
 }
 
+.company-page {
+  background-color: #000;
+  color: #fff;
+  padding: 50px
+}
+
+.company-logo {
+  background-color: #fff;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 25px;
+}
+
+.company-page span {
+  margin-left: 15px;
+  font-weight: 400;
+}
+
+.company-page a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.company-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-page-container-desktop {
+  display: none;
+}
+
 /*------------- Landing/sorting page -------------*/
 
 .sort-by {

@@ -5,8 +5,10 @@
 // [X] Format second page according to guidelines
 // [X] Add a rating
 // [X] image not found 
-// [] Handle 404 page not found
-// [] Handle loading state
+// [X] Handle 404 page not found
+// [X] Handle loading state
+// [] Add Company page
+// [] Reshape error function 
 
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
