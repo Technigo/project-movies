@@ -21,16 +21,17 @@ export const MovieDetails = () => {
   //return Loading spinner component here
 
   return (
-    <div>
+    <div className="detail-container">
       <Link to={"/"}>
-        <div className="back-link"><img className="back-link-icon"/><h3>Movies</h3></div>
+        <div className="back-link"><img src= "/assets/backarrow50px.png" className="back-link-icon" alt="Go back to list of movies" /><h2>Movies</h2></div>
       </Link>
       <img className="detail-backdrop" src={`https://image.tmdb.org/t/p/original/${details.backdrop_path}`} alt={details.title}/>
       <img className="detail-movie-poster" src={`https://image.tmdb.org/t/p/w500/${details.poster_path}`} alt={details.title}/>
-      <h2 className="detail-title">{details.title}</h2>
-      <h3 className="detail-rating">{details.vote_average}/10</h3>
-      <p className="detail-summary">{details.overview}</p>
-      
+      <div className="detail-info-container">
+        <h1 className="detail-title">{details.title}
+        <span className="detail-rating">{details.vote_average}/10</span></h1>
+        <p className="detail-summary">{details.overview}</p>
+      </div>
     </div>
   )
 }
