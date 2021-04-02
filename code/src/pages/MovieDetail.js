@@ -39,12 +39,12 @@ export const MovieDetail = () => {
             </div>
             </Link> 
             <div className="movie-details-card">
+              <img className="movie-poster" src={`https://image.tmdb.org/t/p/w780${movieDetail.poster_path}`} alt="movie poster"/>
                 <div className="movie-details-text"> 
-                <h2 className="movie-title">{movieDetail.original_title}</h2>
-                <p className="movie-vote">{movieDetail.vote_average}/10</p>
-                <p className="movie-overview">{movieDetail.overview}</p>
+                  <h2 className="movie-title">{movieDetail.original_title}</h2>
+                  <p className="movie-vote">{movieDetail.vote_average}/10</p>
+                  <p className="movie-overview">{movieDetail.overview}</p>
                 </div> 
-                <img className="movie-poster" src={`https://image.tmdb.org/t/p/w300${movieDetail.poster_path}`} alt="movie poster"/>
             </div>
         </section>
 

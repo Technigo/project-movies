@@ -4,11 +4,20 @@ body {
 	margin: 0;
 	box-sizing: border-box;
 	font-family: "Roboto", sans-serif;
+	background-color: black;
 }
 
 .movie-list-container {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+.movie-list-container a {
+	display: flex;
+	text-decoration: none;
+	color: white;
 	width: 100%;
 }
 
@@ -25,26 +34,43 @@ body {
 	position: relative;
 }
 
+.movie-card {
+	position: relative;
+	text-decoration: none;
+}
+
 .movie-thumb-text {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	width: 230px;
+	flex-direction: column;
+	justify-content: flex-end;
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+	bottom: 0;
+	top: 0;
+	right: 0;
+	left: 0;
+	padding: 25px;
+}
+
+.thumb-title {
+	font-size: 25px;
+	margin: 0;
+	width: 100%;
+}
+
+.release-date {
+	font-size: 18px;
+	margin: 0;
 }
 
 /* Movie Details */
 
 .movie-details-page {
-	padding: 35px;
+	padding: 60px;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	min-height: 100vh;
 }
-
-/* .background-img {
-	display: none;
-} */
 
 .back-arrow-wrapper {
 	display: flex;
@@ -70,16 +96,20 @@ body {
 	color: white;
 }
 
-.movie-details-text {
-	opacity: 0.7;
-	background-color: black;
-	padding: 25px;
-}
-
 .movie-poster {
 	width: 100%;
 	border: 2px solid white;
 	margin: 25px 0;
+}
+
+/*creates a dark background behind the text
+and the opacity should be set in the color so it
+doesn't applies to the text too*/
+
+.movie-details-text {
+	background: rgba(0, 0, 0, 0.6);
+	padding: 25px;
+	font-size: 16px;
 }
 
 .movie-vote {
@@ -99,6 +129,32 @@ body {
 	.movie-thumb {
 		width: 50%;
 	}
+
+	.back-arrow-icon {
+		width: 50px;
+		height: 50px;
+	}
+
+	.back-arrow-text {
+		font-size: 28px;
+	}
+
+	.movie-details-page {
+		height: 100vh;
+	}
+
+	.movie-poster {
+		display: flex;
+		width: 35%;
+		border: 4px white solid;
+	}
+
+	.movie-details-text {
+		font-size: 17px;
+		margin-top: 20px 10px;
+		padding: 10px 30px;
+		width: 50%;
+	}
 }
 
 @media (min-width: 1024px) {
@@ -111,5 +167,34 @@ body {
 
 	.movie-thumb {
 		width: 25%;
+	}
+
+	.movie-thumb-text {
+		display: none;
+	}
+
+	.movie-thumb-text:hover {
+		display: flex;
+	}
+
+	/* Movie Details */
+
+	.movie-details-page {
+		padding-left: 80px;
+	}
+	.movie-details-card {
+		margin-top: 240px;
+		flex-direction: row;
+		align-items: flex-end;
+	}
+
+	.movie-poster {
+		width: 300px;
+		margin-right: 40px;
+	}
+
+	.movie-details-text {
+		width: 500px;
+		margin-bottom: 22px;
 	}
 }
