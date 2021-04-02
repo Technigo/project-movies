@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Header from './components/Header'
 import MovieList from './pages/MovieList'
 import MovieInfo from './pages/MovieInfo'
-import CompanyPage from 'pages/CompanyPage'
+import CompanyPage from './pages/CompanyPage'
 
 export const App = () => {
   const [movieListType, setMovieListType] = useState('popular')

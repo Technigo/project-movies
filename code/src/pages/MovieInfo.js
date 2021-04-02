@@ -4,7 +4,7 @@ import { useParams, useHistory } from 'react-router-dom'
 import Loader from "react-loader-spinner"
 
 import { MOVIE_URL } from '../reusables/urls'
-import CompanyThumb from 'components/CompanyThumb'
+import CompanyThumb from '../components/CompanyThumb'
 
 const MovieInfo = () => {
   const { id } = useParams()
@@ -62,7 +62,7 @@ const MovieInfo = () => {
                 <h1 className="info-title">{movie.title}</h1>
                 <p className="info-rating">{movie.vote_average}/10</p>
                 <p className="info-overview">{movie.overview}</p>
-                {movie.production_companies.map(company => <CompanyThumb key={company.id} {...company} />)}
+                {movie.production_companies.map((company) => <CompanyThumb key={company.id} {...company} />)}
               </div>
             </div>
           </div>
