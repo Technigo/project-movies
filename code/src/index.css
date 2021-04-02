@@ -1,8 +1,8 @@
 :root {
-  --primary: #3D50FA;
-  --secondary: #3442B4;
+  --primary: #3d50fa;
+  --secondary: #3442b4;
   --dark1: #212125;
-  --dark2: #191A20;
+  --dark2: #191a20;
 }
 
 body {
@@ -18,20 +18,21 @@ i {
   color: gray;
 }
 
-p, i {
+p,
+i {
   margin: 1em 0;
 }
 
 h1 {
-  font-family: 'Raleway', sans-serif;  
-  margin:0;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
   padding: 1em 0;
   font-weight: normal;
   font-size: 32px;
 }
 
 h1 > span {
-  font-size: .8em;
+  font-size: 0.8em;
   color: lightgray;
-  margin: 0 .5em;
+  margin: 0 0.5em;
 }

@@ -13,7 +13,6 @@ const Poster = ({ id, title, ...other }) => {
   return (
     <>
       <PosterImage src={`${IMAGE_POSTER(185, other.poster_path)}`} alt={title} />
-      {/* <iframe title={id} width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY" /> */}
     </>
   );
 };

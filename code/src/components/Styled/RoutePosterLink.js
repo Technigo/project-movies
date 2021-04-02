@@ -16,9 +16,9 @@ const RoutePosterLink = styled(Link)`
     background: var(--dark2);
     transition: all 0.3s ease-in-out;
   }
-  
+
   &:hover::before {
     opacity: 0.7;
   }
 `;
-export default RoutePosterLink
+export default RoutePosterLink;

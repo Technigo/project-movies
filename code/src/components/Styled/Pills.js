@@ -14,5 +14,5 @@ export const Pill = styled.li`
   padding: 1em;
   margin: 0.5em;
   border-radius: 2em;
-  font-size: .8em;
+  font-size: 0.8em;
 `;

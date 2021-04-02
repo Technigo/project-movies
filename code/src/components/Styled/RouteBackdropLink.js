@@ -39,9 +39,9 @@ const RouteBackdropLink = styled(Link)`
     font-size: 24px;
     transition: all 0.3s ease-in-out;
   }
-  
+
   &:hover > .icon--show-on-hover {
-    margin-left: .5em;
+    margin-left: 0.5em;
     opacity: 1;
   }
 `;

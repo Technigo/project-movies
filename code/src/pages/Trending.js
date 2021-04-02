@@ -7,7 +7,7 @@ import List from 'components/Styled/List';
 import MainWrap from 'components/Styled/MainWrap';
 import RoutePosterLink from 'components/Styled/RoutePosterLink';
 import Poster from 'components/Poster';
-import LoaderSpinner from 'components/LoaderSpinner'
+import LoaderSpinner from 'components/LoaderSpinner';
 
 const Trending = () => {
   const { data, loading } = useFetch(

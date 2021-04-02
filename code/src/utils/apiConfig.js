@@ -9,6 +9,4 @@ export const IMAGE_URLS = {
 };
 
 export const IMAGE_POSTER = (width, path) => `https://image.tmdb.org/t/p/w${width}${path}`;
-export const IMAGE_BACKDROP = (path) => (path
-  ? `https://image.tmdb.org/t/p/w1280${path}`
-  : null);
+export const IMAGE_BACKDROP = (path) => (path ? `https://image.tmdb.org/t/p/w1280${path}` : null);

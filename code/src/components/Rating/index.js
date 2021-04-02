@@ -19,7 +19,7 @@ const RatingCircle = styled.svg`
 `;
 
 const Rating = ({ rating }) => {
-  const ratingDegree = 360 - (360 * (rating / 10));
+  const ratingDegree = 360 - 360 * (rating / 10);
   return (
     <>
       <RatingCircle ratingVal={ratingDegree}>

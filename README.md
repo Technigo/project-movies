@@ -55,30 +55,21 @@ $ npm start
   * Header
     * click on title => directs to `/`
 
-## 🗝️ Key Moments 🗝️
-***
-### moment1
-ccc
-
-***
-### moment2
-ccc
-
-***
-### final thoughts/moment3
-ccc
-
 
 ***
 ## 💭 Reflections 💭
-generally??
+All in all this project was really hard for me to start working on. I struggled alot with getting inspired to even begin. However half-way through the week I managed to pull myself together and get cracking!
+
+Once production had begun it was easy to get everything running. Also, I actually managed to create a custom hook for the fetch request function! 😃 So happy about this!
 <br><br>
 Issues that came up:
-- ccc 
+- My main issue (apart from lack of inspo.) was to get structure the project in a sensible way. I knew what paths I needed but since my design ideas changed throughout the week I struggled with making useful components. But I managed to solve this eventually as my design got clearer.
 
 
 If I were to continue on this project / start over I would:
-- ccc
+- Add more lists
+- Work on the responsiveness more
+- Look over my structure for components, try to find ways to minimize the amount of imports I have.
 
 <br>
 
@@ -86,4 +77,4 @@ If I were to continue on this project / start over I would:
 
 ## View it live
 
-netlifylink
+https://filmoona.netlify.app/
