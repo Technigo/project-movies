@@ -1,19 +1,15 @@
 # Project Movies
-
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is a project that was made during the Technigo Bootcamp. The assignment was built with React and we worked with an external API.  
 
 ## The problem
+We started with building all the components in App, and then we moved them to separate pages/components. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+If we had more time we would work more with cathing errors. We explored this a bit but we could not make it work so we had to remove it in the end.
+We would also move all the urls into the right folder. 
+
+We also had a little bit of problem to make the animation on 'BackButton' to have a smooth transition back to its original position.
 
 ## View it live
 
 https://suspicious-wright-21d05f.netlify.app
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-
-- move all urls to separate file
-- transition on button slow back
-- use rem/em for all text

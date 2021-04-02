@@ -74,7 +74,7 @@ code {
 .poster-image-container img {
   border: 5px solid #fff;
   width: 342px;
-  }
+}
 
 .summary-text {
   padding-left: 20px;
@@ -88,22 +88,13 @@ code {
 }
 
 /*********NOT FOUND*********/
+
 .not-found-text {
   margin-left: 50px;
   
 }
 
 /*********BUTTON***********/
-
-.backbutton-link {
-  text-decoration: none;
-  position: absolute;
-  z-index: 2;
-  color: white;
-  left: 50px;
-  top: 50px;
-  font-weight: 700; 
-}
 
 svg {
   width: 30px;
@@ -115,6 +106,16 @@ svg {
   display: inline-flex;  
 }
 
+.backbutton-link {
+  text-decoration: none;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  left: 50px;
+  top: 50px;
+  font-weight: 700; 
+}
+
 .backbutton-link:hover p {
   transform: translateX(5px);
   transition: all 0.3s linear;
@@ -123,7 +124,8 @@ svg {
 /*********FONT SIZES**********/
 
 h1 {
-  font-size: 17rem;
+  font-size: 18rem;
+  margin: 0;
 }
 
 p {
@@ -134,6 +136,12 @@ p {
 /*********MEDIA QUERIES**********/
 
 @media (min-width: 768px) {
+  html {
+    font-size: 1.2px;
+  }
+}
+
+@media (min-width: 992px) {
   html {
     font-size: 1.5px;
   }

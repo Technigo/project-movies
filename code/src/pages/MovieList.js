@@ -23,8 +23,7 @@ export const MovieList = () => {
             <div className="movie-info">
                 <h1>{movie.title}</h1>
                 <p>Released: {movie.release_date}</p>
-              </div>
-           
+              </div>           
           </Link>
         ))}
       </main>

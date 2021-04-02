@@ -4,12 +4,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { MovieList } from './pages/MovieList'
 import { MovieDetails } from './pages/MovieDetails'
 import { NotFound } from './pages/NotFound'
-// import { BackButton } from './components/BackButton'
-
-
 
 export const App = () => {
-
 
   return (
   <BrowserRouter>
@@ -20,7 +16,7 @@ export const App = () => {
       <Route path="/movies/:movieId" exact>
         < MovieDetails/>
       </Route>
-      < Route path="*">
+      < Route>
         <NotFound />
       </Route>
     </Switch>

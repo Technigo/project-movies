@@ -12,7 +12,7 @@ export const NotFound = () => {
           <p>Back to main page</p>
         </div>  
       </Link>
-      <div  className="not-found-text">
+      <div className="not-found-text">
         <p>Ups! This page is not found <span role="img" aria-label="penguin">🐧</span></p>
       </div>
     </>
