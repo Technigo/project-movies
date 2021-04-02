@@ -192,20 +192,15 @@ code {
 
 .details-wrapper img {
   width: 100%;
-
+  background-image: none;
 }
 
-.mobile-version {
+.details-content {
   background-color: black;
   opacity: 1;
 }
 
-.desktop-version {
-  display: none;
-}
-
 .back-btn {
-  
   position: absolute;
   margin: 15px;
   width: 40px;
@@ -218,18 +213,62 @@ code {
  
 }
 
-.mobile-version span {
-  color: red;
+/*obsolete mobile specific stylings:*/
+
+
+/*apply the above mobile rules to the below wrappers*/
+
+.image-wrapper img {
+  border: none;
+  object-fit: cover;
 }
 
-.mobile-version p {
-  padding: 0px 30px 60px 30px;
+.text-wrapper {
+  /*width: 90%;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px 40px 40px 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.7);
+}
+
+.text-wrapper h1 {
+  /*padding: 0px 30px 0px 30px;*/
+}
+
+.text-wrapper p {
+  /*padding: 0px 30px 0px 30px;*/
   font-size: 18px;
 }
 
-.mobile-version h1 {
-  padding: 0px 30px 0px 30px;
+.text-wrapper span {
+  font-size: 17px; /* kan kommenteras ut */ 
+  color: red;
+  font-weight: 200; /* kan kommenteras ut */ 
+  padding: 0px 0px 0px 20px
+  /*padding: 0px 0px 0px 20px; /* kan kommenteras ut */ 
 }
+
+.text-wrapper ul {
+  display: inline-block;
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0px;
+  padding: 0px;
+}
+
+.text-wrapper a { 
+  text-decoration: none;
+  color: #fff;
+}
+
+.text-wrapper a:hover { 
+  text-decoration: underline;
+  color: #fff;
+
+}
+
 
 @media (min-width: 500px) {
 
@@ -304,24 +343,23 @@ code {
     display: none;
   }
   
-  .desktop-version {
+  
+  .details-content {
     display: block;
-    height: 100%;
-    background-image: linear-gradient(to top, rgba(0,0,0,0.6), rgba(255,0,0,0));
+     height: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    background-color: rgba(0,0,0,0);;
   }
+
 
   .details-wrapper img {
     width: 100%;
   
   }
 
-  /*--------------------------------*/
-
-  /*.test1 {
-    position: absolute;
-    bottom: 10%;
-    left: 5%;
-  }*/
+  .image-wrapper {
+    z-index: 50;
+  }
 
   .image-wrapper img {
     border: 5px solid white;
@@ -338,8 +376,8 @@ code {
     width: 25%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding-left: 40px;
+    padding: 0 0 0 40px
+    /*padding-left: 40px;*/
   }
 
   .text-wrapper h1 {

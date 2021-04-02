@@ -7,9 +7,9 @@
 // [X] image not found 
 // [X] Handle 404 page not found
 // [X] Handle loading state
-// [] Add Company page
-// [] Reshape error function
-// [] Instead of conditional rendering depending on mobile or desktop, use css media queries!
+// [X] Add Company page
+// [X] Reshape error function
+// [X] Instead of conditional rendering depending on mobile or desktop, use css media queries!
 
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'

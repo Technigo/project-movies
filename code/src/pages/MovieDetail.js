@@ -75,14 +75,15 @@ const MovieDetail = () => {
         <div className='details-wrapper' 
             style={{
                 backgroundImage: "url(https://image.tmdb.org/t/p/w1280" + details.backdrop_path
+                //backgroundImage: { window.innerWidth === 1300px ? "url(https://image.tmdb.org/t/p/w1280" + details.backdrop_path : "none"}
             }}
             >
             <BackButton />
             
-            <div className="mobile-version">
+            {/* <div className="mobile-version">
                 <img src={details.poster_path === null ? "../assets/poster_not_found.png" : `https://image.tmdb.org/t/p/w300${details.poster_path}`} alt={details.title}/>
                 <h1>{details.original_title} <span>{details.vote_average}/10</span></h1> {/*missing styling for this span?*/}
-                <p>{details.overview}</p>
+                {/*<p>{details.overview}</p>
                 
                     {prodComp.map(comp => {
                         return (
@@ -95,10 +96,10 @@ const MovieDetail = () => {
                             </li>
                         )
                     })} 
-            </div>
+            </div> */}
 
 
-            <div className="desktop-version">
+            <div className="details-content ">
                 <div className="information-wrapper"> {/*unique to desktop ver. and could be handy in the phone version too*/}
                     <div className="image-wrapper"> {/*unique to desktop ver. and applies styling difference*/}        
                         <img src={details.poster_path === null ? "../assets/poster_not_found.png" : `https://image.tmdb.org/t/p/w300${details.poster_path}`} alt={details.title}/>
@@ -108,6 +109,8 @@ const MovieDetail = () => {
                         <h1>{details.original_title}<span>{details.vote_average}/10</span></h1>
                         <p>{details.overview}</p>
 
+                        
+                            <h3>Producers</h3>
                         <ul>
                             {prodComp.map(comp => {
                                 return (
@@ -121,6 +124,7 @@ const MovieDetail = () => {
                                 )
                             })} 
                         </ul>
+                        
                     </div>
                 </div>
             </div>
