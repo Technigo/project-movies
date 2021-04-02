@@ -22,4 +22,4 @@ API
 
 ## View it live
 
-movie-site-2021.netlify.app
+https://movie-site-2021.netlify.app/
