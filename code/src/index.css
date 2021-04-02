@@ -21,34 +21,46 @@ body {
 	width: 100%;
 }
 
-.movie-thumb {
+.movie-thumb-wrapper {
 	width: 100%;
 }
 
-.movie-thumb:hover {
-	opacity: 0.5;
-}
-
-.thumb-img {
-	width: 100%;
-	position: relative;
-}
-
-.movie-card {
+.movie-thumb-link {
 	position: relative;
 	text-decoration: none;
 }
 
+.thumb-img {
+	width: 100%;
+	/* 	position: relative;  I dont know what
+  this one was doing in here*/
+}
+
 .movie-thumb-text {
+	/*styling for keeping text at the bottom of movie thumb*/
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+	/* styling for the hover effect on movie thumb*/
 	position: absolute;
 	bottom: 0;
 	top: 0;
 	right: 0;
 	left: 0;
 	padding: 25px;
+	/*text needs to be hidden and needs black background, no opacity 
+  and transition set here*/
+	visibility: hidden;
+	background: rgba(0, 0, 0, 0.8);
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+/*hovering on link will affect the movie thumb text*/
+.movie-thumb-link:hover .movie-thumb-text {
+	opacity: 1;
+	visibility: visible;
+	cursor: pointer;
 }
 
 .thumb-title {
@@ -126,7 +138,7 @@ doesn't applies to the text too*/
 		width: 100%;
 	}
 
-	.movie-thumb {
+	.movie-thumb-wrapper {
 		width: 50%;
 	}
 
@@ -165,16 +177,8 @@ doesn't applies to the text too*/
 		width: 100%;
 	}
 
-	.movie-thumb {
+	.movie-thumb-wrapper {
 		width: 25%;
-	}
-
-	.movie-thumb-text {
-		display: none;
-	}
-
-	.movie-thumb-text:hover {
-		display: flex;
 	}
 
 	/* Movie Details */
@@ -182,6 +186,7 @@ doesn't applies to the text too*/
 	.movie-details-page {
 		padding-left: 80px;
 	}
+
 	.movie-details-card {
 		margin-top: 240px;
 		flex-direction: row;
