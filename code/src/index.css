@@ -436,12 +436,16 @@ code {
     margin: 20px;
   }
 
+  .background-image {
+    height: 94vh;
+  }
+
   .movie-details {
     margin: 20px;
   }
 
   .details-text {
-    margin: 0 0 80px 0;
+    margin: 0 0 100px 0;
   }
 
   .genre, .runtime {
@@ -485,6 +489,15 @@ code {
   }
   .overview {
     font-size: 14px;
+  }
+
+  .logos .fa {
+    font-size: 18px;
+    padding: 2px;
+  }
+  
+  .copyright {
+    font-size: 12px;
   }
 }
 
