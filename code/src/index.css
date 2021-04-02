@@ -46,6 +46,7 @@ code {
   position: relative;
   top: 0;
   left: 0;
+  width: 80%;
 }
 
 .homeLink {
@@ -78,7 +79,6 @@ code {
   align-items: flex-start; 
   flex-direction: column;
   justify-content: flex-end;
-  padding-left: 20px;
 }
 
 .movie-overlay:hover {
@@ -86,10 +86,16 @@ code {
 }
 
 .movieTitle {
-  font-size: 24px;
-  margin-bottom: 0;
+  font-size: 15px;
+  margin: 5px 5px 0 5px;
+  padding: 5px;
 }
-
+.movie-release-date {
+  font-size: 10px;
+  word-wrap: break-word;
+  padding: 0 5px 20px 5px;
+  margin: 5px;
+}
 .movies a {
   text-decoration: none;
   color: #fff;
@@ -100,6 +106,7 @@ code {
   top: 200px;
   left: 10px;
   bottom: 10px;
+  border: solid #fff;
 }
 
 .cardImage a {
@@ -108,45 +115,79 @@ code {
 
 .cardImage a img {
   width: 100%;
-  border: solid #fff;
 }
 
 .movieDetails {
   position: absolute;
   left: 15px;
   bottom: 20px;
+  background: rgb(0, 0, 0);
+  background: rgba(4, 4, 4, 0.8); 
+  margin: 0 10px;
+  padding: 10px;
 }
 
 .votes {
   color: red;
   font-size: 17px;
   font-weight: normal;
+  padding-left: 15px;
+  margin: 0;
+  font-size: 24px;
 }
-
+.title-votes-container {
+  display: flex; 
+}
+.title-details {
+  margin: 0;
+  padding: 0; 
+  font-size: 24px;
+}
 .movieOverview {
   width: 300px;
   overflow: hidden;
 }
-
+/*ipad*/
+@media only screen and (min-width: 700px) {
+ .movieDetails {
+  background: transparent;
+  left: 380px;
+ }
+ .movieTitle {
+   font-size: 25px;
+ }
+ .movie-release-date {
+  font-size: 17px; 
+ }
+ .movieOverview {
+   /* width: 100%; */
+ }
+}
+/*laptop*/
 @media only screen and (min-width: 992px) {
   
   .cardImage img {
-    width: 10%;
+    width: 30%;
     left: 10px;
-    top: 400px;
+    top: 140px;
   }
   
-  .cardImage a {
+  .movie-overlay {
+    padding-left: 20px;  
+  }
+
+    /*.cardImage a {
     width: 10%;
-  }
-  .cardImage a img {
-    width: 25%;
-  }
+  }*/
+
+  /*.cardImage a img {
+    width: 30%;
+  }*/
 
   .movieDetails {
     position: absolute;
-    left: 200px;
-    top: 400px;
+    left: 400px;
+    top: 500px;
   }
 }
 
