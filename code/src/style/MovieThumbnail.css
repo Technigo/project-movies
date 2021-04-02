@@ -47,3 +47,19 @@
 .movie-text-container p {
   font-size: 16px;
 }
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 768px) {
+  .movie-thumbnail-container {
+    width: 100%;
+  }
+
+  .movie-text-container h1 {
+    font-size: 35px;
+  }
+
+  .movie-text-container p {
+    font-size: 22px;
+  }
+}

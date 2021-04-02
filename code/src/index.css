@@ -17,3 +17,14 @@ code {
   display: flex;
   flex-wrap: wrap;
   }
+
+
+  /*MEDIA QUERIES*/
+
+  @media (max-width: 768px) {
+    .movie-list-container {
+      display: flex;
+      flex-direction: column;      
+    }
+
+  }
