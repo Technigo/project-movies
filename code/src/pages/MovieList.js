@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { MovieThumb } from "./MovieThumb"
+import { MovieThumb } from "../components/MovieThumb"
 
 export const MovieList = () =>{
   const MOVIES_URL = "https://api.themoviedb.org/3/movie/popular?api_key=e7fa02905a065e6c75198742ec299b55&language=en-US&page=1";
