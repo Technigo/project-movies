@@ -13,6 +13,6 @@ export const MovieThumb = ({name, poster_image, rating, released, id}) =>{
         </div>
       </div>
     </section>
-  </Link>
+    </Link>
   );
 }

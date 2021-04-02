@@ -121,8 +121,8 @@ a {
 }
 
 .back-button:hover {
- cursor: pointer;
- margin-right: 8px; 
+  cursor: pointer;
+  margin-right: 8px; 
 }
 
 .back-button img {
@@ -136,11 +136,6 @@ a {
 
 .detail-wrapper {
   display: flex;
-}
-
-#backgroundImage {
-  background: rgb(0,0,0);
-background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 100%);
 }
 
 @media (max-width: 1280px) {

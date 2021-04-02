@@ -12,7 +12,7 @@ export const MovieDetails = () => {
     fetch(DETAILS_URL)
     .then(response => response.json())
     .then(json => setMovieDetails(json))
-  }, [id]);
+  }, [DETAILS_URL]);
 
   return(
     <> 
