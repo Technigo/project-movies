@@ -1,12 +1,18 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project brief was to build a multi-page React application using an API.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started out by creating a page with a fetch to display a list of popular movies and then added a component to handle the elements. After that we set up a page that fetches the movie details from "id". We continued by adding some styling to make it match the styling brief and to make it resposive. 
+
+The next step was to set up a router so that the pages could be linked. We also added a backlink making it possible to go back to the list from the detail page. 
+
+We didn't run into any major problems, the project went quite smoothly. If we had more time we might have added more features. 
+
+Tools: VS Code, StackOverflow, Slack, LiveServer, Netlify, Github.
+
+Techniques: CSS, HTML5, JavaScript, JSX, React, React Router DOM, API.
 
 ## View it live
 
