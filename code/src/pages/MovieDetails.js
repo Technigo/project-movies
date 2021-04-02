@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 
-import "../index.css";
+import "../index.css"
 
-import BackButton from "../components/BackButton";
+import BackButton from "../components/BackButton"
 
 export const MovieDetails = () => {
-  const { movieId } = useParams();
-  const [movieDetails, setMovieDetails] = useState([]);
+  const { movieId } = useParams()
+  const [movieDetails, setMovieDetails] = useState([])
 
   useEffect(() => {
     fetch(
       `https://api.themoviedb.org/3/movie/${movieId}?api_key=50eb4adf4920d3714372a2ce134f64ac&language=en-US`
     )
       .then((res) => res.json())
-      .then((json) => {
-        setMovieDetails([json]);
-      });
-  }, [movieId]);
+      .then((json) => 
+        setMovieDetails([json])
+      )
+  }, [movieId])
 
   return (
     <section className="movie-details-page">
