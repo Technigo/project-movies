@@ -23,9 +23,11 @@ export const MovieDetails = () => {
   return (
     <div className="detail-container">
       <Link to={"/"}>
-        <div className="back-link"><img src= "/assets/backarrow50px.png" className="back-link-icon" alt="Go back to list of movies" /><h2>Movies</h2></div>
+        <div className="back-link"><img src= "/assets/backarrow50px.png" className="back-link-icon" alt="Go back to list of movies" /><h2 className="back-link-text">Movies</h2></div>
       </Link>
+      <div className="detail-backdrop-container">
       <img className="detail-backdrop" src={`https://image.tmdb.org/t/p/original/${details.backdrop_path}`} alt={details.title}/>
+      </div>
       <img className="detail-movie-poster" src={`https://image.tmdb.org/t/p/w500/${details.poster_path}`} alt={details.title}/>
       <div className="detail-info-container">
         <h1 className="detail-title">{details.title}
