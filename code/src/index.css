@@ -1,3 +1,7 @@
+* {
+  object-fit: cover;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
@@ -12,62 +17,117 @@ code {
     monospace;
 }
 
-.movie-container {
+.movie-list-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .movie {
-  width: 25%;
+  width: 25vw;
   position: relative;
   text-decoration: none;
 }
 
-.poster-image {
+.poster-image-element {
   width: 100%;
   display: block;
 }
 
 
 .overlay {
-  display: inline-block;
+  display: flex;
   flex-direction: column;
   position: absolute;
-  top: 75%;
-  left: 1%;
+  justify-content: flex-end;
+  top: 0;
+  left: 0;
   z-index: 1;
   color: white;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-
-
-
+.overlay:hover {
+  opacity: 1;
+}
 
 .movie-title {
-  font-size: 30px;
+  font-size: 24px;
+  padding: 0 20px;
+}
+
+.movie-release {
+  padding: 0 20px;
+}
+
+.background-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .button-back {
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   margin: 2px;
   align-items: center;
+  z-index: 1;
+  top: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
 }
 
 .arrow {
-  text-decoration: none;
-  background-color: black;
-  font-size: 16px;
-  width: 2%;
-  border-radius: 50%;
-  text-align: center;
-  margin: 10px
+  margin: 10px;
+  width: 30px;
 }
 
-.arrow p {
+
+
+.poster-image {
+  border: white solid 5px;
+  width: 23vw;
+} 
+
+.details-overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+  top: 150px;
+  left: 35px;
+} 
+
+.details-overlay-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   color: white;
+  margin-left: 20px;
 }
+
+.movie-vote {
+  font-size: 15px;
+  color: red;
+  margin-left: 20px;
+}
+
+.movie-description {
+  max-width: 450px;
+}
+
+
+
+
+
 
 
 

@@ -28,11 +28,14 @@ export const Details = () => {
         <div className="movie-page">
             <ButtonBack />
             <img className="background-image" src={MOVIE_BACKDROP(details.backdrop_path)} />
-            <img className="poster-image" src={MOVIE_BACKDROP(details.poster_path)} />
-            <div className="overlay-text">
-                <h1 className="movie-header">{details.title}</h1>
-                <p className="movie-vote">{details.vote_average}</p>
-                <p className="movie-decripstion">{details.overview}</p>
+            <div className="details-overlay">
+                <img className="poster-image" src={MOVIE_BACKDROP(details.poster_path)} />  
+                <div className="details-overlay-text">
+                    <h1 className="movie-header">{details.title}
+                        <span className="movie-vote">{details.vote_average}/10</span>
+                    </h1>
+                    <p className="movie-description">{details.overview}</p>
+                </div>
             </div>
         </div> 
     )
