@@ -1,6 +1,3 @@
-*{
-  margin:0;
-}
 
 body {
   margin: 0;
@@ -15,6 +12,55 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.movie-list {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100vw;
+}
+/* .movie-card {
+} */
+.movie-poster-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #000;  
+  width: 100%;
+  position: relative;  
+  width: 25%;
+}
+.movie-poster {
+  object-fit: cover;  
+  width: 100%;
+}
+.movie-poster-wrapper:hover .movie-poster {
+  opacity: 0.5;
+}  
+.movie-info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  color: #fff;
+  font-size: 22px;
+  opacity: 0;
+  padding: 20px;   
+}
+.movie-title {
+  margin: 0;
+}
+.movie-released {
+  margin: 16px 0;
+}
+.movie-info:hover {
+  opacity: 1;
 }
 
 .detail-container {

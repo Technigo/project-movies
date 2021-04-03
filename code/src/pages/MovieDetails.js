@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import {Link} from 'react-router-dom';
+import { DETAILS_URL } from '../reusable/urls'
 
 import { LoadingSpinner } from '../components/LoadingSpinner'
 
 export const MovieDetails = () => {
   const {id} = useParams();
   const [details, setDetails] = useState();
-  const DETAILS_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=e251592f16990230853a7c79c14797f4&language=en-US`
 
   useEffect(() => {
     fetch(DETAILS_URL)
