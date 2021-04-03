@@ -10,8 +10,7 @@ export const MovieDetails = () => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=e90c1322becf61268c0c0fea570c7099&language=en-US`)
     .then((res) => res.json())
     .then((json) => setMovieDetails(json))
-    .catch(err => console.error(err))
-}, [id])
+  }, [id])
 
 if (movieDetails === undefined) {
   return <></>
