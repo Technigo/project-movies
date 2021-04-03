@@ -18,21 +18,10 @@ export const MovieDetail = () => {
   }, [MOVIE_DETAIL_URL])
     
 
-  // I had issues to bring back the background image for the ipad and the desktop
-  // with it in within the image tab so I put it back inside the section tag. 
-  // I actually think the dark filter for the description works fine so it is
-  // easy to read and we keep the design's uniformoty for all views :) . 
-
-  //LEFT TO DO:
-  // Styling for movieDetail for ipad and desktop
-  // Fixing the titles in the home page for each movie-thumb. I actually only notice japanese characters overlapping
-  // Removing the color blue from the movie titles  in home page
-  
     return (
       <div> {movieDetail.length===0 ?<></> :    
         <section className="movie-details-page" style={{backgroundImage:`url(https://image.tmdb.org/t/p/w1280/${movieDetail.backdrop_path})`}}>
-        {/* <img style={{backgroundImage:`url(https://image.tmdb.org/t/p/w1280/${movieDetail.backdrop_path})`}}/>  */}
-            <Link to={`/`} style={{ textDecoration: 'none' }}>
+          <Link to={`/`} style={{ textDecoration: 'none' }}>
             <div className="back-arrow-wrapper">
                 <img className="back-arrow-icon" src={arrow} alt="back-arrow"/> 
                 <p className="back-arrow-text">Movies</p>

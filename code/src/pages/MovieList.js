@@ -3,8 +3,6 @@ import { Link } from "react-router-dom"
 
 import { MOVIES_URL } from "reusable/urls"
 
-
-
 export const MovieList = () => {    
   const [movies, setMovies] = useState([])
     useEffect(() => {
@@ -22,7 +20,7 @@ export const MovieList = () => {
             return (
             <div key= {movie.id} className="movie-thumb-wrapper">
               <Link to={`/movies/${movie.id}`} className="movie-thumb-link" style={{ textDecoration: 'none' }} >
-                <img className="thumb-img" src= {`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.original_title}/>
+                <img className="thumb-img" src= {`https://image.tmdb.org/t/p/w780${movie.poster_path}`} alt={movie.original_title}/>
                 <div className="movie-thumb-text"> 
                     <h1 className="thumb-title">{movie.original_title}</h1>
                     <h2 className="release-date">Released: {movie.release_date}</h2>
