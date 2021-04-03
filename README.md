@@ -1,13 +1,15 @@
+# Project members
+
+Marielle Ohlsson, Shaun Newmark & Katharina Liebig
+
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The goal of this project was to learn how to build multi-page applications using React router.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started by discussing what to create as a page and what to create as a component for the first two pages (home and movie details). Once we finished the general requirements, we added more pages and components. As can be seen, we have a home page where we mount the popular list component. We used this structure with the black goal in mind to add a select menu on the home page which allows the user to toggle between different movie lists. If we had more time, we would add those lists and the select menu. We would also do the styling for mobile and tablet.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://popular-movies-project.netlify.app/

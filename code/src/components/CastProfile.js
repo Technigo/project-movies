@@ -13,4 +13,5 @@ const CastProfile = ({ name, character, profile_path }) => {
         </div>
     )
 }
+
 export default CastProfile

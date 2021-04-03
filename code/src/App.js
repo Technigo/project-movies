@@ -25,7 +25,5 @@ export const App = () => {
         </Route>
       </Switch>
     </BrowserRouter>
-
-
   )
 }

@@ -4,7 +4,7 @@ import { useParams, useHistory } from "react-router-dom"
 import { CAST_URL } from '../utils/urls'
 import Loader from "../components/Loader"
 import CastProfile from "../components/CastProfile"
-import HomeButton from "../components/HomeButton"
+import HomePath from "../components/HomePath"
 
 const CastDetails = () => {
   const { id } = useParams()
@@ -29,7 +29,7 @@ const CastDetails = () => {
 
   return (
     <section className="cast-details-container">
-      <HomeButton />
+      <HomePath />
       <div className="cast-details">
         {cast.map(actor => (
           <CastProfile {...actor} key={actor.id} />
