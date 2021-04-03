@@ -1,13 +1,11 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is week 12 assignment project of Technigo bootcamp. A multi-page application built using React Router, useState and useEffect.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We have faced only one problem - when our project has been deployed on Netlify, the CSS hover effect was not working (it was working on the local server) and after entering the movie id that dit not exist, it was not redirecting to our "Page not found" page. These issues were fixed after removing the % in the opacity and adding a Status code if else statement in our fetch request.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://our-movies-project.netlify.app
