@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
+import { ErrorPage } from "./ErrorPage";
+import { Loading } from "../components/Loading";
+
 export const MovieDetail = () => {
   const { movieId } = useParams();
   let DETAIL_URL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=f8d93b3169765fb54ceb97a483ec4821&language=en-US`;
   const [movie, setMovie] = useState({});
+  const [errorPage, setErrorPage] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(DETAIL_URL)
@@ -12,11 +17,18 @@ export const MovieDetail = () => {
       .then((json) => setMovie(json));
   }, [DETAIL_URL]);
 
-  if (movie === undefined) {
-    return <></>;
-  }
+  useEffect(() => {
+    if (movie.success === false) {
+      setErrorPage(true);
+    }
+    if (movie) {
+      setLoading(false);
+    }
+  }, [movie, errorPage, loading]);
 
-  return (
+  return loading ? (
+    <Loading />
+  ) : errorPage === false ? (
     <article className="detailPage">
       <Link className="back-link" to="/">
         <i className="fas fa-chevron-circle-left"></i>
@@ -43,5 +55,7 @@ export const MovieDetail = () => {
         </div>
       </div>
     </article>
+  ) : (
+    <ErrorPage />
   );
 };
