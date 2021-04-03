@@ -12,12 +12,9 @@ export const MovieList = () => {
   return (
     <>
     <div className="movie-list">
-      <div>
-        
-      </div>
       {movies.map(movie => {
         return (
-          <MovieCard {...movie}
+          <MovieCard key={movie.id} {...movie}
           />
         )
       }
