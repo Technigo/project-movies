@@ -16,27 +16,25 @@ export const MovieDetail = () => {
       console.log(json) 
     })
   }, [MOVIE_DETAIL_URL])
-    
 
-    return (
-      <div> {movieDetail.length===0 ?<></> :    
-        <section className="movie-details-page" style={{backgroundImage:`url(https://image.tmdb.org/t/p/w1280/${movieDetail.backdrop_path})`}}>
-          <Link to={`/`} style={{ textDecoration: 'none' }}>
-            <div className="back-arrow-wrapper">
-                <img className="back-arrow-icon" src={arrow} alt="back-arrow"/> 
-                <p className="back-arrow-text">Movies</p>
-            </div>
-            </Link> 
-            <div className="movie-details-card">
-              <img className="movie-poster" src={`https://image.tmdb.org/t/p/w780${movieDetail.poster_path}`} alt="movie poster"/>
-                <div className="movie-details-text"> 
-                  <h2 className="movie-title">{movieDetail.original_title}</h2>
-                  <p className="movie-vote">{movieDetail.vote_average}/10</p>
-                  <p className="movie-overview">{movieDetail.overview}</p>
-                </div> 
-            </div>
-        </section>
-
-       }</div>
-    )
+  return (
+    <div> {movieDetail.length===0 ?<></> :    
+      <section className="movie-details-page" style={{backgroundImage:`url(https://image.tmdb.org/t/p/w1280/${movieDetail.backdrop_path})`}}>
+        <Link to={`/`} style={{ textDecoration: 'none' }}>
+          <div className="back-arrow-wrapper">
+              <img className="back-arrow-icon" src={arrow} alt="back-arrow"/> 
+              <p className="back-arrow-text">Movies</p>
+          </div>
+        </Link> 
+        <div className="movie-details-card">
+          <img className="movie-poster" src={`https://image.tmdb.org/t/p/w780${movieDetail.poster_path}`} alt="movie poster"/>
+            <div className="movie-details-text"> 
+              <h2 className="movie-title">{movieDetail.original_title}</h2>
+              <p className="movie-vote">{movieDetail.vote_average}/10</p>
+              <p className="movie-overview">{movieDetail.overview}</p>
+            </div> 
+        </div>
+      </section>
+    }</div>
+  )
 }
