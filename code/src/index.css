@@ -5,9 +5,145 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #000;
+  color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.movie-thumb-img {
+  width: 100%;
+  height: 100%;
+}
+
+.position-relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.text-realeased-content {
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+h5 {
+  margin-bottom: 30px;
+  margin-left: 10px;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.back-link {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  color: #fff;
+  font-weight: bold;
+  font-size: medium;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.back-link-margin:hover {
+  margin-left: 5px;
+  transition: 0.2s ease-in-out;
+}
+
+i {
+  font-size: x-large;
+}
+
+.movie-details-container {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  padding: 48px;
+  display: flex;
+  align-items: flex-end;
+  background: -moz-linear-gradient(
+    top,
+    rgba(125, 126, 125, 0) 52%,
+    rgba(125, 126, 125, 0.02) 53%,
+    rgba(0, 0, 0, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(125, 126, 125, 0) 52%,
+    rgba(125, 126, 125, 0.02) 53%,
+    rgba(0, 0, 0, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(125, 126, 125, 0) 52%,
+    rgba(125, 126, 125, 0.02) 53%,
+    rgba(0, 0, 0, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.movie-details-img {
+  bottom: 50px;
+  border: solid #fff 4px;
+}
+
+.movie-details-text {
+  width: 450px;
+  margin: 0 0 15px 20px;
+}
+
+.movie-details-title {
+  display: inline;
+  font-size: 25px;
+  margin: 0;
+}
+
+.movie-details-text p {
+  margin: 20px 0 0;
+}
+
+.rating {
+  display: inline;
+  color: #ff0000;
+  margin-left: 10px;
+  font-weight: normal;
+  font-size: 17px;
+}
+
+.text-to-bottom {
+  bottom: 0;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.hidden-shown {
+  opacity: 0;
+}
+
+.hidden-shown:hover {
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 1;
 }
