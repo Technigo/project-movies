@@ -19,22 +19,22 @@ export const MovieDetails = () => {
     }, [movieId])
 
     return (
-        <article>
+        <article className="article-container">
        { movie && (
-        <div className="heroImage">
+        <div className="hero-image">
             <img src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.title} />
-        <div className="cardImage">
+        <div className="card-image">
             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
         </div>
-        <Link className="homeLink" to="/"> 
+        <Link className="home-link" to="/"> 
             <p><span>&#60;</span>Movies</p>
         </Link>
-        <div className="movieDetails">
+        <div className="movie-details-container">
             <div className="title-votes-container">
                 <h1 className="title-details">{movie.title}</h1>
-                <h2 className="votes">{movie.vote_average}/10</h2>
+                <h2 className="votes-details">{movie.vote_average}/10</h2>
             </div>
-                <p className="movieOverview">{movie.overview}</p>
+                <p className="movie-summary">{movie.overview}</p>
             </div>
         </div> 
        )}

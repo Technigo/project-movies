@@ -41,15 +41,15 @@ code {
   width: 100%;
 }
 
-.heroImage {
+.hero-image {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0));
   position: relative;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 100%;
 }
 
-.homeLink {
+.home-link {
   position: absolute;
   padding-top: 0;
   top: 20px;
@@ -85,23 +85,27 @@ code {
   opacity: 4;
 }
 
-.movieTitle {
+.movie-title {
   font-size: 15px;
   margin: 5px 5px 0 5px;
   padding: 5px;
 }
+
 .movie-release-date {
   font-size: 10px;
   word-wrap: break-word;
   padding: 0 5px 20px 5px;
   margin: 5px;
 }
+
 .movies a {
   text-decoration: none;
   color: #fff;
 }
 
-.cardImage img {
+/* Movie details styling */
+
+.card-image img {
   position: absolute;
   top: 200px;
   left: 10px;
@@ -109,15 +113,15 @@ code {
   border: solid #fff;
 }
 
-.cardImage a {
+.card-image a {
   width: 100%;
 }
 
-.cardImage a img {
+.card-image a img {
   width: 100%;
 }
 
-.movieDetails {
+.movie-details-container {
   position: absolute;
   left: 15px;
   bottom: 20px;
@@ -127,7 +131,17 @@ code {
   padding: 10px;
 }
 
-.votes {
+.title-votes-container {
+  display: flex; 
+}
+
+.title-details {
+  margin: 0;
+  padding: 0; 
+  font-size: 24px;
+}
+
+.votes-details {
   color: red;
   font-size: 17px;
   font-weight: normal;
@@ -135,38 +149,37 @@ code {
   margin: 0;
   font-size: 24px;
 }
-.title-votes-container {
-  display: flex; 
-}
-.title-details {
-  margin: 0;
-  padding: 0; 
-  font-size: 24px;
-}
-.movieOverview {
+
+.movie-overview {
   width: 300px;
   overflow: hidden;
 }
 /*ipad*/
+
 @media only screen and (min-width: 700px) {
- .movieDetails {
+
+ .movie-details-container {
   background: transparent;
   left: 380px;
  }
- .movieTitle {
+
+ .movie-title {
    font-size: 25px;
  }
+
  .movie-release-date {
   font-size: 17px; 
  }
- .movieOverview {
-   /* width: 100%; */
- }
+
+ /*.movie-summary {
+   width: 100%; 
+ }*/
 }
+
 /*laptop*/
 @media only screen and (min-width: 992px) {
   
-  .cardImage img {
+  .card-image img {
     width: 30%;
     left: 10px;
     top: 140px;
@@ -176,15 +189,15 @@ code {
     padding-left: 20px;  
   }
 
-    /*.cardImage a {
+    /*.card-image a {
     width: 10%;
   }*/
 
-  /*.cardImage a img {
+  /*.card-image a img {
     width: 30%;
   }*/
 
-  .movieDetails {
+  .movie-details-container {
     position: absolute;
     left: 400px;
     top: 450px;

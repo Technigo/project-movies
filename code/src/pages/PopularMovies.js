@@ -19,11 +19,11 @@ export const PopularMovies = () => {
             {movies.map((movie) => (
                 <Link key={movie.id} to={`/movies/${movie.id}`}> 
                     <div className="movie-list-overlay">
-                    <img className="movie-img-list"src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-                    <div className="movie-overlay">
-                    <p className="movieTitle">{movie.title}</p>
-                    <p className="movie-release-date">Released: {movie.release_date}</p>
-                    </div>
+                        <img className="movie-img-list"src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+                        <div className="movie-overlay">
+                            <p className="movie-title">{movie.title}</p>
+                            <p className="movie-release-date">Released: {movie.release_date}</p>
+                        </div>
                     </div>
                 </Link>
             ))}
