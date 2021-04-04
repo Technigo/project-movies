@@ -1,13 +1,17 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+In this pair-programming project, we have built a multi-page React Application using an API. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We fetched a list of movies from the themoviedb.org's API using a combination of useState and useEffect and displayed them on a page using CSS-grid. 
+
+With React router, we linked each movie image to a movie detail page with additional information about the chosen movie. 
+
+To pick dynamic parts from the URLs, we used react-placeholders. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Our project is deployed on Netlify:
+
+https://friendly-gates-4a725d.netlify.app/
