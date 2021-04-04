@@ -1,6 +1,6 @@
-/** {
+*{
   box-sizing: border-box;
-}*/
+}
 
   body {
   margin: 0;
@@ -14,11 +14,9 @@
 }
 
 main {
-  /*max-width: 1200px;*/
-  margin: 0, auto;
+  margin: 0 auto;
   padding: 0;
-  /*display: flex;*/
-  /*flex-wrap: wrap;*/
+  width: 100%;
 }
 
 code {
@@ -29,32 +27,10 @@ code {
 .movies {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /*width: 100%;*/
 }
-
-/*.movies a {
-  width: 100%;
-  
-}*/
 
 .movies a img {
   width: 100%;
-}
-
-.hero-image {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0));
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.home-link {
-  position: absolute;
-  padding-top: 0;
-  top: 20px;
-  left: 20px;
-  color: #fff;
 }
 
 /* Overlay on hover over movie image */
@@ -103,7 +79,28 @@ code {
   color: #fff;
 }
 
-/* Movie details styling */
+/* Detail page styling */
+
+.hero-image {
+  position: relative;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.hero-image img {
+  object-fit: cover;
+}
+
+.home-link {
+  position: absolute;
+  padding-top: 0;
+  top: 20px;
+  left: 20px;
+  color: #fff;
+}
 
 .card-image img {
   position: absolute;
@@ -111,14 +108,6 @@ code {
   left: 10px;
   bottom: 10px;
   border: solid #fff;
-}
-
-.card-image a {
-  width: 100%;
-}
-
-.card-image a img {
-  width: 100%;
 }
 
 .movie-details-container {
@@ -154,6 +143,7 @@ code {
   width: 300px;
   overflow: hidden;
 }
+
 /*ipad*/
 
 @media only screen and (min-width: 700px) {
@@ -171,14 +161,18 @@ code {
   font-size: 17px; 
  }
 
- /*.movie-summary {
+ .movie-summary {
    width: 100%; 
- }*/
+ }
 }
 
 /*laptop*/
 @media only screen and (min-width: 992px) {
-  
+
+  .hero-image img {
+    width: 100%;
+  }
+
   .card-image img {
     width: 30%;
     left: 10px;
@@ -189,13 +183,13 @@ code {
     padding-left: 20px;  
   }
 
-    /*.card-image a {
+  .card-image a {
     width: 10%;
-  }*/
+  }
 
-  /*.card-image a img {
+  .card-image a img {
     width: 30%;
-  }*/
+  }
 
   .movie-details-container {
     position: absolute;
