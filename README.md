@@ -1,13 +1,15 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week's project was to create a site displaying data from the movie database themoviedb.org. We chose to use an API endpoint that displays the movies that are toprated in Sweden. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The site consists of two pages and a few components. In React we used React Router components BrowserRouter, Link, Route and Switch to control how the pages are shown and what URL:s that lead to them. We also used useEffect hooks to control when the data is fetched from the API and useState hooks to store the fetched data.  
+ 
+We didn't encounter that many technical issues, only that we weren't really sure where to fetch the different API endpoints from start.  
+
+If we had more time we would add a ‘not found’ page and style the loading page.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://top-rated-movies-sweden.netlify.app/
