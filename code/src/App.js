@@ -1,8 +1,9 @@
 import React from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import { MovieList } from './pages/MovieList';
 import { MovieDetails } from './pages/MovieDetails';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
 
 export const App = () => {
   return (

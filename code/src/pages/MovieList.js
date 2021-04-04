@@ -10,16 +10,13 @@ export const MovieList = () => {
     .then(json => setMovies(json.results)))
   }, [])
   return (
-    <>
     <div className="movie-list">
       {movies.map(movie => {
         return (
-          <MovieCard key={movie.id} {...movie}
-          />
+          <MovieCard key={movie.id} {...movie}/>
         )
       }
       )}
     </div>
-    </>
   )
 }
