@@ -34,7 +34,6 @@ code {
   display: block;
 }
 
-
 .overlay {
   display: flex;
   flex-direction: column;
@@ -69,6 +68,7 @@ code {
   width: 100%;
   height: 100vh;
   object-fit: cover;
+  filter: opacity(50%);
 }
 
 .button-back {
