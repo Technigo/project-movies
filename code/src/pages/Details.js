@@ -21,14 +21,14 @@ export const Details = () => {
 
     useEffect(() => {     
         fetchMovieDetails()   
-    }, [MOVIE_DETAIL_URL])
+    }, [MOVIE_DETAIL_URL(id)])
 
     return (
         <div className="movie-page">
             <ButtonBack />
-            <img className="background-image" src={MOVIE_BACKDROP(details.backdrop_path)} />
+            <img className="background-image" src={MOVIE_BACKDROP(details.backdrop_path)} alt={details.title} />
             <div className="details-overlay">
-                <img className="poster-image" src={MOVIE_BACKDROP(details.poster_path)} />  
+                <img className="poster-image" src={MOVIE_BACKDROP(details.poster_path)} alt={details.poster_path} />  
                 <div className="details-overlay-text">
                     <h1 className="movie-header">{details.title}
                         <span className="movie-vote">{details.vote_average}/10</span>
