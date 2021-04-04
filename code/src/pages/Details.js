@@ -21,7 +21,7 @@ export const Details = () => {
 
     useEffect(() => {     
         fetchMovieDetails()   
-    }, [fetchMovieDetails])
+    }, [`https://api.themoviedb.org/3/movie/${id}?api_key=84c715899a256d0ed1ae1ac98d6fb9a6&language=en-US`])
 
     return (
         <div className="movie-page">
