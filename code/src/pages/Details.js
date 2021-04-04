@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
-import { MOVIE_DETAIL_URL, MOVIE_BACKDROP } from '../components/API_URL'
+import { MOVIE_BACKDROP } from '../components/API_URL'
 
 import { useParams } from 'react-router-dom'
 
