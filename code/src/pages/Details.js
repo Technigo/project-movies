@@ -21,7 +21,7 @@ export const Details = () => {
 
     useEffect(() => {     
         fetchMovieDetails()   
-    }, [])
+    }, [MOVIE_DETAIL_URL])
 
     return (
         <div className="movie-page">
