@@ -14,10 +14,9 @@ export const Details = () => {
     
     const fetchMovieDetails = () => {
         fetch(MOVIE_DETAIL_URL(id)) 
-        .then(res => res.json())
-        // .then(json => console.log(json))
-        .then(json => setDetails(json))
-        .catch(err => console.error(err))
+            .then(res => res.json())
+            .then(json => setDetails(json))
+            .catch(err => console.error(err))
     }
 
     useEffect(() => {     

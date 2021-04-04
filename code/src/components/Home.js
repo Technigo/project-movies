@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import { MOVIE_LIST_URL, MOVIE_DETAIL_URL, MOVIE_BACKDROP } from './API_URL'
+import { MOVIE_LIST_URL } from './API_URL'
 
 import MovieElement from './MovieElement'
 
@@ -10,25 +10,20 @@ const [ movieList, setMovieList ] = useState([])
  
     const fetchMovieList = () => {
         fetch(MOVIE_LIST_URL) 
-        .then(res => res.json())
-        // .then(json => console.log(json))
-        .then(json => setMovieList(json.results))
-        .catch(err => console.error(err))
+            .then(res => res.json())
+            .then(json => setMovieList(json.results))
+            .catch(err => console.error(err))
     }
 
     useEffect(() => {     
         fetchMovieList()   
     }, [])
-
-    console.log(movieList)
+    
     return (
         <div className="movie-list-container">    
             {movieList.map(movie => {  
                 return (
-
-                    <MovieElement                     
-                    {...movie}
-                     /> 
+                    <MovieElement {...movie} /> 
                 )
             })}
         </div>
