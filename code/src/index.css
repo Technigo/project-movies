@@ -1,4 +1,6 @@
 body {
+  background-color: black;
+  color: white;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -10,4 +12,244 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+.popular-list {
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.movie-wrapper {
+  width: 100%;
+  position: relative;
+  color: white;
+}
+
+.movie-wrapper:hover .details {
+  opacity: 1;
+}
+
+.movie-wrapper img {
+  width: 100%;
+} 
+
+.movie-wrapper:hover img {
+  opacity: 0.3;
+}
+
+.home-path:hover .home-icon {
+  margin-right: 8px;
+}
+
+.home-icon {
+  width: 25px;
+  margin-right: 3px;
+  transition: margin-right .2s ease-in-out;
+}
+
+.home-path {
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.details {
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  opacity: 0;
+}
+
+h2 {
+  margin:0;
+  font-size: 32px;
+}
+
+.movie-details-container {
+  height: 100vh;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.movie-details h2 {
+  display:inline-block;
+  font-size: 24px;
+}
+
+.movie-details-rating {
+  color:red;
+  margin-left: 17px;
+  font-size: 17px;;
+}
+
+.movie-details-poster {
+  width: 352px;
+  border: 5px solid white;
+  box-sizing: border-box;
+}
+
+.movie-details-summary {
+  display: flex;
+  align-items: flex-end;
+}
+
+.movie-details {
+  padding-left: 20px;
+}
+
+.movie-details p {
+  width: 400px;
+  margin-top: 20px;
+}
+
+.movie-details a {
+  color: white;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.right-icon {
+  width: 25px;
+  margin-left: 5px;
+  transition: margin-left .2s ease-in-out;
+}
+
+.movie-details a:hover .right-icon {
+  margin-left: 8px;
+}
+
+.cast-details-container {
+  padding: 50px;
+}
+
+.cast-details-container .home-button {
+  margin-bottom: 50px;
+}
+
+.cast-details {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  justify-items: center;
+  row-gap: 20px;
+}
+
+.cast-profile {
+  position: relative;
+}
+
+.cast-profile img {
+  border: 5px solid white;
+}
+
+.cast-profile h3 {
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  opacity: 0;
+}
+
+.cast-profile:hover h3 {
+  opacity: 1;
+}
+
+.cast-profile:hover img {
+  opacity: 0.3;
+}
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+
+/*** this loader is copied from Matt Henley's codepen, see the readme for link ****/
+
+
+.loader {
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  mask: linear-gradient(rgba(0, 0, 0, 0.1), #000000 90%);
+  -webkit-mask: linear-gradient(rgba(0, 0, 0, 0.1), #000000 90%);
+  transform-origin: 50% 60%;
+  transform: perspective(200px) rotateX(66deg);
+  animation: spinner-wiggle 1.2s infinite;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  margin: -4px;
+  box-sizing: inherit;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  opacity: .05;
+  border: inherit;
+  border-color: transparent;
+  animation: loader-spin 1.2s cubic-bezier(0.6, 0.2, 0, 0.8) infinite, loader-fade 1.2s linear infinite;
+}
+
+.loader:before {
+  border-top-color: #66e6ff;
+}
+
+.loader:after {
+  border-top-color: #f0db75;
+  animation-delay: 0.3s;
+}
+
+@keyframes loader-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-fade {
+  20% {
+    opacity: .1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: .1;
+  }
 }
