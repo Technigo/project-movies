@@ -16,9 +16,6 @@ export const MovieDetails = () => {
       .then((json) => setDetails(json));
   }, [MOVIE_DETAILS_URL]);
 
-  // if( details === undefined){
-  //     return <></>;
-  //   }
 
   return (
     <article className="movie-details-container">
