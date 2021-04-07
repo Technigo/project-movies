@@ -12,7 +12,7 @@ const MovieDetails = () => {
     fetch(API_URL)
       .then((res) => res.json())
       .then((movie) => setMovie(movie))
-      .catch((error) => console.log(error));
+      .catch((error) => alert(`Page not found, error: ${error}`));
   }, [API_URL]);
 
   return (

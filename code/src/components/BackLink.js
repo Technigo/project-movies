@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const BackLink = () => {
   return (
-    <a className="back-link" href="/">
+    <Link to="/" className="back-link" >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
         <path
           d="M27 14.5C27 7.596441 21.4035594 2 14.5 2S2 7.596441 2 
@@ -14,7 +15,7 @@ const BackLink = () => {
         ></path>
       </svg>
       Movies
-    </a>
+    </Link>
   );
 };
 
