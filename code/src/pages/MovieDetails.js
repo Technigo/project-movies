@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import "./moviedetails.css";
 
@@ -12,8 +12,7 @@ export const MovieDetails = () => {
       `https://api.themoviedb.org/3/movie/${movie_id}?api_key=d54701f7b694b0188ac7819c5b24df16&language=en-US`
     )
       .then((response) => response.json())
-      .then((json) => setMovieDetails(json))
-      .catch((err) => console.error(err));
+      .then((json) => setMovieDetails(json));
   }, [movie_id]);
 
   return (
@@ -26,10 +25,10 @@ export const MovieDetails = () => {
           }}
           alt={movieDetails.title}
         >
-          <a href="/" className="button-back">
+          <Link to="/" className="button-back">
             <span className="arrow-box">&#x2B05; </span>
             <span className="back-link-text"> Movies</span>
-          </a>
+          </Link>
 
           <div className="information">
             <img
