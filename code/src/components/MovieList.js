@@ -11,7 +11,7 @@ const MovieList = ({ movieListType }) => {
             .then(response => response.json())
             .then(receivedMovies => setMovies(receivedMovies.results))
     }, [movieListType])
-    console.log(movies)
+    
     return (
         <div className="movies-container">
             {movies.map(movie => <MovieThumb key={movie.id} {...movie} />)}
