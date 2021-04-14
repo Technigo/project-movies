@@ -1,13 +1,207 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/*Styling MovieDetails Page*/
+.movie-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.thumb-container {
+  position: relative;
+  width: 100vw;
+  text-decoration: none;
+  color: white;
+}
+
+.thumb-image {
+  width: 100%;
+  opacity: 1;
+}
+
+.movie-list-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  font-size: 36px;
+  padding-bottom: 60px;
+}
+
+.thumb-title {
+  margin-bottom: 0;
+}
+.thumb-release-date {
+  font-size: 18px;
+}
+
+/*Styling MovieDetails Page*/
+.details-container {
+  height: 800px;
+}
+
+.links-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0 20px 20px
+  height: 20px;
+}
+
+.back-link {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  transition: margin-right 0.2s ease-in-out;
+}
+
+.back-link:hover {
+  margin-left: 5px;
+}
+
+.backlink-arrow {
+  width: 25px;
+  padding-right: 5px;
+}
+
+.details-background-image {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.details-poster {
+  border: 5px solid white;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.details-summary-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  color: white;
+  flex-direction: column;
+}
+
+.details-texts {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  font-size: 16px;
+}
+
+.details-rating {
+  color: red;
+  font-weight: 400;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.details-title {
+  font-size: 22px;
+}
+
+/*** MEDIA QUERIES ***/
+
+@media (min-width: 768px) {
+  .thumb-container {
+    width: 25vw;
+  }
+
+  .movie-list-text {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+
+  .movie-list-text:hover {
+    opacity: 1;
+    transition: 0.2s ease;
+  }
+  .links-wrapper {
+    margin-bottom: 70px;
+    margin-left: 0;
+  }
+
+  .details-summary-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50px;
+    color: white;
+    width: 60%;
+  }
+
+  .details-background-image {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .details-poster {
+    border: 5px solid white;
+    width: auto;
+    margin: 0 auto;
+    margin-top: auto;
+  }
+
+  .details-summary-container {
+    align-items: flex-end;
+    bottom: 7vh;
+    left: 50px;
+    width: 80%;
+    min-width: 600px;
+    max-width: 1000px;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1200px) {
+  /*hover only available on desktop, not on smaller screens*/
+  .thumb-container:hover .thumb-image {
+    opacity: 0.5;
+  }
+
+  .thumb-container:hover .movie-list-text {
+    display: flex;
+  }
+
+  .movie-list-text {
+    display: none;
+  }
 }
