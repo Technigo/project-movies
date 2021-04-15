@@ -13,7 +13,6 @@ const MovieDetails = () => {
     fetch(API_URL_DETAILS(id))
       .then(response => response.json())
       .then(json => setMovieSpecs(json))
-      .catch(err => console.error(err))
   }, [id])
   
   return (

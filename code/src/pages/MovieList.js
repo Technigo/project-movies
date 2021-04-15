@@ -12,7 +12,6 @@ const MovieList = ({ movies, setMovies }) => {
     fetch(API_URL_MOVIES(list))
       .then(response => response.json())
       .then(json => setMovies(json.results))
-      .catch(err => console.error(err))
   }, [list, setMovies])
 
 
