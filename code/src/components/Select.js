@@ -3,7 +3,7 @@ import React from 'react'
 const SelectMovie = ({onFilterChange, popularity, topRated, upcomingMovies, filter}) => {
     return(  
         <section className="sort-by">
-          <h3 id="size">Sort by:  </h3> 
+          <h3>Sort by:  </h3> 
           <select 
             onChange={e => onFilterChange(e)} 
             value={filter}

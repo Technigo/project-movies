@@ -42,7 +42,6 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-color: #000;
   height: 100vh;
   background-size: cover;
@@ -100,7 +99,7 @@ code {
   background-size: cover;
 }
 
-.loading h1 {
+.loading-text {
   margin-top: 0px;
   padding: 100px;
 }
@@ -114,7 +113,7 @@ code {
   color: #ffffff;
 }
 
-.error h1 {
+.error-text {
   position: absolute;
   color: #ffffff;
   padding: 100px;
@@ -239,7 +238,6 @@ code {
   text-decoration: underline;
   color: #fff;
 }
-
 
 @media (min-width: 500px) {
 

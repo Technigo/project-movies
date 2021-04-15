@@ -1,16 +1,3 @@
-// TO DO:
-// [X] Back button
-// [X] background page
-// [X] Format first page according to guidelines
-// [X] Format second page according to guidelines
-// [X] Add a rating
-// [X] image not found 
-// [X] Handle 404 page not found
-// [X] Handle loading state
-// [X] Add Company page
-// [X] Reshape error function
-// [X] Instead of conditional rendering depending on mobile or desktop, use css media queries!
-
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 

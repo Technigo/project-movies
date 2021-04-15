@@ -6,7 +6,7 @@ const Error = () => {
     return (
         <div className="error">
             <BackButton />
-            <h1>THERE HAS BEEN ERROR <label>😞</label></h1>
+            <h1 className="error-text">THERE HAS BEEN ERROR <label>😞</label></h1>
         </div>
     )
 }

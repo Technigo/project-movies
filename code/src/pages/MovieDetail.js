@@ -28,22 +28,28 @@ const MovieDetail = () => {
         if (statusCode !== 200 || id.length > 19) {
             history.push("/error")
         }
-    }, [history, statusCode])
+    }, [history, statusCode, id])
 
     if (loading === true) {
-        return <div className="loading"><h1>loading...</h1></div>
+        return (
+            <div className="loading">
+                <h1 className="loading-text">
+                    loading...
+                </h1>
+            </div>
+        )
     }
     return (
         <div className='details-wrapper' 
             style={{
-                backgroundImage: "url(https://image.tmdb.org/t/p/w1280" + details.backdrop_path
+                backgroundImage: `url(https://image.tmdb.org/t/p/original${details.backdrop_path})`
             }}
         >
             <BackButton />
             <div className="details-content ">
                 <div className="information-wrapper"> 
                     <div className="image-wrapper">     
-                        <img src={details.poster_path === null ? "../assets/poster_not_found.png" : `https://image.tmdb.org/t/p/w780${details.poster_path}`} alt={details.title}/>
+                        <img src={details.poster_path === null ? "../assets/poster_not_found.png" : `https://image.tmdb.org/t/p/original${details.poster_path}`} alt={details.title}/>
                     </div>
                     <div className="text-wrapper">
                         <h1>{details.original_title}<span>{details.vote_average}/10</span></h1>
