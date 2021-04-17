@@ -14,7 +14,6 @@ export const MoviesList = () => {
   },[])
 
   return (
-    <>
     <section className='all-movies'>
       {movies.map(movie => (
         <div key={movie.id} className='movie-wrapper'>
@@ -27,6 +26,5 @@ export const MoviesList = () => {
        </div>
       ))}
     </section>
-    </>
   )
 }
