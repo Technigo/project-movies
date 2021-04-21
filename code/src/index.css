@@ -1,3 +1,7 @@
+html {
+  font-size: 1px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +9,142 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/*********MOVIE LIST***********/
+
+.movies-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 25%;
+}
+
+.movie-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  background-color: rgba(0,0,0,.75);
+  padding: 20px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.movie-card:hover .movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+/*********MOVIE DETAILS***********/
+
+.backdrop-container {
+  min-height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+
+.movie-summary {
+  display: flex;
+  position: absolute;
+  align-items: flex-end;
+  padding: 50px;
+  color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.poster-image-container img {
+  border: 5px solid #fff;
+  width: 342px;
+}
+
+.summary-text {
+  padding-left: 20px;
+  width: 400px;
+}
+
+.movie-rating {
+  color: rgb(170, 8, 8);
+  font-size: 17px;
+  margin-left: 10px;  
+}
+
+/*********NOT FOUND*********/
+
+.not-found-text {
+  margin-left: 50px;
+  
+}
+
+/*********BUTTON***********/
+
+svg {
+  width: 30px;
+  margin-right: 4px;
+}
+
+.backbutton-link-container {  
+  align-items: center;
+  display: inline-flex;  
+}
+
+.backbutton-link {
+  text-decoration: none;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  left: 50px;
+  top: 50px;
+  font-weight: 700; 
+}
+
+.backbutton-link:hover p {
+  transform: translateX(5px);
+  transition: all 0.3s linear;
+}
+
+/*********FONT SIZES**********/
+
+h1 {
+  font-size: 18rem;
+  margin: 0;
+}
+
+p {
+  font-size: 14rem;
+  color: white;
+}
+
+/*********MEDIA QUERIES**********/
+
+@media (min-width: 768px) {
+  html {
+    font-size: 1.2px;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 1.5px;
+  }
+}
+
+
