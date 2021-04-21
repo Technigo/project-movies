@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { BackButton } from '../components/BackButton'
+import { NotFound } from '../pages/NotFound'
 
 export const MovieDetails = () => {
   const { movieId } = useParams()
@@ -11,17 +12,29 @@ export const MovieDetails = () => {
 
 useEffect(() => {
   fetch(MOVIE_DETAILS_URL)
-  .then (response => response.json())
+  .then (response => {
+    if (!response.ok) {
+      setMovie(null)
+      throw 'Movie not found'
+    }
+    return response.json()
+  })
   .then (json => setMovie(json))
-  .catch(err => console.error(err))
  }, [MOVIE_DETAILS_URL, movieId])
 
- if (movie === undefined) {
-    
+ // This catches the value of movie before the fetch is completed
+if (movie === undefined) {
+  return (
+    <></>
+  )
+} 
+
+//This is when the value of movie is not correct
+  if (movie === null){  
     return (
-      <></>
+      <NotFound/>
     )
-  } 
+  }
 
   return (
     <>
