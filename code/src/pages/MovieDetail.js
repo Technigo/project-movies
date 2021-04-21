@@ -13,7 +13,7 @@ export const MovieDetail = () => {
     .then((res) => res.json())
     .then((json) => {
       setMovieDetail(json)
-      console.log(json) 
+      
     })
   }, [MOVIE_DETAIL_URL])
 
