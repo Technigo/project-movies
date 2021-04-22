@@ -5,9 +5,150 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.drop-down-container {
+  display: flex;
+  justify-content: center;
+}
+
+.drop-down {
+  background-color: #585858;
+  color: #ffffff;
+  outline: none;
+  margin: 15px;
+  width: 150px;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.movies-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.movie-card {
+  position: relative;
+}
+
+.movie-poster {
+  width: 100%;
+}
+
+.movie-card:hover .title-release-container {
+  display: block;
+}
+
+.movie-card:hover .movie-poster {
+ filter: brightness(50%);
+}
+
+.title-release-container {
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  color: #ffffff;
+  display: none;
+}
+
+.movie-title {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.movie-release {
+  font-size: 30px;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 30%;
+}
+
+.button-container {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  color: #ffffff;
+  margin: 15px;
+  font-weight: bold;
+  background-color: #0000007e;
+}
+
+.svg {
+  width: 30px;
+}
+
+.info-container {
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.summary{
+  padding: 15px;
+}
+
+.info-poster {
+  border: 2px solid #ffffff;
+}
+
+.info-rating {
+  color: #ff0000;
+}
+
+@media (max-width: 370px) {
+  .info-poster {
+    width: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .movies-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .summary {
+    display: flex;
+    padding: 50px;
+    align-items: flex-end;
+  }
+
+  .button-container {
+    margin-left: 50px;
+  }
+
+  .details {
+    padding-left: 20px;
+  }
+
+  .info-title {
+    font-size: 40px;
+  }
+
+  .info-overview, .info-rating {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1224px) {
+    .movies-container {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
