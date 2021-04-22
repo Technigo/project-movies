@@ -14,7 +14,6 @@ export const MovieDetails = () => {
     fetch(DETAIL_API(id))
       .then(res => res.json())
       .then(json => setMovieDetails(json))
-      .catch(err => console.err(err))
   },[id])
 
   return (

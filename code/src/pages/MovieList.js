@@ -15,21 +15,18 @@ export const MovieList = () => {
     fetch(MOVIE_LIST_API)
       .then(res => res.json())
       .then(json => setMovies(json.results))
-      .catch(err => console.err(err))
   },[])
   
   useEffect(() => {
     fetch(SIRI_LIST_API)
       .then(res => res.json())
       .then(json => setSirisMovies(json.items))
-      .catch(err => console.err(err))
   },[])
 
   useEffect(() => {
     fetch(IDA_LIST_API)
       .then(res => res.json())
       .then(json => setIdasMovies(json.items))
-      .catch(err => console.err(err))
   },[])
 
   return (
