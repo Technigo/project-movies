@@ -22,7 +22,6 @@ export const Search = () => {
     fetch(SEARCH_API(search))
     .then(res => res.json())
     .then(json => setId(json.results))
-    .catch(err => console.err(err))
   }
   }
 
