@@ -1,13 +1,25 @@
 # Project Movies
-
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
+ 
+The assignment was to build a movie listing, multi-page web application with subpages generated through use of the routing library React Router
+ 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
+ 
+Using React Router and its Link component we could generate subpages dynamically, based on data received from the moviedb API GET fetch.
+ 
+We had issues accessing nested arrays inside our movie details state object for some reason. As a workaround we simply extracted the relevant data from the nested array at the point when it was just a regular object, before it was assigned to its state variable, then put the data inside a new state variable.
+ 
+Technologies used:
+BrowserRouter setup
+Route components
+Link components
+Slugs
+moviedb API
+GET fetches
+useEffects
+useStates
+useHistory
+ 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+ 
+Netlify Link:
+https://affectionate-goldberg-0fad49.netlify.app/ 
