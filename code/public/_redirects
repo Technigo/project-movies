@@ -1,0 +1,3 @@
+/* /index.html 200
+
+/* This is telling Netlify to serve our React app to the user, no matter what URL path we navigate to */ 
