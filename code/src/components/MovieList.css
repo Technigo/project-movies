@@ -1,0 +1,10 @@
+.movie-list-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie-list-container a {
+    position: relative;
+    width: 25%;
+    background-color: black;
+}

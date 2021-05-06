@@ -1,0 +1,12 @@
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+.page-not-found {
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
