@@ -13,7 +13,6 @@ export const MovieDetails = () => {
     fetch(MOVIE_URL)
       .then((res) => res.json())
       .then((json) => {
-        console.log(json);
         // Status code 34 is 404 - Not found in the api response
         if (json.status_code === 34) {
           setPageNotFound(true)
