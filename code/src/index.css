@@ -1,16 +1,13 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000000;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .drop-down-container {
@@ -26,50 +23,6 @@ code {
   width: 150px;
   padding: 5px;
   font-size: 18px;
-}
-
-.movies-container {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.movie-card {
-  position: relative;
-}
-
-.movie-poster {
-  width: 100%;
-}
-
-.movie-card:hover .title-release-container {
-  display: block;
-}
-
-.movie-card:hover .movie-poster {
- filter: brightness(50%);
-}
-
-.title-release-container {
-  position: absolute;
-  bottom: 3%;
-  left: 2%;
-  color: #ffffff;
-  display: none;
-}
-
-.movie-title {
-  font-size: 50px;
-  font-weight: bold;
-}
-
-.movie-release {
-  font-size: 30px;
-}
-
-.loader {
-  display: flex;
-  justify-content: center;
-  margin-top: 30%;
 }
 
 .button-container {
@@ -89,6 +42,54 @@ code {
   width: 30px;
 }
 
+/* Movies list page */
+
+.movies-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.movie-card {
+  position: relative;
+}
+
+.movie-poster {
+  width: 100%;
+}
+
+.movie-card:hover .title-release-container {
+  display: block;
+}
+
+.movie-card:hover .movie-poster {
+  filter: brightness(50%);
+}
+
+.title-release-container {
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  color: #ffffff;
+  display: none;
+}
+
+.movie-title {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.movie-release {
+  font-size: 30px;
+}
+
+/* Movie info page */
+
+.loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 30%;
+}
+
 .info-container {
   color: #ffffff;
   background-repeat: no-repeat;
@@ -101,7 +102,7 @@ code {
   position: relative;
 }
 
-.summary{
+.summary {
   padding: 15px;
 }
 
@@ -111,6 +112,49 @@ code {
 
 .info-rating {
   color: #ff0000;
+}
+
+/* Companies list */
+
+.company-link {
+  color: gray;
+  text-decoration: none;
+}
+
+.company-link:hover {
+  text-decoration: underline;
+}
+
+/* Company page */
+
+.company-card {
+  color: #ffffff;
+  display: flex;
+  padding: 15px;
+  align-items: flex-start;
+}
+
+.company-name {
+  margin-top: 0;
+}
+
+.company-logo {
+  width: 100px;
+  filter: invert(100%);
+  background-color: rgba(240, 235, 235, 0.132);
+}
+
+.company-details {
+  margin-right: 20px;
+}
+
+.homepage-link {
+  text-decoration: none;
+  color: gray;
+}
+
+.homepage-link:hover{
+  text-decoration: underline;
 }
 
 @media (max-width: 370px) {
@@ -123,32 +167,27 @@ code {
   .movies-container {
     grid-template-columns: 1fr 1fr;
   }
-
   .summary {
     display: flex;
     padding: 50px;
     align-items: flex-end;
   }
-
   .button-container {
     margin-left: 50px;
   }
-
   .details {
     padding-left: 20px;
   }
-
   .info-title {
     font-size: 40px;
   }
-
   .info-overview, .info-rating {
     font-size: 22px;
   }
 }
 
 @media (min-width: 1224px) {
-    .movies-container {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+  .movies-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+}

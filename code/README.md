@@ -1,7 +1,7 @@
 # Project Movies
 This is a group project that we made during week 12 in the Technigo Bootcamp. The learning objective was to get familiar with React Router by building apps with multiple pages.
 
-The assignment was to build a multi-page movie list application by fetching data from a specific movie API and mimic a given design in an example app. By using React Router we were tasked to link a displayed list of movies on one page with detailed information for each movie on separate pages.
+The assignment was to build a multi-page movie list application by fetching data from the TMDb API and mimic a given design in an example app. By using React Router we were tasked to link a displayed list of movies on one page with detailed information for each movie on separate pages.
 
 ## How we approached the problem
 1. We started off by fetching the data with fetch() and creating necessary components MovieList and MovieThumb for the list of movies. 
