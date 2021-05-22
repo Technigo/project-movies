@@ -1,30 +1,21 @@
 import React, {useState, useEffect} from 'react'
-
-import { MOVIE_BACKDROP } from '../components/API_URL'
-
 import { useParams } from 'react-router-dom'
 
+import { MOVIE_BACKDROP } from '../components/API_URL'
 import { ButtonBack } from '../components/ButtonBack'
-
 
 export const Details = () => {
     const { id } = useParams()
-
     const [ details, setDetails ] = useState({})
-    
-    // const fetchMovieDetails = () => {
-    //     fetch(MOVIE_DETAIL_URL(id)) 
-    //         .then(res => res.json())
-    //         .then(json => setDetails(json))
-    //         .catch(err => console.error(err))
-    // }
+    const [ error, setError ] = useState('')
 
     useEffect(() => {  
             fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=84c715899a256d0ed1ae1ac98d6fb9a6&language=en-US`)
                 .then(res => res.json())
                 .then(json => setDetails(json))
-                .catch(err => console.error(err))
-          
+                .catch(err => {
+                    setError(err)
+                })
     }, [id])
 
     return (
@@ -40,6 +31,7 @@ export const Details = () => {
                     <p className="movie-description">{details.overview}</p>
                 </div>
             </div>
+            { error && <p>Something went not so great. Details {error}</p> }
         </div> 
     )
 }

@@ -21,10 +21,11 @@ code {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .movie {
-  width: 25vw;
+  width: 24.5vw;
   position: relative;
   text-decoration: none;
 }
@@ -122,7 +123,20 @@ code {
   max-width: 450px;
 }
 
+@media screen and (max-width: 993px) {
+  .movie {
+    width: 49.5vw;
+  }
+  .overlay {
+    opacity: 1;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .movie {
+    width: 100vw;
+  }
+}
 
 
 

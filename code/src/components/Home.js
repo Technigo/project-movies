@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react'
 
 import { MOVIE_LIST_URL } from './API_URL'
-
 import MovieElement from './MovieElement'
-
 
 export const Home = () => {
 const [ movieList, setMovieList ] = useState([])
+const [ error, setError ] = useState('')
  
     const fetchMovieList = () => {
         fetch(MOVIE_LIST_URL) 
             .then(res => res.json())
             .then(json => setMovieList(json.results))
-            .catch(err => console.error(err))
+            .catch(err => {
+                setError(err)
+            })
     }
 
     useEffect(() => {     
@@ -26,6 +27,7 @@ const [ movieList, setMovieList ] = useState([])
                     <MovieElement {...movie} /> 
                 )
             })}
+            { error && <p>Something went not so great. Details {error}</p> }
         </div>
     )
 }
