@@ -136,6 +136,9 @@ code {
   .movie {
     width: 100vw;
   }
+  .overlay {
+    opacity: 1;
+  }
 }
 
 
