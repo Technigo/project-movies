@@ -125,7 +125,7 @@ code {
 
 @media (min-width: 768px) and (max-width: 993px) {
   .movie {
-    width: 49.5vw;
+    width: 49vw;
   }
   .overlay {
     opacity: 1;
