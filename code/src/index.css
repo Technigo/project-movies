@@ -123,7 +123,7 @@ code {
   max-width: 450px;
 }
 
-@media screen and (max-width: 993px) {
+@media (min-width: 768px) and (max-width: 993px) {
   .movie {
     width: 49.5vw;
   }
@@ -132,7 +132,7 @@ code {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .movie {
     width: 100vw;
   }
