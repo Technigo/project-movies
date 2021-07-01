@@ -1,0 +1,107 @@
+.cover {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(25% - 2rem);
+  margin-top: 2rem;
+}
+
+.listing .wrapper {
+  transition: all 300ms;
+  flex-basis: calc(25% - 2rem);
+}
+
+.listing .wrapper:hover {
+  transform: scale(1.03);
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+.listing .wrapper:hover .rating {
+  opacity: 1;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+.coverimage {
+  position: relative;
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.25em;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+}
+
+.genre {
+  display: flex;
+  height: 1em;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.genre:after {
+  opacity: 0.5;
+  content: "●";
+  display: inline-block;
+  font-size: 0.25em;
+  margin-left: 0.45rem;
+  margin-bottom: -2px;
+}
+
+.genre:last-child:after {
+  display: none;
+}
+
+.listing .wrapper {
+  position: relative;
+}
+
+.listing .overlay {
+  pointer-events: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  right: 1px;
+  bottom: 3px;
+  z-index: 2;
+  padding: 1rem;
+  font-size: 0.65rem;
+  border-radius: 0.65rem;
+}
+
+.listing .overlay .rating {
+  opacity: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: contrast(100%) blur(10px);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.listing .overlay .label {
+  font-weight: 400;
+  opacity: 0.7;
+}

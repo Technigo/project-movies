@@ -1,0 +1,15 @@
+.wrapper.notfound {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.wrapper.notfound h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
