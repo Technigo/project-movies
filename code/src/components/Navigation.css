@@ -1,0 +1,24 @@
+nav {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  position: sticky;
+  padding: 0 2rem;
+  top: 0;
+  background-color: rgba(17, 17, 34, 0.5);
+  z-index: 2;
+  backdrop-filter: contrast(100%) blur(10px);
+  box-shadow: 0 12px 12px 12px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+  display: block;
+  padding: 0.5em 0;
+  text-decoration: none;
+  color: rgb(243, 141, 209);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+nav img {
+  width: 90px;
+}
