@@ -27,7 +27,7 @@ export const MovieList = () => {
   ) : movieList ? (
     <section className="movie-list">
       {movieList.map((movie) => (
-        <MovieListItems {...movie} />
+        <MovieListItems key={movie.id} {...movie} />
       ))}
     </section>
   ) : (

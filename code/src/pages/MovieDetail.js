@@ -12,19 +12,20 @@ export const MovieDetail = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true)
     fetch(DETAIL_URL)
       .then((response) => response.json())
-      .then((json) => setMovie(json));
+      .then((json) => {
+        setMovie(json)
+        setLoading(false)
+      });
   }, [DETAIL_URL]);
 
   useEffect(() => {
     if (movie.success === false) {
       setErrorPage(true);
     }
-    if (movie) {
-      setLoading(false);
-    }
-  }, [movie, errorPage, loading]);
+  }, [movie, errorPage]);
 
   return loading ? (
     <Loading />

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const MovieListItems = ({ id, poster_path, title, release_date }) => {
   return (
-    <Link to={`/movies/${id}`} key={id} className="movie-wrapper">
+    <Link to={`/movies/${id}`} className="movie-wrapper">
       <img
         src={`https://image.tmdb.org/t/p/w342/${poster_path}`}
         alt="{title}"
