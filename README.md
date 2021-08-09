@@ -1,13 +1,14 @@
-# Project Movies
+# Movie project
+By Sara Carlstein, Maria Bergman, Vladimir Bykov
 
-Replace this readme with your own information about your project.
+## The built and challanges
+In this project, a multi-page React, we've used the API to fetch popular movies in the US using themoviedb.org's API.
+We practiced using APIs in React and combining 'useState' and 'useEffect' The app has two pages - one showing a list of movies and one showing details
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+### Tech
 
-## The problem
+React
+JavaScript
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+#### Live
+https://admiring-hugle-678c60.netlify.app
