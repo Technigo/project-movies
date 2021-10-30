@@ -1,8 +1,9 @@
-.ancor{
-    background: rgb(29, 117, 231);
+.home-container{
+text-decoration: none;
+    cursor: pointer;
     width: 100%;
-    position: relative;
-    color: #fff;
-    text-decoration: none;
     display: flex;
+    flex-wrap: wrap;
+    background: hotpink;
+    box-sizing: border-box;
 }

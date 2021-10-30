@@ -16,12 +16,12 @@ code {
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
+  background: limegreen;
 }
 
 
 a {
-    text-decoration: none;
-    cursor: pointer;
-    width: 100%;
-    display: flex;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
 }

@@ -1,14 +1,15 @@
 import React from 'react'
 import './movieCard.css'
 
-export const MovieCard = () => {
+export const MovieCard = ({ movie }) => {
+
     return (
         <div className="movieCard-container">
-            <img className="movieCard-image" src="https://image.tmdb.org/t/p/w342/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="movie" />
+            <img className="movieCard-image" src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt={movie.title} />
             <div className="movieCard-overlay">
                 <div className="movieCard-text">
-                    <h1 className="movieCard-title">Snake Eyes: G.I. Joe Origins</h1>
-                    <p className="movieCard-realease">Released 2021-09-15</p>
+                    <h1 className="movieCard-title">{movie.title}</h1>
+                    <p className="movieCard-realease">{movie.release_date}</p>
                 </div>
             </div>
         </div>
