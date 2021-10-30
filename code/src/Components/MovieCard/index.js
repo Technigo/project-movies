@@ -3,7 +3,7 @@ import './movieCard.css'
 
 export const MovieCard = () => {
     return (
-        <div className="movieCard-container" href="#">
+        <div className="movieCard-container">
             <img className="movieCard-image" src="https://image.tmdb.org/t/p/w342/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="movie" />
             <div className="movieCard-overlay">
                 <div className="movieCard-text">

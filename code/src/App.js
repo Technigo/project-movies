@@ -1,15 +1,21 @@
 import React from 'react'
-import { MovieCard } from './MovieCard'
-import { MovieDetails } from './MovieDetails'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { Home } from './Pages/Home'
+import { MovieDetails } from './Pages/MovieDetails'
 
 export const App = () => {
   return (
-    <div className="main-container">
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieDetails />
-    </div>
+    <BrowserRouter>
+      <main className="main-container">
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/movie-details" exact>
+            <MovieDetails />
+          </Route>
+        </Switch>
+      </main>
+    </BrowserRouter>
   )
 }

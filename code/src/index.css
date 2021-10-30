@@ -17,3 +17,11 @@ code {
   flex-wrap: wrap;
   box-sizing: border-box;
 }
+
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+}

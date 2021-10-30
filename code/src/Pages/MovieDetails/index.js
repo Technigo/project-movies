@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './movieDetails.css'
 
 export const MovieDetails = () => {
     return (
         <section className="movieDetails-container" style={{ backgroundImage: "url(https://image.tmdb.org/t/p/w342/d5NXSklXo0qyIYkgV94XAgMIckC.jpg)" }} >
-            <div className="movieDetails-back"><i class="fas fa-chevron-circle-left"></i>Movies</div>
+            <Link to="/"> <div className="movieDetails-back"><i className="fas fa-chevron-circle-left"></i>Movies</div></Link>
             <div className="movieDetails-sumary">
                 <img className="movieDetails-image" src="https://image.tmdb.org/t/p/w342/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="cartel" />
                 <div className="movieDetails-text">
