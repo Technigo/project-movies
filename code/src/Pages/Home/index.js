@@ -10,7 +10,7 @@ export const Home = ({ movies, fetchMovieDetails }) => {
 
     return (
         movies ? movies.map(movie => {
-            return <Link className="ancor" key={movie.id} to={`/movie-details/${movie.id}`} onClick={() => fetchMovieDetails(movie.id)}><MovieCard movie={movie} /></Link>
+            return <Link className="ancor" key={movie.id} to={`/movie-details/${movie.id}`} onClick={() => fetchMovieDetails(movie.id)}><MovieCard {...movie} /></Link>
         }) : < Loader />
     )
 }

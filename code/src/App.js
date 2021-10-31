@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Home } from './Pages/Home'
 import { MovieDetails } from './Pages/MovieDetails'
+import { Nav } from './Components/Nav'
 import { API_KEY } from './utils/api'
 import { MOVIES_URL, MOVIE_DETAILS_URL } from './utils/url'
 
@@ -31,6 +32,7 @@ export const App = () => {
 
   return (
     <BrowserRouter>
+      <Nav />
       <main className="main-container">
         <Switch>
           <Route path="/" exact>
