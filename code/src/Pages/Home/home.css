@@ -1,9 +1,15 @@
 .home-container{
-text-decoration: none;
+    text-decoration: none;
     cursor: pointer;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background: hotpink;
     box-sizing: border-box;
+}
+
+
+.ancor{
+    text-decoration: none;
+    cursor: pointer;
+    width: 25%;
 }

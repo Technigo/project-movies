@@ -1,37 +1,42 @@
 .movieDetails-container{
-width: 100%;
-box-sizing: border-box;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-overflow: hidden;
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ancor-back{
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .movieDetails-back{
     color: #fff;
     font-weight: 700;
     cursor: pointer;
-    font-size: 1.5rem;
-    padding: 10px;
-
+    font-size: 1rem;
+    padding: 1rem;
 }
 
 .fa-chevron-circle-left{
    padding-right: 5px;
 }
+
 .movieDetails-sumary{
     display: flex;
     align-items: flex-end;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .movieDetails-image{
     border: 5px solid white;
-    width: 25%;
+    width: 35%;
 }
 
 .movieDetails-text{
@@ -41,10 +46,12 @@ justify-content: space-between;
     padding-left: 1rem;
 
 }
+
 .movieDetails-title{
-    font-size: 2rem;
+    font-size: 1rem;
     color: white;
     text-align: left;
+    margin: 0;
 }
 
 .movieDetails-rating{
@@ -53,9 +60,75 @@ justify-content: space-between;
     margin-left: 10px;
 }
 
-.movieDetails-sinopsis{
-    width: 100%;
-    font-size: 1.2rem;
+.movieDetails-gender{
+    font-size: 0.8rem;
     color: white;
     text-align: left;
+    margin: 0;
+}
+
+.movieDetails-gender-span{
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.movieDetails-sinopsis{
+    width: 100%;
+    font-size: 0.6rem;
+    color: white;
+    text-align: left;
+}
+
+
+@media (min-width: 768px) {
+.movieDetails-title{
+  font-size: 2rem;
+}
+
+.movieDetails-sinopsis{
+    font-size: 1.2rem;
+}
+
+.movieDetails-back{
+    font-size: 1.3rem;
+    padding: 1.5rem;
+}
+
+.movieDetails-image{
+    width: 30%;
+}
+
+.movieDetails-sumary{
+    padding: 3rem;
+}
+
+.movieDetails-gender, .movieDetails-gender-span{
+    font-size: 1.4rem;
+}
+
+}
+
+
+@media (min-width: 992px) {
+.movieDetails-title{
+  font-size: 2.2rem;
+}
+
+.movieDetails-sinopsis{
+    font-size: 1.4rem;
+}
+
+.movieDetails-back{
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+.movieDetails-image{
+    width: 25%;
+}
+
+.movieDetails-gender, .movieDetails-gender-span{
+    font-size: 1.6rem;
+}
+
 }

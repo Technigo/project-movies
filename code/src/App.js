@@ -22,17 +22,17 @@ export const App = () => {
   }
 
   useEffect(fetchMovies, [])
-  // console.log(movies)
+  console.log(movieDetails)
 
   return (
     <BrowserRouter>
       <main className="main-container">
         <Switch>
           <Route path="/" exact>
-            <Home movies={movies} />
+            <Home movies={movies} fetchMovieDetails={fetchMovieDetails} />
           </Route>
           <Route path="/movie-details/:id" exact>
-            <MovieDetails movies={movies} fetchMovieDetails={fetchMovieDetails} movieDetails={movieDetails} />
+            <MovieDetails movies={movies} movieDetails={movieDetails} />
           </Route>
         </Switch>
       </main>

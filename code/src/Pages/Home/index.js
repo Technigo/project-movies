@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom'
 
 
 
-export const Home = ({ movies }) => {
+export const Home = ({ movies, fetchMovieDetails }) => {
 
     return (
         movies ? movies.map(movie => {
-            return <Link key={movie.id} to={`/movie-details/${movie.id}`}><MovieCard movie={movie} /></Link>
+            return <Link className="ancor" key={movie.id} to={`/movie-details/${movie.id}`} onClick={() => fetchMovieDetails(movie.id)}><MovieCard movie={movie} /></Link>
         }) : < Loader />
     )
 }
