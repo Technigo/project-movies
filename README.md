@@ -31,7 +31,7 @@ This week, I started with the css design with fake data. Then I followed the ins
 
 ## View it live
 
-See: 
+See: https://project-movies-priscilaalfaro.netlify.app/
 
 ## Usage
 
