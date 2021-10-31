@@ -13,16 +13,21 @@ export const App = () => {
     fetch(MOVIES_URL(API_KEY))
       .then(response => response.json())
       .then(movies => setMovies(movies.results))
+      .catch((error) => {
+        console.log('Error in Fetch:' + error.message);
+      });
   }
 
   const fetchMovieDetails = (movie_id) => {
     fetch(MOVIE_DETAILS_URL(API_KEY, movie_id))
       .then(response => response.json())
       .then(movieDetails => setMovieDetails(movieDetails))
+      .catch((error) => {
+        console.log('Error in Fetch:' + error.message);
+      });
   }
 
   useEffect(fetchMovies, [])
-  console.log(movieDetails)
 
   return (
     <BrowserRouter>

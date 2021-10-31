@@ -6,14 +6,7 @@ import { useParams } from 'react-router-dom'
 export const MovieDetails = ({ movies, movieDetails }) => {
     const params = useParams();
 
-
-    console.log("movies", movies)
     const matchMovie = movies.find(movie => movie.id === parseInt(params.id))
-    // matchMovie && fetchMovieDetails(matchMovie.id)
-
-    console.log("movieDetails", movieDetails)
-    // : movieDetails.genres.map(genre => { return `${genre.name}|` })
-    console.log("movieDetails", movieDetails && movieDetails.genres.length)
 
     return (
         <section className="movieDetails-container" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${matchMovie.backdrop_path}` }} >
@@ -27,9 +20,6 @@ export const MovieDetails = ({ movies, movieDetails }) => {
                     <h2 className="movieDetails-gender">{movieDetails && movieDetails.genres.length > 1 ? `Genders: ` : `Gender: `}
                         <span className="movieDetails-gender-span">{movieDetails && movieDetails.genres.map(genre => `${genre.name} | `)}</span>
                     </h2>
-                    {/* <h2 className="movieDetails-gender">{movieDetails && movieDetails.genres.length > 1 ? "Genders:" : "Gender:"}
-                        <span className="movieDetails-gender-span">{movieDetails && movieDetails.genres.map(genre => `${genre.name} | `)}</span>
-                    </h2> */}
                     <p className="movieDetails-sinopsis">{matchMovie.overview}</p>
                 </div>
             </div>

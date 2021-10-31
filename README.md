@@ -27,7 +27,7 @@ The API is well documented at developers.themoviedb.org, and if you click throu
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+This week, I started with the css design with fake data. Then I followed the instructions to fecth data in the 'themoviedb.org' API and get the movies, and the react-router was included to switch between pages. Finally I added a loader because the movies fecth takes some miliseconds. I fix some css details at the end to achieve the design.
 
 ## View it live
 
