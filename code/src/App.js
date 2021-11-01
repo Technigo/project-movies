@@ -2,10 +2,12 @@ import "./index.css";
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { MovieList } from "./components/MovieList";
-import { MovieDetails } from "./components/MovieDetails";
 import { ContactUs } from "./components/ContactUs";
 import { Header } from "./components/Header";
-import { NavBar } from "./NavBar";
+import { NavBar } from "./components/NavBar";
+
+// I had created this component but did not write any code in it , just wanted to add it to simplify debugging
+import { MovieDetails } from "./components/MovieDetails";
 
 export const App = () => {
   return (
