@@ -1,13 +1,100 @@
+:root {
+  --font-color: white;
+  --background-color: black;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--font-color);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+:active {
+  color: goldenrod;
+}
+
+h2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+
+.movie-container {
+  display: grid;
+  grid-area: auto;
+  place-self: center;
+  justify-content: center;
+  max-width: 300px;
+  z-index: 0;
+  position: relative;
+}
+
+.contact-us {
+  display: grid;
+  place-items: center;
+  place-self: center;
+  line-height: 40px;
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+.github-link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.github-link:hover {
+  color: goldenrod;
+  text-decoration: underline;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.nav-link-item {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .movie-container {
+    display: flex;
+    max-width: 300px;
+    max-height: 550px;
+  }
+  .contact-us {
+    font-size: 22px;
+    margin-top: 150px;
+  }
+  .nav-link-item {
+    margin-right: 20px;
+    font-size: 22px;
+  }
 }
