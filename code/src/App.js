@@ -24,7 +24,7 @@ export const App = () => {
       <Header />
       <Switch>
         <Route exact path="/" render={() => <List movies={list} />} />
-        <Route path="/details/details" component={Details} />
+        <Route path="/details" component={Details} />
       </Switch>
     </BrowserRouter>
   );
