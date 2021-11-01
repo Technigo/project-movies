@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
 
 import Navbar from "Navbar";
 import Home from "Home";
@@ -10,22 +10,23 @@ export const App = () => {
 	return (
 		<BrowserRouter>
 			<div className="container">
+				<div className="navbarContainer">
 				<Navbar />
-
+</div>
 				<Switch>
-
-					<Route path="/" exact>
+<div className="contentContainer">
+					<Route path="/">
 						<Home />
 					</Route>
 
-					<Route path="/about" exact>
+					<Route path="/about">
 						<About />
 					</Route>
 
 					<Route  path="/moviePage/:id" >
 						<MoviePage />
 					</Route>
-          
+          </div>
 				</Switch>
 			</div>
 		</BrowserRouter>
