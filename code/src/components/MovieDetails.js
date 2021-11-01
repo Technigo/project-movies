@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { URL_DETAILS } from "utils/urls";
 import "../css/details.css";
 
@@ -15,16 +15,25 @@ export const MovieDetails = () => {
 	}, [id]);
 
 	return (
-		<>
-			<div>
-				<h1>{movie.title}</h1>
+		<div className="container">
+			<img className="background-image" alt={movie.title} src={`http://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} />
+			<Link className="back-btn" to="/">
+				<button>Movies</button>
+			</Link>
+			<div className="details-container">
+				<img className="poster-image" alt={movie.title} src={`http://image.tmdb.org/t/p/w342${movie.poster_path}`} />
+				<div className="movie-info">
+					<h1>{movie.title}</h1>
+					<p className="summery">{movie.vote_average}/10</p>
+					<p>{movie.overview}</p>
+				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 
 // Poster Image (stående format): props.poster_path (plus allt annat innan)
-// Image Background (liggande format): backdrop_path (kanske)
+// Image Background (liggande format): props.backdrop_path (kanske)
 // Title: props.title
 // Summery: props.overview
 // Rating: props.vote_average

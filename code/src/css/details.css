@@ -1,3 +1,36 @@
 body {
-	color: black;
+	color: #ffffff;
+}
+
+.container {
+	display: flex;
+	/* align-items: flex-end; */
+}
+
+.details-container {
+	display: flex;
+	margin: 50px;
+}
+
+.background-image {
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	position: absolute;
+	object-fit: cover;
+}
+
+.poster-image {
+	border: solid 5px #ffffff;
+}
+
+.back-btn {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+
+.movie-info {
+	width: 390px;
+	margin: 0 0 20px 20px;
 }
