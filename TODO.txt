@@ -1,0 +1,47 @@
+TO DO LIST: 
+Forked repo - ok! 
+Cloned repo at my computer - ok! 
+Added Maria as a collaborator on GitHub - ok! 
+Registered a profile at movie API - ok! 
+
+Two componenets - movieslist and moviedetails ? 
+
+
+
+
+
+### **🔵  Blue Level (Minimum Requirements)**
+
+- Your app should have at least two pages - 
+one showing a list of movies and one showing details
+
+- You should follow the design from our example 
+(but it's ok to change things - just try to make it look nice) 
+Use styled components or regular css.
+
+
+
+
+
+### **🔴  Red Level (Intermediary Goals)**
+
+- Show a 'not found' page if you try to visit a movie detail page with an invalid 
+movie ID (so the user has tried to enter an ID themselves, most likely).
+    - **Hint**
+        In this case, when you send a movie detail request with a movie ID 
+		which doesn't exist in the API, the API returns with a 404 response. 
+		You can use `.catch()` on your promise to catch this exception and 
+		toggle some sort of 'error' state which can be used to show an error page.
+        
+- **Handle loading states** - The API responds quite quickly, but if you're on a 
+slow network then you'd be faced with a black screen until the response comes back. 
+During this time, you could show a loading message or spinner of some sort on the page.
+    - **Hint**
+        Use something like `const [loading, setLoading] = useState(true)` to make it so 
+		the page is loading by default, then call `setLoading(false)` once you get the 
+		response back from the API.
+        
+        You could also investigate how to handle the loading of images - or show plain 
+		text by default and then use CSS to place the image over the text 
+		(using absolute positioning). This way, if the images take a long time to load, 
+		the user still sees something relevant.
