@@ -13,8 +13,8 @@ useEffect(() => {
   
   return (
     <section>
-    {movies.map((movies) => ( 
-    <div key ={movies.id}>{movies.title}</div>  
+    {movies.map((movie) => ( 
+    <div key ={movie.id}>{movie.title}</div>  
     ))}
     </section>
   )
