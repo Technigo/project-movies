@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 import { URL_LIST } from "utils/urls";
 import "../css/list.css";
 
-export const List = () => {
-	const [list, setList] = useState([]);
+export const Overview = () => {
+	const [overview, setOverview] = useState([]);
 
 	useEffect(() => {
 		fetch(URL_LIST)
 			.then((response) => response.json())
-			.then((data) => setList(data.results));
+			.then((data) => setOverview(data.results));
 	}, []);
 
 	return (
 		<div className="movie-grid">
-			{list.map((movie) => (
+			{overview.map((movie) => (
 				<Link className="movie-container" key={movie.id} to={`/movies/${movie.id}`}>
 					<img className="movie-poster" src={`http://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}></img>
 					<div className="overlay-container">
