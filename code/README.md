@@ -1,19 +1,18 @@
-# Technigo React Starter App
+## API KEY and Documentation links
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+API Key: 4cfc03c4e32397dfd5018e9bb30b640c
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+### details , documentation links etc
 
-## Usage
+Hi ,
+Your request for an API key has been approved. You can start using this key immediately.
+Here's an example API request:
+https://api.themoviedb.org/3/movie/550?api_key=4cfc03c4e32397dfd5018e9bb30b640c
+Useful Links
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
-
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+1. Documentation: https://developers.themoviedb.org/3/getting-started/introduction
+2. Support forum: https://www.themoviedb.org/talk/category/5047958519c29526b50017d6
+3. Wrappers & libraries: https://www.themoviedb.org/documentation/api/wrappers-libraries
+4. Service status: https://status.themoviedb.org
+   If you have any questions, feel free to create a new discussion in our support forum.
+   The Movie Database Team https://www.themoviedb.org
