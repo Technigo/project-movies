@@ -1,0 +1,42 @@
+.background-image {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.gradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 78%
+  );
+}
+
+.movie-wrapper {
+  position: relative;
+  box-sizing: border-box;
+}
+.movie-details {
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+  position: absolute;
+  bottom: 20px;
+}
+
+.poster {
+  border: 5px solid white;
+}
+
+.text-details {
+  margin-left: 20px;
+}
+h1 {
+  font-size: 1.5em;
+}
+
+p {
+  max-width: 400px;
+}

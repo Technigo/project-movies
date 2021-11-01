@@ -14,13 +14,17 @@ export const MovieList = () => {
         setMovies(json.results);
       });
   }, []);
+  console.log(movies);
 
   return (
     <div className="grid">
       {movies.map((movie) => (
         <div className="movie-container" key={movie.id}>
-          <img alt={`${movie.original_title} `} src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} />
-          <Link to={"/movieDetails"}>
+          <img
+            alt={`${movie.original_title} `}
+            src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+          />
+          <Link to={`/movieDetails/${movie.id}`}>
             <OverLay>
               <h2>{movie.original_title}</h2>
               <p>Released {moment(movie.release_date).format("MMM Do YY")}</p>
