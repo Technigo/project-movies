@@ -1,9 +1,7 @@
 import React from 'react'
+import { API_URL } from 'utils/url'
 
 export const App = () => {
-  return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  )
+  console.log(API_URL)
+  return <div>helloHEj</div>
 }
