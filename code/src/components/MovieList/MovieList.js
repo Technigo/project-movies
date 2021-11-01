@@ -7,7 +7,11 @@ export const MovieList = ({ movieList, imageInformation }) => {
     <section className="movie-list-container">
       {movieList.map((movie) => {
         return (
-          <MovieListItem movie={movie} imageInformation={imageInformation} />
+          <MovieListItem
+            movie={movie}
+            imageInformation={imageInformation}
+            key={movie.id}
+          />
         );
       })}
     </section>

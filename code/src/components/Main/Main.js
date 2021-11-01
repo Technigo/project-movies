@@ -35,7 +35,6 @@ export const Main = () => {
             />
           )}
         />
-        {/* <Route path="/details:movieName" component={Details} /> */}
       </Switch>
     </BrowserRouter>
   );
