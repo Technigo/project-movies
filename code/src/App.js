@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
+import MovieList from 'pages/MovieList'
+import MovieDetails from 'pages/MovieDetails'
 import { API_LIST } from './utils/urls'
 
 export const App = () => {
@@ -10,23 +14,16 @@ export const App = () => {
       .then((data) => setList(data.results))
   }, [])
   return (
-    <section className='movies-container'>
-      {list.map((movie) => (
-        <div className='movie-card' key={movie.id}>
-          {console.log(movie)}
-          <img
-            src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-            alt={movie.title}
-          />
-          <div className='overlay'>
-            <div className='movie-data'>
-              <h1>{movie.title}</h1>
-              <p>Released {movie.release_date}</p>
-            </div>
-          </div>
-        </div>
-      ))}
-    </section>
+    <BrowserRouter>
+      <Switch>
+        <Route path='/' exact>
+          <MovieList list={list} />
+        </Route>
+        <Route path='/movie/:movieId'>
+          <MovieDetails />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   )
 
   // src={`https://image.tmdb.org/t/p/w780${movie.backdrop_path}`}
