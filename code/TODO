@@ -1,0 +1,33 @@
+# API
+v3 API key: f6130163420bd56b53df7cf41edc5b29
+
+API docs: developers.themoviedb.org 
+
+ALLA LEOS FILMER: https://api.themoviedb.org/3/person/6193/movie_credits?api_key=f6130163420bd56b53df7cf41edc5b29&language=en-US
+
+LEOS PERSON ID 6193
+
+Exempel lista sort genre: 
+  DRAMA: https://api.themoviedb.org/3/discover/movie?api_key=f6130163420bd56b53df7cf41edc5b29&with_genres=18
+  
+  HORROR: https://api.themoviedb.org/3/discover/movie?api_key=f6130163420bd56b53df7cf41edc5b29&with_genres=27
+
+  MUSIC: https://api.themoviedb.org/3/discover/movie?api_key=f6130163420bd56b53df7cf41edc5b29&with_genres=10402
+
+
+
+Exempel på begäran:
+https://api.themoviedb.org/3/movie/550?api_key=f6130163420bd56b53df7cf41edc5b29
+
+
+# Fetching popular movies for the list page
+
+[https://api.themoviedb.org/3/movie/popular?api_key={api_key}&language=en-US&page=1](https://api.themoviedb.org/3/movie/popular?api_key=%7Bapi_key%7D&language=en-US&page=1)
+
+Don't forget to replace {api_key} with your API key if you copy and paste this*
+
+# Fetching a movie's details
+
+[https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US](https://api.themoviedb.org/3/movie/%7Bmovie_id%7D?api_key=%7Bapi_key%7D&language=en-US)
+
+Don't forget to replace {api_key} with your API key and {movie_id} with the id you get from the url via react-router if you copy and paste this*
