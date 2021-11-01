@@ -41,5 +41,3 @@ const Movie = () => {
 }
 
 export default Movie
-
-//https://image.tmdb.org/t/p/w342${movie.poster_path}
