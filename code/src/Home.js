@@ -1,16 +1,12 @@
-
-import MovieList from 'MovieList'
-import React from 'react'
-
+import MovieList from "MovieList";
+import React from "react";
 
 const Home = () => {
-  return (
-   <div>
+	return (
+		<div>
+			<MovieList />
+		</div>
+	);
+};
 
-<MovieList />
-
-   </div>
-  )
-}
-
-export default Home
+export default Home;
