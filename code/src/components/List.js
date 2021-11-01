@@ -14,8 +14,10 @@ const List = ({ movies }) => {
                 alt={movie.title}
                 />
                 <div className="movie-overlay">
-                    <h1>{movie.title}</h1>
-                    <p>Release date: {movie.release_date}</p>
+                    <div className="movie-text">
+                        <h1>{movie.title}</h1>
+                        <p>Release date: {movie.release_date}</p>
+                    </div>
                 </div>
             </div>
         </Link>

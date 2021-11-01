@@ -16,7 +16,6 @@ code {
 .movie-card-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
 }
 
 .movie-card {
@@ -45,6 +44,10 @@ code {
   opacity: 1;
 }
 
+.movie-text {
+  margin: 20px;
+}
+
 .movie-details {
   color: white;
   display: flex;
@@ -55,6 +58,7 @@ code {
   padding-left: 60px;
   float: left;
 }
+
 .movie-summary {
   text-shadow: 1px 1px black;
   margin-left: 20px;
@@ -75,3 +79,40 @@ code {
   color: red;
   font-size: 1.3rem;
 }
+
+.back-button {
+  position: absolute;
+  left: 0;
+  margin: 60px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  text-shadow: 1px 1px black;
+}
+
+.fa-arrow-alt-circle-left {
+  font-size: 2rem;
+  align-items: center;
+}
+
+.back-button-text {
+  border: 3px solid transparent;
+}
+.back-button-text:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #fff;
+  transition: width 0.4s ease-in;
+}
+
+.back-button-text:hover::after {
+  width: 100%;
+  box-shadow: 1px 1px black;
+}
+/* .back-button:hover {
+  transform: scale(1.2);
+} */

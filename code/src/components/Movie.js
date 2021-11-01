@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useEffect, useState } from 'react/cjs/react.development'
 
 import { API_KEY } from 'utils/urls'
@@ -21,6 +21,10 @@ const Movie = () => {
     
     return (
         <div className="background-poster" style={{backgroundImage:`linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}}>
+            <Link to="/" className="back-button">
+                <i className="far fa-arrow-alt-circle-left"/>
+                <span className="back-button-text">GO BACK</span>
+            </Link>
             <div className="movie-details">
                 <img
                     className="movie-poster"
