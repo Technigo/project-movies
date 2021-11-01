@@ -1,20 +1,26 @@
 import React, { useState, useEffect } from 'react'
-
+import { useParams } from 'react-router-dom'
+import { DETAILS_URL } from 'utils/urls'
 
 const MovieDetails = () => {
-    const [details, setDetails] = useState ([])
+    const [movie, setMovie] = useState ([])
+    const { id } = useParams()
 
     useEffect(() => {
-        fetch(DETAILS_URL)
+        fetch(DETAILS_URL(id))
         .then(res => res.json())
-        .then(data => {
-            setDetails(data.movie[0])
-        })
-    }, [movie.id])
+        .then(data => setMovie(data)
+    )}, [id])
 
     return (
 
-
+        <div>
+            <div key={movie.original_title}>
+                <img src={`http://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={movie.title}/>
+                <h1>{movie.original_title}</h1>
+                <h3>Released {movie.release_date}</h3>
+            </div>
+        </div>
     )
 }
 

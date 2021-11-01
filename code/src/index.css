@@ -22,10 +22,11 @@ code {
   flex-wrap: wrap;
 }
 
-.movie-item a img {
-  width: 100%;
-}
-
 .movie-item a {
   width: 25%;
 }
+
+/* .movie-item img {
+  width: 100%;
+} */
+

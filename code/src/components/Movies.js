@@ -12,22 +12,29 @@ const Movies = () => {
     }, []) 
 
     return (
-        <div className="movie-container">
+        <main className="movie-container">
             {movies.map((movie) => (
                 <div className='movie-item'>
                     <Link key={movie.id} to={`/movies/${movie.id}`}>
                         <img src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}/>
-                        <h3>{movie.original_title}</h3>
-                        <h4>{movie.release_date}</h4>
+                        <div className='overlay'>
+                            <div className='movie-details'>
+                                <h3>{movie.original_title}</h3>
+                                <h4>{movie.release_date}</h4>
+                            </div>
+                        </div>
                     </Link>
                 </div>
 ))}
-        </div> 
+        </main> 
 
     )
 }
 
 
 export default Movies
+
+
+
 
 
