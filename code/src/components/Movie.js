@@ -15,7 +15,7 @@ const Movie = () => {
         fetch(MOVIE_URL)
         .then((res) => res.json())
         .then((data) => setMovie(data))
-    }, [])
+    }, [MOVIE_URL])
     
     console.log(movie)
     
