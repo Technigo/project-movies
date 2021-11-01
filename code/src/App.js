@@ -19,17 +19,12 @@ export const App = () => {
     <>
     <BrowserRouter>
      <Switch>
-        {/* //v1 */}
-{/*         <Route exact path="/" render={() => <List pokemons={list} />} />
-        <Route path="/details/:pokemonName" component={Details}/> */}
-        {/* //v2 */}
         <Route exact path="/">
           <List movies={list}/>
         </Route>
         <Route path='/movie/:movieId'>
           <Movie />
         </Route>
-
      </Switch>
     </BrowserRouter>
     </>
