@@ -26,6 +26,7 @@ export const App = () => {
             {movieTitle.map((movie) => (
               <MovieList
                 key={movie.id}
+                movieId={movie.id}
                 poster={movie.poster_path}
                 title={movie.original_title}
                 date={movie.release_date}
@@ -34,7 +35,9 @@ export const App = () => {
             )
             )
             } </Route>
-          <Route path='/details' component={MovieDetails} />
+          <Route exact path='/movie/:id'>
+            <MovieDetails />
+          </Route>
         </Switch>
       </BrowserRouter >
     </div>
