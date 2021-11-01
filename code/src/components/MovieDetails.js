@@ -13,12 +13,19 @@ const MovieDetails = () => {
     )}, [id])
 
     return (
-
         <div>
             <div key={movie.original_title}>
-                <img src={`http://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={movie.title}/>
-                <h1>{movie.original_title}</h1>
-                <h3>Released {movie.release_date}</h3>
+                <img className='background' src={`http://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={movie.title}/>
+                <div className='posteranddetails'>
+                    <img src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}/>
+                    <div className='overlay-content'>
+                        <div className='title-score'>
+                            <h1>{movie.original_title}</h1>
+                            <p>{movie.vote_average}/10</p>
+                        </div>
+                        <p>{movie.overview}</p>
+                    </div>
+                </div>
             </div>
         </div>
     )

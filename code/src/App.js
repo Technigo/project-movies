@@ -4,15 +4,19 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Movies from './components/Movies'
 import MovieDetails from './components/MovieDetails'
 
+
 export const App = () => {
 
   return (
     <BrowserRouter>
       <Switch>
-      <Route exact path="/" render={() => <Movies />} />
-      <Route path="/movies/:id" render={() => <MovieDetails />} />
+        <Route path='/' exact>
+          <Movies />
+        </Route>
+        <Route path='/movies/:id' exact>
+          <MovieDetails/>
+        </Route>
       </Switch>
-    </BrowserRouter>
-  
+     </BrowserRouter>
   )
 }
