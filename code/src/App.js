@@ -16,11 +16,11 @@ export const App = () => {
 				<Switch>
 <div className="contentContainer">
 
-					<Route path="/">
+					<Route path="/" exact>
 					<Home />
 					</Route>
 
-					<Route path="/about">
+					<Route path="/about" exact>
 						<About />
 					</Route>
 
