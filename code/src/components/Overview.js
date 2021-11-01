@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { URL_LIST } from "utils/urls";
-import "../css/list.css";
+import "../css/overview.css";
 
 export const Overview = () => {
 	const [overview, setOverview] = useState([]);
