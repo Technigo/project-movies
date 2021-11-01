@@ -1,18 +1,24 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const MovieList = ({ movie }) => {
-    return (
-        <section>
-            {movie.map((movie) => (
-                <Link key={movie.id}>
-                    <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-                    <h3>{movie.title}</h3>
-                    <p>Released: {movie.release_date}</p> 
-                </Link>
-            ))}
-        </section>
-    )
-}
+  return (
+    <section className="main-container">
+      {movie.map((movie) => (
+        <Link to="/" key={movie.id} className="movie-container">
+          <div className="overlay"></div>
+          <img
+            src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+            alt={movie.title}
+          />
+          <div className="movie-title">
+            <h3>{movie.title}</h3>
+            <p>Released: {movie.release_date}</p>
+          </div>
+        </Link>
+      ))}
+    </section>
+  );
+};
 
-export default MovieList
+export default MovieList;
