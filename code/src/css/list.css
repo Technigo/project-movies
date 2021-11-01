@@ -1,0 +1,43 @@
+body {
+	color: #ffffff;
+}
+
+.movie-grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.movie-container {
+	width: 25%;
+	position: relative;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.movie-poster {
+	width: 100%;
+	display: block;
+}
+
+.movie-grid .overlay-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.75);
+	display: none;
+	padding: 20px;
+}
+
+.movie-container:hover .overlay-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	flex-direction: flex-end;
+}
+
+.movie-title {
+	margin-top: auto;
+	margin-bottom: 0;
+}
