@@ -20,10 +20,11 @@ const MovieList = () => {
 
 		<div >
 		{movies.map((movie) => (
-			<Link key={movie.id} to={`/movies/${movie.id}`}>
+			<Link key={movie.id} to={`/movies/${movie.title}`}>
 				
 
-				<div className="details">
+				<div className="movieListContent">
+					<img src={`http://image.tmdb.org/t/p/w300${movie.poster_path}`}  alt={movie.title} />
 					<h1>{movie.title}</h1>
 					<p>Released {movie.release_date}</p>
 				</div>
