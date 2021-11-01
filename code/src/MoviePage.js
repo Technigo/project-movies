@@ -2,14 +2,14 @@ import React from "react";
 import {useParams} from "react-router-dom";
 import Movie from "components/Movie";
 
-const MoviePage = () => {
+const MoviePage = ({movies}) => {
 	const param = useParams()
-
-	console.log(param)
+const matchMovie = movies.find((movies)=>movies.id === param.id)
 
 	return (
 		<div>
-			<p> hello here is a movie</p>
+		< Movie name={matchMovie.id} id={matchMovie.id}
+		 />
 		</div>
 	);
 };
