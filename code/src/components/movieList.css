@@ -1,0 +1,52 @@
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.movie-link {
+  position: relative;
+  display: flex;
+  grid-column: span 4;
+}
+
+.movie-poster {
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  z-index: 10;
+  padding: 20px;
+}
+
+.overlay:hover {
+  background-color: rgba(5, 5, 5, 0.6);
+}
+
+.hover-text {
+  visibility: hidden;
+}
+
+.overlay:hover .hover-text {
+  color: white;
+  visibility: visible;
+}
+
+@media (min-width: 668px) {
+  .movie-link {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .movie-link {
+    grid-column: span 1;
+  }
+}
