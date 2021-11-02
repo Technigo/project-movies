@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+// import styled from "styled-components";
 
 const MovieList = ({ movie }) => {
   return (
     <section className="main-container">
       {movie.map((movie) => (
-        <Link to="/" key={movie.id} className="movie-container">
+        <Link
+          to={`/details/${movie.id}`}
+          key={movie.id}
+          className="movie-container"
+        >
           <div className="overlay"></div>
           <img
             src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
