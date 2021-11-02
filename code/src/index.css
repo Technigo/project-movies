@@ -129,3 +129,16 @@ code {
   justify-content: center;
   align-items: center;
 }
+.loader-animation {
+  animation: spinner 1s infinite linear;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
