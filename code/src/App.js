@@ -30,7 +30,8 @@ console.log("APP API INFO HERE: ", movies)
     <Header />
     <Switch> 
       <Route exact path="/" render={() => <MovieList movies={movies} />} /> 
-      <Route path="/MovieDetails/:info" component={MovieDetails}  /> THE DETAILS OF THE MOVIE WILL BE DISPLAYED HERE 
+      <Route path="/MovieDetails/:info"> <MovieDetails /> THE DETAILS OF THE MOVIE WILL BE DISPLAYED HERE 
+      </Route>
     </Switch>
     </BrowserRouter>
     </div>
