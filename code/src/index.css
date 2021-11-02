@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.all-movies-container {
+  /* height: 100vh; */
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.movie-container {
+  height: 100%;
+
+}
+
+img {
+  width: 100%;
+}
+
+img:hover {
+  opacity: 0.5;
+}
