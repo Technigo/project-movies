@@ -1,13 +1,13 @@
 import React from "react";
 import { useParams } from "react-router";
 const MovieDetail = () => {
-	const { title } = useParams();
+	const { id } = useParams();
 
 
 	return (
 		<div>
 		
-			<h2>Title: {title} </h2>
+			<h2>Title: {id} </h2>
      
 		</div>
 	);

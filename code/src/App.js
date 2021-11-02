@@ -4,6 +4,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "Navbar";
 import Home from "Home";
 import Toprated from "Toprated";
+import MovieDetail from "components/MovieDetail";
+import NoPageFound from "NoPageFound";
 
 export const App = () => {
   return (
@@ -12,8 +14,9 @@ export const App = () => {
         <div className="navbarContainer">
           <Navbar />
         </div>
+				<div className="contentContainer">
         <Switch>
-          <div className="contentContainer">
+          
             <Route path="/" exact>
               <Home />
             </Route>
@@ -21,8 +24,23 @@ export const App = () => {
             <Route path="/toprated" exact>
               <Toprated />
             </Route>
-          </div>
+
+
+						<Route path="/movies/:id" exact>
+              <MovieDetail />
+            </Route>
+
+						<Route path="*" >
+              <NoPageFound />
+            </Route>
+
+         
+
+				
+				
+
         </Switch>
+				</div>
       </div>
     </BrowserRouter>
   );
