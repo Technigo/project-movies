@@ -13,15 +13,14 @@ code {
 }
 
 .all-movies-container {
-  /* height: 100vh; */
   background-color: black;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
 }
 
 .movie-container {
-  height: 100%;
-
+  position: relative;
 }
 
 img {
@@ -30,4 +29,18 @@ img {
 
 img:hover {
   opacity: 0.5;
+}
+
+.details-overlay {
+  display: none;
+  position: absolute;
+  color: white;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  padding: 20px;
+}
+
+.movie-container:hover > .details-overlay {
+  display: inline;
 }
