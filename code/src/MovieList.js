@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Moment from "react-moment";
 import { Link } from "react-router-dom";
 import Loading from "components/Loading";
 import { PopularUrl } from "Urls";
@@ -19,13 +20,16 @@ const MovieList = () => {
     <div className="movieListContainer">
       {loading && <Loading />}
       {movies.map((movie) => (
-        <Link key={movie.id} to={`/movies/${movie.title}`}>
-          <div className="contentBlock">
+        <Link to={`/movies/${movie.id}`}>
+          <div key={movie.id} className="contentBlock">
             <div className="movieListContent">
-              <img src={`http://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
+              <img src={`http://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.id} />
               <div className="textMovieList">
                 <h1>{movie.title}</h1>
-                <p>Released {movie.release_date}</p>
+                <p> Release date: 
+					<Moment format="MM/DD">
+					 {movie.release_date}
+					</Moment></p>
               </div>
             </div>
           </div>
