@@ -15,15 +15,21 @@ export const MovieLists = () => {
 			});
 	}, []); //empty dependency
 	return (
-		<section>
+		<section className="main-container">
 			{movies.map((movie) => (
 				<div key={movie.id}>
 					<Link to={`/movie/${movie.id}`}>
-						<img
-							src={`https://image.tmdb.org/t/p/w154/${movie.poster_path}`}
-							alt={movie.original_title}
+						<div className="image-container">
+					<div className="overlay">
+						<div className="movie-list-text">
+						<h2 className="movie-title">{movie.title}</h2>
+						<p className="release-date">{movie.release_date}</p>
+						</div></div>
+						<img className="movie-poster"
+							src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+							alt={movie.title}
 						/>
-						<h2>{movie.original_title}</h2>
+					</div>
 					</Link>
 				</div>
 			))}

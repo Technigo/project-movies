@@ -1,11 +1,76 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box; 
+  /* what does this do? */
+} 
+
+
+
+
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
+  color:white; 
+  background-color: black;
 }
+
+
+.main-container{
+display:grid; 
+grid-template-columns: repeat (1,1fr);
+border:none;
+width:100%;
+
+
+}
+
+
+
+/* ---------Movie List--------- */
+.movie-poster {
+  width:100%;
+}
+
+.image-container{
+  position: relative;
+  width:100%;
+}
+
+.overlay{
+  display:flex;
+  
+  position:absolute; 
+  top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+  z-index:1 ;
+  width:100%;
+  opacity:0;
+  align-items: flex-end;
+  padding-bottom: 35px;
+  padding-left:35px;
+
+}
+
+.movie-list-text{
+  display:flex;
+  flex-direction: column; 
+  color:white;
+}
+
+.image-container:hover .overlay {
+  opacity:1;
+  background-color: black;
+}
+
+.movie-title{
+  text-decoration: none;  
+}
+
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

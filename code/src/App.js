@@ -21,7 +21,13 @@ export const App = () => {
 	);
 };
 
-//Questions:
+//To-do list
+//URL-component,
+//  media queries, 
+//  backdrop, 
+//  return button, 
+//  text on movie details 
+//  poster image (tablet and Desktop)
+// Add similar movies API
 
-//why do we have data instead json.results in the details?
-//What does a Param do?
+
