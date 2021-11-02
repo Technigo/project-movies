@@ -26,6 +26,10 @@
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.682);
 }
+
+.date-movie {
+  margin-top: 20px;
+}
 .movie-card:hover .movie-title-date {
   display: flex;
 }
