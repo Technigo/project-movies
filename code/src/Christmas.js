@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Loading from "components/Loading";
-import { PopularUrl } from "Urls";
+import { ChristmasUrl } from "Urls";
 
-const MovieList = () => {
+const Christmas = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
-    fetch(PopularUrl)
+    fetch(ChristmasUrl)
       .then((res) => res.json())
       .then((json) => setMovies(json.results))
       .finally(setLoading(false));
@@ -37,4 +37,4 @@ const MovieList = () => {
   );
 };
 
-export default MovieList;
+export default Christmas;

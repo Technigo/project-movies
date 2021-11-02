@@ -4,8 +4,11 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "Navbar";
 import Home from "Home";
 import Toprated from "Toprated";
+import Upcoming from "Upcoming";
+import NowPlaying from "Christmas";
 import MovieDetail from "components/MovieDetail";
 import NoPageFound from "NoPageFound";
+import Christmas from "Christmas";
 
 export const App = () => {
   return (
@@ -14,9 +17,8 @@ export const App = () => {
         <div className="navbarContainer">
           <Navbar />
         </div>
-				<div className="contentContainer">
-        <Switch>
-          
+        <div className="contentContainer">
+          <Switch>
             <Route path="/" exact>
               <Home />
             </Route>
@@ -25,22 +27,23 @@ export const App = () => {
               <Toprated />
             </Route>
 
+            <Route path="/upcoming" exact>
+              <Upcoming />
+            </Route>
 
-						<Route path="/movies/:id" exact>
+            <Route path="/Christmas" exact>
+              <Christmas />
+            </Route>
+
+            <Route path="/movies/:id" exact>
               <MovieDetail />
             </Route>
 
-						<Route path="*" >
+            <Route path="*">
               <NoPageFound />
             </Route>
-
-         
-
-				
-				
-
-        </Switch>
-				</div>
+          </Switch>
+        </div>
       </div>
     </BrowserRouter>
   );
