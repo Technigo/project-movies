@@ -19,14 +19,20 @@ export const MovieList = () => {
       });
     setLoading(!loading);
     // and above this line -> you will see the loader
-  }, [setLoading]);
+  }, []);
 
   return (
     <div className="grid">
       {loading && (
         <div className="loader-wrapper">
           <Loader color={"goldenrod"} width={120} height={120} />
-          <p className="lazy-data-loader">Data is lazy today &#128512;. Let's wait a little... </p>
+          <p className="lazy-data-loader">
+            Data is lazy today{" "}
+            <span role="img" aria-label="smile">
+              &#128512;
+            </span>
+            . Let's wait a little...{" "}
+          </p>
         </div>
       )}
       {movies.map((movie) => (

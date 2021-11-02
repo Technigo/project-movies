@@ -21,8 +21,8 @@ export const MovieDetails = () => {
       });
     setLoading(!loading);
     // and above this line -> you will see the loader
-  }, [movieId, setLoading]);
-  console.log(details);
+  }, [movieId]);
+
   //I added all styling into MovieDetails.css because I didn't have the energy to read up on the styled components.
   //It is 100% fine , as I understood we are not supposed to use only styled components , we can try them but thats not at all a requirement
   return (
@@ -31,7 +31,13 @@ export const MovieDetails = () => {
         <div className="grid">
           <div className="loader-wrapper">
             <Loader color={"goldenrod"} width={120} height={120} />
-            <p className="lazy-data-loader">Data is lazy today &#128512;. Let's wait a little... </p>
+            <p className="lazy-data-loader">
+              Data is lazy today{" "}
+              <span role="img" aria-label="smile">
+                &#128512;
+              </span>
+              . Let's wait a little...{" "}
+            </p>
           </div>
         </div>
       )) || (
