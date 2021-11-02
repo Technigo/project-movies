@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #000;
+  color: #fff;
 }
 
 code {
@@ -18,6 +20,27 @@ code {
   flex-wrap: wrap;
 }
 
-/* .movie-list-items{
-  border: 1px solid grey;
-} */
+.summary {
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+}
+
+.summary img {
+  border: 5px solid #fff;
+}
+
+.detail {
+  margin-left: 20px;
+}
+
+.detail p {
+  max-width: 400px;
+}
+
+.rating {
+  font-size: 17px;
+  color: red;
+  font-weight: 400;
+  margin-left: 10px;
+}
