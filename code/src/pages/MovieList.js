@@ -8,9 +8,13 @@ const MovieList = ({ movies }) => {
         <article className="movie-list-items"
           key ={movie.id}>
           <Link to = {`/movies/${movie.id}`}>  
+          <div className="img-container">
             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-            <p className="title">{movie.title}</p>  {/* maybe change to h2 or h3 later */}
-            <p className="release-date">{movie.release_date}</p>
+          </div>  
+              <div className="overlay">
+                <p className="title">{movie.title}</p>  {/* maybe change to h2 or h3 later */}
+                <p className="release-date">Released {movie.release_date}</p>
+              </div>
             
           </Link>
         </article>  

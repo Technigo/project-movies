@@ -35,7 +35,41 @@ code {
   width: 100%;
 }
 
-.title, .release-date {
-  display: none;
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease;
+  background-color: #000000bb;
+  fill: transparent;
 }
 
+.overlay:hover {
+  opacity: 1;
+  fill: rgb(255, 255, 255);
+}
+
+.title {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.release-date {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  color: #fff;
+  font-size: 18px;
+}
