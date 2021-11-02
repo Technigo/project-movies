@@ -132,3 +132,9 @@ img {
 }
 
 /* Movie page-page */
+.MovieDetailsInfo{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+position:absolute;
+
+}

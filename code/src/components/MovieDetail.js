@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Moment from 'react-moment';
 import { API_KEY } from "Urls";
 import Loading from "./Loading";
-
+ 
 const MovieDetail = () => {
 	const [movie, setMovie] = useState([]);
 	const [loading, setLoading] = useState(false);
@@ -27,14 +27,23 @@ const MovieDetail = () => {
 
 			{movie && (
 				<>
-					<h1>{movie.title}</h1>
+				<img src={`http://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.id} />
+				<div className="MovieDetailsInfo"> 
+					<img src={`http://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.id} /> 
+				
+				<div> 
+				<h1>{movie.title}</h1>
 			
-					<p>{movie.status} </p>
-					<p>Release date:   
-					<Moment format="MM/DD">
-					 { movie.release_date}
-					</Moment></p>
-
+			<p>{movie.status} </p>
+			<p>Release date:   
+			<Moment format="MM/DD">
+			 { movie.release_date}
+			</Moment></p>
+			</div>
+				
+				
+				 </div>
+				
 				</>
 			)}
 		</div>
