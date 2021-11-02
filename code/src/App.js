@@ -1,5 +1,5 @@
 import "./index.css";
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { MovieList } from "./components/MovieList";
 import { ContactUs } from "./components/ContactUs";
