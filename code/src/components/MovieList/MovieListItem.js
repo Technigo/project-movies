@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+// -------------------css---------------------------
 const PosterContainer = styled.div`
   position: relative;
   width: 100%;
@@ -27,10 +28,11 @@ const TextContainer = styled.div`
   padding: 20px;
 `;
 
+// onMouseEnter and onMouseLeave we set isMouseOver to true or false which we can use to change the opacity and the display style.
+// We also make a imagePath variable to get the path to the poster image. Finally we create some content that is displayed.
+
 export const MovieListItem = ({ movie, imageInformation }) => {
-  const [imageOpacityStyle, setImageOpacityStyle] = useState({ opacity: 1 });
-  const [textDivStyle, setTextDivStyle] = useState({ diplay: "none" });
-  console.log(imageInformation);
+  const [isMouseOver, setIsMouseOver] = useState(false);
   const imagePath = `${imageInformation.base_url}${imageInformation.poster_sizes[6]}${movie.poster_path}`;
 
   return (
@@ -38,22 +40,22 @@ export const MovieListItem = ({ movie, imageInformation }) => {
       <Link to={`/movies/${movie.id}`}>
         <PosterContainer
           onMouseEnter={() => {
-            setImageOpacityStyle({ opacity: 0.25 });
-            setTextDivStyle({ display: "flex" });
+            setIsMouseOver(true);
           }}
           onMouseLeave={() => {
-            setImageOpacityStyle({ opacity: 1 });
-            setTextDivStyle({ diplay: "none" });
+            setIsMouseOver(false);
           }}
         >
-          <TextContainer style={textDivStyle}>
+          <TextContainer
+            style={isMouseOver ? { display: "flex" } : { display: "none" }}
+          >
             <h1>{movie.title}</h1>
             <span>Release date: {movie.release_date}</span>
           </TextContainer>
           <PosterContainerImage
             src={imagePath}
             alt={`poster for ${movie.original_title}`}
-            style={imageOpacityStyle}
+            style={isMouseOver ? { opacity: 0.25 } : { opacity: 1 }}
           ></PosterContainerImage>
         </PosterContainer>
       </Link>
