@@ -18,7 +18,6 @@ export const App = () => {
 	}, [])
 
   return (
-    <div>
       <BrowserRouter>
 	  	<Switch> 
 			{/* path to the home page */}
@@ -30,8 +29,6 @@ export const App = () => {
 				<MovieDetails /> 
 			</Route>
 		</Switch>
-	  
 	  </BrowserRouter>
-    </div>
-  )
+  );
 }
