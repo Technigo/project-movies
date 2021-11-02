@@ -1,0 +1,41 @@
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.movies a img {
+    width: 100%;
+}
+
+.movies a {
+    width: 25%;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.movies .details {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    padding: 20px;
+  }
+  
+  .movies .details h1 {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+  
+  .movies a:hover .details {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import List from './components/List';
+import PopularList from './components/PopularList';
 import Details from './components/Details';
 
-import { MOVIES_URL, CONFIG_URL } from './utils/urls';
+import { MOVIES_URL} from './utils/urls';
 
 export const App = () => {
 	const [list, setList] = useState([]);
@@ -22,7 +22,7 @@ return (
       {/* <Header /> */}
       <Switch>
         {/* // v1 */}
-        <Route exact path="/" render={() => <List movies={list} />} />
+        <Route exact path="/" render={() => <PopularList movies={list} />} />
         <Route path="/details/:movieID" component={Details} />
 
         {/* // v2
