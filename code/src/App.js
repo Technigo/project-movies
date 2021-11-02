@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import List from './components/List';
+import LeosList from './components/LeosList';
 import Details from './components/Details';
 import Header from './components/Header';
 import { LEO_URL } from './utils/urls';
@@ -23,8 +23,8 @@ export const App = () => {
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route exact path="/" render={() => <List movies={list} />} />
-        <Route path="/details" component={Details} />
+        <Route exact path="/" render={() => <LeosList movies={list} />} />
+        <Route path="/movies/:id" component={Details} />
       </Switch>
     </BrowserRouter>
   );

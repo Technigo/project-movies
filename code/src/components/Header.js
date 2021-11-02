@@ -6,10 +6,10 @@ const Header = () => {
     <header>
       <h1>Love for Leo</h1>
       <nav>
-        <NavLink exact to="/" activeClassName="my-custom-class">
-          List
+        <NavLink exact to="/" activeClassName="header__nav-active">
+          Leos List
         </NavLink>
-        <NavLink to="/details" activeClassName="my-custom-class">
+        <NavLink to="/movies" activeClassName="header__nav-active">
           Details
         </NavLink>
       </nav>
