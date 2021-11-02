@@ -5,3 +5,5 @@
 ## Cool Features:
 
 ## View it live
+
+https://movie-releases-react-app.netlify.app
