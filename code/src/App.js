@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import MoviesList from "components/MoviesList";
+import MoviesDetails from "components/MoviesDetails";
 import { LIST_URL } from "./utils/urls";
 
 
@@ -16,11 +17,15 @@ useEffect(() => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path ="/">
+        <Route exact path ="/"> {/*//this means that it is the first page that displays*/}
           <MoviesList 
             films={movies}
-            
-            
+                        
+          />
+        </Route>
+        <Route path ="/details">
+          <MoviesDetails 
+            films={movies}
           />
         </Route>
       </Switch>
