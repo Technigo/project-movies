@@ -1,18 +1,79 @@
 .background-img {
+  position: relative;
+  display:flex;
   width: 100vw;
   height: 100vh;
   background-position: center;
-  background-size: cover;
+  background-size:cover;
   background-repeat: no-repeat;
 }
+.movie-card-details {
+  display: flex;
+  flex-direction: row;
+  max-width:900px;
+  align-items: flex-end;
+  padding: 20px;
+}
+.movie-details{
+  display:flex;
+  flex-direction: column;
+  padding: 20px;
+  color: white;
+}
+.movie-image-small{
+  display: none;
+}
+.movie-card-details h1 {
+  padding: 20px 0px;
+}
+.ranking {
+  color: red;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.back-arrow {
+  position:absolute;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  top:20px;
+  left: 20px;
+}
+svg {
+  margin-right: 5px;
+  font-size: 25px;
+}
+.back-arrow:hover svg {
+  margin-right: 10px;
+  transition: 0.4s;
+
+}
+
 
 @media (min-width: 768px) {
   .background-img {
-    background-size: cover;
+  background-size: cover;
   }
-}
+  .back-arrow {
+    top:50px;
+    left: 50px;
+  }
+  .movie-image-small{
+    display: flex;
+    border: 4px solid white;
+  }
+  .movie-card-details{
+    padding: 50px;
+  }
+  }
 @media (min-width: 992px) {
   .background-img {
     background-size: cover;
+    background-position: top;
+  }
+  .movie-card-details{
+    padding: 50px;
   }
 }
