@@ -6,7 +6,7 @@ export const BackButton = () => {
   return (
     <div className="back-button-container">
       <NavLink exact to={"/"}>
-        <img className="chevron-icon" style={{ width: 20 }} src={chevron} /> Movies
+        <img className="chevron-icon" alt="back to movies list" src={chevron} /> Movies
       </NavLink>
     </div>
   );
