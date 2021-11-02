@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import PopularList from './components/PopularList';
 import Details from './components/Details';
+import NotFound from './components/NotFound';
 
 import { MOVIES_URL} from './utils/urls';
 
@@ -24,7 +25,7 @@ return (
         {/* // v1 */}
         <Route exact path="/" render={() => <PopularList movies={list} />} />
         <Route path="/details/:movieID" component={Details} />
-
+        <Route component={NotFound} />
         {/* // v2
       <Route path="/details">
         <Details />
