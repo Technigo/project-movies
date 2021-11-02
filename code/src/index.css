@@ -18,3 +18,44 @@ code {
 }
 .movie-card {
 } */
+
+/* .overlay {
+  background-color: rgb(0, 0, 0, 0, 0.6);
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+} */
+
+.movie-image {
+  display: block;
+  width: 100%;
+}
+
+/* .movie-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+} */
+
+/* .overlay-text {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  transition: all 2s ease-in-out;
+  filter: brightness(0) invert(1);
+  margin-left: 100px;
+} */

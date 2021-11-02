@@ -14,12 +14,15 @@ export const App = () => {
       .then((data) => setList(data.results));
   }, []);
 
-  console.log(list);
+  const [detail, setDetail] = useState([]);
+
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path='/' render={() => <MovieList movies={list} />} />
-        <Route path='/details' component={MovieDetails} />
+        <Route exact path='/details/:movieId' component={MovieDetails}>
+          <MovieDetails />
+        </Route>
       </Switch>
     </BrowserRouter>
   );
