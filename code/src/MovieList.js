@@ -26,7 +26,11 @@ const MovieList = () => {
               <div className="movieListContent">
                 <div className="textMovieList">
                   <h1>{movie.title}</h1>
-                  <p>Released {movie.release_date}</p>
+                  <p>
+                    {" "}
+                    Release date:
+                    <Moment format="MM/DD">{movie.release_date}</Moment>
+                  </p>
                 </div>
               </div>
             </div>

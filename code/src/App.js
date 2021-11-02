@@ -4,10 +4,9 @@ import Navbar from "Navbar";
 import Home from "Home";
 import Toprated from "Toprated";
 import Upcoming from "Upcoming";
-import NowPlaying from "Christmas";
+import Christmas from "Christmas";
 import MovieDetail from "components/MovieDetail";
 import NoPageFound from "NoPageFound";
-import Christmas from "Christmas";
 
 export const App = () => {
   return (

@@ -5,11 +5,35 @@ import { API_KEY } from "Urls";
 import Loading from "./Loading";
 
 const MovieDetail = () => {
+  const [movie, setMovie] = useState([]);
+  const [loading, setLoading] = useState(false);
   const { id } = useParams();
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`)
+      .then((res) => res.json())
+      .then((json) => setMovie(json))
+      .finally(setLoading(false));
+  }, []);
+
+  console.log(movie);
 
   return (
     <div>
-      <h2>Title: {id} </h2>
+      {loading && <Loading />}
+
+      {movie && (
+        <>
+          <h1>{movie.title}</h1>
+
+          <p>{movie.status} </p>
+          <p>
+            Release date:
+            <Moment format="MM/DD">{movie.release_date}</Moment>
+          </p>
+        </>
+      )}
     </div>
   );
 };
