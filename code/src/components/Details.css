@@ -1,0 +1,48 @@
+.detailsPage {
+    position: relative;
+}
+
+.detailsPage .background {
+    min-height: 100vh;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  a.back-link {
+    position: absolute;
+    display: inline-flex;
+    color: #fff;
+    align-items: center;
+    font-weight: 700;
+    text-decoration: none;
+    left: 50px;
+    top: 50px;
+}
+
+.detailsPage img {
+    border: 5px solid #fff;
+  }
+  
+  .detailsPage .summary {
+    display: flex;
+    align-items: flex-end;
+    padding: 50px;
+  }
+  
+  .detailsPage .details {
+    margin-left: 20px;
+  }
+  
+  .detailsPage .details p {
+    max-width: 400px;
+  }
+  
+  .detailsPage .rating {
+    font-size: 17px;
+    color: red;
+    font-weight: normal;
+    margin-left: 10px;
+  }
+  
