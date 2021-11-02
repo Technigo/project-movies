@@ -21,7 +21,7 @@ export const MovieDetails = () => {
       });
     setLoading(!loading);
     // and above this line -> you will see the loader
-  }, [movieId]);
+  }, [movieId, loading, setLoading]);
 
   //I added all styling into MovieDetails.css because I didn't have the energy to read up on the styled components.
   //It is 100% fine , as I understood we are not supposed to use only styled components , we can try them but thats not at all a requirement

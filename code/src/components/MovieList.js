@@ -19,7 +19,7 @@ export const MovieList = () => {
       });
     setLoading(!loading);
     // and above this line -> you will see the loader
-  }, []);
+  }, [setLoading, loading]);
 
   return (
     <div className="grid">
