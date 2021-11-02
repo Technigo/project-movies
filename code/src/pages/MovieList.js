@@ -6,19 +6,28 @@ const MovieList = ({ list }) => {
     <section className='movies-container'>
       {list.map((movie) => (
         <Link to={`/movie/${movie.id}`} key={movie.id}>
-          <div className='movie-card'>
-            {/* {console.log(movie)} */}
+          {/* <div className='movie-card'> */}
+          {/* {console.log(movie)} */}
+          {movie.backdrop_path === null ? (
+            <img
+              src='https://res.cloudinary.com/dxdboxbyb/image/upload/v1620052094/ayi6tvyiedrlmjiim6yn.png'
+              alt='not available/'
+              width='342'
+              height='516'
+            />
+          ) : (
             <img
               src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
               alt={movie.title}
             />
-            <div className='overlay'>
-              <div className='movie-data'>
-                <h1>{movie.title}</h1>
-                <p>Released {movie.release_date}</p>
-              </div>
+          )}
+          <div className='overlay'>
+            <div className='movie-data'>
+              <h1>{movie.title}</h1>
+              <p>Released {movie.release_date}</p>
             </div>
           </div>
+          {/* </div> */}
         </Link>
       ))}
     </section>
