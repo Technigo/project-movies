@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const movieList = ({ movies }) => {
   return (
@@ -9,14 +10,17 @@ const movieList = ({ movies }) => {
             <p>{movie.title}</p>
             <p>{movie.release_date}</p>
           </div>
-          <img
-            src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-          ></img>
+
+          <Link to={`/movies/${movie.id}`}>
+            <img
+              src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+              alt="{movie.title} poster"
+            ></img>
+          </Link>
         </div>
       ))}
+      ;
     </section>
   );
 };
 export default movieList;
-
-// , movieName, releaseDate, picture

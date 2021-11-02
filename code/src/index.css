@@ -28,3 +28,43 @@ code {
 .movie-info:hover {
   display: flex;
 }
+
+/*  -----------I'm not sure if position center is the best. what do you think? */
+
+.background-image {
+  height: 100%;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  background-size: cover;
+}
+
+.info-summary {
+  display: flex;
+  margin: 35% 5% 0;
+  padding-bottom: 5%;
+}
+
+.movie-poster {
+  border: 5px solid white;
+}
+
+.info-details {
+  color: white;
+}
+
+.votes {
+  color: red;
+}
+
+.summary-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 5%;
+}
+
+.name-rate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

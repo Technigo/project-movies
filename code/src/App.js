@@ -3,22 +3,16 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import MovieList from "./components/MovieList";
 import MovieDetails from "./components/MovieDetails";
-import { MOVIES_URL, DETAILS_URL } from "./utils/urls";
+import { MOVIES_URL } from "./utils/urls";
 
 export const App = () => {
   const [movieLi, setMovieLi] = useState([]);
-  const [movieDetails, setMovieDetails] = useState([]);
+  /*  const [movieId, setMovieId] = useState({}); */
 
   useEffect(() => {
     fetch(MOVIES_URL)
       .then((res) => res.json())
       .then((data) => setMovieLi(data.results));
-  }, []);
-
-  useEffect(() => {
-    fetch(DETAILS_URL)
-      .then((res) => res.json())
-      .then((data) => setMovieDetails(data.results));
   }, []);
 
   console.log("GENERAL DATA", movieLi);
@@ -33,7 +27,7 @@ export const App = () => {
             render={() => <MovieList movies={movieLi} />}
           ></Route>
 
-          <Route path="/details" component={MovieDetails}></Route>
+          <Route path="/movies/:movieId" component={MovieDetails}></Route>
         </Switch>
       </BrowserRouter>
     </>
