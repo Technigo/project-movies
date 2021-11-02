@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { MovieList } from "../MovieList/MovieList";
+import { Details } from "components/Details/Details";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { API_MovieList, API_POSTERS } from "../../utils/urls";
 
@@ -18,6 +19,7 @@ export const Main = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data.results);
+        //Rememer to remove =)
         setMovieList(data.results);
       });
   }, []);
@@ -35,6 +37,7 @@ export const Main = () => {
             />
           )}
         />
+        <Route /* path="/details/:movieId" */ render={() => <Details />} />
       </Switch>
     </BrowserRouter>
   );

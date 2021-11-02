@@ -3,3 +3,6 @@ export const API_MovieList =
 
 export const API_POSTERS =
   "https://api.themoviedb.org/3/configuration?api_key=691b1dc74bbdcd3de3d91c33c77fd858";
+
+export const API_DETAILS =
+  "https://api.themoviedb.org/3/movie/580489?api_key=691b1dc74bbdcd3de3d91c33c77fd858";
