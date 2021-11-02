@@ -11,20 +11,16 @@ export const MovieDetails = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(loading);
-    // if you comment out the code below this line
+    setLoading(true);
     fetch(API_MOVIE_DETAILS(movieId))
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setDetails(data);
+        setLoading(false);
       });
-    setLoading(!loading);
-    // and above this line -> you will see the loader
-  }, [movieId, loading, setLoading]);
+  }, [movieId, setLoading]);
 
-  //I added all styling into MovieDetails.css because I didn't have the energy to read up on the styled components.
-  //It is 100% fine , as I understood we are not supposed to use only styled components , we can try them but thats not at all a requirement
   return (
     <>
       {(loading && (

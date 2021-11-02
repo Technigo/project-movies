@@ -10,16 +10,14 @@ export const MovieList = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(loading);
-    // if you comment out the code below this line
+    setLoading(true);
     fetch(API_MOVIE_LIST)
       .then((res) => res.json())
       .then((json) => {
         setMovies(json.results);
+        setLoading(false);
       });
-    setLoading(!loading);
-    // and above this line -> you will see the loader
-  }, [setLoading, loading]);
+  }, [setLoading]);
 
   return (
     <div className="grid">
