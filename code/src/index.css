@@ -27,12 +27,12 @@ img {
   width: 100%;
 }
 
-img:hover {
+.movie-container:hover > img {
   opacity: 0.5;
 }
 
 .details-overlay {
-  display: none;
+  opacity: 0;
   position: absolute;
   color: white;
   bottom: 0;
@@ -42,5 +42,6 @@ img:hover {
 }
 
 .movie-container:hover > .details-overlay {
-  display: inline;
+  opacity: 1;
 }
+
