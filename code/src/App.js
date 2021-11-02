@@ -3,27 +3,27 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Navbar from "Navbar";
 import Home from "Home";
-import About from "About";
+import Toprated from "Toprated";
 
 export const App = () => {
-	return (
-		<BrowserRouter>
-			<div className="container">
-				<div className="navbarContainer">
-					<Navbar />
-				</div>
-				<Switch>
-					<div className="contentContainer">
-						<Route path="/" exact>
-							<Home />
-						</Route>
+  return (
+    <BrowserRouter>
+      <div className="container">
+        <div className="navbarContainer">
+          <Navbar />
+        </div>
+        <Switch>
+          <div className="contentContainer">
+            <Route path="/" exact>
+              <Home />
+            </Route>
 
-						<Route path="/about" exact>
-							<About />
-						</Route>
-					</div>
-				</Switch>
-			</div>
-		</BrowserRouter>
-	);
+            <Route path="/toprated" exact>
+              <Toprated />
+            </Route>
+          </div>
+        </Switch>
+      </div>
+    </BrowserRouter>
+  );
 };
