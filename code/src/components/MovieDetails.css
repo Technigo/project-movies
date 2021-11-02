@@ -19,7 +19,7 @@
 }
 
 .go-back-link:hover {
-    transform: scale(1.04);
+    transform: translateX(-8px);
 }
 
 .summary {
