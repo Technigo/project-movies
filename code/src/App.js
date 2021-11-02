@@ -22,5 +22,6 @@ export const App = () => {
 };
 
 //Questions:
-//Can you use the same key for the same API but for two separate fetches ?
-//Why does the key not work?
+
+//why do we have data instead json.results in the details?
+//What does a Param do?

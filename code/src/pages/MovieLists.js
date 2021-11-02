@@ -14,7 +14,6 @@ export const MovieLists = () => {
 				setMovies(json.results);
 			});
 	}, []); //empty dependency
-
 	return (
 		<section>
 			{movies.map((movie) => (

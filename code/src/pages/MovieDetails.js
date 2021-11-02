@@ -11,25 +11,34 @@ export const MovieDetails = () => {
 			`https://api.themoviedb.org/3/movie/${movieId}?api_key=18efe4e6c09e4e4229e6b54ff367df52&language=en-US`
 		)
 			.then((res) => res.json())
-			.then((json) => {
-				setMovies(json.results); //[0]
+			.then((data) => {
+				setMovies(data); //[0]
 			});
 	}, [movieId]);
 
 	return (
 		<div>
-			{movies.map((movie) => (
-				//What key should we use? WHY IS IT COMPLAINING ABOUT THE MAP!
-				<div key={movieId}>
-					<img
-						src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`}
-						alt={movie.title}
-					/>
-					<h2>{movie.title} </h2>
-					<h2>{movie.vote_average}/10</h2>
-					<p>{movie.overview}</p>
-				</div>
-			))}
+			{/* What key should we use? WHY IS IT COMPLAINING ABOUT THE MAP! */}
+			<img
+				src={`https://image.tmdb.org/t/p/w1280${movies.backdrop_path}`}
+				alt={movies.title}
+			/>
+			<h2>{movies.title} </h2>
+			<h2>{movies.vote_average}/10</h2>
+			<p>{movies.overview}</p>
 		</div>
+
+		// <>
+		// 	{/* //What key should we use? WHY IS IT COMPLAINING ABOUT THE MAP! */}
+		// 	<div>
+		// 		<img
+		// 			src={`https://image.tmdb.org/t/p/w1280${movies.backdrop_path}`}
+		// 			alt={movies.title}
+		// 		/>
+		// 		<h2>{movies.title} </h2>
+		// 		<h2>{movies.vote_average}/10</h2>
+		// 		<p>{movies.overview}</p>
+		// 	</div>
+		// </>
 	);
 };
