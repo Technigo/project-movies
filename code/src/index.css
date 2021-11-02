@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0 auto;
   padding: 0;
@@ -24,9 +20,4 @@ code {
 
 .movie-item a {
   width: 25%;
-}
-
-/* .movie-item img {
-  width: 100%;
-} */
-
+} 
