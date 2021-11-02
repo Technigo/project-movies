@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Loading from "components/Loading";
-import { TopRatedUrl } from "Urls";
+import { UpcomingUrl } from "Urls";
 
-const Toprated = () => {
+const Upcoming = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
-    fetch(TopRatedUrl)
+    fetch(UpcomingUrl)
       .then((res) => res.json())
       .then((json) => setMovies(json.results))
       .finally(setLoading(false));
@@ -37,4 +37,4 @@ const Toprated = () => {
   );
 };
 
-export default Toprated;
+export default Upcoming;

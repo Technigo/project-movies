@@ -13,6 +13,17 @@ const Navbar = () => {
           <li>
             <NavLink to="/toprated"> Top-rated </NavLink>
           </li>
+
+          <li>
+            <NavLink to="/upcoming"> Upcoming </NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/christmas">
+              {" "}
+              <span className="Christmas">Christmas movies </span>{" "}
+            </NavLink>
+          </li>
         </ul>
       </div>
     </nav>
