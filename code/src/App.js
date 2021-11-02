@@ -15,7 +15,7 @@ export const App = () => {
           <HomePage userApiKey={userApiKey} setUserApiKey={setUserApiKey} />
         </Route>
         <Route path="/all-movies" exact>
-          <AllMovies />
+          <AllMovies userApiKey={userApiKey} />
         </Route>
         <Route>
           <MovieDetails />
