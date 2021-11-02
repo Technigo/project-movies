@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Loading from "components/Loading";
 import { TopRatedUrl } from "Urls";
+import Moment from "react-moment";
 
 const Toprated = () => {
   const [movies, setMovies] = useState([]);
@@ -19,13 +20,16 @@ const Toprated = () => {
     <div className="movieListContainer">
       {loading && <Loading />}
       {movies.map((movie) => (
-        <Link key={movie.id} to={`/movies/${movie.title}`}>
+        <Link key={movie.id} to={`/movies/${movie.id}`}>
           <section className="contentBlock">
             <div className="overlay">
               <div className="movieListContent">
                 <div className="textMovieList">
                   <h1>{movie.title}</h1>
-                  <p>Released {movie.release_date}</p>
+                  <p>
+                    Release date:
+                    <Moment format="MM/DD">{movie.release_date}</Moment>
+                  </p>
                 </div>
               </div>
             </div>
