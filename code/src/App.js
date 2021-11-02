@@ -19,13 +19,12 @@ useEffect(() => {
       <Switch>
         <Route exact path ="/"> {/*//this means that it is the first page that displays*/}
           <MoviesList 
-            films={movies}
-                        
+            films={movies}                        
           />
         </Route>
-        <Route path ="/details">
-          <MoviesDetails 
-            films={movies}
+        <Route path ="/details/:moviesId">
+          <MoviesDetails
+                        
           />
         </Route>
       </Switch>

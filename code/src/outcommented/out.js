@@ -1,0 +1,1 @@
+{/*src={`https://image.tmdb.org/t/p/w780${moviesId.poster_path}`}*/}

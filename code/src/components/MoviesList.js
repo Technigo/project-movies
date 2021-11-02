@@ -5,7 +5,8 @@ const MoviesList = ({ films }) => {
     return (
         <>
         {films.map((movie) => (
-            <Link to="/details">
+            <Link to={`/details/${movie.id}`}>
+            
                 <div className="overlay"></div>
                 <div key={movie.id} className="movie-container">
                     <div className="hover-movie">
