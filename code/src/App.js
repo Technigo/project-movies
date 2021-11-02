@@ -1,5 +1,5 @@
 import "./index.css";
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { MovieList } from "./components/MovieList";
 import { ContactUs } from "./components/ContactUs";
@@ -10,6 +10,7 @@ import { NavBar } from "./components/NavBar";
 import { MovieDetails } from "./components/MovieDetails";
 
 export const App = () => {
+  const [loading, setLoading] = useState(true);
   return (
     <BrowserRouter>
       <NavBar>

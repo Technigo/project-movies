@@ -76,6 +76,22 @@ h2 {
   font-size: 16px;
 }
 
+.loader-wrapper {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lazy-data-loader {
+  margin-top: 40px;
+  display: flex;
+  align-self: center;
+  text-align: center;
+  line-height: 30px;
+}
+
 @media (min-width: 768px) {
   .grid {
     display: flex;
