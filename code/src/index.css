@@ -113,6 +113,19 @@ code {
   width: 100%;
   box-shadow: 1px 1px black;
 }
-/* .back-button:hover {
-  transform: scale(1.2);
-} */
+
+.loader-heart {
+  height: 100px;
+  width: auto;
+}
+.loader-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
