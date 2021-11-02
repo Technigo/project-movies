@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { DETAILS_URL } from '../utils/urls'
 import { Background } from 'components/Background'
+import { ReturnButton } from 'components/ReturnButton'
 import "./MovieDetails.css"
 
 const MovieDetails = () => {
@@ -17,10 +18,11 @@ const MovieDetails = () => {
   return (
     <>
       <div>
+        <ReturnButton />
         <Background
           backgroundUrl = {`https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`}
         >
-          <button>Return to Movielist</button>
+          {/* <button>Return to Movielist</button> */}
           <div className="summary">
             <img src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`} alt={movieDetails.title} />
             <div className="detail">

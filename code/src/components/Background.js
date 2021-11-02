@@ -2,10 +2,10 @@ import styled from "styled-components"
 
 export const Background = styled.div `
   background-image: url(${props => props.backgroundUrl});
-  min-height: 100vh;
-  display: flex;
+  width: 100%;
+  height: 100vh;
   background-size: cover;
+  display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
 `

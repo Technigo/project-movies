@@ -14,33 +14,28 @@ code {
     monospace;
 }
 
+* { 
+  box-sizing: border-box;
+}
+
 
 .movie-list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.summary {
-  display: flex;
-  align-items: flex-end;
-  padding: 50px;
+.movie-list-items {
+  width: 25%;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
 }
 
-.summary img {
-  border: 5px solid #fff;
+.movie-list-items img {
+  width: 100%;
 }
 
-.detail {
-  margin-left: 20px;
+.title, .release-date {
+  display: none;
 }
 
-.detail p {
-  max-width: 400px;
-}
-
-.rating {
-  font-size: 17px;
-  color: red;
-  font-weight: 400;
-  margin-left: 10px;
-}
