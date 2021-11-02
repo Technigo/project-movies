@@ -10,7 +10,7 @@ const MovieList = ({ movies }) => {
           <Link to = {`/movies/${movie.id}`}>  
             <p>{movie.title}</p>  {/* maybe change to h2 or h3 later */}
             <p>{movie.release_date}</p>
-            <img src='https://source.unsplash.com/random/200x300' alt={movie.title} />
+            <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
           </Link>
         </article>  
       ))}
