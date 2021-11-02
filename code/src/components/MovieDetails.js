@@ -2,13 +2,17 @@ import React, { useEffect, useState } from "react";
 import { DETAILS_URL } from "../utils/urls";
 import "./MovieDetails.css"
 import { useParams } from "react-router-dom";
+import LoadingSpinner from "./LoadingSpinner";
+import { Link } from "react-router-dom";
 
 const MovieDetails = () => {
     const [movie, setMovie] = useState({})
     const { id } = useParams()
     const [error, setError] = useState('')
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
+        setLoading(true)
         fetch(DETAILS_URL(id))
             .then((res) => {
                 if (res.ok) {
@@ -18,6 +22,7 @@ const MovieDetails = () => {
                 }
             })
             .then((data) => setTimeout(() => setMovie(data), 1000))
+            .finally(() => setTimeout(() => setLoading(false), 1000))
             .catch((error) => {
                 console.dir(error)
                 setError(error.message)
@@ -30,7 +35,11 @@ const MovieDetails = () => {
 
     return (
         <article className="details-page">
-            {error && <p className="error-message">Oh no, {error}</p>}
+            {loading && <LoadingSpinner />}
+            {error && <div className="error-wrapper"><p className="error-message">Oh no, {error}</p></div>}
+            <Link to='/' className="go-back-link">
+                <p> <span className="back-arrow">&#8666;</span> Go Back</p>
+            </Link>
             {movie && (
                 <div className="details-background" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url(${backdropSrc})` }}>
                     <div className="summary">
