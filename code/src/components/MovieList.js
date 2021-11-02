@@ -7,7 +7,7 @@ export const MovieList = ({ movies }) => {
   return (
     <section className='movie-container'>
       {movies.map(movie => (
-        <Link className='movie-link' to='/' key={movie.id}>
+        <Link className='movie-link' to={`/details/${movie.id}`} key={movie.id}>
           <img className='movie-poster' src={POSTER_URL(movie.poster_path)} alt={movie.title} />
           <div className='overlay'>
             <h1 className='hover-text'>{movie.title}</h1>

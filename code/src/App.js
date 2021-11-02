@@ -12,7 +12,7 @@ export const App = () => {
       .then(res => res.json())
       .then(res => {
         setMovies(res.results)
-        console.log(res.results)
+        console.log('[App.js]', res.results)
       })
   }, [])
 
@@ -20,7 +20,7 @@ export const App = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path='/' render={() => <MovieList movies={movies} />} />
-        <Route path='/details' render={() => <MovieDetails />} />
+        <Route path='/details/:movieId' render={() => <MovieDetails />} />
       </Switch>
     </BrowserRouter>
   )
