@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Switch, Route} from 'react-router-dom'
 import { BASE_URL } from './utils/urls';
 
-import One from './components/One'
-import Two from './components/Two'
+import List from './components/List'
+import Details from './components/Details'
 
 export const App = ()=> {
 	const [list,setList]=useState([])
@@ -19,8 +19,8 @@ return (
 	// </div>
 	<BrowserRouter>
 	 <Switch>
-		<Route 	path="/one" component={One}/>
-		<Route 	path="/two" component={Two}/>
+		<Route exact path="/" render={() => <List movies={list}/>}/>
+		<Route 	path="/details" component={Details}/>
 	 </Switch>
 	</BrowserRouter>
 	);
