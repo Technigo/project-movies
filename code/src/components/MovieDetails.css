@@ -1,0 +1,53 @@
+.details-page, .details-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-poster-details {
+    background-color: rgba(0, 0, 0, 0.658);
+    border: 5px solid white;
+    margin: 10px;
+}
+
+.movie-title, .movie-overview {
+    color: white;
+    margin: 10px;
+}
+
+.rating {
+    color: tomato;
+}
+
+@media (min-width: 768px) {
+    .summary {
+        flex-direction: row;
+        align-items: flex-end;
+        padding: 50px;
+        height: 90vh;
+    }
+    .movie-poster-details {
+        width: 400px;
+    }
+}
+
+@media (min-width: 992px) {
+    .movie-title, .movie-overview {
+        font-size: large;
+    }
+}
+
+@media (min-width: 1200px) {
+    .summary {
+        height: 88vh;
+    }
+    .details {
+        width: 30%;
+    }
+}

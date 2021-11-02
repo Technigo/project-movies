@@ -4,22 +4,27 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import MovieList from './components/MovieList'
 import MovieDetails from './components/MovieDetails'
 import { useEffect, useState } from 'react'
+import LoadingSpinner from 'components/LoadingSpinner'
 
 export const App = () => {
   const [movieTitle, setMovieTitle] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     fetchMovieTitle()
   }, [])
 
   const fetchMovieTitle = () => {
+    setLoading(true)
     fetch(LIST_URL)
       .then((res) => res.json())
-      .then((data) => setMovieTitle(data.results))
+      .then((data) => setTimeout(() => setMovieTitle(data.results), 1000))
+      .finally(() => setTimeout(() => setLoading(false), 1000))
   }
 
   return (
     <div className="movie-container">
+      {loading && <LoadingSpinner />}
       <BrowserRouter>
         <Switch>
           <Route exact path='/'>
@@ -40,7 +45,7 @@ export const App = () => {
           </Route>
         </Switch>
       </BrowserRouter >
-    </div>
+    </div >
   )
 }
 

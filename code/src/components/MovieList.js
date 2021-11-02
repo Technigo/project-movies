@@ -8,14 +8,14 @@ const MovieList = ({ movieId, poster, title, date }) => {
     return (
         <div className="movies-overview">
             <Link key={movieId} to={`movie/${movieId}`}>
-                <img src={moviePoster} alt={title} />
-                <div className="details">
-                    <h1 className="movie-title">{title}</h1>
-                    <p>Released {date}</p>
+                <img className="movie-poster" src={moviePoster} alt={title} />
+                <div className="movie-details">
+                    <h1 className="movie-titles">{title}</h1>
+                    <p className="release-dates">Released {date}</p>
                 </div>
             </Link>
-
         </div>
+
     )
 }
 

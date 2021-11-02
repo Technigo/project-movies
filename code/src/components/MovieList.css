@@ -1,3 +1,33 @@
 .movies-overview {
     font-size: 10px;
+    position: relative;
+}
+
+.movie-poster {
+    width: 300px;
+    display: block;
+}
+
+.movie-details {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.712);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 14px;
+}
+
+.movie-details:hover {
+    opacity: 1;
+}
+
+.movie-titles, .release-dates {
+    margin: 5px;
+    line-height: 26px;
 }
