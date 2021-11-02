@@ -80,7 +80,7 @@ p {
   left: 0;
   display: flex;
   align-items: baseline;
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 10px;
 }
 
@@ -95,7 +95,8 @@ p {
 .chevron-icon {
   width: 20px;
   height: 20px;
-  margin-top: 8px;
+  margin-top: 4px;
+  margin-bottom: 0;
 }
 
 /* https://stackoverflow.com/questions/40549227/how-to-create-a-pop-up-animation-with-a-modal-using-css/40549695 */
