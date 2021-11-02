@@ -114,8 +114,8 @@ code {
   box-shadow: 1px 1px black;
 }
 
-.loader-heart {
-  height: 100px;
+.loader-reel {
+  height: 500px;
   width: auto;
 }
 .loader-overlay {
@@ -124,7 +124,7 @@ code {
   right: 0;
   bottom: 0;
   left: 0;
-  background: #fff;
+  background: #900;
   display: flex;
   justify-content: center;
   align-items: center;

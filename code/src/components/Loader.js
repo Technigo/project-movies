@@ -4,7 +4,7 @@ const Loader = () => {
     return (
         <div className="loader-overlay">
             <div className="loader-animation">
-                <img src="./assets/heart.svg" className="loader-heart" alt="loader heart"/>
+                <img src="/reel.svg" className="loader-reel" alt="loader reel"/>
             </div>
         </div>
     )
