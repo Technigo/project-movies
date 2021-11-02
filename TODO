@@ -1,9 +1,10 @@
-TO DO 
+TO DO
 
-- 2 components for movielist och moviedetails
-- en mapp med utils + URLs component
-- 
+- 2 components for movielist och moviedetails ✅
+- en mapp med utils + URLs component ✅
 
+- a back-button in the movie-details page that goes back to the movie-list path
 
-MOVIEDETAILS: 
- https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US
+- make the rating to be positioned next to move title in details. make a span inside H1? and style it red.
+
+- style the movie-list with hover effect - a dark overlay that is showing the movie title and relase date on top of the movie-image.
