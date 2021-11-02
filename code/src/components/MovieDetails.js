@@ -1,10 +1,12 @@
 import React from 'react';
-import { useState, useEffect, useParams } from 'react';
+import { useParams } from 'react-router-dom';
 
 const MovieDetails = () => {
+  const { id } = useParams();
+
   return (
     <div>
-      <h2>MovieName</h2>
+      <h2>Movie Details component</h2>
     </div>
   );
 };
