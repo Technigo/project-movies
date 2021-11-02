@@ -4,18 +4,20 @@ import { useState, useEffect } from 'react';
 import { DETAILS_URL } from '../utils/urls';
 
 const MovieDetails = () => {
-  const [movie, setMovie] = useState('');
+  const [movie, setMovie] = useState([]);
   const { movieId } = useParams();
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${movieId}?api_key=09aada9217228b8c02f9df4d4fee66c8&language=en-US`
-    )
+    fetch(DETAILS_URL(movieId))
       .then((res) => res.json())
       .then((data) => setMovie(data));
-  });
+  }, [movieId]);
 
-  return <div>Movie details{movieId}</div>;
+  return (
+    <div>
+      <div>{movie.overview}</div>
+    </div>
+  );
 };
 
 export default MovieDetails;

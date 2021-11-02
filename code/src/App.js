@@ -14,8 +14,6 @@ export const App = () => {
       .then((data) => setList(data.results));
   }, []);
 
-  const [detail, setDetail] = useState([]);
-
   return (
     <BrowserRouter>
       <Switch>
