@@ -1,26 +1,24 @@
 import React, { useState, useEffect } from 'react';
-// import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
-import { DETAILS_URL } from 'utils/urls';
+import { DETAILS_URL } from '../utils/urls';
 
 const MovieDetails = () => {
     const [details, setDetails] = useState({})
 
-    // const { id } = useParams()
+    const { info } = useParams()
 
-    // console.log(DETAILS_URL(id))
+    console.log("DETAILS API INFO HERE ", DETAILS_URL(info))
 
-    // useEffect(() => {fetchMovieDetails()})
+    useEffect(() => {
+        fetch(DETAILS_URL(info))
+        .then((res) => res.json())
+        .then((data) => setDetails(data)) }, [])
 
-    // const fetchMovieDetails = () => {
-    //     fetch(DETAILS_URL(details.id))
-    //     .then((res) => res.json())
-    //     .then((data) => setDetails()) 
-    // }
     
     return (
     <div>
-     
+     {details.overview}
     </div>
     )
 }
