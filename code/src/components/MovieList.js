@@ -15,17 +15,23 @@ const MovieList = () => {
   }, []);
 
   return (
-    <div>
+    <>
       {movie.map((item) => (
-        <div key={item.id}>
-          <img
-            src={`https://image.tmdb.org/t/p/w300${item.backdrop_path}`}
-            alt="movie-title"
-          />
-          <Link to={`/movies/${item.id}`}>{item.title}</Link>
+        <div className="movie-container" key={item.id}>
+          <div className="overlay-container">
+            <img
+              src={`https://image.tmdb.org/t/p/w780${item.backdrop_path}`}
+              alt="movie-title"
+            />
+
+            <div className="overlay">
+              <Link to={`/movies/${item.id}`}>{item.title}</Link>
+              <p className="release">Released: {item.release_date}</p>
+            </div>
+          </div>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 export default MovieList;

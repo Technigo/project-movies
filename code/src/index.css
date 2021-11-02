@@ -5,9 +5,73 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: black; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  background-color: black;
+}
+
+.release {
+  display: none;
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  margin: 0;
+}
+
+/* .title {
+  display: none;
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  padding: 10px;
+} */
+
+a {
+  display: none;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.overlay-container {
+  width: 100%;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.overlay:hover {
+  background-color: rgba(46, 49, 49, 0.7);
+}
+
+.overlay:hover > a,
+.overlay:hover > .release {
+  display: block;
+}
+
+img {
+  width: 100%;
+  display: block;
 }
