@@ -28,7 +28,7 @@ const HomePage = ({ userApiKey, setUserApiKey }) => {
             onChange={handleInputChange}
           ></input>
         </label>
-        <button c type="submit">Submit</button>
+        <button className="submit-button" type="submit">Submit</button>
       </form>
     </div>
   );

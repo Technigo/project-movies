@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router";
+import React, { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 import Movie from "./Movie";
 
-const AllMovies = ({ userApiKey }) => {
-  const [allMovies, setAllMovies] = useState([]);
+const AllMovies = ({ userApiKey, allMovies, setAllMovies }) => {
   const history = useHistory();
 
   const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${userApiKey}&language=en-US&page=1`;
@@ -12,10 +11,6 @@ const AllMovies = ({ userApiKey }) => {
   useEffect(() => {
     fetch(API_URL)
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        return data;
-      })
       .then((data) => {
         if (data.results !== undefined) {
           setAllMovies(data.results);
@@ -25,8 +20,6 @@ const AllMovies = ({ userApiKey }) => {
         }
       });
   }, [API_URL]);
-
-  console.log(allMovies);
 
   return (
     <div className="all-movies-container">

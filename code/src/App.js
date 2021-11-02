@@ -7,6 +7,8 @@ import MovieDetails from "components/MovieDetails";
 
 export const App = () => {
   const [userApiKey, setUserApiKey] = useState("");
+  const [allMovies, setAllMovies] = useState([]);
+
 
   return (
     <BrowserRouter>
@@ -15,10 +17,10 @@ export const App = () => {
           <HomePage userApiKey={userApiKey} setUserApiKey={setUserApiKey} />
         </Route>
         <Route path="/all-movies" exact>
-          <AllMovies userApiKey={userApiKey} />
+          <AllMovies userApiKey={userApiKey} allMovies={allMovies} setAllMovies={setAllMovies}/>
         </Route>
-        <Route>
-          <MovieDetails />
+        <Route path="/details/:movieId">
+          <MovieDetails allMovies={allMovies}/>
         </Route>
       </Switch>
     </BrowserRouter>
