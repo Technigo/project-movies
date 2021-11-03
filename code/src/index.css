@@ -1,10 +1,14 @@
+:root{
+  box-sizing: border-box;
+}
+
 body {
-	margin: 10px;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
 		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -12,6 +16,22 @@ code {
 		monospace;
 }
 
-.my-custom-class {
-	color: pink;
+
+
+.popular-wrapper{
+  display:flex;
+  flex-wrap: wrap;
+  
+}
+
+.popular-wrapper .movie-details{
+    background: rgba(0,0,0,.75);
+    display: none;
+    
+  
+
+}
+
+.popular-wrapper .movie-details:hover{
+display:flex;
 }
