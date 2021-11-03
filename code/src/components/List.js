@@ -1,21 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
+import { MOVIES_URL } from '../utils/urls'
 
 /* Styled component? 
 Const Section = styled.section`
 
 `; */
 
-const List = ({ movies }) => {
+const List = ({ movie }) => {
+  const [movies, setMovies] = useState([])
+
+  useEffect (() => {
+    fetch(MOVIES_URL).then((res) => res.json()).then((json) => {
+      setMovies(json.results)
+    });
+  }, []);
+
   return (
-    <section>
-      {/*  {movies.map((movies) => (
-        <Link to={`/details/${movies.name}`} key={movies.original_title}>
-          {movies.original_title}
-        </Link>
-      ))} */}
-      Here I will map the movie pictures with link
-    </section>
+    <div>
+    <h1>hey</h1>
+    {movies.map((movie) => (
+      <div key={movie.id}>
+        <h2>{movie.title}</h2>
+        <img src={`https://image.tmdb.org/t/p/w342${movie.backdrop_path}`} alt="imagesmovies"/>
+      </div>
+    ))}
+    </div>
   );
 };
 

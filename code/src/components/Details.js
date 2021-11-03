@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import styled from "styled-components";
 
-import { DETAILS_URL } from "../utils/urls";
+import { IMAGES_URL } from "../utils/urls";
 
 /* const GoBackButton = styled.button`
   padding: 10px;
@@ -25,7 +25,7 @@ const Details = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch(DETAILS_URL(movieName))
+    fetch(IMAGES_URL(movieName))
       .then((res) => res.json())
       .then((data) => setDetails(data));
   });
