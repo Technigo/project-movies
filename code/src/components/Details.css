@@ -24,6 +24,7 @@
     background-color: transparent;
     transition: 0.3s;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .back-btn:hover {
@@ -41,6 +42,8 @@
 
 .detailsPage img {
     border: 5px solid #fff;
+    max-width: 350px;
+    height: auto;
   }
   
   .detailsPage .summary {
@@ -63,4 +66,6 @@
     font-weight: normal;
     margin-left: 10px;
   }
+
+
   
