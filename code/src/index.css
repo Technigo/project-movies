@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: black; */
+  background-color: black;
 }
 
 code {
@@ -13,20 +13,20 @@ code {
     monospace;
 }
 
-.main-container {
+/* .main-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-}
+} */
 
-.movie-container {
-  /* display: flex; */
+/* .movie-container {
+  display: flex;
   position: relative;
   width: 25%;
-}
+} */
 
-.overlay {
+/* .overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -35,19 +35,19 @@ code {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.488);
   display: none;
-}
+} */
 
-.movie-container:hover .overlay {
+/* .movie-container:hover .overlay {
   display: flex;
-}
+} */
 
-.movie-title {
+/* .movie-title {
   color: white;
-}
+} */
 
 /* .movie-title:hover {
   display: flex;
 } */
-a {
+/* a {
   text-decoration: none;
-}
+} */
