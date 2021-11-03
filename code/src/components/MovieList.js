@@ -4,7 +4,7 @@ import { Link }  from 'react-router-dom'
 import './movieList.css'
 
 export const MovieList = ({movieList}) => {
-	console.log(movieList)
+
     return (
 
       <section className="movie-container"> 
