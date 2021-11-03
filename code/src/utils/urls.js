@@ -9,3 +9,5 @@ export const DETAIL_URL = (movie) =>
 
 //https://api.themoviedb.org/3/configuration?api_key=5c4188456a9b734458844d02dc8962a9/eENEf62tMXbhyVvdcXlnQz2wcuT.jpg"
 //${results.poster_path}
+
+//580489

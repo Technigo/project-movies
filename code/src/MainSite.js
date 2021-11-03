@@ -6,7 +6,7 @@ const MainSite = ({ movies }) => {
     <div>
       <section>
         {movies.map((movie) => (
-          <Link key={movie.original_title} to={`/details/${movie.title}`}>
+          <Link key={movie.original_title} to={`/details/:id`}>
             <img
               src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
               alt={movie.original_title}

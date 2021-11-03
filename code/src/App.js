@@ -12,7 +12,7 @@ export const App = () => {
     fetch(API_URL)
       .then((res) => res.json())
       .then((data) => setMainSite(data.results));
-  });
+  }, []);
 
   return (
     <>
@@ -22,7 +22,7 @@ export const App = () => {
           <Route exact path="/">
             <MainSite movies={mainSite} />
           </Route>
-          <Route exact path="/details/:title">
+          <Route exact path="/details/:id">
             <DetailSite />
           </Route>
         </Switch>
