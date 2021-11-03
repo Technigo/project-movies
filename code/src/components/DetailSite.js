@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 //import { DETAIL_URL } from "./utils/urls";
 
 const DetailSite = () => {
-  const [details, setDetails] = useState();
+  const [details, setDetails] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
@@ -17,7 +17,19 @@ const DetailSite = () => {
       });
   }, [id]);
 
-  return <div>hellooooo</div>;
+  console.log(details.title);
+
+  return (
+    <div>
+      <h2>Movie title: {details.original_title}</h2>
+      <p>Description: {details.overview}</p>
+      <p>Genre: {details.genres}</p>
+      <p>Rating: {details.vote_avrage}</p>
+      <p></p>
+      {/* <img src=""/>  POSTER */}
+      {/* <img="" BACKDROP */}
+    </div>
+  );
 };
 
 export default DetailSite;

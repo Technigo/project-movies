@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const MainSite = ({ movies }) => {
   return (
     <div>
-      <section>
+      <section className="movie-box">
         {movies.map((movie) => (
-          <Link key={movie.original_title} to={`/details/:id`}>
+          <Link key={movie.id} to={`/details/${movie.original_title}`}>
             <img
               src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
               alt={movie.original_title}
