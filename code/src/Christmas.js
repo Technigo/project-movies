@@ -26,6 +26,7 @@ const Christmas = () => {
               <div className="movieListContent">
                 <div className="textMovieList">
                   <h1>{movie.title}</h1>
+      
                   <p>
                     Release date:
                     <Moment format="MM/DD">{movie.release_date}</Moment>

@@ -21,20 +21,22 @@ const MovieDetail = () => {
     <div>
       {loading && <Loading />}
       {movie && (
-        <>
-          <img src={`http://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.id} />
+        <div className="movieDetalisBox">
+          
+          <img className="backgroundMovieDetails" src={`http://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.id} />
           <div className="MovieDetailsInfo">
-            <img src={`http://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.id} />
-            <div>
+            <img src={`http://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.id} />
+            <div className="MovieDetailstext">
               <h1>{movie.title}</h1>
-              <p>{movie.status} </p>
+              <p> Status:{movie.status} </p>
               <p>
                 Release date:
                 <Moment format="MM/DD">{movie.release_date}</Moment>
               </p>
             </div>
           </div>
-        </>
+          </div>
+       
       )}
     </div>
   );
