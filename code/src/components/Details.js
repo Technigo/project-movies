@@ -20,9 +20,16 @@ const Details = () => {
 	useEffect(() => {
 		fetch(DETAILS_URL(movie_id))
 		.then((res) => res.json())
-		.then((data) => 
-		console.log('DATA', data))
-	})
+		.then((data) => {
+			if (data.id) {
+				setDetails(data)
+			} else {
+				setError(true)
+			}
+			})
+			.catch(() => setError(true))
+		}, [movie_id])
+
 
 	// useEffect(() => {
 	// 	fetch(DETAILS_URL(movie_id))
