@@ -20,13 +20,13 @@ const MovieDetails = () => {
   };
 
   return (
-    <>
+    <div>
       <img
         className='back-img'
         src={`http://image.tmdb.org/t/p/w780${movie.backdrop_path}`}
         alt={movie.title}
       />
-      <Link to='/' className='button' onClick={onButtBackClick}>
+      <Link to='/' className='back-button' onClick={onButtBackClick}>
         GO BACK
       </Link>
 
@@ -39,13 +39,13 @@ const MovieDetails = () => {
         <div className='movie-text'>
           <h1>
             {movie.original_title}
-            <span>{movie.vote_average}</span>
+            <span className='vote'>{movie.vote_average}</span>
           </h1>
           <p>{movie.overview}</p>
-          <h3>Released {movie.release_date}</h3>
+          {/* <h3>Released {movie.release_date}</h3> */}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
