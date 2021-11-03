@@ -16,8 +16,6 @@ export const App = () => {
       .then((data) => setMovieList(data.results));
   }, []);
 
-  console.log(movieList);
-
   return (
     <BrowserRouter>
       <main>

@@ -20,7 +20,8 @@ const MovieDetails = () => {
         } else {
           setHasError(true);
         }
-      });
+      })
+      .catch(() => setHasError(true));
   }, [id]);
 
   if (hasError) {
@@ -34,6 +35,10 @@ const MovieDetails = () => {
     );
   }
 
+  const posterURL = movieDetails.poster_path
+    ? `https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`
+    : '';
+
   return (
     <div className='detail-page'>
       <Link to='/' className='backLink'>
@@ -46,10 +51,7 @@ const MovieDetails = () => {
         }}
       >
         <div className='summary'>
-          <img
-            src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`}
-            alt={movieDetails.title}
-          />
+          <img src={posterURL} alt={movieDetails.title} />
           <div className='details'>
             <h3 className='details-header'>
               {movieDetails.original_title}{' '}
