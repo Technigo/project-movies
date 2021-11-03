@@ -1,13 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
-const NotFound = () => (
+const NotFound = () => {
+  const history = useHistory();
+
+  const onButtonBackClick = () => {
+    history.goBack();
+  }
+
+
+return (
   <div>
     <h1>404 - Not Found!</h1>
-    <Link to="/">
-      Go Home
-    </Link>
+    <button className="back-btn" onClick={onButtonBackClick}>Back</button>
   </div>
-);
+)
+}
+
 
 export default NotFound;

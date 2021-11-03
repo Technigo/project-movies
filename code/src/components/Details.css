@@ -10,15 +10,33 @@
     justify-content: flex-end;
   }
   
-  a.back-link {
+  .back-btn {
     position: absolute;
     display: inline-flex;
     color: #fff;
     align-items: center;
     font-weight: 700;
     text-decoration: none;
-    left: 50px;
-    top: 50px;
+    left: 72px;
+    top: 58px;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+.back-btn:hover {
+  padding-left: 12px;
+}
+
+.fa-chevron-circle-left {
+  position: absolute;
+  display: inline-flex;
+  color: #fff;
+  left: 56px;
+  top: 60px;
+  font-size: 20px;
 }
 
 .detailsPage img {

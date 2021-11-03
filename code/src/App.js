@@ -25,7 +25,8 @@ return (
         {/* // v1 */}
         <Route exact path="/" render={() => <PopularList movies={list} />} />
         <Route path="/details/:movieID" component={Details} />
-        <Route component={NotFound} />
+        <Route path="/" component={NotFound} />
+        
         {/* // v2
       <Route path="/details">
         <Details />
