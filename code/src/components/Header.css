@@ -14,4 +14,15 @@
     font-size: 35px;
     margin: 0;
     margin-left: 10px;
+    color: black;
+    transition: .2s ease-in-out;
+    text-shadow: 1px 1px 12px rgba(0, 0, 0, 0.685), 1px 1px 7px rgba(0, 0, 0, 0.685);
+}
+
+.header-title:hover {
+    color: white;
+}
+
+.header-title:active {
+    color: black;
 }

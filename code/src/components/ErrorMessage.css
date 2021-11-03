@@ -9,14 +9,33 @@
 }
 
 .error-message {
+    font-family: 'Monoton';
     color: transparent;
     width: 80%;
     text-align: center;
-    font-size: 45px;
+    font-size: 40px;
     background-clip: text;
-    font-weight: 700;
-    background-image: -webkit-linear-gradient(to right, #ff512f, #dd2476);
+    font-weight: 400;
+    background-image: -webkit-linear-gradient(to right, #2196f3, #f44336);
     /* Chrome 10-25, Safari 5.1-6 */
-    background-image: linear-gradient(to right, #ff512f, #dd2443);
+    background-image: linear-gradient(to right, #2196f3, #f44336);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100% auto;
+    animation: hue 5s linear infinite;
+    letter-spacing: 1px;
+}
+
+@keyframes hue {
+    to {
+        filter: hue-rotate(0deg);
+    }
+    from {
+        filter: hue-rotate(-360deg);
+    }
+}
+
+@media (min-width: 768px) {
+    .error-message {
+        font-size: 45px;
+    }
 }
