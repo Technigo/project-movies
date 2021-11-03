@@ -54,16 +54,16 @@ const Details = () => {
 		return(
 		<div>
 		  <GoBackButton onClick={onButtonBackClick}>Go back</GoBackButton>
-		  <h2>No such pokemon!</h2>
+		  <h2>No such movie!</h2>
 	  </div>
 		)
 	}
 
   return (
-	  <div>
-			<GoBackButton onClick={onButtonBackClick}>Go back</GoBackButton>
-			<h2>{details.name}</h2>
-			<img src={details?.sprites?.other['official-artwork']?.front_default} alt={details.name}></img>
+	  <div className="details-container">
+		  <img className="small-movie-poster" src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt={details.title} />
+		  <img className="background-poster" src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt={details.title}/>
+			{/* <GoBackButton onClick={onButtonBackClick}>Go back</GoBackButton> */}
 	  </div>
 	)
 }
