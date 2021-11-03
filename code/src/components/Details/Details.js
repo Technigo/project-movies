@@ -11,6 +11,7 @@ const TextContainer = styled.div`
 export const Details = ({ imageInformation }) => {
   const { movieId } = useParams();
   const [movieDetail, setMovieDetail] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   console.log(imageInformation);
   //    const imagePath = `${imageInformation.base_url}${imageInformation.poster_sizes[6]}`;
@@ -20,10 +21,14 @@ export const Details = ({ imageInformation }) => {
       `https://api.themoviedb.org/3/movie/${movieId}?api_key=691b1dc74bbdcd3de3d91c33c77fd858`
     )
       .then((res) => res.json())
-      .then((json) => setMovieDetail(json));
+      .then((json) => {
+        setMovieDetail(json);
+        setLoading(false);
+      });
   }, [movieId]);
 
   return (
+    {!loading && (
     <TextContainer>
       <h1>Title: {movieDetail.title}</h1>
       {/* <img src={imagePath.poster_path} /> */}
@@ -32,5 +37,6 @@ export const Details = ({ imageInformation }) => {
       <p>Runtime: {movieDetail.runtime}</p>
       <p>Budget: {movieDetail.budget}</p>
     </TextContainer>
+    )}
   );
 };
