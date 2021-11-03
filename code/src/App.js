@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
+
+import { Header } from './components/Header'
 import { MovieList } from './components/MovieList'
 import { MovieDetails } from './components/MovieDetails'
 
@@ -19,6 +21,8 @@ export const App = () => {
 
   return (
       <BrowserRouter>
+	  {/* header is in between so it shows on each page */}
+	  <Header  />
 	  	<Switch> 
 			{/* path to the home page */}
 			<Route path="/" exact>
