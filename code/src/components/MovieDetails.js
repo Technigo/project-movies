@@ -5,26 +5,17 @@ import { BackButton } from "../components/BackButton";
 import styled from "styled-components";
 
 const BackDropImg = styled.img`
-  position: relative;
-  width: 100%;
-  height: 100%;
+  margin: 0 auto;
+  height: 100vh;
   z-index: -1;
-`;
-
-const BackButtonStyled = styled.button`
-  position: absolute;
-  top: 50px;
-  left: 50px;
 `;
 
 const PosterImg = styled.img`
   position: absolute;
   width: 25%;
   border: 5px solid white;
-  top: 30%;
-  right:70%;
-  bottom: 0;
-  left:0: 
+  left: 50px;
+  bottom: 50px;
 `;
 
 const MovieTitleDetails = styled.span`
@@ -81,9 +72,7 @@ const MovieDetails = () => {
 
   return (
     <div>
-      <BackButtonStyled>
-        <BackButton />
-      </BackButtonStyled>
+      <BackButton />
       <BackDropImg
         src={
           movie.backdrop_path

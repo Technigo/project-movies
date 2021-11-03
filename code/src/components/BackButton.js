@@ -10,9 +10,12 @@ const ButtonTextStyled = styled.h3`
 `;
 
 const BackButtonStyled = styled.button`
+  position: absolute;
+  top: 50px;
+  left: 50px;
   border: none;
-  background-color: blue;
-  padding: 5px;
+  background-color: transparent;
+  padding: 0;
   display: flex;
   align-items: center;
   &: hover ${ButtonTextStyled} {
