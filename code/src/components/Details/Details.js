@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from "react";
 import { useEffect, useState } from "react";
+=======
+import React, { useState } from "react";
+>>>>>>> 91e915ac4f2a85d40bd28f19e9deb98d2b97c698
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 
