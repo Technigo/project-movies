@@ -74,3 +74,54 @@ a {
 .loadingContainer {
   background-color: aqua;
 }
+
+/* movieDetails */
+
+.poster-details {
+  width: 350px;
+  border: 5px solid white;
+}
+
+.detail-container {
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  height: 100vh;
+  position: relative;
+  padding: 40px;
+}
+
+.detail-description {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  margin-left: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.detail-rating {
+  color: red;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.detail-link {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+}
+
+.detail-link:hover .arrow {
+  color: red;
+  margin-right: 10px;
+}
+
+.arrow {
+  font-size: 30px;
+  margin-right: 5px;
+}

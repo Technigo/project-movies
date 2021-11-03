@@ -32,24 +32,21 @@ const MovieDetails = () => {
     bottom: '0',
     left: '0',
     right: '0',
-    height: '100%',
+    height: '100vh',
+    zIndex: -1,
   }
 
   return (
     <>
-      <Link to='/'>
-        <span>&#10688; Movies</span>
-      </Link>
       {loading ? (
         <LoadingComponent />
       ) : (
-        <section className='movie-container'>
+        <section className='detail-container'>
           <>
-            <h1>
-              {details.title}
-              <span>{details.vote_average}</span>
-            </h1>
-            <p>{details.overview}</p>
+            <Link to='/' className='detail-link'>
+              <span className='arrow'>&#10688;</span>
+              Movies
+            </Link>
             {/* {console.log('before img', details)} */}
             {/* <img
               src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`}
@@ -59,7 +56,15 @@ const MovieDetails = () => {
             <img
               src={`https://image.tmdb.org/t/p/w780${details.poster_path}`}
               alt={details.title}
+              className='poster-details'
             />
+            <div className='detail-description'>
+              <h1>
+                {details.title}&nbsp;&nbsp;
+                <span className='detail-rating'>{details.vote_average}/10</span>
+              </h1>
+              <p>{details.overview}</p>
+            </div>
           </>
         </section>
       )}
