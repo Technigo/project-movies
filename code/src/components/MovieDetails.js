@@ -35,6 +35,10 @@ const MovieDetails = () => {
     );
   }
 
+  const backdropURL = movieDetails.backdrop_path
+    ? `https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`
+    : '';
+
   const posterURL = movieDetails.poster_path
     ? `https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`
     : '';
@@ -47,7 +51,7 @@ const MovieDetails = () => {
       <div
         className='backdrop'
         style={{
-          backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`,
+          backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(${backdropURL})`,
         }}
       >
         <div className='summary'>
