@@ -6,6 +6,8 @@
     right: 0;
     z-index: 1;
     padding: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header-title {
@@ -25,4 +27,18 @@
 
 .header-title:active {
     color: black;
+}
+
+.media-icons {
+    width: 45px;
+}
+
+.media-icons-container {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .media-icons-container {
+        display: initial;
+    }
 }
