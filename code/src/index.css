@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,4 +16,145 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.movie-list-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: black;
+}
+
+.movies-link {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.single-poster-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.poster-image {
+  width: 100%;
+  max-width: 678px;
+}
+
+.poster-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  display: none;
+  color: white;
+  padding-bottom: 30px;
+  padding-left: 15px;
+}
+
+.single-poster-wrapper:hover .poster-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.details-page-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  -bottom: 100px;
+}
+.movie-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.movie-poster-details {
+  display: none;
+  width: 300px;
+}
+
+.movie-description {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 20px;
+}
+
+.movie-score {
+  color: crimson;
+  padding-bottom: 100px;
+  font-size: 17px;
+  padding-left: 10px;
+}
+
+.movie-details-content {
+  display: flex;
+  padding: 30px;
+  gap: 20px;
+}
+
+.movie-details-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.top-header {
+  width: 100%;
+  height: 100px;
+}
+
+.arrow-left {
+  fill: white;
+}
+
+@media screen and (min-width: 678px) {
+  .movie-list-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  .movie-poster-details {
+    display: block;
+    border: 5px solid white;
+  }
+
+  .movie-description {
+    width: 100%;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .movie-score {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .movie-list-wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .movie-description {
+    position: inline-block;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    line-height: 26px;
+    background-color: transparent;
+  }
+
+  .movie-poster-details {
+    width: 350px;
+  }
 }
