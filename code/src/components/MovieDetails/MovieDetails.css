@@ -41,3 +41,29 @@ p {
 .votes {
   color: red;
 }
+
+button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 5px;
+}
+
+button:hover {
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.button-span {
+  display: inline-flex;
+  align-items: center;
+  left: 50px;
+  position: relative;
+  top: 50px;
+}
