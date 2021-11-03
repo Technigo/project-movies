@@ -22,18 +22,27 @@ const MovieDetails = () => {
       <Link to='/' className='backLink'>
         <BackIcon /> Movies
       </Link>
-      <h3>{movieDetails.original_title}</h3>
-      <h4>{movieDetails.vote_average}/10</h4>
-      <p>{movieDetails.overview}</p>
+      <div
+        className='backdrop'
+        style={{
+          backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`,
+        }}
+      >
+        <div className='summary'>
+          <img
+            src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`}
+            alt={movieDetails.title}
+          />
+          <div className='details'>
+            <h3 className='details-header'>
+              {movieDetails.original_title}{' '}
+              <span>{movieDetails.vote_average}/10</span>
+            </h3>
 
-      <img
-        src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`}
-        alt={movieDetails.title}
-      />
-      <img
-        src={`https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`}
-        alt={movieDetails.title}
-      />
+            <p>{movieDetails.overview}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -7,8 +7,8 @@ const MovieList = ({ movies }) => {
       <section className='movie-list'>
         {movies.map((movie) => (
           <Link
-            className='movie-card'
             key={movie.id}
+            className='movie-card'
             to={`/details/${movie.id}`}
           >
             <img
