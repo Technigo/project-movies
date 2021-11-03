@@ -24,9 +24,17 @@ const DetailSite = () => {
     history.goBack();
   };
 
+  // const genres = details.map(function (subarray) {
+  //   return subarray.name;
+  // });
+
+  // console.log(genres);
+
   return (
     <div className="details-box">
-      <button onClick={goBackButton}>Return</button>
+      <button className="returnbtn" onClick={goBackButton}>
+        Return
+      </button>
       {/* <div
         className="background"
         style="background-image url(`https://image.tmdb.org/t/p/original${details.backdrop_path}`)"
@@ -39,15 +47,23 @@ const DetailSite = () => {
       <div className="movie-detail-info">
         <img
           className="poster-img"
-          src={`https://image.tmdb.org/t/p/w300${details.poster_path}`}
+          src={`https://image.tmdb.org/t/p/w400${details.poster_path}`}
           alt="poster"
         />
       </div>
-      <div>
-        <h2>{details.original_title}</h2>
+      <section className="details-text">
+        <div className="details-head">
+          <h2>{details.original_title}</h2>
+          <p className="rating">{details.vote_average}/10</p>
+        </div>
         <p>Description: {details.overview}</p>
-        <p>Rating: {details.vote_average}</p>
-      </div>
+        {/* <p>
+          {details.genres.map((item) => {
+            return item.name={item.name}
+          })}
+        </p> */}
+        {/* <p>Genre: {genres}</p> */}
+      </section>
     </div>
   );
 };
