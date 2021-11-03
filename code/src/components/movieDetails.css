@@ -21,9 +21,10 @@
   justify-content: flex-end;
   flex-direction: column;
   margin: 20px;
-  /* max-width: 300px; */
   max-height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
+  /* overflow-y: scroll; */
+  overflow: scroll;
   color: whitesmoke;
 }
 
@@ -35,6 +36,16 @@
 .votes {
   color: darkred;
   padding: 10px;
+}
+
+.details-overview {
+  max-height: 50vh;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.details-overview::-webkit-scrollbar {
+  display: none;
 }
 
 .back-icon {
@@ -64,14 +75,23 @@
     max-height: 60%;
   }
 
-  .details-info {
-    max-width: 300px;
-  }
-
   .details-poster {
-    display: flex;
+    display: block;
+    margin: auto 0;
+    object-fit: contain;
     border-style: solid;
     border-width: 5px;
     border-color: white;
+    max-width: 25%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .details-poster {
+    margin: initial;
+    max-width: 40%;
+  }
+  .details-info {
+    max-width: 500px;
   }
 }
