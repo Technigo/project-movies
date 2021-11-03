@@ -146,10 +146,6 @@ a:hover {
 .backgroundMovieDetails {
 	
 	position: absolute;
-	min-height: 100vh;
-	
-	
-
 	visibility: hidden;
 }
 
@@ -298,9 +294,10 @@ img {
 	}
 
 	.backgroundMovieDetails {
-		height: 100vh;
-
+		
+background-size: cover;
 		visibility: visible;
+height: 70vh;
 
 	 -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgb(36, 36, 36)), to(rgba(0,0,0,0)));
       mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
@@ -322,4 +319,18 @@ img {
 	.movieListContainer {
 		grid-template-columns: repeat(4, 1fr);
 	}
+
+
+	.backgroundMovieDetails {
+		
+		background-size: cover;
+				visibility: visible;
+		height: 100vh;
+		width: 100%;
+	
+			 -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgb(36, 36, 36)), to(rgba(0,0,0,0)));
+					mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+		
+			}
+
 }
