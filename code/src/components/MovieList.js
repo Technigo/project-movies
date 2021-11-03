@@ -14,19 +14,13 @@ export const MovieList = () => {
   useEffect(() => {
     setLoading(true);
     fetch(API_MOVIE_LIST)
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
-        } else {
-          throw new Error("something went wrong");
-        }
-      })
+      .then((res) => res.json())
       .then((json) => {
         setMovies(json.results);
         setLoading(false);
       })
-      .catch((error) => {
-        setError(error.message);
+      .catch(() => {
+        setError(error);
       });
   }, [setLoading]);
 
@@ -42,16 +36,6 @@ export const MovieList = () => {
             </span>
             . Let's wait a little...{" "}
           </p>
-        </div>
-      )}
-      {error && (
-        <div className="error-container">
-          <p className="error-p">
-            This is an error page. This happend because of {error}
-          </p>
-          <Link to="/">
-            <button className="go-back-button">To movies</button>
-          </Link>
         </div>
       )}
 

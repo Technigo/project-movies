@@ -12,6 +12,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
   color: var(--font-color);
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 code {
@@ -96,20 +100,29 @@ h2 {
 }
 
 .error-container {
-  background-color: pink;
+  background-color: black;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
 }
 .error-p {
-  font-size: 30px;
+  font-size: 25px;
   color: white;
 }
 .go-back-button {
-  border-radius: 5px;
+  border-radius: 30px;
   border: 2px solid goldenrod;
   background-color: transparent;
   color: goldenrod;
+  width: fit-content;
+  height: 50px;
+  font-size: 20px;
+  padding: 0px 30px;
+}
+.go-back-button:hover {
+  box-shadow: 1px 1px 10px goldenrod;
+  transform: scale(1.05);
 }
 
 @media (min-width: 768px) {
@@ -132,5 +145,8 @@ h2 {
   .nav-link-item {
     margin-right: 20px;
     font-size: 22px;
+  }
+  .error-p {
+    font-size: 40px;
   }
 }

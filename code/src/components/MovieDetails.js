@@ -4,36 +4,37 @@ import { API_MOVIE_DETAILS } from "./Links";
 import { BackButton } from "./BackButton";
 import "./MovieDetails.css";
 import { Loader } from "./Loader";
-import { Link } from "react-router-dom";
 import "../index.css";
+import { NotFound } from "./NotFound";
 
 export const MovieDetails = () => {
   const { movieId } = useParams();
   const [details, setDetails] = useState({});
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     setLoading(true);
     fetch(API_MOVIE_DETAILS(movieId))
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.id) {
+          setDetails(data);
+          setLoading(false);
         } else {
-          throw new Error("Something is wrong");
+          setHasError(true);
         }
       })
-      .then((data) => {
-        console.log(data);
-        setDetails(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.dir(error);
-        setError(error.message);
-      });
+      .catch(() => setHasError(true));
   }, [movieId, setLoading]);
 
+  if (hasError) {
+    return (
+      <div>
+        <NotFound />;
+      </div>
+    );
+  }
   return (
     <>
       {loading && (
@@ -50,16 +51,7 @@ export const MovieDetails = () => {
           </div>
         </div>
       )}
-      {error && (
-        <div className="error-container">
-          <p className="error-p">
-            This is an error page. This happend because of {error}
-          </p>
-          <Link to="/">
-            <button className="go-back-button">To movies</button>
-          </Link>
-        </div>
-      )}
+
       <section className="movie-wrapper">
         <div className="gradient">
           <img

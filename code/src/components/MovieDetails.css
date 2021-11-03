@@ -10,8 +10,16 @@
 
 .gradient {
   background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 78%);
-  background: linear-gradient(0deg, rgb(0 0 0 / 70%) 0%, rgb(255 255 255 / 36%) 78%);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 78%
+  );
+  background: linear-gradient(
+    0deg,
+    rgb(0 0 0 / 70%) 0%,
+    rgb(255 255 255 / 36%) 78%
+  );
 }
 
 .movie-wrapper {
@@ -22,7 +30,12 @@
 
 .movie-wrapper::before {
   content: "";
-  background: linear-gradient(0deg, rgb(0 0 0 / 100%) 0%, rgb(0 0 0 / 70%) 10%, rgb(255 255 255 / 36%) 78%);
+  background: linear-gradient(
+    0deg,
+    rgb(0 0 0 / 100%) 0%,
+    rgb(0 0 0 / 70%) 10%,
+    rgb(255 255 255 / 36%) 78%
+  );
   position: absolute;
   top: 0px;
   left: 0;
@@ -148,7 +161,12 @@ p {
   .movie-wrapper::before {
     content: "";
     position: absolute;
-    background: linear-gradient(0deg, rgb(0 0 0 / 100%) 0%, rgb(0 0 0) 10%, rgb(255 255 255 / 38%) 100%);
+    background: linear-gradient(
+      0deg,
+      rgb(0 0 0 / 100%) 0%,
+      rgb(0 0 0) 10%,
+      rgb(255 255 255 / 38%) 100%
+    );
     top: 0;
     left: 0;
     right: 0;
