@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useHistory } from "react-router";
-import Loader from "./Loader";
 
 import "./Details.css";
-import NotFound from "./NotFound";
 
 const Details = () => {
   const [movieDetail, setMovieDetail] = useState([]);
   const [notFound, setNotFound] = useState(false);
-  const [loading, setLoading] = useState(false); // for loader
 
   const { id } = useParams();
   const history = useHistory();
