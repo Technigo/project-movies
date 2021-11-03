@@ -15,6 +15,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #000;
+  color: #fff;
 }
 
 code {
@@ -26,6 +28,9 @@ a {
   text-decoration: none;
 }
 
+/* LIST COMPONENT STYLING */
+/* HOVER DOESNT WORK */
+
 .all-movies {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -33,24 +38,12 @@ a {
   grid-gap: 0;
 }
 
-.movie-thumbnail-text {
+.movie-details {
   display: none;
+  color: #fff;
 }
 
-/* .movie-overlay {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-
-} */
-
-/* .movie-overlay:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-} */
-
-.movie-thumbnail-text:hover {
+.movie-details:hover {
   display: block;
 }
 
@@ -59,9 +52,21 @@ a {
   height: 100%;
 }
 
-.header-nav-active {
-  background-color: blue;
+/* .movie-overlay {
+  display: none;
 }
+.movie-overlay:hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  transition: 0.5s ease;
+} */
+
+/* DETAILS COMPONENT STYLING */
 
 .details-backdrop {
   object-fit: cover;
