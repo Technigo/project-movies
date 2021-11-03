@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import MovieList from "./components/Movielist";
-// import MovieDetails from "./components/Moviedetails";
+import MovieList from "./components/MovieList";
+
 import { MOVIES_URL } from "./utils/urls";
 
 export const App = () => {
