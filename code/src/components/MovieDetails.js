@@ -11,9 +11,9 @@ const MovieDetails = () => {
   useEffect(() => {
     fetch(DETAILS_URL(info))
       .then((res) => res.json())
-      .then((json) => {
-        setDetails(json)
-        console.log("DETAILS API INFO HERE ", json)
+      .then((data) => {
+        setDetails(data)
+        console.log("DETAILS API INFO HERE ", data)
       })
   }, [info])
 
@@ -31,7 +31,7 @@ const MovieDetails = () => {
           alt="poster of the movie"
         />
         <span className="text-summary">
-          {info} <h1>{details.title}</h1> <p>rating: {details.vote_average}</p>
+          <h1>{details.title}</h1> <p>rating: {details.vote_average}/10</p>
           <p>{details.overview}</p>
         </span>
       </div>
