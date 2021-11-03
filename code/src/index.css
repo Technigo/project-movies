@@ -74,7 +74,14 @@ a:hover {
 .loadingContainer {
 	height: 100%;
 	width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:150px;
 	font-size: 50px;
+
+  color: white;
+
 }
 
 /* movielist-pge in "home" */
@@ -151,7 +158,7 @@ a:hover {
 }
 
 .MovieDetailsInfo p {
-	font-size: 20px;
+	font-size: 18px;
 	text-shadow: black 0 0 10px;
 }
 .ratedMovieDetail{
