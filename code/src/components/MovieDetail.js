@@ -25,7 +25,9 @@ const MovieDetail = () => {
           
           <img className="backgroundMovieDetails" src={`http://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.id} />
           <div className="MovieDetailsInfo">
-            <img src={`http://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.id} />
+           
+            <img src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.id} />
+            
             <div className="MovieDetailstext">
               <h1>{movie.title} <span className="ratedMovieDetail">
                     {movie.vote_average}/10

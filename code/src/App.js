@@ -15,6 +15,7 @@ export const App = () => {
 				<div className="navbarContainer">
 					<Navbar />
 				</div>
+				
 				<div className="contentContainer">
 					<Switch>
 						<Route path="/" exact>

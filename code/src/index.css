@@ -17,14 +17,22 @@ code {
 
 .container {
 	background-color: black;
+	display: block;
+	position: absolute;
+	width: 100%;
+
+
 }
+
+
 
 /* Styling for Navbar */
 
 nav {
 	display: block;
+	position:relative;
 	padding: 0 20px;
-	position: relative;
+
 }
 
 .navbarContainer {
@@ -66,6 +74,9 @@ a:hover {
 
 /* Styling for page under navbar */
 
+
+
+
 /* Ajust pages direct under navbar, here lives all the page containers (from app) */
 
 /* Styling ad layout for each singel page */
@@ -98,10 +109,13 @@ a:hover {
 	width: 100%;
 	height: 100%;
 	position: relative;
+
 }
 
 .movieListContent {
 	padding-left: 5px;
+
+
 }
 
 .textMovieList{
@@ -121,23 +135,30 @@ a:hover {
 
 /* Movie detail page */
 
+
+
 .movieDetalisBox {
 	position: relative;
+	
+
 }
 
 .backgroundMovieDetails {
-	opacity: 25%;
+	
 	position: absolute;
-
 	min-height: 100vh;
+	
+	
 
 	visibility: hidden;
 }
 
+
+
+
 .MovieDetailsInfo {
-	width: 100%;
-	height: 90vh;
-	margin-top: 140px;
+
+	margin-top: 50px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -145,6 +166,9 @@ a:hover {
 	position: absolute;
 	flex-direction: column;
 	color: white;
+
+
+
 }
 
 .MovieDetailstext {
@@ -170,11 +194,20 @@ text-shadow: 0 0 1px black;
 
 }
 
+
 .MovieDetailsInfo img {
-	width: 100%;
-	height: 100%;
+
+width: 100%;
+
 	border: 1px solid black;
-  margin-top: 110px;
+  
+
+	-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(0, 0, 0)));
+	mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0, 0, 0, 0));
+
+
+
+	
 }
 
 /* Christmas page  */
@@ -252,21 +285,36 @@ img {
 	
 
 	.MovieDetailsInfo img {
-		border: 3px solid white;
+		border: 5px solid white;
 		height: 55%;
 		max-width: 320px;
+
+
+		-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgb(36, 36, 36)), to(rgb(0, 0, 0)));
+		mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgb(0, 0, 0));
+		
+	
+
 	}
 
 	.backgroundMovieDetails {
 		height: 100vh;
 
 		visibility: visible;
+
+	 -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgb(36, 36, 36)), to(rgba(0,0,0,0)));
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+
 	}
 
 	.MovieDetailstext {
 		max-width: 800px;
 
 		margin-bottom: -20px;
+
+
+
+		
 	}
 }
 
