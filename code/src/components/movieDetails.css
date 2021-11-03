@@ -1,7 +1,7 @@
 .details-backdrop {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -9,7 +9,7 @@
 
 .details {
   display: flex;
-  margin: 50px;
+  margin: 10px 50px 50px 50px;
 }
 
 .details-poster {
@@ -21,8 +21,8 @@
   justify-content: flex-end;
   flex-direction: column;
   margin: 20px;
-  max-width: 300px;
-  max-height: 600px;
+  /* max-width: 300px; */
+  max-height: 100%;
   overflow: hidden;
   color: whitesmoke;
 }
@@ -41,31 +41,31 @@
   display: flex;
   gap: 5px;
   align-items: center;
-  margin: 50px;
+  margin: 20px 50px 0 50px;
+  text-decoration: none;
+  color: whitesmoke;
 }
 
 .back-icon svg {
   height: 50px;
 }
 
-.back-icon {
-  text-decoration: none;
-  color: whitesmoke;
-}
-
 .back-icon:hover h2 {
-  animation: moveText 1s;
-}
-
-@keyframes moveText {
-  100% {
-    transform: translateX(10px);
-  }
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(10px);
 }
 
 @media (min-width: 668px) {
   .details {
-    max-height: 70%;
+    max-height: 60%;
+  }
+
+  .details-info {
+    max-width: 300px;
   }
 
   .details-poster {
