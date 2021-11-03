@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import { BASE_URL } from './utils/urls'
 
 import MovieList from './pages/MovieList'
 import MovieDetails from './pages/MovieDetails'
+import NotFound from 'components/NotFound'
 
 export const App = () => {
   const [movies, setMovies] = useState([])
@@ -16,7 +17,6 @@ export const App = () => {
   }, []) 
 
   return (
-    <>
       <BrowserRouter>
       {/* <Header />  */}
         <Switch> {/* tells browserrouter to pick only one of the routes at a time*/}
@@ -26,8 +26,9 @@ export const App = () => {
             />
           </Route>  
           <Route path="/movies/:movieId" component={MovieDetails} />
+          <Route path="/404" component={NotFound} />
+          <Redirect to="/404" />
         </Switch>
       </BrowserRouter> 
-    </>
   )
 }
