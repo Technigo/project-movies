@@ -12,7 +12,7 @@ import { IMAGES_URL } from "../utils/urls";
   border-radius: 10px;
 `; 
 
-const MovieImage = styled.img``
+const MovieImage = styled.img`
   width: 100px;
   border-radius: 50%;
   border 3px solid #333;
@@ -21,28 +21,38 @@ const MovieImage = styled.img``
 const Details = () => {
   const [details, setDetails] = useState({});
 
-  const { movieName } = useParams();
+  const { id } = useParams();
   const history = useHistory();
 
-  useEffect(() => {
-    fetch(IMAGES_URL(movieName))
-      .then((res) => res.json())
-      .then((data) => setDetails(data));
-  });
+  console.log(id);
 
-  const onButtonBackClick = () => {
+  useEffect(() => {
+    fetch(IMAGES_URL(id))
+      .then((res) => res.json())
+      .then(res => setDetails(res));
+  },[id]);
+
+/*   const onButtonBackClick = () => {
     history.goBack();
-  };
+  }; */
 
   return (
-    <div>
+    <section
+      className='details-backdrop'>
+      <img src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt={id.title} />
+      <div>
+        <h2>Movie title: {details.original_title}</h2>
+        <p>Description: {details.overview}</p>
+        <p>Genre: {details.genres.map}</p>
+        <p>Rating: </p>
+      </div>
+      </section>
+  )};
+    {/* <div>
+      <p>{details.results.vote_average}</p>
       {/*   
       <button onClick={onButtonBackClick}>Back</button>
       <h2>Name: {details.name}</h2>
       <img src={details?.sprites?.other["official-artwork"]?.front_default} /> */}
-      Here I will add details about the movie
-    </div>
-  );
-};
 
 export default Details;
