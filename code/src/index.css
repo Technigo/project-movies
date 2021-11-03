@@ -21,6 +21,14 @@ code {
   background-size: cover;
 }
 
+.button {
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+}
+
 .movie-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

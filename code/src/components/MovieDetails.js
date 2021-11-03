@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { DETAILS_URL } from '../utils/urls';
 
@@ -13,26 +13,39 @@ const MovieDetails = () => {
       .then((data) => setMovie(data));
   }, [movieId]);
 
+  const history = useHistory();
+
+  const onButtBackClick = () => {
+    history.goBack();
+  };
+
   return (
-    <div>
-      <div key={movie.original_title}>
-        <img
-          className='back-img'
-          src={`http://image.tmdb.org/t/p/w1280${movie.backdrop_path}`}
-          alt={movie.title}
-        />
+    <>
+      <img
+        className='back-img'
+        src={`http://image.tmdb.org/t/p/w780${movie.backdrop_path}`}
+        alt={movie.title}
+      />
+      <Link to='/' className='button' onClick={onButtBackClick}>
+        GO BACK
+      </Link>
+
+      <div className='summary' key={movie.original_title}>
         <img
           className='poster-img'
-          src={`http://image.tmdb.org/t/p/w1280${movie.poster_path}`}
+          src={`http://image.tmdb.org/t/p/w342${movie.poster_path}`}
           alt={movie.title}
         />
-
-        <h1>{movie.original_title}</h1>
-        <h3>Released {movie.release_date}</h3>
-        <p>{movie.overview}</p>
-        <p>{movie.vote_average}</p>
+        <div className='movie-text'>
+          <h1>
+            {movie.original_title}
+            <span>{movie.vote_average}</span>
+          </h1>
+          <p>{movie.overview}</p>
+          <h3>Released {movie.release_date}</h3>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
