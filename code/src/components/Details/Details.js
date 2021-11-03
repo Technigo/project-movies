@@ -13,8 +13,15 @@ export const Details = ({ imageInformation }) => {
   const [movieDetail, setMovieDetail] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  console.log(imageInformation);
-  //    const imagePath = `${imageInformation.base_url}${imageInformation.poster_sizes[6]}`;
+  //  console.log(imageInformation);
+  //    const imagePath =
+  //    imageInformation.base_url + // imageInformation.poster_sizes[6];
+
+  const imagePath = (poster_path) => {
+    return (
+      imageInformation.base_url + imageInformation.poster_sizes[3] + poster_path
+    );
+  };
 
   useEffect(() => {
     fetch(
@@ -28,15 +35,15 @@ export const Details = ({ imageInformation }) => {
   }, [movieId]);
 
   return (
-    {!loading && (
-    <TextContainer>
-      <h1>Title: {movieDetail.title}</h1>
-      {/* <img src={imagePath.poster_path} /> */}
-      <p>overview: {movieDetail.overview}</p>
-      <p>release date: {movieDetail.release_date}</p>
-      <p>Runtime: {movieDetail.runtime}</p>
-      <p>Budget: {movieDetail.budget}</p>
-    </TextContainer>
-    )}
+    !loading && (
+      <TextContainer>
+        <h1>Title: {movieDetail.title}</h1>
+        <img src={imagePath(movieDetail.poster_path)} />
+        <p>overview: {movieDetail.overview}</p>
+        <p>release date: {movieDetail.release_date}</p>
+        <p>Runtime: {movieDetail.runtime}</p>
+        <p>Budget: {movieDetail.budget}</p>
+      </TextContainer>
+    )
   );
 };

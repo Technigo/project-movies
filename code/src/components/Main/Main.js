@@ -7,6 +7,7 @@ import { API_MovieList, API_POSTERS } from "../../utils/urls";
 export const Main = () => {
   const [movieList, setMovieList] = useState([]);
   const [imageInformation, setImageInformation] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(API_POSTERS)
@@ -14,6 +15,7 @@ export const Main = () => {
       .then((data) => {
         console.log(data.images);
         setImageInformation(data.images);
+        setLoading(false);
       });
 
     fetch(API_MovieList)
@@ -24,23 +26,25 @@ export const Main = () => {
   }, []);
 
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route
-          exact
-          path="/"
-          render={() => (
-            <MovieList
-              movieList={movieList}
-              imageInformation={imageInformation}
-            />
-          )}
-        />
-        <Route
-          path="/details/:movieId"
-          render={() => <Details imageInformation={imageInformation} />}
-        />
-      </Switch>
-    </BrowserRouter>
+    !loading && (
+      <BrowserRouter>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <MovieList
+                movieList={movieList}
+                imageInformation={imageInformation}
+              />
+            )}
+          />
+          <Route
+            path="/details/:movieId"
+            render={() => <Details imageInformation={imageInformation} />}
+          />
+        </Switch>
+      </BrowserRouter>
+    )
   );
 };
