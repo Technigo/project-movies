@@ -1,13 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+/* Styled component? 
+Const Section = styled.section`
+
+`; */
 
 const List = ({ movies }) => {
   return (
-    <div>
-      {/* {movies.map((movies) => (
-        <div key={movies.original_title}>{movies.original_title}</div>
+    <section>
+      {/*  {movies.map((movies) => (
+        <Link to={`/details/${movies.name}`} key={movies.original_title}>
+          {movies.original_title}
+        </Link>
       ))} */}
       Here I will map the movie pictures with link
-    </div>
+    </section>
   );
 };
 

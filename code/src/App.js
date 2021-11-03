@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import List from "./components/List";
 import Details from "./components/Details";
 import Header from "./components/Header";
+import NotFound from "components/NotFound";
 import { BASE_URL } from "./utils/urls";
 
 export const App = () => {
@@ -15,14 +16,16 @@ export const App = () => {
       .then((data) => setList(data.results));
   }, []);
 
-  console.log(list);
+  const printMovies = (movieName) => {};
 
   return (
     <BrowserRouter>
       <Header />
       <Switch>
         <Route exact path="/" render={() => <List movies={list} />} />
-        <Route exact path="/details" component={Details} />
+        <Route path="/details/:movie_id" component={Details} />
+        <Route path="/404" component={NotFound} />
+        <Redirect to="/404" />
       </Switch>
     </BrowserRouter>
   );
