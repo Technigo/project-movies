@@ -10,7 +10,13 @@ import { DETAILS_URL } from "../utils/urls";
   color: green;
   background-color: red;
   border-radius: 10px;
-`; */
+`; 
+
+const MovieImage = styled.img``
+  width: 100px;
+  border-radius: 50%;
+  border 3px solid #333;
+`*/
 
 const Details = () => {
   const [details, setDetails] = useState({});
