@@ -1,0 +1,43 @@
+.background-image {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.info-summary {
+  display: flex;
+  padding-bottom: 5%;
+  align-items: flex-end;
+  margin: 35% 0 5% 5%;
+}
+
+.movie-poster {
+  border: 5px solid white;
+}
+
+.summary-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin-left: 5%;
+}
+
+.name-rate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h3 {
+  color: white;
+}
+
+p {
+  color: white;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.votes {
+  color: red;
+}
