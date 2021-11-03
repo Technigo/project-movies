@@ -7,6 +7,7 @@ const Header = () => {
         <section className="header-container">
             <div>
                 <Link to='/'><p className="header-title">Movieflix</p></Link>
+                <img src='code/src/assets/facebook-icon.png'></img>
             </div>
         </section>
     )
