@@ -3,11 +3,10 @@ import { useParams, Link } from 'react-router-dom'
 import LoadingComponent from '../components/LoadingComponent'
 
 const MovieDetails = () => {
-  // const params = useParams()
-  const { movieId } = useParams()
   const [details, setDetails] = useState({})
   const [loading, setLoading] = useState(true)
-  // console.log(params)
+  const { movieId } = useParams()
+  // const history = useHistory()
 
   useEffect(() => {
     fetch(
@@ -36,6 +35,11 @@ const MovieDetails = () => {
     zIndex: -1,
   }
 
+  // const onBackLinkClick = () => {
+  //   history.goBack()
+  //   console.log(history)
+  // }
+
   return (
     <>
       {loading ? (
@@ -44,6 +48,11 @@ const MovieDetails = () => {
         <section className='detail-container'>
           <>
             <Link to='/' className='detail-link'>
+              {/* <button
+              type='button'
+              onClick={onBackLinkClick}
+              className='detail-link'
+            ></button> */}
               <span className='arrow'>&#10688;</span>
               Movies
             </Link>
