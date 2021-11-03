@@ -26,9 +26,8 @@ const Toprated = () => {
               <div className="movieListContent">
                 <div className="textMovieList">
                   <h1>{movie.title}</h1>
-                  <p>
-                    Release date:
-                    <Moment format="MM/DD">{movie.release_date}</Moment>
+                  <p className="pToprated">Rate:
+                    {movie.vote_average}/10
                   </p>
                 </div>
               </div>
