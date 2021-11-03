@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { BACKDROP_URL, POSTER_URL, API_MOVIE_URL } from 'utils/url'
-import { BackIcon } from 'icons/BackIcon'
+import { BackButton } from 'icons/BackIcon'
 import 'components/movieDetails.css'
 
 export const MovieDetails = () => {
@@ -21,11 +21,7 @@ export const MovieDetails = () => {
     <section
       className='details-backdrop'
       style={{ backgroundImage: `url(${BACKDROP_URL(details.backdrop_path)})` }}>
-      <Link to='/' className='back-icon'>
-        <BackIcon />
-        <h2>Movies</h2>
-      </Link>
-      {/* <img className='details-backdrop' src={BACKDROP_URL(details.backdrop_path)} alt={details.title} /> */}
+      <BackButton />
       <div className='details'>
         <img className='details-poster' src={POSTER_URL(details.poster_path)} alt={details.title} />
         <div className='details-info'>

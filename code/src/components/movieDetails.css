@@ -22,8 +22,6 @@
   flex-direction: column;
   margin: 20px;
   max-height: 100%;
-  /* overflow: hidden; */
-  /* overflow-y: scroll; */
   overflow: scroll;
   color: whitesmoke;
 }
@@ -46,28 +44,6 @@
 }
 .details-overview::-webkit-scrollbar {
   display: none;
-}
-
-.back-icon {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  margin: 20px 50px 0 50px;
-  text-decoration: none;
-  color: whitesmoke;
-}
-
-.back-icon svg {
-  height: 50px;
-}
-
-.back-icon:hover h2 {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  transform: translateX(10px);
 }
 
 @media (min-width: 668px) {
