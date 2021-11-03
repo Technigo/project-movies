@@ -13,10 +13,6 @@ export const Details = ({ imageInformation }) => {
   const [movieDetail, setMovieDetail] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  //  console.log(imageInformation);
-  //    const imagePath =
-  //    imageInformation.base_url + // imageInformation.poster_sizes[6];
-
   const imagePath = (poster_path) => {
     return (
       imageInformation.base_url + imageInformation.poster_sizes[3] + poster_path
