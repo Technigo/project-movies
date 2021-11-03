@@ -1,15 +1,22 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
+
+const NavLinkStyled = styled(NavLink)`
+  color: black;
+
+  &.header-nav-active {
+  }
+`;
 
 const Header = () => {
   return (
     <header>
-      <h1>Love for Leo</h1>
       <nav>
         <NavLink exact to="/" activeClassName="header-nav-active">
           Leos List
         </NavLink>
-        <NavLink to="/movies" activeClassName="header__nav-active">
+        <NavLink to="/movies" activeClassName="header-nav-active">
           Details
         </NavLink>
       </nav>

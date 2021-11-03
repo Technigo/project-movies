@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import LeosList from './components/LeosList';
 import Details from './components/Details';
 import Header from './components/Header';
+import NotFound from './components/NotFound';
 import { LEO_URL } from './utils/urls';
 
 export const App = () => {
@@ -25,19 +26,9 @@ export const App = () => {
       <Switch>
         <Route exact path="/" render={() => <LeosList movies={list} />} />
         <Route path="/movies/:id" component={Details} />
+        <Route path="/404" component={NotFound} />
+        <Redirect to="/404" />
       </Switch>
     </BrowserRouter>
   );
 };
-
-/* // v1 */
-
-/* <Switch>
-<Route exact path="/" render={() => <List pokemons={list} />} />
-<Route exact path="/details/:pokemonName" component={Details} />
-</Switch> */
-
-/* // v2
-<Route path="/details">
-  <Details />
-</Route> */

@@ -30,7 +30,6 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
-  row-gap: 0;
   grid-gap: 0;
 }
 
@@ -67,4 +66,40 @@ a {
 .details-backdrop {
   object-fit: cover;
   background-repeat: no-repeat;
+}
+
+.details-backdrop-container {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.details-backdrop-container h3 {
+  font-style: italic;
+}
+
+.details-img {
+  border: 5px solid #fff;
+}
+
+.details-container {
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+}
+
+.details-text {
+  margin-left: 20px;
+  color: #fff;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-element {
+  width: 25%;
 }
