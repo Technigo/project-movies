@@ -31,6 +31,8 @@
 
 .media-icons {
     width: 45px;
+    margin-top: 5px;
+    opacity: .9;
 }
 
 .media-icons-container {
