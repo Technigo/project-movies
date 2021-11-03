@@ -13,21 +13,30 @@ const Details = () => {
   const [details, setDetails] = useState({})
 	const [error, setError] = useState(false)
 
-  const { pokemonName } = useParams()
+  const { movie_id } = useParams()
+	console.log(movie_id)
 	const history = useHistory()
 
 	useEffect(() => {
-		fetch(DETAILS_URL(pokemonName))
-			.then((res) => res.json())
-			.then((data) => {
-				if (data.id) {
-					setDetails(data)
-				} else {
-					setError(true)
-				}
-			})
-			.catch(() => setError(true))
-	}, [pokemonName])
+		fetch(DETAILS_URL(movie_id))
+		.then((res) => res.json())
+		.then((data) => 
+		console.log('DATA', data))
+	})
+
+	// useEffect(() => {
+	// 	fetch(DETAILS_URL(movie_id))
+	// 		.then((res) => res.json())
+	// 		.then((data) => {
+	// 			// if (data.id) {
+	// 				setDetails(data)
+	// 		// 	} else {
+	// 		// 		setError(true)
+	// 		// 	}
+	// 		// })
+	// 		// .catch(() => setError(true))
+	//   }, []) 	
+  // })
 
 	const onButtonBackClick = () => {
 		// history.goBack()
