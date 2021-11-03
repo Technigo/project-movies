@@ -2,32 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-// -------------------css---------------------------
-const PosterContainer = styled.div`
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const PosterContainerImage = styled.img`
-  width: 100%;
-  object-fit: cover;
-`;
-
-const TextContainer = styled.div`
-  position: absolute;
-  display: none;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  color: white;
-  justify-content: flex-end;
-  flex-direction: column;
-  padding: 20px;
-`;
-
 // onMouseEnter and onMouseLeave we set isMouseOver to true or false which we can use to change the opacity and the display style.
 // We also make a imagePath variable to get the path to the poster image. Finally we create some content that is displayed.
 
@@ -62,3 +36,29 @@ export const MovieListItem = ({ movie, imageInformation }) => {
     </>
   );
 };
+
+// -------------------css---------------------------
+const PosterContainer = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const PosterContainerImage = styled.img`
+  width: 100%;
+  object-fit: cover;
+`;
+
+const TextContainer = styled.div`
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  color: white;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 20px;
+`;
