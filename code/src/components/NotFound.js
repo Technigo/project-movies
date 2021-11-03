@@ -1,20 +1,18 @@
-// import React from 'react';
-// import { useHistory } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { BackIcon } from './BackIcon';
 
-// const NotFound = () => {
-//     const history = useHistory()
+const NotFound = () => {
+  return (
+    <div className='not-found-container'>
+      <p>Sorry, page not found.</p>
+      <p>Back to movie list</p>
 
-//     const onButtonClick = () => {
+      <Link to='/' className='backLink-404'>
+        <BackIcon />
+      </Link>
+    </div>
+  );
+};
 
-//     }
-
-//   return (
-//   <div>
-//       <p>Sorry, page not found.</p>
-//       <button onClick={onButtonClick}>Back</button>
-
-//       </div>
-//     );
-// };
-
-// export default NotFound;
+export default NotFound;

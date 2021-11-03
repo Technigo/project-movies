@@ -99,6 +99,7 @@ main {
 .summary img {
   border: 2px solid white;
   margin-left: 1em;
+  max-height: 517px;
 }
 
 .details {
@@ -122,4 +123,31 @@ main {
 p {
   max-width: 400px;
   font-size: 18px;
+}
+
+.not-found-container,
+.error-message {
+  display: grid;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 720px) {
+  .summary {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .summary img {
+    max-width: 342px;
+    margin-left: 0;
+  }
+  .details {
+    margin-top: 3em;
+    margin-left: 0;
+    width: 342px;
+  }
 }

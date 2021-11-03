@@ -7,15 +7,32 @@ import { MOVIEDETAILS_URL } from '../utils/urls';
 
 const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState([]);
+  const [hasError, setHasError] = useState(false);
+
   const { id } = useParams();
 
   useEffect(() => {
     fetch(MOVIEDETAILS_URL(id))
       .then((res) => res.json())
-      .then((data) => setMovieDetails(data));
+      .then((data) => {
+        if (data.id) {
+          setMovieDetails(data);
+        } else {
+          setHasError(true);
+        }
+      });
   }, [id]);
 
-  // console.log(movieDetails);
+  if (hasError) {
+    return (
+      <div>
+        <h2 className='error-message'>Movie not found</h2>
+        <Link to='/' className='backLink'>
+          <BackIcon /> Movies
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <div className='detail-page'>

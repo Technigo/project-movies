@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 import MovieDetails from './components/MovieDetails';
 import MovieList from './components/MovieList';
+import NotFound from './components/NotFound';
 import { MOVIELIST_URL } from './utils/urls';
 
 export const App = () => {
@@ -27,9 +28,10 @@ export const App = () => {
           <Route path='/details/:id'>
             <MovieDetails />
           </Route>
-          {/* <Route path='/404'>
+          <Route path='/404'>
             <NotFound />
-          </Route> */}
+          </Route>
+          <Redirect to='/404' />
         </Switch>
       </main>
     </BrowserRouter>
