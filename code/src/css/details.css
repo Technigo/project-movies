@@ -22,30 +22,9 @@ body {
 	max-width: 342px;
 }
 
-.back-btn {
-	position: absolute;
-	top: 50px;
-	left: 50px;
-	font-size: 16px;
-	font-weight: 700;
-	color: #ffffff;
-	text-decoration: none;
-	display: flex;
-	align-items: center;
-	padding: 2px;
-}
-
 .back-icon {
 	font-size: 26px;
 	margin-right: 4px;
-}
-
-.link-text {
-	transition: all 0.13s ease-in;
-}
-
-.back-btn:hover .link-text {
-	transform: translateX(0.3em);
 }
 
 .movie-info {

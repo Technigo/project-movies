@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Header = () => {
 	return (
@@ -8,11 +8,14 @@ export const Header = () => {
 				<NavLink exact to="/" activeClassName="active">
 					Popular
 				</NavLink>
-				<NavLink to="/latest" activeClassName="active">
-					Latest
+				<NavLink to="/top-rated" activeClassName="active">
+					Top Rated
 				</NavLink>
 				<NavLink to="/upcoming" activeClassName="active">
 					Upcoming
+				</NavLink>
+				<NavLink to="/now-playing" activeClassName="active">
+					Now Playing
 				</NavLink>
 			</nav>
 		</header>

@@ -4,7 +4,6 @@
 }
 
 .loading-overlay {
-	background-color: #212427;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -18,9 +17,9 @@
 .loading-spinner {
 	width: 70px;
 	height: 70px;
-	border: 7px solid rgba(255, 255, 255, 0.6);
+	border: 7px solid rgba(255, 255, 255, 0.9);
 	border-radius: 50%;
-	border-left: 7px solid rgba(255, 255, 255, 0.9);
+	border-left: 7px solid rgba(255, 255, 255, 0.5);
 	animation: spinner infinite 0.5s;
 	display: inline-block;
 }

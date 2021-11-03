@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { POPULAR_URL_LIST } from "utils/urls";
 import { LoadingSpinner } from "./LoadingSpinner";
+import { Header } from "./Header";
 import "../css/overview.css";
 
 export const PopularOverview = () => {
@@ -27,17 +28,20 @@ export const PopularOverview = () => {
 	};
 
 	return (
-		<div className="movie-grid">
-			{<LoadingSpinner />}
-			{popularOverview.map((movie) => (
-				<Link className="movie-container" key={movie.id} to={`/movies/${movie.id}`}>
-					<img className="movie-poster" src={`http://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}></img>
-					<div className="overlay-container">
-						<h1 className="movie-title">{movie.title}</h1>
-						<p className="release-date">{movie.release_date}</p>
-					</div>
-				</Link>
-			))}
-		</div>
+		<>
+			<Header />
+			<div className="movie-grid">
+				{loader && <LoadingSpinner />}
+				{popularOverview.map((movie) => (
+					<Link className="movie-container" key={movie.id} to={`/movies/${movie.id}`}>
+						<img className="movie-poster" src={`http://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}></img>
+						<div className="overlay-container">
+							<h1 className="movie-title">{movie.title}</h1>
+							<p className="release-date">{movie.release_date}</p>
+						</div>
+					</Link>
+				))}
+			</div>
+		</>
 	);
 };
