@@ -37,7 +37,7 @@ export const MovieListItem = ({ movie, imageInformation }) => {
 
   return (
     <>
-      <Link to={`/movies/${movie.id}`}>
+      <Link to={`/details/${movie.id}`}>
         <PosterContainer
           onMouseEnter={() => {
             setIsMouseOver(true);

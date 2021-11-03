@@ -12,6 +12,7 @@ export const Main = () => {
     fetch(API_POSTERS)
       .then((res) => res.json())
       .then((data) => {
+        console.log(data.images);
         setImageInformation(data.images);
       });
 
@@ -37,7 +38,10 @@ export const Main = () => {
             />
           )}
         />
-        <Route /* path="/details/:movieId" */ render={() => <Details />} />
+        <Route
+          path="/details/:movieId"
+          render={() => <Details imageInformation={imageInformation} />}
+        />
       </Switch>
     </BrowserRouter>
   );
