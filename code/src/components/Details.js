@@ -16,11 +16,8 @@ useEffect(() => {
 console.log(movieDetails);
 
     return <div>
-       <h1>
-           Hello!!!
-       {/* "{movie.title}"
-       `${movie.title}` */}
-       </h1>
+      {movieDetails.title} {<img src={`https://image.tmdb.org/t/p/w300${movieDetails.poster_path}`} alt="{movieDetails.title}"/>}
+      {movieDetails.overview} {<img src={`https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`} alt="{movieDetails.title}"/>}
     </div>;
 };
 
