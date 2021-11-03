@@ -6,6 +6,7 @@ import { useParams } from "react-router";
 const DetailSite = () => {
   const [details, setDetails] = useState({});
   const { id } = useParams();
+  console.log(id);
 
   useEffect(() => {
     fetch(
@@ -13,17 +14,16 @@ const DetailSite = () => {
     )
       .then((res) => res.json())
       .then((json) => {
+        console.log(json);
         setDetails(json);
       });
   }, [id]);
-
-  console.log(details.title);
 
   return (
     <div>
       <h2>Movie title: {details.original_title}</h2>
       <p>Description: {details.overview}</p>
-      <p>Genre: {details.genres}</p>
+      <p>Genre: {details.genres.map()}</p>
       <p>Rating: {details.vote_avrage}</p>
       <p></p>
       {/* <img src=""/>  POSTER */}

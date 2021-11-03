@@ -13,6 +13,49 @@ code {
 }
 
 .movie-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.movie-box a {
+  width: 25%;
+}
+
+.movie-box a img {
+  width: 100%;
+}
+
+.movie-info {
+  display: none;
+}
+
+.movie-info:hover {
+  position: absolute;
+}
+
+/* .movie-box .movie-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  padding: 20px;
+}
+
+.movie-box a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.movie-box .movie-box h1 {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.movie-box a:hover .movie-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+} */
