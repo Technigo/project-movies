@@ -17,14 +17,13 @@ export const App = () => {
 
   return (
     <>
-      <div>helloo</div>
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={MainSite}>
             <MainSite movies={mainSite} />
           </Route>
           <Route exact path="/details/:id" component={DetailSite} />
-          <Route path="/404" component={NotFound} />
+          <Route component={NotFound} />
         </Switch>
       </BrowserRouter>
     </>

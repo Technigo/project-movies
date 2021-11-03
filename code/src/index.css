@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: pink;
 }
 
 code {
@@ -59,3 +60,20 @@ code {
   flex-direction: column;
   justify-content: flex-end;
 } */
+
+.backdrop {
+  min-height: 100vh;
+  /* width: auto; */
+  z-index: -1;
+}
+
+.details-box {
+  display: flex;
+  flex-direction: column-reverse;
+  color: white;
+}
+
+.poster-img {
+  position: absolute;
+  z-index: 1;
+}
