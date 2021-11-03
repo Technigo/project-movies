@@ -26,8 +26,6 @@ const Movie = () => {
             })
         .finally(() => setLoading(false))
     }, [MOVIE_URL])
-    
-    console.log(movie) //CONSOLE LOG
 
     if (hasError){
         return (

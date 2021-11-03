@@ -1,9 +1,10 @@
 import React, {useState, useEffect } from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
 import List from './components/List'
 import Movie from './components/Movie'
 import Loader from './components/Loader'
+import NotFound from 'components/NotFound' ///<<<<<<<< redirect där uppe också
 
 import { API_URL } from 'utils/urls'
 
@@ -31,6 +32,10 @@ export const App = () => {
         <Route exact path='/movie/:movieId'>
           <Movie />
         </Route>
+        <Route>
+          <NotFound />
+        </Route>
+        <Redirect to="/404"/>
      </Switch>
     </BrowserRouter>
     </>
