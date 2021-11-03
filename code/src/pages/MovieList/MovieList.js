@@ -1,15 +1,14 @@
 import React from "react";
 import moment from "moment";
 import { Link } from "react-router-dom";
-import Loading from "Components/Loading/Loading";
-
+import Dropdown from "Components/Dropdown/Dropdown";
 import "./MovieList.css";
 
-const MovieList = ({ movieList, loading }) => {
+const MovieList = ({ select, setSelect, movieList, loading }) => {
   return (
     <>
-      {loading && <Loading />}
       <main className="movie-list-container">
+        <Dropdown select={select} setSelect={setSelect} />
         {movieList.map((movie) => (
           <Link
             to={`/details/${movie.id}`}

@@ -1,24 +1,28 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import MovieList from "./pages/MovieList/MovieList";
 import { BASE_URL } from "utils/urls";
 import Details from "./pages/Details/Details";
+import Errors from "./Components/Error/Errors";
+import Loading from "Components/Loading/Loading";
 
 export const App = () => {
   const [list, setList] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [select, setSelect] = useState('popular')
+
 
   useEffect(() => {
-    setLoading(true);
-    fetch(BASE_URL)
+    setLoading(true)
+    fetch(BASE_URL(select))
       .then((res) => res.json())
       .then((data) => {
         setTimeout(() => {
-          setList(data.results);
-          setLoading(false);
-        }, 2000);
+          setLoading(false)
+          setList(data.results)
+        }, 2000)
       });
-  }, []);
+  }, [select]);
 
   console.log(list);
 
@@ -26,12 +30,15 @@ export const App = () => {
     <>
       <BrowserRouter>
         <Switch>
+          {loading && <Loading />}
           <Route
             path="/"
             exact
-            render={() => <MovieList loading={loading} movieList={list} />}
+            render={() => <MovieList select={select} setSelect={setSelect} loading={loading} movieList={list} />}
           />
           <Route path="/details/:movieId" component={Details} />
+          <Route path="/404" component={Errors} />
+          <Redirect to="/404" />
         </Switch>
       </BrowserRouter>
     </>

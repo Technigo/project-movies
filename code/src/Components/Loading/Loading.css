@@ -77,5 +77,20 @@ body {
 .welcome-message {
   color: #fff000;
   text-align: center;
-  margin-top: 15%;
+  margin-top: 55%;
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+  .welcome-message {
+    margin-top: 40%;
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .welcome-message {
+    margin-top: 15%;
+    font-size: 40px;
+  }
 }
