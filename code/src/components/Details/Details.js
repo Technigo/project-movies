@@ -6,6 +6,20 @@ import { useParams } from "react-router-dom";
 // -------------------css---------------------------
 const TextContainer = styled.div`
   color: white;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  margin: 0 auto;
+  border: 1px solid white;
+
+  h1 {
+    text-align: center;
+  }
+`;
+const ImgDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-self: center;
 `;
 
 export const Details = ({ imageInformation }) => {
@@ -33,12 +47,21 @@ export const Details = ({ imageInformation }) => {
   return (
     !loading && (
       <TextContainer>
-        <h1>Title: {movieDetail.title}</h1>
-        <img src={imagePath(movieDetail.poster_path)} />
-        <p>overview: {movieDetail.overview}</p>
-        <p>release date: {movieDetail.release_date}</p>
-        <p>Runtime: {movieDetail.runtime}</p>
-        <p>Budget: {movieDetail.budget}</p>
+        <h1>{movieDetail.title}</h1>
+        <ImgDiv>
+          <img src={imagePath(movieDetail.poster_path)} />
+        </ImgDiv>
+        <h2>overview:</h2>
+        <p>{movieDetail.overview}</p>
+        <p>
+          <strong>release date:</strong> {movieDetail.release_date}
+        </p>
+        <p>
+          <strong>Runtime:</strong> {movieDetail.runtime}min
+        </p>
+        <p>
+          <strong>Budget:</strong> {movieDetail.budget}
+        </p>
       </TextContainer>
     )
   );
