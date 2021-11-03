@@ -18,7 +18,7 @@ const Details = () => {
 
   return (
     <div
-      className="details__backdrop"
+      className="details-backdrop-container"
       key={details.id}
       style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})`,

@@ -6,7 +6,7 @@ const Header = () => {
     <header>
       <h1>Love for Leo</h1>
       <nav>
-        <NavLink exact to="/" activeClassName="header__nav-active">
+        <NavLink exact to="/" activeClassName="header-nav-active">
           Leos List
         </NavLink>
         <NavLink to="/movies" activeClassName="header__nav-active">
