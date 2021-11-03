@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react'; //import useEffect and useState
 import { Link } from 'react-router-dom'; //import link
 
+import { API_URL } from './Url';
+
 export const MovieLists = () => {
 	const [movies, setMovies] = useState([]); // a state property that collects all the movies
 
 	//Fetch movie data detail API
 	useEffect(() => {
 		fetch(
-			'https://api.themoviedb.org/3/movie/popular?api_key=18efe4e6c09e4e4229e6b54ff367df52&language=en-US&page=1'
+			API_URL
 		)
 			.then((res) => res.json())
 			.then((json) => {

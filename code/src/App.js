@@ -22,7 +22,6 @@ export const App = () => {
 };
 
 //To-do list
-//URL-component,
 //  media queries, 
 //  backdrop, 
 //  return button, 

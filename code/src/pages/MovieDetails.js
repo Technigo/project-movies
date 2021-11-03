@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'; //import React
 import { useParams } from 'react-router-dom'; //import Param
 
+import { URL_DETAILS } from './Url';
+
 export const MovieDetails = () => {
 	const { movieId } = useParams(); // a variable for param (hook)
 	const [movies, setMovies] = useState([]); // a state property that collects all the movie details
 
 	//Fetch movie data detail API
 	useEffect(() => {
-		fetch(
-			`https://api.themoviedb.org/3/movie/${movieId}?api_key=18efe4e6c09e4e4229e6b54ff367df52&language=en-US`
-		)
+		fetch(URL_DETAILS(movieId))
 			.then((res) => res.json())
 			.then((data) => {
 				setMovies(data); //[0]
