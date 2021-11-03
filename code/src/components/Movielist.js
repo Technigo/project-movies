@@ -6,7 +6,7 @@ const movieList = ({ movies }) => {
 return (
     <section className="container">
     {movies.map((movie) => (
-        <div key={movie.id}>
+        <div className="overlay"key={movie.id}>
         <Link to={`/movies/${movie.id}`}>
             <img
             className="image"
@@ -15,7 +15,7 @@ return (
             ></img>
         </Link>
 
-        <div className="overlay">
+        <div className="movie-details">
             <h1>{movie.title}</h1>
             <p>{movie.release_date}</p>
         </div>
