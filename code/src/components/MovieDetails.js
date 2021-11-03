@@ -15,11 +15,10 @@ const MovieDetails = () => {
       .then((data) => setMovieDetails(data));
   }, [id]);
 
-  console.log(movieDetails);
+  // console.log(movieDetails);
 
   return (
-    <div>
-      <h2>Movie Details component</h2>
+    <div className='detail-page'>
       <Link to='/' className='backLink'>
         <BackIcon /> Movies
       </Link>
