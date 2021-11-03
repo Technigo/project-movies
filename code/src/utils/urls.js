@@ -1,2 +1,2 @@
-export const BASE_URL = 'https://pokeapi.co/api/v2/pokemon/'
+export const BASE_URL = 'https://api.themoviedb.org/3/movie/popular?api_key=924a000925bc90d8a1bc41466fe04396&language=en-US&page=1'
 export const DETAILS_URL = (pokemon) => `https://pokeapi.co/api/v2/pokemon/${pokemon}`
