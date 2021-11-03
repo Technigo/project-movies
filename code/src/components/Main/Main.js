@@ -19,8 +19,6 @@ export const Main = () => {
     fetch(API_MovieList)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.results);
-        //Rememer to remove =)
         setMovieList(data.results);
       });
   }, []);
