@@ -18,9 +18,7 @@ export const App = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path='/' render={() => <MovieList movies={list} />} />
-        <Route exact path='/details/:movieId' component={MovieDetails}>
-          <MovieDetails />
-        </Route>
+        <Route exact path='/details/:movieId' render={() => <MovieDetails />} />
       </Switch>
     </BrowserRouter>
   );

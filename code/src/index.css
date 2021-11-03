@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -12,9 +13,18 @@ code {
     monospace;
 }
 
+.back-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+
+  background-size: cover;
+}
+
 .movie-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  scroll-behavior: smooth;
 }
 
 .movie-card {
@@ -29,24 +39,28 @@ code {
 
 .overlay {
   position: absolute;
-  color: whitesmoke;
+  color: white;
   width: 100%;
   height: 100%;
 }
 
 .overlay:hover {
   background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.45s ease;
 }
 
 .overlay-text {
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: flex-start;
-  align-items: flex-end; */
   opacity: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end; /* this makes the text go down*/
+
+  padding-left: 15px;
+  padding-right: 15px;
+
+  animation: neon 0.08s ease-in-out infinite alternate;
 }
 
 .overlay-text:hover {
@@ -54,11 +68,12 @@ code {
 }
 
 h1 {
-  font-size: 1rem;
+  font-size: 2.2rem;
+  padding-right: 10px;
 }
 
 h2 {
-  font-size: 0.5rem;
+  font-size: 1rem;
 }
 
 /* 

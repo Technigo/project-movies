@@ -15,7 +15,23 @@ const MovieDetails = () => {
 
   return (
     <div>
-      <div>{movie.overview}</div>
+      <div key={movie.original_title}>
+        <img
+          className='back-img'
+          src={`http://image.tmdb.org/t/p/w1280${movie.backdrop_path}`}
+          alt={movie.title}
+        />
+        <img
+          className='poster-img'
+          src={`http://image.tmdb.org/t/p/w1280${movie.poster_path}`}
+          alt={movie.title}
+        />
+
+        <h1>{movie.original_title}</h1>
+        <h3>Released {movie.release_date}</h3>
+        <p>{movie.overview}</p>
+        <p>{movie.vote_average}</p>
+      </div>
     </div>
   );
 };
