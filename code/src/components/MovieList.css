@@ -1,11 +1,19 @@
 .movies-overview {
     font-size: 10px;
     position: relative;
+    top: 8vh;
+    transition: transform 0.5s;
+}
+
+.movies-overview:hover {
+    transform: scale(1.02);
 }
 
 .movie-poster {
-    width: 300px;
+    width: 320px;
     display: block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
 }
 
 .movie-details {
@@ -15,7 +23,8 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.712);
+    border-radius: 5px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.76)40%, rgba(248, 246, 246, 0.336) 60%, rgba(0, 0, 0, 0.733) 90%);
     color: white;
     display: flex;
     flex-direction: column;

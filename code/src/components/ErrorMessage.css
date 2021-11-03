@@ -1,0 +1,22 @@
+.error-wrapper {
+    height: 100vh;
+    width: 100vw;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.error-message {
+    color: transparent;
+    width: 80%;
+    text-align: center;
+    font-size: 45px;
+    background-clip: text;
+    font-weight: 700;
+    background-image: -webkit-linear-gradient(to right, #ff512f, #dd2476);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background-image: linear-gradient(to right, #ff512f, #dd2443);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

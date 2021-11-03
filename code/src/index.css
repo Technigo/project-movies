@@ -1,5 +1,4 @@
 * {
-  margin: 0;
   padding: 0;
   text-decoration: none;
 }
@@ -9,7 +8,7 @@ body {
   font-family: 'Sarabun', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(29, 28, 28);
+  background-color: rgb(26, 17, 17);
 }
 
 code {

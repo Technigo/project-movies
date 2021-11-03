@@ -4,6 +4,7 @@ import "./MovieDetails.css"
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "./LoadingSpinner";
 import { Link } from "react-router-dom";
+import ErrorMessage from "./ErrorMessage";
 
 const MovieDetails = () => {
     const [movie, setMovie] = useState({})
@@ -18,7 +19,7 @@ const MovieDetails = () => {
                 if (res.ok) {
                     return res.json()
                 } else {
-                    throw new Error('something went wrong')
+                    throw new Error('something went wrong!')
                 }
             })
             .then((data) => setTimeout(() => setMovie(data), 1000))
@@ -36,11 +37,11 @@ const MovieDetails = () => {
     return (
         <article className="details-page">
             {loading && <LoadingSpinner />}
-            {error && <div className="error-wrapper"><p className="error-message">Oh no, {error}</p></div>}
+            {error && <ErrorMessage error={error} />}
             <Link to='/' className="go-back-link">
                 <p> <span className="back-arrow">&#8666;</span> Go Back</p>
             </Link>
-            {movie && (
+            {!error && movie && (
                 <div className="details-background" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url(${backdropSrc})` }}>
                     <div className="summary">
                         <img className="movie-poster-details" src={posterSrc} alt={movie.title} />
@@ -51,6 +52,7 @@ const MovieDetails = () => {
                     </div>
                 </div>
             )}
+
         </article>
     )
 

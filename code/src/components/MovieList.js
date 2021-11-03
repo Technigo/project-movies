@@ -15,7 +15,6 @@ const MovieList = ({ movieId, poster, title, date }) => {
                 </div>
             </Link>
         </div>
-
     )
 }
 

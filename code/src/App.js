@@ -1,10 +1,12 @@
 import React from 'react'
 import { LIST_URL } from 'utils/urls'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import Header from 'components/Header'
 import MovieList from './components/MovieList'
 import MovieDetails from './components/MovieDetails'
-import { useEffect, useState } from 'react'
 import LoadingSpinner from 'components/LoadingSpinner'
+import Footer from 'components/Footer'
 
 export const App = () => {
   const [movieTitle, setMovieTitle] = useState([])
@@ -26,6 +28,7 @@ export const App = () => {
     <div className="movie-container">
       {loading && <LoadingSpinner />}
       <BrowserRouter>
+        <Header />
         <Switch>
           <Route exact path='/'>
             {movieTitle.map((movie) => (
@@ -39,7 +42,9 @@ export const App = () => {
               />
             )
             )
-            } </Route>
+            }
+            <Footer />
+          </Route>
           <Route exact path='/movie/:id'>
             <MovieDetails />
           </Route>
