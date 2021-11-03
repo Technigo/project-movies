@@ -14,8 +14,8 @@ const MovieDetail = () => {
       .then((res) => res.json())
       .then((json) => setMovie(json))
       .finally(setLoading(false));
-  }, []);
-  console.log(movie);
+  }, [id]);
+ 
 
   return (
     <div>
