@@ -1,27 +1,33 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+
+/* 
+FUNCTION FROM STACK OVERFLOW THAT SORTS SOMETHING IN ORDER BY DATE (RELEASE-DATE?)
+const sortingFunction = (b, a) => {
+  return new Date(b.created_at) - new Date(a.created_at);
+};
+*/
 
 const LeosList = ({ movies }) => {
   return (
     <section className="all-movies">
       {movies.map((movie) => (
-        <div key={movie.id}>
+        <div className="movie-overlay" key={movie.id}>
           <Link to={`movies/${movie.id}`}>
-            <div className="movie-overlay">
-              <img
-                className="movie-thumbnail"
-                src={
-                  movie.poster_path
-                    ? `https://image.tmdb.org/t/p/w780${movie.poster_path}`
-                    : ''
-                }
-                alt="{movie.title}"
-              />
-              <div className="movie-details">
-                <h1>{movie.title}</h1>
-                <p>Released {movie.release_date}</p>
-              </div>
+            <div className="movie-details">
+              <h2>{movie.title}</h2>
+              <p>Released {movie.release_date}</p>
             </div>
+
+            <img
+              className="movie-thumbnail"
+              src={
+                movie.poster_path
+                  ? `https://image.tmdb.org/t/p/w780${movie.poster_path}`
+                  : ""
+              }
+              alt="{movie.title}"
+            ></img>
           </Link>
         </div>
       ))}

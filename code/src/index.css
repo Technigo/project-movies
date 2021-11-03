@@ -9,9 +9,9 @@ html {
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  margin: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -20,16 +20,22 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 a {
   text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: rgb(175, 173, 173);
+  margin: 5px;
 }
 
 /* LIST COMPONENT STYLING */
-/* HOVER DOESNT WORK */
+/* HOVER WORKS BUT DOESN'T FIT THE THUMBNAIL */
 
 .all-movies {
   display: grid;
@@ -38,33 +44,47 @@ a {
   grid-gap: 0;
 }
 
-.movie-details {
-  display: none;
+/*
+.all-movies a {
+  width: 25%;
+  position: relative;
   color: #fff;
-}
-
-.movie-details:hover {
-  display: block;
-}
+  text-decoration: none;
+}*/
 
 .movie-thumbnail {
   width: 100%;
   height: 100%;
 }
 
-/* .movie-overlay {
-  display: none;
+.movie-overlay {
+  position: relative;
 }
-.movie-overlay:hover {
+
+.movie-details {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 20px;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
   transition: 0.5s ease;
-} */
+}
+
+.movie-details:hover {
+  opacity: 1;
+}
+
+h2 {
+  font-size: 26px;
+  margin-top: 95%;
+}
+
+p {
+  font-size: 12px;
+}
 
 /* DETAILS COMPONENT STYLING */
 

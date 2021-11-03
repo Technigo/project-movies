@@ -1,13 +1,14 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
+import React from "react";
+import { NavLink } from "react-router-dom";
+/*
+import styled from "styled-components";
 
 const NavLinkStyled = styled(NavLink)`
   color: black;
 
   &.header-nav-active {
   }
-`;
+`;*/
 
 const Header = () => {
   return (

@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-
-import LeosList from './components/LeosList';
-import Details from './components/Details';
-import Header from './components/Header';
-import NotFound from './components/NotFound';
-import { LEO_URL } from './utils/urls';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import LeosList from "./components/LeosList";
+import Details from "./components/Details";
+import Header from "./components/Header";
+import NotFound from "./components/NotFound";
+import { LEO_URL } from "./utils/urls";
 
 export const App = () => {
   const [list, setList] = useState([]);
@@ -17,7 +16,7 @@ export const App = () => {
       .then((data) => setList(data.cast));
   }, []);
 
-  console.log(list);
+  // console.log(list);
 
   //Structure always stays the same
   return (
