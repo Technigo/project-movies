@@ -9,7 +9,6 @@ import "../index.css";
 export const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
 
   useEffect(() => {
     setLoading(true);
@@ -18,9 +17,6 @@ export const MovieList = () => {
       .then((json) => {
         setMovies(json.results);
         setLoading(false);
-      })
-      .catch(() => {
-        setError(error);
       });
   }, [setLoading]);
 
