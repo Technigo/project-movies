@@ -54,17 +54,19 @@ code {
   max-width: 800px;
   margin: 0 auto;
   align-items: flex-end;
-  padding-top: 150px;
   padding-left: 60px;
   float: left;
+  position: fixed;
+  bottom: 60px;
 }
 
 .movie-summary {
   text-shadow: 1px 1px black;
-  margin-left: 20px;
+  margin: 0 20px;
 }
 
 .movie-poster {
+  max-width: 342px;
   border: 5px solid white;
 }
 .background-poster {
@@ -78,6 +80,13 @@ code {
   margin-left: 30px;
   color: red;
   font-size: 1.3rem;
+}
+
+.tagline {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 20px;
+  text-shadow: none;
 }
 
 .back-button {
@@ -114,6 +123,19 @@ code {
   box-shadow: 1px 1px black;
 }
 
+.not-found-container {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.not-found-container img {
+  border-radius: 10px;
+}
+
 .loader-reel {
   height: 150px;
   width: auto;
@@ -140,5 +162,33 @@ code {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .movie-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movie-details {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 0;
+  }
+
+  .movie-summary {
+    max-width: 342px;
+    margin-left: 0;
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .movie-card-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

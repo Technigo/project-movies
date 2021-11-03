@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import List from './components/List'
 import Movie from './components/Movie'
 import Loader from './components/Loader'
+
 import { API_URL } from 'utils/urls'
 
 export const App = () => {
