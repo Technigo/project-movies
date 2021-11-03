@@ -7,11 +7,13 @@ import styled from "styled-components";
 
 export const MovieListItem = ({ movie, imageInformation }) => {
   const [isMouseOver, setIsMouseOver] = useState(false);
+  console.log(imageInformation);
   const imagePath = `${imageInformation.base_url}${imageInformation.poster_sizes[6]}${movie.poster_path}`;
 
+  console.log(imageInformation.base_url);
   return (
     <>
-      <Link to={`/movies/${movie.id}`}>
+      <Link to={`/details/${movie.id}`}>
         <PosterContainer
           onMouseEnter={() => {
             setIsMouseOver(true);
