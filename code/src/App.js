@@ -1,9 +1,14 @@
 import React from 'react'
 
+
+import List from './pages/List'
+import Images from './pages/Images'
+
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      <List />
+      <Images />
     </div>
   )
 }
