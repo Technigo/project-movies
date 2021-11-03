@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+
 import MovieDetails from "./components/MovieDetails";
 import MovieList from "./components/MovieList";
-
-
 import { MOVIES_URL } from "./utils/urls";
+
+
 
 export const App = () => {
   const [moviesList, setMoviesList] = useState([]);
@@ -26,7 +28,7 @@ export const App = () => {
             exact path="/"render={() => <MovieList movies={moviesList} />}
           ></Route>
 
-          <Route></Route>
+          <Route path="movieDetails/:movieId" component={MovieDetails} />
         </Switch>
       </BrowserRouter>
     </>
