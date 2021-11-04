@@ -1,13 +1,24 @@
-# Project Movies
+# Horror Movies Site
 
-Replace this readme with your own information about your project.
+A multipage React application, that uses the moviedb API to present the most recent releases in the horror genre.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## Features
+
+- Use of hooks: useEffect, useState, useHistory and useParams
+- One page contains a movie list and the other the details of the selected movie
+- Responsive styling
+- Use of the React-icon library
+- Error page & loading page
+- Pair-programming
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+- Styling in React has new challenges such as the multiple components and how they interact with each other. Additional testing was needed to make sure the styling were not affecting other components.
+
+- Since the project was made in pair-programming, it was a great opportunity to practice merging new branches and solving conflicts.
+
+- The useParams was a new concept and we learned the best use and placement for it.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Deployed version: https://horrormovies.netlify.app/
