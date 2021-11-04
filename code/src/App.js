@@ -21,11 +21,9 @@ useEffect(() => {
 
 return (
   <>
-  <Navbar title="Movie(pop)Corner"/>
       <BrowserRouter>
-      {/* <Header /> */}
+      <Navbar title="Movie(pop)Corner"/>
       <Switch>
-        {/* // v1 */}
         <Route exact path="/" render={() => <PopularList movies={list} />} />
         <Route path="/details/:movieID" component={Details} />
         <Route path="/404" component={NotFound} />
