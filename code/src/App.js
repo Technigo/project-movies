@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+
+import { LIST_URL } from "./utils/urls";
+
 import MoviesList from "components/MoviesList";
 import MoviesDetails from "components/MoviesDetails";
-import { LIST_URL } from "./utils/urls";
-import Spinner from "components/Spinner";
+import NotFound from "components/NotFound";
 
 
 export const App = () => {
-
   const [movies, setMovies] = useState([]); // we expect to get data from an array, that's why we use []
-
    
   useEffect(() => {
     fetch(LIST_URL)
@@ -26,6 +26,8 @@ export const App = () => {
         <Route path="/details/:moviesId">
           <MoviesDetails />
         </Route>
+        <Route path="/404" component={NotFound} />
+        <Redirect to="/404" />
       </Switch>
     </BrowserRouter>
   );

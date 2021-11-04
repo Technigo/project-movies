@@ -151,6 +151,43 @@ font-size: 17px;
   animation: spinner infinite 0.5s;
 }
 
+/*Not found*/
+
+.not-found-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  border: 2px solid rgb(151, 10, 10);
+}
+
+.error-text-wrapper {
+  color:rgb(201, 201, 201);
+  position: absolute;
+  top: 49%;
+  align-self: center;
+  justify-items: center;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.home-button {
+  align-self: flex-start;
+  margin: 30px;
+  padding: 5px;
+  background-color: grey;
+  color: white;
+  
+}
+
+.home-button:hover {
+  transform: scale(1.2, 1.2);
+  background-color: rgb(214, 214, 214);
+  color: rgb(94, 94, 94);
+}
+
+
+
+
 @keyframes spinner {
   0% {
     transform: rotate(0);
