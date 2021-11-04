@@ -48,27 +48,27 @@ const MovieDetails = () => {
       <Link to='/' className='backLink'>
         <BackIcon /> Movies
       </Link>
-      {movieDetails.poster_path && movieDetails.backdrop_path && (
-        <div
-          className='backdrop'
-          style={{
-            backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(${backdropURL})`,
-          }}
-        >
-          <div className='summary'>
-            <img src={posterURL} alt={movieDetails.title} />
+      {/* {movieDetails.poster_path && movieDetails.backdrop_path && ( */}
+      <div
+        className='backdrop'
+        style={{
+          backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(${backdropURL})`,
+        }}
+      >
+        <div className='summary'>
+          <img src={posterURL} alt={movieDetails.title} />
 
-            <div className='details'>
-              <h3 className='details-header'>
-                {movieDetails.original_title}{' '}
-                <span>{movieDetails.vote_average}/10</span>
-              </h3>
+          <div className='details'>
+            <h3 className='details-header'>
+              {movieDetails.original_title}{' '}
+              <span>{movieDetails.vote_average}/10</span>
+            </h3>
 
-              <p>{movieDetails.overview}</p>
-            </div>
+            <p>{movieDetails.overview}</p>
           </div>
         </div>
-      )}
+      </div>
+      {/* )} */}
     </div>
   );
 };
