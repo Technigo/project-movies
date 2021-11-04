@@ -30,10 +30,7 @@ export const MovieDetails = () => {
           }}
         >
           <button className="go-back-button" onClick={goBackButton}>
-            <span role="img" aria-label="arrow">
-              &lArr;
-            </span>{" "}
-            Movies
+            <span>Movies</span>
           </button>
           <div className="movie-details-summary">
             <img

@@ -69,30 +69,48 @@ code {
   align-items: flex-end;
 }
 
-/* We could also make the button/link more similar to Technigo's or just improve it */
-
 .go-back-button {
+  width: 120px;
   position: absolute;
   display: inline-flex;
   color: #fff;
-  align-items: center;
   font-weight: 700;
   text-decoration: none;
   background: transparent;
-  padding: 15px;
-  border-radius: 20px;
+  border: transparent;
+  padding: 20px;
   left: 50px;
   top: 50px;
   text-transform: uppercase;
-  border: 3px solid #fff;
-  letter-spacing: 1px;
-  font-size: 15px;
+  font-size: 20px;
   cursor: pointer;
+  transition: all 0.5s;
+  text-align: center;
 }
 
-.go-back-button:hover {
-  background: black;
-  opacity: 50%;
+.go-back-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.go-back-button span:before {
+  content: "\00ab";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -10px;
+  transition: 0.5s;
+}
+
+.go-back-button:hover span {
+  padding-left: 25px;
+}
+
+.go-back-button:hover span:before {
+  opacity: 1;
+  left: 0;
 }
 
 .movie-details-summary {
