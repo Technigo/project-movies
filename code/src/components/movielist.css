@@ -1,10 +1,17 @@
 .container {
 	display:flex;
 	flex-wrap:wrap;
+    width:100vw;
+    justify-content: center;
+    background-color: var(--gray-black);
 }
 
 .overlay{
     position: relative;
+}
+
+.image{
+    width:100%;
 }
 
 .movie-details{
