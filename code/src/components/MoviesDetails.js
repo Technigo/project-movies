@@ -6,10 +6,9 @@ import Spinner from "./Spinner";
 
 const MoviesDetails = ({ films }) => {
   const [details, setDetails] = useState([]);
+  const [loading, setLoading] = useState(true);
   const { moviesId } = useParams();
   const history = useHistory(); //History Hook
-
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(DETAILS_URL(moviesId))
@@ -34,9 +33,10 @@ const MoviesDetails = ({ films }) => {
       />
 
       <div className="movies-btn">
-        <button onClick={OnButtonBack}><i class="fas fa-chevron-circle-left"></i> Movies</button>
+        <button onClick={OnButtonBack}>
+          <i class="fas fa-chevron-circle-left"></i> Movies
+        </button>
       </div>
-      
 
       <div className="summary-wrapper">
         <img
@@ -57,9 +57,3 @@ const MoviesDetails = ({ films }) => {
 };
 
 export default MoviesDetails;
-
-{
-  /* <Link exact to="/">
-          <button>Movies</button>
-        </Link> */
-}

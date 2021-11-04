@@ -7,10 +7,9 @@ import MoviesList from "components/MoviesList";
 import MoviesDetails from "components/MoviesDetails";
 import NotFound from "components/NotFound";
 
-
 export const App = () => {
   const [movies, setMovies] = useState([]); // we expect to get data from an array, that's why we use []
-   
+
   useEffect(() => {
     fetch(LIST_URL)
       .then((res) => res.json())
@@ -20,7 +19,7 @@ export const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/">  {/*//this means that it is the first page that displays*/}
+        <Route exact path="/"> {/*//this means that it is the first page that displays*/}
           <MoviesList films={movies} />
         </Route>
         <Route path="/details/:moviesId">
