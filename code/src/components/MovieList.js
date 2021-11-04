@@ -10,7 +10,7 @@ const MovieList = ({ movies }) => {
             <img
               src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
               alt="poster of the movie"
-            />{" "}
+            />{" "} 
           </Link>
           <div className="title-release">
             {movie.title} Released: {movie.release_date}
