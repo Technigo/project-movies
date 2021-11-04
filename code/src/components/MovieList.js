@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import moment from "moment";
+//three api end points
 import { API_MOVIE_LIST_POPULAR } from "./Links";
 import { API_MOVIE_LIST_TOP_RATED } from "./Links";
 import { API_MOVIE_LIST_UPCOMING } from "./Links";
@@ -12,11 +13,16 @@ import "../index.css";
 export const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  // special state to hold current state of the select
   const [change, changeTracker] = useState("popular");
   console.log("change", change);
 
   useEffect(() => {
+    // declaring a variable that will act as a dynamic stitcher for the api link
     let URL;
+    // if user selected popular we are reassigning the URL variable to the related API link
+    //similar with other 2 end points
     if (change === "popular") {
       URL = API_MOVIE_LIST_POPULAR;
     } else if (change === "toprated") {
@@ -25,12 +31,14 @@ export const MovieList = () => {
       URL = API_MOVIE_LIST_UPCOMING;
     }
     setLoading(true);
+    //here we are passing the dynamically changing URL varible to the fetch
     fetch(URL)
       .then((res) => res.json())
       .then((json) => {
         setMovies(json.results);
         setLoading(false);
       });
+    //also to make useeffect catch the change in current state of the selector we are passing the change as a dependency
   }, [setLoading, change]);
 
   return (
