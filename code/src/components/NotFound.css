@@ -1,0 +1,32 @@
+h1.\34 04-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.back-btn-404 
+{
+    justify-content: center;  
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
+
+
+.back-btn-404 :hover {
+color: red;
+}

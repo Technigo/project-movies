@@ -33,7 +33,7 @@ const Details = () => {
 
 	return( 
 	<div className="detailsPage" style={divStyle}>
-		<i class="fas fa-chevron-circle-left"></i>
+		<i className="fas fa-chevron-circle-left"></i>
 		<button className="back-btn" onClick={onButtonBackClick}>Movies</button>
 		<div className="background" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>      {/* <gradient to get black fading /> */}
 			<div className="summary">

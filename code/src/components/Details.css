@@ -1,13 +1,13 @@
 .detailsPage {
-    position: relative;
+  display: grid;
+	grid-template-columns: repeat(1, 1fr);
 }
 
 .detailsPage .background {
     min-height: 100vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     background-size: cover;
-    flex-direction: column;
-    justify-content: flex-end;
   }
   
   .back-btn {
@@ -66,6 +66,34 @@
     font-weight: normal;
     margin-left: 10px;
   }
+
+
+  /* tablet */
+  @media (min-width: 768px) {
+    .detailsPage .background {
+      background-position: 50%;
+      }
+  }
+
+
+  /* mobile */
+  @media (max-width: 767px) {
+
+    .detailsPage .background {
+    height: 100vh;
+    }
+
+.detailsPage img {
+  display: none;
+}
+
+.detailsPage .summary {
+  padding: 20px;
+}
+
+
+  }
+  
 
 
   
