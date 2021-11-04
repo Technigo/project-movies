@@ -44,7 +44,7 @@ export const SimilarMovies = () => {
     .then ((data) => {
         setSimilarMovies(data.results);
     });
-  }, []);
+  }, [movieId]);
 
   return (
   <section>

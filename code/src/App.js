@@ -31,6 +31,7 @@ export const App = () => {
 //add some more comments
 //Install prettier
 //Meta tags
+//add read me
 
 
 
