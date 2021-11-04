@@ -6,10 +6,18 @@ import { BackIcon } from './BackIcon';
 import { MOVIEDETAILS_URL } from '../utils/urls';
 
 const MovieDetails = () => {
-  const [movieDetails, setMovieDetails] = useState({});
+  const [movieDetails, setMovieDetails] = useState('');
   const [hasError, setHasError] = useState(false);
 
   const { id } = useParams();
+
+  const backdropURL = movieDetails.backdrop_path
+    ? `https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`
+    : '';
+
+  const posterURL = movieDetails.poster_path
+    ? `https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`
+    : '';
 
   useEffect(() => {
     fetch(MOVIEDETAILS_URL(id))
@@ -34,14 +42,6 @@ const MovieDetails = () => {
       </div>
     );
   }
-
-  const backdropURL = movieDetails.backdrop_path
-    ? `https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`
-    : '';
-
-  const posterURL = movieDetails.poster_path
-    ? `https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`
-    : '';
 
   return (
     <div className='detail-page'>
