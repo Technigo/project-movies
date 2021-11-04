@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams, useHistory } from "react-router-dom";
-import { LIST_URL } from "utils/urls";
+import { DETAILS_URL } from "utils/urls";
+
 
 const MoviesDetails = ({ films }) => {
   const [details, setDetails] = useState([]);
@@ -10,9 +11,8 @@ const MoviesDetails = ({ films }) => {
   console.log(history);
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${moviesId}?api_key=3f7193c0671f501efb9b75772ec2e867&language=en-US`
-    )
+    fetch (DETAILS_URL (moviesId) )
+     
       .then((res) => res.json())
       .then((data) => {
         setDetails(data);
@@ -39,7 +39,7 @@ const MoviesDetails = ({ films }) => {
         <div className="title-rating-wrapper">
           <h1 className="summary-h1">
             {details.title}
-            <span>{details.rating}</span>
+            <span className="rating">{details.vote_average}/10</span>
           </h1>
           <p className="summary-p">{details.overview}</p>
         </div>

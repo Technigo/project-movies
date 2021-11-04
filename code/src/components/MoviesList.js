@@ -6,11 +6,10 @@ const MoviesList = ({ films }) => {
   return (
     <div className="main-container">
       {films.map((cat) => (
-        //Maxs has the key in the link
 
-        <Link to={`/details/${cat.id}`} className="movie-link">
+        <Link key={cat.id} to={`/details/${cat.id}`} className="movie-link">
           
-          <div key={cat.id} className="movie-container">
+          <div  className="movie-container">
             <div className="overlay">
               <section className="text-wrapper">
                 <h1 className="movie-title">{cat.original_title}</h1>
