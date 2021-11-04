@@ -118,13 +118,40 @@ font-weight: 600;
 .summary-p {
 color: white;
 max-width: 350px;
-font-size: 17px;
+font-size: 15px;
+margin-top: 15px;
 }
 .rating {
   color: red;
   margin-left: 15px;
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 700;
+}
+.movies-btn {
+  z-index: 1;
+  position: absolute;
+  top: 20px;
+  margin-left: 20px;
+  padding:10px;
+}
+
+.movies-btn > button {
+  padding: 10px;
+  background:none;
+  border:none;
+  color: #fff;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+}
+.fas {
+  color: #fff;
+  font-size: 25px;
+  margin-right: 2px;
+}
+
+.movies-btn:hover {
+  transform: scale(1.2, 1.2);
 }
 
 /* ---------- Loading component ---------- */
@@ -157,7 +184,7 @@ font-size: 17px;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  border: 2px solid rgb(151, 10, 10);
+ 
 }
 
 .error-text-wrapper {
