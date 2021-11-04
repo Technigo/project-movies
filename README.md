@@ -1,13 +1,19 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project's focus was to make a movie app with multiple pages using React routes. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Technologies used: 
+* themoviedb.org API
+* React router
+
+For Future Improvements
+* Add sorting function for different movie ratings, genres etc
+* Add search bar for movie titles
+
+On this week's project we were tasked to display movie details from the API stated above. We used useEffect hook and fetch function to achieve this. We were also tasked to catch errors when the link is broken. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+[Super MovieFlix](https://super-movieflix.netlify.app/)
