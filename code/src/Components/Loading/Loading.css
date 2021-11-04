@@ -77,21 +77,21 @@ body {
 .welcome-message {
   color: #fff000;
   text-align: center;
-  margin-top: 55%;
-  font-size: 24px;
+  margin-top: 120px;
+  font-size: 26px;
   font-family: "Codystar", cursive;
 }
 
 @media (min-width: 768px) {
   .welcome-message {
-    margin-top: 40%;
-    font-size: 50px;
+    margin-top: 220px;
+    font-size: 40px;
   }
 }
 
 @media (min-width: 992px) {
   .welcome-message {
-    margin-top: 15%;
-    font-size: 40px;
+    margin-top: 170px;
+    font-size: 60px;
   }
 }

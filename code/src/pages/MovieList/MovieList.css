@@ -15,8 +15,6 @@
 
 .movie-title-date {
   display: none;
-  flex-direction: column;
-  justify-content: end;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -25,6 +23,8 @@
   color: white;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.682);
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .date-movie {
@@ -32,6 +32,8 @@
 }
 .movie-card:hover .movie-title-date {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .movie-image {

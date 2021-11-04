@@ -10,8 +10,6 @@
 }
 .info-characters {
   display: none;
-  flex-direction: column;
-  justify-content: end;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -21,9 +19,14 @@
   color: white;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.682);
+  flex-direction: column;
+  justify-content: flex-end;
 }
+
 .character-card:hover .info-characters {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .real-name {
   margin-top: 20px;

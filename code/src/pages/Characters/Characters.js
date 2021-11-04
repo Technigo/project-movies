@@ -26,22 +26,22 @@ const Characters = () => {
 
         {characters
           ? characters.map((character) => (
-              <article className="character-card" key={character.cast_id}>
-                <img
-                  src={
-                    character.profile_path
-                      ? `https://image.tmdb.org/t/p/w342/${character.profile_path}`
-                      : "https://i.ibb.co/h9bkbDk/1024px-No-image-available-svg.png"
-                  }
-                  alt={character.name}
-                  className="movie-image"
-                />
-                <div className="info-characters">
-                  <h1>Character: {character.character}</h1>
-                  <h1 className="real-name">Name: {character.original_name}</h1>
-                </div>
-              </article>
-            ))
+            <article className="character-card" key={character.cast_id}>
+              <img
+                src={
+                  character.profile_path
+                    ? `https://image.tmdb.org/t/p/w342/${character.profile_path}`
+                    : "https://i.ibb.co/h9bkbDk/1024px-No-image-available-svg.png"
+                }
+                alt={character.name}
+                className="movie-image"
+              />
+              <div className="info-characters">
+                <h1>Character: {character.character}</h1>
+                <h1 className="real-name">Name: {character.original_name}</h1>
+              </div>
+            </article>
+          ))
           : ""}
       </main>
     </div>
