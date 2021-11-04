@@ -10,10 +10,10 @@ const MainSite = ({ movies }) => {
             <img
               className="main-site-poster"
               src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-              alt={movie.original_title}
+              alt={movie.title}
             />
             <div className="movie-info">
-              <h1>{movie.original_title}</h1>
+              <h1>{movie.title}</h1>
               <p>Released {movie.release_date}</p>
             </div>
           </div>
