@@ -27,7 +27,7 @@ The API is well documented at developers.themoviedb.org, and if you click throu
 
 ## The problem
 
-This week, I started with the css design with fake data. Then I followed the instructions to fecth data in the 'themoviedb.org' API and get the movies, and the react-router was included to switch between pages. Finally I added a loader because the movies fecth takes some miliseconds. I fix some css details at the end to achieve the design.
+This week, I started with the css design with fake data. Then I followed the instructions to fecth data in the 'themoviedb.org' API and get the movies, and then react-router was included to switch between pages.Also I added a loader because the movies fecth takes some miliseconds and the NotFound page in case of send a movie detail request with a movie ID which doesn't exist in the API for example when a user tries to write directly an invalid movie ID. Finally, I fixed some css details at the end to achieve the design and cleaned the code.
 
 ## View it live
 
