@@ -15,7 +15,7 @@ export const NavBar = styled.header`
 
   &:hover {
     z-index: 1;
-    opacity: 0.8;
+    opacity: 1;
     background-color: rgba(0, 0, 0, 0.75);
   }
 `;

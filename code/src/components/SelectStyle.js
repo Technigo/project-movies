@@ -21,6 +21,5 @@ export const SelectStyle = styled.select`
 
   &:focus {
     box-shadow: 1px 1px 10px goldenrod;
-    transform: scale(1.05);
   }
 `;
