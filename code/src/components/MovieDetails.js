@@ -26,22 +26,21 @@ export const MovieDetails = () => {
 		.finally(() => setLoading(true))
 	},[movieId])
 
-
-
-    return (
-	<>
-	<button onClick={goBack}>Go back</button>
-
-	<article>
-	{/* {loading && <Loader
+  	{/* {loading && <Loader
         type="Puff"
         color="#00BFFF"
         height={100}
         width={100}
         timeout={3000} //3 secs
       />} */}
-	<section>
-      <div
+
+
+    return (
+	<>
+  <section className="summary-section">
+    <div className="summary-container">
+    <div className="backdrop-overlay"></div>
+    <div
         className="background-container"
         style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})`,
@@ -55,15 +54,23 @@ export const MovieDetails = () => {
         <span className="detail-rating"> {details.vote_average}/10</span>
         </h1>
         <p className="overview">{details.overview}</p>
-        <p className="details">Release date: {details.release_date}</p>
+        {/* <p className="details">Release date: {details.release_date}</p> */}
       </div>
       
     )}
+
+<button className="back-button" onClick={goBack}>
+{/* <i className="fa fa-chevron-circle-left"></i> */}
+<span className="back-button-text">Back</span>
+</button>
+
+
     
     </article>
     </div>
+    </div>
     </section>
-	</article>
+	
 	</>
     )
   }
