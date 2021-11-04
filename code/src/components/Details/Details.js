@@ -11,14 +11,25 @@ export const Details = ({ imageInformation }) => {
   const [isError, setIsError] = useState(false);
   const history = useHistory();
 
-  const imagePath = (poster_path) => {
+  const PosterPath = (poster_path) => {
     return (
       imageInformation.base_url + imageInformation.poster_sizes[3] + poster_path
     );
   };
 
+  const BackdropPath = (backdrop_path) => {
+    return (
+      imageInformation.base_url +
+      imageInformation.poster_sizes[6] +
+      backdrop_path
+    );
+  };
+
   const routeChange = () => {
     history.push("/");
+  };
+  const onButtonBackClick = () => {
+    history.goBack();
   };
 
   useEffect(() => {
@@ -28,7 +39,6 @@ export const Details = ({ imageInformation }) => {
       .then((res) => res.json())
       .then((json) => {
         console.log(json);
-
         if (json.id) {
           setMovieDetail(json);
         } else {
@@ -59,32 +69,50 @@ export const Details = ({ imageInformation }) => {
 
   if (!loading && !isError) {
     return (
-      <TextContainer>
-        <h1>{movieDetail.title}</h1>
-        <ImgDiv>
-          <img
-            src={imagePath(movieDetail.poster_path)}
-            alt={`Poster for ${movieDetail.title}`}
-          />
-        </ImgDiv>
-        <h2>overview:</h2>
-        <p>{movieDetail.overview}</p>
-        <p>
-          <strong>release date:</strong> {movieDetail.release_date}
-        </p>
-        <p>
-          <strong>Runtime:</strong> {movieDetail.runtime}min
-        </p>
-        <p>
-          <strong>Budget:</strong> {movieDetail.budget}
-        </p>
-      </TextContainer>
+      <>
+        <Background background={BackdropPath(movieDetail.backdrop_path)}>
+          {/* <img src={BackdropPath(movieDetail.backdrop_path)} /> */}
+          <GoBackButton onClick={onButtonBackClick}>Back</GoBackButton>
+
+          <TextContainer>
+            <h1>{movieDetail.title}</h1>
+            <ImgDiv>
+              <img
+                src={PosterPath(movieDetail.poster_path)}
+                alt={`Poster for ${movieDetail.title}`}
+              />
+            </ImgDiv>
+            <h2>Overview:</h2>
+            <p>{movieDetail.overview}</p>
+            <p>
+              <strong>Release date:</strong> {movieDetail.release_date}
+            </p>
+            <p>
+              <strong>Runtime:</strong> {movieDetail.runtime}min
+            </p>
+            <p>
+              <strong>Budget:</strong> {movieDetail.budget}
+            </p>
+          </TextContainer>
+        </Background>
+      </>
     );
   }
 };
 
 // -------------------css---------------------------
+const Background = styled.div`
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(${(props) => props.background});
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+`;
+
 const TextContainer = styled.div`
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   color: white;
   max-width: 500px;
   margin: 0 auto;
@@ -121,6 +149,27 @@ const ErrorButton = styled.button`
   color: white;
   font-weight: 100;
   align-items: center;
+`;
+
+const GoBackButton = styled.button`
+  background-color: grey;
+  color: black;
+  width: 130px;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  transition-duration: 0.4s;
+  box-shadow: none;
+  margin: 10px;
+
+  :hover {
+    background-color: white;
+    color: var(--secondary);
+    transition-duration: 0.4s;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  }
 `;
 
 const SpinnerContainer = styled.div`
