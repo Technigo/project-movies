@@ -93,6 +93,7 @@ const MovieDetails = () => {
   const [details, setDetails] = useState({})
   const [loading, setLoading] = useState(true)
   const { movieId } = useParams()
+  const { countryCode } = useParams()
   // const history = useHistory()
 
   useEffect(() => {
@@ -100,7 +101,10 @@ const MovieDetails = () => {
       `https://api.themoviedb.org/3/movie/${movieId}?api_key=1cd9c12b0f59437cb1f892337285c32e&language=en-US`
     )
       .then((res) => res.json())
-      .then((data) => setDetails(data))
+      .then((data) => {
+        setDetails(data)
+        // console.log('detaljer i MovieDetails', details)
+      })
       .finally(() => setLoading(false))
   }, [movieId])
 
@@ -116,7 +120,8 @@ const MovieDetails = () => {
       ) : (
         <DetailContainerStyled>
           <>
-            <DetailLinkStyled to='/'>
+            {console.log('insdie return on Moviedetalils')}
+            <DetailLinkStyled to={`/list/${countryCode}`}>
               {/* <button
               type='button'
               onClick={onBackLinkClick}

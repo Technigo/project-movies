@@ -1,26 +1,29 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
+import FirstPage from 'pages/FirstPage'
 import MovieList from 'pages/MovieList'
 import MovieDetails from 'pages/MovieDetails'
-import { API_LIST } from './utils/urls'
 
 export const App = () => {
-  const [list, setList] = useState([])
+  // const [country, setCountry] = useState('')
 
-  useEffect(() => {
-    fetch(API_LIST)
-      .then((res) => res.json())
-      .then((data) => setList(data.results))
-  }, [])
+  // const onCountryChange = (event) => {
+  //   setCountry(event.target.value)
+  // }
 
   return (
     <BrowserRouter>
       <Switch>
         <Route path='/' exact>
-          <MovieList list={list} />
+          <FirstPage />
         </Route>
-        <Route path='/movie/:movieId'>
+
+        <Route path='/list/:countryCode' exact>
+          <MovieList />
+        </Route>
+
+        <Route path='/list/:countryCode/movie/:movieId'>
           <MovieDetails />
         </Route>
       </Switch>

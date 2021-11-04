@@ -1,10 +1,32 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { API_LIST } from 'utils/urls'
 
 const MoviesContainerStyled = styled.section`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+`
+
+const ArrowStyled = styled.span`
+  font-size: 30px;
+  margin-right: 5px;
+`
+// when hover over the DetailLink we want to change the styling for ArrowStyled
+const DetailLinkStyled = styled(Link)`
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2px 8px 6px 8px;
+  border-radius: 10px;
+
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+
+  &:hover ${ArrowStyled} {
+    color: red;
+    margin-right: 10px;
+  }
 `
 
 const MovieLinkStyled = styled(Link)`
@@ -33,7 +55,9 @@ const OverlayStyled = styled.div`
     opacity: ${(props) => (props.hasPoster ? '0.8' : '1')};
   }
 `
-
+// adapting the style based on props
+// if the props 'hasPoster' is true, the color will be white
+// if we don't have a poster image, the color will be black
 const DataStyled = styled.div`
   color: ${(props) => (props.hasPoster ? 'white' : 'black')};
   height: 100%;
@@ -53,12 +77,28 @@ const DateStyled = styled.p`
   font-size: 1em;
 `
 
-const MovieList = ({ list }) => {
+const MovieList = () => {
+  const [list, setList] = useState([])
+  const { countryCode } = useParams()
+
+  useEffect(() => {
+    fetch(API_LIST(countryCode))
+      .then((res) => res.json())
+      .then((data) => setList(data.results))
+  }, [countryCode])
+
   return (
     <MoviesContainerStyled>
+      <DetailLinkStyled to='/'>
+        <ArrowStyled>&#10688;</ArrowStyled>
+        Countries
+      </DetailLinkStyled>
       {list.map((movie) => (
-        <MovieLinkStyled to={`/movie/${movie.id}`} key={movie.id}>
-          {/* varför har vi backdrop här? Mer rimligt att använda poster?? */}
+        <MovieLinkStyled
+          to={`/list/${countryCode}/movie/${movie.id}`}
+          key={movie.id}
+        >
+          {/* {console.log(`/list/${countryCode}/movie/${movie.id}`)} */}
           {movie.poster_path === null ? (
             <MovieImgStyled src='./assets/nopic2.png' alt='not available/' />
           ) : (
@@ -67,7 +107,7 @@ const MovieList = ({ list }) => {
               alt={movie.title}
             />
           )}
-          {/* borde ändra till poster_path här också */}
+          {/* passed props 'hasPoster' for styling */}
           <OverlayStyled hasPoster={movie.poster_path !== null}>
             <DataStyled hasPoster={movie.poster_path !== null}>
               <TitleStyled>{movie.title}</TitleStyled>
