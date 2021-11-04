@@ -15,12 +15,12 @@ useEffect (() => {
     }, [])
 
     return (
-        <div>
-            <h1>hej hopp</h1>
+        <div className="movie-list">
             {movies.map((movie) => (
                 <div key={movie.id}>
-                    <h2>{movie.title}</h2>
-                    <img src={`https://image.tmdb.org/t/p/w780${movie.backdrop_path}`} alt="imagesmovies"/>
+                    <h1>{movie.title}</h1>
+                    <p>Released {movie.release_date}</p>
+                    <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}/>
                 </div>
             ))}
         </div>
