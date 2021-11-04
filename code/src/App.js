@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 import MovieDetails from './components/MovieDetails';
@@ -26,10 +26,10 @@ export const App = () => {
           <Route path='/details/:id'>
             <MovieDetails />
           </Route>
-          <Route>
+          <Route path='/404'>
             <NotFound />
           </Route>
-          {/* <Redirect to='/404' /> */}
+          <Redirect to='/404' />
         </Switch>
       </main>
     </BrowserRouter>

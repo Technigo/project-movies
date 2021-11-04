@@ -50,7 +50,11 @@ const MovieDetails = () => {
       >
         <div className='summary'>
           <img
-            src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`}
+            src={
+              movieDetails.poster_path
+                ? `https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`
+                : ''
+            }
             alt={movieDetails.title}
           />
           <div className='details'>
