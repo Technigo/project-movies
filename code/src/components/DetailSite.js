@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import styled from "styled-components";
+import NotFound from "./NotFound";
 
 const BackLink = styled.div`
   position: absolute;
@@ -23,7 +24,7 @@ const BackLink = styled.div`
 
 const DetailSite = () => {
   const [details, setDetails] = useState({});
-  const [errorIddetails, setErrorId] = useState(false);
+  const [errorId, setErrorId] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
@@ -43,6 +44,10 @@ const DetailSite = () => {
     //   setDetails(json);
     // });
   }, [id]);
+
+  if (errorId) {
+    return <NotFound />;
+  }
 
   return (
     <div className="details-box">

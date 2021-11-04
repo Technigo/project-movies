@@ -1,12 +1,16 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This assignment was to create a website with react router to have one starter page with all movies and when you click on a movie you come to a more detailed page with information of that movie. Plus a 404 page with navigation back to the main site.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We have done following this week:
+
+-Using React Router
+-Pair programming
+-Styled components
+
+We may want to stick to one of either if we want styled components or a css-sheet. But in this case we wanted to try the different approaches.
 
 ## View it live
 
