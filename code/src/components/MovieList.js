@@ -16,8 +16,8 @@ return (
             ></img>
 
         <div className="movie-details">
-            <h1>{movie.title}</h1>
-            <p>{movie.release_date}</p>
+            <h1 className="movie-title">{movie.title}</h1>
+            <p className="movie-release">{movie.release_date}</p>
         </div>
         </div>
         </Link>

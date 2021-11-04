@@ -1,0 +1,42 @@
+.background-image{
+    min-height: 100vh;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.movie-poster{
+    display: flex;
+    align-items: flex-end;
+    padding: 50px;
+}
+
+.poster-image{
+    border:solid white 5px;
+}
+
+.summary{
+    display:flex;
+    flex-direction: column;
+    margin:20px;
+}
+
+.movie-name{
+    color:white;
+    margin-bottom:1em;
+}
+
+.info-details{
+    color:white;
+    max-width: 400px;
+    margin:0;
+}
+
+.votes{
+    font-size: 17px;
+    color: red;
+    font-weight: 400;
+    margin-left: 10px;
+}

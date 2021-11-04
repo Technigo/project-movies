@@ -36,13 +36,13 @@
     opacity:1;
 }
 
-h1{
+.movie-title{
     margin:0 0 5% 5%;
     font-size: 32px;
     font-weight: bolder;
 }
 
-p{
+.movie-release{
     margin:0 0 5% 5%;
     font-size: 16px;
 }

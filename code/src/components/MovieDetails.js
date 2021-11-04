@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { DETAILS_URL } from "utils/urls";
+import './moviedetails.css'
 
 const MovieDetails = () => {
 const [movieDetails, setMovieDetails] = useState({});
@@ -17,25 +18,28 @@ useEffect(() => {
 
  
 return (
-    <section>
+    <article>
+        <button>Movies</button>
         <div className="background-image"
             style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`,
         }}
         >
-        <button>Movies</button>
+        {/* <button>Movies</button> */}
         <div className="movie-poster">
-       <img src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`}
+       <img className="poster-image" src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`}
         alt="{movieDetails.title} poster"></img>
-            <div className="summary"></div>
-            <h3 className="movie-name">{movieDetails.title}</h3>
-            <p className="votes">{movieDetails.vote_average}/10</p>
-                </div>
+            <div className="summary">
+            <h1 className="movie-name">{movieDetails.title}
+            <span className="votes">{movieDetails.vote_average}/10</span>
+            </h1>
                 <p className="info-details">{movieDetails.overview}</p>
+                </div>
+                </div>
             
         </div>
         
-    </section>
+    </article>
 );
 };
 
