@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Loading from "components/Loading";
 import { TopRatedUrl } from "Urls";
 
-
 const Toprated = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -26,7 +25,8 @@ const Toprated = () => {
               <div className="movieListContent">
                 <div className="textMovieList">
                   <h1>{movie.title}</h1>
-                  <p className="pToprated">Rate:
+                  <p className="pToprated">
+                    Rate:
                     {movie.vote_average}/10
                   </p>
                 </div>
