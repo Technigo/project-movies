@@ -3,13 +3,19 @@ import { Route, Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const StyledButton = styled.button `
+  display: none;
   position: absolute;
-  top: 50px;
-  left: 60px;
+  top: 5px;
   background-color: transparent;
   border: none;
   font-size: 20px;
   font-weight: 700;
+
+  @media (min-width: 667px) {
+    display: unset;
+    top: 50px;
+    left: 60px;
+  }
 `
 const StyledLink = styled(Link) `
   display: inline-flex;

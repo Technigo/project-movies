@@ -7,5 +7,8 @@ export const Background = styled.div `
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+
+  @media (min-width: 667px) {
+    justify-content: flex-end;
+  } 
 `

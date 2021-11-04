@@ -7,21 +7,24 @@ const SiteContainer = styled.div `
   flex-direction: column;
   align-items: center;
   font-size: 14px;
+  padding-top: 100px;
   color: lightgrey;
 
   @media (min-width: 667px) {
     font-size: 30px;
+    padding-top: 180px;
   }
 
   @media (min-width: 1024px) {
     font-size: 40px;
+    padding-top: 250px;
   }
 `
 const RedirectButton = styled.button `
   font-family: inherit;
   font-weight: bold;
-  font-size: 16px;
-  min-width: 200px;
+  font-size: 14px;
+  min-width: 180px;
   border-radius: 10px;
   margin-bottom: 20px;
   background-color: lightgrey;
@@ -29,6 +32,16 @@ const RedirectButton = styled.button `
 
   &:hover {
     transform: scale(1.1);
+  }
+
+  @media (min-width: 667px) {
+    font-size: 20px;
+    min-width: 250px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 25px;
+    min-width: 300px;
   }
 `
 

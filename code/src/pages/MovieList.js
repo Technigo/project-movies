@@ -8,7 +8,7 @@ const SiteContainer = styled.section `
   justify-content: center;
 `
 const ListItems = styled.article `
-  min-width: 25%;
+  min-width: 24%;
   margin: 5px;
   position: relative;
   color: #fff;
