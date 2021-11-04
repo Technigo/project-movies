@@ -3,7 +3,6 @@ import { MovieLists } from './pages/MovieLists'; //import MovieLists component
 import { MovieDetails } from './pages/MovieDetails'; //import MovieDetails component
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'; //import react route dom
 import NotFound from './pages/NotFound'; //import NotFound component
-import Loading from './pages/Loading';
 
 export const App = () => {
 	return (
@@ -29,12 +28,16 @@ export const App = () => {
 };
 
 //To-do list
-
+//add some more comments
+//Install prettier
+//Meta tags
 
 
 
 //Question for teamsession
 // Movie title and release date made white
 //Grid on similar movies WHY DOES IT NOT WORK?
+
+
 
 
