@@ -1,6 +1,7 @@
 import React from "react";
 import "../components/Navbar.css"
 
+//simple navbar with props
 
 const Navbar = (props) => {
 

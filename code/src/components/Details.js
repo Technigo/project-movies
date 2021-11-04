@@ -41,7 +41,7 @@ const Details = () => {
 			return <NotFound></NotFound>
 		}
 
-
+// Here we render the detail page with poster background with a summary and rating
 	return( 
 	<div className="detailsPage">
 		<i className="fas fa-chevron-circle-left" onClick={onButtonBackClick}></i>
