@@ -1,10 +1,10 @@
 import React, {useState, useEffect } from 'react'
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import List from './components/List'
 import Movie from './components/Movie'
 import Loader from './components/Loader'
-import NotFound from 'components/NotFound' ///<<<<<<<< redirect där uppe också
+import NotFound from 'components/NotFound'
 
 import { API_URL } from 'utils/urls'
 
@@ -19,7 +19,6 @@ export const App = () => {
     .then((data) => setList(data.results))
     .finally(() => setLoading(false))
   }, [])
-  console.log(list)
 
   return (
     <>
@@ -35,7 +34,6 @@ export const App = () => {
         <Route>
           <NotFound />
         </Route>
-        <Redirect to="/404"/>
      </Switch>
     </BrowserRouter>
     </>

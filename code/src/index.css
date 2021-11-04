@@ -142,6 +142,7 @@ code {
 }
 .loader-overlay {
   position: absolute;
+  z-index: 100;
   top: 0;
   right: 0;
   bottom: 0;
@@ -195,8 +196,4 @@ code {
   .movie-card-container {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-h1 {
-  color: white;
 }

@@ -4,7 +4,6 @@ import { useParams, Link } from 'react-router-dom'
 import Loader from './Loader'
 import { API_KEY } from 'utils/urls'
 
-
 const Movie = () => {
     const [movie, setMovie] = useState('')
     const [loading, setLoading] = useState(false)
@@ -22,8 +21,7 @@ const Movie = () => {
                 setMovie(data)
             } else {
                 setHasError(true)
-            }
-            })
+            }})
         .finally(() => setLoading(false))
     }, [MOVIE_URL])
 
@@ -56,7 +54,7 @@ const Movie = () => {
                     alt={movie.title}
                 />
                 <div className='movie-summary'>
-                    <h1>{movie.title}<span className="movie-rating">{movie.vote_average}/10</span></h1>
+                    <h1>{movie.title}<span className="movie-rating">{movie.vote_average} / 10</span></h1>
                     {movie.tagline && <h2 className="tagline">"{movie.tagline}"</h2> }
                     <p>{movie.overview}</p>
                 </div>
