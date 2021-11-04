@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react"
-import { BrowserRouter, Switch, Route } from "react-router-dom"
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom"
 
 import { API_URL } from "./utils/urls"
 
 import MovieList from "./components/MovieList"
 import MovieDetails from "./components/MovieDetails"
-import Header from "components/Header"
+import Header from "./components/Header"
+import NotFound from "./components/NotFound"
 
 export const App = () => {
   const [movies, setMovies] = useState([])
@@ -29,6 +30,8 @@ export const App = () => {
         <Switch>
           <Route exact path="/" render={() => <MovieList movies={movies} />} />
           <Route path="/movies/:info" component={MovieDetails} />
+          <Route path="/404" component={NotFound} />
+          <Redirect to="/404" />
         </Switch>
       </BrowserRouter>
     </div>

@@ -18,24 +18,26 @@ const MovieDetails = () => {
   }, [info])
 
   return (
-    <div
-      className="details-container"
-      style={{
-        backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})`,
-      }}
-    >
-      <div className="details-wrapper">
-        <img
-          className="details-img"
-          src={`https://image.tmdb.org/t/p/w342${details.poster_path}`}
-          alt="poster of the movie"
-        />
-        <span className="text-summary">
-          <h1>{details.title}</h1> <p>rating: {details.vote_average}/10</p>
-          <p>{details.overview}</p>
-        </span>
+    <>
+      <div
+        className="details-container"
+        style={{
+          backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})`,
+        }}
+      >
+        <div className="details-wrapper">
+          <img
+            className="details-img"
+            src={`https://image.tmdb.org/t/p/w342${details.poster_path}`}
+            alt="poster of the movie"
+          />
+          <span className="text-summary">
+            <h1>{details.title}</h1> <p>rating: {details.vote_average}/10</p>
+            <p>{details.overview}</p>
+          </span>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

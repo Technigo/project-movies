@@ -1,15 +1,16 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react"
+import { NavLink } from "react-router-dom"
 
 const Header = () => {
   return (
     <header>
-        <nav> 
-            <NavLink exact to="/"> LIST  </NavLink>
-            <NavLink to="/MovieDetails"> DETAILS </NavLink>
-        </nav>
+      <nav>
+        <NavLink exact to="/">
+          Back to list
+        </NavLink>
+      </nav>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
