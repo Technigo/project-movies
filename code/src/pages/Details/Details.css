@@ -1,30 +1,38 @@
 .background-img {
   position: relative;
-  display:flex;
+  display: flex;
   width: 100vw;
   height: 100vh;
   background-position: center;
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .movie-card-details {
   display: flex;
   flex-direction: row;
-  max-width:900px;
+  max-width: 900px;
   align-items: flex-end;
   padding: 20px;
 }
-.movie-details{
-  display:flex;
+.movie-details {
+  display: flex;
   flex-direction: column;
   padding: 20px;
   color: white;
 }
-.movie-image-small{
+a {
+  text-decoration: none;
+  color: white;
+}
+.movie-image-small {
   display: none;
 }
 .movie-card-details h1 {
   padding: 20px 0px;
+  font-family: "Cinzel Decorative", cursive;
+}
+.movie-card-details h1:hover {
+  color: red;
 }
 .ranking {
   color: red;
@@ -32,48 +40,52 @@
   margin-left: 10px;
 }
 .back-arrow {
-  position:absolute;
+  position: absolute;
   display: flex;
   align-items: center;
   text-decoration: none;
   font-weight: 600;
-  color: white;
-  top:20px;
+  color: black;
+  top: 20px;
   left: 20px;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  padding: 10px;
+  background-color: rgba(250, 246, 246, 0.596);
+  border-radius: 25px;
 }
 svg {
   margin-right: 5px;
-  font-size: 25px;
+  font-size: 30px;
 }
 .back-arrow:hover svg {
   margin-right: 10px;
   transition: 0.4s;
-
 }
-
 
 @media (min-width: 768px) {
   .background-img {
-  background-size: cover;
+    background-size: cover;
   }
   .back-arrow {
-    top:50px;
+    top: 50px;
     left: 50px;
   }
-  .movie-image-small{
+  .movie-image-small {
     display: flex;
     border: 4px solid white;
   }
-  .movie-card-details{
+  .movie-card-details {
     padding: 50px;
   }
-  }
+}
 @media (min-width: 992px) {
   .background-img {
     background-size: cover;
     background-position: top;
   }
-  .movie-card-details{
+  .movie-card-details {
     padding: 50px;
   }
 }

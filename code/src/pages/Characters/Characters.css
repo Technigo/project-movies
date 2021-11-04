@@ -1,0 +1,66 @@
+.characters-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+}
+.character-card {
+  position: relative;
+  width: 100%;
+  font-family: "Cinzel Decorative", cursive;
+}
+.info-characters {
+  display: none;
+  flex-direction: column;
+  justify-content: end;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 14px;
+  top: 0;
+  color: white;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.682);
+}
+.character-card:hover .info-characters {
+  display: flex;
+}
+.real-name {
+  margin-top: 20px;
+}
+.back-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  z-index: 5;
+  padding: 10px;
+  border: none;
+  background-color: rgba(250, 246, 246, 0.627);
+  border-radius: 25px;
+}
+svg {
+  margin-right: 5px;
+  font-size: 30px;
+}
+.back-button:hover svg {
+  margin-right: 10px;
+  transition: 0.4s;
+}
+
+@media (min-width: 768px) {
+  .character-card {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .character-card {
+    width: 25%;
+  }
+}
