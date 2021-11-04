@@ -48,7 +48,7 @@ const MovieDetails = () => {
       <Link to='/' className='backLink'>
         <BackIcon /> Movies
       </Link>
-      {movieDetails && (
+      {movieDetails.poster_path && movieDetails.backdrop_path && (
         <div
           className='backdrop'
           style={{
@@ -57,6 +57,7 @@ const MovieDetails = () => {
         >
           <div className='summary'>
             <img src={posterURL} alt={movieDetails.title} />
+
             <div className='details'>
               <h3 className='details-header'>
                 {movieDetails.original_title}{' '}
