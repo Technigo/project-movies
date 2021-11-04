@@ -1,5 +1,5 @@
 .loader-container{
-  height: 100px;
+  min-height: 90vh;
   margin: 100px auto;
   max-width: 20%;
 }

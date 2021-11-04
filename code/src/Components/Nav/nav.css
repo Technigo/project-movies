@@ -3,13 +3,14 @@
     color: yellow;
     background:darkblue;
     text-shadow: rgb(0, 1, 15);
+    padding-bottom: 10px;
 }
 
 .header-title{
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: 2rem 0;
+    padding: 1.6rem 0 0.3rem 0;
     text-transform: capitalize;
     text-shadow: -1px 0 rgb(228, 212, 212), 0 1px rgb(238, 226, 226), 1px 0 rgb(243, 235, 235), 0 -1px rgb(243, 237, 237);
 }
@@ -17,9 +18,9 @@
 .header-subtitle{
     display: flex;
     justify-content: center;
-    margin: 0;
+    margin: 10px;
+    text-align: center;
 }
-
 
 .header-back{
     position: absolute;

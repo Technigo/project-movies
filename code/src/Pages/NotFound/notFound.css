@@ -1,0 +1,46 @@
+.notFound-container{
+    background: black;
+    margin: 0 auto;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    text-align: center;
+}
+
+.notFound-title{
+    color:white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.notFound-button{
+    background-color: darkorange;
+    color: white;
+    border-radius: 23px;
+    padding: 10px;
+    margin: 10px auto;
+    width: 7rem;
+}
+
+.notFound-gif{
+    max-width:40%;
+    height:45%;
+    margin: 50px auto;
+}
+
+
+@media (min-width: 768px) {
+    .notFound-gif{
+        width:35%;
+        height:45%;
+    }
+}
+
+@media (min-width: 992px) {
+    .notFound-gif{
+        width:25%;
+    }
+}

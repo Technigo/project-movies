@@ -1,6 +1,6 @@
 import React from 'react';
+import { NavLink, Route } from 'react-router-dom'
 import './nav.css';
-import { Link, Route } from 'react-router-dom'
 
 
 export const Nav = () => {
@@ -9,9 +9,9 @@ export const Nav = () => {
             <h1 className="header-title">Popular movies</h1>
             <h2 className="header-subtitle">The latest and more popular movies in US!</h2>
             <Route path="/movie-details">
-                <Link to="/" className="header-back">
-                    <i className="fas fa-chevron-circle-left"></i>Back
-                </Link>
+                <NavLink exact to="/" className="header-back">
+                    <i className="fas fa-chevron-circle-left"></i>Home
+                </NavLink>
             </Route>
         </header>
     )
