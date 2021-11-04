@@ -3,7 +3,6 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import List from "./components/List";
 import Details from "./components/Details";
-import Header from "./components/Header";
 import NotFound from "components/NotFound";
 import { MOVIES_URL } from "./utils/urls";
 
@@ -20,7 +19,6 @@ export const App = () => {
 
   return (
     <BrowserRouter>
-      <Header />
       <Switch>
         <Route exact path="/" render={() => <List movies={list} />} />
         <Route path="/movies/:id" component={Details} />

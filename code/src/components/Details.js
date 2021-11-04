@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { useParams /* useHistory */ } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import styled from "styled-components";
 
-/* const GoBackButton = styled.button`
+const GoBackButton = styled.button`
   padding: 10px;
   font-style: italic;
   color: green;
   background-color: red;
   border-radius: 10px;
-`; 
+`;
 
+/*
 const MovieImage = styled.img`
   width: 100px;
   border-radius: 50%;
@@ -20,7 +21,7 @@ const Details = () => {
   const [details, setDetails] = useState({});
 
   const { id } = useParams();
-  /* const history = useHistory(); */
+  const history = useHistory();
 
   useEffect(() => {
     fetch(
@@ -30,32 +31,32 @@ const Details = () => {
       .then((res) => setDetails(res));
   }, [id]);
 
-  /*   const onButtonBackClick = () => {
+  const onButtonBackClick = () => {
     history.goBack();
-  }; */
+  };
+
   console.log(details);
   return (
     <section className="details-backdrop">
+      <button onClick={onButtonBackClick}>Back</button>
       <img
         src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`}
         alt={id.title}
       />
+      <div className="movie-detail-info">
+        <img
+          className="poster-img"
+          src={`https://image.tmdb.org/t/p/w400${details.poster_path}`}
+          alt="poster"
+        />
+      </div>
       <div>
         <h2>Movie title: {details.original_title}</h2>
         <p>Description: {details.overview}</p>
-        {/*         <p>Genre: {details.genres.map}</p> */}
-        <p>Rating: </p>
+        <p>Rating: {details.vote_average}/10</p>
       </div>
     </section>
   );
 };
-{
-  /* <div>
-      <p>{details.results.vote_average}</p>
-      {/*   
-      <button onClick={onButtonBackClick}>Back</button>
-      <h2>Name: {details.name}</h2>
-      <img src={details?.sprites?.other["official-artwork"]?.front_default} /> */
-}
 
 export default Details;
