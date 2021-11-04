@@ -31,11 +31,6 @@ header {
 
 @media (min-width: 1025px) {
   header {
-    height: 10vh;
-    color: whitesmoke;
-    text-shadow: 5px 5px red;
-    text-align: center;
     font-size: 35px;
-    margin-bottom: 3%;
   }
 }

@@ -38,7 +38,7 @@
     width: 20%;
   }
 
-  button:hover {
+  .notfound-button:hover {
     background-color: red;
     color: whitesmoke;
   }

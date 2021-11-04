@@ -2,27 +2,8 @@
   display: grid;
   grid-template-columns: 1fr;
 }
-.overlay {
-  position: relative;
-}
-
 .movie-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transition: 0.5s ease;
-  opacity: 0;
-  background: rgba(1, 1, 1, 0.64);
-  color: whitesmoke;
-}
-
-.movie-info:hover {
-  opacity: 1;
+  display: none;
 }
 
 img {
@@ -51,5 +32,28 @@ img {
   p {
     margin: 0 0 5% 5%;
     font-size: 18px;
+  }
+
+  .overlay {
+    position: relative;
+  }
+
+  .movie-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 0.5s ease;
+    opacity: 0;
+    background: rgba(1, 1, 1, 0.64);
+    color: whitesmoke;
+  }
+
+  .movie-info:hover {
+    opacity: 1;
   }
 }

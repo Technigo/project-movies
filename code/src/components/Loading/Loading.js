@@ -1,14 +1,17 @@
-import React from 'react';
-import './Loading.css';
+import React from "react";
+import "./Loading.css";
+import Header from "components/Header";
 
 const Loading = () => {
   return (
-    <div className='loading-overlay'>
-      <div className='loading-spinner' />
-      <blockquote className='loading-text'>
-        "Oh yes, there will be blood."
-      </blockquote>
-    </div>
+    <>
+      <div className="loading-overlay">
+        <Header />
+        <div className="loading-spinner" />
+
+        <h2 className="loading-text">Loading...</h2>
+      </div>
+    </>
   );
 };
 

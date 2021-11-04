@@ -6,6 +6,7 @@
   left: 0;
   background: #000;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -13,11 +14,19 @@
 .loading-spinner {
   width: 50px;
   height: 50px;
-  border: 5px solid #dcdcdc;
+  border: 5px solid whitesmoke;
   border-radius: 50%;
-  border-left: 5px solid #ff0000;
+  border-left: 5px solid red;
   animation: spinner infinite 0.5s;
   -webkit-animation: spinner infinite 0.5s;
+}
+
+.loading-text {
+  color: whitesmoke;
+  text-shadow: 5px 5px red;
+  font-size: 50px;
+  font-family: "Mate SC", serif;
+  margin-left: 5px;
 }
 
 @keyframes spinner {
@@ -30,8 +39,4 @@
   100% {
     transform: rotate(360deg);
   }
-}
-
-.loading-text {
-  color: #ff0000;
 }

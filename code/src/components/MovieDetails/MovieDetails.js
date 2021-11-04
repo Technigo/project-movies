@@ -14,10 +14,10 @@ const MovieDetails = () => {
       .then((res) => res.json())
       .then((json) => {
         setMovieDetails(json);
-        console.log("DETAILS", json);
       });
   }, [movieId]);
 
+  // ---- const for the images ----
   const backgroundPoster = movieDetails.poster_path
     ? `https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`
     : "";
@@ -36,6 +36,7 @@ const MovieDetails = () => {
       >
         <Link to="/" className="backLink" style={{ textDecoration: "none" }}>
           <div className="button-span">
+            {/* --- Icon from the react-icons library --- */}
             <IconContext.Provider
               value={{
                 color: "whitesmoke",
@@ -44,7 +45,7 @@ const MovieDetails = () => {
               }}
             >
               <div>
-                <FaChevronCircleLeft size={20} />
+                <FaChevronCircleLeft size={30} />
               </div>
             </IconContext.Provider>
 

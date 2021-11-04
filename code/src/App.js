@@ -4,23 +4,25 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import MovieList from "./components/MovieList/MovieList";
 import MovieDetails from "./components/MovieDetails/MovieDetails";
 import Header from "./components/Header";
-import NotFound from "components/NotFound/NotFound";
+import NotFound from "./components/NotFound/NotFound";
+import Loading from "./components/Loading/Loading";
 import { MOVIES_URL } from "./utils/urls";
 
 export const App = () => {
   const [movieLi, setMovieLi] = useState([]);
-  /*  const [movieId, setMovieId] = useState({}); */
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     fetch(MOVIES_URL)
       .then((res) => res.json())
-      .then((data) => setMovieLi(data.results));
+      .then((data) => setTimeout(() => setMovieLi(data.results), 1000))
+      .finally(() => setTimeout(() => setLoading(false), 1000));
   }, []);
-
-  console.log("GENERAL DATA", movieLi);
 
   return (
     <>
+      {loading && <Loading />}
       <BrowserRouter>
         <Header />
         <Switch>
