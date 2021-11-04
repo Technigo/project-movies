@@ -4,55 +4,58 @@ import { DETAILS_URL } from "utils/urls";
 import { BackButton } from "../components/BackButton";
 import styled from "styled-components";
 
-const BackDropImg = styled.img`
-  margin: 0 auto;
-  height: 100vh;
+const BackDropContainer = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: flex-end;
+  position: relative;
   z-index: -1;
 `;
 
+const OverviewContainer = styled.div`
+  position: absolute;
+  display: flex;
+  align-items: flex end;
+  padding: 50px;
+`;
+
 const PosterImg = styled.img`
-  position: absolute;
-  width: 25%;
+  width: 50%;
   border: 5px solid white;
-  left: 50px;
-  bottom: 50px;
 `;
 
-const MovieTitleDetails = styled.span`
-  position: absolute;
-  top: 50%;
-  right: 50%;
+const MovieDetailsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height; 300px; 
+  
 `;
 
-const DetailsTitle = styled.h3`
+const TitleRatingText = styled.div`
+  display: flex;
+`;
+
+const MovieTitleDetails = styled.h3`
+  font-size: 26px;
   color: white;
+  margin-right: 15px;
 `;
 
 const MovieRating = styled.span`
-position: absolute;
-top: 50%;
-right:40%;
-bottom: 0;
-left:0: 
+  display: flex;
+  margin: 0;
+  color: white;
+  align-items: center;
 `;
 
 const Rating = styled.p`
   color: red;
 `;
 
-const TotalRate = styled.p`
-  color: white;
-`;
-
 const OverviewText = styled.p`
-position: absolute;
-top: 60%;
-right:0;
-bottom: 0;
-left:0: 
-`;
-
-const DetailsOverview = styled.p`
   color: white;
 `;
 
@@ -86,34 +89,36 @@ const MovieDetails = () => {
   return (
     <div>
       <BackButton />
-      <BackDropImg
-        src={
-          movie.backdrop_path
-            ? `https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`
-            : ""
-        }
-        alt={movie.title}
-      />
-      <PosterImg
-        src={
-          movie.poster_path
-            ? `https://image.tmdb.org/t/p/w342${movie.poster_path}`
-            : ""
-        }
-        alt={movie.title}
-      />
-      <div>
-        <MovieTitleDetails>
-          <DetailsTitle>{movie.title}</DetailsTitle>
-        </MovieTitleDetails>
-        <MovieRating>
-          <Rating>{movie.vote_average}</Rating>
-          <TotalRate>/10</TotalRate>
-        </MovieRating>
-      </div>
-      <OverviewText>
-        <DetailsOverview>{movie.overview}</DetailsOverview>
-      </OverviewText>
+      <BackDropContainer>
+        <img
+          src={
+            movie.backdrop_path
+              ? `https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`
+              : ""
+          }
+          alt={movie.title}
+        />
+        <OverviewContainer>
+          <PosterImg
+            src={
+              movie.poster_path
+                ? `https://image.tmdb.org/t/p/w342${movie.poster_path}`
+                : ""
+            }
+            alt={movie.title}
+          />
+          <MovieDetailsContainer>
+            <TitleRatingText>
+              <MovieTitleDetails>{movie.title}</MovieTitleDetails>
+              <MovieRating>
+                <Rating>{movie.vote_average}/10</Rating>
+              </MovieRating>
+            </TitleRatingText>
+
+            <OverviewText>{movie.overview}</OverviewText>
+          </MovieDetailsContainer>
+        </OverviewContainer>
+      </BackDropContainer>
     </div>
   );
 };
