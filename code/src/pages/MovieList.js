@@ -5,15 +5,18 @@ import styled from 'styled-components'
 const SiteContainer = styled.section `
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 `
 const ListItems = styled.article `
-  width: 25%;
+  min-width: 25%;
+  margin: 5px;
   position: relative;
   color: #fff;
   text-decoration: none;
 `
 const StyledImg = styled.img `
   width: 100%;
+  border-radius: 2px;
 `
 const OverlayDiv = styled.div `
   display: flex;

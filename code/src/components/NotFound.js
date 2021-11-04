@@ -6,8 +6,16 @@ const SiteContainer = styled.div `
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 20px;
-  color: lightgrey
+  font-size: 14px;
+  color: lightgrey;
+
+  @media (min-width: 667px) {
+    font-size: 30px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 40px;
+  }
 `
 const RedirectButton = styled.button `
   font-family: inherit;
