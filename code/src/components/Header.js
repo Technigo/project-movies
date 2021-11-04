@@ -12,7 +12,7 @@ export const Header = () => {
   return (
     <>
       <div className='header-wrapper'>
-        <h1>Movie releases</h1>
+        <h1>Movie Season</h1>
 
         <div
           className={isActive ? 'toggle-active' : 'toggle'}
