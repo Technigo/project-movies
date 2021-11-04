@@ -1,11 +1,84 @@
 body {
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	background-color: #212427;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #212427;
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.header-wrapper h1 {
+  margin: 0;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(../hamburger.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/*Changes the navbar icon to a close icon when clicked*/
+.toggle-active {
+  background: url(../close.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  z-index: 30;
+}
+
+.side-menu-hidden {
+  display: none;
+}
+
+.side-menu-active {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  background: black;
+  padding-right: 20px;
+  justify-content: center;
+  background-color: #212427;
+}
+
+.side-menu-active a {
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 20px;
+  transition: 0.8;
+}
+
+.side-menu-active a:hover {
+  text-decoration: underline;
 }
