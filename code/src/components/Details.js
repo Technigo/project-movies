@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
+import Favicon from 'react-favicon';
 
 import { DETAILS_URL } from '../utils/urls';
 
 const GoBackButton = styled.button`
   position: absolute;
-  display: inline-flex;
-  color: #fff;
-  align-items: center;
-  font-weight: 700;
-  text-decoration: none;
   left: 50px;
   top: 50px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 5px;
 `;
 
 const Details = () => {
@@ -57,8 +58,10 @@ const Details = () => {
           : '',
       }}
     >
-      <GoBackButton onClick={onButtonBackClick}>BACK</GoBackButton>
-
+      <div>
+        <Favicon url="" />
+        <GoBackButton onClick={onButtonBackClick}>MOVIES</GoBackButton>
+      </div>
       <div className="details-container">
         <img className="details-img" src={detailsImageUrl} alt="" />
         <div className="details-text">
