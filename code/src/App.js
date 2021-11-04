@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import MovieList from "./components/MovieList";
 import MovieDetails from "./components/MovieDetails";
 import { API_URL } from "./utils/urls";
+import NotFound from "./components/NotFound";
 
 export const App = () => {
   const [list, setList] = useState([]);
@@ -20,10 +21,11 @@ export const App = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact render={() => <MovieList movie={list} />} />
-
         <Route path="/details/:movieId">
           <MovieDetails />
         </Route>
+        <Route path="/404" component={NotFound} />
+        <Redirect to="/404" />
       </Switch>
     </BrowserRouter>
   );

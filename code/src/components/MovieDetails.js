@@ -19,11 +19,9 @@ const PosterImg = styled.img`
 `;
 
 const MovieTitleDetails = styled.span`
-position: absolute;
-top: 50%;
-right:50%;
-bottom: 0;
-left:0: 
+  position: absolute;
+  top: 50%;
+  right: 50%;
 `;
 
 const DetailsTitle = styled.h3`
@@ -58,17 +56,32 @@ const DetailsOverview = styled.p`
   color: white;
 `;
 
+const ErrorText = styled.h2`
+  text-align: center;
+  color: white;
+`;
+
 const MovieDetails = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState({});
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     fetch(DETAILS_URL(movieId))
       .then((res) => res.json())
       .then((data) => {
-        setMovie(data);
-      });
+        if (data.id) {
+          setMovie(data);
+        } else {
+          setHasError(true);
+        }
+      })
+      .catch(() => setHasError(true));
   }, [movieId]);
+
+  if (hasError) {
+    return <ErrorText>Sorry this page doesn't exist</ErrorText>;
+  }
 
   return (
     <div>
