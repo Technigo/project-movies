@@ -26,7 +26,7 @@ const MovieListContainer = styled.div`
   display: grid;
   flex-wrap: center;
   grid-template-columns: repeat(2, auto);
-  row-gap: 10px;
+  row-gap: 4px;
 
   @media (min-width: 668px) and (max-width: 1024px) {
     justify-content: space-evenly;

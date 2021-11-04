@@ -3,6 +3,8 @@ import { MovieList } from "../MovieList/MovieList";
 import { Details } from "components/Details/Details";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { API_MovieList, API_POSTERS } from "../../utils/urls";
+import ClipLoader from "react-spinners/ClipLoader";
+import styled from "styled-components";
 
 export const Main = () => {
   const [movieList, setMovieList] = useState([]);
@@ -15,7 +17,7 @@ export const Main = () => {
       .then((data) => {
         console.log(data.images);
         setImageInformation(data.images);
-        setLoading(false);
+        setTimeout(() => setLoading(false), 500);
       });
 
     fetch(API_MovieList)
@@ -23,29 +25,46 @@ export const Main = () => {
       .then((data) => {
         setMovieList(data.results);
       });
+    setTimeout(() => setLoading(false), 500);
   }, []);
 
+  if (loading) {
+    return (
+      <SpinnerContainer>
+        <ClipLoader color={"white"} loading={true} size={150} />
+      </SpinnerContainer>
+    );
+  }
+
   return (
-    !loading && (
-      <BrowserRouter>
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <MovieList
-                movieList={movieList}
-                imageInformation={imageInformation}
-              />
-            )}
-          />
-          <Route
-            path="/details/:movieId"
-            render={() => <Details imageInformation={imageInformation} />}
-          />
-          <Route render={() => <Redirect to={{ pathname: "/" }} />} />
-        </Switch>
-      </BrowserRouter>
-    )
+    <BrowserRouter>
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => (
+            <MovieList
+              movieList={movieList}
+              imageInformation={imageInformation}
+            />
+          )}
+        />
+        <Route
+          path="/details/:movieId"
+          render={() => <Details imageInformation={imageInformation} />}
+        />
+        <Route render={() => <Redirect to={{ pathname: "/" }} />} />
+      </Switch>
+    </BrowserRouter>
   );
 };
+
+const SpinnerContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+`;

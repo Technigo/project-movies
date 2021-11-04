@@ -8,7 +8,7 @@ import styled from "styled-components";
 export const MovieListItem = ({ movie, imageInformation }) => {
   const [isMouseOver, setIsMouseOver] = useState(false);
   console.log(imageInformation);
-  const imagePath = `${imageInformation.base_url}${imageInformation.poster_sizes[6]}${movie.poster_path}`;
+  const imagePath = `${imageInformation.base_url}${imageInformation.poster_sizes[5]}${movie.poster_path}`;
 
   console.log(imageInformation.base_url);
   return (

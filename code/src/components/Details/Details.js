@@ -1,18 +1,24 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
+import ClipLoader from "react-spinners/ClipLoader";
 
 export const Details = ({ imageInformation }) => {
   const { movieId } = useParams();
   const [movieDetail, setMovieDetail] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isError, setIsError] = useState(false);
+  const history = useHistory();
 
   const imagePath = (poster_path) => {
     return (
       imageInformation.base_url + imageInformation.poster_sizes[3] + poster_path
     );
+  };
+
+  const routeChange = () => {
+    history.push("/");
   };
 
   useEffect(() => {
@@ -28,16 +34,27 @@ export const Details = ({ imageInformation }) => {
         } else {
           setIsError(true);
         }
-        setLoading(false);
+        setTimeout(() => setLoading(false), 500);
       });
   }, [movieId]);
 
   if (loading) {
-    return <Loading>Loading...</Loading>;
+    return (
+      <SpinnerContainer>
+        <ClipLoader color={"white"} loading={true} size={150} />
+      </SpinnerContainer>
+    );
   }
 
   if (!loading && isError) {
-    return <Error>Could not find the movie!</Error>;
+    return (
+      <Error>
+        <span>Could not find the movie you were looking for!</span>
+        <ErrorButton onClick={routeChange}>
+          Return to the movie list
+        </ErrorButton>
+      </Error>
+    );
   }
 
   if (!loading && !isError) {
@@ -82,10 +99,33 @@ const ImgDiv = styled.div`
   align-self: center;
 `;
 
-const Loading = styled.div`
+const Error = styled.div`
+  height: 100vh;  
   color: white;
+  display flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px
 `;
 
-const Error = styled.div`
+const ErrorButton = styled.button`
+  padding: 8px 10px;
+  border: none;
+  border-radius: 2px;
+  background-color: #cc1e1f;
+  cursor: pointer;
   color: white;
+  font-weight: 100;
+  align-items: center;
+`;
+
+const SpinnerContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
 `;
