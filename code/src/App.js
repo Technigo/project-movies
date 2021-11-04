@@ -32,7 +32,7 @@ export const App = () => {
             exact path="/"render={() => <MovieList movies={moviesList} />}
           ></Route>
 
-          <Route path="movies/:movieId" component={MovieDetails}></Route>
+          <Route path="/movies/:movieId" component={MovieDetails}></Route>
         </Switch>
       </BrowserRouter>
     </>
