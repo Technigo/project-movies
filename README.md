@@ -17,4 +17,4 @@ This pair-programming project aimed to ensure extra practice in React Router, us
 
 ## View it live
 
-https://movie-releases-react-app.netlify.app/
+https://master--gallant-hugle-08a34e.netlify.app
