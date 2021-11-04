@@ -9,6 +9,11 @@ const countries = {
   thailand: 'TH',
   china: 'CN',
   morocco: 'MA',
+  mexico: 'MX',
+  egypt: 'EG',
+  brazil: 'BR',
+  turkey: 'TR',
+  croatia: 'HR',
 }
 
 const FirstPage = () => {
@@ -43,6 +48,11 @@ const FirstPage = () => {
       <Link to={`/list/${countries.thailand}`}>Thailand</Link>
       <Link to={`/list/${countries.china}`}>China</Link>
       <Link to={`/list/${countries.morocco}`}>Morocco</Link>
+      <Link to={`/list/${countries.mexico}`}>Mexico</Link>
+      <Link to={`/list/${countries.egypt}`}>Egypt</Link>
+      <Link to={`/list/${countries.brazil}`}>Brazil</Link>
+      <Link to={`/list/${countries.turkey}`}>Turkey</Link>
+      <Link to={`/list/${countries.croatia}`}>Croatia</Link>
     </>
   )
 }

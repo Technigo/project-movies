@@ -100,7 +100,7 @@ const MovieList = () => {
         >
           {/* {console.log(`/list/${countryCode}/movie/${movie.id}`)} */}
           {movie.poster_path === null ? (
-            <MovieImgStyled src='./assets/nopic2.png' alt='not available/' />
+            <MovieImgStyled src='/assets/nopic2.png' alt='not available/' />
           ) : (
             <MovieImgStyled
               src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}

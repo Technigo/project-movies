@@ -16,8 +16,7 @@ const ArrowStyled = styled.span`
   font-size: 30px;
   margin-right: 5px;
 `
-// when hover over the DetailLink we want to change styling for ArrowStyled
-// la till en background color så att man ser länken när det är ljusare bakgrundsbild
+// when hover over the DetailLink we want to change the styling for ArrowStyled
 const DetailLinkStyled = styled(Link)`
   background-color: rgba(0, 0, 0, 0.5);
   padding: 2px 8px 6px 8px;
@@ -35,9 +34,7 @@ const DetailLinkStyled = styled(Link)`
     margin-right: 10px;
   }
 `
-// changed from background image to an img tag,
-// otherwise we don't know what ${details} is and
-// we can't place this styled component inside the MovieDetails function
+
 const BackgroundStyled = styled.img`
   object-fit: cover;
   position: absolute;
@@ -106,7 +103,6 @@ const MovieDetails = () => {
       ) : (
         <DetailContainerStyled>
           <>
-            {console.log('insdie return on Moviedetalils')}
             <DetailLinkStyled to={`/list/${countryCode}`}>
               {/* <button
               type='button'
@@ -116,15 +112,23 @@ const MovieDetails = () => {
               <ArrowStyled>&#10688;</ArrowStyled>
               Movies
             </DetailLinkStyled>
-            {/* 404 ERROR!!! När vi inte har en backgrundsbild och/eller posterbild!!! */}
-            <BackgroundStyled
-              src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`}
-              alt={details.title}
-            />
-            <PosterStyled
-              src={`https://image.tmdb.org/t/p/w780${details.poster_path}`}
-              alt={details.title}
-            />
+            {/* *FIXAT(tror jag..)!* 404 ERROR!! När vi inte har en backgrundsbild/posterbild!!! */}
+            {details.backdrop_path === null ? (
+              <BackgroundStyled src='/assets/nopic2.png' alt='not available/' />
+            ) : (
+              <BackgroundStyled
+                src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`}
+                alt={details.title}
+              />
+            )}
+            {details.poster_path === null ? (
+              <PosterStyled src='/assets/nopic2.png' alt='not available/' />
+            ) : (
+              <PosterStyled
+                src={`https://image.tmdb.org/t/p/w780${details.poster_path}`}
+                alt={details.title}
+              />
+            )}
             <DetailDescriptionStyled>
               <TitleStyled>
                 {details.title}&nbsp;&nbsp;
