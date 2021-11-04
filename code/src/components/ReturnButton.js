@@ -13,7 +13,7 @@ const StyledButton = styled.button `
 
   @media (min-width: 667px) {
     display: unset;
-    top: 50px;
+    top: 90px;
     left: 60px;
   }
 `

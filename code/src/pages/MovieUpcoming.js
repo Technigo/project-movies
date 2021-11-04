@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { BASE_URL } from '../utils/urls'
+import { UPCOMING_URL } from '../utils/urls'
 import Spinner from 'components/Spinner'
-import Movie from 'components/Movie'
 
 const SiteContainer = styled.section `
   display: flex;
@@ -57,15 +56,15 @@ const ReleaseP = styled.p `
   font-size: 18px;
 `
 
-const MovieList = () => {
-  const [movies, setMovies] = useState([])
+const MovieUpcoming = () => {
+  const [movies, setmovies] = useState([])
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    fetch(BASE_URL)
+    fetch(UPCOMING_URL)
       .then((res) => res.json())
-      .then((data) => setMovies(data.results))
-      .finally(() => setLoading(false)) 
+      .then((data) => setmovies(data.results))
+      .finally(() => setLoading(false))
   }, []) 
 
   return (
@@ -91,4 +90,4 @@ const MovieList = () => {
   )
 }
 
-export default MovieList
+export default MovieUpcoming
