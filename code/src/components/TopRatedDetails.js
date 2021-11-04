@@ -3,11 +3,13 @@ import { useParams, useHistory } from 'react-router-dom'
 
 import './movieDetails.css'
 
-import { DETAILS_URL } from '../utils/urls'
+import { TOP_RATED_DETAILS_URL } from '../utils/urls'
 import { Loading } from '../components/Loading'
 
 
-export const MovieDetails = () => {
+export const TopRatedDetails = () => {
+
+	console.log('this is top rated details')
 
 	const { movieId } = useParams();
 	const history = useHistory(); 
@@ -27,7 +29,7 @@ export const MovieDetails = () => {
 	}
 	
 	useEffect(() => {
-		fetch(DETAILS_URL(movieId))
+		fetch(TOP_RATED_DETAILS_URL(movieId))
 		.then((res) => res.json())
 		.then((json) => { 
 			setLoading(false)
@@ -65,15 +67,3 @@ export const MovieDetails = () => {
 	</>
     )
   }
-  
-
-    
-    
-
-    // <div>
-    // <h1>{details.title}</h1>
-    // <p>{details.overview}</p>
-    // <img src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt={details.title} />
-    // <p>{details.vote_average}/10</p>
-    // <p>Release date: {details.release_date}</p>
-    //   </div>

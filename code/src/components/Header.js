@@ -12,13 +12,9 @@ export const Header = () => {
 				<span role="img" aria-label="img">🍿</span>
 				HOME PAGE
 			</NavLink>
-			<NavLink exact to="/" > 
+			<NavLink exact to="/top_rated" > 
 				<span role="img" aria-label="img">🍿</span>
-				ANOTHER PAGE
-			</NavLink>
-			<NavLink exact to="/" > 
-				<span role="img" aria-label="img">🍿</span>
-				MORE MOVIES
+				TOP RATED MOVIES
 			</NavLink>
 		</nav>
 	</header>

@@ -4,38 +4,63 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import { Header } from './components/Header'
 import { MovieList } from './components/MovieList'
 import { MovieDetails } from './components/MovieDetails'
+import { TopRatedList } from './components/TopRatedList'
+import { TopRatedDetails } from './components/TopRatedDetails'
 import { Loading } from './components/Loading'
 
 
 import { FETCH_URL } from './utils/urls'
+import { TOP_RATED_URL } from './utils/urls'
 
 export const App = () => {
 
-	const [movieList, setMovieList] = useState([])
+	const [movieList, setMovieList] = useState([]);
+	const [topRatedList, setTopRatedList] = useState([])
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		fetch(FETCH_URL)
 		.then((res) => res.json())
-		.then((json) => setMovieList(json.results))
-		.finally(() => setTimeout(() => setLoading(false), 1000))
-	}, [])
+		.then((json) => {
+			setTimeout(() => setLoading(false), 1000)
+			setMovieList(json.results)
+		})
+		//.finally(() => setTimeout(() => setLoading(false), 1000))
+	}, []);
+
+	useEffect(() => {
+		fetch(TOP_RATED_URL)
+		  .then((res) => res.json())
+		  .then((json) => {
+			setTopRatedList(json.results)
+		  })
+	  }, []);
+
 
   return (
 	<div>
-
 	<BrowserRouter>
-
 	  <Header  />{/* header is in between so it shows on each page */}
 	  	<Switch> 
+	{/* POPULAR MOVIES */}
+			{/* Loading spinner */}
 		  	{loading && <Loading />}
-			<Route path="/" exact >{/* path to the home page */}
+			  {/* path to the home page */}
+			<Route path="/" exact >
 				<MovieList  movieList={movieList}/>
 			</Route>
-
+         	{/*path to the movie details */}
 			<Route path="/movies/:movieId" >  
-         {/*path to the movie details */}
 				<MovieDetails /> 
+			</Route>
+
+	{/* TOP RATED GOES HERE */}
+			<Route path="/top_rated" >
+				<TopRatedList  topRatedList={topRatedList}/>
+			</Route>
+
+			<Route path="/top_rated/:movieId" >  
+				<TopRatedDetails /> 
 			</Route>
 		</Switch>
 	</BrowserRouter>
