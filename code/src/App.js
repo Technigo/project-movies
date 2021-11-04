@@ -23,7 +23,7 @@ export const App = () => {
       <Header />
       <Switch>
         <Route exact path="/" render={() => <List movies={list} />} />
-        <Route path="/details/:movie_id" component={Details} />
+        <Route path="/movies/:id" component={Details} />
         <Route path="/404" component={NotFound} />
         {/* <Redirect to="/404" /> */}
       </Switch>

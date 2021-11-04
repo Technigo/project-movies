@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams /* useHistory */ } from "react-router-dom";
 import styled from "styled-components";
-
-import { IMAGES_URL } from "../utils/urls";
 
 /* const GoBackButton = styled.button`
   padding: 10px;
@@ -22,37 +20,42 @@ const Details = () => {
   const [details, setDetails] = useState({});
 
   const { id } = useParams();
-  const history = useHistory();
-
-  console.log(id);
+  /* const history = useHistory(); */
 
   useEffect(() => {
-    fetch(IMAGES_URL(id))
+    fetch(
+      `https://api.themoviedb.org/3/movie/${id}?api_key=a89f6720304b78135ad37cee571cef4e&language=en-US`
+    )
       .then((res) => res.json())
-      .then(res => setDetails(res));
-  },[id]);
+      .then((res) => setDetails(res));
+  }, [id]);
 
-/*   const onButtonBackClick = () => {
+  /*   const onButtonBackClick = () => {
     history.goBack();
   }; */
-
+  console.log(details);
   return (
-    <section
-      className='details-backdrop'>
-      <img src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt={id.title} />
+    <section className="details-backdrop">
+      <img
+        src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`}
+        alt={id.title}
+      />
       <div>
         <h2>Movie title: {details.original_title}</h2>
         <p>Description: {details.overview}</p>
-        <p>Genre: {details.genres.map}</p>
+        {/*         <p>Genre: {details.genres.map}</p> */}
         <p>Rating: </p>
       </div>
-      </section>
-  )};
-    {/* <div>
+    </section>
+  );
+};
+{
+  /* <div>
       <p>{details.results.vote_average}</p>
       {/*   
       <button onClick={onButtonBackClick}>Back</button>
       <h2>Name: {details.name}</h2>
-      <img src={details?.sprites?.other["official-artwork"]?.front_default} /> */}
+      <img src={details?.sprites?.other["official-artwork"]?.front_default} /> */
+}
 
 export default Details;
