@@ -7,7 +7,7 @@ const AllMovies = ({ userApiKey, allMovies, setAllMovies }) => {
 	const history = useHistory();
 
 	const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${userApiKey}&language=en-US&page=1`;
-
+	
 	useEffect(() => {
 		fetch(API_URL)
 			.then((res) => res.json())

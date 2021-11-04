@@ -26,8 +26,7 @@ const MovieDetails = ({ allMovies }) => {
   return (
     <article>
       <Link className="back-link" to="/all-movies">
-        <img src="https://img.icons8.com/material-outlined/24/000000/circled-left--v2.png" />
-        Movies
+      &#60; &#60;  Movies
       </Link>
       <div style={backgroundStyles}>
         <div className="summary-section">
