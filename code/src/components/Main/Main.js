@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MovieList } from "../MovieList/MovieList";
 import { Details } from "components/Details/Details";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { API_MovieList, API_POSTERS } from "../../utils/urls";
 
 export const Main = () => {
@@ -43,6 +43,7 @@ export const Main = () => {
             path="/details/:movieId"
             render={() => <Details imageInformation={imageInformation} />}
           />
+          <Route render={() => <Redirect to={{ pathname: "/" }} />} />
         </Switch>
       </BrowserRouter>
     )
