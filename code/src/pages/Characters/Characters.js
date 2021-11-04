@@ -14,7 +14,7 @@ const Characters = () => {
       .then((data) => {
         setCharacters(data.cast);
       });
-  }, []);
+  }, [movieId]);
 
   return (
     <div>
