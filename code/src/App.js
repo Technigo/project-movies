@@ -28,7 +28,7 @@ return (
         {/* // v1 */}
         <Route exact path="/" render={() => <PopularList movies={list} />} />
         <Route path="/details/:movieID" component={Details} />
-        <Route path="/" component={NotFound} />
+        <Route path="/404" component={NotFound} />
         <Redirect to="/404" />
         
       </Switch>
