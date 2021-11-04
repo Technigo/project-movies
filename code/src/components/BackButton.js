@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import BackIcon from './BackIcon';
 
-const BackButton=() => {
+const BackButton = () => {
     return (
             <Link to="/" className="back-button" >
-                Back to overview
+                <BackIcon /> Overview
             </Link>
     )
 }

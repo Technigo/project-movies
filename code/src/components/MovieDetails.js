@@ -17,19 +17,16 @@ const MovieDetails = () => {
 
         <div>
             <div key={movie.original_title}>
-                <img className='background' src={`http://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.title}/>
+            <div className='background' style={{backgroundImage: movie.backdrop_path ? `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` : ''}} alt={movie.title}></div>
                 <BackButton />
                 <div className='posteranddetails'>
                     <img src={`http://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title}/>
                     
-                    <div className='overlay-content'>
-                        <div className='score'>
-                            <h1>{movie.original_title}<span>{movie.vote_average} / 10</span></h1>
-                            {/* <p>{movie.vote_average} / 10</p> */}
-                        </div>
-                        <p>{movie.overview}</p>
+                    <div className='text-content'>
+                        <h1>{movie.original_title}</h1>
+                        <p className='score'>{movie.vote_average} / 10</p>
+                        <p className='description'>{movie.overview}</p>
                     </div>
-
                 </div>
                 
             </div>
