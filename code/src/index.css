@@ -20,7 +20,8 @@ code {
 	justify-content: center;
 	justify-items: center;
 	width: 700px;
-	margin: auto;
+	height: 100%;
+	margin: 20vh auto 0 auto;
 	gap: 20px;
 	color: black;
 }
