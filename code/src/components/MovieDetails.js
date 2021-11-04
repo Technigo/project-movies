@@ -29,22 +29,26 @@ const MovieDetails = () => {
 
   if (hasError) {
     return (
-      <div>
+      <div className='Error-Page'>
         <p>Sorry this movie does not exist!</p>
-        <button onClick={onButtBackClick}>Back to main</button>
+        <button className='error-btn' onClick={onButtBackClick}>
+          Back to main
+        </button>
       </div>
     );
   }
 
   return (
     <div>
+      <div className='gradient' />
       <img
         className='back-img'
         src={`http://image.tmdb.org/t/p/w780${movie.backdrop_path}`}
         alt={movie.title}
       />
       <Link to='/' className='back-button' onClick={onButtBackClick}>
-        GO BACK
+        <img class='back-icon' src={require('./BackIcon-01.png')} />
+        Movies
       </Link>
 
       <div className='summary' key={movie.original_title}>
@@ -56,7 +60,7 @@ const MovieDetails = () => {
         <div className='movie-text'>
           <h1>
             {movie.original_title}
-            <span className='vote'>{movie.vote_average}</span>
+            <span className='vote'>{movie.vote_average}/10</span>
           </h1>
           <p>{movie.overview}</p>
         </div>
