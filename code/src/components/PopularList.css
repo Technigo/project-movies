@@ -1,7 +1,3 @@
-/* .movies {
-    display: flex;
-    flex-wrap: wrap;
-} */
 
 .movies {
 	display: grid;
@@ -21,6 +17,7 @@
     position: relative;
     color: #fff;
     text-decoration: none;
+
 }
 
 

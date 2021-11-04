@@ -8,6 +8,9 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100vw;
   }
   
   .back-btn {
@@ -62,8 +65,8 @@
   
   .detailsPage .rating {
     font-size: 17px;
+    font-weight: bold;
     color: red;
-    font-weight: normal;
     margin-left: 10px;
   }
 

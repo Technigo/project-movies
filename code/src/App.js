@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import PopularList from './components/PopularList';
 import Details from './components/Details';
 import NotFound from './components/NotFound';
+import Navbar from 'components/Navbar';
 
 import { MOVIES_URL} from './utils/urls';
 
@@ -20,6 +21,7 @@ useEffect(() => {
 
 return (
   <>
+  <Navbar title="Movie(pop)Corner"/>
       <BrowserRouter>
       {/* <Header /> */}
       <Switch>
