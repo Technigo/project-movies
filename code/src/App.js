@@ -28,10 +28,6 @@ return (
         <Route path="/details/:movieID" component={Details} />
         <Route path="/" component={NotFound} />
         
-        {/* // v2
-      <Route path="/details">
-        <Details />
-      </Route> */}
       </Switch>
     </BrowserRouter>
   </>
