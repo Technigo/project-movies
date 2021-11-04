@@ -346,8 +346,10 @@ text-decoration: none;
 
 	.MovieDetailsInfo img {
 		border: 5px solid white;
-		height: 400px;
-		max-width: 280px;
+		height: 370px;
+		min-width: 300px;
+		max-width: 300px;
+
 
 		-webkit-mask-image: -webkit-gradient(
 			linear,
@@ -399,7 +401,7 @@ text-decoration: none;
 		background-size: cover;
 		visibility: visible;
 		height: 100vh;
-		width: 100%;
+	
 
 		-webkit-mask-image: -webkit-gradient(
 			linear,
@@ -415,8 +417,9 @@ text-decoration: none;
 
 	.MovieDetailsInfo img {
 		border: 5px solid white;
-		height: 450px;
-		max-width: 320px; 
+		height: 370px;
+		min-width: 300px;
+		max-width: 300px;
 	
 	}
 
