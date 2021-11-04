@@ -1,7 +1,8 @@
 # API
+
 v3 API key: f6130163420bd56b53df7cf41edc5b29
 
-API docs: developers.themoviedb.org 
+API docs: developers.themoviedb.org
 
 ALLA LEOS FILMER: https://api.themoviedb.org/3/person/6193/movie_credits?api_key=f6130163420bd56b53df7cf41edc5b29&language=en-US
 
@@ -10,20 +11,21 @@ LEOS PERSON ID 6193
 Fetching movie details:
 https://api.themoviedb.org/3/movie/{movie_id}?api_key=f6130163420bd56b53df7cf41edc5b29&language=en-US
 
-
-
 🔵 Requirements
 Your app should have at least two pages - one showing a list of movies and one showing details
-Show a 'not found' page 
+Show a 'not found' page
 Design similar to https://technigo-movies-project.netlify.app/
 
 # TODO
+
 Filtrera listan så att det endast visas filmer
 Sortera i kronologisk ordning
-Styled components
+Styled components eller inte?
 
-Details: 
-Title
-Year
-Carachter
-Overview
+DETAILS
+Favicon?
+Width på overview
+
+LIST
+Styla text, fontstorlek och position
+Filtrera bort filmer utan
