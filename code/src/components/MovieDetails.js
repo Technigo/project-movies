@@ -43,7 +43,9 @@ const MovieDetails = () => {
       <div
         className='backdrop'
         style={{
-          backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`,
+          backgroundImage: movieDetails.backdrop_path
+            ? `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`
+            : '',
         }}
       >
         <div className='summary'>
