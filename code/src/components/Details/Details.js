@@ -62,7 +62,10 @@ export const Details = ({ imageInformation }) => {
       <TextContainer>
         <h1>{movieDetail.title}</h1>
         <ImgDiv>
-          <img src={imagePath(movieDetail.poster_path)} />
+          <img
+            src={imagePath(movieDetail.poster_path)}
+            alt={`Poster for ${movieDetail.title}`}
+          />
         </ImgDiv>
         <h2>overview:</h2>
         <p>{movieDetail.overview}</p>
