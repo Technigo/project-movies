@@ -14,11 +14,12 @@ const HomePage = ({ userApiKey, setUserApiKey }) => {
 	};
 	return (
 		<div className="main">
-			<h1>Welcome to project-movies</h1>
+			<h1>Welcome to project-movies!</h1>
 			<p>Log-in below using your TMDB API key. Don't have one? Sign up here:</p>
+			<a href="https://www.themoviedb.org/signup"><button>Go to TMDB</button></a>
 			<form className="api-form" onSubmit={handleSubmit}>
 				<label className="api-label">
-					Enter Key
+					Enter Key:
 					<input
 						className="api-input"
 						type="text"
