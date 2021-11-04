@@ -3,6 +3,7 @@ import { useParams, useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { DETAILS_URL } from '../utils/urls'
+import Button from './Button'
 
 const GoBackButton = styled.button`
   color: black;
@@ -61,6 +62,7 @@ const Details = () => {
 
   return (
 	  <div className="details-container">
+		  <Button onClick={onButtonBackClick}/>
 		  <img className="small-movie-poster" src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt={details.title} />
 		  <img className="background-poster" src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt={details.title}/>
 			{/* <GoBackButton onClick={onButtonBackClick}>Go back</GoBackButton> */}
