@@ -22,19 +22,16 @@ export const App = () => {
 
   return (
 	  
-      <BrowserRouter>
-	  {/* header is in between so it shows on each page */}
-	  <Header  />
+  <BrowserRouter>
+	  <Header  />                                   {/* header is in between so it shows on each page */}
 	  	<Switch> 
-			{/* path to the home page */}
-			<Route path="/" exact >
+			<Route path="/" exact >                     {/* path to the home page */}
 				<MovieList  movieList={movieList}/>
 			</Route>
-			{/*path to the movie details */}
-			<Route path="/movies/:movieId" >
+			<Route path="/movies/:movieId" >            {/*path to the movie details */}
 				<MovieDetails /> 
 			</Route>
 		</Switch>
-	  </BrowserRouter>
+	</BrowserRouter>
   );
 }
