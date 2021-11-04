@@ -33,6 +33,12 @@
     width: 45px;
     margin-top: 5px;
     opacity: .9;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.media-icons:hover {
+    transform: translateY(-5px);
 }
 
 .media-icons-container {
