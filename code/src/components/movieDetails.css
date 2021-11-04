@@ -39,7 +39,9 @@ h1 {
   font-size: 14px;
   color: white;
   margin-left: 32px;
- 
+  background-color: #ffffff10;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .poster {

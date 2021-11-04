@@ -11,8 +11,8 @@ export const MovieList = ({movieList}) => {
 
        {movieList.map(movie => (
 
-		<Link to={`/movies/${movie.id}`} > 
-		<div key={movie.id} className="movie-card" >
+		<Link to={`/movies/${movie.id}`} key={movie.id}> 
+		<div  className="movie-card" >
 			<div className="image-container">
 				<img 
 					src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} 
