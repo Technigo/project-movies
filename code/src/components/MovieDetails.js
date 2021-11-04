@@ -6,7 +6,7 @@ import { BackIcon } from './BackIcon';
 import { MOVIEDETAILS_URL } from '../utils/urls';
 
 const MovieDetails = () => {
-  const [movieDetails, setMovieDetails] = useState([]);
+  const [movieDetails, setMovieDetails] = useState({});
   const [hasError, setHasError] = useState(false);
 
   const { id } = useParams();
