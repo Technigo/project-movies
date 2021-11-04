@@ -4,12 +4,20 @@ import { BrowserRouter, Switch, Route, Link, Redirect } from "react-router-dom";
 import MoviePoster from "./MoviePoster";
 import Details from "./Details";
 import Error from "./Error";
+import Selector from "./Selector";
 
-const MovieList = ({ movies, makePosterUrl, apiKey }) => {
+const MovieList = ({
+  movies,
+  makePosterUrl,
+  apiKey,
+  makeApiUrl,
+  setApiUrl,
+}) => {
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
+          <Selector makeApiUrl={makeApiUrl} setApiUrl={setApiUrl} />
           <div className="movie-list-wrapper">
             {movies.map((movie) => {
               return (

@@ -29,6 +29,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
 }
 .loader {
   border-top: 16px solid blue;
@@ -50,6 +51,18 @@ code {
   }
 }
 
+.selector {
+  display: flex;
+  background-color: black;
+  color: white;
+  gap: 20px;
+  justify-content: center;
+}
+
+.input {
+  background-color: black;
+  color: white;
+}
 .movie-list-wrapper {
   display: grid;
   grid-template-columns: 1fr;

@@ -10,7 +10,6 @@ const Details = ({ makePosterUrl, apiKey }) => {
   const MOVIE_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`;
 
   const history = useHistory();
-  console.log(history);
   useEffect(() => {
     fetch(MOVIE_URL)
       .then((res) => res.json())
