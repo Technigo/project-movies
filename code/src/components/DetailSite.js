@@ -9,10 +9,16 @@ const BackLink = styled.div`
   align-items: center;
   left: 50px;
   top: 50px;
+  opacity: 0.6;
+  transition: 0.3 ease;
+
   a {
     text-decoration: none;
     font-weight: 700;
     color: #fff;
+  }
+  &:hover {
+    opacity: 1;
   }
 `;
 
