@@ -3,6 +3,7 @@ import { useParams, useHistory } from 'react-router-dom';
 
 import { DETAILS_URL } from '../utils/urls';
 import NotFound from './NotFound';
+import Loader from './Loader';
 
 import "../components/Details.css"
 
@@ -10,6 +11,7 @@ import "../components/Details.css"
 const Details = () => {
 	const [details, setDetails] = useState();
 	const [hasError, setHasError] = useState(false);
+	const [loading, setLoading] = useState(true);
 
 	const { movieID } = useParams();
 	console.log((movieID));
@@ -21,6 +23,7 @@ const Details = () => {
 		fetch(DETAILS_URL(movieID))
 			.then((res) => res.json())
 			.then((data) => {
+				setLoading(false);
 				if (data.id) {
 				setDetails(data);
 			}
@@ -37,7 +40,11 @@ const Details = () => {
 
 	};
 
-		if (hasError) {
+	// Adds loader until the API is loaded. If the page isn't loaded the user is redirected to NotFound page 
+	if (loading) {
+		return <Loader />;
+
+	} else if (hasError) {
 			return <NotFound></NotFound>
 		}
 

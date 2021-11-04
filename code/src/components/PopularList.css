@@ -7,19 +7,15 @@
 	padding: 10px;
 }
 
-
 .movies a img {
     width: 100%;
 }
 
 .movies a {
-   /*  width: 25%; */
     position: relative;
     color: #fff;
     text-decoration: none;
-
 }
-
 
 .movies .details {
     position: absolute;
@@ -27,7 +23,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,0.75);
+    background: linear-gradient(45deg, rgba(0,0,0,.76) 40%,rgba(248,246,246,.336) 60%,rgba(0,0,0,.733) 90%);
     display: none;
     padding: 20px;
   }

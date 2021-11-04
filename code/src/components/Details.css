@@ -21,7 +21,7 @@
     font-weight: 700;
     text-decoration: none;
     left: 72px;
-    top: 82px;
+    top: 98px;
     appearance: none;
     border: none;
     background-color: transparent;
@@ -39,7 +39,7 @@
   display: inline-flex;
   color: #fff;
   left: 56px;
-  top: 84px;
+  top: 100px;
   font-size: 20px;
   cursor: pointer;
 }
