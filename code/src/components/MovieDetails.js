@@ -35,28 +35,31 @@ const MovieDetails = () => {
     );
   }
 
-  const backdropURL = movieDetails.backdrop_path
-    ? `https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`
-    : '';
+  // const backdropURL = movieDetails.backdrop_path
+  //   ? `https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`
+  //   : '';
 
-  const posterURL = movieDetails.poster_path
-    ? `https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`
-    : '';
+  // const posterURL = movieDetails.poster_path
+  //   ? `https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`
+  //   : '';
 
   return (
     <div className='detail-page'>
       <Link to='/' className='backLink'>
         <BackIcon /> Movies
       </Link>
-      {/* {movieDetails.poster_path && movieDetails.backdrop_path && ( */}
+
       <div
         className='backdrop'
         style={{
-          backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(${backdropURL})`,
+          backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`,
         }}
       >
         <div className='summary'>
-          <img src={posterURL} alt={movieDetails.title} />
+          <img
+            src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`}
+            alt={movieDetails.title}
+          />
 
           <div className='details'>
             <h3 className='details-header'>
@@ -68,7 +71,6 @@ const MovieDetails = () => {
           </div>
         </div>
       </div>
-      {/* )} */}
     </div>
   );
 };
