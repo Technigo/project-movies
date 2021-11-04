@@ -9,7 +9,7 @@
     grid-template-columns: repeat(1, 1fr);
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    min-height: 95vh;
     width: 100vw;
   }
   
@@ -21,7 +21,7 @@
     font-weight: 700;
     text-decoration: none;
     left: 72px;
-    top: 58px;
+    top: 82px;
     appearance: none;
     border: none;
     background-color: transparent;
@@ -39,8 +39,9 @@
   display: inline-flex;
   color: #fff;
   left: 56px;
-  top: 60px;
+  top: 84px;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .detailsPage img {
@@ -83,7 +84,7 @@
   @media (max-width: 767px) {
 
     .detailsPage .background {
-    height: 100vh;
+      background-position: center center;
     }
 
 .detailsPage img {
@@ -94,6 +95,13 @@
   padding: 20px;
 }
 
+.back-btn {
+display: none;
+}
+
+.fa-chevron-circle-left {
+  left: 25px;
+}
 
   }
   

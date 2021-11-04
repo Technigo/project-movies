@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 
 import { DETAILS_URL } from '../utils/urls';
+import NotFound from './NotFound';
 
 import "../components/Details.css"
 
 
 const Details = () => {
-	const [details, setDetails] = useState({});
+	const [details, setDetails] = useState();
+	const [hasError, setHasError] = useState(false);
 
 	const { movieID } = useParams();
 	console.log((movieID));
@@ -18,7 +20,16 @@ const Details = () => {
 	useEffect(() => {
 		fetch(DETAILS_URL(movieID))
 			.then((res) => res.json())
-			.then((data) => setDetails(data));
+			.then((data) => {
+				if (data.id) {
+				setDetails(data);
+			}
+				else {
+					setHasError(true);
+				}
+				})
+
+			.catch(() => setHasError(true));
 	}, [movieID]);
 
 	const onButtonBackClick = () => {
@@ -26,15 +37,17 @@ const Details = () => {
 
 	};
 
-	const divStyle = {
-
-	};
+		if (hasError) {
+			return <NotFound></NotFound>
+		}
 
 
 	return( 
-	<div className="detailsPage" style={divStyle}>
-		<i className="fas fa-chevron-circle-left"></i>
+	<div className="detailsPage">
+		<i className="fas fa-chevron-circle-left" onClick={onButtonBackClick}></i>
 		<button className="back-btn" onClick={onButtonBackClick}>Movies</button>
+		{details && (
+
 		<div className="background" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>      {/* <gradient to get black fading /> */}
 			<div className="summary">
             <img src={`https://image.tmdb.org/t/p/w780${details.poster_path}`}  alt={details.title} />
@@ -44,8 +57,10 @@ const Details = () => {
           		</div>
 			</div>
 		</div>
+			)}
 	</div>
 	
+
 	);
 };
 

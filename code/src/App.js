@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import PopularList from './components/PopularList';
 import Details from './components/Details';
@@ -29,6 +29,7 @@ return (
         <Route exact path="/" render={() => <PopularList movies={list} />} />
         <Route path="/details/:movieID" component={Details} />
         <Route path="/" component={NotFound} />
+        <Redirect to="/404" />
         
       </Switch>
     </BrowserRouter>

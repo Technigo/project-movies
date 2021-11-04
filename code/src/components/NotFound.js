@@ -8,7 +8,7 @@ const NotFound = () => {
   const history = useHistory();
 
   const onButtonBackClick = () => {
-    history.goBack();
+    history.push('/');
   }
 
 

@@ -1,5 +1,9 @@
+.navbar{
+    height: 4vh;
+}
 
   h1.header-welcome{
+      margin: 10px 0 10px 0;
     text-align: center;
     font-family: 'Nova Square', cursive;
     color: rgb(13, 144, 153);
