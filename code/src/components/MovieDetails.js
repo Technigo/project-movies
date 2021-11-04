@@ -8,6 +8,8 @@ const MainWrapperStyled = styled.div`
   height: 100%;
   width: 100%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 `
 
 const BgImgStyled = styled.img`
