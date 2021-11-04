@@ -13,6 +13,7 @@ export const App = () => {
       .then((res) => res.json())
       .then((data) => setList(data.results))
   }, [])
+
   return (
     <BrowserRouter>
       <Switch>
@@ -25,6 +26,4 @@ export const App = () => {
       </Switch>
     </BrowserRouter>
   )
-
-  // src={`https://image.tmdb.org/t/p/w780${movie.backdrop_path}`}
 }
