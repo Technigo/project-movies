@@ -22,7 +22,7 @@ export const MovieDetails = () => {
 
   return (
     <section>
-      {details && (
+      {details.backdrop_path && (
         <div
           className="details-container"
           style={{
