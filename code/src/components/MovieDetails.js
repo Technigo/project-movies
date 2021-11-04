@@ -48,24 +48,26 @@ const MovieDetails = () => {
       <Link to='/' className='backLink'>
         <BackIcon /> Movies
       </Link>
-      <div
-        className='backdrop'
-        style={{
-          backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(${backdropURL})`,
-        }}
-      >
-        <div className='summary'>
-          <img src={posterURL} alt={movieDetails.title} />
-          <div className='details'>
-            <h3 className='details-header'>
-              {movieDetails.original_title}{' '}
-              <span>{movieDetails.vote_average}/10</span>
-            </h3>
+      {movieDetails && (
+        <div
+          className='backdrop'
+          style={{
+            backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(${backdropURL})`,
+          }}
+        >
+          <div className='summary'>
+            <img src={posterURL} alt={movieDetails.title} />
+            <div className='details'>
+              <h3 className='details-header'>
+                {movieDetails.original_title}{' '}
+                <span>{movieDetails.vote_average}/10</span>
+              </h3>
 
-            <p>{movieDetails.overview}</p>
+              <p>{movieDetails.overview}</p>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
