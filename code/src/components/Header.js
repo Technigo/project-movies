@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const StyledHeader = styled.header `
   height: 30px;
-  background-color: cadetblue;
+  background-color: #181e1e;
 `
 
 export const Header = () => {
