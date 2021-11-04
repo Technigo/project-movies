@@ -123,7 +123,27 @@ const TextContainer = styled.div`
   h1 {
     text-align: center;
   }
+  animation-name: falling;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  opacity: 1;
+
+  @keyframes falling {
+    0% {
+      opacity: -1;
+      transform: translateY(-10em);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0em);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 `;
+
 const ImgDiv = styled.div`
   display: flex;
   justify-content: center;
