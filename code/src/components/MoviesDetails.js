@@ -2,20 +2,22 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams, useHistory } from "react-router-dom";
 import { DETAILS_URL } from "utils/urls";
+import Spinner from "./Spinner";
 
 
 const MoviesDetails = ({ films }) => {
   const [details, setDetails] = useState([]);
   const { moviesId } = useParams();
   const history = useHistory(); //History Hook
-  console.log(history);
+
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch (DETAILS_URL (moviesId) )
-     
       .then((res) => res.json())
       .then((data) => {
         setDetails(data);
+        setLoading(false)
       });
   }, []);
 
@@ -26,6 +28,7 @@ const MoviesDetails = ({ films }) => {
 
   return (
     <div class="movie-details-container">
+      {loading && <Spinner />}
       <button onClick={OnButtonBack}>Go Back</button>
       <img
         src={`https://image.tmdb.org/t/p/original${details.backdrop_path}`}
