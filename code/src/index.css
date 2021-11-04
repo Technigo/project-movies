@@ -71,6 +71,42 @@ code {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Movies Detail styling*/
+.movie-details-container {
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  
+}
+
+.summary-wrapper{
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+  position: absolute;
+  z-index: 1;
+}
+
+.summary-wrapper img {
+  border: 3px solid white;
+  width: 25%;
+}
+
+.title-rating-wrapper {
+  align-items: flex-end;
+  padding: 50px;
+}
+
+.summary-h1{
+color: white;
+}
+.summary-p {
+color: white;
+max-width: 500px;
+}
+
 /* Media queries */
 @media (min-width: 768px) {
   .main-container {
@@ -82,6 +118,6 @@ code {
 }
 @media (min-width: 968px) {
   .movie-link {
-    width: 24%;
+    width: 25%;
   }
 }

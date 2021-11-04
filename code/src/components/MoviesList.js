@@ -6,6 +6,7 @@ const MoviesList = ({ films }) => {
   return (
     <div className="main-container">
       {films.map((cat) => (
+        //Maxs has the key in the link
 
         <Link to={`/details/${cat.id}`} className="movie-link">
           
