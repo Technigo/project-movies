@@ -1,13 +1,12 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+Project 12 - Movies site
+By Christoffer Torninger and Rebecca Philipson
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A goal of this project was to build a multi-page application using React Router. We learned how to pass information in the url and pick this up in React router to load dynamic content and how to combine useState and UseEffect when using APIs.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+First we requested an API key and fetched all the information we needed from the API. Then we set up the routes in the app component and created the two components responsible for showing the movie list and the detailed info about each movie. We had some minor problems regarding error messages for the images but solved them by looking at Stack Overflow questions. We styled the page in accordance with the design that we got in the project brief.
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.

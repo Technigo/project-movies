@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { API_KEY, MOVIE_DETAILS_URL } from "../urls";
-import "../index.css";
+import "./MovieDetails.css";
 
 export const MovieDetails = () => {
   const { movieId } = useParams();
@@ -20,8 +20,11 @@ export const MovieDetails = () => {
     history.goBack();
   };
 
+  // The code below displays the button, background img, poster img and info about the movie
+
   return (
     <section>
+      {/* Solving 404 (Not Found)" error for img: https://stackoverflow.com/questions/68119674/get-http-image-tmdb-org-t-p-w300undefined-404-not-found-in-react */}
       {details.backdrop_path && (
         <div
           className="details-container"

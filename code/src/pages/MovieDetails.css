@@ -1,0 +1,76 @@
+/* Styling for MovieDetails */
+
+.details-container {
+  min-height: 100vh;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.go-back-button {
+  width: 120px;
+  position: absolute;
+  display: inline-flex;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  background: transparent;
+  border: transparent;
+  padding: 20px;
+  left: 50px;
+  top: 50px;
+  text-transform: uppercase;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+  text-align: center;
+}
+
+.go-back-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.go-back-button span:before {
+  content: "\00ab";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -10px;
+  transition: 0.5s;
+}
+
+.go-back-button:hover span {
+  padding-left: 25px;
+}
+
+.go-back-button:hover span:before {
+  opacity: 1;
+  left: 0;
+}
+
+.movie-details-summary {
+  display: flex;
+  width: 65vw;
+  margin: 50px;
+}
+
+.movie-details-poster {
+  border: 5px solid #fff;
+}
+
+.movie-details-text {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.vote-average {
+  margin-left: 10px;
+  color: red;
+  font-size: 18px;
+}
