@@ -1,336 +1,279 @@
 body {
-	padding: 0 auto;
-	margin: 0 auto;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-		sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  padding: 0 auto;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-	background-color: black;
+  background-color: black;
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .container {
-	background-color: black;
-	display: block;
-	position: absolute;
-	width: 100%;
-
-
+  background-color: black;
+  display: block;
+  position: absolute;
+  width: 100%;
 }
-
-
 
 /* Styling for Navbar */
 
 nav {
-	display: block;
-	position:relative;
-	padding: 0 20px;
-
+  display: block;
+  position: relative;
+  padding: 0 20px;
 }
 
 .navbarContainer {
-	background-color: rgb(0, 0, 0);
-	height: 50px;
-	width: 100%;
-	position: fixed;
-	z-index: 10;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: flex-end;
+  background-color: rgb(0, 0, 0);
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 ul {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	max-width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  max-width: 300px;
 }
 
 li {
-	width: 100%;
-	list-style: none;
-	margin-left: 20px;
-	white-space: nowrap;
-	font-size: 11px;
-	font-weight: 600;
+  width: 100%;
+  list-style: none;
+  margin-left: 20px;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 600;
 }
 
 a {
-	text-decoration: none;
-	color: rgb(255, 255, 255);
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
 
 a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Styling for page under navbar */
-
-
-
 
 /* Ajust pages direct under navbar, here lives all the page containers (from app) */
 
 /* Styling ad layout for each singel page */
 
 /* Loading -page */
+
 .loadingContainer {
-	height: 100%;
-	width: 100%;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top:150px;
-	font-size: 50px;
+  margin-top: 150px;
+  font-size: 50px;
 
   color: white;
-
 }
 
 /* movielist-pge in "home" */
 
 .movieListContainer {
-	display: grid;
-	grid-gap: 10px;
-	grid-template-columns: repeat(1, 1fr);
-	grid-template-rows: 1fr;
-	padding: 10px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr;
+  padding: 10px;
 }
 
 .contentBlock {
-	width: 100%;
-	height: 100%;
-	position: relative;
-
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .movieListContent {
-	padding-left: 5px;
-
-
+  padding-left: 5px;
 }
 
-.textMovieList{
- text-shadow: 0 0 5px black;
-
+.textMovieList {
+  text-shadow: 0 0 5px black;
 }
-
-
 
 /* Toprated page */
 
 .pToprated {
-	color: red;
-	font-weight: 600;
+  color: red;
+  font-weight: 600;
   font-size: 16px;
 }
 
 /* Movie detail page */
 
-
-
 .movieDetalisBox {
-	position: relative;
-	
-
+  position: relative;
 }
 
 .backgroundMovieDetails {
-	
-	position: absolute;
-	visibility: hidden;
+  position: absolute;
+  visibility: hidden;
 }
 
-
-
-
 .MovieDetailsInfo {
-
-	margin-top: 50px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	grid-gap: 5px;
-	position: absolute;
-	flex-direction: column;
-	color: white;
-
-
-
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 5px;
+  position: absolute;
+  flex-direction: column;
+  color: white;
 }
 
 .MovieDetailstext {
-	width: 90%;
+  width: 90%;
 
-	margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .MovieDetailsInfo h1 {
-	font-size: 30px;
+  font-size: 30px;
 }
 
 .MovieDetailsInfo p {
-	font-size: 18px;
-	text-shadow: black 0 0 10px;
+  font-size: 18px;
+  text-shadow: black 0 0 10px;
 }
-.ratedMovieDetail{
-
-color: red;
-font-weight: 400;
-font-size: 19px;
-text-shadow: 0 0 1px black;
-
+.ratedMovieDetail {
+  color: red;
+  font-weight: 400;
+  font-size: 19px;
+  text-shadow: 0 0 1px black;
 }
-
 
 .MovieDetailsInfo img {
+  width: 100%;
 
-width: 100%;
+  border: 1px solid black;
 
-	border: 1px solid black;
-  
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(0, 0, 0)));
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
 
-	-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(0, 0, 0)));
-	mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0, 0, 0, 0));
-
-
-
-	
+.errorMessage {
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  font-size: 50px;
 }
 
 /* Christmas page  */
 
 .Christmas {
-	font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
-	background-size: 15px;
-	background-clip: text;
-	color: transparent;
-	background-color: rgba(61, 211, 61, 0.994);
-	background-image: -webkit-linear-gradient(
-		45deg,
-		rgba(221, 35, 35, 0.96) 25%,
-		transparent 25%,
-		transparent 50%,
-		rgba(145, 137, 32, 0.85) 50%,
-		rgb(242, 18, 18) 75%,
-		transparent 75%,
-		transparent
-	);
-
-  
-
+  background-size: 15px;
+  background-clip: text;
+  color: transparent;
+  background-color: rgba(61, 211, 61, 0.994);
+  background-image: -webkit-linear-gradient(45deg, rgba(221, 35, 35, 0.96) 25%, transparent 25%, transparent 50%, rgba(145, 137, 32, 0.85) 50%, rgb(242, 18, 18) 75%, transparent 75%, transparent);
 }
-.Christmas:hover{
-
-text-decoration: red underline;
-
+.Christmas:hover {
+  text-decoration: red underline;
 }
 /* Other - styling that cover the overlay in pages */
 
 .overlay {
-	display: none;
-	position: absolute;
-	background: rgba(0, 0, 0, 0.7);
-	height: 100%;
-	width: 100%;
-	align-items: flex-end;
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  align-items: flex-end;
 }
 
 .contentBlock:hover .overlay {
-	color: rgb(255, 255, 255);
-	display: flex;
+  color: rgb(255, 255, 255);
+  display: flex;
 }
 
 img {
-	width: 100%;
-	z-index: -10;
+  width: 100%;
+  z-index: -10;
 }
 
 @media (min-width: 768px) {
-	.movieListContainer {
-		grid-template-columns: repeat(2, 1fr);
-	}
+  .movieListContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-	li {
-		list-style: none;
-		margin-left: 50px;
-		font-size: 16px;
-		font-weight: 600;
-	}
+  li {
+    list-style: none;
+    margin-left: 50px;
+    font-size: 16px;
+    font-weight: 600;
+  }
 
-	.MovieDetailsInfo {
-		padding-left: 40px;
-		grid-gap: 15px;
-		width: 90%;
-		height: 90vh;
-		flex-direction: row;
-		align-items: flex-end;
-		justify-content: flex-start;
-		margin-top: 40px;
-	}
+  .MovieDetailsInfo {
+    padding-left: 40px;
+    grid-gap: 15px;
+    width: 90%;
+    height: 90vh;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin-top: 40px;
+  }
 
-	
+  .MovieDetailsInfo img {
+    border: 5px solid white;
+    height: 55%;
+    max-width: 320px;
 
-	.MovieDetailsInfo img {
-		border: 5px solid white;
-		height: 55%;
-		max-width: 320px;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(36, 36, 36)), to(rgb(0, 0, 0)));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgb(0, 0, 0));
+  }
 
+  .backgroundMovieDetails {
+    background-size: cover;
+    visibility: visible;
+    height: 70vh;
 
-		-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgb(36, 36, 36)), to(rgb(0, 0, 0)));
-		mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgb(0, 0, 0));
-		
-	
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(36, 36, 36)), to(rgba(0, 0, 0, 0)));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  }
 
-	}
+  .MovieDetailstext {
+    max-width: 800px;
 
-	.backgroundMovieDetails {
-		
-background-size: cover;
-		visibility: visible;
-height: 70vh;
-
-	 -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgb(36, 36, 36)), to(rgba(0,0,0,0)));
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-
-	}
-
-	.MovieDetailstext {
-		max-width: 800px;
-
-		margin-bottom: -20px;
-
-
-
-		
-	}
+    margin-bottom: -20px;
+  }
 }
 
 @media (min-width: 1024px) {
-	.movieListContainer {
-		grid-template-columns: repeat(4, 1fr);
-	}
+  .movieListContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
+  .backgroundMovieDetails {
+    background-size: cover;
+    visibility: visible;
+    height: 100vh;
+    width: 100%;
 
-	.backgroundMovieDetails {
-		
-		background-size: cover;
-				visibility: visible;
-		height: 100vh;
-		width: 100%;
-	
-			 -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgb(36, 36, 36)), to(rgba(0,0,0,0)));
-					mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-		
-			}
-
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(36, 36, 36)), to(rgba(0, 0, 0, 0)));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  }
 }
