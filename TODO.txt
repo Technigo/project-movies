@@ -6,6 +6,8 @@ Registered a profile at movie API - ok!
 
 Two componenets - movieslist and moviedetails ? 
 
+https://medium.com/@nutanbhogendrasharma/create-multiple-pages-using-routing-in-react-part-2-5d667ca051c6
+
 
 
 
