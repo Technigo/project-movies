@@ -15,6 +15,13 @@ export const MovieDetails = () => {
   	const [details, setDetails] = useState([]);
 	const [loading, setLoading] = useState(true);
 
+  const detailStyling = {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) -70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280/${details.backdrop_path})`,
+    minHeight: '100vh',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat'
+  }
+
 
 	const goBack = () => {
 		history.push("/")
@@ -32,30 +39,27 @@ export const MovieDetails = () => {
 	<>
 	{loading && <Loading />} 
   	<section className="summary-section">
-    	<div className="summary-container">
-			<div className="backdrop-overlay"></div>
 			<div
 					className="background-container"
-					style={{
-					backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})`,
-					}}
+					style={detailStyling}
 					>
 				<article className="info">
 					<div className="details-overall">
 						<img className="poster" src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt={details.title} />
-						<h1 className="detail-title">{details.title}
+					<div className="details">
+            <h2 className="detail-title">{details.title}</h2>
 						<span className="detail-rating"> {details.vote_average}/10</span>
-						</h1>
-						<p className="overview">{details.overview}</p>
-						{/* <p className="details">Release date: {details.release_date}</p> */}
+            <h4>"{details.tagline}"</h4>
+            <p className="overview">{details.overview}</p>
+            <h5><span>Length:</span> {details.runtime} minutes</h5>
+            </div>
 					</div>
 					<button className="back-button" onClick={goBack}>
-							{/*<i className="fa fa-chevron-circle-left"></i>*/}
-							<span className="back-button-text">Back</span>
+							<i className="fa fa-chevron-circle-left"></i>
+							<span className="back-button-text">HOME</span>
 					</button>
 				</article>
     		</div>
-    	</div>
     </section>
 	</>
     )

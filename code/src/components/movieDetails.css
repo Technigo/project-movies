@@ -1,10 +1,3 @@
-.info-container {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  align-items: left;
-  padding-bottom: 20px;
-}
 
 .info {
   color: white;
@@ -13,47 +6,59 @@
 
 
 .background-container {
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
-  align-items: left;
   padding: 20px;
- 
   
 }
 
-/* .backdrop-overlay {
-  background: linear-gradient(transparent 70%,#000);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-size: cover;
-} */
+h2 {
+  font-size: 30px;
+  font-weight: normal;
+  margin-left: 32px;
+  margin-bottom: 10px;
+  
+}
 
-.details-overall h1 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+h4 {
+  font-style: italic;
+  margin-left: 32px;
+
+}
+
+h5 {
+  margin-left: 32px;
+
+}
+
+.details-overall  {
   font-size: 25px;
   margin-left: 32px;
+
 }
 
 .detail-rating {
-  color: red;
-  font-size: 16px;
+  align-self: start;
+  background-color: #ffc107;
+  color: #000;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 5px;
+  margin-left: 32px;
 }
 
 .details-overall {
   position: absolute;
+  display: flex;
   align-items: flex-end;
+ 
 }
 
 .overview {
   font-size: 14px;
   color: white;
   margin-left: 32px;
-  background-color: #ffffff10;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 
 .poster {
@@ -68,22 +73,18 @@
 .details {
   font-size: 14px;
   margin-left: 32px;
-
 }
 
 .back-button {
-  display: flex;
-  align-items: center;
   position: absolute;
-  /*top: 50px;*/
-  left: 50px;
+  left: 80px;
   color: #fff;
-  font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   cursor: pointer;
   background-color: Transparent;
   border: none;
   outline: none;
+  margin-top: 5px;
 }
 
 .back-button-text {
@@ -91,7 +92,7 @@
 }
 
 .back-button-text:hover {
-  font-size: 22px;
+  font-size: 20px;
   transform: translate(10px,0);
   transition: all .3s ease-in-out;
 }
@@ -103,9 +104,6 @@
   }
 
   .overview {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     max-width: 500px;
   }
 }

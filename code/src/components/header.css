@@ -1,6 +1,6 @@
 .header {
 	padding: 10px;
-	background-color: black;
+	background-color: #141414;
 	color: white;
 }
 
@@ -15,5 +15,6 @@
 .nav-links {
 	display: flex;
 	justify-content: space-between;
+  margin: 0 20px;
 }
 
