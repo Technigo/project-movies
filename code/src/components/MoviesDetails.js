@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { useParams, useHistory } from "react-router-dom";
 import { DETAILS_URL } from "utils/urls";
 import Spinner from "./Spinner";
@@ -17,7 +16,7 @@ const MoviesDetails = ({ films }) => {
         setDetails(data);
         setLoading(false);
       });
-  }, []);
+  }, [moviesId]); 
 
   // History function btn
   const OnButtonBack = () => {
@@ -29,7 +28,7 @@ const MoviesDetails = ({ films }) => {
       {loading && <Spinner />}
       <img
         src={`https://image.tmdb.org/t/p/original${details.backdrop_path}`}
-        alt="background-picture"
+        alt="background"
       />
 
       <div className="movies-btn">
@@ -41,7 +40,7 @@ const MoviesDetails = ({ films }) => {
       <div className="summary-wrapper">
         <img
           src={`https://image.tmdb.org/t/p/w780${details.poster_path}`}
-          alt="small-picture"
+          alt="small poster"
         />
 
         <div className="title-rating-wrapper">

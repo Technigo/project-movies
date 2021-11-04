@@ -16,7 +16,7 @@ const MoviesList = ({ films }) => {
             </div>
             <img
               src={`https://image.tmdb.org/t/p/w780${cat.poster_path}`}
-              alt="picture"
+              alt="poster"
             />
           </div>
         </Link>
