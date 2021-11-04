@@ -1,26 +1,31 @@
+/* THIS IS THE BACKGROUND COLOR TO MAKE THE TEXT MORE READABLE THAT DOESN'T WORK */
+.details-wrapper {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .background-image {
-  height: 100vh;
+  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .info-summary {
   display: flex;
-  padding-bottom: 5%;
-  align-items: flex-end;
-  margin: 35% 0 5% 5%;
+  flex-direction: column;
+  align-items: center;
+  margin: 30% 0 5% 5%;
 }
 
 .movie-poster {
   border: 5px solid whitesmoke;
-  width: 25%;
+  width: 40%;
 }
 
 .summary-wrapper {
   display: flex;
   flex-direction: column;
-  width: 35%;
-  margin-left: 5%;
+  width: 80%;
 }
 
 .name-rate {
@@ -67,4 +72,44 @@ button:hover {
   left: 50px;
   position: relative;
   top: 50px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .background-image {
+    height: 100vh;
+  }
+
+  .summary-wrapper {
+    margin-top: 10%;
+  }
+
+  .info-summary {
+    margin: 10% 0 5% 5%;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .background-image {
+    height: 100%;
+  }
+
+  .info-summary {
+    flex-direction: row;
+    padding-bottom: 5%;
+    align-items: flex-end;
+    margin: 15% 0 5% 5%;
+  }
+
+  .movie-poster {
+    width: 25%;
+  }
+
+  .summary-wrapper {
+    width: 35%;
+    margin-left: 5%;
+  }
 }

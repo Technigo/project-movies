@@ -18,12 +18,20 @@ const MovieDetails = () => {
       });
   }, [movieId]);
 
+  const backgroundPoster = movieDetails.poster_path
+    ? `https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`
+    : "";
+
+  const posterImage = movieDetails.backdrop_path
+    ? `https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`
+    : "";
+
   return (
-    <section>
+    <div className="details-wrapper">
       <div
         className="background-image"
         style={{
-          backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`,
+          backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url(${backgroundPoster})`,
         }}
       >
         <Link to="/" className="backLink" style={{ textDecoration: "none" }}>
@@ -46,7 +54,7 @@ const MovieDetails = () => {
         <div className="info-summary">
           <img
             className="movie-poster"
-            src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`}
+            src={posterImage}
             alt="{movieDetails.title} poster"
           ></img>
           <div className="summary-wrapper">
@@ -58,7 +66,7 @@ const MovieDetails = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 export default MovieDetails;

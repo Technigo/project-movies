@@ -1,13 +1,13 @@
 .error-wrapper {
   background-image: url(./nofound.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   background-size: cover;
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 
 .notfound-text {
@@ -19,11 +19,27 @@
   border: 1px solid red;
   border-radius: 50px;
   padding: 10px;
-  width: 20%;
+  width: 50%;
   margin-top: 5%;
 }
 
-button:hover {
-  background-color: red;
-  color: whitesmoke;
+@media (min-width: 1025px) {
+  .error-wrapper {
+    background-position: center;
+    height: 100vh;
+  }
+
+  .notfound-text {
+    font-size: 40px;
+    margin: 5% 0 0;
+  }
+
+  .notfound-button {
+    width: 20%;
+  }
+
+  button:hover {
+    background-color: red;
+    color: whitesmoke;
+  }
 }

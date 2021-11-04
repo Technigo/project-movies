@@ -11,7 +11,8 @@ const NotFound = () => {
 
   return (
     <div className="error-wrapper">
-      <p className="notfound-text">Oh no!!! This page doesn't exist</p>
+      <p className="notfound-text">Oh no!!!</p>
+      <p className="notfound-text">This page doesn't exist</p>
       <button className="notfound-button" onClick={onHomePageRedirect}>
         Back to the home page
       </button>
