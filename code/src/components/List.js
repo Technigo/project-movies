@@ -50,8 +50,14 @@ const List = ({ movies }) => {
               />
 
               <MovieOverlay>
-                <h2> {movie.original_title} </h2>
-                <h2>{movie.release_date}</h2>
+                <h3 style={{ margin: "0 0 10px 10px" }}>
+                  {" "}
+                  {movie.original_title}{" "}
+                </h3>
+                <p style={{ margin: "0 0 20px 10px" }}>
+                  {" "}
+                  Released {movie.release_date}
+                </p>
               </MovieOverlay>
             </MovieCard>
           </Link>

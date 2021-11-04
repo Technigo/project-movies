@@ -15,6 +15,7 @@ code {
 
 .loader-image {
   position: absolute;
+  align-items: center;
   top: 0;
   right: 0;
   bottom: 0;
@@ -23,13 +24,13 @@ code {
   border-radius: 30px;
 }
 
-.back-link {
+/* .back-link {
   position: absolute;
   display: inline-flex;
   color: #fff;
   align-items: center;
   font-weight: bold;
   text-decoration: none;
-  left: 50px;
-  top: 50px;
-}
+  left: 30px;
+  top: 30px;
+} */

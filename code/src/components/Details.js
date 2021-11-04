@@ -3,8 +3,11 @@ import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
 
 import { API_KEY } from "utils/urls"
-import { Button } from "./Button"
+// import { Button } from "./Button"
 import styled from "styled-components"
+
+import { FaChevronCircleLeft } from "react-icons/fa"
+import { IconContext } from "react-icons"
 
 export const BackgroundPoster = styled.div`
   background-position: center;
@@ -22,7 +25,7 @@ export const MovieDetails = styled.div`
   padding-left: 60px;
   float: left;
   position: fixed;
-  bottom: 60px;
+  margin-top: 60px;
   padding: 50px;
 `
 
@@ -51,11 +54,41 @@ const Details = () => {
           : "",
       }}
     >
-      <div>
-        <Link className="back-link" to="/">
-          &#8678; Movies
-        </Link>
-      </div>
+      <Link
+        to="/"
+        style={{ textDecoration: "none", position: "absolute", zIndex: "1" }}
+      >
+        {/* --- Chevron Icon from the react-icons library --- */}
+        <IconContext.Provider
+          value={{
+            color: "white",
+            verticalAlign: "middle",
+          }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              display: "inline-flex",
+              color: "#fff",
+              alignItems: "center",
+              fontWeight: "bold",
+              textDecoration: "none",
+              left: "30px",
+              top: "30px",
+            }}
+          >
+            <FaChevronCircleLeft size={30} />
+            <h2
+              style={{
+                marginLeft: "10px",
+              }}
+            >
+              {" "}
+              Movies{" "}
+            </h2>
+          </div>
+        </IconContext.Provider>
+      </Link>
 
       <MovieDetails>
         <img
@@ -68,7 +101,7 @@ const Details = () => {
           <p style={{ color: "#ff0000", fontWeight: "bold" }}>
             Rating: {movie.vote_average}/10{" "}
           </p>
-          {movie.tagline && <h2 className="tagline">"{movie.tagline}"</h2>}
+          {movie.tagline && <h2>"{movie.tagline}"</h2>}
           <p>{movie.overview}</p>
         </MovieSummary>
       </MovieDetails>
