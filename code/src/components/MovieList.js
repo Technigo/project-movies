@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './MovieList.css'
+import './movielist.css'
 
 const MovieList = ({ movies }) => {
 return (
