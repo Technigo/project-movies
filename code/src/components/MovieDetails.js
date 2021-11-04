@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { BACKDROP_URL, POSTER_URL, API_MOVIE_URL } from 'utils/url'
 import { BackButton } from 'icons/BackIcon'
 import 'components/movieDetails.css'
