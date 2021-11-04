@@ -18,6 +18,38 @@ code {
     monospace;
 }
 
+/* THIS is STYLING FOR THE LOADER */
+
+.loader-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  border-top: 16px solid blue;
+  border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  border-left: 16px solid pink;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .movie-list-wrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -120,6 +152,11 @@ code {
   fill: white;
 }
 
+.link-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
 @media screen and (min-width: 678px) {
   .movie-list-wrapper {
     grid-template-columns: 1fr 1fr;
@@ -138,6 +175,14 @@ code {
   .movie-score {
     padding-bottom: 20px;
   }
+}
+
+.return-btn {
+  width: 200px;
+  height: 30px;
+  background-color: darkcyan;
+  border: 1px solid balck;
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 1000px) {

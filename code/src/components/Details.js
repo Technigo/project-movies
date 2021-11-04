@@ -1,25 +1,55 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useHistory } from "react-router-dom";
 
 import { ReactComponent as Arrow } from "../icons/arrow-left.svg";
 
 const Details = ({ makePosterUrl, apiKey }) => {
   const [movie, setMovie] = useState([]);
+  const [hasError, setHasError] = useState(false);
   const { id } = useParams();
   const MOVIE_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`;
 
+  const history = useHistory();
+  console.log(history);
   useEffect(() => {
     fetch(MOVIE_URL)
       .then((res) => res.json())
-      .then((json) => setMovie(json));
-  }, [MOVIE_URL]);
+      .then(
+        (json) => {
+          if (json.id) {
+            setMovie(json);
+          } else {
+            setHasError(true);
+          }
+        },
+        [MOVIE_URL]
+      );
+  });
+
+  if (hasError) {
+    return (
+      <div>
+        <h1>Such movie is not made yet. You want to give it a try? </h1>
+        <button
+          class="return-btn"
+          type="button"
+          onClick={() => history.goBack()}
+        >
+          Return to previous page!
+        </button>
+      </div>
+    );
+  }
 
   const backdrop_url_large = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`;
   return (
     <div className="details-page-wrapper">
       <div className="top-header">
         <Link className="movies-link" to="/">
-          <Arrow className="arrow-left" /> Movies
+          <div className="link-wrapper">
+            <Arrow className="arrow-left" />
+            Movies
+          </div>
         </Link>
       </div>
       <div className="movie-details-content">

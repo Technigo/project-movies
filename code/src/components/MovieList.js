@@ -1,8 +1,9 @@
 import React from "react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Link, Redirect } from "react-router-dom";
 
 import MoviePoster from "./MoviePoster";
 import Details from "./Details";
+import Error from "./Error";
 
 const MovieList = ({ movies, makePosterUrl, apiKey }) => {
   return (
@@ -28,6 +29,10 @@ const MovieList = ({ movies, makePosterUrl, apiKey }) => {
         <Route exact path="/movies/:id">
           <Details makePosterUrl={makePosterUrl} apiKey={apiKey} />
         </Route>
+        <Route exact path="/404">
+          <Error />
+        </Route>
+        <Redirect to="/404" />
       </Switch>
     </BrowserRouter>
   );
