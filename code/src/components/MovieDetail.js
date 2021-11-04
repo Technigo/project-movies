@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import Moment from "react-moment";
 import { API_KEY } from "Urls";
 import Loading from "./Loading";
+import { Link } from "react-router-dom";
+import page404 from "../images/page404.mp4";
 
 const MovieDetail = () => {
   const [movie, setMovie] = useState([]);
@@ -27,7 +29,24 @@ const MovieDetail = () => {
   }, [id]);
 
   if (hasError) {
-    return <h2 className="errorMessage">Sorry could not find this movie :(</h2>;
+    return (
+      <div className="pageNotFoundContainer">
+        <div className="imgPageNotFound">
+          <video autoPlay loop muted src={page404} alt={"no page found"} />
+        </div>
+
+        <div className="textPageNotFound">
+          <h2> Sorry page not found...</h2>
+        </div>
+        <div className="buttonPageNotFound">
+          <button>
+            <Link className="linkPageNotFound" to="/">
+              Go back
+            </Link>
+          </button>
+        </div>
+      </div>
+    );
   }
 
   return (
