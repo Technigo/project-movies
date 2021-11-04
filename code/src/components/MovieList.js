@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './MovieList.css'
 
-const movieList = ({ movies }) => {
+const MovieList = ({ movies }) => {
 return (
     <section className="container">
     {movies.map((movie) => (
@@ -26,4 +26,4 @@ return (
     </section>
 );
 };
-export default movieList;
+export default MovieList;
