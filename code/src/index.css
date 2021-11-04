@@ -13,16 +13,17 @@ code {
     monospace;
 }
 
-.loader-image {
+/* .loader-image {
   position: absolute;
   align-items: center;
+  display: flex;
+  justify-content: center;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  width: 350px;
-  border-radius: 30px;
-}
+  width: 500px;
+} */
 
 /* .back-link {
   position: absolute;
