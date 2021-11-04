@@ -15,7 +15,7 @@ export const MovieList = ({movieList}) => {
 		<div  className="movie-card" >
 			<div className="image-container">
 				<img 
-					src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} 
+					src={`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} 
 					alt={movie.title}
 					className="image" />
 				<div className="overlay">

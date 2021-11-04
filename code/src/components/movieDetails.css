@@ -31,7 +31,7 @@
   background-size: cover;
 } */
 
-h1 {
+.details-overall h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 25px;
   margin-left: 32px;
@@ -75,7 +75,7 @@ h1 {
   display: flex;
   align-items: center;
   position: absolute;
-  top: 50px;
+  /*top: 50px;*/
   left: 50px;
   color: #fff;
   font-weight: 600;
