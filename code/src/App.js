@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import LeosList from './components/LeosList';
 import Details from './components/Details';
-import Header from './components/Header';
+// import Header from './components/Header';
 import NotFound from './components/NotFound';
 import { LEO_URL } from './utils/urls';
 
