@@ -11,14 +11,6 @@ const MovieDetails = () => {
 
   const { id } = useParams();
 
-  const backdropURL = movieDetails.backdrop_path
-    ? `https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`
-    : '';
-
-  const posterURL = movieDetails.poster_path
-    ? `https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`
-    : '';
-
   useEffect(() => {
     fetch(MOVIEDETAILS_URL(id))
       .then((res) => res.json())
@@ -42,6 +34,14 @@ const MovieDetails = () => {
       </div>
     );
   }
+
+  const backdropURL = movieDetails.backdrop_path
+    ? `https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`
+    : '';
+
+  const posterURL = movieDetails.poster_path
+    ? `https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`
+    : '';
 
   return (
     <div className='detail-page'>
