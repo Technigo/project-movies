@@ -28,8 +28,8 @@ code {
   position: absolute;
   display: flex;
   align-items: flex-end;
-  top: 80px;
-  left: 50px;
+  top: 110px;
+  left: 60px;
 }
 
 .movie-text {
@@ -37,6 +37,7 @@ code {
   flex-direction: column;
   color: white;
   padding-left: 50px;
+  padding-right: 25px;
 }
 
 .poster-img {
@@ -119,7 +120,7 @@ code {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: end; /* this makes the text go down*/
+  justify-content: flex-end; /* this makes the text go down*/
   padding-left: 15px;
   padding-right: 15px;
   animation: neon 0.08s ease-in-out infinite alternate;

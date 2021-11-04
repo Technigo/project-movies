@@ -6,18 +6,35 @@ import { DETAILS_URL } from '../utils/urls';
 const MovieDetails = () => {
   const [movie, setMovie] = useState([]);
   const { movieId } = useParams();
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     fetch(DETAILS_URL(movieId))
       .then((res) => res.json())
-      .then((data) => setMovie(data));
+      .then((data) => {
+        if (data.id) {
+          setMovie(data);
+        } else {
+          setHasError(true);
+        }
+      })
+      .catch(() => setHasError(true));
   }, [movieId]);
 
   const history = useHistory();
 
   const onButtBackClick = () => {
-    history.goBack();
+    history.push('/');
   };
+
+  if (hasError) {
+    return (
+      <div>
+        <p>Sorry this movie does not exist!</p>
+        <button onClick={onButtBackClick}>Back to main</button>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -42,7 +59,6 @@ const MovieDetails = () => {
             <span className='vote'>{movie.vote_average}</span>
           </h1>
           <p>{movie.overview}</p>
-          {/* <h3>Released {movie.release_date}</h3> */}
         </div>
       </div>
     </div>
