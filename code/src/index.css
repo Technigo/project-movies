@@ -5,33 +5,58 @@
   /* what does this do? */
 } 
 
-
-
-
-
 body {
   font-family: 'Roboto', sans-serif;
   color:white; 
   background-color: black;
 }
 
-
-.main-container{
-display:grid; 
-grid-template-columns: repeat (1,1fr);
-border:none;
-width:100%;
-
-
+/* Loading Screen */
+/* Overlay */
+.loading-overlay {
+  position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+  background-color: black;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+  height: 500px;
+  width: 100%;
 }
 
+/* Bouncing loading ball */
+.loading-ball {
+  align-self: flex-end;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  background-color: #F44336;
+  height: 200px;
+  margin: 0 auto 0 auto;
+  border-radius: 50%;
+  transform-origin: bottom;
+  width: 200px;
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(1,1)      translateY(0); }
+  10%  { transform: scale(1.1,.9)   translateY(0); }
+  30%  { transform: scale(.9,1.1)   translateY(-100px); }
+  50%  { transform: scale(1.05,.95) translateY(0); }
+  57%  { transform: scale(1,1)      translateY(-7px); }
+  64%  { transform: scale(1,1)      translateY(0); }
+  100% { transform: scale(1,1)      translateY(0); }
+}
 
 
 /* ---------Movie List--------- */
-.movie-poster {
-  width:100%;
-}
-
 .image-container{
   position: relative;
   width:100%;
@@ -39,7 +64,6 @@ width:100%;
 
 .overlay{
   display:flex;
-  
   position:absolute; 
   top: 0;
 	right: 0;
@@ -51,28 +75,38 @@ width:100%;
   align-items: flex-end;
   padding-bottom: 35px;
   padding-left:35px;
-
 }
 
-.movie-list-text{
-  display:flex;
-  flex-direction: column; 
-  color:white;
-}
 
 .image-container:hover .overlay {
-  opacity:1;
+  opacity:0.7;
   background-color: black;
 }
 
 .movie-title{
   text-decoration: none;  
+  color:white;
+
 }
 
 
 
+/* ---------Media Queries--------- */
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* Tablet */
+@media (min-width: 767px) {
+
+.main-container{
+display:grid;
+grid-template-columns: repeat(2,1fr);
+}
+
+}
+
+/* ---------Desktop View--------- */
+@media (min-width: 992px){
+.main-container{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  }
 }
