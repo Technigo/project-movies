@@ -4,10 +4,7 @@ import { DETAILS_URL } from "utils/urls";
 
 const MovieDetails = () => {
 const [movieDetails, setMovieDetails] = useState({});
-
 const { movieId } = useParams();
-
-console.log(DETAILS_URL(movieId));
 
 useEffect(() => {
     fetch(DETAILS_URL(movieId))
@@ -18,16 +15,27 @@ useEffect(() => {
     });
 }, [movieId]);
 
-  //added a color in css to see if the page works
+ 
 return (
-    <div
-    className="background-image"
-    style={{
+    <section>
+        <div className="background-image"
+            style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`,
-    }}
-    >
-    <div className="movie-name">{movieDetails.title}</div>
-    </div>
+        }}
+        >
+        <button>Movies</button>
+        <div className="movie-poster">
+       <img src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`}
+        alt="{movieDetails.title} poster"></img>
+            <div className="summary"></div>
+            <h3 className="movie-name">{movieDetails.title}</h3>
+            <p className="votes">{movieDetails.vote_average}/10</p>
+                </div>
+                <p className="info-details">{movieDetails.overview}</p>
+            
+        </div>
+        
+    </section>
 );
 };
 
