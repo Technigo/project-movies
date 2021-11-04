@@ -1,6 +1,8 @@
 *
 {
+  margin: 0;
   box-sizing: border-box;
+ 
 }
 
 body {
@@ -20,33 +22,47 @@ code {
 .full-page-container {
   display: flex;
   /* For the fun of it, the titles are in reverse order  */
-  flex-wrap: wrap-reverse;
-  width: 100%;
+  flex-wrap: wrap;
+  background-color: black;
   border: solid orange;
+  margin-right: 0px;
 }
 
 .movie-list-image {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 0px;
-    width: 150px;
-    /* width: 25%; */
-    border: solid red;
-} 
-
-.details-movie-image {
-  border:solid springgreen;
-  /* width: 25%;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 0px;
-  width: 150px; */
+  width: 100%;
 } 
 
-.movie-list {
-  border: solid violet;
+.movie-img {
+width: 100%;
+} 
+
+.movie-date {
+  display: none;
+  flex-direction: column;
+  justify-content: end;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  color: white;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.682);
 }
+
+.movie-list-image:hover .movie-date {
+  display: flex;
+}
+
+/* .movie-image-wrapper {
+  justify-content: space-around;
+  align-items: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.644);
+  display: none;
+} */

@@ -7,17 +7,18 @@ import Details from './components/Details';
 import NotFound from './components/NotFound';
 
 
-export const App = ()=> {
-	const [list, setList]=useState([])
+export const App = () => {
+	const [list, setList]=useState([]);
 
 	useEffect (()=>{
 		fetch (BASE_URL)
 		.then((res)=> res.json())
 		.then((data)=> setList(data.results))
-	}, [])
+	}, []);
 	// console.log(list)
 
 	return (
+	<>	
 	<BrowserRouter>
 	<Header/>
 	 <Switch>
@@ -27,6 +28,7 @@ export const App = ()=> {
 		<Redirect to="/404"/>
 	 </Switch>
 	</BrowserRouter>
+	</>
 	);
 };
 
