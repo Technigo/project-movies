@@ -20,8 +20,8 @@ const MovieDetails = () => {
         } else {
           setHasError(true);
         }
-      })
-      .catch(() => setHasError(true));
+      });
+    // .catch(() => setHasError(true));
   }, [id]);
 
   if (hasError) {
