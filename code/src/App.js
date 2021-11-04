@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import MainSite from "components/MainSite";
 import DetailSite from "components/DetailSite";
@@ -23,7 +23,10 @@ export const App = () => {
             <MainSite movies={mainSite} />
           </Route>
           <Route exact path="/details/:id" component={DetailSite} />
-          <Route component={NotFound} />
+          <Route>
+            <NotFound />
+          </Route>
+          <Redirect to="/404" />
         </Switch>
       </BrowserRouter>
     </>
