@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { DETAILS_URL } from "utils/urls";
 import './moviedetails.css'
+import { useHistory } from "react-router-dom";
+import { FaChevronCircleLeft } from 'react-icons/fa'
 
 const MovieDetails = () => {
 const [movieDetails, setMovieDetails] = useState({});
 const { movieId } = useParams();
+const history = useHistory();
 
 useEffect(() => {
     fetch(DETAILS_URL(movieId))
@@ -18,17 +21,13 @@ useEffect(() => {
 
  
 return (
-    <article>
-        <button>Movies</button>
+    <section>
+        <div className="backbutton" onClick={() => history.goBack()}> <FaChevronCircleLeft/> <h3 className="button-text">Movies</h3></div>
         <div className="background-image"
-            style={{
-        backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`,
-        }}
-        >
-        {/* <button>Movies</button> */}
+        style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`,}}>
         <div className="movie-poster">
-       <img className="poster-image" src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`}
-        alt="{movieDetails.title} poster"></img>
+            <img className="poster-image" src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`}
+            alt="{movieDetails.title} poster"></img>
             <div className="summary">
             <h1 className="movie-name">{movieDetails.title}
             <span className="votes">{movieDetails.vote_average}/10</span>
@@ -39,8 +38,10 @@ return (
             
         </div>
         
-    </article>
+    </section>
 );
 };
+
+
 
 export default MovieDetails;

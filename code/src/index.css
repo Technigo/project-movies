@@ -12,6 +12,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x:hidden;
 	background-color: var(--gray-black);
+	margin:0;
 }
 
 
