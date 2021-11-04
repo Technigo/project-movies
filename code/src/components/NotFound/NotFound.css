@@ -1,0 +1,29 @@
+.error-wrapper {
+  background-image: url(./nofound.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.notfound-text {
+  font-size: 30px;
+  margin: 5% 0 3%;
+}
+
+.notfound-button {
+  border: 1px solid red;
+  border-radius: 50px;
+  padding: 10px;
+  width: 20%;
+  margin-top: 5%;
+}
+
+button:hover {
+  background-color: red;
+  color: whitesmoke;
+}

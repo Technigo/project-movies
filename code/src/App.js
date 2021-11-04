@@ -1,38 +1,37 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
-import MovieList from './components/MovieList/MovieList';
-import MovieDetails from './components/MovieDetails/MovieDetails';
-import Loading from '../src/components/Loading/Loading';
-import { MOVIES_URL } from './utils/urls';
+import MovieList from "./components/MovieList/MovieList";
+import MovieDetails from "./components/MovieDetails/MovieDetails";
+import Header from "./components/Header";
+import NotFound from "components/NotFound/NotFound";
+import { MOVIES_URL } from "./utils/urls";
 
 export const App = () => {
   const [movieLi, setMovieLi] = useState([]);
-  const [loading, setLoading] = useState(false);
   /*  const [movieId, setMovieId] = useState({}); */
 
   useEffect(() => {
-    setLoading(true);
     fetch(MOVIES_URL)
       .then((res) => res.json())
-      .then((data) => setMovieLi(data.results))
-      .finally(() => setLoading(false));
+      .then((data) => setMovieLi(data.results));
   }, []);
 
-  console.log('GENERAL DATA', movieLi);
+  console.log("GENERAL DATA", movieLi);
 
   return (
     <>
       <BrowserRouter>
-        {loading && <Loading />}
+        <Header />
         <Switch>
           <Route
             exact
-            path='/'
+            path="/"
             render={() => <MovieList movies={movieLi} />}
           ></Route>
-
-          <Route path='/movies/:movieId' component={MovieDetails}></Route>
+          <Route path="/movies/:movieId" component={MovieDetails}></Route>
+          <Route path="/404" component={NotFound} />
+          <Redirect to="/404" />
         </Switch>
       </BrowserRouter>
     </>

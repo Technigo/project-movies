@@ -7,3 +7,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
 }
+
+header {
+  font-family: "Butcherman", cursive;
+  height: 10vh;
+  color: whitesmoke;
+  text-shadow: 5px 5px red;
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 3%;
+}

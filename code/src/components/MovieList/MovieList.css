@@ -1,10 +1,14 @@
 .list-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 0;
-    row-gap: 0; */
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 0;
+  row-gap: 0;
+}
+
+img {
+  width: 100%;
 }
 
 .overlay {
@@ -23,7 +27,7 @@
   transition: 0.5s ease;
   opacity: 0;
   background: rgba(1, 1, 1, 0.64);
-  color: white;
+  color: whitesmoke;
 }
 
 .movie-info:hover {

@@ -12,7 +12,8 @@
 }
 
 .movie-poster {
-  border: 5px solid white;
+  border: 5px solid whitesmoke;
+  width: 25%;
 }
 
 .summary-wrapper {
@@ -29,11 +30,11 @@
 }
 
 h3 {
-  color: white;
+  color: whitesmoke;
 }
 
 p {
-  color: white;
+  color: whitesmoke;
   font-size: 20px;
   text-align: justify;
 }
