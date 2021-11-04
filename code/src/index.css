@@ -16,12 +16,24 @@ code {
 /* MainSite */
 
 .movie-box {
+  /* position: relative; */
   display: flex;
   flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.75);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.movie-and-text {
+  position: relative;
+  display: flex;
 }
 
 .movie-box a {
   width: 25%;
+  text-decoration: none;
 }
 
 .movie-box a img {
@@ -30,45 +42,25 @@ code {
 }
 
 .movie-info {
-  /* position: absolute; */
-  background: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  padding: 10px 20px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
-  /* display: none; */
+  opacity: 0;
 }
 
 .movie-info:hover {
-  display: block;
-}
-
-/* .movie-box .movie-info {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   background: rgba(0, 0, 0, 0.75);
-  display: none;
-  padding: 20px;
+  color: white;
+  transition: 0.2s;
+  opacity: 1;
 }
-
-/* .movie-box a:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-.movie-box .movie-box h1 {
-  margin-top: auto;
-  margin-bottom: 0;
-}
-
-.movie-box a:hover .movie-info {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-end;
-} */
 
 /* DetailsSite */
 
@@ -87,15 +79,6 @@ code {
   top: 0;
   bottom: 0;
   z-index: -1;
-}
-
-.returnbtn {
-  position: absolute;
-  margin-left: 70px;
-  margin-top: 30px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
 }
 
 .poster-img {
