@@ -17,6 +17,7 @@ export const SelectStyle = styled.select`
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+  cursor: pointer;
 
   &:focus {
     box-shadow: 1px 1px 10px goldenrod;

@@ -5,12 +5,12 @@ export const Header = () => {
   return (
     <nav className="nav-links">
       <div className="nav-link-item">
-        <NavLink exact to={"/"}>
+        <NavLink className="nav-bar-link" exact to={"/"}>
           Home
         </NavLink>
       </div>
       <div className="nav-link-item">
-        <NavLink exact to={"/contactUs"}>
+        <NavLink className="nav-bar-link" exact to={"/contactUs"}>
           Contact Us
         </NavLink>
       </div>
