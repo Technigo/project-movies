@@ -40,12 +40,14 @@ const MovieDetails = () => {
 
   return (
     <div>
-      <div className='gradient' />
-      <img
-        className='back-img'
-        src={`http://image.tmdb.org/t/p/w780${movie.backdrop_path}`}
-        alt={movie.title}
-      />
+      <div className='darken'>
+        <img
+          className='back-img'
+          src={`http://image.tmdb.org/t/p/w1280${movie.backdrop_path}`}
+          alt={movie.title}
+        />
+      </div>
+
       <Link to='/' className='back-button' onClick={onButtBackClick}>
         <img class='back-icon' src={require('./BackIcon-01.png')} />
         Movies
@@ -57,12 +59,13 @@ const MovieDetails = () => {
           src={`http://image.tmdb.org/t/p/w342${movie.poster_path}`}
           alt={movie.title}
         />
+
         <div className='movie-text'>
           <h1>
             {movie.original_title}
             <span className='vote'>{movie.vote_average}/10</span>
           </h1>
-          <p>{movie.overview}</p>
+          <p className='overview'>{movie.overview}</p>
         </div>
       </div>
     </div>

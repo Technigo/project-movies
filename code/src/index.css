@@ -1,5 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
+  margin: 0 auto;
+  background-color: #181818;
 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -13,81 +18,26 @@ code {
     monospace;
 }
 
-.back-img {
-  position: relative;
-  min-height: 100vh;
-  min-width: 100vw;
-  object-fit: cover;
-  background-blend-mode: screen;
-  filter: brightness(70%);
-  display: block;
+h1 {
+  font-size: 2.2rem;
+  padding-right: 10px;
 }
 
-.summary {
-  position: absolute;
-  display: flex;
-  align-items: flex-end;
-  top: 740px;
-  left: 60px;
+h2 {
+  font-size: 1rem;
 }
 
-.movie-text {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  padding-left: 50px;
-  max-width: 400px;
+p {
+  font-size: 1rem;
 }
 
-.poster-img {
-  border: 4px solid white;
-  max-width: 500px;
-}
-
-.back-button {
-  top: 0;
-  left: 0;
-  position: absolute;
-  margin: 40px;
-  color: white;
-  display: flex;
-  align-items: center;
-  font-family: 'Roboto', sans-serif;
-  text-decoration: none;
-}
-
-.back-icon {
-  width: 25px;
-  margin: 5px;
-}
-
-.not-found {
-  border: none;
-  color: white;
-  background-color: darkgray;
-  border-radius: 7px;
-  padding: 25px 80px;
-  display: inline-flex;
-  margin: 15px 30px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-  outline: none;
-  position: relative;
-  width: 120px;
-  height: 70px;
-}
-
-.vote {
-  color: red;
-  /* margin-left: 30px; */
-  align-items: inherit;
-}
+/*  MovieList styling  */
 
 .movie-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   scroll-behavior: smooth;
+  overflow-x: hidden; /*  removed white space on right side */
 }
 
 .movie-card {
@@ -98,6 +48,7 @@ code {
 
 .movie-img {
   width: 100%;
+  overflow-x: hidden;
 }
 
 .overlay {
@@ -118,24 +69,103 @@ code {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* this makes the text go down*/
+  justify-content: flex-end; /* this makes the text go down */
   padding-left: 15px;
   padding-right: 15px;
-  /* animation: neon 0.08s ease-in-out infinite alternate; */
 }
 
 .overlay-text:hover {
   opacity: 1;
 }
 
-h1 {
-  font-size: 2.2rem;
-  padding-right: 10px;
+/*  MovieDetail styling  */
+
+.darken {
+  position: relative;
+  margin: 10px;
+  border: 1px solid grey;
+  display: inline-block;
 }
 
-h2 {
-  font-size: 1rem;
+.darken:after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 95%
+  );
 }
+
+.back-img {
+  position: relative;
+  min-height: 100vh;
+  width: 100%; /*  makes the image take out all available space */
+  background-repeat: no-repeat;
+  filter: brightness(70%);
+  display: block;
+  background-position: center;
+  object-fit: cover;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.summary {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  bottom: 50px;
+  left: 50px;
+}
+
+.movie-text {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-left: 30px;
+  padding-right: 20px;
+  max-width: 450px;
+  line-height: 26px;
+}
+
+.overview {
+  margin-bottom: 0;
+}
+
+.poster-img {
+  border: 4px solid white;
+  max-width: 500px;
+}
+
+.back-button {
+  top: 0;
+  left: 0;
+  position: absolute;
+  margin: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+
+.back-icon {
+  width: 45px;
+  margin: 5px;
+  padding-right: 5px;
+}
+
+.vote {
+  color: red;
+  align-items: inherit;
+  font-size: 25px;
+}
+
+/*  Error styling  */
 
 .Error-Page,
 .not-found-page {
@@ -162,10 +192,7 @@ h2 {
   border: none;
 }
 
-.not-found-image {
-  width: 400px;
-  height: 400px;
-}
+/*  NotFound styling  */
 
 .not-found-back,
 .not-found-previous {
