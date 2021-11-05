@@ -10,6 +10,12 @@ const DetailContainerStyled = styled.section`
   height: 100vh;
   position: relative;
   padding: 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
 `
 
 const ArrowStyled = styled.span`
@@ -50,6 +56,12 @@ const BackgroundStyled = styled.img`
 const PosterStyled = styled.img`
   width: 350px;
   border: 5px solid white;
+
+  @media (max-width: 768px) {
+    width: 150px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
 `
 
 const DetailDescriptionStyled = styled.div`

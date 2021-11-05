@@ -6,6 +6,10 @@ import { API_LIST } from 'utils/urls'
 const MoviesContainerStyled = styled.section`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `
 
 const ArrowStyled = styled.span`
@@ -60,7 +64,7 @@ const OverlayStyled = styled.div`
 // if the props 'hasPoster' is true, the color will be white
 // if we don't have a poster image, the color will be black
 const DataStyled = styled.div`
-  color: ${(props) => (props.hasPoster ? 'white' : 'black')};
+  color: ${(props) => (props.hasPoster ? 'white' : 'rgb(255, 246, 0)')};
   height: 100%;
   display: flex;
   flex-direction: column;

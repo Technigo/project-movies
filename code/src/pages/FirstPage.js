@@ -22,8 +22,12 @@ const SectionGridStyled = styled.section`
   grid-template-columns: repeat(4, 1fr);
   max-width: 1200px;
   width: 60%;
-  margin: 10vh auto;
+  margin: 5vh auto;
   grid-gap: 10px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `
 const LinkToCountryStyled = styled(Link)`
   display: flex;
@@ -49,7 +53,12 @@ const LinkToCountryStyled = styled(Link)`
 `
 const TitleStyled = styled.h1`
   margin-top: 10vh;
+  text-align: center;
   color: rgb(238, 235, 221);
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `
 const ToplistStyled = styled.span`
   color: rgb(255, 246, 0);
@@ -59,9 +68,15 @@ const SubHeadingStyled = styled.h2`
   color: rgb(238, 235, 221);
   font-weight: 400;
   font-size: 30px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 21px;
+  }
 `
 const ArrowDownStyled = styled.img`
   width: 50px;
+  margin-top: 10px;
   filter: invert(0.7);
   cursor: not-allowed;
   animation: bounce 1s;
@@ -102,7 +117,7 @@ const FirstPage = () => {
     <>
       <HeaderStyled>
         <TitleStyled>
-          List of <ToplistStyled>Movies</ToplistStyled> you want to see
+          Find the list of <ToplistStyled>movies</ToplistStyled> you want to see
         </TitleStyled>
         <SubHeadingStyled>
           Select a <ToplistStyled>country</ToplistStyled> of your choice
