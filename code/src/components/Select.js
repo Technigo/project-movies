@@ -1,6 +1,4 @@
 import React from 'react'
-import { ReactComponent as Logo } from "../assets/movie_logo.svg";
-import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const NavStyled = styled.nav `
