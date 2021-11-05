@@ -1,0 +1,37 @@
+.details-backdrop {
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.details-backdrop-container {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.details-backdrop-container h3 {
+  font-style: italic;
+}
+
+.details-img {
+  border: 5px solid #fff;
+}
+
+.details-container {
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+}
+
+.details-text {
+  margin-left: 20px;
+  color: #fff;
+}
+
+.details-back-arrow {
+  color: #fff;
+  font-size: 25px;
+  margin-right: 2px;
+}

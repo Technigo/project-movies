@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
+import './details.css';
 import styled from 'styled-components';
-import Favicon from 'react-favicon';
 
 import { DETAILS_URL } from '../utils/urls';
 
+//Remove to css?
 const GoBackButton = styled.button`
   position: absolute;
   left: 50px;
@@ -40,12 +41,27 @@ const Details = () => {
     history.goBack();
   };
 
+  const onHomePageRedirect = () => {
+    history.push('/');
+  };
+
+  const detailsBackdropUrl = details.backdrop_path
+    ? `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})`
+    : '';
+
   const detailsImageUrl = details.poster_path
     ? `https://image.tmdb.org/t/p/w342${details.poster_path}`
     : '';
 
   if (hasError) {
-    return <h2>Sorry, this movie doesn't exist :(</h2>;
+    return (
+      <>
+        <GoBackButton onClick={onHomePageRedirect}>
+          <span className="back-arrow">&#60;</span>BACK TO MOVIES LIST
+        </GoBackButton>
+        <h2>Sorry, this movie doesn't exist!</h2>
+      </>
+    );
   }
 
   return (
@@ -53,14 +69,13 @@ const Details = () => {
       className="details-backdrop-container"
       key={details.id}
       style={{
-        backgroundImage: details.backdrop_path
-          ? `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})`
-          : '',
+        backgroundImage: detailsBackdropUrl,
       }}
     >
       <div>
-        <Favicon url="" />
-        <GoBackButton onClick={onButtonBackClick}>MOVIES</GoBackButton>
+        <GoBackButton onClick={onButtonBackClick}>
+          <span className="back-arrow">&#60;</span>MOVIES
+        </GoBackButton>
       </div>
       <div className="details-container">
         <img className="details-img" src={detailsImageUrl} alt="" />

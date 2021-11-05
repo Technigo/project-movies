@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './leosList.css';
 
 /* 
 FUNCTION FROM STACK OVERFLOW THAT SORTS SOMETHING IN ORDER BY DATE (RELEASE-DATE?)
@@ -24,7 +25,7 @@ const LeosList = ({ movies }) => {
               src={
                 movie.poster_path
                   ? `https://image.tmdb.org/t/p/w780${movie.poster_path}`
-                  : ' '
+                  : 'https://www.themoviedb.org/t/p/original/jqbqNrOIB3alGMX6Gh2MbOKMXZO.jpg' //if there is no thumbnail available, we show a profile pic of Leo
               }
               alt="{movie.title}"
             ></img>

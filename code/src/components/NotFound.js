@@ -2,16 +2,16 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 
+//Tried styled components
 const ButtonNotFound = styled.button`
-  background: #fff;
-  color: black;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  background: transparent;
   border: none;
-  padding: 8px;
-  border-radius: 10px;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-  font-weight: bold;
+  color: #fff;
+  font-weight: 700;
+  padding: 5px;
 `;
 
 const NotFoundDiv = styled.div`
@@ -31,7 +31,7 @@ const NotFound = () => {
     <NotFoundDiv>
       <h2>Sorry this page doesn't exist :(</h2>
       <ButtonNotFound onClick={onHomePageRedirect}>
-        Back to movies list
+        <span className="back-arrow">&#60;</span>BACK TO MOVIES LIST
       </ButtonNotFound>
     </NotFoundDiv>
   );
