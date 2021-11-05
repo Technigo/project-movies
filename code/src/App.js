@@ -17,8 +17,6 @@ export const App = () => {
       .then((data) => setList(data.results));
   }, [select]);
 
-  console.log(list);
-
   return (
     <BrowserRouter>
       <Header />  

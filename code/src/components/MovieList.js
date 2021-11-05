@@ -73,10 +73,10 @@ const MovieList = ({ movie, select, setSelect }) => {
       /> 
       <MainContainerStyled>
         {movie.map((movie) => (
-          <MovieContainer>
+          <MovieContainer
+            key={movie.id}>
             <Link
               to={`/details/${movie.id}`}
-              key={movie.id}
               className="movie-container"
             >
               <Overlay />
