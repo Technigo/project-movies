@@ -1,4 +1,5 @@
 import React from "react";
+import Select from "./Select"
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -9,6 +10,7 @@ const MainContainerStyled = styled.section`
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  padding-top: 80px;
 `;
 
 const Overlay = styled.div`
@@ -62,31 +64,37 @@ const ReleaseDateStyled = styled.p`
   margin-bottom: 15px;
 `;
 
-const MovieList = ({ movie }) => {
+const MovieList = ({ movie, select, setSelect }) => {
   return (
-    <MainContainerStyled>
-      {movie.map((movie) => (
-        <MovieContainer>
-          <Link
-            to={`/details/${movie.id}`}
-            key={movie.id}
-            className="movie-container"
-          >
-            <Overlay />
-            <ImageStyled
-              src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-              alt={movie.title}
-            />
-            <TextContainerStyled>
-              <MovieTitleStyled>{movie.title}</MovieTitleStyled>
-              <ReleaseDateStyled>
-                Released: {movie.release_date}
-              </ReleaseDateStyled>
-            </TextContainerStyled>
-          </Link>
-        </MovieContainer>
-      ))}
-    </MainContainerStyled>
+    <>
+      <Select 
+        select={select}
+        setSelect={setSelect}
+      /> 
+      <MainContainerStyled>
+        {movie.map((movie) => (
+          <MovieContainer>
+            <Link
+              to={`/details/${movie.id}`}
+              key={movie.id}
+              className="movie-container"
+            >
+              <Overlay />
+              <ImageStyled
+                src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+                alt={movie.title}
+              />
+              <TextContainerStyled>
+                <MovieTitleStyled>{movie.title}</MovieTitleStyled>
+                <ReleaseDateStyled>
+                  Released: {movie.release_date}
+                </ReleaseDateStyled>
+              </TextContainerStyled>
+            </Link>
+          </MovieContainer>
+        ))}
+      </MainContainerStyled>
+    </>
   );
 };
 

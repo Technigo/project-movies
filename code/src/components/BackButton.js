@@ -11,7 +11,7 @@ const ButtonTextStyled = styled.h3`
 
 const BackButtonStyled = styled.button`
   position: absolute;
-  top: 50px;
+  top: 110px;
   left: 60px;
   border: none;
   background-color: transparent;
