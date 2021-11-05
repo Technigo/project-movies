@@ -36,12 +36,12 @@ a {
 }
 
 .movie-details h2 {
-  font-size: 24px;
-  margin: 600px 0 0 30px;
+  font-size: 30px;
+  margin: 650px 0 0 30px;
   max-width: 320px;
 }
 
 .movie-details p {
-  font-size: 12px;
+  font-size: 14px;
   margin: 10px 0 0 30px;
 }
