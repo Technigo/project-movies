@@ -1,3 +1,10 @@
+.details-overall {
+  /* position: absolute; */
+  display: flex;
+  align-items: flex-end;
+  margin-left: 32px;
+ 
+}
 
 .info {
   color: white;
@@ -30,12 +37,6 @@ h5 {
 
 }
 
-.details-overall  {
-  font-size: 25px;
-  margin-left: 32px;
-
-}
-
 .detail-rating {
   align-self: start;
   background-color: #ffc107;
@@ -48,12 +49,6 @@ h5 {
   margin-left: 32px;
 }
 
-.details-overall {
-  position: absolute;
-  display: flex;
-  align-items: flex-end;
- 
-}
 
 .overview {
   font-size: 14px;
@@ -97,15 +92,29 @@ h5 {
   transition: all .3s ease-in-out;
 }
 
-@media (min-width: 768px) {
-  .info-container {
+@media (max-width: 768px) {
+
+  .details-overall {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;  
+  }
+
+  .poster {
+    display: flex;
+  }
+
+  .background-container {
+    background-position: center;
+    padding: 20px;
+    background-image: cover;
+    
   }
 
   .overview {
     max-width: 500px;
   }
+
 }
 
 @media (min-width: 1024px) {
@@ -115,6 +124,10 @@ h5 {
 
   .h1 {
     font-size: 35px;
+  }
+
+  .overview {
+    max-width: 500px;
   }
 
 }
