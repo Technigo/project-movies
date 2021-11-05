@@ -1,5 +1,5 @@
 import React from "react";
-import loadingimg from "./images/Loading.mp4"
+
 
 const Loading = () => {
 	return (
