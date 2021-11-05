@@ -1,6 +1,6 @@
 import React from "react"
 import { useHistory } from "react-router"
-import styled from "styled-components"
+import styled from "styled-components/macro";
 
 const SiteContainer = styled.div `
   display: flex;

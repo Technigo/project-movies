@@ -5,7 +5,7 @@ import { Background } from "components/Background";
 import { ReturnButton } from "components/ReturnButton";
 import NotFound from "components/NotFound";
 import Spinner from "components/Spinner";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const SummaryDiv = styled.div`
   display: flex;

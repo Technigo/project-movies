@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import styled from 'styled-components'
+import styled from "styled-components/macro";
 import Logo from '../logo.png'
 
 const StyledHeader = styled.header `

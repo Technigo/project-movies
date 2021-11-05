@@ -1,5 +1,5 @@
 # Project Movies
-
+This is a pair-programming-project done by Jenny Quach and Birgit Nehrwein.
 In this week's project we focused on how to make React apps with multiple pages using routes. In this app, we've used an API to fetch popular and upcoming movies in the US.
 
 ##Learning objectives
