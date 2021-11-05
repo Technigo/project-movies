@@ -110,6 +110,17 @@ const FooterStyled = styled.footer`
   font-size: 14px;
   color: rgb(238, 235, 221);
   text-align: center;
+  margin-bottom: 10px;
+`
+const FooterLinkStyled = styled.a`
+  font-size: 14px;
+  color: rgb(238, 235, 221);
+  color: rgb(255, 246, 0);
+  text-decoration: none;
+
+  &:visited {
+    color: rgb(255, 246, 0);
+  }
 `
 
 const FirstPage = () => {
@@ -162,7 +173,25 @@ const FirstPage = () => {
           Croatia
         </LinkToCountryStyled>
       </SectionGridStyled>
-      <FooterStyled>© by Elin & Katie | Technigo</FooterStyled>
+      <FooterStyled>
+        © by&nbsp;
+        <FooterLinkStyled
+          href='https://www.linkedin.com/in/elin-elmvik-diczfalusy/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Elin
+        </FooterLinkStyled>
+        &nbsp;&&nbsp;
+        <FooterLinkStyled
+          href='https://www.linkedin.com/in/katie-wu-213a82150/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Katie
+        </FooterLinkStyled>
+        &nbsp;| Technigo
+      </FooterStyled>
     </>
   )
 }
