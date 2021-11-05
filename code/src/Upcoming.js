@@ -12,10 +12,8 @@ const Upcoming = () => {
     setLoading(true);
     fetch(UpcomingUrl)
       .then((res) => res.json())
-      .then((json) => {
-        setTimeout(() => setLoading(false), 2000);
-        setMovies(json.results);
-      });
+      .then((json) => setMovies(json.results))
+      .finally(setLoading(false));
   }, []);
 
   return (
