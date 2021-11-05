@@ -1,12 +1,10 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Building a multi-age React application using an api. Done pair programming by Amanda Tilly & Naushin Malik.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The main goal was to create a multi page application by loading dynamic content. We used pre-defined components to route between pages and used the useParam hook to get the id from the url and then passed it into an api call to fetch the details and then rendering it to the page.
 
 ## View it live
 
