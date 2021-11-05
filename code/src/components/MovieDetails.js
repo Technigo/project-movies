@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
-import { DETAILS_URL } from "../utils/urls"
+import { DETAILS_URL } from '../utils/urls';
 
 const MovieDetails = () => {
-  const [details, setDetails] = useState({})
+  const [details, setDetails] = useState({});
 
-  const { info } = useParams()
+  const { info } = useParams();
 
   useEffect(() => {
     fetch(DETAILS_URL(info))
@@ -16,7 +16,6 @@ const MovieDetails = () => {
         console.log("DETAILS API INFO HERE ", data)
       })
   }, [info])
-
   return (
     <>
       <div
@@ -41,4 +40,4 @@ const MovieDetails = () => {
   )
 }
 
-export default MovieDetails
+export default MovieDetails;

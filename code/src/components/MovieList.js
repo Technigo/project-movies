@@ -1,5 +1,6 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 const MovieList = ({ movies }) => {
   return (
@@ -11,6 +12,7 @@ const MovieList = ({ movies }) => {
               className="list-poster"
               src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
               alt="poster of the movie"
+
             />
 
             <div className="title-release">
