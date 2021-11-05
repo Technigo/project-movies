@@ -30,8 +30,6 @@
   color: #fff;
 }
 
-.details-back-arrow {
-  color: #fff;
-  font-size: 25px;
-  margin-right: 2px;
+.fa-back {
+  vertical-align: middle;
 }

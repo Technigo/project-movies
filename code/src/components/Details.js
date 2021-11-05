@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import './details.css';
 import styled from 'styled-components';
+import { FaChevronCircleLeft } from 'react-icons/fa';
 
 import { DETAILS_URL } from '../utils/urls';
 
@@ -14,7 +15,7 @@ const GoBackButton = styled.button`
   border: none;
   color: #fff;
   font-weight: 700;
-  padding: 5px;
+  font-size: 16px;
 `;
 
 const Details = () => {
@@ -57,7 +58,9 @@ const Details = () => {
     return (
       <>
         <GoBackButton onClick={onHomePageRedirect}>
-          <span className="back-arrow">&#60;</span>BACK TO MOVIES LIST
+          {/* <span className="back-arrow">&#60;</span>BACK TO MOVIES LIST */}
+          <FaChevronCircleLeft size="30" className="fa-back" />
+          &nbsp;
         </GoBackButton>
         <h2>Sorry, this movie doesn't exist!</h2>
       </>
@@ -74,7 +77,8 @@ const Details = () => {
     >
       <div>
         <GoBackButton onClick={onButtonBackClick}>
-          <span className="back-arrow">&#60;</span>MOVIES
+          <FaChevronCircleLeft size="30" className="fa-back" />
+          &nbsp; MOVIES
         </GoBackButton>
       </div>
       <div className="details-container">
