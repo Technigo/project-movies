@@ -99,7 +99,6 @@ const MovieList = () => {
           to={`/list/${countryCode}/movie/${movie.id}`}
           key={movie.id}
         >
-          {/* {console.log(`/list/${countryCode}/movie/${movie.id}`)} */}
           {movie.poster_path === null ? (
             <MovieImgStyled
               src='/assets/notitleposter.png'
@@ -111,7 +110,7 @@ const MovieList = () => {
               alt={movie.title}
             />
           )}
-          {/* passed props 'hasPoster' for styling */}
+          {/* pass props 'hasPoster' for styling */}
           <OverlayStyled hasPoster={movie.poster_path !== null}>
             <DataStyled hasPoster={movie.poster_path !== null}>
               <TitleStyled>{movie.title}</TitleStyled>

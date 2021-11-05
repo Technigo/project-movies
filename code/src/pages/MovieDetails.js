@@ -80,7 +80,6 @@ const MovieDetails = () => {
   const [loading, setLoading] = useState(true)
   const { movieId } = useParams()
   const { countryCode } = useParams()
-  // const history = useHistory()
 
   useEffect(() => {
     fetch(
@@ -91,11 +90,6 @@ const MovieDetails = () => {
       .finally(() => setLoading(false))
   }, [movieId])
 
-  // const onBackLinkClick = () => {
-  //   history.goBack()
-  //   console.log(history)
-  // }
-
   return (
     <>
       {loading ? (
@@ -104,15 +98,9 @@ const MovieDetails = () => {
         <DetailContainerStyled>
           <>
             <DetailLinkStyled to={`/list/${countryCode}`}>
-              {/* <button
-              type='button'
-              onClick={onBackLinkClick}
-              className='detail-link'
-            ></button> */}
               <ArrowStyled>&#10688;</ArrowStyled>
               Movies
             </DetailLinkStyled>
-            {/* *FIXAT(tror jag..)!* 404 ERROR!! När vi inte har en backgrundsbild/posterbild!!! */}
             {details.backdrop_path === null ? (
               <BackgroundStyled
                 src='/assets/notitleposter.png'

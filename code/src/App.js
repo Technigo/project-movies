@@ -6,12 +6,6 @@ import MovieList from 'pages/MovieList'
 import MovieDetails from 'pages/MovieDetails'
 
 export const App = () => {
-  // const [country, setCountry] = useState('')
-
-  // const onCountryChange = (event) => {
-  //   setCountry(event.target.value)
-  // }
-
   return (
     <BrowserRouter>
       <Switch>
