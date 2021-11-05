@@ -5,7 +5,6 @@ import MovieList from './components/MovieList';
 import MovieDetails from './components/MovieDetails';
 import NotFound from './components/NotFound';
 import { BASE_URL } from './utils/urls';
-import LoadingItem from 'components/LoadingItem';
 
 export const App = () => {
   const [list, setList] = useState([]);

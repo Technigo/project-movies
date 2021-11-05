@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  /* background: linear-gradient(rgba(0, 0, 0, 0) 80%, rgb(0, 0, 0) 100%); */
 }
 
 body {
@@ -33,18 +32,6 @@ p {
 }
 
 /*  MovieList styling  */
-
-.vote-list {
-  font-size: 12px;
-  color: red;
-  display: flex;
-}
-
-.vote-title {
-  display: flex;
-  flex-direction: row;
-  align-items: right;
-}
 
 .movie-container {
   display: grid;
@@ -175,58 +162,6 @@ p {
   line-height: 40px;
 }
 
-/*  spinner styling  */
-
-.spinner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 100vh;
-  min-height: 200px;
-  background: black;
-}
-
-.loader {
-  margin: 5px auto;
-  color: #333;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: $font;
-}
-
-.loader_text {
-  margin: 5px auto;
-  color: #333;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.loader_filmstrip {
-  position: relative;
-  width: 56px;
-  height: 70px;
-  background: #333;
-  z-index: -1;
-}
-
-.loader_filmstrip:before:after {
-  content: '';
-  position: absolute;
-  height: 120%;
-  border-left: 5px dashed #333;
-  animation: roll 20ms infinite;
-}
-
-@keyframes roll {
-  0% {
-    top: 0px;
-  }
-  100% {
-    top: -15px;
-  }
-}
-
 /*  Error styling  */
 
 .error-p {
@@ -236,6 +171,7 @@ p {
 .error-btn:hover {
   background-color: #5cbf2a;
 }
+
 .error-btn:active {
   position: relative;
   top: 1px;
@@ -256,6 +192,10 @@ p {
   min-height: 100vh;
   margin-top: 0;
   color: white;
+}
+
+.not-found-page p {
+  font-size: 30px;
 }
 
 .error-btn {
@@ -295,6 +235,7 @@ p {
 .not-found-previous:hover {
   background-color: #5cbf2a;
 }
+
 .not-found-back:active,
 .not-found-previous:active {
   position: relative;
@@ -333,21 +274,49 @@ p {
   .details-container {
     max-width: 767px;
   }
+
   .movie-text {
     padding-right: 70px;
   }
+
   .back-button {
     padding-left: 20px;
   }
+
   .overview {
     font-size: 12px;
   }
+
   .title {
     font-size: 21px;
   }
 
   .vote {
     font-size: 17px;
+  }
+
+  .error-p {
+    font-size: 14px;
+  }
+
+  .error-btn {
+    padding: 17px 30px;
+  }
+
+  .not-found-page h1 {
+    font-size: 17px;
+  }
+
+  .not-found-page p {
+    font-size: 14px;
+  }
+
+  .not-found-back {
+    padding: 13px 19px;
+  }
+
+  .not-found-previous {
+    padding: 13px 19px;
   }
 }
 
