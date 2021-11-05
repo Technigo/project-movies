@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
-
-import { API_KEY } from "utils/urls"
-// import { Button } from "./Button"
-import styled from "styled-components"
-
 import { FaChevronCircleLeft } from "react-icons/fa"
 import { IconContext } from "react-icons"
+import { API_KEY } from "utils/urls"
+
+import styled from "styled-components"
 
 export const BackgroundPoster = styled.div`
   background-position: center;
@@ -83,8 +81,7 @@ const Details = () => {
                 marginLeft: "10px",
               }}
             >
-              {" "}
-              Movies{" "}
+              Movies
             </h2>
           </div>
         </IconContext.Provider>

@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "react-router-dom"
-
 import styled from "styled-components"
 
 export const MovieContainer = styled.div`
@@ -51,11 +50,9 @@ const List = ({ movies }) => {
 
               <MovieOverlay>
                 <h3 style={{ margin: "0 0 10px 10px" }}>
-                  {" "}
                   {movie.original_title}{" "}
                 </h3>
                 <p style={{ margin: "0 0 20px 10px" }}>
-                  {" "}
                   Released {movie.release_date}
                 </p>
               </MovieOverlay>

@@ -1,13 +1,11 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was building a multi-page appplication using React Router with styled components. It was a pair-programming project. The aim was also practice using APIs in React - combining useState with useEffect.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started codeing along with the lecture and implement our own components in the project. If we had more time we would continue with extra features.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://movies-site-patrik-pinar.netlify.app/
