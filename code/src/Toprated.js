@@ -11,8 +11,10 @@ const Toprated = () => {
     setLoading(true);
     fetch(TopRatedUrl)
       .then((res) => res.json())
-      .then((json) => setMovies(json.results))
-      .finally(setLoading(false));
+      .then((json) => {
+        setTimeout(() => setLoading(false), 2000);
+        setMovies(json.results);
+      });
   }, []);
 
   return (

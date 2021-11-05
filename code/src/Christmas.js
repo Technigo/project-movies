@@ -12,8 +12,10 @@ const Christmas = () => {
     setLoading(true);
     fetch(ChristmasUrl)
       .then((res) => res.json())
-      .then((json) => setMovies(json.results))
-      .finally(setLoading(false));
+      .then((json) => {
+        setTimeout(() => setLoading(false), 2000);
+        setMovies(json.results);
+      });
   }, []);
 
   return (
@@ -26,7 +28,7 @@ const Christmas = () => {
               <div className="movieListContent">
                 <div className="textMovieList">
                   <h1>{movie.title}</h1>
-      
+
                   <p>
                     Release date:
                     <Moment format="MM/DD">{movie.release_date}</Moment>

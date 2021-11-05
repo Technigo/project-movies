@@ -18,14 +18,12 @@ const MovieDetail = () => {
       .then((res) => res.json())
       .then((json) => {
         if (json.id) {
-          console.log(json);
+          setTimeout(() => setLoading(false), 2000);
           setMovie(json);
         } else {
           setHasError(true);
         }
-      })
-      .catch(() => setHasError(true))
-      .finally(setLoading(false));
+      });
   }, [id]);
 
   if (hasError) {
