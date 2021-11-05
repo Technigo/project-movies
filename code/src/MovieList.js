@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Moment from "react-moment";
 import { Link } from "react-router-dom";
-import Loading from "components/Loading";
+import Loading from "Loading";
 import { PopularUrl } from "Urls";
 
 const MovieList = () => {
@@ -11,15 +11,17 @@ const MovieList = () => {
 	useEffect(() => {
 		setLoading(true);
 		fetch(PopularUrl)
-			.then((res) => res.json())
-			.then((json) => setMovies(json.results))
-			.finally(setLoading(false));
+		.then((res) => res.json())
+		.then((json) => {
+			setTimeout(() => setLoading(false), 2000)
+			setMovies(json.results)
+		})
 	}, []);
 
 	return (
 		<div className="movieListContainer">
 			{loading && <Loading />}
-			{movies.map((movie) => (
+			{movies && movies.map((movie) => (
 				<Link key={movie.id} to={`/movies/${movie.id}`}>
 					<section className="contentBlock">
 						<div className="overlay">

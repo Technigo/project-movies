@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Moment from "react-moment";
 import { API_KEY } from "Urls";
-import Loading from "./Loading";
+import Loading from "../Loading";
 import { Link } from "react-router-dom";
 import page404 from "../images/page404.mp4";
 

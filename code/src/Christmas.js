@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Loading from "components/Loading";
+import Loading from "Loading";
 import { ChristmasUrl } from "Urls";
 import Moment from "react-moment";
 
