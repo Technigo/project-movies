@@ -45,11 +45,21 @@ const onButtonBackClick = () => {
 };
 
 return (
-<div>
-<button onClick={onButtonBackClick}>Back</button>
-<div>{movieDetails.title}</div>
-{movieDetails.overview} <img src={`https://image.tmdb.org/t/p/w300${movieDetails.poster_path}`} alt="{movieDetails.title}"/>
- <img src={`https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`} alt="{movieDetails.title}"/>
+<div className="details-container">
+    <img src={`https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`} alt="{movieDetails.title}"/>
+
+ <button className="back-button" onClick={onButtonBackClick}><i class="fa fa-chevron-circle-left"></i>Back to the list</button>
+  
+  <div className="movie-info-wrapper">
+    <img src={`https://image.tmdb.org/t/p/w300${movieDetails.poster_path}`} alt="{movieDetails.title}"/>
+    
+    <div className="movie-info-text-wrapper">
+        <h1 className="details-h1">{movieDetails.title}
+        {/* <span class to be able to style only a part of the text (the rating) red */} 
+        <span className="rating">{movieDetails.vote_average}/10 </span>  </h1>
+        <p className="details-p">{movieDetails.overview}</p>
+ </div>
+ </div>
 </div>
 
 );

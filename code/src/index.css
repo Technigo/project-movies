@@ -1,9 +1,10 @@
-*
-{
+* {
   margin: 0;
   box-sizing: border-box;
- 
 }
+
+/* font awesome import needed for the "go back" arrow used in the details page  */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 
 body {
   margin: 0;
@@ -19,24 +20,142 @@ code {
     monospace;
 }
 
+/* LIST page styling */
+
+/* Wrap option to make the movie posters "wrap" to the page. */
 .full-page-container {
   display: flex;
-  /* For the fun of it, the titles are in reverse order  */
   flex-wrap: wrap;
   background-color: black;
-  border: solid orange;
   margin-right: 0px;
 }
 
-.movie-list-image {
+a {
+  width: 25%;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+100% to fill upp the whole box and not leave space between to the next poster */
+a img {
   position: relative;
   width: 100%;
 } 
 
-.movie-img {
-width: 100%;
-} 
+.movie-date-title-text-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  padding: 20px;
+}
 
+.movie-date-title-text-box h1 {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+a:hover .movie-date-title-text-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+/* DETAILS page styling */
+
+.details-container{
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+/* Styling shown "after", ie on top of the styling above, the gradient is copied from some fellow students, but changed color  */
+.details-container:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0) 0%,
+    rgb(172, 24, 24) 100%
+  );
+}
+
+/* Put all the styling in the button, some fellow students had made .classname >.button dont understand that */
+.back-button {
+  z-index: 1;
+  position: absolute;
+  top: 20px;
+  margin-left: 20px;
+  padding: 10px;
+  padding: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+}
+
+/* on top of the button there is an font awesome arrow, why called fa?? */
+.fa {
+  color: #fff;
+  font-size: 25px;
+  margin-right: 2px;
+}
+/* container/wrapper for poster img, title, rating and plot summary */
+.movie-info-wrapper {
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+  position: absolute;
+  z-index: 1;
+}
+
+.movie-info-wrapper img {
+  border: 3px solid white;
+  width: 25%;
+}
+
+/* container/wrapper for title, rating and plot summary */
+.movie-info-text-wrapper{
+  align-items:center;
+  padding: 40px;
+}
+/* The title */
+.details-h1{
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+/* border radius 25% so that the edges of the background color would be rounded */
+.rating {
+  background-color: red;
+  color:white;
+  margin-left: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  padding:6px; 
+  border-radius: 25px;
+}
+/* The movie plot summary text */
+.details-p {
+  color: white;
+  max-width: 350px;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+/* 
 .movie-date {
   display: none;
   flex-direction: column;
@@ -55,7 +174,7 @@ width: 100%;
   display: flex;
 }
 
-/* .movie-image-wrapper {
+.movie-list-image-wrapper {
   justify-content: space-around;
   align-items: center;
   top: 0;
