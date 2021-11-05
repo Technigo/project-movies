@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: black; */
+  background-color: black;
   box-sizing: border-box;
 }
 
@@ -14,46 +14,78 @@ code {
     monospace;
 }
 
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.loading-container {
+  width: 200px;
+  border: 3px solid black;
+}
+
+.loading {
+  height: 10px;
+  width: 200px;
+  background: red;
+  animation: loader infinite 0.6s;
+}
+
+@keyframes loader {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 50%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px 0 10px;
+}
+
 .movie-container {
   display: flex;
   flex-direction: column;
   margin: 20px 0;
   background-color: black;
-  border: solid 5px #fff;
+  border: 2px solid;
 }
 
-.summary {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 50px;
-  font-size: 16px;
-  font-weight: 700;
-  color: white;
+.movie-container:hover {
+  animation: frame infinite 0.8s;
 }
 
-.release {
-  display: none;
-  color: white;
-  font-size: 18px;
-  padding: 15px;
-  margin: 0;
-}
+@keyframes frame {
+  0% {
+    border-color: white;
+  }
 
-.back-button {
-  display: inline-block;
-  color: white;
-  font-size: 16px;
-  padding: 50px;
-}
+  50% {
+    border-color: #ff4d4d;
+  }
 
-a {
-  display: none;
-  color: white;
-  font-size: 32px;
-  font-weight: 700;
-  padding: 15px;
-  text-decoration: none;
+  75% {
+    border-color: #e60000;
+  }
+
+  100% {
+    border-color: #800000;
+  }
 }
 
 .overlay-container {
@@ -73,25 +105,60 @@ a {
   align-items: flex-start;
 }
 
-.overlay:hover {
-  background-color: rgba(46, 49, 49, 0.7);
-}
-
-.overlay:hover > a,
-.overlay:hover > .release {
-  display: block;
-}
-
-img {
+.main-movie {
   width: 100%;
   display: block;
 }
 
-.rating {
-  color: red;
-  font-size: 17px;
-  font-weight: 400;
-  margin-top: 5px;
+.movie-anchor {
+  display: none;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.overlay:hover {
+  background-color: rgba(46, 49, 49, 0.7);
+}
+
+.overlay:hover > .movie-anchor,
+.overlay:hover > .release {
+  display: block;
+}
+
+.release {
+  display: none;
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  margin: 0;
+}
+
+.background {
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
 }
 
 .movie-detail {
@@ -102,5 +169,113 @@ img {
 .detail {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 25px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.rating {
+  color: red;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.overview {
+  font-size: 16px;
+  font-weight: 400;
+  background-color: rgba(0, 0, 0, 0.596);
+  opacity: 0.8;
+  padding: 2px;
+}
+
+.back-button {
+  display: inline-block;
+  color: white;
+  font-size: 16px;
+  padding: 50px;
+  text-decoration: none;
+}
+
+.svg-outer-container {
+  display: flex;
+}
+
+.svg-container {
+  width: 20px;
+  padding-right: 2px;
+}
+
+.button-text {
+  margin: 0;
+}
+
+.button-text:hover {
+  padding-left: 5px;
+  transition: 0.3s;
+}
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.not-found-message {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.not-found {
+  height: 40px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .outer-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .movie-container {
+    width: 47%;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+  .overview {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) {
+  .movie-container {
+    width: 23%;
+  }
+
+  .movie-anchor {
+    font-size: 24px;
+  }
+
+  .summary {
+    flex-direction: row;
+    align-items: end;
+    margin-top: 17%;
+  }
+  .detail {
+    margin-left: 15px;
+  }
+  .movie-detail {
+    width: 300px;
+  }
 }

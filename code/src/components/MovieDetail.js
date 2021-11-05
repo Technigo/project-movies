@@ -1,46 +1,62 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { DETAIL_URL } from "utils/url";
 import Nav from "./Nav";
+import Loading from "./Loading";
+import PageNotFound from "./PageNotFound";
 
 const MovieDetail = () => {
+  const [detail, setDetail] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [hasError, setHasError] = useState(false);
   const { id } = useParams();
-  const [detail, setDetail] = useState([]);
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=abdb03f8abcf67d9d8dda1bdbff21b0a&language=en-US`
-    )
+    setLoading(true);
+    fetch(DETAIL_URL(id))
       .then((res) => res.json())
-      .then((data) => setDetail(data));
+      .then((data) => {
+        if (data.id) {
+          setDetail(data);
+        } else {
+          setHasError(true);
+        }
+      })
+      .catch(() => setHasError(true))
+      .finally(() => setLoading(false));
   }, [id]);
 
+  if (hasError) {
+    return <PageNotFound />;
+  }
   console.log(detail);
 
-  if (detail === undefined) {
-    return <></>;
-  }
   return (
     <section className="detail-container">
+      {loading && <Loading />}
       <div
         className="background"
         style={{
-          backgroundImage: `url(https://image.tmdb.org/t/p/w1280${detail.backdrop_path}),
+          backgroundImage: `url(https://image.tmdb.org/t/p/w1280${detail?.backdrop_path}),
           linear-gradient(rgba(0,0,0,0) 70%,rgba(0,0,0,100%)`,
-          backgroundPosition: "left",
         }}
-        alt={detail.title}
+        alt={detail?.title}
       >
         <Nav />
         <div className="summary">
           <img
             className="movie-detail"
-            src={`https://image.tmdb.org/t/p/w500${detail.poster_path}`}
+            src={
+              detail.poster_path
+                ? `https://image.tmdb.org/t/p/w500${detail.poster_path}`
+                : ""
+            }
             alt="movie-title"
           />
           <div className="detail">
-            <div>{detail.title}</div>
-            <div className="rating">{detail.vote_average}/10</div>
-            <p>{detail.overview}</p>
+            <div className="title">{detail?.title}</div>
+            <div className="rating">{detail?.vote_average}/10</div>
+            <p className="overview">{detail?.overview}</p>
           </div>
         </div>
       </div>
