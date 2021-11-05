@@ -1,0 +1,26 @@
+.notfound-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+button {
+  background: none;
+  border: solid 2px black;
+  font-weight: bold;
+  color: black;
+  padding: 10px;
+  margin: 0;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+  width: 150px;
+}
