@@ -13,8 +13,8 @@ body {
 	background-color: black;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	font-family: "Cairo", sans-serif;
-	font-family: "Zen Antique Soft", serif;
+	font-family: 'Bebas Neue', cursive;
+	font-size: x-large;
 }
 
 .movie-container {
@@ -94,6 +94,7 @@ img {
 	margin-inline-start: 0px;
 	margin-inline-end: 0px;
 	font-weight: bold;
+	color: #fff;
 }
 
 .ratings {
@@ -111,6 +112,7 @@ img {
 	margin-block-end: 1em;
 	margin-inline-start: 0px;
 	margin-inline-end: 0px;
+	color: #fff;
 }
 
 .showcase {
