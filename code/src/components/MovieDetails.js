@@ -4,6 +4,7 @@ import { DETAILS_URL } from "utils/urls";
 import './moviedetails.css'
 import { useHistory } from "react-router-dom";
 // import { FaChevronCircleLeft } from 'react-icons/fa' <FaChevronCircleLeft />
+import { AiOutlineArrowLeft } from "react-icons/ai";
 
 const MovieDetails = () => {
 const [movieDetails, setMovieDetails] = useState({});
@@ -22,7 +23,7 @@ useEffect(() => {
  
 return (
     <section className="wrapper-details">
-        <button className="backbutton" onClick={() => history.goBack()}>  <h3 className="button-text">Movies</h3></button>
+        <button className="backbutton" onClick={() => history.goBack()}> <AiOutlineArrowLeft /> <h3 className="button-text">Movies</h3></button>
         <div className="background-image" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`,}}>
             <div className="movie-poster">
                 <img className="poster-image" src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`}
