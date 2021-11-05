@@ -15,7 +15,6 @@ const Details = () => {
 	const [error, setError] = useState(false)
 
   const { movie_id } = useParams()
-	console.log(movie_id)
 	const history = useHistory()
 
 	useEffect(() => {
@@ -31,23 +30,7 @@ const Details = () => {
 			.catch(() => setError(true))
 		}, [movie_id])
 
-
-	// useEffect(() => {
-	// 	fetch(DETAILS_URL(movie_id))
-	// 		.then((res) => res.json())
-	// 		.then((data) => {
-	// 			// if (data.id) {
-	// 				setDetails(data)
-	// 		// 	} else {
-	// 		// 		setError(true)
-	// 		// 	}
-	// 		// })
-	// 		// .catch(() => setError(true))
-	//   }, []) 	
-  // })
-
 	const onButtonBackClick = () => {
-		// history.goBack()
 		history.push('/')
 	}
 
@@ -61,12 +44,18 @@ const Details = () => {
 	}
 
   return (
-	  <div className="details-container">
-		  <Button onClick={onButtonBackClick}/>
-		  <img className="small-movie-poster" src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt={details.title} />
-		  <img className="background-poster" src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt={details.title}/>
+		<main className='posterBackground' style={{ 
+      backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` 
+    }}>
+      <div className="detailsContainer" >
+		    <Button onClick={onButtonBackClick}/>
+				<div className="movieDetailsContainer">
+					<img className="smallMoviePoster" src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt={details.title} />
+				  <h2>{details.title}</h2>
+				</div>
 			{/* <GoBackButton onClick={onButtonBackClick}>Go back</GoBackButton> */}
-	  </div>
+	    </div>
+		</main>
 	)
 }
 
