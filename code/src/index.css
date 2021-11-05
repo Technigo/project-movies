@@ -35,6 +35,10 @@ code {
   position: relative;
 }
 
+.movie-container img {
+  width: 100%;
+}
+
 .movie-link {
   width: 100%;
 }
@@ -217,6 +221,7 @@ code {
   .main-container {
     flex-direction: row;
   }
+
   .movie-link {
     width: 50%;
   }
