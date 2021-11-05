@@ -77,7 +77,7 @@ export const Details = ({ imageInformation }) => {
           <TextContainer>
             <h1>{movieDetail.title}</h1>
             <ImgDiv>
-              <img
+              <Image
                 src={PosterPath(movieDetail.poster_path)}
                 alt={`Poster for ${movieDetail.title}`}
               />
@@ -114,11 +114,19 @@ const Background = styled.div`
 const TextContainer = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   color: white;
-  max-width: 500px;
-  margin: 0 auto;
+  max-width: 355px;
+  margin: 0 auto 10px auto;
   padding: 20px;
-  margin: 0 auto;
   border: 1px solid white;
+
+  @media (min-width: 668px) and (max-width: 1024px) {
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+  }
+  @media only screen and (min-width: 1025px) {
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+  }
 
   h1 {
     text-align: center;
@@ -148,6 +156,14 @@ const ImgDiv = styled.div`
   display: flex;
   justify-content: center;
   align-self: center;
+`;
+
+const Image = styled.img`
+  width: 325px;
+
+  @media (min-width: 668px) and (max-width: 1024px) {
+    width: 500px;
+  }
 `;
 
 const Error = styled.div`
