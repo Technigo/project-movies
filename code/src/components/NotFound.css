@@ -1,7 +1,9 @@
-h1.\34 04-text {
+h1.\34 04-text{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 35px;
+    color: #fff;
 }
 
 .back-btn-404 
@@ -14,7 +16,6 @@ h1.\34 04-text {
     background-color: transparent;
     font-size: 20px;
     cursor: pointer;
-    padding-top: 25px;
 }
 
 
@@ -30,4 +31,8 @@ h1.\34 04-text {
 
 .back-btn-404 :hover {
 color: #e60073;
+}
+
+.navbar{
+display: none;
 }
