@@ -7,7 +7,7 @@ const BackLink = styled.div`
   position: absolute;
   display: inline-flex;
   align-items: center;
-  left: 70px;
+  left: 80px;
   top: 50px;
   opacity: 0.6;
   transition: 0.3 ease;
@@ -68,21 +68,29 @@ const DetailSite = () => {
         src={`https://image.tmdb.org/t/p/original${details.backdrop_path}`}
         alt="backdropimg"
       />
-      <div className="movie-detail-info">
+      <div className="mobile-box-poster-info">
         <img
           className="poster-img"
           src={`https://image.tmdb.org/t/p/w400${details.poster_path}`}
           alt="poster"
         />
+        <section className="details-text">
+          <div className="details-head">
+            <h2>{details.original_title}</h2>
+            <p className="rating">{details.vote_average}/10</p>
+          </div>
+          <p>Description: {details.overview}</p>
+          <p>
+            <b>Genre:</b> {details?.genres?.map((genre) => genre.name + ", ")}{" "}
+          </p>
+          <p>
+            <b>Language:</b> {details.original_language}
+          </p>
+          <p>
+            <b>Length:</b> {details.runtime} min
+          </p>
+        </section>
       </div>
-      <section className="details-text">
-        <div className="details-head">
-          <h2>{details.original_title}</h2>
-          <p className="rating">{details.vote_average}/10</p>
-          <p>{details?.genres?.map((genre) => genre.name)} </p>
-        </div>
-        <p>Description: {details.overview}</p>
-      </section>
     </div>
   );
 };

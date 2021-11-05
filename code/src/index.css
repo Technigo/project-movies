@@ -16,7 +16,6 @@ code {
 /* MainSite */
 
 .movie-box {
-  /* position: relative; */
   display: flex;
   flex-wrap: wrap;
   background: rgba(0, 0, 0, 0.75);
@@ -106,4 +105,24 @@ code {
 .rating {
   margin-left: 15px;
   color: red;
+}
+
+@media (max-width: 920px) {
+  .details-text {
+    width: 200px;
+  }
+}
+
+@media (max-width: 730px) {
+  .poster-img {
+    width: 300px;
+    left: 20px;
+  }
+
+  .details-text {
+    bottom: 30px;
+    left: 30px;
+    z-index: 1;
+    width: 300px;
+  }
 }
