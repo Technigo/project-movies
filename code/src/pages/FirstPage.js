@@ -1,20 +1,20 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import styled from "styled-components"
+import React from 'react'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
 const countries = {
-  sweden: "SE",
-  japan: "JP",
-  india: "IN",
-  iran: "IR",
-  thailand: "TH",
-  china: "CN",
-  morocco: "MA",
-  mexico: "MX",
-  egypt: "EG",
-  brazil: "BR",
-  turkey: "TR",
-  croatia: "HR",
+  sweden: 'SE',
+  japan: 'JP',
+  india: 'IN',
+  iran: 'IR',
+  thailand: 'TH',
+  china: 'CN',
+  morocco: 'MA',
+  mexico: 'MX',
+  egypt: 'EG',
+  brazil: 'BR',
+  turkey: 'TR',
+  croatia: 'HR',
 }
 
 const SectionGridStyled = styled.section`
@@ -24,9 +24,6 @@ const SectionGridStyled = styled.section`
   width: 60%;
   margin: 10vh auto;
   grid-gap: 10px;
-  border: 1px solid rgb(255, 0, 92);
-  padding: 50px;
-  box-shadow: 3px 3px 3px;
 `
 const LinkToCountryStyled = styled(Link)`
   display: flex;
@@ -34,7 +31,7 @@ const LinkToCountryStyled = styled(Link)`
   justify-content: center;
   align-items: center;
   text-decoration: none;
-
+  font-weight: 700;
   height: 10vh;
   text-align: center;
   color: rgb(238, 235, 221);
@@ -46,24 +43,47 @@ const LinkToCountryStyled = styled(Link)`
     background-color: rgba(0, 0, 0, 0.5);
     color: rgb(255, 246, 0);
     font-size: larger;
+    position: relative;
+    right: 10px;
   }
 `
-
 const TitleStyled = styled.h1`
-  text-align: center;
   margin-top: 10vh;
   color: rgb(238, 235, 221);
 `
 const ToplistStyled = styled.span`
   color: rgb(255, 246, 0);
 `
+const SubHeadingStyled = styled.h2`
+  margin: 4vh 0;
+  color: rgb(238, 235, 221);
+  font-weight: 400;
+  font-size: 30px;
+`
+const ArrowDownStyled = styled.img`
+  width: 50px;
+  filter: invert(0.7);
+  cursor: not-allowed;
+`
+const HeaderStyled = styled.header`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
 const FirstPage = () => {
   return (
     <>
-      <TitleStyled>
-        Choose which country <ToplistStyled>toplist</ToplistStyled> you want to
-        see
-      </TitleStyled>
+      <HeaderStyled>
+        <TitleStyled>
+          List of <ToplistStyled>Movies</ToplistStyled> you want to see
+        </TitleStyled>
+        <SubHeadingStyled>
+          Select a <ToplistStyled>country</ToplistStyled> of your choice
+        </SubHeadingStyled>
+        <ArrowDownStyled src='/assets/chevron.png' alt='arrow down' />
+      </HeaderStyled>
       <SectionGridStyled>
         <LinkToCountryStyled to={`/list/${countries.sweden}`}>
           Sweden
@@ -107,27 +127,3 @@ const FirstPage = () => {
 }
 
 export default FirstPage
-
-// <form onSubmit={onHandleSubmit}>
-//   <label htmlFor='country'>
-//     Choose country here
-//     <select onChange={onCountryChange} required id='country'>
-//       <option value=''>Choose country here</option>
-//       <option value='SE'>Sweden</option>
-//       <option value='JP'>Japan</option>
-//     </select>
-//   </label>
-//   {console.log('inside FirstPage cl', country)}
-//   <button type='submit'>Submit</button>
-// </form>
-
-{
-  /* <div>
-        <button type='button' onClick={onCountryChange} value='SE'>
-          Sweden
-        </button>
-        <button type='button' onClick={onCountryChange} value='JP'>
-          Japan
-        </button>
-      </div> */
-}

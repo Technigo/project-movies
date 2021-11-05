@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react"
-import { useParams, Link } from "react-router-dom"
-import styled from "styled-components"
-import LoadingComponent from "../components/LoadingComponent"
+import React, { useEffect, useState } from 'react'
+import { useParams, Link } from 'react-router-dom'
+import styled from 'styled-components'
+import LoadingComponent from '../components/LoadingComponent'
 
 const DetailContainerStyled = styled.section`
   display: flex;
@@ -86,8 +86,8 @@ const MovieDetails = () => {
     fetch(
       `https://api.themoviedb.org/3/movie/${movieId}?api_key=1cd9c12b0f59437cb1f892337285c32e&language=en-US`
     )
-      .then(res => res.json())
-      .then(data => setDetails(data))
+      .then((res) => res.json())
+      .then((data) => setDetails(data))
       .finally(() => setLoading(false))
   }, [movieId])
 
@@ -114,7 +114,10 @@ const MovieDetails = () => {
             </DetailLinkStyled>
             {/* *FIXAT(tror jag..)!* 404 ERROR!! När vi inte har en backgrundsbild/posterbild!!! */}
             {details.backdrop_path === null ? (
-              <BackgroundStyled src="/assets/nopic2.png" alt="not available/" />
+              <BackgroundStyled
+                src='/assets/notitleposter.png'
+                alt='not available/'
+              />
             ) : (
               <BackgroundStyled
                 src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`}
@@ -122,7 +125,10 @@ const MovieDetails = () => {
               />
             )}
             {details.poster_path === null ? (
-              <PosterStyled src="/assets/nopic2.png" alt="not available/" />
+              <PosterStyled
+                src='/assets/notitleposter.png'
+                alt='not available/'
+              />
             ) : (
               <PosterStyled
                 src={`https://image.tmdb.org/t/p/w780${details.poster_path}`}
