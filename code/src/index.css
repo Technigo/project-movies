@@ -5,9 +5,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
@@ -19,8 +17,7 @@ body::-webkit-scrollbar {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 a {
@@ -131,9 +128,29 @@ h2 {
 
 select {
   margin: 30px 30px;
-  width: 300px;
+  width: 200px;
   height: 40px;
   font-size: 16px;
+}
+
+.options-pick {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.or {
+  display: none;
+}
+
+.extra-random-button-style {
+  width: fit-content;
+  height: 40px;
+  font-size: 16px;
+  padding: 0px 30px;
+  margin-left: -18px;
+  margin-right: 18px;
 }
 
 @media (min-width: 768px) {
@@ -165,5 +182,19 @@ select {
     width: 400px;
     height: 50px;
     font-size: 18px;
+  }
+  .or {
+    display: flex;
+    font-size: 18px;
+    font-weight: bolder;
+    color: goldenrod;
+    margin-right: 22px;
+  }
+  .extra-random-button-style {
+    width: fit-content;
+    height: 50px;
+    font-size: 18px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
