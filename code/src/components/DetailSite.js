@@ -79,6 +79,7 @@ const DetailSite = () => {
         <div className="details-head">
           <h2>{details.original_title}</h2>
           <p className="rating">{details.vote_average}/10</p>
+          <p>{details?.genres?.map((genre) => genre.name)} </p>
         </div>
         <p>Description: {details.overview}</p>
       </section>
