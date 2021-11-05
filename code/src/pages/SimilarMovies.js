@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"; //import React
-import { useParams, useHistory } from "react-router-dom"; //import Param
+import { useParams } from "react-router-dom"; //import Param
 import styled from "styled-components"; //import Styled component
 import { Link } from "react-router-dom"; //import link
 
@@ -25,20 +25,9 @@ const MovieContainer = styled.section`
 	justify-content: space-between;
 `;
 
-const HomePageBtn = styled.button`
-	border-radius: 20px;
-	padding: 10px;
-`;
-
 export const SimilarMovies = () => {
 	const { movieId } = useParams(); // a variable for param (hook)
 	const [similarMovies, setSimilarMovies] = useState([]); // a state property that collects all the similar movie details
-
-	const history = useHistory();
-
-	const onHomePageRedirect = () => {
-		history.push("/");
-	};
 
 	useEffect(() => {
 		fetch(SIMILAR_URL(movieId))
