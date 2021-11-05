@@ -10,6 +10,8 @@ This project was about building a multi-page React application, and using API. T
 
 ## The problem
 
+- We decided to go with a specific actors movie list to be able to train more on API. However this specific list was not sorted so our main issue was to sorter the list after release_date
+
 ## View it live
 
 https://aspen-thunberg-project-movies.netlify.app/
