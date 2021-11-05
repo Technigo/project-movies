@@ -2,21 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import styled from "styled-components";
 
-const GoBackButton = styled.button`
-  padding: 10px;
-  font-style: italic;
-  color: green;
-  background-color: red;
-  border-radius: 10px;
-`;
-
-/*
-const MovieImage = styled.img`
-  width: 100px;
-  border-radius: 50%;
-  border 3px solid #333;
-`*/
-
 const Details = () => {
   const [details, setDetails] = useState({});
 
@@ -38,7 +23,7 @@ const Details = () => {
   console.log(details);
   return (
     <section className="details-backdrop">
-      <button onClick={onButtonBackClick}>Back</button>
+      <button onClick={onButtonBackClick}>Movies</button>
       <img
         src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`}
         alt={id.title}
@@ -54,6 +39,7 @@ const Details = () => {
         <h2>Movie title: {details.original_title}</h2>
         <p>Description: {details.overview}</p>
         <p>Rating: {details.vote_average}/10</p>
+        {/*       <p>Genre: {details.genre.map}</p> */}
       </div>
     </section>
   );
