@@ -1,13 +1,13 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The pair-project was to create a movie site where you can brows thru different movies as well as check in the details of each movie.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+For this week we practiced on creating a mult-page application with using React Router, useState and useEffect. We fetched movies from an api and catched errors with a 404 page.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://movieseason.netlify.app/
+
+Created by Lovisa Carling and Ebba Delsol
