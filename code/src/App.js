@@ -5,6 +5,9 @@ import PopularList from './components/PopularList';
 import Details from './components/Details';
 import NotFound from './components/NotFound';
 import Navbar from 'components/Navbar';
+import TopRatedList from 'components/TopRatedList';
+import ChristmasList from 'components/Christmas';
+import HalloweenList from 'components/Halloween';
 
 import { MOVIES_URL} from './utils/urls';
 
@@ -26,6 +29,10 @@ return (
       <Switch>
         <Route exact path="/" render={() => <PopularList movies={list} />} />
         <Route path="/details/:movieID" component={Details} />
+        <Route exact path="/toprated"> <TopRatedList /></Route>
+        <Route exact path="/christmas"> <ChristmasList /></Route>
+        <Route exact path="/halloween"> <HalloweenList /></Route>
+  
         <Route path="/404" component={NotFound} />
         <Redirect to="/404" />
         

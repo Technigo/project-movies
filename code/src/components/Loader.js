@@ -5,9 +5,9 @@ import './Loader.css';
 export const Loader = () => {
 
   return (
-    <div>
-      <p className="loading-text">Loading...</p>
-	  </div>
+    <div className="loading-overlay">
+			<div className="loading-spinner" />
+		</div>
   );
 };
 

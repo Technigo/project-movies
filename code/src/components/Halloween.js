@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import Loader from './Loader';
-import { TOP_RATED_URL } from 'utils/urls';
+import { HALLOWEEN_URL } from 'utils/urls';
 
 
-const TopRatedList = () => {
+const HalloweenList = () => {
     const [movies, setMovies] = useState([]);
     const [loader, setLoader] = useState(false);
 
     useEffect(() => {
         setLoader(true);
-        fetch(TOP_RATED_URL)
+        fetch(HALLOWEEN_URL)
         .then(res => res.json())
         .then((json) => setMovies(json.results))
         .finally(setLoader(false));
@@ -35,4 +35,4 @@ return (
     ); 
 };
 
-export default TopRatedList;
+export default HalloweenList;
