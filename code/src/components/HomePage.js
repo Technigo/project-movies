@@ -27,13 +27,13 @@ const HomePage = ({ userApiKey, setUserApiKey }) => {
 								onChange={handleInputChange}
 							></input>
 						</label>
-						<button class="btn btn-submit" type="submit">
+						<button className="btn btn-submit" type="submit">
 							Go
 						</button>
 					</form>
-					<a href="https://www.themoviedb.org/signup" class="btn btn-sign-up">
+					<a href="https://www.themoviedb.org/signup" className="btn btn-sign-up">
 						SIGN UP FOR YOUR API ACCOUNT
-						<i class="fas fa-chevron-right btn-icon"></i>
+						<i className="fas fa-chevron-right btn-icon"></i>
 					</a>
 			</div>
 		</div>
