@@ -7,7 +7,7 @@ import styled from "styled-components";
 import "../css/details.css";
 
 //Global variable for image url
-const imageUrl = "http://image.tmdb.org/t/p/";
+const imageUrl = "https://image.tmdb.org/t/p/";
 
 const BackButtonText = styled.span`
 	transition: all 0.13s ease-in;
@@ -29,8 +29,6 @@ const BackButton = styled(Link)`
 	}
 `;
 
-// Add ES6 Ignore
-
 export const MovieDetails = () => {
 	const [movie, setMovie] = useState([]);
 	const [loader, setLoader] = useState(false);
@@ -46,7 +44,6 @@ export const MovieDetails = () => {
 		fetch(URL_DETAILS(id))
 			.then((response) => response.json())
 			.then((data) => {
-				console.log(data);
 				if (data.id) {
 					setLoader(false);
 					setMovie(data);

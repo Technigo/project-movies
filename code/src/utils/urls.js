@@ -4,8 +4,3 @@ export const TOP_URL_LIST = `https://api.themoviedb.org/3/movie/top_rated?api_ke
 export const UPCOMING_URL_LIST = `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=1`;
 export const NOW_PLAYING_URL_LIST = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1`;
 export const URL_DETAILS = (id) => `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`;
-
-// /movie/upcoming
-// /movie/top_rated
-// /movie/now_playing
-// /movie/latest
