@@ -1,1 +1,46 @@
+.details-backdrop {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: flex-end;
+  top: 0;
+  left: 0;
+}
 
+.backdrop-image {
+  position: relative;
+  min-height: 100vh;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.poster-img {
+  border: 5px solid white;
+}
+
+.movie-details-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  position: absolute;
+  margin-bottom: 50px;
+  margin-left: 25px;
+  align-items: flex-end;
+}
+
+.details-child {
+  max-width: 500px;
+}
+
+.rating-text {
+  color: red;
+}
+
+.title-rating-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
