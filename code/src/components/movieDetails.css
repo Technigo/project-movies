@@ -73,6 +73,7 @@ h5 {
 .back-button {
   position: absolute;
   left: 80px;
+  top:82px;
   color: #fff;
   font-size: 16px;
   cursor: pointer;

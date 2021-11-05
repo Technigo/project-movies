@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link }  from 'react-router-dom'
 
+
 import './movieList.css'
+
 
 export const MovieList = ({movieList}) => {
 
     return (
-
+	<>
       <section className="movie-container"> 
-
        {movieList.map(movie => (
-
 		<Link to={`/movies/${movie.id}`} key={movie.id}> 
 		<div  className="movie-card" >
 			<div className="image-container">
@@ -30,7 +30,7 @@ export const MovieList = ({movieList}) => {
 
 		))}
       </section>
-
+    </>
     )
   }
 

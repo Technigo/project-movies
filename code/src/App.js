@@ -4,7 +4,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import { Header } from './components/Header'
 import { MovieList } from './components/MovieList'
 import { MovieDetails } from './components/MovieDetails'
-import { TopRatedHome } from './components/TopRatedHome'
+import { TopRatedList } from './components/TopRatedList'
 import { Loading } from './components/Loading'
 
 
@@ -46,8 +46,8 @@ export const App = () => {
 			</Route>
 
 	{/* TOP RATED GOES HERE */}
-			<Route path="/top_rated">
-            	<TopRatedHome />
+			<Route path="/top_rated" exact>
+            	<TopRatedList />
           	</Route>
 		</Switch>
 	</BrowserRouter>

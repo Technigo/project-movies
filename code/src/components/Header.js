@@ -12,7 +12,7 @@ export const Header = () => {
 				<span role="img" aria-label="img">🍿</span>
 				HOME PAGE
 			</NavLink>
-			<NavLink  to="/top_rated" > 
+			<NavLink  to="/top_rated"  > 
 				<span role="img" aria-label="img">🍿</span>
 				TOP RATED MOVIES
 			</NavLink>
