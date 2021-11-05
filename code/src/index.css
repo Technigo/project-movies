@@ -114,6 +114,8 @@ img {
 }
 
 .showcase {
+	display: flex;
+	justify-content: center;
     box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -166,14 +168,10 @@ image {
 	font-family: 'Bebas Neue', cursive;
 	color: #e50914;
 	text-align: center;
-	font-size: 10em;
+	font-size: 4em;
 	margin: 0;
 	z-index: 2;
-	width: 170px;
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 }
 
 .submit-form {

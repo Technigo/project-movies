@@ -13,7 +13,7 @@ const HomePage = ({ userApiKey, setUserApiKey }) => {
 	};
 	return (
 		<div className="showcase">
-				<h1 className="codeflix">CODEFLIX</h1>
+				<div className="codeflix"><h1>CODEFLIX</h1></div>
 				<div className="showcase-content">
 				<h1>Log-in Anywhere.</h1>
 					<form className="submit-form" onSubmit={handleSubmit}>
