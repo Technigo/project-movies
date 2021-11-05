@@ -9,8 +9,6 @@ import { BASE_URL } from './utils/urls';
 export const App = () => {
   const [list, setList] = useState([]);
 
-  console.log(BASE_URL);
-
   useEffect(() => {
     fetch(BASE_URL)
       .then((res) => res.json())

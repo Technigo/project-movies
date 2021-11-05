@@ -49,7 +49,11 @@ const MovieDetails = () => {
       </div>
 
       <Link to='/' className='back-button' onClick={onButtBackClick}>
-        <img class='back-icon' src={require('./BackIcon-01.png')} />
+        <img
+          className='back-icon'
+          src={require('./BackIcon-01.png')}
+          alt='back button icon'
+        />
         Movies
       </Link>
 
