@@ -11,7 +11,6 @@ const Images = () => {
     })
 
     return (
-    
         <div>
         <p>lala</p>
         </div>

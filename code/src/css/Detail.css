@@ -1,5 +1,6 @@
 .movieDetails {
   position: relative;
+  overflow-x: hidden;
 }
 
 .cover {
@@ -17,52 +18,61 @@
     align-items: center;
     font-weight: 700;
     text-decoration: none;
-    left: 50 px;
-    top: 50 px;
+    left: 15px;
+    top: 15px;
   }
 
 .backLink svg {
     width: 30px;
 }
+
+.backLink:hover svg {
+  margin-right: 5px;
+  transition: margin-right 0.2s ease-in-out;
+}
   
-  .detailsContainer img {
-    border: 5px solid #fff;
-  }
+.detailsContainer img {
+  border: 5px solid #fff;
+}
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 75px;
+}
+
+.detailsContainer h1 {
+  text-align: center;
+}
+
+.movieSummary {
+  margin-left: 20px;
+}
+
+.movieSummary p {
+  max-width: 400px;
+}
   
-  .detailsContainer {
+@media only screen and (min-width: 768px) {
+  .cover {
+    min-width: 100vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-end;
+  }
+  .backLink {
+  left: 50px;
+  top: 50px;
+  }
+  .detailsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
     padding: 50px;
   }
-  
   .detailsContainer h1 {
-    text-align: center;
+    text-align: left;
   }
-  
-  .movieSummary {
-    margin-left: 20px;
-  }
-  
-  .movieSummary p {
-    max-width: 400px;
-  }
-  
-  @media only screen and (min-width: 768px) {
-    .cover {
-      min-width: 100vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-    .detailsContainer {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-end;
-      padding: 50px;
-    }
-    .detailsContainer h1 {
-      text-align: left;
-    }
-  }
+}
   

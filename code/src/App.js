@@ -5,17 +5,13 @@ import List from './pages/List'
 
 export const App = () => {
   return (
-
-    
-  <BrowserRouter>
-    <Routes>
-    <Route exact path="/" element={<List/>}>
-    </Route>
-    <Route exact path="/movies/:id" element={<Detail/>}>
-    </Route>
-    </Routes>
-  </BrowserRouter>
-  
-)
-      
+    <BrowserRouter>
+      <Routes>
+      <Route exact path="/" element={<List/>}>
+      </Route>
+      <Route exact path="/movies/:id" element={<Detail/>}>
+      </Route>
+      </Routes>
+    </BrowserRouter>
+  )
 }

@@ -1,92 +1,86 @@
 .movieList {
-    display: flex;
-    flex-wrap: wrap;
-    color: #fff;
-  }
-  
-  .movieList a {
-    width: 100vw;
-    position: relative;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .movieList a img {
-    width: 100%;
-  }
-  
-  .movieList .listDetails {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    /* color: #000;
-    background: linear-gradient(
-      rgba(117, 19, 93, 0.73),
-      rgba(245, 246, 252, 0.52)
-    ); */
-    background: rgba(117, 19, 93, 0.83);
-    /* background: rgba(0, 0, 0, 0.75); */
-    display: none;
-    padding: 20px;
-    text-align: center;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.movieList a {
+  width: 100vw;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+
+.movieList a img {
+  width: 100%;
+}
+
+.movieList .listDetails {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(117, 19, 93, 0.83);
+  display: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.movieList .listDetails h1 {
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+.movieList .listDetails p {
+  margin-bottom: 60%;
+  font-size: 14px;
+}
+
+.movieList a:hover .listDetails {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+@media only screen and (min-width: 360px) {
   .movieList .listDetails h1 {
     margin-bottom: 0;
-    font-size: 24px;
+    font-size: 50px;
   }
-  
+  .movieList .listDetails p {
+    margin-bottom: 50%;
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .movieList a {
+    width: 50%;
+  }
+  .movieList .listDetails h1 {
+    font-size: 40px;
+  }
   .movieList .listDetails p {
     margin-bottom: 60%;
-    font-size: 14px;
   }
-  
-  .movieList a:hover .listDetails {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-end;
+}
+
+@media only screen and (min-width: 1200px) {
+  .movieList a {
+    width: 25%;
   }
-  
-  @media only screen and (min-width: 360px) {
-    .movieList .listDetails h1 {
-      margin-bottom: 0;
-      font-size: 50px;
-    }
-    .movieList .listDetails p {
-      margin-bottom: 50%;
-      font-size: 20px;
-    }
+  .movieList .listDetails {
+    text-align: initial;
   }
-  @media only screen and (min-width: 768px) {
-    .movieList a {
-      width: 50%;
-    }
-    .movieList .listDetails h1 {
-      font-size: 40px;
-    }
-    .movieList .listDetails p {
-      margin-bottom: 60%;
-    }
+  .movieList .listDetails h1 {
+    margin-top: auto;
+    margin-bottom: 0;
+    font-size: 32px;
   }
-  
-  @media only screen and (min-width: 1200px) {
-    .movieList a {
-      width: 25%;
-    }
-    .movieList .listDetails {
-      text-align: initial;
-    }
-    .movieList .listDetails h1 {
-      margin-top: auto;
-      margin-bottom: 0;
-      font-size: 32px;
-    }
-    .movieList .listDetails p {
-      margin-bottom: 0;
-      font-size: 16px;
-    }
+  .movieList .listDetails p {
+    margin-bottom: 0;
+    font-size: 16px;
   }
+}
   
