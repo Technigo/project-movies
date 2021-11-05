@@ -2,11 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./leosList.css";
 
-// FUNCTION FROM STACK OVERFLOW THAT SORTS SOMETHING IN ORDER BY DATE (RELEASE-DATE?)
-// const sortingFunction = (b, a) => {
-//   return new Date(movie.release_date) - new Date(movie.release_date);
-// };
-
 const LeosList = ({ movies }) => {
   return (
     <section className="all-movies">
