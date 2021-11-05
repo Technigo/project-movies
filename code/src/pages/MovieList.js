@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { BASE_URL } from '../utils/urls'
 import Spinner from 'components/Spinner'
-import Movie from 'components/Movie'
 
 const SiteContainer = styled.section `
   display: flex;
