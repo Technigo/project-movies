@@ -5,7 +5,6 @@ import { API_URL } from './utils/urls';
 
 import MovieList from './components/MovieList';
 import MovieDetails from './components/MovieDetails';
-import Header from './components/Header';
 import NotFound from './components/NotFound';
 import Loading from './components/Loading';
 
@@ -31,7 +30,6 @@ export const App = () => {
     <div>
       {loading && <Loading />}
       <BrowserRouter>
-        <Header />
         <Switch>
           <Route exact path="/" render={() => <MovieList movies={movies} />} />
           <Route path="/movies/:info" component={MovieDetails} />

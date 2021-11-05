@@ -1,13 +1,25 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+A multipage application built with React using API fetching to display the popular movies.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+One of the challenging part were to implement the useParams hook to create a dynamic id from API.
+
+Anoth Since the project was made in pair-programming, it was a great opportunity to practice merging new branches and solving conflicts.
+
+- The useParams was a new concept and we learned the best use and placement for it.
+
+## Features
+
+- Use of hooks: useEffect, useState, useHistory and useParams
+- One page contains a movie list and the other the details of the selected movie
+- Responsive styling
+- Use of the React-icon library
+- Error page & loading page
+- Pair-programming
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+emelie-maria-movies.netlify.app
