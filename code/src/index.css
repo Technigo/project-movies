@@ -82,7 +82,7 @@ h1 {
   display: flex;
   align-items: flex-end;
   padding: 50px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
 }
 
@@ -103,14 +103,13 @@ h1 {
 .not-found {
   width: 100vw;
   height: 100vh;
-  background-image: url("3747371.jpg");
+  background-image: url('3747371.jpg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   position: relative;
-  opacity: 0.6;
 }
 
 .not-found p {
@@ -137,9 +136,62 @@ h1 {
 }
 
 .back-arrow:after {
-  content: "\00AB";
+  content: '\00AB';
   font-size: 25px;
   transition: 0.7s;
+}
+
+.back-button {
+  position: absolute;
+  display: inline-flex;
+  color: white;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  left: 50px;
+  top: 50px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  letter-spacing: 0.5px;
+  transition: 0.2s ease-in-out;
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner {
+  width: 70px;
+  height: 70px;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+  border-left: 5px solid #000;
+  animation: spinner infinite 0.3s;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 footer {
@@ -150,4 +202,83 @@ footer {
 footer a {
   color: #000;
   text-decoration: none;
+}
+
+/* TABLET STYLING //////////////////////////////////*/
+@media (max-width: 1024px) {
+  header {
+    height: 10%;
+  }
+
+  h1 {
+    margin: 0px;
+  }
+
+  .movie-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* MOVIEDETAILS PAGE 👇 */
+
+  .details-wrapper {
+    padding: 0px;
+  }
+
+  .text-summary {
+    margin: 8%;
+    margin-bottom: 10%;
+    width: 550px;
+  }
+
+  .text-summary h1 {
+    font-size: 40px;
+  }
+  .text-summary p {
+    font-size: 20px;
+  }
+
+  .details-img {
+    display: none;
+  }
+
+  .not-found p {
+    margin-top: 50px;
+  }
+
+  .not-found-btn {
+    border: none;
+    top: 100px;
+  }
+
+  .back-button {
+    left: 5%;
+    top: 8%;
+  }
+}
+
+/* MOBILE STYLING //////////////////////////////////*/
+@media (max-width: 768px) {
+  .movie-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .text-summary h1 {
+    font-size: 30px;
+  }
+
+  .text-summary p {
+    font-size: 15px;
+  }
+  
+  .not-found p {
+    margin: 50px;
+    padding: 0 10 10 10px;
+    font-size: 25px;
+  }
+
+  .not-found-btn {
+    border: none;
+    top: 120px;
+  }
+
 }

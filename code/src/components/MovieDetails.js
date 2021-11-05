@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 
 import { DETAILS_URL } from '../utils/urls';
 
@@ -12,10 +12,17 @@ const MovieDetails = () => {
     fetch(DETAILS_URL(info))
       .then((res) => res.json())
       .then((data) => {
-        setDetails(data)
-        console.log("DETAILS API INFO HERE ", data)
-      })
-  }, [info])
+        setDetails(data);
+        console.log('DETAILS API INFO HERE ', data);
+      });
+  }, [info]);
+
+  const history = useHistory();
+
+  const onBackToStart = () => {
+    history.push('/');
+  };
+
   return (
     <>
       <div
@@ -24,6 +31,10 @@ const MovieDetails = () => {
           backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})`,
         }}
       >
+        <button className="back-button" onClick={onBackToStart}>
+          &#10094; Movies
+        </button>
+
         <div className="details-wrapper">
           <img
             className="details-img"
@@ -31,13 +42,13 @@ const MovieDetails = () => {
             alt="poster of the movie"
           />
           <span className="text-summary">
-            <h1>{details.title}</h1> <p>rating: {details.vote_average}/10</p>
+            <h1>{details.title}</h1> <p>Rating: {details.vote_average}/10</p>
             <p>{details.overview}</p>
           </span>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default MovieDetails;
