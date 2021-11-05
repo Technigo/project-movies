@@ -1,24 +1,21 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
+import Detail from './pages/Detail'
 import List from './pages/List'
-import Images from './pages/Images'
 
 export const App = () => {
   return (
-    <div>
-      <List />
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" exact>
-        <List />
-        </Route>
-        <Route path="/movies/:id" exact>
 
-        <Images />
-      </Route>
-      </Routes>
-      </BrowserRouter> 
-    </div>
-  )
+    
+  <BrowserRouter>
+    <Routes>
+    <Route exact path="/" element={<List/>}>
+    </Route>
+    <Route exact path="/movies/:id" element={<Detail/>}>
+    </Route>
+    </Routes>
+  </BrowserRouter>
+  
+)
+      
 }
