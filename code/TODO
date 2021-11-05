@@ -10,26 +10,15 @@ LEOS PERSON ID 6193
 
 https://www.themoviedb.org/person/6193-leonardo-dicaprio/images/profiles
 
-https://api.themoviedb.org/3/person/6193?api_key=f6130163420bd56b53df7cf41edc5b29&language=en-US/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg
-
-https://api.themoviedb.org/3/person/6193/images?api_key=f6130163420bd56b53df7cf41edc5b29/nb7e6caBO5BxZ8lyIp9Hzv69oNB.jpg
-
-Fetching movie details:
-https://api.themoviedb.org/3/movie/{movie_id}?api_key=f6130163420bd56b53df7cf41edc5b29&language=en-US
-
-🔵 Requirements
-Your app should have at least two pages - one showing a list of movies and one showing details
-Show a 'not found' page
-Design similar to https://technigo-movies-project.netlify.app/
-
 # TODO
 
 Filtrera listan så att det endast visas filmer
 Sortera i kronologisk ordning
 Styled components eller inte?
+Adding a loader
 
 DETAILS
-Favicon?
+
 Width på overview
 
 LIST

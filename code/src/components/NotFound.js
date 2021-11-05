@@ -29,7 +29,7 @@ const NotFound = () => {
 
   return (
     <NotFoundDiv>
-      <h2>Sorry this page doesn't exist :(</h2>
+      <h2>Sorry this page doesn't exist!</h2>
       <ButtonNotFound onClick={onHomePageRedirect}>
         <span className="back-arrow">&#60;</span>BACK TO MOVIES LIST
       </ButtonNotFound>
