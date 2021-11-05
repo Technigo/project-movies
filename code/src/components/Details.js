@@ -45,7 +45,7 @@ const Details = () => {
 
   return (
 		<main className='posterBackground' style={{ 
-      backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` 
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%) , url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` 
     }}>
       <div className="detailsContainer" >
 		    <Button onClick={onButtonBackClick}/>
@@ -53,7 +53,6 @@ const Details = () => {
 					<img className="smallMoviePoster" src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt={details.title} />
 				  <h2>{details.title}</h2>
 				</div>
-			{/* <GoBackButton onClick={onButtonBackClick}>Go back</GoBackButton> */}
 	    </div>
 		</main>
 	)
