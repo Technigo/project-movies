@@ -7,14 +7,15 @@ import "./List.css";
 
 const List = () => {
   const [movieList, setMovieList] = useState([]); // state property initialized with an empty array
-  const [loading, setLoading] = useState(false); // for loader
+  const [loading, setLoading] = useState(false); // state property for loader initialized with false
 
   const fetchMovies = () => {
+    // set loading state to true before fetching data so that loader displays until data is rendered
     setLoading(true);
     fetch(LIST_URL)
       .then((res) => res.json())
       .then((data) => setMovieList(data.results))
-      .finally(() => setLoading(false));
+      .finally(() => setLoading(false)); // when loading is done, setting loading state to false and unmounts component
   };
 
   useEffect(() => {
@@ -23,11 +24,14 @@ const List = () => {
 
   return (
     <>
+      {/* if loading state is true, mounting loader component */}
       {loading && <Loader />}
       <div className="movie-container">
+        {/* sorting movies from newest to latest and iterating through api array */}
         {movieList
           .sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
           .map((movie) => (
+            // linking to the movie details based on the unique id
             <Link key={movie.id} to={`/movies/${movie.id}`}>
               <img
                 src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}

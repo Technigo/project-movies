@@ -2,27 +2,29 @@ import React, { useEffect, useState } from "react";
 import { useParams, Route } from "react-router-dom";
 import { useHistory } from "react-router";
 import Loader from "./Loader";
+import { DETAIL_URL } from "../utils/urls";
 
 import "./Details.css";
 import NotFound from "./NotFound";
 
 const Details = () => {
   const [movieDetail, setMovieDetail] = useState([]);
-  const [notFound, setNotFound] = useState(false);
-  const [loading, setLoading] = useState(false); // for loader
+  const [notFound, setNotFound] = useState(false); // state property to load not found page if movie id is incorrect
+  const [loading, setLoading] = useState(false); // state property for loader intialized with false
 
-  const { id } = useParams();
-  const history = useHistory();
+  const { id } = useParams(); // retrieving the id from url which is passed from the home page to display details for one unique movie
+  const history = useHistory(); // remembers previously rendered pages
 
   const fetchDetails = (id) => {
     setLoading(true);
-    fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=03e945ac54f666ecb5176aa9f90b8fa0&language=en-US`
-    )
+    // inserting the dynamic id into the url to fetch the details of the movie in question
+    fetch(DETAIL_URL(id))
       .then((res) => res.json())
       .then((data) => {
+        // if a correct id can be found in the path set assign data to setMovieDetail
         if (data.id) {
           setMovieDetail(data);
+          // if not, set state to NotFound
         } else {
           setNotFound(true);
         }
@@ -36,9 +38,10 @@ const Details = () => {
   }, [id]);
 
   const onButtonBackClick = () => {
-    history.push("/");
+    history.push("/"); // function that tells button to "push" to specified path
   };
 
+  //re-routing to NotFound page if state notFound is true
   if (notFound) {
     return <Route component={NotFound} />;
   }

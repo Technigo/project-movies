@@ -3,10 +3,10 @@ import { useHistory } from "react-router";
 import "./NotFound.css";
 
 const NotFound = () => {
-  const history = useHistory();
+  const history = useHistory(); // remembers previously rendered pages
 
   const onButtonHomeClick = () => {
-    history.push("/");
+    history.push("/"); // function that tells button to "push" to specified path
   };
 
   return (
