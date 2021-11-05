@@ -251,3 +251,16 @@ image {
 	padding: 0.8rem 1.3rem;
 	text-transform: uppercase;
 }
+
+/* footer */
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	height: 7vh;
+	background-color: black;
+	color: white;
+	font-size: 14px;
+}
