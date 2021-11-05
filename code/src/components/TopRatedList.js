@@ -1,15 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect}  from 'react'
 import { Link }  from 'react-router-dom'
 
 import './movieList.css'
+import { TOP_RATED_URL } from '../utils/urls'
 
-export const TopRatedList = ({topRatedList}) => {
+export const TopRatedList = () => {
+
+	const [topRatedList, setTopRatedList] = useState([])
+
+	useEffect(() => {
+		fetch(TOP_RATED_URL)
+		  .then((res) => res.json())
+		  .then((json) => {
+			setTopRatedList(json.results)
+		  })
+	  }, []);
 
     return (
+
       <section className="movie-container"> 
        {topRatedList.map(movie => (
-
 		<Link to={`/top_rated/${movie.id}`} key={movie.id}> 
+
 		<div  className="movie-card" >
 			<div className="image-container">
 				<img 
@@ -28,6 +40,7 @@ export const TopRatedList = ({topRatedList}) => {
 
 		))}
       </section>
+
 
     )
   }

@@ -6,4 +6,4 @@ export const DETAILS_URL = (movieId) => `https://api.themoviedb.org/3/movie/${mo
 
 export const TOP_RATED_URL = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`
 
-export const TOP_RATED_DETAILS_URL = (movieId) => `https://api.themoviedb.org/3/top_rated/${movieId}?api_key=${API_KEY}&language=en-US'`
+export const TOP_RATED_DETAILS_URL = (topMovieId) => `https://api.themoviedb.org/3/movie/${topMovieId}?api_key=${API_KEY}&language=en-US` 

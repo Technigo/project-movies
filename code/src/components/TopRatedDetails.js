@@ -9,9 +9,7 @@ import { Loading } from '../components/Loading'
 
 export const TopRatedDetails = () => {
 
-	console.log('this is top rated details')
-
-	const { movieId } = useParams();
+	const { topMovieId } = useParams();
 	const history = useHistory(); 
 
   	const [details, setDetails] = useState([]);
@@ -25,17 +23,17 @@ export const TopRatedDetails = () => {
 	}
 
 	const goBack = () => {
-		history.push("/")
+		history.push("/top_rated")
 	}
 	
 	useEffect(() => {
-		fetch(TOP_RATED_DETAILS_URL(movieId))
+		fetch(TOP_RATED_DETAILS_URL(topMovieId))
 		.then((res) => res.json())
 		.then((json) => { 
 			setLoading(false)
 			setDetails(json)
 		})
-	},[movieId])
+	},[topMovieId])
 
 
     return (

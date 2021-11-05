@@ -4,18 +4,17 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import { Header } from './components/Header'
 import { MovieList } from './components/MovieList'
 import { MovieDetails } from './components/MovieDetails'
-import { TopRatedList } from './components/TopRatedList'
-import { TopRatedDetails } from './components/TopRatedDetails'
+import { TopRatedHome } from './components/TopRatedHome'
 import { Loading } from './components/Loading'
 
 
 import { FETCH_URL } from './utils/urls'
-import { TOP_RATED_URL } from './utils/urls'
+
 
 export const App = () => {
 
 	const [movieList, setMovieList] = useState([]);
-	const [topRatedList, setTopRatedList] = useState([])
+
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
@@ -25,16 +24,8 @@ export const App = () => {
 			setTimeout(() => setLoading(false), 1000)
 			setMovieList(json.results)
 		})
-		//.finally(() => setTimeout(() => setLoading(false), 1000))
 	}, []);
 
-	useEffect(() => {
-		fetch(TOP_RATED_URL)
-		  .then((res) => res.json())
-		  .then((json) => {
-			setTopRatedList(json.results)
-		  })
-	  }, []);
 
 
   return (
@@ -55,13 +46,9 @@ export const App = () => {
 			</Route>
 
 	{/* TOP RATED GOES HERE */}
-			<Route path="/top_rated" >
-				<TopRatedList  topRatedList={topRatedList}/>
-			</Route>
-
-			<Route path="/top_rated/:movieId" >  
-				<TopRatedDetails /> 
-			</Route>
+			<Route path="/top_rated">
+            	<TopRatedHome />
+          	</Route>
 		</Switch>
 	</BrowserRouter>
 	</div>
