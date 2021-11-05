@@ -3,14 +3,14 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import MovieList from "./components/MovieList";
 import MovieDetails from "./components/MovieDetails";
-import { API_URL } from "./utils/urls";
+import { API_URL_UPCOMING } from "./utils/urls";
 import NotFound from "./components/NotFound";
 
 export const App = () => {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    fetch(API_URL)
+    fetch(API_URL_UPCOMING)
       .then((res) => res.json())
       .then((data) => setList(data.results));
   }, []);
