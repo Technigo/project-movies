@@ -270,7 +270,7 @@ code {
   .summary {
     flex-direction: row;
     align-items: end;
-    margin-top: 17%;
+    margin-top: 13vh;
   }
   .detail {
     margin-left: 15px;
