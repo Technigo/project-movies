@@ -1,15 +1,9 @@
 import React, { useEffect, useState } from "react"; //import useEffect and useState
 import { Link } from "react-router-dom"; //import link
-import styled from "styled-components";
-import { Loading } from "./Loading";
+import styled from "styled-components"; //import Styled component
+import { Loading } from "./Loading"; //import Loading component
 
-import { API_URL } from "./Url";
-
-const MovieListText = styled.div`
-	display: flex;
-	flex-direction: column;
-	color: white;
-`;
+import { API_URL } from "./utils/Url"; //import Urls from the URL component
 
 const MoviePoster = styled.img`
 	width: 100%;
@@ -31,21 +25,9 @@ export const MovieLists = () => {
 			.finally(() => setLoading(false));
 	};
 
-	//Fetch movie data detail API
-	// useEffect(() => {
-
-	// 	fetch(
-	// 		API_URL
-	// 	)
-	// 		.then((res) => res.json())
-	// 		.then((json) => {
-	// 			setMovies(json.results);
-	// 		});
-	// 		.finally(() => setLoading(false));
-	// }, []); //empty dependency
-
 	return (
 		<div>
+			{/* Displaying data, mounting the styled components and the loading screen */}
 			{loading && <Loading />}
 			<section className="main-container">
 				{movies.map((movie) => (
@@ -53,10 +35,10 @@ export const MovieLists = () => {
 						<Link to={`/movie/${movie.id}`}>
 							<div className="image-container">
 								<div className="overlay">
-									<MovieListText>
+									<div className="movie-title">
 										<h2>{movie.title}</h2>
 										<p>{movie.release_date}</p>
-									</MovieListText>
+									</div>
 								</div>
 								<MoviePoster
 									src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}

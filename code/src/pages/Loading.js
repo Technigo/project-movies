@@ -1,4 +1,6 @@
-import React from "react";
+import React from "react"; //import React
+
+//Loading screen while the data is being fetched from the API
 
 export const Loading = () => {
 	return (

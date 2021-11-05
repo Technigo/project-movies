@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+h2 {
+	text-shadow: 2px 2px 2px #000;
+}
+
 body {
 	font-family: "Roboto", sans-serif;
 	color: white;
@@ -83,18 +87,22 @@ body {
 	left: 0;
 	z-index: 1;
 	width: 100%;
-	opacity: 0;
+	background-color: rgba(0, 0, 0, 0);
 	align-items: flex-end;
 	padding-bottom: 35px;
 	padding-left: 35px;
 }
 
 .image-container:hover .overlay {
-	opacity: 0.7;
-	background-color: black;
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
 .movie-title {
+	display: none;
+}
+
+.overlay:hover .movie-title {
+	display: block;
 	text-decoration: none;
 	color: white;
 }

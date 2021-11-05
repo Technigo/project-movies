@@ -29,10 +29,5 @@ export const App = () => {
 
 //To-do list
 //add some more comments
-//Install prettier
-//Meta tags
-//add read me
 
-//Question for teamsession
-// Movie title and release date made white
-//Grid on similar movies WHY DOES IT NOT WORK?
+//add read me

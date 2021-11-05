@@ -1,13 +1,11 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The aim of the project was to build a multi-page movie site using React Route. We also used styled components, practiced using API's in React combining useState and useEffect. This project was made through pair-programming and made by Madelene Trang and Rebecca Blixt.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We had some issues with Live Share extension in Visual Studio Code, which we resolved. We then completed the requirements and added some extra features for the assignment. We are pleased with our end result. If we had more time we would have created a drop-down menu in which we would add more pages to different API endpoints.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://project-movie.netlify.app
