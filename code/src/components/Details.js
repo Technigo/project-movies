@@ -15,9 +15,11 @@ const Details = ({ makePosterUrl, apiKey }) => {
       .then((res) => res.json())
       .then(
         (json) => {
+          // If the fetch is successful and returned object has a movie id we proceed with set state property
           if (json.id) {
             setMovie(json);
           } else {
+            // Else we display error
             setHasError(true);
           }
         },
@@ -54,12 +56,13 @@ const Details = ({ makePosterUrl, apiKey }) => {
       <div className="movie-details-content">
         <img
           className="movie-poster-details"
+          // We make string that holds the path to the poster image by using a function declared in App.js
           src={makePosterUrl(movie.poster_path)}
           alt="movie poster"
         />
         <div className="movie-details-info">
           <h1>
-            {movie.title}{" "}
+            {movie.title}
             <span className="movie-score">{movie.vote_average} / 10</span>
           </h1>
 

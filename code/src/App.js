@@ -27,6 +27,7 @@ export const App = () => {
     return `https://image.tmdb.org/t/p/w500${url}`;
   };
 
+  // This fetch happens as soon as the state property which holds the api url is updated
   useEffect(() => {
     fetch(apiUrl)
       .then((res) => res.json())
@@ -36,6 +37,7 @@ export const App = () => {
       });
   }, [apiUrl]);
 
+  // The loading state property is initialized as true, when the fetch is finished it is set to false
   if (loading) {
     return (
       <div className="loader-wrapper">
