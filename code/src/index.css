@@ -189,6 +189,7 @@ image {
 
 .showcase-content {
 	position: relative;
+	width: 700px;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
@@ -198,20 +199,25 @@ image {
 	z-index: 2;
 }
 
-.showcase-content p {
+/* .showcase-content p {
 	font-weight: 700;
 	font-size: 5.2rem;
 	line-height: 1.1;
 	margin: 0 0 2rem;
-}
+} */
 
-.showcase-content p {
+/* .showcase-content p {
 	text-transform: uppercase;
 	color: #fff;
 	font-weight: 400;
 	font-size: 1.9rem;
 	line-height: 1.25;
 	margin: 0 0 2rem;
+} */
+
+.sign-up-details {
+	font-size: 16px;
+	letter-spacing: 0.3px;
 }
 
 /* buttons */

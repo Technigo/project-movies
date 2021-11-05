@@ -22,13 +22,13 @@ const HomePage = ({ userApiKey, setUserApiKey }) => {
           <h1>CODEFLIX</h1>
         </div>
         <div className="showcase-content">
-          <h1>Log-in Anywhere.</h1>
+          <h1>Log-in Anywhere</h1>
           <form className="submit-form" onSubmit={handleSubmit}>
             <label>
               <input
                 className="api-input"
                 type="text"
-                placeholder="Your API key"
+                placeholder="Your API key here:"
                 name="api-key"
                 value={userApiKey}
                 onChange={handleInputChange}
@@ -38,13 +38,20 @@ const HomePage = ({ userApiKey, setUserApiKey }) => {
               Go
             </button>
           </form>
-          <a
-            href="https://www.themoviedb.org/signup"
-            className="btn btn-sign-up"
-          >
-            SIGN UP FOR YOUR API ACCOUNT
-            <i className="fas fa-chevron-right btn-icon"></i>
-          </a>
+          <div>
+            <p className="sign-up-details">
+              CodeFlix works using an API key from TMDB (themoviedb.org). If you
+              don't have an API key already, you'll need to sign up for one below to
+              enter our site.
+            </p>
+            <a
+              href="https://www.themoviedb.org/signup"
+              className="btn btn-sign-up"
+            >
+              SIGN UP FOR A TMDB API
+              <i className="fas fa-chevron-right btn-icon"></i>
+            </a>
+          </div>
         </div>
       </div>
       <Footer />
