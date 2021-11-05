@@ -6,7 +6,7 @@ import Loader from "./Loader";
 import "./List.css";
 
 const List = () => {
-  const [movieList, setMovieList] = useState([]);
+  const [movieList, setMovieList] = useState([]); // state property initialized with an empty array
   const [loading, setLoading] = useState(false); // for loader
 
   const fetchMovies = () => {
@@ -19,17 +19,14 @@ const List = () => {
 
   useEffect(() => {
     fetchMovies();
-    // fetch(LIST_URL)
-    //   .then((res) => res.json())
-    //   .then((data) => setMovieList(data.results));
-  }, []);
+  }, []); // pass an empty array as the second argument so the hook is only called one time, when component is mounted
 
   return (
     <>
       {loading && <Loader />}
       <div className="movie-container">
         {movieList.map((movie) => (
-          <Link to={`/movies/${movie.id}`}>
+          <Link key={movie.id} to={`/movies/${movie.id}`}>
             <img
               src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
               alt={movie.title}
