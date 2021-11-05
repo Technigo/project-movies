@@ -15,15 +15,6 @@ a {
   color: #fff;
 }
 
-/*
-.all-movies a {
-  width: 25%;
-  position: relative;
-  color: #fff;
-  text-decoration: none;
-}
-*/
-
 .movie-overlay {
   position: relative;
 }
@@ -42,4 +33,15 @@ a {
 
 .movie-details:hover {
   opacity: 1;
+}
+
+.movie-details h2 {
+  font-size: 24px;
+  margin: 530px 0 0 20px;
+  max-width: 320px;
+}
+
+.movie-details p {
+  font-size: 12px;
+  margin: 10px 0 0 20px;
 }

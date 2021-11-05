@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
-import './details.css';
-import styled from 'styled-components';
-import { FaChevronCircleLeft } from 'react-icons/fa';
+import React, { useEffect, useState } from "react";
+import { useParams, useHistory } from "react-router-dom";
+import "./details.css";
+import styled from "styled-components";
+import { FaChevronCircleLeft } from "react-icons/fa";
 
-import { DETAILS_URL } from '../utils/urls';
+import { DETAILS_URL } from "../utils/urls";
 
 //Remove to css?
 const GoBackButton = styled.button`
@@ -20,7 +20,7 @@ const GoBackButton = styled.button`
 
 const Details = () => {
   const [details, setDetails] = useState({});
-  const [hasError, setHasError] = useState('');
+  const [hasError, setHasError] = useState("");
 
   const { id } = useParams();
   const history = useHistory();
@@ -43,16 +43,16 @@ const Details = () => {
   };
 
   const onHomePageRedirect = () => {
-    history.push('/');
+    history.push("/");
   };
 
   const detailsBackdropUrl = details.backdrop_path
     ? `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})`
-    : '';
+    : "";
 
   const detailsImageUrl = details.poster_path
     ? `https://image.tmdb.org/t/p/w342${details.poster_path}`
-    : '';
+    : "";
 
   if (hasError) {
     return (
