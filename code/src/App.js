@@ -1,8 +1,8 @@
-import React from 'react';
-import { MovieLists } from './pages/MovieLists'; //import MovieLists component
-import { MovieDetails } from './pages/MovieDetails'; //import MovieDetails component
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'; //import react route dom
-import NotFound from './pages/NotFound'; //import NotFound component
+import React from "react";
+import { MovieLists } from "./pages/MovieLists"; //import MovieLists component
+import { MovieDetails } from "./pages/MovieDetails"; //import MovieDetails component
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom"; //import react route dom
+import NotFound from "./pages/NotFound"; //import NotFound component
 
 export const App = () => {
 	return (
@@ -17,11 +17,11 @@ export const App = () => {
 				<Route path="/movie/:movieId">
 					<MovieDetails />
 				</Route>
-				<Route path="/404"  >
-				<NotFound/>
+				<Route path="/404">
+					<NotFound />
 				</Route>
 				{/* Redirect the user to the 404 path */}
-				<Redirect to="/404"/> 
+				<Redirect to="/404" />
 			</Switch>
 		</BrowserRouter>
 	);
@@ -33,12 +33,6 @@ export const App = () => {
 //Meta tags
 //add read me
 
-
-
 //Question for teamsession
 // Movie title and release date made white
 //Grid on similar movies WHY DOES IT NOT WORK?
-
-
-
-
