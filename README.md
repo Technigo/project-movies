@@ -1,13 +1,14 @@
-# Project Movies
-
+Project Movies
 A multipage React application, that uses the moviedb API to present some popular movies.
 
-## Features used
+Features used
+- Hooks, for example: useEffect, useState, useParams and useHistory
+- The first page consists of a list of popular movies, and the other shows you the details of the selected movie
+- Responsiveness 
 
-## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The problem
+We started this project by making a Trello board just for this, to easier identify what needed to be done. Merging is still pretty new to us, so this has been a good opportunity to continue practicing it. With the help of our team and community we were able to solve issues that arose when working with multiple pages. 
 
-## View it live
-
+View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
