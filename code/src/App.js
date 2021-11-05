@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import List from "./components/List";
 import Details from "./components/Details";
@@ -15,7 +15,7 @@ export const App = () => {
       .then((data) => setList(data.results));
   }, []);
 
-  const printMovies = (movieName) => {};
+ 
 
   return (
     <BrowserRouter>
@@ -23,7 +23,7 @@ export const App = () => {
         <Route exact path="/" render={() => <List movies={list} />} />
         <Route path="/movies/:id" component={Details} />
         <Route path="/404" component={NotFound} />
-        {/* <Redirect to="/404" /> */}
+        <Redirect to="/404" />
       </Switch>
     </BrowserRouter>
   );
