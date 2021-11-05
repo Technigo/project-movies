@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const countries = {
   sweden: 'SE',
@@ -17,6 +17,61 @@ const countries = {
   croatia: 'HR',
 }
 
+const HeaderStyled = styled.header`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+const TitleStyled = styled.h1`
+  margin-top: 10vh;
+  text-align: center;
+  color: rgb(238, 235, 221);
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+`
+const ToplistStyled = styled.span`
+  color: rgb(255, 246, 0);
+`
+const SubHeadingStyled = styled.h2`
+  margin: 4vh 0;
+  color: rgb(238, 235, 221);
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 21px;
+  }
+`
+const ArrowDownStyled = styled.img`
+  width: 50px;
+  margin-top: 10px;
+  cursor: not-allowed;
+  filter: invert(0.7);
+  animation: bounce 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+  animation-direction: alternate;
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(-20px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+`
 const SectionGridStyled = styled.section`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -51,61 +106,6 @@ const LinkToCountryStyled = styled(Link)`
     right: 10px;
   }
 `
-const TitleStyled = styled.h1`
-  margin-top: 10vh;
-  text-align: center;
-  color: rgb(238, 235, 221);
-
-  @media (max-width: 768px) {
-    font-size: 24px;
-  }
-`
-const ToplistStyled = styled.span`
-  color: rgb(255, 246, 0);
-`
-const SubHeadingStyled = styled.h2`
-  margin: 4vh 0;
-  color: rgb(238, 235, 221);
-  font-weight: 400;
-  font-size: 30px;
-  text-align: center;
-
-  @media (max-width: 768px) {
-    font-size: 21px;
-  }
-`
-const ArrowDownStyled = styled.img`
-  width: 50px;
-  margin-top: 10px;
-  filter: invert(0.7);
-  cursor: not-allowed;
-  animation: bounce 1s;
-  animation-timing-function: ease;
-  animation-iteration-count: infinite;
-  border-radius: 50%;
-  animation-direction: alternate;
-
-  @keyframes bounce {
-    0% {
-      transform: translateY(0);
-    }
-    30% {
-      transform: translateY(-20px);
-    }
-    50% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-`
-const HeaderStyled = styled.header`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
 const FooterStyled = styled.footer`
   font-size: 14px;
   color: rgb(238, 235, 221);
@@ -122,7 +122,7 @@ const FirstPage = () => {
         <SubHeadingStyled>
           Select a <ToplistStyled>country</ToplistStyled> of your choice
         </SubHeadingStyled>
-        <ArrowDownStyled src='./assets/chevron.png' alt='arrow down' />
+        <ArrowDownStyled src='./assets/arrowdown.svg' alt='arrow down' />
       </HeaderStyled>
       <SectionGridStyled>
         <LinkToCountryStyled to={`/list/${countries.sweden}`}>

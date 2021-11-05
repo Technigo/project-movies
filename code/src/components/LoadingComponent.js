@@ -9,7 +9,6 @@ const LoadingContainerStyled = styled.div`
   left: 0;
   background-color: rgb(129, 0, 52);
 `
-
 const SpinnerStyled = styled.div`
   position: relative;
   top: 40%;

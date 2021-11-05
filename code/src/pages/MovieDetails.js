@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import styled from 'styled-components'
+
+import { API_MOVIE } from 'utils/urls'
 import LoadingComponent from '../components/LoadingComponent'
 
 const DetailContainerStyled = styled.section`
@@ -17,7 +19,6 @@ const DetailContainerStyled = styled.section`
     align-items: flex-start;
   }
 `
-
 const ArrowStyled = styled.span`
   font-size: 30px;
   margin-right: 5px;
@@ -40,7 +41,6 @@ const DetailLinkStyled = styled(Link)`
     margin-right: 10px;
   }
 `
-
 const BackgroundStyled = styled.img`
   object-fit: cover;
   position: absolute;
@@ -52,7 +52,6 @@ const BackgroundStyled = styled.img`
   height: 100vh;
   z-index: -1;
 `
-
 const PosterStyled = styled.img`
   width: 350px;
   border: 5px solid white;
@@ -63,7 +62,6 @@ const PosterStyled = styled.img`
     margin-bottom: 10px;
   }
 `
-
 const DetailDescriptionStyled = styled.div`
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
@@ -72,17 +70,14 @@ const DetailDescriptionStyled = styled.div`
   padding: 10px;
   border-radius: 10px;
 `
-
 const TitleStyled = styled.h1`
   font-size: 24px;
 `
-
 const DetailRatingStyled = styled.span`
   color: #ff005c;
   font-size: 16px;
   font-weight: 700;
 `
-
 const OverviewStyled = styled.p`
   font-size: 16px;
 `
@@ -94,9 +89,7 @@ const MovieDetails = () => {
   const { countryCode } = useParams()
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${movieId}?api_key=1cd9c12b0f59437cb1f892337285c32e&language=en-US`
-    )
+    fetch(API_MOVIE(movieId))
       .then((res) => res.json())
       .then((data) => setDetails(data))
       .finally(() => setLoading(false))

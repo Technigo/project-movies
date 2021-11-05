@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Link, useParams } from 'react-router-dom'
+
 import { API_LIST } from 'utils/urls'
 
 const MoviesContainerStyled = styled.section`
@@ -11,7 +12,6 @@ const MoviesContainerStyled = styled.section`
     grid-template-columns: repeat(2, 1fr);
   }
 `
-
 const ArrowStyled = styled.span`
   font-size: 30px;
   margin-right: 5px;
@@ -33,17 +33,14 @@ const ListLinkStyled = styled(Link)`
     margin-right: 10px;
   }
 `
-
 const MovieLinkStyled = styled(Link)`
   text-decoration: none;
   position: relative;
 `
-
 const MovieImgStyled = styled.img`
   width: 100%;
   height: 100%;
 `
-
 const OverlayStyled = styled.div`
   position: absolute;
   top: 0;
@@ -60,9 +57,9 @@ const OverlayStyled = styled.div`
     opacity: ${(props) => (props.hasPoster ? '0.8' : '1')};
   }
 `
-// adapting the style based on props
+// adapting the styling based on props
 // if the props 'hasPoster' is true, the color will be white
-// if we don't have a poster image, the color will be black
+// if we don't have a poster image, the color will be yellow
 const DataStyled = styled.div`
   color: ${(props) => (props.hasPoster ? 'white' : 'rgb(255, 246, 0)')};
   height: 100%;
@@ -72,12 +69,10 @@ const DataStyled = styled.div`
   padding-left: 10px;
   padding-bottom: 30px;
 `
-
 const TitleStyled = styled.h1`
   font-size: 2em;
   margin: 0;
 `
-
 const DateStyled = styled.p`
   font-size: 1em;
 `
