@@ -1,8 +1,8 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+A multipage React application, that uses the moviedb API to present some popular movies.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## Features used
 
 ## The problem
 
