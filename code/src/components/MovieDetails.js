@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
-import { DETAILS_URL } from "../utils/urls"
+import { DETAILS_URL } from '../utils/urls';
 
 const MovieDetails = () => {
-  const [details, setDetails] = useState({})
+  const [details, setDetails] = useState({});
 
-  const { info } = useParams()
+  const { info } = useParams();
 
   useEffect(() => {
     fetch(DETAILS_URL(info))
       .then((res) => res.json())
       .then((json) => {
-        setDetails(json)
-        console.log("DETAILS API INFO HERE ", json)
-      })
-  }, [info])
+        setDetails(json);
+        console.log('DETAILS API INFO HERE ', json);
+      });
+  }, [info]);
 
   return (
     <div
@@ -36,7 +36,7 @@ const MovieDetails = () => {
         </span>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MovieDetails
+export default MovieDetails;
