@@ -2,14 +2,11 @@
 
 A multipage application built with React using API fetching to display the popular movies.
 
-
 ## The problem
 
-One of the challenging part were to implement the useParams hook to create a dynamic id from API.
+- One of the challenging part were to implement the useParams hook to create a dynamic id from API.
 
-Anoth Since the project was made in pair-programming, it was a great opportunity to practice merging new branches and solving conflicts.
-
-- The useParams was a new concept and we learned the best use and placement for it.
+- Another challenge was to find a way to be able to merge our separate local versions when we had to work on the code spearately at different times. 
 
 ## Features
 
