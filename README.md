@@ -1,13 +1,11 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+The goal for this week's project was to build our very first multi-page React application. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+For this we created a movies site where we fetched data for popular movies from the Movie Database API, and then added styling according to the project requirements.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+We invite you to look at our project here:
+
+https://molbimien-maja-week-12-popular-movies.netlify.app 
