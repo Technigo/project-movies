@@ -3,15 +3,15 @@ import { useParams, useHistory, Link } from "react-router-dom";
 
 const MovieDetails = ({ allMovies }) => {
   const { movieId } = useParams();
-  const history = useHistory()
-  
-  const matchingMovie = allMovies.find((movie) => movie.id == movieId);
+  const movidIdNum = parseInt(movieId);
+  const history = useHistory();
+
+  const matchingMovie = allMovies.find((movie) => movie.id === movidIdNum);
 
   if (!matchingMovie) {
-	history.push("/")
-	return <span>404</span>
-} 
-
+    history.push("/");
+    return <span>404</span>;
+  }
 
   const backgroundStyles = {
     backgroundImage: `url(https://image.tmdb.org/t/p/w1280${matchingMovie.backdrop_path})`,
@@ -26,13 +26,14 @@ const MovieDetails = ({ allMovies }) => {
   return (
     <article>
       <Link className="back-link" to="/all-movies">
-      &#60; &#60;  Movies
+        &#60; &#60; Movies
       </Link>
       <div style={backgroundStyles}>
         <div className="summary-section">
           <img
             className="poster"
             src={`https://image.tmdb.org/t/p/w342${matchingMovie.poster_path}`}
+            alt={`${matchingMovie.title}-movie-poster`}
           />
           <div className="details">
             <h1 className="movie-title">

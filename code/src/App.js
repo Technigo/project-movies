@@ -9,7 +9,6 @@ export const App = () => {
   const [userApiKey, setUserApiKey] = useState("");
   const [allMovies, setAllMovies] = useState([]);
 
-
   return (
     <BrowserRouter>
       <Switch>
@@ -17,10 +16,14 @@ export const App = () => {
           <HomePage userApiKey={userApiKey} setUserApiKey={setUserApiKey} />
         </Route>
         <Route path="/all-movies" exact>
-          <AllMovies userApiKey={userApiKey} allMovies={allMovies} setAllMovies={setAllMovies}/>
+          <AllMovies
+            userApiKey={userApiKey}
+            allMovies={allMovies}
+            setAllMovies={setAllMovies}
+          />
         </Route>
         <Route path="/details/:movieId">
-          <MovieDetails allMovies={allMovies}/>
+          <MovieDetails allMovies={allMovies} />
         </Route>
       </Switch>
     </BrowserRouter>
