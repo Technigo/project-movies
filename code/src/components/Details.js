@@ -59,7 +59,7 @@ const Details = () => {
 			<div className="summary">
             <img src={`https://image.tmdb.org/t/p/w780${details.poster_path}`}  alt={details.title} />
             	<div className="details">
-              	<h1>{details.original_title} <span className="rating">{details.vote_average}/10</span></h1>
+              	<h1>{details.title} <span className="rating">{details.vote_average}/10</span></h1>
               	<p>{details.overview}</p>
           		</div>
 			</div>
