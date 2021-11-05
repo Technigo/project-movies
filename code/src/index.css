@@ -10,9 +10,10 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	overflow-x:hidden;
 	background-color: var(--gray-black);
 	margin:0;
+	
+	
 }
 
 
@@ -32,9 +33,15 @@ code {
 
 
 
+h1{
+	padding:0;
+	margin:0;
+}
 
-
-
+p{
+	padding:0;
+	margin:0;
+}
 
 
 

@@ -1,9 +1,15 @@
+.wrapper-details{
+    overflow: hidden;
+}
+
+
 .background-image{
     min-height: 100vh;
+    width: 100vw;
     display: flex;
     background-size: cover;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-end;   
 }
 
 
@@ -35,7 +41,7 @@
 }
 
 .votes{
-    font-size: 17px;
+    font-size: 18px;
     color: red;
     font-weight: 400;
     margin-left: 10px;
@@ -53,6 +59,9 @@
     font-size: 20px;
     display:flex;
     padding-left: 3em;
+    padding-top: 2em;
+    position: absolute;
+
 }
 
 .button-text{
@@ -60,9 +69,54 @@
     font-weight: bold;
     margin:0;
     margin-left: 0.5em;
-
 }
 
 FaChevronCircleLeft{
     font-size: 24px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .movie-poster{
+    padding:0;
+    }
+
+    .movie-name{
+        font-size: 32px;
+        margin-bottom: 0.5em;
+    }
+
+    .votes{
+        font-size: 24px;
+        margin-left: 15px;
+    }
+
+    .info-details{
+        font-size: 18px;
+    }
+
+    .backbutton{
+        margin-left: 2em;  
+        font-size: 30px;
+    }   
+
+    .button-text{
+        font-size: 30px;
+    }
+
+}
+
+@media (min-width: 375px) and (max-width:767px) {
+    .movie-poster{
+        display:grid;
+        grid-template-rows: 1fr;
+        margin-top: 2em;
+        
+    }
+    .poster-image{
+        width:75%;
+    }
+
+    .movie-name{
+        font-size: 21px;
+    }
 }

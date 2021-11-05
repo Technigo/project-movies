@@ -21,20 +21,18 @@ useEffect(() => {
 
  
 return (
-    <section>
-        <div className="backbutton" onClick={() => history.goBack()}> <FaChevronCircleLeft/> <h3 className="button-text">Movies</h3></div>
-        <div className="background-image"
-        style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`,}}>
-        <div className="movie-poster">
-            <img className="poster-image" src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`}
-            alt="{movieDetails.title} poster"></img>
-            <div className="summary">
-            <h1 className="movie-name">{movieDetails.title}
-            <span className="votes">{movieDetails.vote_average}/10</span>
-            </h1>
-                <p className="info-details">{movieDetails.overview}</p>
+    <section className="wrapper-details">
+        <button className="backbutton" onClick={() => history.goBack()}> <FaChevronCircleLeft /> <h3 className="button-text">Movies</h3></button>
+        <div className="background-image" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`,}}>
+            <div className="movie-poster">
+                <img className="poster-image" src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`}
+                alt="{movieDetails.title} poster"></img>
+                <div className="summary">
+                    <h1 className="movie-name">{movieDetails.title}
+                    <span className="votes">{movieDetails.vote_average}/10</span></h1>
+                    <p className="info-details">{movieDetails.overview}</p>
                 </div>
-                </div>
+            </div>
             
         </div>
         

@@ -4,7 +4,7 @@ import "./Header.css"
 const Header = () => {
     return (
         <header className="header-container">
-            <h1 className="title"> Movies 2021 </h1>
+            <h1 className="title"> Friday Night Movies </h1>
             </header>
     );
 };

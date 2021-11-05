@@ -1,10 +1,16 @@
 .container {
 	display:flex;
 	flex-wrap:wrap;
-    width:100vw;
+    width:100%;
     justify-content: center;
     background-color: var(--gray-black);
+    overflow-x:hidden;
 }
+
+.container a {
+    width:25%;
+}
+
 
 .overlay{
     position: relative;
