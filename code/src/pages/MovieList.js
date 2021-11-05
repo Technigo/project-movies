@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
-import { Link, useParams } from 'react-router-dom'
-import { API_LIST } from 'utils/urls'
+import React, { useState, useEffect } from "react"
+import styled from "styled-components"
+import { Link, useParams } from "react-router-dom"
+import { API_LIST } from "utils/urls"
 
 const MoviesContainerStyled = styled.section`
   display: grid;
@@ -24,7 +24,7 @@ const DetailLinkStyled = styled(Link)`
   color: white;
 
   &:hover ${ArrowStyled} {
-    color: red;
+    color: rgb(255, 246, 0);
     margin-right: 10px;
   }
 `
@@ -47,19 +47,19 @@ const OverlayStyled = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: ${(props) => (props.hasPoster ? '0' : '1')};
+  opacity: ${props => (props.hasPoster ? "0" : "1")};
 
   &:hover {
-    background-color: ${(props) =>
-      props.hasPoster ? 'black' : 'rgba(0,0,0,0.5)'};
-    opacity: ${(props) => (props.hasPoster ? '0.8' : '1')};
+    background-color: ${props =>
+      props.hasPoster ? "black" : "rgba(0,0,0,0.5)"};
+    opacity: ${props => (props.hasPoster ? "0.8" : "1")};
   }
 `
 // adapting the style based on props
 // if the props 'hasPoster' is true, the color will be white
 // if we don't have a poster image, the color will be black
 const DataStyled = styled.div`
-  color: ${(props) => (props.hasPoster ? 'white' : 'black')};
+  color: ${props => (props.hasPoster ? "white" : "black")};
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -83,24 +83,24 @@ const MovieList = () => {
 
   useEffect(() => {
     fetch(API_LIST(countryCode))
-      .then((res) => res.json())
-      .then((data) => setList(data.results))
+      .then(res => res.json())
+      .then(data => setList(data.results))
   }, [countryCode])
 
   return (
     <MoviesContainerStyled>
-      <DetailLinkStyled to='/'>
+      <DetailLinkStyled to="/">
         <ArrowStyled>&#10688;</ArrowStyled>
         Countries
       </DetailLinkStyled>
-      {list.map((movie) => (
+      {list.map(movie => (
         <MovieLinkStyled
           to={`/list/${countryCode}/movie/${movie.id}`}
           key={movie.id}
         >
           {/* {console.log(`/list/${countryCode}/movie/${movie.id}`)} */}
           {movie.poster_path === null ? (
-            <MovieImgStyled src='/assets/nopic2.png' alt='not available/' />
+            <MovieImgStyled src="/assets/nopic2.png" alt="not available/" />
           ) : (
             <MovieImgStyled
               src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
