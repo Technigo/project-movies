@@ -30,7 +30,7 @@ const MovieDetails = () => {
   if (hasError) {
     return (
       <div className='Error-Page'>
-        <p>Sorry this movie does not exist!</p>
+        <p className='error-p'>SORRY,THIS MOVIE DOES NOT EXIST!</p>
         <button className='error-btn' onClick={onButtBackClick}>
           Back to main
         </button>
@@ -39,7 +39,7 @@ const MovieDetails = () => {
   }
 
   return (
-    <div>
+    <div className='details-container'>
       <div className='darken'>
         <img
           className='back-img'
@@ -61,7 +61,7 @@ const MovieDetails = () => {
         />
 
         <div className='movie-text'>
-          <h1>
+          <h1 className='title'>
             {movie.original_title}
             <span className='vote'>{movie.vote_average}/10</span>
           </h1>
