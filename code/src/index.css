@@ -276,7 +276,7 @@ img {
 /*  PAge not found */
 
 .pageNotFoundContainer {
-  width: 98vw;
+  width: 95vw;
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -344,6 +344,11 @@ img {
 /* Tablet */
 
 @media (min-width: 768px) {
+
+
+
+
+
   .movieListContainer {
     grid-template-columns: repeat(2, 1fr);
   }
