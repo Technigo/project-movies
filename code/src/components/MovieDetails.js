@@ -53,6 +53,7 @@ const MovieDetailsContainer = styled.div`
 `;
 
 const TitleRatingText = styled.div`
+  max-width: 425px;
   display: flex;
   align-items: center;
   margin-bottom: 15px;
