@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
+// API of the playing now movies'details  //
 import { DETAILS_URL } from "utils/urls";
+// Spinner Component //
 import Spinner from "./Spinner";
 
+// FUNCTION
 const MoviesDetails = ({ films }) => {
-  const [details, setDetails] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const { moviesId } = useParams();
-  const history = useHistory(); //History Hook
+  const [details, setDetails] = useState([]);   //useState for the API fetching
+  const [loading, setLoading] = useState(true); //useState for rendering the Spinner component
+  const { moviesId } = useParams();  // useParams for passing the movie's ID which is comming from the MoviesList component via the path
+  const history = useHistory();     //History Hook
 
   useEffect(() => {
     fetch(DETAILS_URL(moviesId))
@@ -18,14 +21,15 @@ const MoviesDetails = ({ films }) => {
       });
   }, [moviesId]); 
 
-  // History function btn
+  // Function button using the history hook
+  // It leads you to the main page: the moviesList component //
   const OnButtonBack = () => {
-    history.push("/");
+    history.push("/"); 
   };
 
   return (
     <div class="movie-details-container">
-      {loading && <Spinner />}
+      {loading && <Spinner />}  {/*Only when the loading variable is true it renders the Spinner component*/}
       <img
         src={`https://image.tmdb.org/t/p/original${details.backdrop_path}`}
         alt="background"
@@ -41,6 +45,8 @@ const MoviesDetails = ({ films }) => {
         <img
           src={`https://image.tmdb.org/t/p/w780${details.poster_path}`}
           alt="small poster"
+          className="small-poster"
+
         />
 
         <div className="title-rating-wrapper">

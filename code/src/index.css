@@ -35,10 +35,6 @@ code {
   position: relative;
 }
 
-.movie-container img {
-  width: 100%;
-}
-
 .movie-link {
   width: 100%;
 }
@@ -78,42 +74,26 @@ code {
 /* Movies Detail styling */
 .movie-details-container {
   display: flex;
-  background-size: cover;
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
   background: (rgb 0, 0, 0 100%);
-}
-.movie-details-container:after {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
 }
 
 .summary-wrapper {
   display: flex;
   align-items: flex-end;
   padding: 50px;
-  position: absolute;
-  z-index: 1;
 }
 
-.summary-wrapper img {
+.small-poster {
   border: 3px solid white;
   width: 25%;
+  display: none;
 }
 
 .title-rating-wrapper {
   align-items: flex-end;
-  padding: 50px;
 }
 
 .summary-h1 {
@@ -121,18 +101,21 @@ code {
   font-size: 24px;
   font-weight: 600;
 }
+
 .summary-p {
   color: white;
   max-width: 350px;
   font-size: 15px;
   margin-top: 15px;
 }
+
 .rating {
   color: red;
   margin-left: 15px;
   font-size: 17px;
   font-weight: 700;
 }
+
 .movies-btn {
   z-index: 1;
   position: absolute;
@@ -150,6 +133,7 @@ code {
   display: flex;
   align-items: center;
 }
+
 .fas {
   color: #fff;
   font-size: 25px;
@@ -236,9 +220,42 @@ code {
   .movie-link {
     width: 50%;
   }
+  .summary-wrapper {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .small-poster {
+    border: 3px solid white;
+    width: 25%;
+    display: block;
+  }
+
+  .movie-details-container:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+
+  .title-rating-wrapper {
+    padding: 50px;
+  }
 }
+
 @media (min-width: 968px) {
   .movie-link {
     width: 25%;
+  }
+
+  .movie-details-container {
+    background: (rgb 0, 0, 0 100%);
   }
 }
