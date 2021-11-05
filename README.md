@@ -1,13 +1,16 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week's project was a pair programming with Mamite Andersson and myself. The project was to create a multi page React application with React router. The site displays the 20 most popular movies from Themoviedb.org's API
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Used features and work process:
+-Hooks: useEffect,useState, and useParams.
+-React route: one page contains the list of movies and the sub-page the details of the selected movie.
+-Responsive styling, mobile first.
+-Error page & loading page.
+-Pair programming
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Please view our project at https://optimistic-haibt-a7262b.netlify.app
