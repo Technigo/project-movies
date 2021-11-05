@@ -16,7 +16,6 @@ export const MovieList = () => {
 
   // special state to hold current state of the select
   const [change, changeTracker] = useState("popular");
-  console.log("change", change);
 
   useEffect(() => {
     // declaring a variable that will act as a dynamic stitcher for the api link
@@ -59,11 +58,16 @@ export const MovieList = () => {
         )) ||
           movies.map((movie) => (
             <div className="movie-container" key={movie.id}>
-              <img alt={`${movie.original_title} `} src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} />
+              <img
+                alt={`${movie.original_title} `}
+                src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+              />
               <Link to={`/movieDetails/${movie.id}`}>
                 <OverLay>
                   <h2>{movie.original_title}</h2>
-                  <p>Released {moment(movie.release_date).format("MMM Do YY")}</p>
+                  <p>
+                    Released {moment(movie.release_date).format("MMM Do YY")}
+                  </p>
                 </OverLay>
               </Link>
             </div>

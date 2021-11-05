@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import arrow from "../assets/arrow.svg";
 
-// https://stackoverflow.com/questions/38788848/positioning-of-an-arrow-in-an-html-select/38788908
-// answer on how to hide default select arrow and create a custom one
 export const SelectStyle = styled.select`
   color: whitesmoke;
   outline: none;

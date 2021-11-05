@@ -112,7 +112,6 @@ p {
   margin-bottom: 0;
 }
 
-/* https://stackoverflow.com/questions/40549227/how-to-create-a-pop-up-animation-with-a-modal-using-css/40549695 */
 @keyframes popup {
   0% {
     transform: scale(1);

@@ -136,17 +136,6 @@ select {
   font-size: 16px;
 }
 
-/*.nav-bar-link:hover {
-  opacity: 1;
-  color: #ffffff;
-  background: black;
-  color: goldenrod;
-  text-decoration: underline goldenrod;
-  text-shadow: -1px 2px 3px rgba(218, 165, 32, 0.75);
-  /*text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #fff 0px 0px 15px,
-  goldenrod 0px 0px 20px, goldenrod 0px 0px 30px, orange 0px 0px 40px,
-  orange 0px 0px 50px, orange 0px 0px 75px;*/
-
 @media (min-width: 768px) {
   .grid {
     display: flex;

@@ -7,7 +7,6 @@ import { Header } from "./components/Header";
 import { NavBar } from "./components/NavBar";
 import { NotFound } from "components/NotFound";
 
-// I had created this component but did not write any code in it , just wanted to add it to simplify debugging
 import { MovieDetails } from "./components/MovieDetails";
 
 export const App = () => {
