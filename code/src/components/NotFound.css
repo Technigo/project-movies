@@ -1,8 +1,14 @@
-h1.\34 04-text{
+.wrapper-404{
+    padding-top: 60px;
+    text-align: center;
+}
+
+h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 35px;
+    margin-top: 45px;
+    font-size: 45px;
     color: #fff;
 }
 
@@ -16,6 +22,7 @@ h1.\34 04-text{
     background-color: transparent;
     font-size: 20px;
     cursor: pointer;
+    line-height: 1px;
 }
 
 
@@ -33,6 +40,3 @@ h1.\34 04-text{
 color: #e60073;
 }
 
-.navbar{
-display: none;
-}
