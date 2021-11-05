@@ -27,7 +27,7 @@ const SectionGridStyled = styled.section`
 `
 const LinkToCountryStyled = styled(Link)`
   display: flex;
-  flex-direction: coloumn;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -64,12 +64,37 @@ const ArrowDownStyled = styled.img`
   width: 50px;
   filter: invert(0.7);
   cursor: not-allowed;
+  animation: bounce 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+  animation-direction: alternate;
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(-20px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 `
 const HeaderStyled = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`
+const FooterStyled = styled.footer`
+  font-size: 14px;
+  color: rgb(238, 235, 221);
+  text-align: center;
 `
 
 const FirstPage = () => {
@@ -82,7 +107,7 @@ const FirstPage = () => {
         <SubHeadingStyled>
           Select a <ToplistStyled>country</ToplistStyled> of your choice
         </SubHeadingStyled>
-        <ArrowDownStyled src='/assets/chevron.png' alt='arrow down' />
+        <ArrowDownStyled src='./assets/chevron.png' alt='arrow down' />
       </HeaderStyled>
       <SectionGridStyled>
         <LinkToCountryStyled to={`/list/${countries.sweden}`}>
@@ -122,6 +147,7 @@ const FirstPage = () => {
           Croatia
         </LinkToCountryStyled>
       </SectionGridStyled>
+      <FooterStyled>© by Elin & Katie | Technigo</FooterStyled>
     </>
   )
 }

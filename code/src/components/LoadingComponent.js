@@ -7,7 +7,7 @@ const LoadingContainerStyled = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: black;
+  background-color: rgb(129, 0, 52);
 `
 
 const SpinnerStyled = styled.div`
@@ -15,7 +15,7 @@ const SpinnerStyled = styled.div`
   top: 40%;
   width: 200px;
   margin: 0 auto;
-  border: 5px solid yellow;
+  border: 7px solid rgb(255, 246, 0);
   height: 200px;
   border-radius: 50%;
   border-left: 5px solid black;
