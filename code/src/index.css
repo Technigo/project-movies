@@ -136,7 +136,7 @@ select {
   font-size: 16px;
 }
 
-.nav-bar-link:hover {
+/*.nav-bar-link:hover {
   opacity: 1;
   color: #ffffff;
   background: black;
@@ -146,7 +146,6 @@ select {
   /*text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #fff 0px 0px 15px,
   goldenrod 0px 0px 20px, goldenrod 0px 0px 30px, orange 0px 0px 40px,
   orange 0px 0px 50px, orange 0px 0px 75px;*/
-}
 
 @media (min-width: 768px) {
   .grid {
