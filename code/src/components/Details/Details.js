@@ -13,7 +13,7 @@ export const Details = ({ imageInformation }) => {
 
   const PosterPath = (poster_path) => {
     return (
-      imageInformation.base_url + imageInformation.poster_sizes[3] + poster_path
+      imageInformation.base_url + imageInformation.poster_sizes[6] + poster_path
     );
   };
 
@@ -107,6 +107,7 @@ const Background = styled.div`
   min-height: 100vh;
   display: flex;
   background-size: cover;
+  background-position: center center;
   flex-direction: column;
   justify-content: flex-end;
 `;
@@ -121,11 +122,11 @@ const TextContainer = styled.div`
 
   @media (min-width: 668px) and (max-width: 1024px) {
     max-width: 500px;
-    margin: 0 auto 40px auto;
+    margin: 40px auto;
   }
   @media only screen and (min-width: 1025px) {
     max-width: 500px;
-    margin: 0 auto 40px auto;
+    margin: 40px auto;
   }
 
   h1 {
@@ -159,11 +160,7 @@ const ImgDiv = styled.div`
 `;
 
 const Image = styled.img`
-  width: 325px;
-
-  @media (min-width: 668px) and (max-width: 1024px) {
-    width: 500px;
-  }
+  width: 100%;
 `;
 
 const Error = styled.div`
