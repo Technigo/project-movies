@@ -1,0 +1,98 @@
+.burger {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.burger a {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 25px;
+    text-decoration: none;
+}
+
+.burger a:hover {
+    border-bottom: 1.5px solid #000;
+  }
+
+  .burger a:active {
+    border-bottom: 1.5px solid #000;
+  }
+
+.burger .menu {
+    display: none;
+    clear: both;
+    transition: max-height .2s ease-out;
+    background-color: #e60073;
+    list-style-type: none;
+    margin-top: 70px;
+    padding: 25px;
+}
+
+.burger .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.burger .menu-icon .navicon {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.burger .menu-icon .navicon:before, .burger .menu-icon .navicon:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.burger .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.burger .menu-icon .navicon:after {
+    top: -5px;
+}
+
+.burger .menu-btn {
+    display: none;
+}
+
+.burger .menu-btn:checked~.menu {
+    display: block;
+    max-height: 200px;
+}
+
+.burger .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.burger .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.burger .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.burger .menu-btn:checked~.menu-icon:not(.steps) .navicon:before, .burger .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+@media (min-width: 768px) {
+    .burger {
+        display: none;
+    }
+}

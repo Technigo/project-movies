@@ -17,7 +17,7 @@
     color: #fff;
     text-align: center;
     padding-left: 10px;
-    animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 5s ease-in-out infinite alternate;
   }
   
   @keyframes glow {
@@ -32,7 +32,7 @@
 
   /* mobile */
   @media (max-width: 767px) {
-  .navbar-links {
+  .link-wrapper {
     display: none;
   }
 }

@@ -9,35 +9,33 @@ import TopRatedList from 'components/TopRatedList';
 import ChristmasList from 'components/Christmas';
 import HalloweenList from 'components/Halloween';
 
-import { MOVIES_URL} from './utils/urls';
+import { MOVIES_URL } from './utils/urls';
 
 export const App = () => {
-	const [list, setList] = useState([]);
+  const [list, setList] = useState([]);
 
-useEffect(() => {
-  fetch(MOVIES_URL)
-    .then((res) => res.json())
-    .then((data) => setList(data.results));
-}, []);
+  useEffect(() => {
+    fetch(MOVIES_URL)
+      .then((res) => res.json())
+      .then((data) => setList(data.results));
+  }, []);
 
-
-
-return (
-  <>
+  return (
+    <>
       <BrowserRouter>
-      <Navbar title="Movie(pop)Corner"/>
-      <Switch>
-        <Route exact path="/" render={() => <PopularList movies={list} />} />
-        <Route path="/details/:movieID" component={Details} />
-        <Route exact path="/toprated"> <TopRatedList /></Route>
-        <Route exact path="/christmas"> <ChristmasList /></Route>
-        <Route exact path="/halloween"> <HalloweenList /></Route>
-  
-        <Route path="/404" component={NotFound} />
-        <Redirect to="/404" />
-        
-      </Switch>
-    </BrowserRouter>
-  </>
-);
+        <Navbar title="Movie(pop)Corner" />
+        <Switch>
+          <Route exact path="/" render={() => <PopularList movies={list} />} />
+          <Route path="/details/:movieID" component={Details} />
+          <Route exact path="/toprated"> <TopRatedList /></Route>
+          <Route exact path="/christmas"> <ChristmasList /></Route>
+          <Route exact path="/halloween"> <HalloweenList /></Route>
+
+          <Route path="/404" component={NotFound} />
+          <Redirect to="/404" />
+
+        </Switch>
+      </BrowserRouter>
+    </>
+  );
 };

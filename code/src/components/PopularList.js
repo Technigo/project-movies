@@ -10,7 +10,6 @@ const PopularList = ({ movies }) => {
 		<section className="movies">
 			{movies.map((movie) => (
 				<MovieBox key={movie.id} movie={movie} />
-
 			))}
 		</section>
 	);
