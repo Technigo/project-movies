@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import styled from 'styled-components'
+import popcorn from "../images/popcorn.svg"
 
 import { DETAILS_URL } from '../utils/urls'
 import Button from './Button'
@@ -40,9 +41,10 @@ const Details = () => {
 
 	if (error) {
 		return(
-		<div>
-		  <GoBackButton onClick={onButtonBackClick}>Go back</GoBackButton>
-		  <h2>No such movie!</h2>
+		<div className="errorContainer">
+		  <Button onClick={onButtonBackClick}>Go back</Button>
+		  <img src={popcorn} alt="popcorn" />
+		  <h2>Sorry, no such movie!</h2>
 	  </div>
 		)
 	}
