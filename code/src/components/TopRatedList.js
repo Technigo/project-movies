@@ -14,7 +14,7 @@ export const TopRatedList = () => {
 		fetch(TOP_RATED_URL)
 		  .then((res) => res.json())
 		  .then((json) => {
-			setLoading(true)
+			setLoading(false)
 			setTopRatedList(json.results)
 		  })
 	  }, []);
