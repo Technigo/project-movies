@@ -144,10 +144,6 @@ a:hover .movie-date-title-text-box {
   color: #fff;
 }
 
-.movie-small-img {
-  display: flex;
-}
-
 /* The title */
 .details-h1 {
   color: white;
@@ -216,7 +212,42 @@ a:hover .movie-date-title-text-box {
     font-size: 16px;
     margin-top: 15px;
   }
+  /* container/wrapper for poster img, title, rating and plot summary */
+  .movie-info-wrapper1 {
+    display: flex;
+    align-items: flex-end;
+    padding: 50px;
+    position: absolute;
+    z-index: 1;
+  }
+  .movie-info-wrapper1 img {
+    border: 3px solid white;
+    width: 25%;
+  }
+  .movie-info-text-wrapper {
+    align-items: center;
+    padding: 40px;
+  }
 }
 
 @media (min-width: 1200px) {
+  /* container/wrapper for poster img, title, rating and plot summary */
+  .movie-info-wrapper1 {
+    display: flex;
+    align-items: flex-end;
+    padding: 50px;
+    position: absolute;
+    z-index: 1;
+    align-items: flex-end;
+  }
+  .movie-info-wrapper1 img {
+    border: 3px solid white;
+    width: 25%;
+    align-items: flex-end;
+  }
+  .movie-info-text-inner-wrapper {
+    align-items: center;
+    padding: 40px;
+    align-items: flex-end;
+  }
 }

@@ -53,7 +53,7 @@ const Details = () => {
         <i class="fa fa-chevron-circle-left"></i>Back to the list
       </button>
 
-      <div className="movie-info-wrapper">
+      <div className="movie-info-wrapper1">
         <img
           src={`https://image.tmdb.org/t/p/w300${movieDetails.poster_path}`}
           alt="{movieDetails.title}"
