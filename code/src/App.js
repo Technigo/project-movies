@@ -7,9 +7,7 @@ import { MovieDetails } from './components/MovieDetails'
 import { TopRatedList } from './components/TopRatedList'
 import { Loading } from './components/Loading'
 
-
 import { FETCH_URL } from './utils/urls'
-
 
 export const App = () => {
 
@@ -25,8 +23,6 @@ export const App = () => {
 			setMovieList(json.results)
 		})
 	}, []);
-
-
 
   return (
 	<div>
@@ -44,7 +40,6 @@ export const App = () => {
 			<Route path="/movies/:movieId" >  
 				<MovieDetails /> 
 			</Route>
-
 	{/* TOP RATED GOES HERE */}
 			<Route path="/top_rated" exact>
             	<TopRatedList />

@@ -45,7 +45,5 @@ export const TopRatedList = () => {
 		))}
       </section>
 	</>
-
-
-    )
+    );
   }
