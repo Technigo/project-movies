@@ -10,18 +10,23 @@ const ButtonTextStyled = styled.h3`
 `;
 
 const BackButtonStyled = styled.button`
-  position: absolute;
-  top: 110px;
-  left: 60px;
+  position: fixed;
+  top: 90px;
+  left: 5%;
   border: none;
   background-color: transparent;
   padding: 0;
   display: flex;
   align-items: center;
-  z-index: 2;
+  z-index: 4;
   &: hover ${ButtonTextStyled} {
     transform: translateX(4px);
     transition: all 0.3s ease-in-out;
+  }
+
+  @media (min-width: 768px) {
+    top: 110px;
+    left: 60px;
   }
 `;
 

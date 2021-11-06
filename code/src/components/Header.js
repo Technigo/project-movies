@@ -3,66 +3,58 @@ import { ReactComponent as Logo } from "../assets/movie_logo.svg";
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
-const HeaderStyled = styled.header`
-    position: fixed;
+const HeaderWrapperStyled = styled.div `
     background-color: black;
-    color: white;
-    height: 80px;
-    width: 100vw;
+    width: 100vw; 
+    position: fixed;
+    display: flex;
     z-index: 3;
 `
 
+const HeaderStyled = styled.header`
+    color: white;
+    height: 140px;
+    width: 100%;
+
+    @media (min-width: 768px) {
+        height: 80px;
+        max-width: 1200px;
+        display: flex;
+        margin: 0 auto;
+    }
+`
+
 const LogoStyled = styled.div`
-    position: absolute;
-    left: 60px;
     height: 80px;
     width: 200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-`
-// const NavStyled = styled.nav `
-//     position: absolute;
-//     right: 60px; 
-//     top: 20px;
-//     border: white 1px solid;
-//     padding 8px 10px;
-//     border-radius: 12px;
-//     display: ${props => (props.hidden ? 'none' : 'block')}
-//     &:hover {
-//         background-color: red;
-//     }
-// `
 
-// const SelectStyled = styled.select`
-//     color: white;
-//     background-color: transparent;
-//     font-size: 18px;
-//     border: none;
-// `
+    @media (min-width: 768px) {
+        justify-content: flex-start;
+        margin-left: 20px;
+    }    
+
+    @media (min-width: 1220px) {
+        margin-left: 0;
+    }
+
+`
+
 
 const Header = () => {
 
-    // const onSelectChange = (event) => {
-    //     setSelect(event.target.value)
-    // } 
-
     return (
+        <HeaderWrapperStyled>
         <HeaderStyled>
             <NavLink exact to="/">
                 <LogoStyled>
                     <Logo />
                 </LogoStyled>
             </NavLink>
-            {/* <NavStyled>
-                <SelectStyled value={select} onChange={onSelectChange}>
-                    <option value="popular">Popular</option>
-                    <option value="top_rated">Top rated</option>
-                    <option value="now_playing">Now playing</option>
-                    <option value="upcoming">Upcoming</option>
-                </SelectStyled>
-            </NavStyled> */}
         </HeaderStyled>
+        </HeaderWrapperStyled>
     )
 }
 export default Header 

@@ -10,7 +10,11 @@ const MainContainerStyled = styled.section`
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  padding-top: 80px;
+  padding-top: 140px;
+
+  @media (min-width: 768px) {
+    padding-top: 80px;
+  }
 `;
 
 const Overlay = styled.div`
@@ -38,13 +42,18 @@ const TextContainerStyled = styled.div`
 
 const MovieContainer = styled.div`
   position: relative;
-  width: 25%;
+  width: 50%;
 
-  &:hover ${Overlay} {
-    display: flex;
-  }
-  &:hover ${TextContainerStyled} {
-    display: flex;
+  @media (min-width: 768px) { 
+    width: 25%;
+  } 
+  @media (min-width: 1024px) { 
+    &:hover ${Overlay} {
+      display: flex;
+    }
+    &:hover ${TextContainerStyled} {
+      display: flex;
+    }
   }
 `;
 

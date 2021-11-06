@@ -3,21 +3,19 @@ import { useParams } from "react-router-dom";
 import { DETAILS_URL } from "utils/urls";
 import { BackButton } from "../components/BackButton";
 import styled from "styled-components";
+import NotFound from "../components/NotFound"
 
 const MainWrapperStyled = styled.div`
   height: 100%;
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
   display: flex;
   justify-content: center;
 `
 
-const BgImgStyled = styled.img`
-  height: 100vh;
-  z-index: -1;
-`
+
 const OverlayStyled = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -28,28 +26,47 @@ const OverlayStyled = styled.div`
 `;
 
 const OverviewContainer = styled.div`
+  margin-top: 160px; 
   width: 90%;
-  position: absolute;
-  left: 60px;
-  bottom: 80px;
   display: flex;
+  flex-direction: column;
   align-items: flex end;
   z-index: 2;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    position: absolute;
+    left: 60px;
+    bottom: 80px;
+    margin-top: 0px; 
+    margin-bottom: 0px;
+  }
 `;
 
 const PosterImg = styled.img`
-  width: 45%;
+  width: 70%;
   max-width: 342px;
   border: 5px solid white;
+  margin-bottom: 25px;
+
+  @media (min-width: 768px) {
+    width: 45%;
+    margin-bottom: 0px;
+  }
 `;
 
 const MovieDetailsContainer = styled.div`
-  width: 45%;
+  width: 100%;
   max-width: 500px;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  padding-left: 20px;
+  
+  @media (min-width: 768px) {
+    width: 45%;
+    padding-left: 20px;
+  }
 `;
 
 const TitleRatingText = styled.div`
@@ -87,10 +104,17 @@ const OverviewText = styled.p`
   margin: 0;
 `;
 
-const ErrorText = styled.h2`
-  text-align: center;
-  color: white;
+const BgImgStyled = styled.img`
+position: fixed;
+z-index: -1;
+height: 100vh;
+
+@media (min-width: 768px) {
+  height: 100vh;
+  z-index: -1;
+}
 `;
+
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -111,17 +135,17 @@ const MovieDetails = () => {
   }, [movieId]);
 
   if (hasError) {
-    return <ErrorText>Sorry this page doesn't exist</ErrorText>;
+    return <NotFound/>;
   }
 
   return (
     <MainWrapperStyled>
       <BackButton />
       <OverlayStyled />
-        <BgImgStyled
-          src={movie.backdrop_path ? `https://image.tmdb.org/t/p/original${movie.backdrop_path}` : ""}
-          alt={movie.title}
-        />
+      <BgImgStyled
+        src={movie.backdrop_path ? `https://image.tmdb.org/t/p/original${movie.backdrop_path}` : ""}
+        alt={movie.title}
+      />
       <OverviewContainer>
         <PosterImg
           src={
@@ -141,6 +165,7 @@ const MovieDetails = () => {
           <OverviewText>{movie.overview}</OverviewText>
         </MovieDetailsContainer>
       </OverviewContainer>
+      
     </MainWrapperStyled>
   );
 };

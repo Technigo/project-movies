@@ -1,11 +1,13 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
+import { ReactComponent as MyButton } from "../assets/button_back.svg";
 
 const NotFoundContainer = styled.div`
+  padding-top: 140px;
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding-bottom: 30px;
   align-items: center;
 `;
 
@@ -14,15 +16,10 @@ const NotFoundText = styled.h2`
   text-align: center;
 `;
 
-const RedirectButton = styled.button`
-  margin-top: 20px;
-  padding: 20px;
-  border-radius: 30px;
-  font-size: 16px;
-  width: fit-content;
-  &:hover {
-    background-color: grey;
-  }
+
+const MyButtonStyled = styled.div`
+  width: 30px;
+  margin-right: 10px;
 `;
 
 const NotFound = () => {
@@ -34,9 +31,11 @@ const NotFound = () => {
   return (
     <NotFoundContainer>
       <NotFoundText>Sorry this page doesn't exist</NotFoundText>
-      <RedirectButton onClick={onHomePageRedirect}>
+      <MyButtonStyled>
+      <MyButton onClick={onHomePageRedirect}>
         Back to homepage
-      </RedirectButton>
+      </MyButton>
+      </MyButtonStyled>
     </NotFoundContainer>
   );
 };
