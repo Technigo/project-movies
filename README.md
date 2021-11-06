@@ -8,4 +8,4 @@ I did not have bigger problem, usual lack of time to focus on everything i wante
 
 ## View it live
 
-https://musicrelease-kriss-a1eksa.netlify.app/
+https://movie-project-kriss-a1eksa.netlify.app
