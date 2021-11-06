@@ -24,7 +24,6 @@ code {
 
 /* Wrap option to make the movie posters "wrap" to the page. */
 .full-page-container {
-  display: flex;
   flex-wrap: wrap;
   background-color: black;
   margin-right: 0px;
@@ -36,11 +35,11 @@ a {
   color: #fff;
   text-decoration: none;
 }
-100% to fill upp the whole box and not leave space between to the next poster */
+/*100% to fill upp the whole box and not leave space between to the next poster */
 a img {
   position: relative;
   width: 100%;
-} 
+}
 
 .movie-date-title-text-box {
   position: absolute;
@@ -48,7 +47,7 @@ a img {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0, 0, 0, 0.75);
   display: none;
   padding: 20px;
 }
@@ -65,15 +64,22 @@ a:hover .movie-date-title-text-box {
   justify-content: flex-end;
 }
 
-
 /* DETAILS page styling */
 
-.details-container{
+.img-container {
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  background-size: cover;
+
   flex-direction: column;
-  justify-content: flex-end;
-  position: relative;
+
+  position: fixed;
+}
+
+.background-img {
+  object-fit: cover;
+  width: auto;
+  height: 100%;
 }
 /* Styling shown "after", ie on top of the styling above, the gradient is copied from some fellow students, but changed color  */
 .details-container:after {
@@ -94,7 +100,6 @@ a:hover .movie-date-title-text-box {
 .back-button {
   z-index: 1;
   position: absolute;
-  top: 20px;
   margin-left: 20px;
   padding: 10px;
   padding: 10px;
@@ -111,6 +116,7 @@ a:hover .movie-date-title-text-box {
   color: #fff;
   font-size: 25px;
   margin-right: 2px;
+  padding: 20px;
 }
 /* container/wrapper for poster img, title, rating and plot summary */
 .movie-info-wrapper {
@@ -121,18 +127,29 @@ a:hover .movie-date-title-text-box {
   z-index: 1;
 }
 
-.movie-info-wrapper img {
+/* .movie-info-wrapper img {
   border: 3px solid white;
   width: 25%;
-}
+} */
 
 /* container/wrapper for title, rating and plot summary */
-.movie-info-text-wrapper{
-  align-items:center;
+/* .movie-info-text-wrapper {
+  align-items: center;
   padding: 40px;
+} */
+.movie-info-text-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: #fff;
 }
+
+.movie-small-img {
+  display: flex;
+}
+
 /* The title */
-.details-h1{
+.details-h1 {
   color: white;
   font-size: 24px;
   font-weight: 600;
@@ -140,11 +157,11 @@ a:hover .movie-date-title-text-box {
 /* border radius 25% so that the edges of the background color would be rounded */
 .rating {
   background-color: red;
-  color:white;
+  color: white;
   margin-left: 15px;
   font-size: 15px;
   font-weight: 600;
-  padding:6px; 
+  padding: 6px;
   border-radius: 25px;
 }
 /* The movie plot summary text */
@@ -155,33 +172,51 @@ a:hover .movie-date-title-text-box {
   margin-top: 15px;
 }
 
-/* 
-.movie-date {
+/* trying to fix the header*/
+.header {
   display: none;
-  flex-direction: column;
-  justify-content: end;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  top: 0;
-  color: white;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.682);
-}
-
-.movie-list-image:hover .movie-date {
+  padding: 10px;
+  /* background-color: rgb(233, 125, 125);
   display: flex;
+  justify-content: flex-between; */
 }
 
-.movie-list-image-wrapper {
-  justify-content: space-around;
-  align-items: center;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.644);
-  display: none;
-} */
+.header-wrap {
+  display: flex;
+  text-align: right;
+  padding: 15px;
+}
+
+.movielink {
+  margin-right: 10px;
+  font-size: 30px;
+  display: flex;
+  font-family: "Aclonica", sans-serif;
+  justify-content: flex-end;
+}
+.moviename {
+  font-family: "Aclonica", sans-serif;
+  display: flex;
+  font-size: 30px;
+}
+
+@media (min-width: 768px) {
+  .full-page-container {
+    display: flex;
+  }
+
+  .header {
+    background-color: rgb(233, 125, 125);
+    display: flex;
+  }
+
+  .details-p {
+    color: white;
+    max-width: 350px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+}
