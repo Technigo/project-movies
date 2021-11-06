@@ -8,4 +8,4 @@ I did not have bigger problem, usual lack of time to focus on everything i wante
 
 ## View it live
 
-https://movie-project-kriss-a1eksa.netlify.app
+Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
