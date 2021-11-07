@@ -28,7 +28,7 @@ const MovieDetails = () => {
             setLoading(false)
             setMovie(data)
             }, 1200)
-      })}, [])
+      })}, [id])
 
     return (
 
