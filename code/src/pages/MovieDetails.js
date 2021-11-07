@@ -29,7 +29,7 @@ export const MovieDetails = () => {
         <div
           className="details-container"
           style={{
-            backgroundImage: `url(https://image.tmdb.org/t/p/original${details.backdrop_path})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/original${details.backdrop_path})`,
           }}
         >
           <button className="go-back-button" onClick={goBackButton}>
