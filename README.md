@@ -11,4 +11,4 @@ In this week's project, we had a nice and productive time pair programming and w
 
 ## View it live
 
-https://upbeat-stonebraker-9bc23f.netlify.app/
+https://gifted-hugle-124357.netlify.app/
