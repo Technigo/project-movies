@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { API_MOVIE } from 'utils/urls'
@@ -9,7 +9,7 @@ const DetailContainerStyled = styled.section`
   display: flex;
   justify-content: left;
   align-items: flex-end;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   padding: 40px;
 
@@ -28,7 +28,7 @@ const DetailLinkStyled = styled(Link)`
   background-color: rgba(0, 0, 0, 0.5);
   padding: 2px 8px 6px 8px;
   border-radius: 10px;
-  position: absolute;
+  position: fixed;
   left: 40px;
   top: 40px;
   font-size: 20px;
@@ -43,7 +43,7 @@ const DetailLinkStyled = styled(Link)`
 `
 const BackgroundStyled = styled.img`
   object-fit: cover;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -60,6 +60,7 @@ const PosterStyled = styled.img`
     width: 150px;
     margin-left: 20px;
     margin-bottom: 10px;
+    margin: 10px auto;
   }
 `
 const DetailDescriptionStyled = styled.div`
@@ -85,15 +86,30 @@ const OverviewStyled = styled.p`
 const MovieDetails = () => {
   const [details, setDetails] = useState({})
   const [loading, setLoading] = useState(true)
+  const [hasError, setHasError] = useState(false)
   const { movieId } = useParams()
   const { countryCode } = useParams()
+  const history = useHistory()
 
   useEffect(() => {
     fetch(API_MOVIE(movieId))
       .then((res) => res.json())
-      .then((data) => setDetails(data))
-      .finally(() => setLoading(false))
+      .then((data) => {
+        if (data.id) {
+          setDetails(data)
+          setLoading(false)
+        } else {
+          setHasError(true)
+        }
+      })
+      .catch(() => setHasError(true))
   }, [movieId])
+
+  useEffect(() => {
+    if (hasError) {
+      history.push('/404')
+    }
+  }, [hasError, history])
 
   return (
     <>

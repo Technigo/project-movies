@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useHistory } from 'react-router-dom'
 
 import { API_LIST } from 'utils/urls'
 
@@ -72,6 +72,10 @@ const DataStyled = styled.div`
 const TitleStyled = styled.h1`
   font-size: 2em;
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `
 const DateStyled = styled.p`
   font-size: 1em;
@@ -79,13 +83,28 @@ const DateStyled = styled.p`
 
 const MovieList = () => {
   const [list, setList] = useState([])
+  const [hasError, setHasError] = useState(false)
   const { countryCode } = useParams()
+  const history = useHistory()
 
   useEffect(() => {
     fetch(API_LIST(countryCode))
       .then((res) => res.json())
-      .then((data) => setList(data.results))
+      .then((data) => {
+        if (data.results.length > 0) {
+          setList(data.results)
+        } else {
+          setHasError(true)
+        }
+      })
+      .catch(() => setHasError(true))
   }, [countryCode])
+
+  useEffect(() => {
+    if (hasError) {
+      history.push('/404')
+    }
+  }, [hasError, history])
 
   return (
     <MoviesContainerStyled>

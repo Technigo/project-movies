@@ -95,7 +95,6 @@ const LinkToCountryStyled = styled(Link)`
   text-align: center;
   color: rgb(238, 235, 221);
   border-radius: 10px;
-
   background-image: linear-gradient(86deg, #810034, #26001b);
 
   &:hover {
