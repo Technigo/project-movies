@@ -7,6 +7,17 @@ import { API_KEY } from "utils/urls"
 
 import styled from "styled-components"
 
+export const DetailsContainer = styled.div`
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  top: 0;
+  left: 0;
+
+
+`
+
 export const BackgroundPoster = styled.div`
   background-position: center;
   background-repeat: no-repeat;
@@ -17,14 +28,19 @@ export const BackgroundPoster = styled.div`
 export const MovieDetails = styled.div`
   color: white;
   display: flex;
+  flex-direction: column;
   max-width: 800px;
   margin: 0 auto;
   align-items: flex-end;
   padding-left: 60px;
   float: left;
-  position: fixed;
+  position: relative;
   margin-top: 60px;
   padding: 50px;
+
+  @media (min-width: 767px) {
+    flex-direction: row;
+  }
 `
 
 export const MovieSummary = styled.div`
@@ -45,6 +61,7 @@ const Details = () => {
   }, [movieId])
 
   return (
+    <DetailsContainer>
     <BackgroundPoster
       style={{
         backgroundImage: movie.backdrop_path
@@ -103,6 +120,7 @@ const Details = () => {
         </MovieSummary>
       </MovieDetails>
     </BackgroundPoster>
+    </DetailsContainer>
   )
 }
 
