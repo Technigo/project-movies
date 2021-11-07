@@ -10,12 +10,12 @@ export const MovieList = ({ movies }) => {
   return (
     <section className="list-container">
       {movies.map((movie) => (
-        <Link to={`/details/${movie.id}`} key={movie.id}>
-          <div className="movie-card-container" key={movie.original_title}>
+        <div className="movie-card-container" key={movie.original_title}>
+          <Link to={`/details/${movie.id}`} key={movie.id}>
             <img
               src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-              alt="movie poster"
-            ></img>
+              alt="movie poster">
+            </img>
             <div className="movie-card-overlay">
               <div className="movie-card-text">
                 <h1 className="movie-title">{movie.original_title}</h1>
@@ -24,8 +24,8 @@ export const MovieList = ({ movies }) => {
                 </p>
               </div>
             </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
       ))}
     </section>
   );
