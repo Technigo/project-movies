@@ -1,0 +1,46 @@
+.full-page-container {
+  flex-wrap: wrap;
+  background-color: black;
+  margin-right: 0px;
+}
+
+a {
+  width: 25%;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+/*100% to fill upp the whole box and not leave space between to the next poster */
+a img {
+  position: relative;
+  width: 100%;
+}
+
+.movie-date-title-text-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  padding: 20px;
+}
+
+.movie-date-title-text-box h1 {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+a:hover .movie-date-title-text-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+  .full-page-container {
+    display: flex;
+  }
+}

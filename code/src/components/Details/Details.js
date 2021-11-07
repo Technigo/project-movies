@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
-import { DETAILS_URL } from "../utils/urls";
+import { DETAILS_URL } from "../../utils/urls";
+import "./Details.css";
+
 // import NotFound from "./NotFound";
 // import styled from 'styled-components'
 
