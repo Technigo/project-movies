@@ -34,7 +34,62 @@ h3 {
 }
 
 
+/* LOADER */
+
+.loader {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #161616;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* z-index: 1; */
+}
+
+.loader p {
+  font-family: limelight;
+  color: #fff;
+  font-size: 56px;
+  line-height: 60px;
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.popcorn-icon {
+  animation: spinning 3s infinite;
+  display: inline-block;
+  margin: 0;
+  }
+  
+  @keyframes spinning {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(359deg);
+    }
+  }
+
+
 /* OVERVIEW */
+
+.header {
+  background-color: #161616;
+  display: flex;
+  justify-content: center;
+}
+
+.site-name {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0 1rem 2rem;
+}
+
+.site-name h1 {
+  color: #fff;
+  margin-left: 1rem;
+}
 
 .movie-container {
   display: grid;
@@ -79,6 +134,35 @@ img {
 }
 
 
+.footer {
+  bottom: 0;
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  gap: 0.5rem;
+  transition: 0.3s;
+}
+
+.git-hub-logo {
+  width: 48px;
+}
+  .footer a:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 
 /* DETAIL PAGE  */
 
@@ -122,6 +206,12 @@ img {
   font-weight: 500;
   filter: drop-shadow(1px 2px 1px rgb(0 0 0 / 0.4));
   font-family: poppins;
+  transition: 0.3s;
+}
+  .back-button:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .score {
@@ -139,8 +229,24 @@ img {
 }
 
 
+/* MEDIAQUERIES */
 
 @media (max-width: 767px) {
+
+  .site-name {
+    padding: 0.5rem 0 0.5rem 1rem;
+  }
+  
+  .site-name h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-left: 1rem;
+  }
+
+  .loader p {
+    font-size: 48px;
+    line-height: 56px;
+  }
 
   h3 {
     font-size: 24px;
@@ -179,6 +285,7 @@ img {
 
 
   /* DETAIL PAGE */
+
   .posteranddetails {
     position: absolute;
     display: block;

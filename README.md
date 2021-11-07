@@ -1,13 +1,15 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+- Fetch movies and show on a listpage and show one page with details on each movie.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
+Really fun project! Enjoyed learning React Router and so fun to make a site with more than one page. The www suddenly opened up to something much more reachable. And 12 more weeks to go on the Bootcamp... 
+ 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Always tricky part in pair projects to find the time to sit together, but I think that we managed quite well. If we hade more time we would for sure made a lot more. Learned more about the API and what we could have fetched from it. 
+
+Got the loading page to work. Sort of... Content still shows when loading the detail page. Will have to go back and figure that out! 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+This is the Netlify site. https://jesandeddiesmovies.netlify.app/
