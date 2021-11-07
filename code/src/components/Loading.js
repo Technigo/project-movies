@@ -3,8 +3,8 @@ import popcorn from "../images/popcorn.svg"
 
 const Loading = () => {
     return (
-        <div className="loading-overlay">
-            <img className="loading-spinner" src={popcorn} alt="popcorn" />
+        <div className="loadingOverlay">
+            <img className="loadingSpinner" src={popcorn} alt="popcorn" />
         </div>
     )
 }

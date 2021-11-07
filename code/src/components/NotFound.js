@@ -11,7 +11,7 @@ const NotFound = () => {
 
 
   return (
-    <div>
+    <div className="errorContainer">
       <p>Sorry, there is no such page!</p>
       <button onClick={onButtonClick}>Back to the home page</button>
     </div>
