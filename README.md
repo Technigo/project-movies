@@ -1,13 +1,13 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This was a week 12 pair-programming project @Technigo Frontend Bootcamp made by Camilla Ekman och Elsa Carlström. In this project we were to create a webpage displaying a list of movies from a given API and when selecting a movie generate a second page with details about it.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We used React Router to manage the multiple pages and error messages. We set up the fetch in App.js instead of in the MovieList.js to only fetch it once while the user switches between the routes. We did the styling according to the instruction and at the beginning collected in one CSS-file, but as we learned more about styled components throughout the week we decided to go for that instead and moved it to the separate components.
+
+When we finished the basic requirements we decided to add a select to switch between different kinds of movie lists on the first page, a header and routes and functions to catch and display errors in the url. We also learned how to use media queries in styled components and added that as well.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://vibrant-cori-2d85d0.netlify.app/
