@@ -1,5 +1,7 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
+
 import "./MovieList.css";
 
 // The code below maps the list of movies and then we display the poster, title and release date for each movie

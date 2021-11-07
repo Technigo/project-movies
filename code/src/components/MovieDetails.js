@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+
 import { useParams, useHistory } from "react-router-dom";
-import { API_KEY, MOVIE_DETAILS_URL } from "../urls";
+import { API_KEY, MOVIE_DETAILS_URL } from "../utils/urls";
+
 import "./MovieDetails.css";
 
 export const MovieDetails = () => {

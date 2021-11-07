@@ -28,7 +28,6 @@
   padding: 20px;
   display: none;
   z-index: 3;
-  transition: all 1s;
 }
 
 .movie-card-container:hover .movie-card-overlay {

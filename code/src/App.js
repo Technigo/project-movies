@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { API_KEY, MOVIES_URL } from "./urls";
+import { API_KEY, MOVIES_URL } from "./utils/urls";
 
-import { MovieList } from "./pages/MovieList";
-import { MovieDetails } from "./pages/MovieDetails";
+import { MovieList } from "./components/MovieList";
+import { MovieDetails } from "./components/MovieDetails";
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
