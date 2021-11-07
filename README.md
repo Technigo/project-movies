@@ -8,4 +8,8 @@ The goal of this project was to build a multi-page application using React Route
 
 First we requested an API key and fetched all the information we needed from the API. Then we set up the routes in the app component and created the two components responsible for showing the movie list and the detailed info about each movie. We had some minor problems regarding error messages for the images but solved them by looking at Stack Overflow questions. We styled the page in accordance with the design that we got in the project brief.
 
+We might add some more features later, like a loading spinner, a "not found" page and/or a header (will be updated by Christoffer/vrill).
+
 ## View it live
+
+https://movies-site-rephili-vrill.netlify.app/
