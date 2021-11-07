@@ -11,4 +11,4 @@ The problem
 We started this project by making a Trello board just for this, to easier identify what needed to be done. Merging is still pretty new to us, so this has been a good opportunity to continue practicing it. With the help of our team and community we were able to solve issues that arose when working with multiple pages. 
 
 View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://harryonina-movie-project.netlify.app/ 
