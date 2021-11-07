@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./leosList.css";
 
+// MOVIE LIST COMPONENT (START PAGE) 
 const LeosList = ({ movies }) => {
   return (
     <section className="all-movies">

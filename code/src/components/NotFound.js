@@ -1,6 +1,26 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
-import styled from "styled-components";
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import styled from 'styled-components';
+
+// PAGE NOT FOUND COMPONENT (START PAGE)
+const NotFound = () => {
+  const history = useHistory();
+
+  const onHomePageRedirect = () => {
+    history.push('/');
+  };
+
+  return (
+    <NotFoundDiv>
+      <h2>Sorry this page doesn't exist!</h2>
+      <ButtonNotFound onClick={onHomePageRedirect}>
+        <span className="back-arrow">&#60;</span>BACK TO MOVIES LIST
+      </ButtonNotFound>
+    </NotFoundDiv>
+  );
+};
+
+export default NotFound;
 
 //Tried styled components here!
 const ButtonNotFound = styled.button`
@@ -19,22 +39,3 @@ const NotFoundDiv = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-
-const NotFound = () => {
-  const history = useHistory();
-
-  const onHomePageRedirect = () => {
-    history.push("/");
-  };
-
-  return (
-    <NotFoundDiv>
-      <h2>Sorry this page doesn't exist!</h2>
-      <ButtonNotFound onClick={onHomePageRedirect}>
-        <span className="back-arrow">&#60;</span>BACK TO MOVIES LIST
-      </ButtonNotFound>
-    </NotFoundDiv>
-  );
-};
-
-export default NotFound;

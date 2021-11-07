@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+// HEADER COMPONENT CURRENTLY NOT USED 
 const Header = () => {
   return (
     <header>
