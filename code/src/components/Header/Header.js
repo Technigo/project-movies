@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./Header.css";
 
 const Header = () => {
   return (
@@ -8,7 +9,7 @@ const Header = () => {
         <nav>
           <NavLink exact to="/">
             {" "}
-            <h1 className="moviename">Moviebox</h1>
+            <h1>Moviebox</h1>
           </NavLink>
         </nav>
         {/* <nav>

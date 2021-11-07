@@ -82,7 +82,7 @@ a:hover .movie-date-title-text-box {
   height: 100%;
 }
 /* Styling shown "after", ie on top of the styling above, the gradient is copied from some fellow students, but changed color  */
-.details-container:after {
+/* .information-card-details:after {
   position: absolute;
   content: "";
   height: 100%;
@@ -91,10 +91,10 @@ a:hover .movie-date-title-text-box {
   left: 0;
   background: linear-gradient(
     to bottom,
-    rgba(255, 0, 0, 0) 0%,
-    rgb(172, 24, 24) 100%
+    rgba(165, 144, 144, 0) 0%,
+    rgb(194, 137, 137) 100%
   );
-}
+} */
 
 /* Put all the styling in the button, some fellow students had made .classname >.button dont understand that */
 .back-button {
@@ -111,89 +111,41 @@ a:hover .movie-date-title-text-box {
   align-items: center;
 }
 
-/* on top of the button there is an font awesome arrow, why called fa?? */
 .fa {
   color: #fff;
   font-size: 25px;
   margin-right: 2px;
   padding: 20px;
 }
-/* container/wrapper for poster img, title, rating and plot summary */
-.movie-info-wrapper {
+/* this is the styling fore the small img ant the movie details */
+.information-card-details {
   display: flex;
+  bottom: 50px;
   align-items: flex-end;
-  padding: 50px;
   position: absolute;
-  z-index: 1;
 }
-
-/* .movie-info-wrapper img {
-  border: 3px solid white;
-  width: 25%;
-} */
-
-/* container/wrapper for title, rating and plot summary */
-/* .movie-info-text-wrapper {
-  align-items: center;
-  padding: 40px;
-} */
-.movie-info-text-inner-wrapper {
+.movie-information {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  color: #fff;
-}
-
-/* The title */
-.details-h1 {
   color: white;
-  font-size: 24px;
-  font-weight: 600;
 }
-/* border radius 25% so that the edges of the background color would be rounded */
-.rating {
-  background-color: red;
+a {
+  text-decoration: none;
   color: white;
-  margin-left: 15px;
-  font-size: 15px;
-  font-weight: 600;
-  padding: 6px;
-  border-radius: 25px;
 }
-/* The movie plot summary text */
-.details-p {
-  color: white;
-  max-width: 350px;
-  font-size: 16px;
-  margin-top: 15px;
-}
-
-/* trying to fix the header*/
-.header {
+.small-img-movie {
   display: none;
-  padding: 10px;
-  /* background-color: rgb(233, 125, 125);
-  display: flex;
-  justify-content: flex-between; */
+}
+.movie-information h1 {
+  padding: 20px 0px;
+  font-family: "Aclonica", sans-serif;
 }
 
-.header-wrap {
-  display: flex;
-  text-align: right;
-  padding: 15px;
-}
-
-.movielink {
-  margin-right: 10px;
-  font-size: 30px;
-  display: flex;
-  font-family: "Aclonica", sans-serif;
-  justify-content: flex-end;
-}
-.moviename {
-  font-family: "Aclonica", sans-serif;
-  display: flex;
-  font-size: 30px;
+.rating {
+  color: red;
+  font-size: 20px;
+  margin-left: 10px;
 }
 
 @media (min-width: 768px) {
@@ -201,53 +153,23 @@ a:hover .movie-date-title-text-box {
     display: flex;
   }
 
-  .header {
-    background-color: rgb(233, 125, 125);
-    display: flex;
-  }
+  @media (min-width: 768px) {
+    .full-page-container {
+      display: flex;
+    }
 
-  .details-p {
-    color: white;
-    max-width: 350px;
-    font-size: 16px;
-    margin-top: 15px;
+    .small-img-movie {
+      display: flex;
+      border: 4px solid white;
+    }
+    .information-card-details {
+      padding: 50px;
+    }
   }
-  /* container/wrapper for poster img, title, rating and plot summary */
-  .movie-info-wrapper1 {
-    display: flex;
-    align-items: flex-end;
-    padding: 50px;
-    position: absolute;
-    z-index: 1;
-  }
-  .movie-info-wrapper1 img {
-    border: 3px solid white;
-    width: 25%;
-  }
-  .movie-info-text-wrapper {
-    align-items: center;
-    padding: 40px;
-  }
-}
-
-@media (min-width: 1200px) {
-  /* container/wrapper for poster img, title, rating and plot summary */
-  .movie-info-wrapper1 {
-    display: flex;
-    align-items: flex-end;
-    padding: 50px;
-    position: absolute;
-    z-index: 1;
-    align-items: flex-end;
-  }
-  .movie-info-wrapper1 img {
-    border: 3px solid white;
-    width: 25%;
-    align-items: flex-end;
-  }
-  .movie-info-text-inner-wrapper {
-    align-items: center;
-    padding: 40px;
-    align-items: flex-end;
+  @media (min-width: 992px) {
+    .information-card-details {
+      padding: 50px;
+      font-size: 20px;
+    }
   }
 }

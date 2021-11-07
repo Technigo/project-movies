@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { BASE_URL } from "./utils/urls";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import List from "./components/List";
 import Details from "./components/Details";
 import NotFound from "./components/NotFound";
