@@ -23,6 +23,30 @@ code {
   padding-bottom: 5px;
 }
 
+.moviePicker {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.moviePicker label {
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.moviePicker select {
+  border: 2px solid rgb(95, 53, 93);
+  border-radius: 5px;
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-size: 24px;
+  background-color: rgb(214, 205, 233);
+}
+
 .moviePosterContainer {
   width: 25%;
   position: relative;
