@@ -29,25 +29,3 @@ button:hover {
   cursor: pointer;
   transition: 0.5s;
 }
-
-/* LIST COMPONENT STYLING */
-/* HOVER WORKS BUT DOESN'T FIT THE THUMBNAIL */
-
-h2 {
-  font-size: 26px;
-}
-
-p {
-  font-size: 12px;
-}
-
-/* DETAILS COMPONENT STYLING */
-
-/* .list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.list-element {
-  width: 25%;
-} */

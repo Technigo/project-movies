@@ -1,31 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-import LeosList from './components/LeosList';
-import Details from './components/Details';
-// import Header from './components/Header';
-import NotFound from './components/NotFound';
-import { LEO_URL } from './utils/urls';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import LeosList from "./components/LeosList";
+import Details from "./components/Details";
+import NotFound from "./components/NotFound";
+import { LEO_URL } from "./utils/urls";
 
 export const App = () => {
   const [list, setList] = useState([]);
-  // const sortingFunction = (b, a) => {
-  //   return new Date(b.cast.release_date) - new Date(a.cast.release_date);
-  // };
-  //make the fetch request here as the component not will be unmounted and we only need to do the fetch one time
+
+  // We make the fetch request here as the component not will be unmounted and we only need to do the fetch once
   useEffect(() => {
     fetch(LEO_URL)
       .then((res) => res.json())
       .then((data) => setList(data.cast));
-
-    // sortingFunction(list);
   }, []);
 
-  // console.log(list);
-
-  //Structure always stays the same
+  // This structure always stays the same
   return (
     <BrowserRouter>
-      {/* <Header /> */}
       <Switch>
         <Route exact path="/" render={() => <LeosList movies={list} />} />
         <Route path="/movies/:id" component={Details} />

@@ -3,10 +3,9 @@ import { useParams, useHistory } from "react-router-dom";
 import "./details.css";
 import styled from "styled-components";
 import { FaChevronCircleLeft } from "react-icons/fa";
-
 import { DETAILS_URL } from "../utils/urls";
 
-//Remove to css?
+// Made this button with styled components to try it out!
 const GoBackButton = styled.button`
   position: absolute;
   left: 50px;
@@ -58,7 +57,6 @@ const Details = () => {
     return (
       <>
         <GoBackButton onClick={onHomePageRedirect}>
-          {/* <span className="back-arrow">&#60;</span>BACK TO MOVIES LIST */}
           <FaChevronCircleLeft size="30" className="fa-back" />
           &nbsp;
         </GoBackButton>

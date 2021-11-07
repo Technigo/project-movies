@@ -1,8 +1,8 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
-import styled from 'styled-components';
+import React from "react";
+import { useHistory } from "react-router-dom";
+import styled from "styled-components";
 
-//Tried styled components
+//Tried styled components here!
 const ButtonNotFound = styled.button`
   position: absolute;
   left: 50px;
@@ -24,7 +24,7 @@ const NotFound = () => {
   const history = useHistory();
 
   const onHomePageRedirect = () => {
-    history.push('/');
+    history.push("/");
   };
 
   return (
