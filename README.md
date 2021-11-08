@@ -1,13 +1,11 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+In this project we used React Routers for the first time and we did also deep dive in using API:S.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Since we had difficulties to find time when both of us had time to work on the project, we divided the components and made one each. It was a practice in how to communicate remote while working together. I would say that it was a nice and successful team effort!
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://mejstedtzancottimovieapp.netlify.app/
