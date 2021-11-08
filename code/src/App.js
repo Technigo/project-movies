@@ -15,8 +15,6 @@ export const App = () => {
       .then((data) => setList(data.results));
   }, []);
 
- 
-
   return (
     <BrowserRouter>
       <Switch>
