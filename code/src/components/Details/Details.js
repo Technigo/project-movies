@@ -18,7 +18,7 @@ import "./Details.css";
 const Details = () => {
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState({});
-  const [errors, setErrors] = useState(false);
+  // const [errors, setErrors] = useState(false);
   const history = useHistory();
 
   useEffect(() => {
@@ -28,16 +28,16 @@ const Details = () => {
         console.log(data);
 
         setMovieDetails(data);
-      })
-      .catch((error) => {
-        console.log(error);
       });
+    // .catch((error) => {
+    //   console.log(error);
+    // });
   }, [movieId]);
 
   // console.log(movieDetails);
-  if (errors) {
-    return <h2>Sorry this page does not exist</h2>;
-  }
+  // if (errors) {
+  //   return <h2>Sorry this page does not exist</h2>;
+  // }
   const onButtonBackClick = () => {
     history.push("/");
   };
