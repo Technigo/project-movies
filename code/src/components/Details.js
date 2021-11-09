@@ -13,19 +13,16 @@ const Details = ({ makePosterUrl, apiKey }) => {
   useEffect(() => {
     fetch(MOVIE_URL)
       .then((res) => res.json())
-      .then(
-        (json) => {
-          // If the fetch is successful and returned object has a movie id we proceed with set state property
-          if (json.id) {
-            setMovie(json);
-          } else {
-            // Else we display error
-            setHasError(true);
-          }
-        },
-        [MOVIE_URL]
-      );
-  });
+      .then((json) => {
+        // If the fetch is successful and returned object has a movie id we proceed with set state property
+        if (json.id) {
+          setMovie(json);
+        } else {
+          // Else we display error
+          setHasError(true);
+        }
+      });
+  }, [MOVIE_URL]);
 
   if (hasError) {
     return (
