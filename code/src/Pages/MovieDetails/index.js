@@ -46,7 +46,7 @@ export const MovieDetails = ({ movieDetails, setMovieDetails, setHasError, hasEr
                         <span className="movieDetails-rating">{movieDetails.vote_average}/10</span>
                     </h1>
                     <h2 className="movieDetails-gender">{movieDetails.genres?.length > 1 ? `Genders: ` : `Gender: `}
-                        <span className="movieDetails-gender-span">{movieDetails.genres?.map(genre => `${genre.name} | `)}</span>
+                        <span className="movieDetails-gender-span">{movieDetails.genres?.map(gender => `${gender.name} | `)}</span>
                     </h2>
                     <p className="movieDetails-sinopsis">{movieDetails.overview}</p>
                 </div>
