@@ -1,7 +1,9 @@
 body {
   padding: 0 auto;
   margin: 0 auto;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -9,7 +11,8 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 .container {
@@ -85,7 +88,6 @@ a:hover {
 }
 
 .center {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,11 +141,6 @@ a:hover {
     transform: scale(0);
   }
 }
-
-
-
-
-
 
 /* movielist-pge in "home" */
 
@@ -223,7 +220,13 @@ a:hover {
 
   border: 1px solid black;
 
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(0, 0, 0)));
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgb(255, 255, 255)),
+    to(rgb(0, 0, 0))
+  );
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
@@ -247,7 +250,16 @@ a:hover {
   background-clip: text;
   color: transparent;
   background-color: rgba(61, 211, 61, 0.994);
-  background-image: -webkit-linear-gradient(45deg, rgba(221, 35, 35, 0.96) 25%, transparent 25%, transparent 50%, rgba(145, 137, 32, 0.85) 50%, rgb(242, 18, 18) 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(221, 35, 35, 0.96) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(145, 137, 32, 0.85) 50%,
+    rgb(242, 18, 18) 75%,
+    transparent 75%,
+    transparent
+  );
 }
 .Christmas:hover {
   text-decoration: red underline;
@@ -344,11 +356,6 @@ img {
 /* Tablet */
 
 @media (min-width: 768px) {
-
-
-
-
-
   .movieListContainer {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -376,7 +383,13 @@ img {
     height: 420px;
     max-width: 320px;
 
-    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(36, 36, 36)), to(rgb(0, 0, 0)));
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgb(36, 36, 36)),
+      to(rgb(0, 0, 0))
+    );
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgb(0, 0, 0));
   }
 
@@ -385,7 +398,13 @@ img {
     visibility: visible;
     height: 70vh;
 
-    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(36, 36, 36)), to(rgba(0, 0, 0, 0)));
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgb(36, 36, 36)),
+      to(rgba(0, 0, 0, 0))
+    );
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   }
 
@@ -407,7 +426,13 @@ img {
     height: 100vh;
     width: 100%;
 
-    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(36, 36, 36)), to(rgba(0, 0, 0, 0)));
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgb(36, 36, 36)),
+      to(rgba(0, 0, 0, 0))
+    );
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   }
 }

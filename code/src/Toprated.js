@@ -32,7 +32,10 @@ const Toprated = () => {
                 </div>
               </div>
             </div>
-            <img src={`http://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
+            <img
+              src={`http://image.tmdb.org/t/p/original${movie.poster_path}`}
+              alt={movie.title}
+            />
           </section>
         </Link>
       ))}

@@ -9,41 +9,41 @@ import MovieDetail from "components/MovieDetail";
 import NoPageFound from "NoPageFound";
 
 export const App = () => {
-	return (
-		<BrowserRouter>
-			<div className="container">
-				<div className="navbarContainer">
-					<Navbar />
-				</div>
-				
-				<div className="contentContainer">
-					<Switch>
-						<Route path="/" exact>
-							<Home />
-						</Route>
+  return (
+    <BrowserRouter>
+      <div className="container">
+        <div className="navbarContainer">
+          <Navbar />
+        </div>
 
-						<Route path="/toprated" exact>
-							<Toprated />
-						</Route>
+        <div className="contentContainer">
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
 
-						<Route path="/upcoming" exact>
-							<Upcoming />
-						</Route>
+            <Route path="/toprated" exact>
+              <Toprated />
+            </Route>
 
-						<Route path="/Christmas" exact>
-							<Christmas />
-						</Route>
+            <Route path="/upcoming" exact>
+              <Upcoming />
+            </Route>
 
-						<Route path="/movies/:id" exact>
-							<MovieDetail />
-						</Route>
+            <Route path="/Christmas" exact>
+              <Christmas />
+            </Route>
 
-						<Route path="*">
-							<NoPageFound />
-						</Route>
-					</Switch>
-				</div>
-			</div>
-		</BrowserRouter>
-	);
+            <Route path="/movies/:id" exact>
+              <MovieDetail />
+            </Route>
+
+            <Route path="*">
+              <NoPageFound />
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </BrowserRouter>
+  );
 };

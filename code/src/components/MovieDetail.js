@@ -14,7 +14,9 @@ const MovieDetail = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`)
+    fetch(
+      `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`
+    )
       .then((res) => res.json())
       .then((json) => {
         if (json.id) {
@@ -52,13 +54,23 @@ const MovieDetail = () => {
       {loading && <Loading />}
       {movie && (
         <div className="movieDetalisBox">
-          <img className="backgroundMovieDetails" src={`http://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.id} />
+          <img
+            className="backgroundMovieDetails"
+            src={`http://image.tmdb.org/t/p/w1280${movie.backdrop_path}`}
+            alt={movie.id}
+          />
           <div className="MovieDetailsInfo">
-            <img src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.id} />
+            <img
+              src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              alt={movie.id}
+            />
 
             <div className="MovieDetailstext">
               <h1>
-                {movie.title} <span className="ratedMovieDetail">{movie.vote_average}/10</span>
+                {movie.title}{" "}
+                <span className="ratedMovieDetail">
+                  {movie.vote_average}/10
+                </span>
               </h1>
               <p>
                 Release date:
