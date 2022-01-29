@@ -4,7 +4,7 @@ The aim of the project was to build a multi-page movie site using Movie DB API. 
 
 We created a version that shows the Popular Movies on the landing page and on each movie detail page we have also fetched and displayed Similar Movies. In addition we implemented a Loading page to show while the fetch is being processed and a Not Found page for when a movie request does not match anything in the database.
 
-# What have I learned 💡
+## What have I learned 💡
 
 - I include the React Router in the App.js with all the different available pages.
 - To get the movie list I did a fetch in the MovieList component, I did this by using the React hooks **useEffect** and **useState** to store the data.
