@@ -10,12 +10,12 @@ Practice using APIs in React - combining useState with useEffect
 
 We started by fetching all the data from the API that we wanted to use in our page. In the same time we created different components for the different pages. Once we finished that we started to build multi-page applications using React Router. When we finished the general requirements, we added more pages and components to our page. We also added some features to get our app to be more user friendly. If we had more time, we would add more energy to find out how to not duplicate the codes for the different pages. 
 
-##Core Tech
+## Core Tech
 
-React
-JSX
-CSS
-API
+* React
+* JSX
+* CSS
+* API
 ## View it live
 
 https://serene-ride-8ae74a.netlify.app
