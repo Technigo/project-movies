@@ -11,4 +11,4 @@ In this week's project, we had a nice and productive time pair programming and w
 
 ## View it live
 
-https://gifted-hugle-124357.netlify.app/
+https://cinema-movies-site.netlify.app/
