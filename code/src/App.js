@@ -9,7 +9,20 @@ export const App = () => {
   useEffect(() => {
     fetch(moviesUrl)
       .then((response) => response.json())
-      .then((data) => setMovies(data.results))
+      .then((data) => {
+        setMovies(
+          data.results.map((item) => ({
+            id: item.id,
+            title: item.title,
+            release: item.release_date,
+            description: item.overview,
+            rating: item.vote_average,
+            coverImgUrl: `https://image.tmdb.org/t/p/w300/${item.poster_path}`,
+            backdropImgUrl: `https://image.tmdb.org/t/p/w780/${item.backdrop_path}`,
+          }))
+        );
+      })
+
       .catch((error) => console.log(error));
   }, [moviesUrl]);
 
@@ -18,8 +31,11 @@ export const App = () => {
       {movies.map((movie) => (
         <div key={movie.id}>
           <h2>{movie.title}</h2>
-          <p>{movie.release_date}</p>
-          <img src={`https://image.tmdb.org/t/p/w300/${movie.backdrop_path}`} alt={movie.title} />
+          <p>{movie.date}</p>
+          <p>{movie.rating}</p>
+          <p>{movie.description}</p>
+          <img src={movie.coverImgUrl} alt={movie.title} />
+          <img src={movie.backdropImgUrl} alt={movie.title} />
         </div>
       ))}
     </div>
