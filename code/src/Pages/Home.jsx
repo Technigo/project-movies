@@ -33,10 +33,12 @@ const Home = () => {
                 <Route 
                     path="/" 
                     element={
-                    <main>  
+                    <>
                     {isLoading && <LoadingSpinner />}
+                    <main>
                     <FilmList films={popular} />
                     </main>
+                    </>
                 }/>
                 <Route 
                     path="/movies/:id" 
