@@ -3,14 +3,14 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Popular from 'components/Popular'
 import Details from 'components/Details'
-import { BASE_URL } from 'utils/urls'
+import { MOVIES_URL } from 'utils/urls'
 
 export const App = () => {
 
   const [list, setList] = useState([])
 
   useEffect(()=> {
-    fetch(BASE_URL)
+    fetch(MOVIES_URL)
     .then(res => res.json())
     .then(data => { 
       setList(data.results)

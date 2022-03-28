@@ -9,7 +9,6 @@ const Details = () => {
 
 
     useEffect(() => {
-    
         fetch(SINGLE_MOVIE_URL(movieId)).then(res => res.json()).then(data => setDetails(data))
     }, [])
 console.log(details)
