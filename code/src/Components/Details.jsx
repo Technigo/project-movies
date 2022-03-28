@@ -1,63 +1,21 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
+import LoadingSpinner from "./LoadingSpinner";
 
-const Details = ({films}) => {
+const Details = ({films, loading}) => {
     const {id} = useParams()
-    const [film, setFilm] = useState({})
 
-    // const thisFilm = () => {
-    //     for (let i = 0; i<films.length; i++) {
-    //         if (films[i].id === id) {
-    //             setFilm(films[i])
-    //         }
-    //     }
-    // }
+    const movie = films.filter(movie => movie.id === Number(id))[0];
 
-    // thisFilm();
+    console.log(movie)
+    console.log(typeof movie)
 
-    let filter
-
-    useEffect(() => {
-        filterFilm();
-        setFilm(filter)
-    }, [])
-
-    const filterFilm = () => {
-        filter = films.filter(movie => movie.id === Number(id));
-    }
-
+    console.log(movie.adult)
     
-
-    // console.log(films)
-
-    // const filter = films.filter(movie => movie.id === Number(id))
-
-    // console.log('this film', filter)
-
-    console.log(film)
-
-    
-
-    // const movies = Object.entries(films)
-    // console.log(movies, typeof movies)
-    // console.log(movies)
-
-
-    // console.log(films)
-    // console.log(typeof films)
-    // console.log(id)
-    // console.log(typeof id)
-    // console.log(films['0'])
-
-    // console.log('this film', film)
 
     return(
     <>
-        {/* {films.map((film => {
-            return(
-                <p key={film.id}>{film.id}</p>
-            )
-        }))} */}
+    {loading && <LoadingSpinner />}
     </>
     )
 }

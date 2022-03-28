@@ -27,11 +27,6 @@ const Home = () => {
             })
     }
 
-    // console.log('popular', popular)
-
-    // Poster Path
-    // https://image.tmdb.org/t/p/w500${film.poster_path}
-
     return(
         <BrowserRouter>
             <Routes>
@@ -43,7 +38,7 @@ const Home = () => {
                     <FilmList films={popular} />
                     </main>} 
                 />
-                <Route path="/movies/:id" element={<Details films={popular} />} />
+                {!isLoading && <Route path="/movies/:id" element={<Details loading={isLoading} films={popular} />} />}
             </Routes>
         </BrowserRouter>
     )
