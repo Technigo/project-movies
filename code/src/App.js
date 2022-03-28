@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import PopularList from "Components/PopularList";
+import Detail from "Components/Detail";
+
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<PopularList />} />
+        <Route exact path="/movies/:movieId" element={<Detail />}/>
+      </Routes>
+    </BrowserRouter>
+  );
+};
