@@ -8,15 +8,13 @@ const Details = ({films, loading}) => {
     const movie = films.filter(movie => movie.id === Number(id))[0];
 
     console.log(movie)
-    console.log(typeof movie)
-
-    console.log(movie.adult)
+    console.log(movie.title)
     
 
     return(
-    <>
+    <section>
     {loading && <LoadingSpinner />}
-    </>
+    </section>
     )
 }
 

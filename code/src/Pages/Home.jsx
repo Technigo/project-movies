@@ -36,9 +36,16 @@ const Home = () => {
                     <main>  
                     {isLoading && <LoadingSpinner />}
                     <FilmList films={popular} />
-                    </main>} 
-                />
-                {!isLoading && <Route path="/movies/:id" element={<Details loading={isLoading} films={popular} />} />}
+                    </main>
+                }/>
+                <Route 
+                    path="/movies/:id" 
+                    element={
+                    <>
+                    {isLoading && <LoadingSpinner />}
+                    <Details films={popular} />
+                    </>
+                }/>
             </Routes>
         </BrowserRouter>
     )
