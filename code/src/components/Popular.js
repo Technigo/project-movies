@@ -22,6 +22,8 @@ const Popular = () => {
             {list.map((movie) => {
             return <div key={movie.title}>
                 <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}/>
+                <h1>{movie.title}</h1>
+
                 </div>
             })}
 
