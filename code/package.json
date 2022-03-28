@@ -11,8 +11,10 @@
     "eslint-plugin-react": "^7.21.3",
     "eslint-plugin-react-hooks": "^4.1.2",
     "react": "^16.13.1",
+    "react-browser-router": "^2.1.2",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "styled-components": "^5.3.5"
   },
   "scripts": {
     "start": "react-scripts start",
