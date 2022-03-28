@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Popular from 'components/Popular'
 import Details from 'components/Details'
 import { MOVIES_URL } from 'utils/urls'
+import Footer from 'components/Footer'
 
 export const App = () => {
 
@@ -23,6 +24,7 @@ export const App = () => {
     <Route path="/" element={<Popular movies={list} />} />
     <Route path="/movies/:id" element={<Details />}/>
     </Routes>
+    <Footer />
     </BrowserRouter>
   )
 }

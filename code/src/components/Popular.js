@@ -5,17 +5,19 @@ import { useEffect } from "react/cjs/react.production.min"
 const Popular = ({movies}) => {
 
     return (
-        <section className="movie-list">
+        <section className="popular-page">
             {movies.map((movie => {
                 console.log(movie)
                 return <div key={movie.title}>
-                   
-                <Link className="movie-title" to="{/movies/${movie.id}">
-                <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-                </Link>
-                    <h1>{movie.title}</h1>
+
+                <div className="movie-text-group">   
+                <Link className="details" to="{/movies/${movie.id}">
+                <img className="img" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+                <h1>{movie.title}</h1>
                     <p>Released {movie.release_date}</p>
-              
+                </Link>
+             
+                    </div>
                 </div>
             }))}
          
