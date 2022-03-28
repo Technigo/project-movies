@@ -7,6 +7,15 @@ const Details = ({films}) => {
 
     const movie = films.filter(movie => movie.id === Number(id))[0];
 
+    // NOT FOUND Page
+    if (movie === undefined) {
+        return (
+            <div>
+                Movie not found!
+            </div>
+        )
+    }
+
     console.log(movie)
     console.log(movie.title)
     
