@@ -47,9 +47,11 @@ const Home = () => {
                     element={
                     <>
                     {isLoading && <LoadingSpinner />}
-                    <main>
-                    <FilmList films={popular} />
-                    </main>
+                    {!isLoading && 
+                        <main>
+                        <FilmList films={popular} />
+                        </main>
+                    }
                     </>
                 }/>
                 <Route 
@@ -57,7 +59,7 @@ const Home = () => {
                     element={
                     <>
                     {isLoading && <LoadingSpinner />}
-                    <Details films={popular} />
+                    {!isLoading && <Details films={popular} />}
                     </>
                 }/>
             </Routes>
