@@ -10,7 +10,7 @@ const Details = ({films}) => {
     // NOT FOUND Page
     if (movie === undefined) {
         return (
-            <div>
+            <div className="error">
                 Movie not found!
             </div>
         )
