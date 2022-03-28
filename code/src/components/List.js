@@ -1,10 +1,10 @@
 import React from "react"
 
-const List = ({pokemons}) => {
+const List = ({movies}) => {
     return (
         <section>
-            {pokemons.map((pokemon => {
-             return   <div key={pokemon.name}>{pokemon.name}</div>
+            {movies.map((movie => {
+             return   <div key={movie.original_title}>{movie.original_title}</div>
             }))}
         </section>
     )

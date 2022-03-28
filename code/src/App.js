@@ -22,7 +22,7 @@ export const App = () => {
     <BrowserRouter>
     <Header />
     <Routes>
-    <Route path="/" element={<List pokemons={list}/>} />
+    <Route path="/" element={<List movies={list} />} />
     <Route path="/details/:pokemonName" element={<Details />}/>
     </Routes>
     </BrowserRouter>
