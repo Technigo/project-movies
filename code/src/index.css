@@ -1,5 +1,18 @@
-body {
-  margin: 0;
+/* Pre-set Styling */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+ 
+}
+
+/* body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -10,4 +23,58 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+} */
+
+body {
+  /* width: 100%; */
+}
+
+main {
+  /* display: flex;
+  flex-wrap: wrap; */
+  /* gap: 10px; */
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.film-image-group {
+  position: relative;
+  display: flex;
+}
+
+.card-image {
+  width: 100%;
+}
+
+.film-image-overlay {
+  position: absolute;
+  top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+  transition: 0.5s ease;
+  background: transparent;
+}
+
+.film-text-overlay {
+  position: absolute;
+  top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+  transition: 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: transparent;
+}
+
+/* Card Hover Effects */
+.film-image-group:hover .film-image-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.film-image-group:hover .film-text-overlay {
+  color: white;
 }
