@@ -1,0 +1,1 @@
+export const MAIN_URL = 'https://api.themoviedb.org/3/movie/popular?api_key=a9cb0b073b02d5875ca2ecb51c896f88&language=en-US&page=1'
