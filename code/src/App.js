@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import List from 'components/List'
+import Popular from 'components/Popular'
 import Details from 'components/Details'
 import { BASE_URL } from 'utils/urls'
-import Header from 'components/Header'
 
 export const App = () => {
 
@@ -20,10 +19,9 @@ export const App = () => {
 
   return (
     <BrowserRouter>
-    <Header />
     <Routes>
-    <Route path="/" element={<List movies={list} />} />
-    <Route path="/details/:pokemonName" element={<Details />}/>
+    <Route path="/" element={<Popular movies={list} />} />
+    <Route path="/movies/:id" element={<Details />}/>
     </Routes>
     </BrowserRouter>
   )
