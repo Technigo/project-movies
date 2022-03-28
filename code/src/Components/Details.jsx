@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "./LoadingSpinner";
 
-const Details = ({films, loading}) => {
+const Details = ({films}) => {
     const {id} = useParams()
 
     const movie = films.filter(movie => movie.id === Number(id))[0];
@@ -13,7 +13,6 @@ const Details = ({films, loading}) => {
 
     return(
     <section>
-    {loading && <LoadingSpinner />}
     </section>
     )
 }
