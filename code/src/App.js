@@ -3,30 +3,18 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Popular from 'components/Popular'
 import Details from 'components/Details'
-import { MOVIES_URL } from 'utils/urls'
 import Footer from 'components/Footer'
+
 
 export const App = () => {
 
-  const [list, setList] = useState([])
-
-  useEffect(()=> {
-    fetch(MOVIES_URL)
-    .then(res => res.json())
-    .then(data => { 
-      setList(data.results)
-    })
-  }, [])
-
   return (
     <BrowserRouter>
-    <Routes>
-    <Route path="/" element={<Popular movies={list} />} />
-    <Route path="/movies/:id" element={<Details />}/>
-    </Routes>
-    <Footer />
+      <Routes>
+        <Route path="/" element={<Popular />} />
+        <Route path="/movies/:movieId" element={<Details />} />
+      </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
-
-//adding a comment 

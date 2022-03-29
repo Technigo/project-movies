@@ -5,14 +5,19 @@ import { SINGLE_MOVIE_URL } from "utils/urls"
 const Details = () => {
 
     const [details, setDetails] = useState({})
-    const {movieId} = useParams()
 
+    //renamed to movieId for clarity. Also, sent it as an argument to the fetch function.
+    const { movieId } = useParams()
 
     useEffect(() => {
-        fetch(SINGLE_MOVIE_URL(movieId)).then(res => res.json()).then(data => setDetails(data))
+        fetch(SINGLE_MOVIE_URL(movieId))
+            .then(res => res.json())
+            .then(data => setDetails(data))
     }, [])
-console.log(details)
-    return <div>{details.name}</div>
+
+    return (
+        <div>{details.title}</div>
+    )
 }
 
 export default Details
