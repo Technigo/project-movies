@@ -5,7 +5,6 @@ import arrow from '../assets/arrow.png'
 
 const Details = ({films}) => {
     const {id} = useParams()
-
     const movie = films.filter(movie => movie.id === Number(id))[0];
 
     // NOT FOUND Page
