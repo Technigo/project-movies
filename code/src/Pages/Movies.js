@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+const Main = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+`;
+
 const MovieCard = styled.div`
   background-color: black;
 `;
@@ -35,12 +40,12 @@ export const Movies = () => {
 
   return (
     <>
-      <main>
+      <Main>
         {movie.map((movie) => (
           <MovieCard key={movie.id}>
             <Link to={`/details/${movie.id}`}>
               <Poster
-                src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+                src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
                 alt={movie.title}
               />
               <Info>
@@ -50,7 +55,7 @@ export const Movies = () => {
             </Link>
           </MovieCard>
         ))}
-      </main>
+      </Main>
       ; )
     </>
   );
