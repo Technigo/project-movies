@@ -8,6 +8,8 @@ export const App = () => {
 
   const [movieList, setMovieList] = useState([])
 
+  
+
   useEffect(() => {
     fetch(MAIN_URL).then(res => res.json()).then(data => setMovieList(data.results))
   }, [])
