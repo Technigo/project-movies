@@ -14,7 +14,7 @@ const MovieList = () => {
         .then(data => setMovies(data.results))
     }
 
-    console.log(movies)
+    // console.log(movies)
 
     return (
         <section className='main-container'>
@@ -32,6 +32,3 @@ const MovieList = () => {
 }
 
 export default MovieList
-
-
-// "https://api.themoviedb.org/3/movie/top_rated?api_key=b76163de3249d5e587f4e92dceebd8d6&language=en-US&page=1"

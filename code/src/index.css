@@ -52,13 +52,16 @@ code {
 }
 
 .movie-title,
-.release-date {
+.release-date,
+.movie-detail-title,
+.movie-rating,
+.movie-overview-text {
   color: white;
-
 }
 
 img {
   width: 100%;
   border-radius: 25px;
 }
+
 
