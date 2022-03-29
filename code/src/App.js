@@ -1,9 +1,9 @@
 import React from 'react'
 
+import Homepage from 'Components/Homepage'
+
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <Homepage />
   )
 }
