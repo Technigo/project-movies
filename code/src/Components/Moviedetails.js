@@ -12,7 +12,7 @@ const Moviedetails = () => {
     fetch(url)
       .then((data) => data.json())
       .then(setMovie);
-  }, []);
+  }, [id]);
   return (
     <div>
       {movie && (
