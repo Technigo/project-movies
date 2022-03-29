@@ -176,11 +176,10 @@ section {
   align-items: center;
   gap: 10px;
   cursor: pointer;
-  transition: 2s ease-in;
 }
 
 .back-button:hover .button-text {
-  /* transform: skewX(25deg); */
+  transition: .5s ease-in;
   transform: translateX(5px)
 }
 
