@@ -14,7 +14,7 @@ export const MovieList = ({movieList}) => {
                 </div>
                     <div className="overlay">
                       <h1>{movie.title}</h1>
-                      <p>released: {movie.release_date}</p>
+                      <p>Released {movie.release_date}</p>
                     </div>
                 </Link>   
             ))}
