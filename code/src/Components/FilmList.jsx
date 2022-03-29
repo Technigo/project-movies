@@ -15,8 +15,8 @@ const FilmList = ({films}) => {
                 <img className="card-image" src={`https://image.tmdb.org/t/p/w500${film.poster_path}`} alt={film.title} />
                 <div className="film-image-overlay"></div>
                 <div className="film-text-overlay">
-                    <h2>{film.title}</h2>
-                    <h3>{film.release_date}</h3>
+                    <h2 className="film-title">{film.title}</h2>
+                    <h3 className="release-date">Released {film.release_date}</h3>
                 </div>
             </div>
         </div>

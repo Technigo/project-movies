@@ -45,9 +45,21 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
+  /* align-items: center; */
   color: transparent;
+  padding: 20px;
 }
+
+.film-title {
+  hyphens: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+.release-date {}
 
 /* Card Hover Effects */
 .film-image-group:hover .film-image-overlay {
@@ -104,18 +116,11 @@ main {
 
 /* Details Page */
 section {
-  /* width: 100vw; */
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: flex-end; */
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */
-  /* grid-template-rows: auto 1fr 1fr auto; */
-  /* gap: 5vw; */
   padding: 5vw;
 }
 
@@ -131,8 +136,6 @@ section {
 }
 
 .back-button {
-  /* grid-column: 1 / span 1; */
-  /* grid-row: 1 / span 1; */
   padding: 3px;
   border: none;
   background-color: transparent;
@@ -152,19 +155,13 @@ section {
 }
 
 .details-image {
-  /* margin: 5vw;
-  width: 45%; */
   width: 45vw;
-  /* grid-column: 1 / span 1; */
-  /* grid-row: 3 / span 1; */
   border: 5px solid white;
   border-radius: 10px;
 }
 
 .movie-details {
-  /* grid-column: 1 / span 1; */
   width: 90vw;
-  /* grid-row: 4 / span 1; */
   color: #fff;
   background-color: rgba(46, 46, 46, 0.7);
   padding: 10px;
@@ -177,7 +174,57 @@ section {
   font-size: 16px;
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES TABLET */
+
+@media (min-width: 768px) {
+
+  /* Movies List */
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Details Component */
+  section {
+    /* grid-template-rows: auto 2fr 1fr; */
+  }
+
+  .details-image {
+    /* max-width: 30vw;
+    height: auto; */
+    height: 45vh;
+    width: auto;
+    /* aspect-ratio: 9 / 16; */
+    /* max-height: 45vh; */
+  }
+
+  .movie-details {
+    width: 40vw;
+    height: fit-content;
+    align-self: flex-end;
+  }
+
+  .horizontal-flex-bar {
+    display: flex;
+    gap: 5vw;
+    max-height: 45vh;
+  }
+}
+
+/* MEDIA QUERIES DESKTOP */
+@media (min-width: 1100px) {
+  /* Movies List */
+  main {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  /* Details Component */
+  .horizontal-flex-bar {
+    gap: 2vw;
+  }
+  .movie-details {
+    max-height: 30vh;
+    min-width: 20vw;
+  }
+}
 
 /* .horizontal-flex-bar {
   display: flex;
