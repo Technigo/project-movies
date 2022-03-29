@@ -11,6 +11,11 @@
   font-family: 'Poppins', sans-serif;
 }
 
+body {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
 /* Movie List Page */
 main {
   display: grid;
@@ -202,6 +207,7 @@ section {
 .movie-rating {
   color: red;
   font-size: 16px;
+  padding-left: 7px;
 }
 
 /* MEDIA QUERIES TABLET */
