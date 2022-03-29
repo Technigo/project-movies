@@ -12,13 +12,11 @@ export const App = () => {
     fetch(MAIN_URL).then(res => res.json()).then(data => setMovieList(data.results))
   }, [])
 
-  console.log(movieList)
-
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<MovieList movieList = {movieList}/>}/>
-        <Route path='/details/:moviename' element={<MovieDetails movieList={movieList}/>}/>
+        <Route path='/' element={<MovieList movieList = {movieList} />}/>
+        <Route path='/details/:movienumber' element={<MovieDetails movieList={movieList} />}/>
       </Routes>
     </BrowserRouter>
   )
