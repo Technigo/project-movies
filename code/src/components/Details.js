@@ -1,20 +1,35 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { APIKEY, MOVIEDETAILS } from 'Urls.js/url'
-import Back from 'components/Back'
+import { MOVIEDETAILS } from 'Urls.js/url'
+// import Back from 'components/Back'
 
 const Details = () => {
   const [details, setDetails] = useState([])
   const { movie_id } = useParams()
 
   useEffect(() => {
-    fetch(MOVIEDETAILS(APIKEY, movie_id))
+    fetch(MOVIEDETAILS(movie_id))
       .then((res) => res.json())
       .then((data) => setDetails(data))
-  }, [])
-  // console.log(data)
+  }, [movie_id])
 
-  return <section className="movie-details-list"></section>
+  return (
+  
+  <section >
+
+    <img className='background-img'
+    src={`https://image.tmdb.org/t/p/original${details.backdrop_path}`}
+    alt={details.title}/>
+
+    <div className="movie-details">
+      <img src={`https://image.tmdb.org/t/p/w185${details.poster_path}`}
+      alt={details.title}/>
+      <h2>{details.title}</h2>
+      <span className="vote">{details.vote_average}/10</span>
+      <p>{details.overview}</p>
+    </div>
+  </section>
+  )
 }
 
 export default Details

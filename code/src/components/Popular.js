@@ -1,17 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import { MOVIELIST } from 'Urls.js/url'
+import React from 'react'
+
 import { Link } from 'react-router-dom'
 
-const Popular = () => {
-  const [list, setList] = useState([])
+const Popular = ( {list}) => {
+  
 
-  useEffect(() => {
-    fetch(MOVIELIST)
-      .then((res) => res.json())
-      .then((data) => {
-        setList(data.results)
-      })
-  }, [])
+  
 
   // console.log(data.results)
   return (
@@ -28,7 +22,7 @@ const Popular = () => {
           />
           <div className="details">
             <h1>{movie.title}</h1>
-            <p>Released{movie.release_date}</p>
+            <p>Released {movie.release_date}</p>
           </div>
         </Link>
       ))}

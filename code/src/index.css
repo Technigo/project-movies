@@ -10,26 +10,36 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color:#fff;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-/* ------Details------*/
+/* ------Popular------*/
 .movie-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
+
 .movie-list a img {
   width: 100%;
 }
+
+.movie-list a {
+  width: 100%;
+}
+
 .movie-list a:hover .details {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-end;
 }
+
 .details {
   background: rgba(0, 0, 0, 0.6);
   display: none;
@@ -45,8 +55,27 @@ code {
   color: white;
   text-decoration: none;
 }
-/* ------Popular------*/
 
+/* ------Details------*/
+.vote {
+  color:red;
+}
 /* ------Back------*/
 
 /* ------MediaQuerys------*/
+@media (min-width: 500px) and (max-width: 1024px) {
+  .movie-list a {
+    width: 50%;
+  }
+  
+}
+
+@media (min-width: 1025px) {
+  .movie-list a {
+    width: 25%;
+  }
+
+  .background-img {
+    width: 100%;
+  }
+}
