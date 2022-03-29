@@ -1,9 +1,10 @@
 import React from "react";
 import { IMG_URL } from "../Utils/Url.js";
 import { Link } from "react-router-dom";
+import "./List.css";
 const Movielist = ({ lists }) => {
   return (
-    <div>
+    <div className="list">
       {lists.map((list) => (
         <div key={list.id}>
           <Link to={`/movies/${list.id}`}>
