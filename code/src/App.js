@@ -1,20 +1,31 @@
-import React, {useState, useEffect} from 'react'
-import { API_KEY } from 'ultils/API_KEY'
+import React, {useState} from 'react'
+import { BrowserRouter, Route, Routes} from 'react-router-dom' 
+import MovieList from 'components/MovieList'
+import MovieDetail from 'components/MovieDetail'
+
 
 export const App = () => {
 
-  const [list,setList] = useState([])
 
-  useEffect(() => {
-    fetch(API_KEY)
-    .then(res => res.json())
-    .then(data => setList(data.results))
-  },[])  
-  console.log(list)
+  // THIS STATE IS SET TO STORE DATA AFTER FETCHING 1ST API, 
+  // AND THEN BE USED AGAIN IN MOVIE DETAILS TO COMPARE PARAM AND MOVIEID
+  const [movieList,setMovieList] = useState([]);
+ 
 
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+
+
+    ////// ROUTE TO NAVIGATE AROUND THE SITE
+
+    /*
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={ <MovieList movieList={movieList} setMovieList={setMovieList} />} />
+        <Route path=':movieId' element={ <MovieDetail  movieList= {movieList}/>} />
+        <Route path='*' element={ <NotFound />} />
+
+      </Routes>
+    </BrowserRouter>
+    */
   )
 }
