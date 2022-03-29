@@ -17,11 +17,8 @@ const Moviedetails = () => {
     <div>
       {movie && (
         <div>
-          <img
-            src={`${IMG_URL}${movie.backdrop_path}`}
-            alt={movie.original_title}
-          />
-          <h1>{movie.original_title}</h1>
+          <img src={`${IMG_URL}${movie.backdrop_path}`} alt={movie.title} />
+          <h1>{movie.title}</h1>
           <h2>{movie.overview}</h2>
           <h3>{movie.vote_average}</h3>
         </div>

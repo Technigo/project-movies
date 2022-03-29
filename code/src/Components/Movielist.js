@@ -7,13 +7,12 @@ const Movielist = ({ lists }) => {
       {lists.map((list) => (
         <div key={list.id}>
           <Link to={`/movies/${list.id}`}>
-            <img
-              src={`${IMG_URL}${list.backdrop_path}`}
-              alt={list.original_title}
-            />
+            <img src={`${IMG_URL}${list.poster_path}`} alt={list.title} />
+            <div className="movietitle">
+              <h1>{list.title}</h1>
+              <p>Released: {list.release_date}</p>
+            </div>
           </Link>
-          <h1>{list.original_title}</h1>
-          <h3>{list.release_date}</h3>
         </div>
       ))}
     </div>
