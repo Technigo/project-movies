@@ -34,7 +34,7 @@
   margin-bottom: 20px;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .movie-list-container {
     width: 33%;
   }
@@ -43,5 +43,9 @@
 @media (min-width: 1024px) {
   .movie-list-container {
     width: 25%;
+  }
+  movie-card {
+    transition: 0.25s ease;
+    background: rgba(0, 0, 0, 0.75);
   }
 }
