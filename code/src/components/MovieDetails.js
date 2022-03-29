@@ -1,7 +1,8 @@
-import React from "react";
-import { DETAILS_URL } from "./utils.js/Urls";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
+import { DETAILS_URL } from "./utils.js/Urls";
 
 const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState({});
@@ -13,7 +14,7 @@ const MovieDetails = () => {
       .then((data) => {
         setMovieDetails(data);
       });
-  }, []);
+  }, [movie_id]);
 
   return (
     <section className="details-container">
