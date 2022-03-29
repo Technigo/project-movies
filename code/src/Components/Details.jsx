@@ -2,22 +2,22 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import arrow from '../assets/arrow.png'
+import Error from "./Error";
 
 const Details = ({films}) => {
     const {id} = useParams()
     const movie = films.filter(movie => movie.id === Number(id))[0];
-    const backgroundImageUrl = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`
-    const backgroundStyle = {
-        backgroundImage: `url(${backgroundImageUrl})`
-    }
 
     // NOT FOUND Page
     if (movie === undefined) {
         return (
-            <div className="error">
-                <p>Movie not found!</p>
-            </div>
+            <Error />
         )
+    }
+
+    const backgroundImageUrl = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`
+    const backgroundStyle = {
+        backgroundImage: `url(${backgroundImageUrl})`
     }
     
     return(
