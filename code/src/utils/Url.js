@@ -1,0 +1,2 @@
+export const API_MOVIES = `https://api.themoviedb.org/3/movie/popular?api_key=${API_TOKEN}&language=en-US&page=1`
+export const API_DETAILS = `https://api.themoviedb.org/3/movie/{movie_id}?api_key=${API_TOKEN}&language=en-US`
