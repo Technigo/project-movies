@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { APIKEY, MOVIEDETAILS } from 'Urls.js/url'
+import Back from 'components/Back'
 
 const Details = () => {
   const [details, setDetails] = useState([])
