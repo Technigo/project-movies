@@ -1,23 +1,14 @@
 import React from 'react';
 
-export const MovieCards = ({ movies }) => {
+export const MovieCards = ({leias}) => {
     return (
-        <section className="movie-card">
-                    <h3>{movies.title}</h3>
-        </section> 
-    )   
+    <section>
+        {leias.map((leia) =>{
+        return <div key={leia.title}>{leia.title}</div>
+        })}
+    </section>
+    )
 }
 
 
 export default MovieCards;
-
-// return (
-//     <section className="movie-card">
-//         {MovieCards.map(movieCard => ( 
-//             <article key={movieCard.id}>
-//                 <h3>{movieCard.title}</h3>
-//             </article>
-//         ))}
-//     </section> 
-// )   
-// }

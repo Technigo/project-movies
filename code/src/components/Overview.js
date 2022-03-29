@@ -1,34 +1,31 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
 import { MovieCards } from 'components/MovieCards';
+import { URL_MOVIES } from 'utils/urls';
 
 export const Overview = () => {
+
 const [movies, setMovies] = useState([]);
 
 useEffect(() => {
-fetchMovies();
-}, []);
-
-const Handlemovies = (event) => {
-    setMovies(event.target.value)
-}
-
-const fetchMovies = () => {
-fetch('https://api.themoviedb.org/3/movie/popular?api_key=e99c6c8e9d657c50fc40ffe9db9d16f5&language=en-US&page=1') 
+fetch(URL_MOVIES)
 .then(res  => res.json())
-.then(data => setMovies(data));
+.then(data => {
+    // console.log(data));
+    setMovies(data.results);
+});
+}, []);
+console.log(movies);
 
-}
 return (
-    <main>
-        {MovieCard.map(movies => ( 
-            <MovieCards
-            key={movies.id}
-                
-                movies={movies}
-            />
-        ))}
-    </main>
-    )
+    <BrowserRouter>
+    <Routes>
+        <Route path="/" element={<MovieCards leias={movies}/>}/>
+    </Routes>
+    </BrowserRouter>
+)
+
 }
 
 export default Overview;
