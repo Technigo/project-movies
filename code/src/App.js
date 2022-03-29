@@ -8,14 +8,10 @@ import Details from 'components/Details'
 export const App = () => {
   return (
     <BrowserRouter>
-      
-        <Routes>
-        <Route path="/" element={<Popular />}/>
-        <Route path="/details" element={<Details />}/>
-
+      <Routes>
+        <Route path="/" element={<Popular />} />
+        <Route path="/details" element={<Details />} />
       </Routes>
-  
     </BrowserRouter>
-
   )
 }
