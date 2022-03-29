@@ -2,13 +2,22 @@ import React from 'react';
 
 export const MovieCards = ({leias}) => {
     return (
-    <section>
-        {leias.map((leia) =>{
-        return <div key={leia.title}>{leia.title}</div>
-        })}
-    </section>
+        <section className="move-cards">
+            {leias.map((leia) => (
+                <div className="image-overlay" key={leia.title}>
+                    <h3
+                        className="movie-title">
+                        {leia.title}
+                    </h3>
+                    <img 
+                        className="movie-poster"
+                        src={`https://image.tmdb.org/t/p/w300${leia.poster_path}`}
+                        alt={leia.title}
+                    />
+                </div>
+            ))}
+        </section>      
     )
 }
-
 
 export default MovieCards;
