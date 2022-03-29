@@ -24,7 +24,7 @@
   background: rgba(0, 0, 0, 0.75);
   display: flex;
 }
-.movie-list-container:hover .movie-card {
+.movie-list-container:hover .movie-list-container:active.movie-card {
   opacity: 3;
 }
 .movietext {
