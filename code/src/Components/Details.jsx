@@ -6,6 +6,10 @@ import arrow from '../assets/arrow.png'
 const Details = ({films}) => {
     const {id} = useParams()
     const movie = films.filter(movie => movie.id === Number(id))[0];
+    const backgroundImageUrl = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`
+    const backgroundStyle = {
+        backgroundImage: `url(${backgroundImageUrl})`
+    }
 
     // NOT FOUND Page
     if (movie === undefined) {
@@ -15,23 +19,11 @@ const Details = ({films}) => {
             </div>
         )
     }
-
-    console.log(movie)
-    // console.log(movie.backdrop_path)
-
-    const backgroundImageUrl = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`
-
     
-
-    const backgroundStyle = {
-        backgroundImage: `url(${backgroundImageUrl})`
-    }
-    
-    console.log(backgroundImageUrl)
     return(
     <section style={backgroundStyle}>
     <div className="vertical-flex-bar">
-        <Link to="/"><div role="button" className="back-button"><img className="arrow-icon" src={arrow} alt="back-button" /><p className="button-text">Movies</p></div></Link>
+        <Link to="/" style={{width: '110px'}}><button className="back-button"><img className="arrow-icon" src={arrow} alt="back-button" /><span className="button-text">Movies</span></button></Link>
         <div className="horizontal-flex-bar">
             <img className="details-image" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
             <div className="movie-details">

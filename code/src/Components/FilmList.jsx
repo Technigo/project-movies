@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 const FilmList = ({films}) => {
 
-    // console.log(films)
-
     return(
         <>
         {films.map((film) => {
