@@ -6,6 +6,10 @@ const MovieCard = styled.div`
   background-color: black;
 `;
 
+const Poster = styled.img`
+  width: 100%;
+`;
+
 const Info = styled.div`
   display: block;
 `;
@@ -35,7 +39,10 @@ export const Movies = () => {
         {movie.map((movie) => (
           <MovieCard key={movie.id}>
             <Link to={`/details/${movie.id}`}>
-              {" "}
+              <Poster
+                src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+                alt={movie.title}
+              />
               <Info>
                 <Title>{movie.title}</Title>
                 <Released>Date released: {movie.release_date}</Released>
