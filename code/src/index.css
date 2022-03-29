@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+
+.movie-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  border: 1px dotted goldenrod;
+
+}
+
+.movie-card {
+  width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border: 1px solid blue;
+}
+
+.movie-card h2 {
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+}

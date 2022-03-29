@@ -1,0 +1,1 @@
+URL to get image sizes: https://api.themoviedb.org/3/configuration?api_key=6fb1d64d540188673e57f0b42d2bacb8
