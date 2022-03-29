@@ -119,7 +119,7 @@ section {
   padding: 5vw;
 }
 
-.content-flex-bar {
+.vertical-flex-bar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -176,3 +176,9 @@ section {
   color: red;
   font-size: 16px;
 }
+
+/* MEDIA QUERIES */
+
+/* .horizontal-flex-bar {
+  display: flex;
+} */
