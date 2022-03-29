@@ -1,0 +1,23 @@
+.popular-movies {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.overlay {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.movie-img {
+    position: relative;
+}
