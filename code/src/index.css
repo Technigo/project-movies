@@ -175,26 +175,16 @@ section {
 }
 
 /* MEDIA QUERIES TABLET */
-
 @media (min-width: 768px) {
-
   /* Movies List */
   main {
     grid-template-columns: 1fr 1fr;
   }
 
   /* Details Component */
-  section {
-    /* grid-template-rows: auto 2fr 1fr; */
-  }
-
   .details-image {
-    /* max-width: 30vw;
-    height: auto; */
     height: 45vh;
     width: auto;
-    /* aspect-ratio: 9 / 16; */
-    /* max-height: 45vh; */
   }
 
   .movie-details {
@@ -225,7 +215,3 @@ section {
     min-width: 20vw;
   }
 }
-
-/* .horizontal-flex-bar {
-  display: flex;
-} */
