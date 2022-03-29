@@ -11,10 +11,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
-#root {
+/* #root {
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
-}
+} */
 
 /* Movie List Page */
 main {
