@@ -1,10 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  
 }
 
 code {
@@ -12,3 +18,28 @@ code {
     monospace;
 }
 
+
+.cards { 
+  display: grid;
+}
+
+.card {
+  position: relative;
+}
+
+.card, img {
+  width: -webkit-fill-available;
+  display: block;
+}
+
+@media screen and (min-width: 720px) {
+  .cards { 
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .cards { 
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

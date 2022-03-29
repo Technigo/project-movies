@@ -1,7 +1,11 @@
 import React from "react"
 
 const Details = () => {
-    return <div> Details </div>
+  return (
+    <>
+      <div>test</div>
+    </>
+  )
 }
 
 export default Details
