@@ -23,7 +23,6 @@
   transition: 0.25s ease;
   background: rgba(0, 0, 0, 0.75);
   display: flex;
-  justify-content: center;
 }
 .movie-list-container:hover .movie-card {
   opacity: 3;
@@ -31,7 +30,8 @@
 .movietext {
   align-self: flex-end;
   color: #fff;
-  text-align: center;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 767px) {
