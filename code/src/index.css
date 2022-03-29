@@ -104,8 +104,8 @@ main {
 
 /* Details Page */
 section {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw; */
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
@@ -113,10 +113,17 @@ section {
   flex-direction: column;
   justify-content: flex-end; */
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 2fr 1fr 1fr;
-  gap: 5vw;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: minmax(min-content, max-content); */
+  /* grid-template-rows: auto 1fr 1fr auto; */
+  /* gap: 5vw; */
   padding: 5vw;
+}
+
+.content-flex-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .arrow-icon {
@@ -126,7 +133,7 @@ section {
 
 .back-button {
   grid-column: 1 / span 1;
-  grid-row: 1 / span 1;
+  /* grid-row: 1 / span 1; */
   padding: 3px;
   border: none;
   background-color: transparent;
@@ -148,16 +155,17 @@ section {
 .details-image {
   /* margin: 5vw;
   width: 45%; */
-  width: 100%;
+  width: 45vw;
   grid-column: 1 / span 1;
-  grid-row: 3 / span 1;
+  /* grid-row: 3 / span 1; */
   border: 5px solid white;
   border-radius: 10px;
 }
 
 .movie-details {
   grid-column: 1 / span 1;
-  grid-row: 4 / span 1;
+  width: 90vw;
+  /* grid-row: 4 / span 1; */
   color: #fff;
   background-color: rgba(46, 46, 46, 0.7);
   padding: 10px;

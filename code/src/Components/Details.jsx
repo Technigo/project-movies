@@ -31,11 +31,15 @@ const Details = ({films}) => {
     console.log(backgroundImageUrl)
     return(
     <section style={backgroundStyle}>
-    <Link to="/"><div role="button" className="back-button"><img className="arrow-icon" src={arrow} alt="back-button" /><p className="button-text">Movies</p></div></Link>
-    <img className="details-image" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-    <div className="movie-details">
-        <h3>{movie.title} <span className="movie-rating">{movie.vote_average}/10</span></h3>
-        <p>{movie.overview}</p>
+    <div className="content-flex-bar">
+        <Link to="/"><div role="button" className="back-button"><img className="arrow-icon" src={arrow} alt="back-button" /><p className="button-text">Movies</p></div></Link>
+        <div>
+            <img className="details-image" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+            <div className="movie-details">
+                <h3>{movie.title} <span className="movie-rating">{movie.vote_average}/10</span></h3>
+                <p>{movie.overview}</p>
+            </div>
+        </div>
     </div>
     </section>
     )
