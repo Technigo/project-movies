@@ -15,7 +15,6 @@ export const App = () => {
   useEffect(() => {
     fetchMovies(API_URL);
   }, []);
-  console.log(list);
   return (
     <BrowserRouter>
       <Routes>
