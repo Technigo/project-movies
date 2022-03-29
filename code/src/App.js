@@ -1,9 +1,14 @@
 import React from 'react'
+import PopularList from 'components/PopularList'
+import { BrowserRouter } from "react-router-dom"
 
-export const App = () => {
+const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <section>
+      <h1>Popular Movies</h1>
+      <PopularList  />
+    </section>
   )
 }
+
+export default App
