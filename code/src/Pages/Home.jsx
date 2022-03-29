@@ -62,20 +62,6 @@ const Home = () => {
                     {!isLoading && <Details films={popular} />}
                     </>
                 }/>
-                {/* Catch-All Route */}
-                <Route
-                    path="/*"
-                    element={
-                        <>
-                        {isLoading && <LoadingSpinner />}
-                        {!isLoading && 
-                            <main>
-                            <FilmList films={popular} />
-                            </main>
-                        }
-                        </>
-                        }
-                />
             </Routes>
         </BrowserRouter>
     )
