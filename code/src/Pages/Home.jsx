@@ -6,7 +6,7 @@ import Details from "Components/Details";
 
 // Import URLS
 import { POPULAR_API_1 } from "utils/urls";
-// import { POPULAR_API_2 } from "utils/urls";
+import { POPULAR_API_2 } from "utils/urls";
 
 const Home = () => {
 
@@ -14,30 +14,22 @@ const Home = () => {
     const [popular, setPopular] = useState([])
 
     useEffect(() => {
-        fetchPopularOne();
-    }, [])
+        fetchMovies();
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
-    const fetchPopularOne = () => {
-        fetch(POPULAR_API_1)
+    const urls = [
+        POPULAR_API_1, POPULAR_API_2,
+    ];
+
+    const fetchMovies = async () => {
+        setIsLoading(true)
+        const [result1, result2] = await Promise.all(
+            urls.map((url) => fetch(url)
             .then((res) => res.json())
-            .then((data) => {
-                setIsLoading(true)
-                // console.log(data.results)
-                setPopular(data.results)
-                setIsLoading(false)
-            })
+        ));
+        setIsLoading(false)
+        setPopular(results => [...result1.results, ...result2.results])
     }
-
-    // const fetchPopularTwo = () => {
-    //     fetch(POPULAR_API_2)
-    //         .then((res) => res.json())
-    //         .then((data) => {
-    //             setIsLoading(true)
-    //             // console.log(data.results)
-    //             setPopular(data.results)
-    //             setIsLoading(false)
-    //         })
-    // }
 
     return(
         <BrowserRouter>
