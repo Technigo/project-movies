@@ -41,7 +41,6 @@ const Button = styled.button`
   @media (min-width: 1024px) {
     font-size: 20px;
   }
-
 `;
 
 const MovieDetailsSummary = styled.div`

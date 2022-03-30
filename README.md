@@ -1,13 +1,12 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week’s project was about creating a movie app using React Router.
+We also were introduced to styled components. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+This weeks assignment was in pairs, we started by structuring our work in order to make the most of our time. We made sure to have all functionalities working before adding styled components to our work. If we had more time we could have made a component to filter out the movies in categories.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+techniflix.netlify.app
