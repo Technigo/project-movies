@@ -4,18 +4,18 @@ import { Link } from "react-router-dom";
 
 const ButtonText = styled.h3`
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   margin: 0;
 `;
 
 const BackButton = styled.button`
   position: fixed;
-  top: 90px;
+  top: 60px;
   left: 5%;
+  padding: 0;
+  z-index: 2;
   border: none;
   background-color: transparent;
-  padding: 0;
-  z-index: 4;
   &: hover ${ButtonText} {
     transform: translateX(4px);
     transition: all 0.3s ease-in-out;
@@ -34,7 +34,7 @@ const Button = () => {
       <ButtonWrap>
         <BackButton>
           <Link to={`/`}>
-            <ButtonText>Go Back</ButtonText>
+            <ButtonText>‹ Go Back</ButtonText>
           </Link>
         </BackButton>
       </ButtonWrap>{" "}

@@ -41,7 +41,6 @@ const SmallPoster = styled.img`
 
 const TitleSection = styled.div`
   display: flex;
-  align-items: center;
 `;
 
 const Title = styled.h1`
@@ -50,17 +49,21 @@ const Title = styled.h1`
   margin-bottom: 20px;
 `;
 
-const Score = styled.h4`
+const Score = styled.h3`
   color: red;
-  padding: 20px;
+  margin-left: 20px;
   background-color: white;
   align-self: center;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 30px;
 `;
 
 const Description = styled.p`
   width: 30vw;
   color: white;
-  margin: 0;
+  font-weight: 600;
+  vertical-align: middle;
 `;
 
 export const Details = () => {
