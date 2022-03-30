@@ -1,8 +1,6 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week we are making a website for popular movies (Ida and Simon )
 
 ## The problem
 
@@ -10,4 +8,4 @@ Describe how you approached to problem, and what tools and techniques you used t
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Our site ------> https://elegant-bienenstitch-8e2bcc.netlify.app/
