@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import { SINGLE_MOVIE_URL } from "utils/urls"
+import styled from "styled-components"
+
+
+const GoBackButton = styled.button`
+padding: 10px;
+color: green;
+background-color: red;
+font-style: italic;
+` 
 
 const Details = () => {
 
@@ -8,6 +17,14 @@ const Details = () => {
 
     //renamed to movieId for clarity. Also, sent it as an argument to the fetch function.
     const { movieId } = useParams()
+    const navigate = useNavigate()
+
+
+    const onBackButtonClick = () => {
+        navigate(-1)
+        // navigate('/')
+    }
+
 
     useEffect(() => {
         fetch(SINGLE_MOVIE_URL(movieId))
@@ -19,6 +36,7 @@ const Details = () => {
 
     return (
     <div>
+         <GoBackButton onClick={onBackButtonClick}>Movies</GoBackButton>
         <div>{details.title}</div>
         <div>{details.vote_average}</div>
         <div>{details.overview}</div>
