@@ -22,7 +22,7 @@ const Details = () => {
                 Back
             </NavLink>
 
-            <img src={`https://image.tmdb.org/t/p/w342${details.backdrop_path}`} alt={details.title}/>
+            <img src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt={details.title}/>
             <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title}/>
             <h1>{details.title}</h1>
             <p>{details.vote_average}</p>
