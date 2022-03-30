@@ -1,31 +1,52 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import styled from 'styled-components'
 
-import { LIST_URL } from "utils/urls";
+import { DETAIL_URL, LIST_URL } from "utils/urls";
+
+const GoBackButton = styled.button `
+    background-color:green;
+`;
+
+const BackgroundImage = styled.img `
+width: 150px;
+
+`;
 
 const Detail = () => {
-    const [movieDetail,setMovieDetail] = useState([])
+    const [movieDetail,setMovieDetail] = useState(null)
     const { movieId } = useParams()
+    const navigate = useNavigate();
+
+    const onBackButtonClick = () => {
+      navigate(-1);
+    }
 
     useEffect(() => {
-        fetch(LIST_URL)
+        fetch(DETAIL_URL(movieId))
         .then(res=> res.json())
         .then(data=> { 
-            setMovieDetail(data.results)
+            setMovieDetail(data)
+        
         })
     }, [movieId])
 
+console.log(movieDetail)
+if (movieDetail === null) {
+  return <p></p>
+}
   return (
     <div>
-      {movieDetail.map((popular) => ( 
-      <div key={popular.id}>
-         <img className="card-images" src={`https://image.tmdb.org/t/p/w300${popular.poster_path}`} alt={popular.original_title}/>
-         <img className="card-images" src={`https://image.tmdb.org/t/p/w1280${popular.backdrop_path}`} alt={popular.original_title}/>
-         <p>{popular.original_title}</p>
-         <p>{popular.vote_average}</p>
-         <p>{popular.overview}</p>
-         </div>
-      ))}
+      <GoBackButton onClick={onBackButtonClick}>Go Back</GoBackButton>
+      
+ 
+         <img className="card-images" src={`https://image.tmdb.org/t/p/w300${movieDetail.poster_path}`} alt={movieDetail.original_title}/>
+         <BackgroundImage  src={`https://image.tmdb.org/t/p/w1280${movieDetail.backdrop_path}`} alt={movieDetail.original_title}/>
+         <p>{movieDetail.original_title}</p>
+         <p>{movieDetail.vote_average}</p>
+         <p>{movieDetail.overview}</p>
+        
+      
     </div>     
   ) 
 };

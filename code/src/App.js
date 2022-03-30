@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import PopularList from "Components/PopularList";
 import Detail from "Components/Detail";
+import NotFound from "Components/NotFound";
 
 import { LIST_URL } from "utils/urls";
 
@@ -24,6 +25,8 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<PopularList movielist={movie} />} />
         <Route path="/movie/:movieId" element={<Detail />}/>
+        <Route path="/404" element={<NotFound />} />
+        <Route path="/*" element={<Navigate to="/404" />} />
       </Routes>
     </BrowserRouter>
   );
