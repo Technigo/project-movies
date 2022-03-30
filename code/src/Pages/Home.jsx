@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoadingSpinner from "Components/LoadingSpinner";
-// import FilmList from "Components/FilmList";
+import FilmList from "Components/FilmList";
 import Details from "Components/Details";
 import Error from "Components/Error";
 
@@ -34,8 +34,8 @@ const Home = () => {
                     path="/" 
                     element={
                     <>
-                    {!isLoading && <LoadingSpinner />}
-                    {/* {!isLoading && <FilmList films={popular} />} */}
+                    {isLoading && <LoadingSpinner />}
+                    {!isLoading && <FilmList films={popular} />}
                     </>
                 }/>
                 <Route 
