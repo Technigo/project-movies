@@ -18,3 +18,12 @@ export const Details = () => {
 }
 
 // the movie emoji in span is just me being tired and silly :)
+
+// TO DO's in detail component:
+// Show the full-screen image (the backdrop)
+// Show the smaller poster to the left, add a little border to it
+// Show the movie title
+// Show the vote-rating, like: 7.5/10
+// Show the movie description
+// Create the back-button that should only show from the details page.
+// Anything else?
