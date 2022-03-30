@@ -13,6 +13,10 @@ const MovieCard = styled.div`
 
 const Poster = styled.img`
   width: 100%;
+
+  &:hover {
+    opacity: 0.5;
+  }
 `;
 
 const Info = styled.div`
