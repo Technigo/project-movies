@@ -53,11 +53,12 @@ code {
 .movie {
   position: relative;
   display: inherit;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .overlay-text {
-  color: transparent;
+  /* color: transparent; */
+  color: white;
   padding: 2rem;
   transition: .3s ease;
   font-size: 1.2em;
@@ -74,16 +75,29 @@ code {
   left: 0;
   right: 0;
   width: 100%;
-  background-color: transparent;
+  /* background-color: transparent; */
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
   transition: .3s ease;
   display: flex;
   align-items: flex-end;
 }
 
-.movie:hover .overlay {
-  background-color: hsla(0, 0%, 0%, .7);
-}
+@media (min-width: 75em) {
+  .overlay-text {
+    color: transparent
+  }
 
-.movie:hover .overlay-text {
-  color: white;
+  .overlay {
+    background: transparent;
+  }
+
+  .movie:hover .overlay {
+  /* background-color: hsla(0, 0%, 0%, .7); */
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%)
+  }
+
+  .movie:hover .overlay-text {
+    color: white;
+  }
+
 }
