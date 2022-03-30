@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
+import { API_KEY } from 'Apis/Urls';
 
 import Movies from 'components/Movies';
 
-const API_KEY = process.env.REACT_APP_API_KEY
+
 
 export const App = () => {
   const [apiData, setApiData] = useState('');
@@ -17,13 +18,11 @@ export const App = () => {
     })
   }, [])
 
-console.log(apiData)
-
-return (
-  <main>
+  
+  return (
+    <main>
     <Movies apiData={apiData}/>
   </main>
 )
-
   
 }
