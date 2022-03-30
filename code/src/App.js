@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { API_KEY } from 'Apis/Urls';
 
 import Movies from 'components/Movies';
-
-
+import Moviedetail from 'components/Moviedetail';
+import Errorpage from 'components/Errorpage';
 
 export const App = () => {
   const [apiData, setApiData] = useState('');
@@ -21,8 +22,15 @@ export const App = () => {
   
   return (
     <main>
-    <Movies apiData={apiData}/>
-  </main>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Movies apiData={apiData}/>} />
+          <Route path="/movie/:movieId" element={<Moviedetail />} />
+
+          <Route path="*" element={<Errorpage />} />          
+        </Routes>
+      </Router>
+    </main>
 )
   
 }
