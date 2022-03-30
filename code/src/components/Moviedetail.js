@@ -21,6 +21,7 @@ const Moviedetail = () => {
         <>
         <Link to="/">Back to movielist page</Link>
         <p>{movieDetails.title}</p>
+        <img src={`https://image.tmdb.org/t/p/w500${movieDetails.backdrop_path}`} alt="film poster"/>
         <p>{movieDetails.overview}</p>
         <p>{movieDetails.vote_average}</p>
         </>

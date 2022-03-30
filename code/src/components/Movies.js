@@ -9,7 +9,7 @@ const Movies = ({ apiData }) => {
             return (
             <Link to={`/movie/${movieItem.id}`}>
                 <div style={{backgroundColor: 'pink'}}>
-                    <img src={`https://image.tmdb.org/t/p/w500${movieItem.backdrop_path}`} alt="film poster"/>
+                    <img src={`https://image.tmdb.org/t/p/w300${movieItem.poster_path}`} alt="film poster"/>
                     <p>{movieItem.title}</p>
                     <p>Released {movieItem.release_date}</p>           
                 </div>
