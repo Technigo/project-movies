@@ -21,13 +21,11 @@ const Popular = () => {
 
     return (
        
-    <Popularpage>
-     
+        <Main>     
     
         {movieList.map((movie => {
             return (
-                <Main>
-                    
+               
                 <Link to={`/movies/${movie.id}`} key={movie.id}>
                     <FilmCard>
                         <FilmImageGroup>
@@ -48,22 +46,16 @@ const Popular = () => {
                     </FilmCard>
                 </Link>
 
-           
-                    </Main>
                 )
                 
             }))}
-           </Popularpage>
+                    </Main>
     )
 }
 
 export default Popular
 
 //styled components
-const Popularpage = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-`
 const Main = styled.main`
 display: grid;
 grid-template-columns: 1fr;
@@ -82,11 +74,6 @@ const FilmCard = styled.div`
 width: 100%;
 height: 100%;
 `
-
-const MovieCard = styled.img`
-width: 100%;
-height: 100%;
-object-fit: cover;`
 
 const MovieDetails = styled.div`
     text-decoration: none;
@@ -140,6 +127,11 @@ color: white;
     color: white;
 }
 `
+
+const MovieCard = styled.img`
+width: 100%;
+height: 100%;
+object-fit: cover;`
 
 const Filmtitle = styled.h2`
 hyphens: auto;

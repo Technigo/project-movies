@@ -21,7 +21,6 @@ export default Footer
 
 
 //styled component for footer
-
 const StyledFooter = styled.div`
 text-align: center;
 color: gray;
