@@ -32,7 +32,7 @@ const Details = () => {
             // .then(data => console.log(data))
             .then(data => setDetails(data))
             // console.log(data)
-    }, [])
+    }, [movieId])
 
     return (
     <div>
@@ -40,8 +40,8 @@ const Details = () => {
         <div>{details.title}</div>
         <div>{details.vote_average}</div>
         <div>{details.overview}</div>
-        <img src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} /> 
-        <img src={`https://image.tmdb.org/t/p/w1280/${details.backdrop_path}`} /> 
+        <img src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt="poster-img" /> 
+        <img src={`https://image.tmdb.org/t/p/w1280/${details.backdrop_path}`} alt="backdrop-img" /> 
     </div>
     
     )
