@@ -5,13 +5,31 @@ import Back from 'components/Back'
 
 const Details = () => {
   const [details, setDetails] = useState([])
+  const [hasError, setHasError] = useState(false)
   const { movie_id } = useParams()
 
   useEffect(() => {
     fetch(MOVIEDETAILS(movie_id))
       .then((res) => res.json())
-      .then((data) => setDetails(data))
+      .then((data) => {
+        if (data.movie_id) {
+          setDetails(data)
+        } else {
+          setHasError(true)
+        }
+      })
+      .catch(() => setHasError(true))
   }, [movie_id])
+  if (hasError) {
+    return (
+      <section>
+        <h2 className="error">Movie was not found</h2>
+        <Link to="/" className="back-link">
+          <Back /> Movies
+        </Link>
+      </section>
+    )
+  }
 
   return (
     <section classname="details-page">
@@ -24,7 +42,6 @@ const Details = () => {
         src={`https://image.tmdb.org/t/p/original${details.backdrop_path}`}
         alt={details.title}
       />
-
       <div className="movie-details">
         <img
           src={`https://image.tmdb.org/t/p/w185${details.poster_path}`}
