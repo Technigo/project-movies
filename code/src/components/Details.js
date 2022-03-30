@@ -40,7 +40,7 @@ const Details = () => {
     <section className="details-page">
       <Link to="/" className="back-link">
         <Backicon />
-        Movies
+        <span className="movie-icon">Movies</span>
       </Link>
       <img
         className="background-img"
