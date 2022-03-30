@@ -23,7 +23,7 @@ export const App = () => {
 
 	return (
 		<BrowserRouter>
-			<Header title="Movies!"/>
+			{/* <Header title="Movies!"/> */}
 			<Routes>
 				<Route path="/" exact 
 					element={

@@ -21,17 +21,22 @@ export const PopularList = ({movies, imgSize, baseURL}) => {
 
     console.log(movies)
     return (
-        <div>
-            hej
+        <div className='movie-list-container'>
             {movies.map((movie) => (
-                <Link 
-                    key={movie.id}
-                    to={`/movies/${movie.id}`}
-                >
-                    <img className='poster-img' src={`${baseURL}${imgSize}${movie.poster_path}`} alt={movie.orginal_title} />
-                    <h2>{movie.original_title}</h2>
-                    <p>{movie.release_date}</p>
-                </Link>
+                <div className='movie'>    
+                    <Link 
+                        key={movie.id}
+                        to={`/movies/${movie.id}`}
+                    >
+                        <img className='poster-img' src={`${baseURL}${imgSize}${movie.poster_path}`} alt={movie.orginal_title} />
+                        <div className="overlay">
+                            <div className="overlay-text">
+                                <h2>{movie.original_title}</h2>
+                                <p>{movie.release_date}</p>
+                            </div>
+                        </div>    
+                    </Link>
+                </div>
             ))}
         </div>
     )
