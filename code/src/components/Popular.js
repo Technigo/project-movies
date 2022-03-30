@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
 import { MOVIES_URL } from 'utils/urls'
@@ -8,7 +8,7 @@ const Popular = () => {
 
     const [movieList, setMovieList] = useState([])
 
-    //moved fetch here since we want the fetch to happen only when this Route opens and not for every visit on our website.
+    //moved fetch here since we want the fetch to happen only when this Route (/) opens and not for every visit on our website.
 
     useEffect(() => {
         fetch(MOVIES_URL)
