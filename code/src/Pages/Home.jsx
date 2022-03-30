@@ -14,7 +14,6 @@ const Home = () => {
     const [popular, setPopular] = useState([])
 
     useEffect(() => {
-        console.log('mounted')
         const fetchMovies = async () => {
             setIsLoading(true)
             const [result1, result2] = await Promise.all(
@@ -35,8 +34,8 @@ const Home = () => {
                     path="/" 
                     element={
                     <>
-                    {isLoading && <LoadingSpinner />}
-                    {!isLoading && <FilmList films={popular} />}
+                    {!isLoading && <LoadingSpinner />}
+                    {/* {!isLoading && <FilmList films={popular} />} */}
                     </>
                 }/>
                 <Route 
