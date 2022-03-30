@@ -23,6 +23,7 @@ const Details = () => {
         <div>{details.vote_average}</div>
         <div>{details.overview}</div>
         <img src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} /> 
+        <img src={`https://image.tmdb.org/t/p/w1280/${details.backdrop_path}`} /> 
     </div>
     
     )
