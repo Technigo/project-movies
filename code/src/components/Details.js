@@ -5,16 +5,24 @@ import Back from 'components/Back'
 
 const Details = () => {
   const [details, setDetails] = useState([])
+  const [loading, setLoading] = useState(false)
   const { movie_id } = useParams()
 
+
   useEffect(() => {
+    setLoading(true)
     fetch(MOVIEDETAILS(movie_id))
       .then((res) => res.json())
       .then((data) => setDetails(data))
+      .finally(() => setLoading(false))
   }, [movie_id])
 
+  if (loading) {
+    return (<h1>Loading data...</h1>)
+}
+
   return (
-    <section classname="details-page">
+    <section className="details-page">
       <Link to="/" className="back-link">
         <Back />
         Movies
