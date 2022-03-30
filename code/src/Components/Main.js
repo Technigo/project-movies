@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react"
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom"
 
 import Movies from "Components/Movies"
 import Details from "Components/Details"
-import API_URL from "utils/URLS"
+import {API_URL} from "utils/URLS"
+import NotFound from "Components/NotFound"
 
 const Main = () => {
   const [list, setList] = useState([])
@@ -21,7 +22,10 @@ const Main = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Movies movies={list} />} />
-        <Route path="/Details" element={<Details details={list} />} />
+        <Route path="/Details/:movieId" element={<Details details={list}/>} />
+        <Route path="/404" element={<NotFound/>} />
+        <Route path='*' element={<Navigate to="/404" replace/>}/>
+
       </Routes>
     </BrowserRouter>
   )

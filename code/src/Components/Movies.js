@@ -1,18 +1,21 @@
 import React from "react"
+import {Link} from "react-router-dom"
 
 const Movies = ({ movies }) => {
   return (
     <div className="cards">
       {movies.map((movies) => {
         return (
-          <>
-            <div className="card" key={movies.id}>
+          <div key={movies.id}>
+            <Link to={`/Details/${movies.id}`}>
               <img
-                src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`}
+                src={`https://image.tmdb.org/t/p/w500${movies.poster_path}`}
                 alt={movies.title}
               />
-            </div>
-          </>
+              <h2>{movies.title}</h2>
+              <p>Released {movies.release_date}</p>
+            </Link>
+          </div>
         )
       })}
     </div>
@@ -21,7 +24,11 @@ const Movies = ({ movies }) => {
 
 export default Movies
 
-//<h1>{movies.original_title}</h1>
-//<h2>Release date: {movies.release_date}</h2>
-//<h2>Description: {movies.overview}</h2>
-//<h2>Rating: {movies.vote_average}</h2>
+/* 
+<div className="card" key={movies.id}>
+  <img
+    src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`}
+    alt={movies.title}
+  />
+</div> 
+*/
