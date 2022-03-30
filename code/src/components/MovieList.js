@@ -1,36 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { MovieContainer, MovieWrapper, MovieImage, MovieOverlay, MovieTitle } from "styles";
 
-const API_KEY = 'c3172ec38bb05890b52b6288d18c7b8e';
+import { BASE_URL } from "utils/urls";
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
-    )
+    fetch(BASE_URL)
       .then((res) => res.json())
       .then((data) => setMovies(data.results));
   }, []);
 
   return (
-    <div>
+    <MovieContainer>
       {movies.map((movie) => (
-        <Link key={movie.id} to={`/movies/${movie.id}`}>
-        <img
-          key={movie.title}
-          src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-          alt="movie posters"
-        >
-        </img>  
-        <div>
-          <h1>{movie.title}</h1> 
-          <p>Released {movie.release_date}</p>
-        </div>
-        </Link> 
+        <MovieWrapper>
+          <Link key={movie.id} to={`/movies/${movie.id}`}>
+            <MovieImage
+              key={movie.title}
+              src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+              alt="movie posters"
+            ></MovieImage>
+            <MovieOverlay>
+              <MovieTitle>{movie.title}</MovieTitle>
+              <p>Released {movie.release_date}</p>
+            </MovieOverlay>
+          </Link>
+        </MovieWrapper>
       ))}
-    </div>
+    </MovieContainer>
   );
 };
 
