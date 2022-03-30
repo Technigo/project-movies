@@ -8,11 +8,12 @@ const Main = styled.div`
 `;
 
 const MovieCard = styled.div`
-  background-color: black;
+  background-color: #191919;
 `;
 
 const Poster = styled.img`
   width: 100%;
+  position: relative;
 
   &:hover {
     opacity: 0.5;
@@ -21,6 +22,7 @@ const Poster = styled.img`
 
 const Info = styled.div`
   display: block;
+  position: absolute;
 `;
 
 const Title = styled.h1`
@@ -60,7 +62,6 @@ export const Movies = () => {
           </MovieCard>
         ))}
       </Main>
-      ; )
     </>
   );
 };
