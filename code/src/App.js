@@ -1,11 +1,8 @@
-import React, {useState, useEffect}from 'react'
+import React, { useState, useEffect }from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import PopularList from 'pages/PopularList'
 import Detail from 'pages/Detail'
-
 import { API_LIST } from 'utils/urls'
-
-
 
 export const App = () => {
   
@@ -17,9 +14,10 @@ export const App = () => {
     .then(data => {
      setList(data.results); 
     });
-  },[]);
+  }, []);
+
   return (
-      <BrowserRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<PopularList movielist={list} />} />
         <Route path="/details/:movieId" element={<Detail />} />

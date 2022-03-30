@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+main {
+  display: grid;
+}
+
+
+/* ------------------ MEDIA QUERIES ------------------ */
+@media screen and (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
