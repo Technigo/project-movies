@@ -97,7 +97,7 @@ code {
 }
 .details-page .back-link {
   position: absolute;
-  padding: 50px 0 0 50px;
+  padding: 50px;
   display: inline-flex;
   align-items: center;
   font-style: italic;
