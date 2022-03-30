@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import Backicon from './Backicon'
 
 const NotFound = () => {
-  const Navigate = useNavigate()
+  const navigate = useNavigate()
   const onHomeButtonClick = () => {
-    Navigate('/')
+    navigate('/')
   }
 
   return (
