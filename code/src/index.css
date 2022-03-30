@@ -87,11 +87,9 @@ code {
   flex-direction: column;
 }
 .details-page .info-details {
-  padding: 1em;
   margin-left: 20px;
 }
 .details-page img {
-  margin: 2em;
   border-radius: 20px;
   box-shadow: 2px 2px 1px 1px rgb(5 5 5 / 90%);
 }
