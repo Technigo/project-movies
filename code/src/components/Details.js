@@ -62,7 +62,7 @@ const Details = () => {
           />
           <div className="info-details">
             <h2>{details.title}</h2>
-            <span className="vote">{details.vote_average}/10</span>
+            <h3>{details.vote_average}/10 IMDB</h3>
             <p>{details.overview}</p>
           </div>
         </div>

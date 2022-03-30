@@ -90,12 +90,13 @@ code {
   margin-left: 20px;
 }
 .details-page img {
+  margin: 1em;
   border-radius: 20px;
   box-shadow: 2px 2px 1px 1px rgb(5 5 5 / 90%);
 }
 .details-page .back-link {
   position: absolute;
-  padding: 50px;
+  padding: 25px;
   display: inline-flex;
   align-items: center;
   font-style: italic;
@@ -103,11 +104,11 @@ code {
   text-decoration: none;
 }
 .details-page .back-link svg {
-  width: 40px;
+  width: 3em;
   transition: margin-right 0.2s ease-in-out;
 }
 .details-page .back-link:hover svg {
-  margin-right: 10px;
+  margin-right: 1em;
 }
 /* ------Error-container------*/
 .error-container {
@@ -117,19 +118,26 @@ code {
 .error {
 }
 /* ------MediaQuerys------*/
-@media screen and (min-width: 500px) and (max-width: 1024px) {
+@media screen and (max-width: 767px) {
+  .movie-list a {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .movie-list a {
     width: 50%;
   }
+  .details-page .movie-details {
+    padding: 3em;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+  }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .movie-list a {
     width: 25%;
-  }
-  .details {
-    padding: 50px;
-    font-size: 20px;
   }
 
   .background-img {
@@ -137,9 +145,12 @@ code {
   }
 
   .details-page .movie-details {
-    padding: 50px;
+    padding: 4em;
     display: flex;
     align-items: flex-end;
     flex-direction: row;
+  }
+  .details-page .back-link {
+    padding: 50px;
   }
 }
