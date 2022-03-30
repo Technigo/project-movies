@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import styled from "styled-components"
+
+export const StyledMovieDetails = styled.div `
+    background-color: red;
+`
 
 export const MovieDetails = () => {
     const { id } = useParams()
@@ -14,8 +19,13 @@ export const MovieDetails = () => {
     }, [id])
 
     return (
-        <div key={movie.id} >
-            <h1>{movie.title}</h1>
-        </div>
+        <StyledMovieDetails>
+            <div key={movie.id} >
+                <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+                <h1>{movie.title}</h1>
+                <p>{movie.vote_average}/10</p>
+                <p>{movie.overview}</p>
+            </div>
+        </StyledMovieDetails>
     )
 }
