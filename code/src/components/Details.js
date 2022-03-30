@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { MOVIEDETAILS } from 'Urls.js/url'
-import Back from 'components/Back'
+import Backicon from 'components/Backicon'
 
 const Details = () => {
   const [details, setDetails] = useState([])
@@ -20,28 +20,30 @@ const Details = () => {
       })
       .catch(() => setHasError(true))
   }, [movie_id])
+  console.log(details)
   if (hasError) {
     return (
       <section>
         <h2 className="error">Movie was not found</h2>
         <Link to="/" className="back-link">
-          <Back /> Movies
+          <Backicon /> Movies
         </Link>
       </section>
     )
   }
 
   return (
-    <section classname="details-page">
+    <section className="details-page">
       <Link to="/" className="back-link">
-        <Back />
+        <Backicon />
         Movies
       </Link>
       <img
         className="background-img"
-        src={`https://image.tmdb.org/t/p/original${details.backdrop_path}`}
+        src={`https://image.tmdb.org/t/p?/original${details.backdrop_path}`}
         alt={details.title}
       />
+
       <div className="movie-details">
         <img
           src={`https://image.tmdb.org/t/p/w185${details.poster_path}`}
