@@ -22,9 +22,12 @@ const MovieDetails = () => {
 
   return (
     <div>
-      <button onClick={onBackButtonClick}>Go back</button>
+      <button onClick={onBackButtonClick}>Movies</button>
       <img className="poster" src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`} alt={movieDetails.title} />
-      <h1>{movieDetails.overview}</h1>
+      <div className="more-info">
+        <h3>{movieDetails.original_title}</h3>
+        <p>{movieDetails.overview}</p>
+      </div>
     </div>
   )
 }

@@ -9,8 +9,12 @@ const MovieList = ({movies}) => {
                   key={movie.id}
                   to={`/details/${movie.id}`}
                   className="list-element"
-                  >{movie.original_title}
-                  <img className="list-poster" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+                  >
+                  <div className="info">
+                    <h1 className="title">{movie.original_title}</h1>
+                    <p>Released {movie.release_date}</p>
+                  </div>
+                  <img className="list-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
                   </Link>
         })}
     </section>
