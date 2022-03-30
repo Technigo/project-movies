@@ -4,10 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header>
-      <nav>
-        <Link to="/details"></Link>
-        <Link to="/">Movies</Link>
-      </nav>
+      <h1> New popular movie releases 🎥🍿</h1>
     </header>
   );
 };

@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { POPULAR_URL } from "./components/utils.js/Urls";
 import MovieList from "./components/MovieList";
-// import Header from "./components/Header";
+import Header from "./components/Header";
+// import Footer from "./components/Footer";
 import MovieDetails from "./components/MovieDetails";
 
 export const App = () => {
@@ -19,10 +20,12 @@ export const App = () => {
 
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/" element={<MovieList movies={movieList} />} />
         <Route path="/MovieDetails/:movie_id" element={<MovieDetails />} />
       </Routes>
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 };
