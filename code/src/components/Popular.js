@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import styled from "styled-components"
 
 import { MOVIES_URL } from 'utils/urls'
 
+//styled components
+const Popularpage = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+` 
 
 const Popular = () => {
 
@@ -19,7 +25,8 @@ const Popular = () => {
     }, [])
 
     return (
-        <section className="popular-page">
+        <Popularpage>
+     
             {movieList.map((movie => {
                 return (
                     <div key={movie.title}>
@@ -33,11 +40,9 @@ const Popular = () => {
                         </div>
                     </div>
                 )
+                
             }))}
-
-        </section>
-
-
+           </Popularpage>
     )
 }
 

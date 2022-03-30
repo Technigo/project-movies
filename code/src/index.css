@@ -23,10 +23,10 @@ code {
     monospace;
 }
 
-.popular-page {
+/* .popular-page {
   display: flex;
   flex-wrap: wrap;
-}
+} */
 
 h1 {
   font-size: 2rem;
