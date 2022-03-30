@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
@@ -17,19 +17,20 @@ const Movie = () => {
     }, [])
 
     return (
-        <div>Hiii
+        <div className="homePage">
 
         {movies.map((movie) => (
-            <NavLink 
+            <Link
                 to={`/movie/${movie.id}`} 
                 key={movie.id}>
-            <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}/>
+                
+            <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
 
             <div className="details">
                 <h1>{movie.title}</h1>
                 <p>{movie.release_date}</p>
             </div>
-            </NavLink>
+            </Link>
         ))}
 
         </div>
