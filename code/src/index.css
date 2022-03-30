@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {
@@ -66,6 +67,26 @@ code {
 
 .overlay-text p {
   font-size: 1rem;
+}
+
+.detail-poster {
+  width: 100%;
+}
+
+.movie-info-container {
+  display: grid;
+  justify-content: space-between;
+  min-height: 90vh;
+  padding: 2rem;
+}
+
+.movie-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  max-width: 700px;
+  color: white;
+  gap: 2rem;
 }
 
 .overlay {
