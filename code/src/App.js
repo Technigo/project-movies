@@ -1,32 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import List from 'components/List'
+import Popular from 'components/Popular'
 import Details from 'components/Details'
-import { BASE_URL } from 'utils/urls'
-import Header from 'components/Header'
+import Footer from 'components/Footer'
+
 
 export const App = () => {
 
-  const [list, setList] = useState([])
-
-  useEffect(()=> {
-    fetch(BASE_URL)
-    .then(res => res.json())
-    .then(data => { 
-      setList(data.results)
-    })
-  }, [])
-
   return (
     <BrowserRouter>
-    <Header />
-    <Routes>
-    <Route path="/" element={<List pokemons={list}/>} />
-    <Route path="/details/:pokemonName" element={<Details />}/>
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Popular />} />
+        <Route path="/movies/:movieId" element={<Details />} />
+      </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
-
-//adding a comment 
