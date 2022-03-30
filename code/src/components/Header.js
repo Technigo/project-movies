@@ -1,10 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header>
-      <h1> New popular movie releases 🎥🍿</h1>
+      <h1 className="header-title">
+        Popular movie releases{" "}
+        <span role="img" aria-label="Emoji">
+          🍿
+        </span>
+      </h1>
     </header>
   );
 };

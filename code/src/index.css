@@ -1,4 +1,5 @@
 body {
+  background-color: #000;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -7,7 +8,84 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+} */
+
+header {
+  background-color: #000;
+  color: #fff;
+}
+
+.header-title {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1em;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/* ----- OVERLAY ----- */
+
+.movie-img-group {
+  position: relative;
+  display: flex;
+}
+
+.movie-poster {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.movie-img-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.5s ease;
+  background: transparent;
+}
+
+.movie-text-overlay {
+  color: transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.movie-title,
+.release-date {
+  margin: 3px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.release-date {
+  font-size: 20px;
+}
+
+.movie-img-group:hover .movie-img-overlay,
+.movie-img-group:active .movie-img-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.movie-img-group:hover .movie-text-overlay,
+.movie-img-group:active .movie-text-overlay {
+  color: #fff;
 }

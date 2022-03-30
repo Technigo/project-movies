@@ -26,7 +26,7 @@ const MovieDetails = () => {
       <div>
         <img
           className="poster"
-          src={`https://image.tmdb.org/t/p/w780${movieDetails.poster_path}`}
+          src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
           alt={movieDetails}
         />
         <h1 className="title">{movieDetails.title}</h1>
