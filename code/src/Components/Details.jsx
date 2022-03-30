@@ -107,14 +107,14 @@ const MovieDetails = styled.div`
   border-radius: 10px;
 
   @media (min-width: 768px) {
-    width: 40vw;
+    min-width: 40vw;
+    max-width: 55vw;
     height: fit-content;
     align-self: flex-end;
   }
 
   @media (min-width: 1100px) {
-    max-height: 30vh;
-    min-width: 20vw;
+    height: auto;
   }
 `
 
