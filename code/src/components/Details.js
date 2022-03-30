@@ -12,11 +12,19 @@ const Details = () => {
     useEffect(() => {
         fetch(SINGLE_MOVIE_URL(movieId))
             .then(res => res.json())
+            // .then(data => console.log(data))
             .then(data => setDetails(data))
+            // console.log(data)
     }, [])
 
     return (
+    <div>
         <div>{details.title}</div>
+        <div>{details.vote_average}</div>
+        <div>{details.overview}</div>
+        <img src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} /> 
+    </div>
+    
     )
 }
 
