@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import Button from "./Button";
 
 const MainWrap = styled.div`
   position: fixed;
+  margin: 0;
 `;
 
 const BackgroundImage = styled.img`
   position: fixed;
   z-index: -1;
+  object-fit: cover;
   width: 100vw;
   height: 100vh;
 `;
@@ -51,6 +54,7 @@ const Score = styled.h4`
   color: red;
   padding: 20px;
   background-color: white;
+  align-self: center;
 `;
 
 const Description = styled.p`
@@ -79,7 +83,7 @@ export const Details = () => {
         src={`https://image.tmdb.org/t/p/original/${oneMovie.backdrop_path}`}
         alt={oneMovie.backdrop_path}
       />
-      <button>Go Back</button>
+      <Button />
       <MovieSection>
         <SmallPoster
           src={`https://image.tmdb.org/t/p/original/${oneMovie.poster_path}`}
