@@ -3,10 +3,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoadingSpinner from "Components/LoadingSpinner";
 import FilmList from "Components/FilmList";
 import Details from "Components/Details";
+import Error from "Components/Error";
 
 // Import URLS
-import { POPULAR_API_1 } from "utils/urls";
-import { POPULAR_API_2 } from "utils/urls";
+import { URLS } from "utils/urls";
 
 const Home = () => {
 
@@ -14,22 +14,19 @@ const Home = () => {
     const [popular, setPopular] = useState([])
 
     useEffect(() => {
+        console.log('mounted')
+        const fetchMovies = async () => {
+            setIsLoading(true)
+            const [result1, result2] = await Promise.all(
+                URLS.map((url) => fetch(url)
+                .then((res) => res.json())
+            ));
+            setIsLoading(false)
+            setPopular(results => [...result1.results, ...result2.results])
+        }
+
         fetchMovies();
-    }, []) // eslint-disable-line react-hooks/exhaustive-deps
-
-    const urls = [
-        POPULAR_API_1, POPULAR_API_2,
-    ];
-
-    const fetchMovies = async () => {
-        setIsLoading(true)
-        const [result1, result2] = await Promise.all(
-            urls.map((url) => fetch(url)
-            .then((res) => res.json())
-        ));
-        setIsLoading(false)
-        setPopular(results => [...result1.results, ...result2.results])
-    }
+    }, [])
 
     return(
         <BrowserRouter>
@@ -39,11 +36,7 @@ const Home = () => {
                     element={
                     <>
                     {isLoading && <LoadingSpinner />}
-                    {!isLoading && 
-                        <main>
-                        <FilmList films={popular} />
-                        </main>
-                    }
+                    {!isLoading && <FilmList films={popular} />}
                     </>
                 }/>
                 <Route 
@@ -54,6 +47,10 @@ const Home = () => {
                     {!isLoading && <Details films={popular} />}
                     </>
                 }/>
+                <Route
+                    path="*"
+                    element={<Error/>}
+                />
             </Routes>
         </BrowserRouter>
     )

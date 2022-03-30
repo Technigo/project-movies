@@ -12,30 +12,30 @@
 }
 
 /* Movie List Page */
-main {
+/* main {
   display: grid;
   grid-template-columns: 1fr;
-}
+} */
 
-.film-card {
+/* .film-card {
   width: 100%;
   height: 100%;
-}
+} */
 
-.film-image-group {
+/* .film-image-group {
   position: relative;
   display: flex;
   width: 100%;
   height: 100%;
-}
+} */
 
-.card-image {
+/* .card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
 
-.film-image-overlay {
+/* .film-image-overlay {
   position: absolute;
   top: 0;
 	right: 0;
@@ -43,9 +43,9 @@ main {
 	left: 0;
   transition: 0.5s ease;
   background: transparent;
-}
+} */
 
-.film-text-overlay {
+/* .film-text-overlay {
   position: absolute;
   top: 0;
 	right: 0;
@@ -55,33 +55,30 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  /* align-items: center; */
   color: transparent;
   padding: 20px;
-}
+} */
 
-.film-title {
+/* .film-title {
   hyphens: auto;
   word-wrap: break-word;
   overflow-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
-}
-
-/* .release-date {} */
+} */
 
 /* Card Hover Effects */
-.film-image-group:hover .film-image-overlay, .film-image-group:active .film-image-overlay {
+/* .film-image-group:hover .film-image-overlay, .film-image-group:active .film-image-overlay {
   background: rgba(0, 0, 0, 0.7);
 }
 
 .film-image-group:hover .film-text-overlay, .film-image-group:active .film-text-overlay {
   color: white;
-}
+} */
 
 /* ERROR PAGE */
-.error {
+/* .error {
   margin: auto;
   position: absolute;
   top: 0;
@@ -95,23 +92,23 @@ main {
   text-align: center;
   font-size: 20px;
   font-weight: 700;
-}
+} */
 
-.error-image {
+/* .error-image {
   width: 200px;
   height: 200px;
   margin-bottom: 30px;
-}
+} */
 
 /* LOADING SPINNER */
-.loader {
+/* .loader {
   border: 0px;
   border-radius: 50%;
   border-top: 20px solid #3A3845;
   border-bottom: 10px solid #3A3845;
   width: 160px;
   height: 160px;
-  -webkit-animation: spin 2s linear infinite; /* For Safari */
+  -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
   margin: auto;
   position: absolute;
@@ -119,9 +116,9 @@ main {
   left: 0;
   bottom: 0;
   right: 0;
-}
+} */
 
-.loader:after {
+/* .loader:after {
   content: "";
   display: block;
   border-radius: 50%;
@@ -130,42 +127,42 @@ main {
   border-left: 5px solid #3A3845;
   border-right: 5px solid #3A3845;
   opacity: .5;
-}
+} */
 
 /* For Safari */
-@-webkit-keyframes spin {
+/* @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
-}
+} */
 
 /* Other Browsers */
-@keyframes spin {
+/* @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
+} */
 
 /* DETAILS PAGE */
-section {
+/* section {
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
   display: grid;
   padding: 5vw;
-}
+} */
 
-.vertical-flex-bar {
+/* .vertical-flex-bar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+} */
 
-.arrow-icon {
+/* .arrow-icon {
   height: 25px;
   width: 25px;
-}
+} */
 
-.back-button {
+/* .back-button {
   padding: 3px;
   border: none;
   background-color: transparent;
@@ -176,72 +173,72 @@ section {
   align-items: center;
   gap: 10px;
   cursor: pointer;
-}
+} */
 
-.back-button:hover .button-text, .back-button:active .button-text {
+/* .back-button:hover .button-text, .back-button:active .button-text {
   transition: .5s ease-in;
   transform: translateX(5px)
-}
+} */
 
-.details-image {
+/* .details-image {
   width: 45vw;
   border: 5px solid white;
   border-radius: 10px;
-}
+} */
 
-.movie-details {
+/* .movie-details {
   width: 90vw;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px;
   border-radius: 10px;
   
-}
+} */
 
-.movie-rating {
+/* .movie-rating {
   color: red;
   font-size: 16px;
   padding-left: 7px;
-}
+} */
 
 /* MEDIA QUERIES TABLET */
 @media (min-width: 768px) {
   /* Movies List */
-  main {
+  /* main {
     grid-template-columns: 1fr 1fr;
-  }
+  } */
 
   /* Details Component */
-  .details-image {
+  /* .details-image {
     height: 45vh;
     width: auto;
-  }
+  } */
 
-  .movie-details {
-    width: 40vw;
-    height: fit-content;
-    align-self: flex-end;
-  }
-
-  .horizontal-flex-bar {
+  /* .horizontal-flex-bar {
     display: flex;
     gap: 5vw;
     max-height: 45vh;
-  }
+  } */
+
+  /* .movie-details {
+    width: 40vw;
+    height: fit-content;
+    align-self: flex-end;
+  } */
 }
 
 /* MEDIA QUERIES DESKTOP */
 @media (min-width: 1100px) {
   /* Movies List */
-  main {
+  /* main {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+  } */
   /* Details Component */
-  .horizontal-flex-bar {
+  /* .horizontal-flex-bar {
     gap: 2vw;
-  }
-  .movie-details {
+  } */
+  /* .movie-details {
     max-height: 30vh;
     min-width: 20vw;
-  }
+  } */
 }
