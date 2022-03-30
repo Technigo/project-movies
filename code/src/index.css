@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -49,7 +48,8 @@ code {
   bottom: 0;
   right: 0;
   left: 0;
-  padding: 30px;
+  padding: 4em;
+  font-size: 1.5em;
 }
 .movie-card {
   position: relative;
@@ -59,35 +59,83 @@ code {
 
 /* ------Details------*/
 
-.vote {
-  color: red;
+.details-page .background {
+  min-height: 100vh;
+  background: center center / cover;
+  display: flex;
+  align-items: flex-end;
+  padding: 2em;
 }
-.background-img {
-}
-.movie-details {
-}
+
 .details-page {
   position: relative;
 }
-.back-link {
-  position: absolute;
+.details-page {
+  font-size: 15px;
+  font-weight: bold;
 }
-
-/* ------Back------*/
-
+.movie-icon {
+  color: white;
+  font-size: 20px;
+}
+.details-page .info-details p {
+  max-width: 350px;
+}
+.details-page .movie-details {
+  display: flex;
+  align-items: flex-end;
+}
+.details-page .info-details {
+  margin-left: 20px;
+}
+.details-page img {
+  border-radius: 20px;
+  box-shadow: 2px 2px 1px 1px rgb(5 5 5 / 90%);
+}
+.details-page .back-link {
+  position: absolute;
+  padding: 50px 0 0 50px;
+  display: inline-flex;
+  align-items: center;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: none;
+}
+.details-page .back-link svg {
+  width: 40px;
+  transition: margin-right 0.2s ease-in-out;
+}
+.details-page .back-link:hover svg {
+  margin-right: 10px;
+}
+/* ------Error-container------*/
+.error-container {
+}
+.error-text {
+}
+.error {
+}
 /* ------MediaQuerys------*/
-@media (min-width: 500px) and (max-width: 1024px) {
+@media screen and (min-width: 500px) and (max-width: 1024px) {
   .movie-list a {
     width: 50%;
   }
 }
 
-@media (min-width: 1025px) {
+@media screen and (min-width: 1025px) {
   .movie-list a {
     width: 25%;
+  }
+  .details {
+    padding: 50px;
+    font-size: 20px;
   }
 
   .background-img {
     width: 100%;
+  }
+
+  .details-page .movie-details {
+    padding: 50px;
   }
 }

@@ -11,7 +11,7 @@ const NotFound = () => {
   return (
     <section className="error-container">
       <button onClick={onHomeButtonClick}>
-        <h2>Movie not found</h2>
+        <h2 className="error-text">Movie not found</h2>
         <Backicon />
       </button>
     </section>
