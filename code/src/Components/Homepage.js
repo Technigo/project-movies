@@ -1,10 +1,10 @@
 import React, { useState, useEffect} from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BASE_URL } from 'utils/urls';
 
 import MovieList from 'Components/MovieList';
 import MovieDetails from 'Components/MovieDetails';
-import { BASE_URL } from 'utils/urls';
-import Header from './Header';
+// import Header from './Header';
 
 const Homepage = () => {
 
@@ -20,14 +20,14 @@ const Homepage = () => {
 
   return (
     <BrowserRouter>
-    <Header/>
-    <main>
-      <Routes>
-        <Route path="/" element={<MovieList movies={movies}/>}/>
-        <Route path="/MovieDetails/:movieTitle" element={<MovieDetails/>}/>
-      </Routes>
-    </main>
-  </BrowserRouter>
+      {/* <Header/> */}
+      {/* <main> */}
+        <Routes>
+          <Route path="/" element={<MovieList movies={movies}/>} />
+          <Route path="/details/:movieTitle" element={<MovieDetails />} />
+        </Routes>
+      {/* </main> */}
+    </BrowserRouter>
   )
 }
 

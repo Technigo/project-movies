@@ -15,3 +15,14 @@ code {
 .active {
   color: hotpink;
 }
+
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-element {
+  width: 25%;
+  text-align: center;
+}
