@@ -24,4 +24,5 @@ export default Footer
 const StyledFooter = styled.div`
 text-align: center;
 color: gray;
+margin: 3rem;
 `
