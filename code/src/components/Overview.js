@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import { MovieCards } from 'components/MovieCards';
+import  MovieCards  from 'components/MovieCards';
 import { URL_MOVIES } from 'utils/urls';
+import  MovieDetails  from 'components/MovieDetails';
 
 export const Overview = () => {
 
@@ -21,6 +22,7 @@ export const Overview = () => {
         <BrowserRouter>
         <Routes>
             <Route path="/" element={<MovieCards leias={movies}/>}/>
+            <Route path ="/MovieDetails/:movieId" element={<MovieDetails/>}/>
         </Routes>
         </BrowserRouter>
     )

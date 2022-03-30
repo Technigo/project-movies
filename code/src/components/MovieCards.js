@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const MovieCards = ({leias}) => {
+const MovieCards = ({leias}) => {
     return (
         <section className="move-cards">
             {leias.map((leia) => (
