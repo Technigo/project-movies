@@ -7,10 +7,12 @@ const ListContainer = styled.div`
   flex-wrap: wrap;
   position: relative;
   background-color: #000;
+  width: 100%;
 `;
 
 const MovieCardContainer = styled.div`
   position: relative;
+  width: 100%;
   &:hover{
     opacity: 1;
   }
