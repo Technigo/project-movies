@@ -21,8 +21,10 @@ export const Overview = () => {
     return (
         <BrowserRouter>
         <Routes>
-            <Route path="/" element={<MovieCards leias={movies}/>}/>
-            <Route path ="/MovieDetails/:movieId" element={<MovieDetails/>}/>
+            <Route
+                path="/"
+                element={<MovieCards movies={movies}/>}/>
+            <Route path ="/MovieDetails/:id" element={<MovieDetails/>}/>
         </Routes>
         </BrowserRouter>
     )
