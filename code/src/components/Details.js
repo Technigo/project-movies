@@ -6,13 +6,15 @@ import Backicon from 'components/Backicon'
 const Details = () => {
   const [details, setDetails] = useState(null)
   const [hasError, setHasError] = useState(false)
+  const [loading, setLoading] = useState(false)
   const { movie_id } = useParams()
 
+
   useEffect(() => {
+    setLoading(true)
     fetch(MOVIEDETAILS(movie_id))
       .then((res) => res.json())
       .then((data) => {
-
         if (data) {
           setDetails(data) 
         } else {
@@ -20,6 +22,7 @@ const Details = () => {
         }
       })
       .catch(() => setHasError(true))
+      .finally(() => setLoading(false))
   }, [movie_id])
 
   if (hasError) {
@@ -36,6 +39,11 @@ const Details = () => {
   if (details === null) {
     return <p></p>
   }
+     
+  if (loading) {
+    return (<h1>Loading movie...</h1>)
+}
+
   return (
     <section className="details-page">
       <Link to="/" className="back-link">
