@@ -12,7 +12,8 @@ const Details = () => {
     fetch(MOVIEDETAILS(movie_id))
       .then((res) => res.json())
       .then((data) => {
-        if (data.movie_id) {
+
+        if (data) {
           setDetails(data) 
         } else {
           setHasError(true)
