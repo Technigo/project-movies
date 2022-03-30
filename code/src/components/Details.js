@@ -32,7 +32,7 @@ export const Details = () => {
         fetch(API)
         .then((res) => res.json())
         .then((data) => setMovie(data))
-    }, [movieId])
+    }, [API])
     console.log(movie)
     return (
         <div>
@@ -40,7 +40,7 @@ export const Details = () => {
             <h2>{movie.original_title}</h2>
             <p className='rating'>{movie.vote_average}</p>
             <p className='overview'>{movie.overview}</p>
-            <img className='backdrop' src={`${baseURL}${imgSize}${movie.backdrop_path}`} alt="backdrop movie image" />
+            <img className='backdrop' src={`${baseURL}${imgSize}${movie.backdrop_path}`} alt="backdrop movie" />
             <img className='poster-img' src={`${baseURL}${imgSize}${movie.poster_path}`} alt={movie.original_title} />
             {/* {movie && (
                 <div key={movie.idMovie}>
