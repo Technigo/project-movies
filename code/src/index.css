@@ -46,10 +46,36 @@ overflow-wrap: break-word;
   width: 25%;
   text-align: center;
   position: relative;
-
 }
 
- /* .button {
+.more-page {
+  position: relative;
+}
 
+.poster {
+  border: 5px solid #fff;
+}
 
- } */
+.more-info {
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+}
+
+.more-info-text {
+  margin-left: 20px;
+  max-width: 400px;
+}
+
+.highlight {
+  margin: 5px;
+  font-weight: 300;
+  font-size: smaller;
+  color: red;
+}
+
+button {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
