@@ -1,4 +1,5 @@
 body {
+  background-color: black;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -25,8 +26,28 @@ code {
 }
 
 .movie-list-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  /* max-width: 80%; */
+}
+
+@media (min-width: 35em) {
+  .movie-list-container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* @media (min-width: 60em) {
+  .movie-list-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
+
+@media (min-width: 75em) {
+  .movie-list-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .movie {

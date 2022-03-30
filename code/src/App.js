@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { PopularList } from 'components/PopularList'
 import { Details } from 'components/Details'
-import { Header } from 'components/Header'
+// import { Header } from 'components/Header'
 
 const API_KEY = '3bf2860c1d44881bc87143482ddf0f94';
 const API = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
