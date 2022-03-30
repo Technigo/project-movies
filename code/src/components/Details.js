@@ -17,7 +17,7 @@ const Details = () => {
     }, [id])
 
     return (
-        <div>Details
+        <div>
             <NavLink to='/'>
                 Back
             </NavLink>

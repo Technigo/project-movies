@@ -7,7 +7,7 @@ import Details from './components/Details'
 
 export const App = () => {
   return (
-    <div>Testing
+    <div>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Movie />}></Route>
