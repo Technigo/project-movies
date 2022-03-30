@@ -18,17 +18,15 @@ code {
     monospace;
 }
 
-.info {
+.info-box {
 position: absolute;
 right: 0;
 bottom: 0;
 left: 0;
 text-align: start;
+margin: 20px;
+overflow-wrap: break-word;
 }
-
-.info h1, p {
-  margin: 20px;
-} 
 
 .list {
   display: flex;
@@ -40,11 +38,11 @@ text-align: start;
   text-decoration: none;
 }
 
-.list-poster {
+.movie-poster {
   width:100%
 }
 
-.list-element {
+.movie-box {
   width: 25%;
   text-align: center;
   position: relative;
