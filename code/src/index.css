@@ -23,20 +23,6 @@ code {
     monospace;
 }
 
-/* .popular-page {
-  display: flex;
-  flex-wrap: wrap;
-} */
-
-h1 {
-  font-size: 2rem;
-}
-
-.details {
-  text-decoration: none;
-  color: var(--white);
-}
-
 .movie-text-group:hover {
   color: var(--gray);
   opacity: 60%;

@@ -4,11 +4,6 @@ import styled from "styled-components"
 
 import { MOVIES_URL } from 'utils/urls'
 
-//styled components
-const Popularpage = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-` 
 
 const Popular = () => {
 
@@ -25,20 +20,36 @@ const Popular = () => {
     }, [])
 
     return (
-        <Popularpage>
+       
+    <Popularpage>
      
-            {movieList.map((movie => {
-                return (
-                    <div key={movie.title}>
-                        <div className="movie-text-group">
-                            <Link className="details" to={`/movies/${movie.id}`}>
-                                <img className="img" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-                                <h1>{movie.title}</h1>
-                                <p>Released {movie.release_date}</p>
-                            </Link>
+    
+        {movieList.map((movie => {
+            return (
+                <Main>
+                    
+                <Link to={`/movies/${movie.id}`} key={movie.id}>
+                    <FilmCard>
+                        <FilmImageGroup>
+               
+                
+                            <MovieDetails>
+                                <MovieCard src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
 
-                        </div>
-                    </div>
+                                <ImageOverlay></ImageOverlay>      
+                                <TextOverlay>
+                                    <Filmtitle>{movie.title}</Filmtitle>
+                                    <p>Released {movie.release_date}</p>
+                                </TextOverlay>
+
+                            </MovieDetails>
+
+                        </FilmImageGroup>
+                    </FilmCard>
+                </Link>
+
+           
+                    </Main>
                 )
                 
             }))}
@@ -47,3 +58,94 @@ const Popular = () => {
 }
 
 export default Popular
+
+//styled components
+const Popularpage = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`
+const Main = styled.main`
+display: grid;
+grid-template-columns: 1fr;
+
+
+@media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 1100) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+`
+
+const FilmCard = styled.div`
+width: 100%;
+height: 100%;
+`
+
+const MovieCard = styled.img`
+width: 100%;
+height: 100%;
+object-fit: cover;`
+
+const MovieDetails = styled.div`
+    text-decoration: none;
+    color: white;
+` 
+
+const ImageOverlay = styled.div`
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease;
+    background: transparent;
+`
+
+const TextOverlay = styled.div`
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+transition: 0.5s ease;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+color: transparent;
+padding: 20px;
+`
+
+const FilmImageGroup = styled.div`
+position: relative;
+display: flex;
+width: 100%;
+height: 100%;
+
+
+&:hover ${ImageOverlay} {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+&:active ${ImageOverlay} {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+&:hover ${TextOverlay} {
+color: white;
+}
+
+&:active ${TextOverlay} {
+    color: white;
+}
+`
+
+const Filmtitle = styled.h2`
+hyphens: auto;
+word-wrap: break-word;
+overflow-wrap: break-word;
+-webkit-hyphens: auto;
+-moz-hyphens: auto;
+-ms-hyphens: auto;
+`
