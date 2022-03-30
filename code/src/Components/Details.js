@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import { DETAIL_URL } from "utils/URLS"
-//import NotFound from "./NotFound"
 
 const Details = () => {
   const [details, setDetails] = useState([])
@@ -18,22 +17,28 @@ const Details = () => {
   console.log(details)
 
   return (
-    <div
-      className="background"
-      style={{
-        backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})`,
-      }}
-    >
-      <div>
-        <img
-          src={`https://image.tmdb.org/t/p/w342${details.poster_path}`}
-          alt={details.title}
-        />
+    <div>
+      <Link to='/'>
+      <button className="home">Home</button>
+      </Link>
 
-        <h2>Release date: {details.release_date}</h2>
-        <h2>Description: {details.overview}</h2>
-        <h2>Rating: {details.vote_average}</h2>
-        <p>{details.original_title}</p>
+      <div
+        className="background"
+        style={{
+          backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})`,
+        }}
+      >
+        <div>
+          <img
+            src={`https://image.tmdb.org/t/p/w342${details.poster_path}`}
+            alt={details.title}
+          />
+
+          <h2>Release date: {details.release_date}</h2>
+          <h2>Description: {details.overview}</h2>
+          <h2>Rating: {details.vote_average}</h2>
+          <p>{details.original_title}</p>
+        </div>
       </div>
     </div>
   )

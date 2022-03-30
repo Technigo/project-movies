@@ -16,7 +16,6 @@ const Main = () => {
         setList(data.results)
       })
   }, [])
-  console.log(list)
 
   return (
     <BrowserRouter>
@@ -25,7 +24,6 @@ const Main = () => {
         <Route path="/Details/:movieId" element={<Details details={list}/>} />
         <Route path="/404" element={<NotFound/>} />
         <Route path='*' element={<Navigate to="/404" replace/>}/>
-
       </Routes>
     </BrowserRouter>
   )

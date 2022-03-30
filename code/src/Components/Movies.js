@@ -12,8 +12,15 @@ const Movies = ({ movies }) => {
                 src={`https://image.tmdb.org/t/p/w500${movies.poster_path}`}
                 alt={movies.title}
               />
-              <h2>{movies.title}</h2>
-              <p>Released {movies.release_date}</p>
+              <div className="test">
+              <div className='overlay'>
+
+                <div className='movie-text'>
+                  <h2 className='title'>{movies.title}</h2>
+                  <p className='releasedate'>Released {movies.release_date}</p>
+                </div>
+                </div>
+              </div>
             </Link>
           </div>
         )
