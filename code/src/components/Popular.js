@@ -2,12 +2,7 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
-const Popular = ( {list}) => {
-  
-
-  
-
-  // console.log(data.results)
+const Popular = ({ list }) => {
   return (
     <section className="movie-list">
       {list.map((movie) => (
