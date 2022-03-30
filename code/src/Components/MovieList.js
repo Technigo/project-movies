@@ -5,7 +5,7 @@ const MovieList = ({movies}) => {
   return (
     <section className="list">
       {movies.map((movie)=> {
-        return <Link 
+        return <Link   
                   key={movie.id}
                   to={`/details/${movie.id}`}
                   className="list-element"

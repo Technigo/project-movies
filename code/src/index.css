@@ -26,6 +26,10 @@ left: 0;
 text-align: start;
 }
 
+.info h1, p {
+  margin: 20px;
+} 
+
 .list {
   display: flex;
   flex-wrap: wrap;
