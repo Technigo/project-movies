@@ -6,6 +6,8 @@ import Details from 'components/Details'
 import NotFound from 'components/NotFound'
 import { ALL_MOVIES_URL } from "./utils/urls"
 
+import GlobalStyles from "components/styles/Global";
+
 const App = () => {
 
   const [allMovies, setAllMovies] = useState([])
@@ -20,6 +22,7 @@ const App = () => {
 
   return (
     <section>
+      <GlobalStyles />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<PopularList allMovies={allMovies} setAllMovies={setAllMovies}/>} />

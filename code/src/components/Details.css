@@ -1,14 +1,27 @@
-.details-backdrop {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .rating {
     color: grey;
 }
 
 .star {
-    width: 20px;
+    width: 15px;
     margin-right: 5px;
+}
+
+.backdrop {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+.details-wrapper {
+    position: relative;
+    padding: 50px;
+}
+
+.white {
+    color: white;
+}
+
+.overview {
+    max-width: 80vw;
 }
