@@ -78,6 +78,10 @@ export const Poster = styled.img`
   border: solid 5px white;
   width: 200px;
 
+  @media (orientation: landscape) {
+    width: 150px;
+  }
+
   @media (min-width: 1024px) {
     width: 300px;
   }
@@ -102,6 +106,12 @@ export const MovieDetailsWrapper = styled.div`
   align-items: flex-start;
   position: absolute;
   bottom: 0;
+
+  @media (orientation: landscape) {
+    padding: 10px;
+    flex-direction: row;
+    align-items: flex-end;
+  }
 
   @media (min-width: 1024px) {
     bottom: 50px;
