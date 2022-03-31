@@ -5,6 +5,7 @@
 .detailPage .background {
     position: absolute;
     background-size: cover;
+    background-repeat: no-repeat;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -29,5 +30,5 @@
     display: flex;
     align-items: flex-end;
     padding: 50px;
-  }
+}
   
