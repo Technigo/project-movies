@@ -1,13 +1,134 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif; */
+  font-family: "Oxygen", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #000;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.popularList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.popularList a {
+  width: 25%;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+
+.popularList a img {
+  width: 100%;
+}
+
+.popularList .details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.popularList .details h1 {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.popularList a:hover .details {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Details page */
+
+.detailsPage {
+  position: relative;
+}
+
+.background-image {
+  position: relative;
+  min-height: 100vh;
+  width: 100%; /*makes the image take out all available space*/
+  background-position: center;
+  object-fit: cover;
+}
+
+.summary {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  bottom: 50px;
+  left: 50px;
+  padding-right: 40px;
+  flex-wrap: wrap;
+}
+
+.summary p {
+  background: rgba(34, 34, 34, 0.6);
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.poster-image {
+  border-radius: 10px;
+  width: 300px;
+  height: auto;
+  display: none;
+}
+
+.back-icon {
+  font-family: "Palette Mosaic";
+  font-size: 50px;
+  padding-right: 10px;
+}
+
+.back-button {
+  top: 0;
+  left: 0;
+  position: absolute;
+  margin: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.back-text {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+h1,
+p {
+  color: #fff;
+  margin: 3px;
+}
+
+.rating {
+  padding-left: 10px;
+  font-size: 23px;
+}
+
+@media (min-width: 767px) {
+  /* .movie-container {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  } */
+  .poster-image {
+    display: block;
+  }
 }
