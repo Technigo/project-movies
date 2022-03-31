@@ -53,18 +53,7 @@ const MovieDetail = ( { movieList } ) => {
     return (
         
         <MovieDetailStyle background = {movieDetail.backdrop_path}>
-<div class="center">
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-</div>
+
         <Button color='#fff' onClick={() => onBackBtnClick(-1)}><span className="link-icon"><IoIosArrowBack /></span>Movies</Button>
            
             <div className='movie-detail'>

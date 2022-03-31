@@ -47,6 +47,8 @@ const MovieCard = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  padding: 0;
+
 
   @media (max-width: 600px) {
     width: 50vw;
@@ -63,8 +65,10 @@ const Title = styled.p`
   font-size: 2.5rem;
   font-weight: 700;
   z-index: 100;
-  width: 100%;
+  max-width: 80%;
   text-wrap: wrap;
+  line-height: 1.4;
+
 
 
   @media (max-width: 600px) {
@@ -75,7 +79,7 @@ const Title = styled.p`
   }
 `
 const Release = styled.p`
-bottom: 2rem;
+  bottom: 2rem;
   position: absolute;
   color: white;
   font-size: 18px;
@@ -87,7 +91,6 @@ const Hover = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
-  padding: 1rem;
   opacity: 0;
   transition-duration: 0.2s;
 
@@ -155,7 +158,7 @@ const MovieList = ( {movieList, setMovieList} ) => {
               <MovieWrapper>
                 
                 {movieList.map((movie) => {
-                return <Link key={movie.id} to={`${movie.id}`}>
+                return <Link key={movie.id} to={`details/${movie.id}`}>
                   <MovieCard key={movie.id}>
                           
                           <CoverArt src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>
