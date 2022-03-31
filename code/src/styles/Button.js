@@ -6,7 +6,7 @@ const Button = styled.button`
     background: transparent;
     border: none;
     cursor: pointer;
-    font-size: 18px;
+    font-size: ${ (props) => props.fontsize };
     font-weight: 700;
     text-decoration:none;
     display: flex;
@@ -14,13 +14,13 @@ const Button = styled.button`
     gap: 5px;
     font-weight: 700;
     position: absolute;
-    left: 50px;
-    top: 50px;
+    left: ${ (props) => props.left };
+    top: ${ (props) => props.top };
     transition: all 0.4s ease;
 
     &:hover {
-       left: 30px;
-       gap: 10px;
+       left: ${ (props) => props.leftHover ? props.leftHover  : '' };
+       gap:  ${ (props) => props.gapHover ? props.gapHover  : '' } ;
     }
 
 `

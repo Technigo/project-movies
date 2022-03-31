@@ -43,6 +43,8 @@ const MovieDetail = ( { movieList } ) => {
 
     console.log(movieDetail)
 
+  
+
 
     const matchID = movieList.find(item => item.id === Number(movieId));
 
@@ -54,13 +56,22 @@ const MovieDetail = ( { movieList } ) => {
         
         <MovieDetailStyle background = {movieDetail.backdrop_path}>
 
-        <Button color='#fff' onClick={() => onBackBtnClick(-1)}><span className="link-icon"><IoIosArrowBack /></span>Movies</Button>
+        <Button color='#fff' 
+        left='50px' top='50px' 
+        leftHover = '30px'
+        gapHover ='10px' 
+        fontsize = '18px'
+        onClick={() => onBackBtnClick(-1)}>
+            <span className="link-icon"><IoIosArrowBack /></span>
+            Movies
+            </Button>
            
             <div className='movie-detail'>
                 <img src={`https://image.tmdb.org/t/p/w300${movieDetail.poster_path}`} alt={movieDetail.original_title}/>
                 <div>
+
                     <h3>{movieDetail.original_title}</h3>
-                    <span>{movieDetail.vote_average}/10</span>
+                    <span className='rating'>{movieDetail.vote_average}/10</span>
                     <div className='language'>
                         Language:
                         {movieDetail?.spoken_languages?.map(language => {

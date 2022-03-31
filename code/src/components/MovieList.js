@@ -1,23 +1,24 @@
 import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
+import { IoIosStarOutline } from "react-icons/io"
+import Button from "styles/Button";
 
 const SortMenu = styled.select`
-width: 150px;
-height: 40px;
-background: #000;
-color: #fff;
-border: transparent;
-outline: none;
-font-size: 14px;
-font-weight: bold;
-appearance: none;
-padding: 10px;
-text-align: center;
+  width: 150px;
+  height: 40px;
+  background: #000;
+  color: #fff;
+  border: transparent;
+  outline: none;
+  font-size: 14px;
+  font-weight: bold;
+  appearance: none;
+  padding: 10px;
+  text-align: center;
 
-&:focus {
-  border: solid 2px red;
+  &:focus {
+    border: solid 2px red;
 }
 
 option {
@@ -34,12 +35,14 @@ option {
 const MovieWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  
+
 `
 const CoverArt = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  border: 0px;
+
   
 `
 const MovieCard = styled.div`
@@ -48,7 +51,6 @@ const MovieCard = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0;
-
 
   @media (max-width: 600px) {
     width: 50vw;
@@ -93,6 +95,7 @@ const Hover = styled.div`
   position: absolute;
   opacity: 0;
   transition-duration: 0.2s;
+  padding: 20px;
 
 
   &:hover {
@@ -109,15 +112,31 @@ const Hover = styled.div`
 `
 
 
-
 const MovieList = ( {movieList, setMovieList} ) => {
     
+    
+    const [like, setLike] = useState(false);
+
+    const saveMovie = (title) => {
+      setLike(true)
+      localStorage.setItem('save', JSON.stringify(title));
+  
+    }
+
 
 
     //This state to filter  movies - TESTING
     const [sorted, setSorted] = useState('');
+    const [searchInput, setSearchInput] = useState('');
+  
+    const options = {
+      method: 'POST',
+      headers: {
+          'Content-Type':'application/json',
+      },
+      body: JSON.stringify({ message: searchInput}),
+  }
 
- 
   
     
     // Use Effect for sort dropdow menus
@@ -135,20 +154,14 @@ const MovieList = ( {movieList, setMovieList} ) => {
        
     },[sorted])
 
-   
+      console.log(movieList)
 
-    
-
-  
       if (movieList) {
 
-      return <>
-      
+      return <main>
 
-          
-          { 
-            <main>
-              // dropdown copied from Suki
+       
+
               <SortMenu value={sorted} onChange={(e) => setSorted(e.target.value)}>
                 <option value='' disabled>Sort by</option>
                 <option value='latest'>Latest</option>
@@ -158,12 +171,14 @@ const MovieList = ( {movieList, setMovieList} ) => {
               <MovieWrapper>
                 
                 {movieList.map((movie) => {
-                return <Link key={movie.id} to={`details/${movie.id}`}>
-                  <MovieCard key={movie.id}>
-                          
-                          <CoverArt src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>
+                return  <Link key={movie.id} to={`details/${movie.id}`}>
+                    
+                       <MovieCard key={movie.id}>
+                          <CoverArt src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}/>
                             <Hover>
                             <Title>{movie.title}</Title>
+                            <Button onClick={() => setLike(true)} onDoubleClick={() => setLike(false)} color = { like ? 'white' : 'yellow'} fontsize='3rem'  top='5%' left='75%' ><span><IoIosStarOutline /></span></Button>
+
                             <Release>{movie.release_date}</Release>
                             </Hover>
                               
@@ -173,14 +188,12 @@ const MovieList = ( {movieList, setMovieList} ) => {
               </MovieWrapper> 
               </main>
 
-     }
-            </>
+ 
                   
-                        
-          
+                          
             }
             
-
+         return null;
 
 }
 
