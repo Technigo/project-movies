@@ -24,7 +24,7 @@ export const PopularList = ({movies, imgSize, baseURL}) => {
     return (
         <div className='movie-list-container'>
             {movies.map((movie) => (
-                <div key={movie.id} className='movie'>    
+                <div key={movie.id} className='movie' role='link'>    
                     <Link
                         to={`/movies/${movie.id}`}
                     >
