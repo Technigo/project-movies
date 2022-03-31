@@ -17,19 +17,24 @@ const Details = () => {
     }, [id])
 
     return (
-        <div className="details-body"> 
+<div className="details-body"> 
+
+<div className="background-image">
+            <img src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt={details.title}/>
+            </div> 
             <NavLink to='/'>
                 Back
             </NavLink>
-
-            <img src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt={details.title}/>
-            
-            <div className="movie-summary">
+               
+            <div className="movie-box">
             <img className="movie-image" src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title}/>
+            <div className="movie-summary">
             <h1 className="movie-title">{details.title}</h1>
-            <p className="movie-rating">{details.vote_average}</p>
+            <p className="movie-rating">{details.vote_average} / 10</p>
             <p>{details.overview}</p>
+           
             </div>
+        </div>
         </div>
     )
 }

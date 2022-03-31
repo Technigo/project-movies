@@ -62,18 +62,29 @@ a:link {
 /*DETAILS*/
 
 .details-body{
+  background-size: cover;
+}
+
+.background-image{
+  position: relative;
+}
+
+.details-body, .movie-box{
   display:flex;
-  flex-direction: column;
-  margin:10px;
+  align-items: flex-end;
   color:white;
 }
 
-.movie-summary{
-  display: flex;
-  flex-direction: flex-end;
+
+ .movie-box{
+  margin:10px;
 }
 
 .movie-image{
-  border-style: solid;
+  border: 5px solid;
   border-color: white;
+}
+
+.movie-summary{
+  margin-left: 20px;
 }
