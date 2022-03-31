@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { IoIosStarOutline } from "react-icons/io"
-import { AiFillStar } from "react-icons/ai"
+import { AiTwotoneStar } from "react-icons/ai"
 import Button from "styles/Button";
 import Header from "./Header";
 
@@ -94,8 +94,8 @@ const MovieList = ( {movieList, setMovieList} ) => {
     
     const [like, setLike] = useState(false);
     const [name, setName] = useState(JSON.parse(localStorage.getItem('save')));
-    const [color, setColor] = useState('white');
-    const [star, setStar] = useState(false);
+    const [color, setColor] = useState('red');
+    const [star, setStar] = useState(true);
     
 
 
@@ -119,36 +119,22 @@ const MovieList = ( {movieList, setMovieList} ) => {
       // To toggle between like and dislike
       setStar(true) 
       
-      star ? setStar(false) : setStar(true);
       
       // To find the correct target button and change color
+
+      //I DONT KNOW WHY, BUT I CAN'T USE REACT ICON INSDE INNER HTML. SO I HAVE TO USE EXTERNAL ICONS 😔
       if (matchStarId) {
-       const but = document.getElementById(id);
-       star ? but.style.color = 'red' : but.style.color = 'yellow'  ;
-        
+       star ? setStar(false) : setStar(true);
+       const startBtn = document.getElementById(id);
+       star ? startBtn.style.color = 'yellow' : startBtn.style.color = ''  ;
+       star ? startBtn.innerHTML = '<ion-icon name="star"></ion-icon>' : startBtn.innerHTML = '<ion-icon name="star-outline"></ion-icon>';
       }
-
-
+     
+      
     }
+    console.log(star)
 
-    const toggleColor = () => {
   
-      
-    }
-
-
-   /* const updateLikes = thoughts.map((item) => {
-      if(item._id === data._id) {
-      item.hearts += 1
-      return item }
-      
-      else { return item }
-  })
-
-  setThoughts(updateLikes)*/
-
-
-
 
 
       console.log(movieList)
@@ -170,7 +156,8 @@ const MovieList = ( {movieList, setMovieList} ) => {
                           <CoverArt src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}/>
                             <Hover>
                             <Title>{movie.title}</Title>
-                            <Button id={movie.id} onClick={(e) => { toggleLike(e,movie.id) }} color={color} fontsize='3rem'  top='5%' left='75%' ><span> <IoIosStarOutline/></span></Button>
+                            
+                            <Button id={movie.id} onClick={(e) => { toggleLike(e,movie.id) }} fontsize='3rem' color="white"  top='5%' left='75%' ><ion-icon name="star-outline"></ion-icon></Button>
 
                             <Release>{movie.release_date}</Release>
                             </Hover>
