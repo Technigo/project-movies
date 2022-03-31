@@ -107,22 +107,27 @@ const MovieList = ( {movieList, setMovieList} ) => {
   
     }
 
-
+   console.log(movieList)
   
 
     const toggleLike = (e, id) => {
       
       e.preventDefault();
-      console.log(e)
 
-      document.getElementById(`${id}`).classList.toggle('red');
+      const matchStarId = movieList.find(item => item.id === id );
 
-      //setStar(true) 
-
-     // star ? setStar(false) : setStar(true);
+      // To toggle between like and dislike
+      setStar(true) 
       
-      console.log('Toggled star is' + star);
-      //setColor(star ? 'yellow' : 'white')
+      star ? setStar(false) : setStar(true);
+      
+      // To find the correct target button and change color
+      if (matchStarId) {
+       const but = document.getElementById(id);
+       star ? but.style.color = 'red' : but.style.color = 'yellow'  ;
+        
+      }
+
 
     }
 
@@ -165,8 +170,8 @@ const MovieList = ( {movieList, setMovieList} ) => {
                           <CoverArt src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}/>
                             <Hover>
                             <Title>{movie.title}</Title>
-                            <Button onClick={() => saveMovie(movie.title)} onDoubleClick={() => setLike(false)} color = { like ? 'white' : 'yellow'} fontsize='3rem'  top='5%' left='75%' ><span><IoIosStarOutline /></span></Button>
-                            <Button id={movie.id} onClick={(e) => {  toggleLike(e,movie.id) }} color={color} fontsize='3rem'  top='5%' left='75%' ><span>{!star ? <IoIosStarOutline /> : <AiFillStar />}</span></Button>
+                            <Button id={movie.id} onClick={(e) => { toggleLike(e,movie.id) }} color={color} fontsize='3rem'  top='5%' left='75%' ><span> <IoIosStarOutline/></span></Button>
+
                             <Release>{movie.release_date}</Release>
                             </Hover>
                               
