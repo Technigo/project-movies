@@ -7,6 +7,8 @@ export const MovieList = ({movieList}) => {
     const [filter, setFilter] = useState('All')
     const [sorting, setSorting] = useState()
 
+    
+
     // ADDED second useEffect to filter movies based on genre
     useEffect(() => {
         if (filter === 'All'){
