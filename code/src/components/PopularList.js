@@ -19,6 +19,7 @@ export const PopularList = ({movies, imgSize, baseURL}) => {
     //         .then((json) => setMovies(json.results));
     // }, []);
 
+
     console.log(movies)
     return (
         <div className='movie-list-container'>
@@ -31,7 +32,7 @@ export const PopularList = ({movies, imgSize, baseURL}) => {
                         <div className="overlay">
                             <div className="overlay-text">
                                 <h2>{movie.original_title}</h2>
-                                <p>{movie.release_date}</p>
+                                <p>{'Released: ' + new Date(movie.release_date).getFullYear()}</p>
                             </div>
                         </div>    
                     </Link>

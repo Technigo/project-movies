@@ -20,7 +20,7 @@ const GoBackButton = styled.button`
 `;
 
 const BackDrop = styled.div`
-        background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%), url(${(props) => props.url});
+        background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url(${(props) => props.url});
         background-size: cover;
         min-height: 100vh;
     `;
