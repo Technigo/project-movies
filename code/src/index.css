@@ -80,10 +80,17 @@ h1 {
   cursor: pointer;
   font-style: inherit;
   font-weight: 700;
+  display: flex;
+  align-items: center;
 }
 
-button.back-btn:hover,
-button.back-btn:focus {
+.back-btn--text {
+  padding-left: 0.25em;
+}
+
+
+.back-btn--text:hover,
+.back-btn--text:focus {
   transform: translateX(10px);
   transition: all 0.5s ease-out;
 }
