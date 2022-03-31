@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { API_URL } from "ultils/API_URLS";
 
 
 const SortMenu = styled.select`
@@ -105,19 +104,7 @@ const Hover = styled.div`
   }
   
 `
-const LoadingDiv = styled.div`
 
-  background-color: black;
-  width: 100vw;
-  height: 100vh;
-`
-
-const LoadingText = styled.p`
-  font-size: 3rem;
-  color: white;
-  text-align: center;
-  padding-top: 10rem;
-`
 
 
 const MovieList = ( {movieList, setMovieList} ) => {
@@ -127,8 +114,6 @@ const MovieList = ( {movieList, setMovieList} ) => {
     //This state to filter  movies - TESTING
     const [sorted, setSorted] = useState('');
 
-    const [loading, isLoading] = useState()
-  // const [filter, setFilter] = useState();
  
   
     
@@ -158,7 +143,7 @@ const MovieList = ( {movieList, setMovieList} ) => {
       
 
           
-          { !loading ?
+          { 
             <main>
               // dropdown copied from Suki
               <SortMenu value={sorted} onChange={(e) => setSorted(e.target.value)}>
@@ -185,10 +170,7 @@ const MovieList = ( {movieList, setMovieList} ) => {
               </MovieWrapper> 
               </main>
 
-      // This renders when loading:
-          : <LoadingDiv>
-            <LoadingText>Loading...</LoadingText>
-            </LoadingDiv> }
+     }
             </>
                   
                         

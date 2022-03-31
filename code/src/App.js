@@ -3,10 +3,22 @@ import { BrowserRouter, Route, Routes} from 'react-router-dom'
 import MovieList from 'components/MovieList'
 import MovieDetail from 'components/MovieDetail'
 import { API_URL } from "ultils/API_URLS";
-import Loading from 'components/Loading'
+import styled from 'styled-components';
 import NotFound from 'components/NotFound';
 
+const LoadingDiv = styled.div`
 
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+`
+
+const LoadingText = styled.p`
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  padding-top: 10rem;
+`
 export const App = () => {
   
 
@@ -26,7 +38,10 @@ export const App = () => {
   return (
 
      <>
-      {loading && <Loading />}
+     {loading && <LoadingDiv>
+      <LoadingText>Loading...</LoadingText>
+      </LoadingDiv> }
+
       <BrowserRouter>
         <Routes>
           <Route path='/' element={ <MovieList movieList={movieList} setMovieList={setMovieList}/>} />
