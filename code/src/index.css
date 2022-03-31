@@ -11,3 +11,66 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.movie-cards {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.movie-cards a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+
+.movie-cards a img {
+  width: 100%;
+}
+
+.movie-cards .info-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  padding: 20px;
+}
+
+
+.movie-cards .info-container h1 {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.movie-cards a:hover .info-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+@media screen and (min-width: 667px) {
+
+  .movie-cards {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+
+/* DESKTOP SIZE */
+
+@media (min-width: 1024px) {
+
+  .movie-cards {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+}
