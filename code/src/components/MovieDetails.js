@@ -1,8 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
+import arrow from "images/arrow.png"
 import { SINGLE_MOVIE_URL } from "utils/urls";
-import { Poster, MovieDetailsContainer, MovieDetailsWrapper, MovieDetail, Rating } from "styles";
+import { 
+  Poster, 
+  MovieDetailsContainer, 
+  MovieDetailsWrapper, 
+  MovieDetail, 
+  Rating, 
+  MovieDescription, 
+  BackButton,
+  BackArrow,
+  ButtonText
+} from "styles";
 
 const MovieDetails = () => {
   const [movies, setMovies] = useState({});
@@ -20,8 +31,11 @@ const MovieDetails = () => {
   }, [movieId]);
 
   return (
-    <MovieDetailsContainer>
-      <button onClick={onBackButtonClick}>Movies</button>
+    <MovieDetailsContainer style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` }}>
+      <BackButton onClick={onBackButtonClick}>
+        <BackArrow src={arrow} alt="back arrow icon"></BackArrow>
+        <ButtonText>Movies</ButtonText>
+      </BackButton>
       <MovieDetailsWrapper>
         <Poster
           key={movies.title}
@@ -32,7 +46,7 @@ const MovieDetails = () => {
           <h1>
             {movies.title} <Rating>{movies.vote_average}/10</Rating>
           </h1>
-          <p>{movies.overview}</p>
+          <MovieDescription>{movies.overview}</MovieDescription>
         </MovieDetail>
       </MovieDetailsWrapper>
     </MovieDetailsContainer>
