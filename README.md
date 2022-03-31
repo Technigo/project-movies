@@ -1,13 +1,14 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week's pair programming project was about creating a movie site and practicing building a multi-page React app, using an API from TMDB.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We began by mapping out the different components we will need to create a functioning movie website. We started by implementing the router and defining the links to move from page to page. After fetching data from the API we focused on showing all of the required elements on each of the pages.
+We chose to use style components and found there to be a learning curve, but overall were able to fix a lot of the problems, such as hover effects and positioning of the image vs. text on the homepage.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://movies-project-by-justine-and-camilla.netlify.app/
+
+// Camilla & Justine :)
