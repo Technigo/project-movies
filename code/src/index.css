@@ -51,6 +51,7 @@ code {
   padding: 4em;
   font-size: 1.5em;
 }
+
 .movie-card {
   position: relative;
   color: white;
@@ -70,30 +71,37 @@ code {
 .details-page {
   position: relative;
 }
+
 .details-page {
   font-size: 15px;
   font-weight: bold;
 }
+
 .movie-icon {
   color: white;
   font-size: 20px;
 }
+
 .details-page .info-details p {
   max-width: 350px;
 }
+
 .details-page .movie-details {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+
 .details-page .info-details {
   margin-left: 20px;
 }
+
 .details-page img {
   margin-top: 1em;
   border-radius: 20px;
   box-shadow: 2px 2px 1px 1px rgb(5 5 5 / 90%);
 }
+
 .back-link {
   position: absolute;
   padding: 25px;
@@ -103,13 +111,20 @@ code {
   font-weight: bold;
   text-decoration: none;
 }
+
 .back-link svg {
   width: 3em;
   transition: margin-right 0.2s ease-in-out;
 }
+
 .back-link:hover svg {
   margin-right: 1em;
 }
+
+h3 {
+  padding: 5px 5px 5px 0;
+}
+
 /* ------Error-container------*/
 .error-container a {
   color:#fff;
