@@ -17,8 +17,6 @@ code {
     monospace;
 }
 
-
-
 .poster-img {
   width: 100%;
   height: 100%;
@@ -55,6 +53,7 @@ code {
 .detail-poster {
   width: 90%;
   max-width: 25rem;
+  box-shadow: 0rem 0rem 2rem 1rem rgba(0, 0, 0, 0.521);
 }
 
 .detail-text {
@@ -78,6 +77,10 @@ code {
   align-items: center;
   color: white;
   gap: 2rem;
+}
+
+.loading {
+  color: white;
 }
 
 .overlay {
@@ -107,6 +110,38 @@ code {
   font-size: 2rem;
 }
 
+.error {
+  font-size: 2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.loading-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.loading {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 @media (min-width: 35em) {
   .movie-list-container {
     max-width: 100%;
@@ -123,10 +158,10 @@ code {
 }
 
 @media (min-width: 75em) {
-  .go-back-buttom:focus,
-  .go-back-buttom:hover  {
+  .styled-button:focus,
+  .styled-button:hover  {
     color: black;
-    background-color: rgba(255, 255, 255, 0.507);
+    background-color: rgba(255, 255, 255, 0.616);
     border: 2px solid black;
   }
   
@@ -156,7 +191,7 @@ code {
   }
 
   .detail-text h2 {
-    font-size: 4em;
+    font-size: 3em;
   }
 
   .rating {
