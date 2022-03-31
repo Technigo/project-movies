@@ -23,25 +23,30 @@ const Details = () => {
     <div>
       {movie && (
         <div className="detailsPage">
-          <img
+          <div
             className="background-image"
-            src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`}
-          />
-          <Link to="/" className="back-button" onClick={onBackButtonClick}>
-            <span className="back-icon">&lt;</span>
-            <span className="back-text"> Go back to Movies</span>
-          </Link>
-          <div className="summary">
-            <img
-              className="poster-image"
-              src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-              alt={movie.title}
-            />
-            <h1>
-              {movie.title}{" "}
-              <span className="rating">{movie.vote_average}/10</span>
-            </h1>
-            <p>{movie.overview}</p>
+            style={{
+              backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
+            }}
+          >
+            <Link to="/" className="back-button" onClick={onBackButtonClick}>
+              <span className="back-icon">&lt;</span>
+              <span className="back-text"> Go back to Movies</span>
+            </Link>
+            <div className="summary">
+              <img
+                className="poster-image"
+                src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+                alt={movie.title}
+              />
+              <div className="flex-info">
+                <h1>
+                  {movie.title}{" "}
+                  <span className="rating">{movie.vote_average}/10</span>
+                </h1>
+                <p>{movie.overview}</p>
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -50,10 +55,3 @@ const Details = () => {
 };
 
 export default Details;
-
-{
-  /* <button className="back-button" onClick={onBackButtonClick}>
-<span className="back-icon">&lt;</span>
-<span className="back-text"> Go back</span>
-</button> */
-}
