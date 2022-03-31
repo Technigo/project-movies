@@ -63,6 +63,11 @@ a:link {
 
 .details-body{
   background-size: cover;
+  background-position: center;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%);
+  width: 100%;
+  height: 100%;
 }
 
 .background-image{
@@ -70,14 +75,17 @@ a:link {
 }
 
 .details-body, .movie-box{
-  display:flex;
-  align-items: flex-end;
   color:white;
 }
 
 
  .movie-box{
-  margin:10px;
+   display: flex;
+  align-items: flex-end;
+  margin-left:10px;
+  height: 100vh;
+  margin: -100px 0;
+  padding: 0 50px;
 }
 
 .movie-image{
@@ -87,4 +95,54 @@ a:link {
 
 .movie-summary{
   margin-left: 20px;
+  max-width: 400px;
+}
+
+.movie-poster {
+  position: fixed;
+  width: 100vw;
+  min-height: 100vh;
+  z-index: -1;
+  
+}
+
+.background-image{
+
+  z-index: 10;
+}
+
+.movie-rating {
+  color: red;
+  margin: 0 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.icon {
+  width: 30px;
+  
+
+}
+
+
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  
+}
+
+.icon-text {
+  margin: 0 10px;
+  font-weight: 700;
+}
+
+.icon {
+  transition: margin-right 0.2s ease-in-out;
+
+}
+
+.icon:hover {
+  margin-right: 5px;
 }
