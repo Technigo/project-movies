@@ -1,36 +1,42 @@
 import React, { useState, useEffect } from "react"
-import { MOVIES_API } from "./utils/urls"
+import { useParams, useNavigate } from "react-router-dom"
+import { MOVIEDETAIL_API } from "./utils/urls"
 
 const MovieDetails = () => {
     const [moviedetails, setMovieDetails] = useState([])
+    const { movieId } = useParams()
 
-    useEffect(() => {
-        fetchMovieDetails()
-    }, [])    
-    
+    const navigate = useNavigate()
 
-    const fetchMovieDetails = () => {
-        fetch(MOVIES_API)
-            .then(res => res.json())
-            .then(data => setMovieDetails(data.results))
+    const onBackButtonClick = () => {
+        navigate(-1)
     }
+   
+    useEffect(() => {
+        const fetchMovieDetails = () => {
+            fetch(MOVIEDETAIL_API(movieId))
+                .then(res => res.json())
+                .then(data => 
+                    setMovieDetails(data))
+        }
+
+        fetchMovieDetails()
+    }, [movieId])    
+    
+    console.log(moviedetails)
 
     return (
-        <section className="moviedetails-wrapper">
-            {moviedetails.map(moviedetail => (
-                <div>
-                    <img src={`https://image.tmdb.org/t/p/w1280${moviedetail.backdrop_path}`} alt=""/>
-                    <img src={`https://image.tmdb.org/t/p/w154${moviedetail.poster_path}`} alt=""/>
-                    <div>
-                        <h1 className="movie-detail-title">{moviedetail.title}<span className="movie-rating">{moviedetail.vote_average}</span></h1>
-                        <p className="movie-overview-text">{moviedetail.overview}</p>
-                    </div>
+        <section className="moviedetails-background" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${moviedetails.backdrop_path})`}}>
+            <button onClick={onBackButtonClick}>Back</button>
+            <div className="moviedetails-wrapper"key={moviedetails.id}>
+                <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${moviedetails.poster_path}`} alt=""/>
+                <div className="moviedetail-text">
+                    <h1 className="moviedetail-title">{moviedetails.title}<span className="movie-rating">{moviedetails.vote_average}/ 10</span></h1>
+                    <p className="movie-overview-text">{moviedetails.overview}</p>
                 </div>
-               
-            ))}
+            </div>
         </section>
     )
 }
-
 
 export default MovieDetails
