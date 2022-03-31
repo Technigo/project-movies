@@ -4,8 +4,6 @@ import styled from 'styled-components'
 
 import { API_KEY } from 'Apis/Urls';
 
-//filter on object list (convert to entries first), instead of doing multiple fetch on same data
-//async await? 
 const Moviedetail = ({ apiData }) => {
     const { movieId } = useParams();
     console.log(movieId)
@@ -20,15 +18,29 @@ const Moviedetail = ({ apiData }) => {
         })
     }, [movieId])
 
+    const StyledBackLink = styled(Link)`
+        background-color: white;
+        width: 200px;
+        margin: 30px;
+        color: black;
+        text-decoration: none;
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px;
 
+        &:hover {
+            filter: brightness(80%);
+        }
+    `    
 
     return (
-        <div style={{display: 'flex', flexDirection: 'column', color: 'white'}}>
-        <Link to="/">Back to movielist page</Link>
-        <img src={`https://image.tmdb.org/t/p/w500${movieDetails.backdrop_path}`} alt="film poster"/>
-        <p>{movieDetails.title}</p>
-        <p>{movieDetails.overview}</p>
-        <p>Ratings {movieDetails.vote_average}</p>
+        <div style={{display: 'flex', flexDirection: 'column', color: 'white', height: '100vh'}}>
+            <StyledBackLink to="/">Back to movielist page</StyledBackLink>
+        
+            <img src={`https://image.tmdb.org/t/p/w400${movieDetails.backdrop_path}`} alt="film poster"/>
+            <p>{movieDetails.title}</p>
+            <p>{movieDetails.overview}</p>
+            <p>Ratings: {movieDetails.vote_average}/10</p>
         </div>
     )
 }

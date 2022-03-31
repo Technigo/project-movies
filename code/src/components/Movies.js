@@ -17,7 +17,7 @@ const Movies = ({ apiData }) => {
 
     return (
         apiData && apiData.map((movieItem) => {
-            // const { title, backdrop_path, release_date } = movieItem
+            // const { title, poster_path, release_date } = movieItem
             return (
                 <Link to={`/movie/${movieItem.id}`} style={{textDecoration: 'none'}}>                                    
                     <MovieContainer>
