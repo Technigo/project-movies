@@ -1,16 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import "./MovieList.css";
+
 const MovieList = ({ movies }) => {
   return (
-    <section>
+    <section className="movies-container">
       {movies.map((movie) => (
-        <div key={movie.id}>
-          <Link to={`movies/${movie.id}`}>{movie.title}</Link>
-          <p>Released {movie.date}</p>
-          <p>{movie.rating}/10</p>
-          <img src={movie.coverImgUrl} alt={movie.title} />
-        </div>
+        <Link to={`movies/${movie.id}`}>
+          <article key={movie.id} className="movie-group">
+            <img className="movie-img" src={movie.coverImgUrl} alt={movie.title} />
+            <div className="movie-text-group">
+              <h2 className="movie-title">{movie.title}</h2>
+              <p className="movie-date">Released {movie.date}</p>
+            </div>
+          </article>
+        </Link>
       ))}
     </section>
   );
