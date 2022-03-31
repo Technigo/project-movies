@@ -17,13 +17,13 @@ const Movies = ({ apiData }) => {
 
     return (
         apiData && apiData.map((movieItem) => {
-            // const { title, poster_path, release_date } = movieItem
+            const { id, poster_path, title, release_date } = movieItem
             return (
-                <Link to={`/movie/${movieItem.id}`} style={{textDecoration: 'none'}}>                                    
+                <Link to={`/movie/${id}`} style={{textDecoration: 'none'}}>                                    
                     <MovieContainer>
-                        <img src={`https://image.tmdb.org/t/p/w300${movieItem.poster_path}`} alt="film poster"/>
-                        <p>{movieItem.title}</p>
-                        <p>Released {movieItem.release_date}</p>                               
+                        <img src={`https://image.tmdb.org/t/p/w300${poster_path}`} alt="film poster"/>
+                        <p>{title}</p>
+                        <p>Released {release_date}</p>                               
                     </MovieContainer>
                 </Link>
                 

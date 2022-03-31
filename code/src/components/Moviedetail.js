@@ -32,15 +32,17 @@ const Moviedetail = ({ apiData }) => {
             filter: brightness(80%);
         }
     `    
+    //Destructuring from useState hook holding API data object
+    const { title, backdrop_path, overview, vote_average } = movieDetails;
 
     return (
         <div style={{display: 'flex', flexDirection: 'column', color: 'white', height: '100vh'}}>
             <StyledBackLink to="/">Back to movielist page</StyledBackLink>
         
-            <img src={`https://image.tmdb.org/t/p/w400${movieDetails.backdrop_path}`} alt="film poster"/>
-            <p>{movieDetails.title}</p>
-            <p>{movieDetails.overview}</p>
-            <p>Ratings: {movieDetails.vote_average}/10</p>
+            <img src={`https://image.tmdb.org/t/p/w400${backdrop_path}`} alt="film poster"/>
+            <p>{title}</p>
+            <p>{overview}</p>
+            <p>Ratings: {vote_average}/10</p>
         </div>
     )
 }
