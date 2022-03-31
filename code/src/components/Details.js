@@ -3,7 +3,6 @@ import { NavLink, useParams } from 'react-router-dom'
 
 import { BackIcon } from './BackIcon'
 
-
 const Details = () => {
 
     const [details, setDetails] = useState([])
@@ -16,7 +15,7 @@ const Details = () => {
                 console.log(data)
                 setDetails(data)
             })
-    }, [id])
+        }, [id])
 
     return (
             <div className="details-body"> 
@@ -27,12 +26,11 @@ const Details = () => {
                 </NavLink>
                 
                 <div className="movie-box">
-                    <img className="movie-image" src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title}/>
+                    <img className="movie-image" src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} tabindex="0"/>
                     <div className="movie-summary">
-                    <h1 className="movie-title">{details.title}<span className="movie-rating">{details.vote_average} / 10</span></h1>
-                    <p>{details.overview}</p>
-            
-                </div>
+                        <h1 className="movie-title" tabindex="0">{details.title}<span className="movie-rating" tabindex="0"     >{details.vote_average} / 10</span></h1>
+                        <p tabindex="0" >{details.overview}</p>
+                    </div>
                 </div>
             </div>
     )

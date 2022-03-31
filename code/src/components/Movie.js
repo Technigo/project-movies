@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-
-
 const Movie = () => {
 
     const [movies, setMovies] = useState([])
@@ -22,9 +20,10 @@ const Movie = () => {
         {movies.map((movie) => (
             <Link
                 to={`/movie/${movie.id}`} 
-                key={movie.id}>
+                key={movie.id}
+                tabindex="0">
                 
-            <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+            <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title}/>
 
             <div className="details">
                 <h1>{movie.title}</h1>

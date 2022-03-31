@@ -70,21 +70,16 @@ a:link {
   height: 100%;
 }
 
-.background-image{
-  position: relative;
-}
-
 .details-body, .movie-box{
   color:white;
 }
 
-
- .movie-box{
-   display: flex;
+.movie-box{
+  display: flex;
   align-items: flex-end;
   margin-left:10px;
   height: 100vh;
-  margin: -100px 0;
+  margin: -150px 0;
   padding: 0 50px;
 }
 
@@ -103,12 +98,6 @@ a:link {
   width: 100vw;
   min-height: 100vh;
   z-index: -1;
-  
-}
-
-.background-image{
-
-  z-index: 10;
 }
 
 .movie-rating {
@@ -120,27 +109,18 @@ a:link {
 
 .icon {
   width: 30px;
-  
-
+  transition: margin-right 0.2s ease-in-out;
 }
-
-
 
 .icon-box {
   display: flex;
   align-items: center;
-  margin: 20px;
-  
+  margin: 20px; 
 }
 
 .icon-text {
   margin: 0 10px;
   font-weight: 700;
-}
-
-.icon {
-  transition: margin-right 0.2s ease-in-out;
-
 }
 
 .icon:hover {
