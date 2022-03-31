@@ -13,6 +13,8 @@ body {
     monospace;
 } */
 
+/* ------ FIRST/LIST PAGE ------ */
+
 header {
   background-color: #000;
   color: #fff;
@@ -89,3 +91,19 @@ header {
 .movie-img-group:active .movie-text-overlay {
   color: #fff;
 }
+
+/* ------ DETAIL PAGE ------ */
+
+/* .details-container {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.backdrop {
+}
+
+.content {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+} */
