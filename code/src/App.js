@@ -22,21 +22,23 @@ export const App = () => {
     }, []);
 
 	return (
-		<BrowserRouter>
-			{/* <Header title="Movies!"/> */}
-			<Routes>
-				<Route path="/" exact 
-					element={
-						<PopularList
-							movies={movies}
-							baseURL={baseURL}
-							imgSize={imgSize}
-						/>}
-				/>
-				<Route path="/movies/:movieId" element={<Details />} />
-				{/* <Route path='/404' element={<NotFound/>}/>
-				<Route path='*' element={<Navigate to="/404" replace/>}/>  */}
-			</Routes>
-		</BrowserRouter>
+		<main>
+			<BrowserRouter>
+				{/* <Header title="Movies!"/> */}
+				<Routes>
+					<Route path="/" exact 
+						element={
+							<PopularList
+								movies={movies}
+								baseURL={baseURL}
+								imgSize={imgSize}
+							/>}
+					/>
+					<Route path="/movies/:movieId" element={<Details />} />
+					{/* <Route path='/404' element={<NotFound/>}/>
+					<Route path='*' element={<Navigate to="/404" replace/>}/>  */}
+				</Routes>
+			</BrowserRouter>
+		</main>
 	)
 }
