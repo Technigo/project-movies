@@ -9,3 +9,5 @@ We started out by planning what we needed on our first page and then the secound
 If we had more time, we would try to style the page using styled components.
 
 ## View it live
+
+https://its-a-move-app.netlify.app/
