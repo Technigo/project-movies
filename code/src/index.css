@@ -37,7 +37,7 @@ code {
 }
 
 .movie-cards a img {
-  width: 530px;
+  width: 100%;
   height: 100%;
   /* object-fit: cover; */
 }
