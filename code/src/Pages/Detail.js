@@ -4,9 +4,6 @@ import styled from 'styled-components'
 
 const GoBackButton = styled.button`
 padding: 10px; 
-color: white;
-background-color: gray;
-font-style: helvetica;
 `;
 
 export const Detail = () => {
@@ -30,12 +27,18 @@ export const Detail = () => {
     <article className="detailPage">
       {detail && (
         <div>
-          <GoBackButton onClick={onBackButtonClick}>Go back</GoBackButton>
-          <h2>{detail.original_title}</h2>
-          <h3>{detail.vote_average}/10</h3>
-          <p>{detail.overview}</p>
-          <img src={`https://image.tmdb.org/t/p/w342${detail.poster_path}`} alt="poster" />
-          <img src={`https://image.tmdb.org/t/p/w1280${detail.backdrop_path}`} alt="backdrop" />
+          <div className="background">
+            <img src={`https://image.tmdb.org/t/p/w1280${detail.backdrop_path}`} alt="backdrop" />
+          </div>
+          <div className="summary">
+            <GoBackButton onClick={onBackButtonClick}>GO BACK</GoBackButton>
+            <img src={`https://image.tmdb.org/t/p/w342${detail.poster_path}`} alt="poster" />
+            <div className="detailText">
+              <h2>{detail.original_title}</h2>
+              <h4>{detail.vote_average}/10</h4>
+              <p>{detail.overview}</p>
+            </div>
+          </div>
         </div>
       )}
     </article>

@@ -1,0 +1,33 @@
+.detailPage {
+    position: relative;
+}
+
+.detailPage .background {
+    position: absolute;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.summary {
+    position: absolute;
+}
+
+.summary img {
+    border: white solid 5px;
+}
+
+.detailText {
+    width: 300px;
+    margin: 5px;
+    padding: 30px;
+}
+
+.summary {
+    display: flex;
+    align-items: flex-end;
+    padding: 50px;
+  }
+  
