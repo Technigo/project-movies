@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate} from 'react-router-dom'
 import { NotFound } from './NotFound'
 import styled from 'styled-components'
+import  {DETAILS_URL } from 'utils/urls'
 
 //ADDED styling components
 const Genrediv = styled.div`
@@ -16,43 +17,31 @@ padding: 0.5rem;
 border-radius: 1rem;
 `
 
-export const MovieDetails = ( { movieList } ) => {
+export const MovieDetails = ( ) => {
 
   const {movieId} = useParams()
-  const movieMatch = movieList.find(movie => movie.id === Number(movieId))
+  // const movieMatch = movieList.find(movie => movie.id === Number(movieId))
   const navigate = useNavigate()
+  const [movie, setMovie] = useState([])
+  const [genreObj, setGenreOgj] = useState([])
 
+  useEffect(() => {
+ 
+    fetch(DETAILS_URL(movieId)).then(res => res.json()).then(data => {
+      setMovie(data)
+      setGenreOgj(data.genres)
+    })
+  
+  }, [])
 
-  //ADDED genre object 
-  const genres = {
-    28: 'Action',
-    12: 'Adventure',
-    16: 'Animation',
-    35: 'Comedy',
-    80:'Crime',
-    99: 'Documentary',
-    18: 'Drama',
-    10751: 'Family',
-    14: 'Fantasy',
-    36: 'History',
-    27: 'Horror',
-    10402: 'Music',
-    9648: 'Mystery',
-    10749: 'Romance',
-    878: 'Science Fiction',
-    10770: 'TV Movie',
-    53: 'Thriller',
-    10752: 'War',
-    37: 'Western'
-  }
 
   const onBackButtonClick = () =>{
     navigate(-1)
   }
- 
+
   
-  const backgroundStyle = { backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieMatch?.backdrop_path})`, backgroundRepeat:'no-repeat', backgroundSize: 'cover'}
-  if (!movieMatch) {
+  const backgroundStyle = { backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie?.backdrop_path})`, backgroundRepeat:'no-repeat', backgroundSize: 'cover'}
+  if (!movie) {
     return( 
     <NotFound />
     )
@@ -66,16 +55,15 @@ export const MovieDetails = ( { movieList } ) => {
       </svg><span className="back-btn--text"> Movies</span></button>
         </div>
       <div className="detail-wrapper">
-        <img className="detail-info-img"src={`https://image.tmdb.org/t/p/w342${movieMatch.poster_path}`} alt="poster"/>
+        <img className="detail-info-img"src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="poster"/>
         <div className="detail-info">
-            <h2>{movieMatch.title} <span className="vote-average">{movieMatch.vote_average}/10</span></h2>
-            <p>{movieMatch.overview}</p>
-            <Genrediv>
-              {/* ADDED mapping genres (key is now random number because didnt know what would be good key for this)*/}
-              {movieMatch.genre_ids.map((genre) =>( 
-                <Spangenre key={Math.random()}>{genres[genre]} </Spangenre>
-              ))} 
-            </Genrediv>
+            <h2>{movie.title} <span className="vote-average">{movie.vote_average}/10</span></h2>
+            <p>{movie.overview}</p>
+             <Genrediv>
+              {genreObj.map(({name}) => (
+                 <Spangenre key={Math.random()}>{name}</Spangenre>
+              ))}
+            </Genrediv>         
           </div>
       </div> 
     </main>
