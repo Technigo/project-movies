@@ -1,8 +1,11 @@
-.popular-movies {
+.popular-movies-wrapper {
     display: flex;
     flex-wrap: wrap;
 }
 
+h2 {
+    max-width: 342px;
+}
 .overlay {
     display: flex;
     align-items: center;
@@ -15,9 +18,9 @@
     width: 100%;
     opacity: 0;
     transition: .3s ease;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 1);
 }
 
 .movie-img {
-    position: relative;
+    width: 360px;
 }

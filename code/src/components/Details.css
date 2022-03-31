@@ -2,8 +2,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
-  }
-  
+}
 
-  
+.rating {
+    color: grey;
+}
+
+.star {
+    width: 20px;
+    margin-right: 5px;
+}

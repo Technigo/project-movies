@@ -1,41 +1,30 @@
-import React, { useState, useEffect } from "react"
-import { Link } from 'react-router-dom'; 
-
-import { ALL_MOVIES_URL } from "../utils/urls"
-
+import React from "react"
+import { Link } from 'react-router-dom';
 
 import './PopularList.css'
 
-
-const PopularList = () => {
-  const [movies, setMovies] = useState([])
-  useEffect(() => {
-    fetch(ALL_MOVIES_URL)
-      .then((res) => res.json())
-      .then((resJson) => {
-        setMovies(resJson.results);
-      })
-  }, [])
-
-
-  const movieElements = movies.map((movie) => {
-    return (
-      <div className="movies-wrapper">
-        <Link to={`/movie/${movie.id}`}>
-            <img className="movie-img" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} />
-          <h2>{movie.original_title}</h2>
-          <p>Release date:{movie.release_date}</p>
-        </Link>
-      </div>
-    )
-  })
+const PopularList = ({ allMovies }) => {
   return (
-    <section className="popular-movies">
-      {movieElements}
+    <section className="popular-movies-wrapper">
+      {allMovies.map((movie) => (
+        <Link
+          key={movie.id}
+          to={`/movie/${movie.id}`}
+          rel="noopener noreferrer"
+        >
+          <img
+            className="movie-img"
+            src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+            alt="movie poster"
+          />
+          <div>
+            <h2>{movie.original_title}</h2>
+            <p>Release date:{movie.release_date}</p>
+          </div>
+        </Link>
+      ))}
     </section>
   )
 }
 
-
 export default PopularList
-
