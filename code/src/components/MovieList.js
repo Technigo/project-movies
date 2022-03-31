@@ -1,19 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const MovieList = ({ movies }) => {
   return (
-    <>
+    <section>
       {movies.map((movie) => (
         <div key={movie.id}>
-          <h2>{movie.title}</h2>
+          <Link to={`movies/${movie.id}`}>{movie.title}</Link>
           <p>Released {movie.date}</p>
           <p>{movie.rating}/10</p>
-          <p>{movie.description}</p>
           <img src={movie.coverImgUrl} alt={movie.title} />
-          <img src={movie.backdropImgUrl} alt={movie.title} />
         </div>
       ))}
-    </>
+    </section>
   );
 };
 
