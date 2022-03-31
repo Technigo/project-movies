@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 body {
-  /* background-color: black; */
+  background-color: black;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Montserrat", "Segoe UI", "Roboto", "Oxygen",
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Montserrat", "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
@@ -15,6 +16,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Montserrat", "Courier New",
     monospace;
 }
+
+
 
 .poster-img {
   width: 100%;
@@ -31,37 +34,14 @@ code {
 
 .movie-list-container {
   margin: 0 auto;
-  /* max-width: 80%; */
-}
-
-@media (min-width: 35em) {
-  .movie-list-container {
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* @media (min-width: 60em) {
-  .movie-list-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-} */
-
-@media (min-width: 75em) {
-  .movie-list-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 .movie {
   position: relative;
   display: inherit;
-  /* background-color: black; */
 }
 
 .overlay-text {
-  /* color: transparent; */
   color: white;
   padding: 2rem;
   transition: .3s ease;
@@ -73,7 +53,14 @@ code {
 }
 
 .detail-poster {
-  width: 100%;
+  width: 80%;
+  max-width: 25rem;
+}
+
+.detail-text {
+  line-height: 1.7;
+  max-width: 55em;
+  width: 80%
 }
 
 .movie-info-container {
@@ -84,10 +71,10 @@ code {
 }
 
 .movie-info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: end;
-  max-width: 700px;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: white;
   gap: 2rem;
 }
@@ -98,15 +85,45 @@ code {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100%;
-  /* background-color: transparent; */
+  /* width: 100%; */
   background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
   transition: .3s ease;
   display: flex;
   align-items: flex-end;
 }
 
+@media (min-width: 35em) {
+  .movie-list-container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 55em) {
+  .movie-info {
+    flex-direction: row;
+    align-items: end;
+  }
+}
+
 @media (min-width: 75em) {
+  .go-back-buttom:focus,
+  .go-back-buttom:hover  {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.507);
+    border: 2px solid black;
+  }
+  
+  .movie:focus {
+    outline: 20px solid white;
+    font-size: 100px;
+  }
+
+  .movie-list-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .overlay-text {
     color: transparent
   }
@@ -116,12 +133,23 @@ code {
   }
 
   .movie:hover .overlay {
-  /* background-color: hsla(0, 0%, 0%, .7); */
     background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
   }
 
   .movie:hover .overlay-text {
     color: white;
+  }
+
+  .detail-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .rating {
+    /* border: 1px solid white; */
+    font-style: italic;
+    padding: 0 1rem;
+    border-radius: 2rem;
+    font-weight: 400;
   }
 
 }

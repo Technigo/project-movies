@@ -25,7 +25,6 @@ const BackDrop = styled.div`
         min-height: 100vh;
     `;
 
-
 export const Details = () => {
     const {movieId} = useParams()
     const [movie, setMovie] = useState({})
@@ -34,7 +33,6 @@ export const Details = () => {
     const onBackButtonClick = ()=> {
         navigate(-1);
     }
-
     
     const API_KEY = '3bf2860c1d44881bc87143482ddf0f94';
     const API = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US`
@@ -50,12 +48,12 @@ export const Details = () => {
             url={baseURL + imgSize + movie.backdrop_path}>
             
             <div className='movie-info-container'>
-                <GoBackButton onClick={onBackButtonClick}>Go back</GoBackButton>
+                <GoBackButton className='go-back-buttom' onClick={onBackButtonClick}>Go back</GoBackButton>
                 <div className='movie-info'>
                     <img className='detail-poster' src={`${baseURL}${imgSize}${movie.poster_path}`} alt={movie.original_title} />
-                    <div>
-                        <h2>{movie.original_title}</h2>
-                        <p className='rating'>{movie.vote_average}</p>
+                    <div className='detail-text'>
+                        <h2>{movie.original_title} <span className='rating'>{movie.vote_average}/10</span></h2>
+                        {/* <p className='rating'>{movie.vote_average}</p> */}
                         <p className='overview'>{movie.overview}</p>
                     </div>
                     {/* <img className='backdrop' src={`${baseURL}${imgSize}${movie.backdrop_path}`} alt="backdrop movie" /> */}
