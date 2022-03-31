@@ -7,11 +7,6 @@ import NotFound from "./NotFound";
 import 'styles/MovieDetail.css';
 import Button from "styles/Button";
 
-/* [[redirects]]
-  from = "/*"
-  to = "/"
-  status = 200
-*/
 
 
 const MovieDetailStyle = styled.div`
