@@ -1,27 +1,36 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-// import { Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import styled from "styled-components";
+
 import { DETAILS_URL } from "./utils.js/Urls";
 
+// Styled Components
 const Container = styled.section`
-  display: flex;
-`;
-
-const DetailsContainer = styled.div`
   min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
   background: center;
   background-size: cover;
   position: relative;
+  padding: 5vw;
+  display: grid;
+`;
+
+const DetailsContainer = styled.div`
   display: flex;
-  align-items: flex-end;
-  padding: 2.5em;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const InfoContainer = styled.div`
+  display: flex;
 `;
 
 const Poster = styled.div`
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   margin-bottom: 1em;
+
   img {
     width: 275px;
     height: auto;
@@ -30,29 +39,44 @@ const Poster = styled.div`
 `;
 
 const MovieInfo = styled.div`
+  align-self: flex-end;
   padding: 1em;
-  background-color: rgba(0, 0, 0, 0.5);
+  //background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   margin-bottom: 1em;
   margin-left: 1em;
   min-width: 40vw;
   max-width: 55vw;
   height: fit-content;
-  border: 3px solid #fff;
+  // border: 3px solid #fff;
+
   h1 {
     margin: 0;
+    font-size: 36px;
   }
+
   span {
-    font-size: 16px;
+    font-size: 18px;
     padding-left: 10px;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5;
   }
 `;
 
 const MovieButton = styled.button`
-  align-self: flex-start;
-  background: transparent;
-  border: none;
-  font-size: 16px;
+  cursor: pointer;
+  //align-self: flex-start;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 3px solid #fff;
+  font-size: 20px;
+  padding: 0.5em;
+  width: 180px;
 `;
 
 const MovieDetails = () => {
@@ -73,25 +97,27 @@ const MovieDetails = () => {
   }, [movie_id]);
 
   return (
-    <Container>
-      <DetailsContainer
-        style={{
-          backgroundImage: `url(https://image.tmdb.org/t/p/original${movieDetails?.backdrop_path})`,
-        }}
-      >
+    <Container
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/original${movieDetails?.backdrop_path})`,
+      }}
+    >
+      <DetailsContainer>
         <MovieButton onClick={onMovieButtonClick}>Back to movies</MovieButton>
-        <Poster>
-          <img
-            src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
-            alt={movieDetails}
-          />
-        </Poster>
-        <MovieInfo>
-          <h1>
-            {movieDetails.title} <span>{movieDetails.vote_average}/10</span>
-          </h1>
-          <p>{movieDetails.overview}</p>
-        </MovieInfo>
+        <InfoContainer>
+          <Poster>
+            <img
+              src={`https://image.tmdb.org/t/p/w500${movieDetails?.poster_path}`}
+              alt={movieDetails}
+            />
+          </Poster>
+          <MovieInfo>
+            <h1>
+              {movieDetails.title} <span>{movieDetails.vote_average}/10</span>
+            </h1>
+            <p>{movieDetails.overview}</p>
+          </MovieInfo>
+        </InfoContainer>
       </DetailsContainer>
     </Container>
   );
