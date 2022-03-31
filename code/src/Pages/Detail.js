@@ -1,10 +1,43 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
+import { BackIcon } from './Icon'
 
-const GoBackButton = styled.button`
-padding: 10px; 
-`;
+const ButtonText = styled.h3`
+  color: white;
+  font-size: 20px;
+  margin: 0;
+`
+ const GoBackButton = styled.button`
+
+ ${BackIcon} 
+
+ padding: 10px; 
+ width: 150px;
+ margin: 30px;
+ border-style: none;
+
+ position: absolute;
+ display: inline-flex;
+ color: #fff;
+ align-items: center;
+ font-weight: 900;
+ text-decoration: none;
+ left: 40px;
+ top: 20px;
+ appearance: none;
+ border: none;
+ background-color: transparent;
+ transition: 0.3s;
+ font-size: 20px;
+ cursor: pointer;
+
+ &: hover ${ButtonText} {
+  transform: translateX(4px);
+  transition: all 0.6s ease-in-out;
+  display: flex;
+ }
+`
 
 export const Detail = () => {
   const { id } = useParams()
@@ -23,24 +56,22 @@ export const Detail = () => {
         setDetail(json)
       }, [id])
   })
+
   return (
-    <article className="detailPage">
+    <div className="detailPage">
       {detail && (
-        <div>
-          <div className="background">
-            <img src={`https://image.tmdb.org/t/p/w1280${detail.backdrop_path}`} alt="backdrop" />
-          </div>
+        <div className="background" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${detail.backdrop_path})` }}>
+          <GoBackButton onClick={onBackButtonClick}> <ButtonText>‹ Movies</ButtonText></GoBackButton>
           <div className="summary">
-            <GoBackButton onClick={onBackButtonClick}>GO BACK</GoBackButton>
             <img src={`https://image.tmdb.org/t/p/w342${detail.poster_path}`} alt="poster" />
             <div className="detailText">
-              <h2>{detail.original_title}</h2>
-              <h4>{detail.vote_average}/10</h4>
+              <h2>{detail.original_title} <span className="rating">{detail.vote_average}/10</span></h2>
               <p>{detail.overview}</p>
             </div>
           </div>
         </div>
       )}
-    </article>
+    </div>
   )
 }
+
