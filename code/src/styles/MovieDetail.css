@@ -1,23 +1,11 @@
 
-    .movie-detail {
-        width: 900px;
-        position: absolute;
-        left: 50px;
-        bottom: 50px;
-        display: flex;
-        gap: 50px;
-    }
-    img {
-        border: solid 5px #fff;
-    }
-
     div {
         align-self: flex-end;
         color: #fff;
     }
 
     h3 {
-        display: inline;
+        display: inline-block;
         margin-right: 20px;
         font-size: 32px;
     }
@@ -50,6 +38,10 @@
     
     .language span:not(:last-child) {
         border-right: solid 1px #eee;
+
+    }
+
+    @media (max-width: 600px) {
 
     }
 

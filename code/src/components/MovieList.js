@@ -2,35 +2,12 @@ import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { IoIosStarOutline } from "react-icons/io"
+import { AiFillStar } from "react-icons/ai"
 import Button from "styles/Button";
+import Header from "./Header";
 
-const SortMenu = styled.select`
-  width: 150px;
-  height: 40px;
-  background: #000;
-  color: #fff;
-  border: transparent;
-  outline: none;
-  font-size: 14px;
-  font-weight: bold;
-  appearance: none;
-  padding: 10px;
-  text-align: center;
 
-  &:focus {
-    border: solid 2px red;
-}
 
-option {
-  color: black;
-  background: white;
-  display: flex;
-  white-space: pre;
-  min-height: 20px;
-  padding: 0px 2px 1px;
-
-}
-`
 
 const MovieWrapper = styled.div`
   display: flex;
@@ -57,7 +34,7 @@ const MovieCard = styled.div`
   }
 
   @media (min-width: 601px) and (max-width: 1100px) {
-    width: 33.333333vw;
+    width: 33.33vw;
   }
 `
 const Title = styled.p`
@@ -116,43 +93,58 @@ const MovieList = ( {movieList, setMovieList} ) => {
     
     
     const [like, setLike] = useState(false);
+    const [name, setName] = useState(JSON.parse(localStorage.getItem('save')));
+    const [color, setColor] = useState('white');
+    const [star, setStar] = useState(false);
+    
 
-    const saveMovie = (title) => {
+
+    const saveMovie = (e) => {
       setLike(true)
-      localStorage.setItem('save', JSON.stringify(title));
+      setName(e.target.value) ;
+      localStorage.setItem('save', JSON.stringify(name));
+      e.preventDefault();
   
     }
 
 
-
-    //This state to filter  movies - TESTING
-    const [sorted, setSorted] = useState('');
-    const [searchInput, setSearchInput] = useState('');
   
-    const options = {
-      method: 'POST',
-      headers: {
-          'Content-Type':'application/json',
-      },
-      body: JSON.stringify({ message: searchInput}),
-  }
 
-  
-    
-    // Use Effect for sort dropdow menus
-    useEffect(() => {
+    const toggleLike = (e, id) => {
       
-      if (sorted === 'latest') {
-        const sortedReleaseDate = [...movieList];
-        setMovieList(sortedReleaseDate.sort((a,b) => a.release_date < b.release_date ? 1 : -1))
-        
-       } else if (sorted === 'popular') {
-         const sortedPopularity = [...movieList]
-        setMovieList(sortedPopularity.sort((a,b) => a.popularity < b.popularity ? 1 : -1))
-       } 
-   
-       
-    },[sorted])
+      e.preventDefault();
+      console.log(e)
+
+      document.getElementById(`${id}`).classList.toggle('red');
+
+      //setStar(true) 
+
+     // star ? setStar(false) : setStar(true);
+      
+      console.log('Toggled star is' + star);
+      //setColor(star ? 'yellow' : 'white')
+
+    }
+
+    const toggleColor = () => {
+  
+      
+    }
+
+
+   /* const updateLikes = thoughts.map((item) => {
+      if(item._id === data._id) {
+      item.hearts += 1
+      return item }
+      
+      else { return item }
+  })
+
+  setThoughts(updateLikes)*/
+
+
+
+
 
       console.log(movieList)
 
@@ -162,11 +154,7 @@ const MovieList = ( {movieList, setMovieList} ) => {
 
        
 
-              <SortMenu value={sorted} onChange={(e) => setSorted(e.target.value)}>
-                <option value='' disabled>Sort by</option>
-                <option value='latest'>Latest</option>
-                <option value='popular'>Most Popular</option>
-            </SortMenu>
+              <Header movieList={movieList} setMovieList = {setMovieList} />
 
               <MovieWrapper>
                 
@@ -177,8 +165,8 @@ const MovieList = ( {movieList, setMovieList} ) => {
                           <CoverArt src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}/>
                             <Hover>
                             <Title>{movie.title}</Title>
-                            <Button onClick={() => setLike(true)} onDoubleClick={() => setLike(false)} color = { like ? 'white' : 'yellow'} fontsize='3rem'  top='5%' left='75%' ><span><IoIosStarOutline /></span></Button>
-
+                            <Button onClick={() => saveMovie(movie.title)} onDoubleClick={() => setLike(false)} color = { like ? 'white' : 'yellow'} fontsize='3rem'  top='5%' left='75%' ><span><IoIosStarOutline /></span></Button>
+                            <Button id={movie.id} onClick={(e) => {  toggleLike(e,movie.id) }} color={color} fontsize='3rem'  top='5%' left='75%' ><span>{!star ? <IoIosStarOutline /> : <AiFillStar />}</span></Button>
                             <Release>{movie.release_date}</Release>
                             </Hover>
                               
