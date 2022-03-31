@@ -20,36 +20,26 @@ const Popular = () => {
     }, [])
 
     return (
-       
-        <Main>     
-    
-        {movieList.map((movie => {
-            return (
-               
-                <Link to={`/movies/${movie.id}`} key={movie.id}>
-                    <FilmCard>
-                        <FilmImageGroup>
-               
-                
-                            <MovieDetails>
-                                <MovieCard src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-
-                                <ImageOverlay></ImageOverlay>      
-                                <TextOverlay>
-                                    <Filmtitle>{movie.title}</Filmtitle>
-                                    <p>Released {movie.release_date}</p>
-                                </TextOverlay>
-
-                            </MovieDetails>
-
-                        </FilmImageGroup>
-                    </FilmCard>
-                </Link>
-
+        <Main>
+            {movieList.map((movie => {
+                return (
+                    <Link to={`/movies/${movie.id}`} key={movie.id}>
+                        <FilmCard>
+                            <FilmImageGroup>
+                                <MovieDetails>
+                                    <MovieCard src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+                                    <ImageOverlay></ImageOverlay>
+                                    <TextOverlay>
+                                        <Filmtitle>{movie.title}</Filmtitle>
+                                        <p>Released {movie.release_date}</p>
+                                    </TextOverlay>
+                                </MovieDetails>
+                            </FilmImageGroup>
+                        </FilmCard>
+                    </Link>
                 )
-                
             }))}
-                    </Main>
+        </Main>
     )
 }
 
@@ -62,7 +52,7 @@ grid-template-columns: 1fr;
 
 
 @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 @media (min-width: 1100) {
@@ -78,7 +68,7 @@ height: 100%;
 const MovieDetails = styled.div`
     text-decoration: none;
     color: white;
-` 
+`
 
 const ImageOverlay = styled.div`
     position: absolute;
