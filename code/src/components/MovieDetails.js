@@ -68,16 +68,17 @@ const MovieInfo = styled.div`
   }
 `;
 
-const MovieButton = styled.button`
-  cursor: pointer;
-  //align-self: flex-start;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: 3px solid #fff;
-  font-size: 20px;
-  padding: 0.5em;
-  width: 180px;
-`;
+// const MovieButton = styled.button`
+//   cursor: pointer;
+//   //align-self: flex-start;
+//   background-color: rgba(0, 0, 0, 0.5);
+//   color: #fff;
+//   border: 3px solid #fff;
+//   font-size: 20px;
+//   padding: 0.5em;
+//   width: 180px;
+//   transition: all 0.5s;
+// `;
 
 const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState({});
@@ -103,7 +104,10 @@ const MovieDetails = () => {
       }}
     >
       <DetailsContainer>
-        <MovieButton onClick={onMovieButtonClick}>Back to movies</MovieButton>
+        <button onClick={onMovieButtonClick}>
+          <span></span>
+          Go back
+        </button>
         <InfoContainer>
           <Poster>
             <img

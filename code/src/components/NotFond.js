@@ -39,8 +39,7 @@ const NotFond = () => {
   return (
     <Container>
       <StyleNotFond>
-        <h1>404</h1>
-        <p>Sorry, page not found. Click the button to go back to homepage</p>
+        <p>Sorry, page not found. Click the button to go back</p>
         <button onClick={onHomeButtonClick}>Homepage</button>
       </StyleNotFond>
     </Container>

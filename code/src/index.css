@@ -1,38 +1,16 @@
 body {
   background-color: #000;
-  margin: 0;
+  margin: 0 auto;
   font-family: "Manrope", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */
-
-/* ------ FIRST/LIST PAGE ------ */
-
-header {
-  background-color: #000;
-  color: #fff;
-}
-
-.header-title {
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 1em;
-  border-block-end: 2px solid #252525;
-}
-
+/* ----- MOVIE LIST ----- */
 .movie-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-
-/* ----- OVERLAY ----- */
 
 .movie-img-group {
   position: relative;
@@ -92,22 +70,7 @@ header {
   color: #fff;
 }
 
-/* ------ DETAIL PAGE ------ */
-
-/* .details-container {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-}
-
-.backdrop {
-}
-
-.content {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-} */
-
+/* ----- LOADING STYLING ----- */
 .spinner {
   position: absolute;
   top: 0;
@@ -152,4 +115,43 @@ header {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* ----- BACK BUTTON ----- */
+button {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 3px solid #fff;
+  font-size: 20px;
+  padding: 0.5em;
+  width: 120px;
+  transition: all 0.5s;
+  /* border-radius: 50px; */
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+span:after {
+  content: "«";
+  position: absolute;
+  opacity: 0;
+  top: -20px;
+  right: -30px;
+  left: -10px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 15px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
