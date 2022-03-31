@@ -103,10 +103,3 @@ export const Details = () => {
     </MainWrap>
   );
 };
-
-
-
-// TO DO's:
-// Anything else?
-// I think we need to add useHistory so if the user types anything other than a number/id the
-// user will be redirected automatically to the homempage. 
