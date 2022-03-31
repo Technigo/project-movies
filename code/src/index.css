@@ -1,11 +1,18 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: content-box; 
+  text-rendering: optimizeLegibility;
+  background-color: black;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -18,6 +25,8 @@ code {
   align-items: center;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
   
 }
 
@@ -28,7 +37,9 @@ code {
 }
 
 .movie-cards a img {
-  width: 100%;
+  width: 530px;
+  height: 100%;
+  /* object-fit: cover; */
 }
 
 .movie-cards .info-container {
@@ -64,6 +75,10 @@ code {
   }
 }
 
+/* .movie-cards a img {
+  width: 100%;
+} */
+
 
 /* DESKTOP SIZE */
 
@@ -73,4 +88,8 @@ code {
     display: grid;
     grid-template-columns: repeat(4,1fr);
   }
+/* 
+  .movie-cards a img {
+    width: 100%;
+  } */
 }
