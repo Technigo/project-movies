@@ -1,8 +1,28 @@
 import React, { useEffect, useState } from "react";
-import { Link, parsePath } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import styled from "styled-components";
+import { useParams, useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
-import NotFound from 'components/NotFound'
+import { DETAILS_URL } from "ultils/API_URLS";
+import NotFound from "./NotFound";
+import 'styles/MovieDetail.css';
+import Button from "styles/Button";
+
+/* [[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
+*/
+
+
+const MovieDetailStyle = styled.div`
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,1)),
+                      url(https://image.tmdb.org/t/p/original${( ({ background }) => background)})
+
+`
 
 
 
@@ -11,41 +31,62 @@ const MovieDetail = ( { movieList } ) => {
     const [movieDetail, setMovieDetail] = useState({});
 
     const { movieId } = useParams();
+
+    const navigate = useNavigate();
+
+    const onBackBtnClick = () => {
+        navigate(-1);
+    }
     
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=eb85018c9b0845f43bd288b4feca8a24&language=en-US`)
+        fetch(DETAILS_URL(movieId))
         .then(res => res.json())
         .then(data => {setMovieDetail(data)})
         .catch(error => console.log(error))
         
-    },[])
+    },[movieId])
+
     console.log(movieDetail)
 
-    const matchID = movieList.find(item => item.id == movieId);
 
-   
+    const matchID = movieList.find(item => item.id === Number(movieId));
+
     if (!matchID) {
-        return <Link to={'/'}>Go back</Link>
+         return <NotFound />
     } 
-
 
     return (
         
-        <div className='movie-detail' 
-        style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,1)),
-        url(https://image.tmdb.org/t/p/original${movieDetail.backdrop_path})`}}>
-
-        <Link className='back-link' to={'/'}><span className="link-icon"><IoIosArrowBack /></span>Movies</Link>
-            <div className='detail-container'>
-                <img src={`https://image.tmdb.org/t/p/w300${movieDetail.poster_path}`}/>
-                <div className='movie-detail-title'>
+        <MovieDetailStyle background = {movieDetail.backdrop_path}>
+<div class="center">
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+</div>
+        <Button color='#fff' onClick={() => onBackBtnClick(-1)}><span className="link-icon"><IoIosArrowBack /></span>Movies</Button>
+           
+            <div className='movie-detail'>
+                <img src={`https://image.tmdb.org/t/p/w300${movieDetail.poster_path}`} alt={movieDetail.original_title}/>
+                <div>
                     <h3>{movieDetail.original_title}</h3>
                     <span>{movieDetail.vote_average}/10</span>
+                    <div className='language'>
+                        Language:
+                        {movieDetail?.spoken_languages?.map(language => {
+                        return <span key={language.iso_639_1}>{language.iso_639_1}</span>
+                    })}</div>
                     <p>{movieDetail.overview}</p>
                 </div>
             </div>
 
-        </div>
+        </MovieDetailStyle>
     )
        
     }
