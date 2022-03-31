@@ -1,19 +1,19 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import Backicon from './Backicon'
 
 const NotFound = () => {
   const navigate = useNavigate()
-  const onHomeButtonClick = () => {
-    navigate('/')
-  }
+  // const onHomeButtonClick = () => {
+  //   navigate('/')
+  // }
 
   return (
     <section className="error-container">
-      <button onClick={onHomeButtonClick}>
-        <h2 className="error-text">Movie not found</h2>
-        <Backicon />
-      </button>
+       <Link to="/" className="back-link">
+          <Backicon /> Home
+        </Link>
+      <h2 className="error-text">Sorry, this movie was not found</h2>
     </section>
   )
 }

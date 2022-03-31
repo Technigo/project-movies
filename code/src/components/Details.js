@@ -24,17 +24,6 @@ const Details = () => {
       .finally(() => setLoading(false))
   }, [movie_id])
 
-  if (hasError) {
-    return (
-      <section>
-        <h2 className="error">Movie was not found</h2>
-        <Link to="/" className="back-link">
-          <Backicon /> Movies
-        </Link>
-      </section>
-    )
-  }
-
   if (details === null) {
     return <p></p>
   }
@@ -43,32 +32,44 @@ const Details = () => {
     return <h1>Loading movie...</h1>
   }
 
-  return (
-    <section className="details-page">
-      <Link to="/" className="back-link">
-        <Backicon />
-        <span className="movie-icon">Movies</span>
-      </Link>
-      <div
-        className="background"
-        style={{
-          backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})`,
-        }}
-      >
-        <div className="movie-details">
-          <img
-            src={`https://image.tmdb.org/t/p/w185${details.poster_path}`}
-            alt={details.title}
-          />
-          <div className="info-details">
-            <h2>{details.title}</h2>
-            <h3>{details.vote_average}/10 IMDB</h3>
-            <p>{details.overview}</p>
+  if (hasError) {
+    return (
+      <section className="error-container">
+        <h2 className="error">Sorry, this movie was not found</h2>
+        <Link to="/" className="back-link">
+          <Backicon /> Movies
+        </Link>
+      </section>
+    )
+  } 
+  
+    return (
+      <section className="details-page">
+        <Link to="/" className="back-link">
+          <Backicon />
+          <span className="movie-icon">Movies</span>
+        </Link>
+        <div
+          className="background"
+          style={{
+            backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})`,
+          }}
+        >
+          <div className="movie-details">
+            <img
+              src={`https://image.tmdb.org/t/p/w185${details.poster_path}`}
+              alt={details.title}
+            />
+            <div className="info-details">
+              <h2>{details.title}</h2>
+              <h3>{details.vote_average}/10 IMDB</h3>
+              <p>{details.overview}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  )
+      </section>
+    )
+  
 }
 
 export default Details

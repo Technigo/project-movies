@@ -94,7 +94,7 @@ code {
   border-radius: 20px;
   box-shadow: 2px 2px 1px 1px rgb(5 5 5 / 90%);
 }
-.details-page .back-link {
+.back-link {
   position: absolute;
   padding: 25px;
   display: inline-flex;
@@ -103,20 +103,18 @@ code {
   font-weight: bold;
   text-decoration: none;
 }
-.details-page .back-link svg {
+.back-link svg {
   width: 3em;
   transition: margin-right 0.2s ease-in-out;
 }
-.details-page .back-link:hover svg {
+.back-link:hover svg {
   margin-right: 1em;
 }
 /* ------Error-container------*/
-.error-container {
+.error-container a {
+  color:#fff;
 }
-.error-text {
-}
-.error {
-}
+
 /* ------MediaQuerys------*/
 @media screen and (max-width: 767px) {
   .movie-list a {
