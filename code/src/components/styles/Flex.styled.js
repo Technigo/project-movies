@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-const Container = styled.div`
+const Flex = styled.div`
   display: flex;
   flex-wrap: wrap;
   position: relative
 `
 
-export default Container
+export default Flex
