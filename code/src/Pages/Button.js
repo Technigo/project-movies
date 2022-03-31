@@ -16,6 +16,7 @@ const BackButton = styled.button`
   z-index: 2;
   border: none;
   background-color: transparent;
+
   &: hover ${ButtonText} {
     transform: translateX(4px);
     transition: all 0.3s ease-in-out;
@@ -33,8 +34,8 @@ const Button = () => {
     <div>
       <ButtonWrap>
         <BackButton>
-          <Link to={`/`}>
-            <ButtonText>‹ Go Back</ButtonText>
+          <Link to={`/`} style={{textDecoration:"none"}}>
+            <ButtonText>‹ Movies</ButtonText>
           </Link>
         </BackButton>
       </ButtonWrap>{" "}

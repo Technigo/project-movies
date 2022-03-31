@@ -13,7 +13,6 @@ const MovieCard = styled.div`
 
 const Poster = styled.img`
   width: 100%;
-  position: relative;
 
   &:hover {
     opacity: 0.5;
@@ -22,7 +21,6 @@ const Poster = styled.img`
 
 const Info = styled.div`
   display: block;
-  position: absolute;
 `;
 
 const Title = styled.h1`
@@ -31,6 +29,7 @@ const Title = styled.h1`
 
 const Released = styled.h3`
   color: white;
+  font-size: 16px;
 `;
 
 export const Movies = () => {
@@ -49,7 +48,7 @@ export const Movies = () => {
       <Main>
         {movie.map((movie) => (
           <MovieCard key={movie.id}>
-            <Link to={`/details/${movie.id}`}>
+            <Link to={`/details/${movie.id}`} style={{textDecoration:"none"}}>
               <Poster
                 src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
                 alt={movie.title}

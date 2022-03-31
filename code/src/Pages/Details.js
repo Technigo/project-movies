@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import Button from "./Button";
 
@@ -104,13 +104,9 @@ export const Details = () => {
   );
 };
 
-// the movie emoji in span is just me being tired and silly :)
 
-// TO DO's in detail component:
-// Show the full-screen image (the backdrop)
-// Show the smaller poster to the left, add a little border to it
-// Show the movie title
-// Show the vote-rating, like: 7.5/10
-// Show the movie description
-// Create the back-button that should only show from the details page.
+
+// TO DO's:
 // Anything else?
+// I think we need to add useHistory so if the user types anything other than a number/id the
+// user will be redirected automatically to the homempage. 
