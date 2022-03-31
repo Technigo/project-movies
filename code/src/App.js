@@ -5,6 +5,7 @@ import { MovieList } from 'Components/MovieList'
 import { MovieDetails } from 'Components/MovieDetails'
 import { LoadingItem } from 'Components/LoadingItem'
 import { NotFound } from 'Components/NotFound'
+import { Header } from 'Components/Header'
 
 export const App = () => {
 
@@ -21,6 +22,7 @@ export const App = () => {
 
   return (
     <BrowserRouter>
+    <Header />
       <Routes>
         <Route 
           path='/' 
