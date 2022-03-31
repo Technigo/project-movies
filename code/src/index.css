@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +10,95 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.list-card{display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+
+.list-container{
+  position: relative;
+  
+}
+ .list-img{
+  width:100%;
+  opacity: 1;
+  
+} 
+
+.list-container:hover .list-img{
+  opacity: 0.3;
+  transition: 0.4s;
+}
+.list-container:hover .list-text{opacity:1; transition-duration: 0.4s;}
+
+.cover{position: relative;}
+
+.list-text{
+    color: white;
+    width: 80%;
+    bottom:5%;
+    left:4%;
+    position: absolute;
+    opacity: 0;
+    transition-duration: 1s; 
+    
+   
+    
+}
+.details-background{
+  width:100vw;
+  height:100vh;
+  
+  object-fit: cover;
+  mask-image: linear-gradient(360deg, rgba(33, 16, 189, 0) , rgb(184, 33, 33) 20%); 
+  
+}
+
+.details-info{
+  display:flex;
+  position: absolute;
+  bottom: 5%;
+  color:white;
+  align-items:flex-end;
+  width:55%;
+  margin-left:30px;
+  
+}
+
+.details-text{
+  display:flex; 
+  flex-direction:column; 
+  margin-left:20px}
+
+button{position:absolute; 
+  bottom:110%;
+  font-weight: 700;
+  background-color:rgb(0,0,0, 0.5);
+	border-radius:19px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:7px 10px;
+	text-decoration:none;
+	
+ 
+}
+
+button:hover{
+  background-color: rgb(217, 223, 230, 0.5);
+  color: black;
+}
+.details-img{
+  border: solid 5px;
+
+}
+
