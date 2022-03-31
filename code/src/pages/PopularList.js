@@ -5,7 +5,7 @@ const PopularList = ({movielist}) => {
     return (
         <main>
             {movielist.map((movie) => (
-                <Link
+                <Link 
                    key={movie.title}
                    to={`/details/${movie.id}`}
                 >

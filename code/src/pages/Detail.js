@@ -19,16 +19,16 @@ useEffect (() => {
     }, [movieId]) 
 
     return (
-        <section className="detailGrid">
+        <section>
             {details && (
              <div style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }} >
-                <div>
+                <div className="detailGrid">
                     <button onClick={onBackButtonClick}>back to movies</button>
                     <div className="detailContent">
                     <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
                     <div className="detailText">
-                    <h1 className="detailTitle">{details.title}{details.vote_average}/10</h1>
-                    <p className="detailBread">{details.overview}</p>
+                    <h1>{details.title}{details.vote_average}/10</h1>
+                    <p>{details.overview}</p>
                     </div>
                    </div>
                 </div>
