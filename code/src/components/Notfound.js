@@ -1,12 +1,8 @@
 import React from 'react'
-import { useNavigate, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Backicon from './Backicon'
 
 const NotFound = () => {
-  const navigate = useNavigate()
-  // const onHomeButtonClick = () => {
-  //   navigate('/')
-  // }
 
   return (
     <section className="error-container">

@@ -24,6 +24,8 @@ const Details = () => {
       .finally(() => setLoading(false))
   }, [movie_id])
 
+  
+
   if (details === null) {
     return <p></p>
   }
