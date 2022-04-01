@@ -39,23 +39,34 @@ option {
 
 }
 `
-const Header = ( { movieList, setMovieList } ) => {
+const Header = ( { movieList, setMovieList, favourite } ) => {
 
     //This state to filter  movies - TESTING
     const [sorted, setSorted] = useState('');
-  
+     
      
     // Use Effect for sort dropdow menus
     useEffect(() => {
       
       if (sorted === 'latest') {
+       
         const sortedReleaseDate = [...movieList];
         setMovieList(sortedReleaseDate.sort((a,b) => a.release_date < b.release_date ? 1 : -1))
+
+        console.log(favourite)
         
-       } else if (sorted === 'popular') {
-         const sortedPopularity = [...movieList]
-        setMovieList(sortedPopularity.sort((a,b) => a.popularity < b.popularity ? 1 : -1))
        } 
+       else if (sorted === 'popular') {
+        
+        const sortedPopularity = [...movieList]
+        setMovieList(sortedPopularity.sort((a,b) => a.popularity < b.popularity ? 1 : -1))
+
+       }  
+       else if (sorted === 'favourite') {
+         //const sortFavourite = movieList.filter(item => item.id === favourite[0]);
+         setMovieList(favourite);
+      
+       }
    
        
     },[sorted])
@@ -65,6 +76,8 @@ const Header = ( { movieList, setMovieList } ) => {
                     <option value='' disabled>Sort by</option>
                     <option value='latest'>Latest</option>
                     <option value='popular'>Most Popular</option>
+                    <option value='favourite'>Favourite</option>
+
                 </SortMenu>
 
 

@@ -20,7 +20,6 @@ const CoverArt = styled.img`
   object-fit: contain;
   border: 0px;
 
-  
 `
 const MovieCard = styled.div`
   width: 25vw;
@@ -92,52 +91,45 @@ const Hover = styled.div`
 const MovieList = ( {movieList, setMovieList} ) => {
     
     
-    const [like, setLike] = useState(false);
-    const [name, setName] = useState(JSON.parse(localStorage.getItem('save')));
-    const [color, setColor] = useState('red');
     const [star, setStar] = useState(true);
     
+    const [favourite, setFavourite] = useState([]);
 
-
-    const saveMovie = (e) => {
-      setLike(true)
-      setName(e.target.value) ;
-      localStorage.setItem('save', JSON.stringify(name));
-      e.preventDefault();
-  
-    }
-
-   console.log(movieList)
-  
-
-    const toggleLike = (e, id) => {
+    
+    useEffect(() => {
+      if (star) {
+        setStar(false)
+      }
+      return setStar(true);
+    },[favourite])
+    
+    const toggleLike = (e, id, movie) => {
+      
       
       e.preventDefault();
-
+      
+      
       const matchStarId = movieList.find(item => item.id === id );
-
+      
       // To toggle between like and dislike
+      
       setStar(true) 
       
-      
       // To find the correct target button and change color
-
-      //I DONT KNOW WHY, BUT I CAN'T USE REACT ICON INSDE INNER HTML. SO I HAVE TO USE EXTERNAL ICONS 😔
-      if (matchStarId) {
-       star ? setStar(false) : setStar(true);
-       const startBtn = document.getElementById(id);
-       star ? startBtn.style.color = 'yellow' : startBtn.style.color = ''  ;
-       star ? startBtn.innerHTML = '<ion-icon name="star"></ion-icon>' : startBtn.innerHTML = '<ion-icon name="star-outline"></ion-icon>';
-      }
-     
       
+      if (matchStarId) {
+        const startBtn = document.getElementById(id);
+        star ? startBtn.style.color = 'yellow' : startBtn.style.color = ''  ;
+        star ? startBtn.innerHTML = '<ion-icon name="star"></ion-icon>' : startBtn.innerHTML = '<ion-icon name="star-outline"></ion-icon>';
+      }
+      
+      
+      console.log(star, id)
+      
+      setFavourite((prev) => [movie, ...prev]);
     }
-    console.log(star)
-
+    
   
-
-
-      console.log(movieList)
 
       if (movieList) {
 
@@ -145,7 +137,7 @@ const MovieList = ( {movieList, setMovieList} ) => {
 
        
 
-              <Header movieList={movieList} setMovieList = {setMovieList} />
+              <Header movieList={movieList} setMovieList = {setMovieList} favourite={favourite}/>
 
               <MovieWrapper>
                 
@@ -157,7 +149,7 @@ const MovieList = ( {movieList, setMovieList} ) => {
                             <Hover>
                             <Title>{movie.title}</Title>
                             
-                            <Button id={movie.id} onClick={(e) => { toggleLike(e,movie.id) }} fontsize='3rem' color="white"  top='5%' left='75%' ><ion-icon name="star-outline"></ion-icon></Button>
+                            <Button id={movie.id} onClick={(e) => { toggleLike(e,movie.id, movie) }} fontsize='3rem' color="white"  top='5%' left='75%' ><ion-icon name="star-outline"></ion-icon></Button>
 
                             <Release>{movie.release_date}</Release>
                             </Hover>
