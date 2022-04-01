@@ -12,26 +12,25 @@ const Main = () => {
         setMovies(data.results);
       });
   }, []);
-  {
-    return (
-      <section className='movie-wrapper'>
-        {movies.map((movie) => (
-          <Link to={`movie/${movie.id}`}>
-            <div key={movie.id} className='movie-card'>
-              <img
-                className='movie-image'
-                src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`}
-                alt='movieposter'
-              />
-              <div className='movie-text'>
-                <h2 className='movie-title'>{movie.title}</h2>
-                <p className='movie-release-date'>{movie.release_date}</p>
-              </div>
+
+  return (
+    <section className='movie-wrapper'>
+      {movies.map((movie) => (
+        <Link key={movie.id} to={`movie/${movie.id}`}>
+          <div key={movie.id} className='movie-card'>
+            <img
+              className='movie-image'
+              src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`}
+              alt='movieposter'
+            />
+            <div className='movie-text'>
+              <h2 className='movie-title'>{movie.title}</h2>
+              <p className='movie-release-date'>{movie.release_date}</p>
             </div>
-          </Link>
-        ))}
-      </section>
-    );
-  }
+          </div>
+        </Link>
+      ))}
+    </section>
+  );
 };
 export default Main;

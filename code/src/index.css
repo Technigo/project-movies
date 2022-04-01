@@ -13,7 +13,7 @@ code {
 
 .movie-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 0;
   width: 100%;
 }
@@ -100,7 +100,6 @@ code {
 .back-button {
   color: #fff;
   font-weight: 700;
-  display: inline-block;
   display: flex;
   align-items: center;
   margin-left: 10px;
@@ -111,12 +110,13 @@ code {
   content: '\2190';
   font-weight: 800;
   font-size: 30px;
+  margin-bottom: 10px;
 }
 
 /* -- Tablet -- */
 @media (min-width: 667px) and (max-width: 1024px) {
   .movie-wrapper {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .movie-title {

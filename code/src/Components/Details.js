@@ -12,9 +12,8 @@ const Details = () => {
       .then((res) => res.json())
       .then((data) => {
         setMovieDetails(data);
-        console.log(movieDetails);
       });
-  }, []);
+  }, [movieId]);
 
   return (
     <section

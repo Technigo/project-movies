@@ -9,10 +9,9 @@ const BackButton = () => {
   };
 
   return (
-    // <FontAwesomeIcon icon="fa-solid fa-arrow-left" />
-    <a className='back-button' onClick={onBackButtonClick}>
+    <p className='back-button' onClick={onBackButtonClick}>
       Movies
-    </a>
+    </p>
   );
 };
 
