@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import { API_KEY } from 'Apis/Urls';
 
-const Moviedetail = ({ apiData }) => {
+const Moviedetail = () => {
     const { movieId } = useParams();
     console.log(movieId)
     const [movieDetails, setMovieDetails] = useState([]);
@@ -13,7 +13,6 @@ const Moviedetail = ({ apiData }) => {
         fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US`)
         .then(res => res.json())
         .then(movieInfo => {
-            console.log(movieInfo)
             setMovieDetails(movieInfo)
         })
     }, [movieId])
@@ -48,12 +47,12 @@ const Moviedetail = ({ apiData }) => {
     `
 
     const MovieInfo = styled.section`
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    margin-top: 450px;
-    margin-left: 100px;
-    
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        margin-top: 450px;
+        margin-left: 100px;
+        
     
     `
     const MovieSmallImage = styled.img`
@@ -72,6 +71,7 @@ const Moviedetail = ({ apiData }) => {
         background-color: rgba(0, 0, 0, 0.637);
         border-radius: 10px;
         
+        
     
     `
 
@@ -81,15 +81,15 @@ const Moviedetail = ({ apiData }) => {
     `
 
     const MovieOverview = styled.p`
-    display: block;
-    font-size: 20px;
-    width: 700px;
-    margin: 15px;
+        display: block;
+        font-size: 20px;
+        width: 700px;
+        margin: 15px;
     `
     const MovieRating = styled.p`
-    font-size: 20px;
-    color: green;
-    margin: 15px;
+        font-size: 20px;
+        color: green;
+        margin: 15px;
     `
 
     //Destructuring from useState hook holding API data object
