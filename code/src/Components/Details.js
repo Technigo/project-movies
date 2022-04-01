@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import BackButton from './BackButton';
-//import { API_URL } from 'utils/urls';
+import { API_DETAILS } from 'utils/urls';
 
 const Details = () => {
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState({});
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${movieId}?api_key=a90dcccc9047bfdf345615e2c530184c&language=en-US`
-    )
+    fetch(API_DETAILS(movieId))
       .then((res) => res.json())
       .then((data) => {
         setMovieDetails(data);
