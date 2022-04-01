@@ -1,13 +1,15 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This was a team project focusing on using React Router. It was the first bootcamp assignment in which we built a multiple-page application and switched between route paths. We also learned how to style our pages using the styled-components library.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We used API from themoviedb to fetch our list of movies, and another endpoint to fetch individual movie details. 
+We created a function to map the movies and render individual "movie-cards" with info showing when hovering.
+
+To push ourselves further we also implemented a like-function giving the user ability to "star" movies and filter for starred movies. This was challenging because we had to solve how to toggle the boolean value of true/false, how to make it target only one specific movie and passing in that information to the select dropdown in the header component, and preventing the star-button from redirecting to the movie's detail page.
+
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://dorothea-suki-movie.netlify.app/
