@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import LoadingSpinner from "./LoadingSpinner";
 
 import { DETAILS_URL } from "./utils.js/Urls";
 
@@ -8,7 +9,6 @@ import { DETAILS_URL } from "./utils.js/Urls";
 const Container = styled.section`
   min-height: 100vh;
   background-repeat: no-repeat;
-  background-position-x: 50%;
   background: center;
   background-size: cover;
   position: relative;
@@ -86,21 +86,25 @@ const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState({});
   const { movie_id } = useParams();
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   const onMovieButtonClick = () => {
     navigate(-1);
   };
 
   useEffect(() => {
+    setLoading(true);
     fetch(DETAILS_URL(movie_id))
       .then((res) => res.json())
       .then((data) => {
         setMovieDetails(data);
-      });
+      })
+      .finally(() => setLoading(false));
   }, [movie_id]);
 
   return (
     <section>
+      {loading && <LoadingSpinner />}
       {movieDetails.backdrop_path && (
         <Container
           style={{
