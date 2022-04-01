@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import  MovieCards  from 'components/MovieCards';
 import { URL_MOVIES } from 'utils/urls';
+import  MovieCards  from 'components/MovieCards';
 import  MovieDetails  from 'components/MovieDetails';
 
 export const Overview = () => {
@@ -22,9 +22,9 @@ export const Overview = () => {
         <BrowserRouter>
         <Routes>
             <Route
-                path="/"
+                path='/'
                 element={<MovieCards movies={movies}/>}/>
-            <Route path ="/MovieDetails/:id" element={<MovieDetails/>}/>
+            <Route path ='/MovieDetails/:id' element={<MovieDetails/>}/>
         </Routes>
         </BrowserRouter>
     )
