@@ -21,10 +21,8 @@ export const App = () => {
 
   const Grid = styled.main`
     background-color: black;
-    
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    
     
     @media (min-width: 415px) and (max-width: 820px) {
       grid-template-columns: repeat(2, 1fr);
@@ -46,6 +44,5 @@ export const App = () => {
         </Routes>
       </Router>
     </Grid>
-)
-  
+  )
 }
