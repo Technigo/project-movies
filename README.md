@@ -1,13 +1,11 @@
 # Project Movies
-
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+For this project we practiced using React Router and fetching movies with API to render a page with a movie cards. When clicking on a card it should then render another page with details about the movie. This week we also tried a new way to style with styled components. 
 
 ## The problem
 
 Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Our biggest problem was that the second fetch of another URL stayed undefined and would not give us data when console logging. We solved this problem by using the same URL we did when fetching for the list of movies. If we had more time we would try to style with styled components and making the website responsive. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://meek-stroopwafel-b39fe2.netlify.app/
