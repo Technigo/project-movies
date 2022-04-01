@@ -1,53 +1,98 @@
 .back-link {
-	display: flex;
-	gap: 5px;
-	align-items: center;
-	text-decoration: none;
-	margin-bottom: 20px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.back-label:hover {
+  text-decoration: underline;
 }
 
 .back-icon {
-	height: 16px;
+  height: 16px;
 }
 
 .back-label {
-	color: white;
-	font-size: 18px;
+  color: white;
+  font-size: 18px;
 }
 
-.movie-container{
-	min-height: 70vh;
-	padding: 3vh;
-	/* padding-bottom: 10vh; */
-	background-color: #181818;
+.movie-container {
+  min-height: 72vh;
+  padding: 3vh;
+  background-color: #181818;
 }
 
 .movie-poster {
-	width: 100%;
-	/* border: 2px solid white; */
-	box-sizing: border-box;
-	object-fit: cover;
-	border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .movie-title {
-	margin: 25px 0 10px 0;
+  margin: 25px 0 10px 0;
 }
 
-.movie-background {
-	display: none;
-	width: 100%;
-	object-fit: cover;
+.movie-cover {
+  display: none;
+  width: 100%;
+  object-fit: cover;
 }
 
 .movie-rating {
-	color: rgb(255, 255, 255, 0.6);
-	padding: 0;
-	margin: 0;
+  color: rgb(255, 255, 255, 0.6);
+  padding: 0;
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
-	.movie-background {
-		display: block;
-	}
+  .movie-container {
+    min-height: 85vh;
+    display: inline block;
+    position: relative;
+  }
+
+  .movie-cover {
+    width: 100%;
+    display: flex;
+    border: 3px solid white;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .movie-poster {
+    height: 75vh;
+    max-width: 100%;
+    position: relative;
+  }
+  .movie-details-group {
+    min-height: 20vh;
+    position: relative;
+  }
+
+  .movie-desktop-details {
+    background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 1)
+    );
+    height: 67vh;
+    width: 45vw;
+    position: absolute;
+    bottom: 7.55vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 3vw;
+    padding-left: 5vh;
+    padding-top: 8vh;
+  }
+
+  .movie-title {
+    margin-top: 0;
+    font-size: 26px;
+  }
 }
