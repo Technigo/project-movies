@@ -1,13 +1,23 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week we did a movie-site using an API. This was our first time using different path
+to redirect to other pages. We used React Router and style components for the first time.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We fetched popular movies from a movie list using an API key, getting the information about
+the movies and displaying them on two different pages, movie list, and movie details.
+We also added a not found page when you run into an arrow.
+A loader and mostly styled our page with styled components.
+
+We had some problems with the GET of the images in the movie details page showing on the page but
+with errors in the console. So in the return before the images we added
+movieDetails.backdrop_path && <img..../>
+This happened because the component render in the value of movieDetails is state {}.
+Once the API returns and we set the value of movieDetails in state the browser loads the images successfully.
+
+If we had more time it would be nice to add different genre options.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+View deployed page here: https://movie-project-lovisa-mimmi.netlify.app/

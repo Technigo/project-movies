@@ -52,7 +52,7 @@ const MovieInfo = styled.div`
   margin-bottom: 1em;
   margin-left: 1em;
   min-width: 40vw;
-  max-width: 55vw;
+  max-width: 50vw;
   height: fit-content;
   // border: 3px solid #fff;
 
@@ -64,15 +64,15 @@ const MovieInfo = styled.div`
     margin: 0;
     padding-bottom: 5px;
     font-size: 36px;
-    border-block-end: 2px solid #525252;
+    border-block-end: 2px solid #828282;
   }
 
   span {
-    font-size: 18px;
+    font-size: 22px;
     padding-left: 10px;
     font-style: italic;
     font-weight: 400;
-    color: #a5a5a5;
+    color: #b7b7b7;
   }
 
   p {

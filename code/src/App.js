@@ -7,7 +7,6 @@ import MovieDetails from "./components/MovieDetails";
 import NotFond from "components/NotFond";
 import { POPULAR_URL } from "./components/utils.js/Urls";
 import LoadingSpinner from "./components/LoadingSpinner";
-// import Footer from "./components/Footer";
 
 export const App = () => {
   const [movieList, setMovieList] = useState([]);
@@ -24,13 +23,8 @@ export const App = () => {
   }, []);
 
   return (
-    // <>
-    //   {loading && <LoadingSpinner />}
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<> {loading && <LoadingSpinner />} </>} /> */}
-        {/* <Route path="/" element={<MovieList movies={movieList} />} />
-          <Route path="/MovieDetails/:movie_id" element={<MovieDetails />} /> */}
         <Route
           path="/"
           element={
@@ -52,8 +46,6 @@ export const App = () => {
         <Route path="/404" element={<NotFond />} />
         <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
-      {/* <Footer /> */}
     </BrowserRouter>
-    // </>
   );
 };

@@ -179,3 +179,15 @@ button:hover span:after {
     margin-bottom: 2em;
   }
 }
+
+/* ----- MOBILE AND TABLET VERSION ------ */
+@media (min-width: 0) and (max-width: 1024px) {
+  .movie-img-overlay {
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+  }
+
+  .movie-text-overlay {
+    color: #fff;
+    padding: 35px;
+  }
+}
