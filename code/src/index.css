@@ -12,35 +12,34 @@ code {
     monospace;
 }
 
-body, html {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
   height: 100%;
 }
 
-
-
-.movie-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  border: 1px dotted goldenrod;
-
+#root {
+  height: 100%;
 }
 
-.movie-card {
-  width: 200px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  border: 1px solid blue;
+main {
+  height: 100%;
 }
 
-.movie-card h2 {
-  font-size: 1rem;
+h1 {
+  font-size: 20px;
 }
 
-img {
-  max-width: 100%;
+h2 {
+  font-size: 18px;
 }
+p {
+  font-size: 16px;
+}
+
+
+
