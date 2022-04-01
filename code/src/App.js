@@ -1,25 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { TOKEN } from "token";
-import MovieList from "components/MovieList";
-import MovieDetails from "components/MovieDetails";
-
-const Header = () => {
-  return (
-    <header>
-      <h1>Movie Madness</h1>
-      <nav>
-        <Link to="/">Home</Link>
-      </nav>
-    </header>
-  );
-};
+import Header from "components/smart/Header";
+import MovieList from "components/smart/MovieList";
+import MovieDetails from "components/smart/MovieDetails";
+import NotFound from "components/dumb/NotFound";
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
+  const [selection, setSelection] = useState("now_playing");
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${TOKEN}&language=en-US&page=1`)
+    fetch(`https://api.themoviedb.org/3/movie/${selection}?api_key=${TOKEN}&language=en-US&page=1`)
       .then((response) => response.json())
       .then((data) => {
         setMovies(
@@ -30,20 +22,25 @@ export const App = () => {
             description: item.overview,
             rating: item.vote_average,
             coverImgUrl: `https://image.tmdb.org/t/p/w300${item.poster_path}`,
-            backdropImgUrl: `https://image.tmdb.org/t/p/w780${item.backdrop_path}`,
+            backdropImgUrl: `https://image.tmdb.org/t/p/w1280${item.backdrop_path}`,
           }))
         );
+        setSelection(selection);
       })
       .catch((error) => console.log(error));
-  }, []);
+  }, [selection]);
 
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<MovieList movies={movies} />} />
-        <Route path="movies/:movieId" element={<MovieDetails movies={movies} />} />
-      </Routes>
+      <Header movies={movies} value={selection} setSelection={setSelection} />
+      <main>
+        <Routes>
+          <Route path="/" element={<MovieList movies={movies} />} />
+          <Route path="movies/:movieId" element={<MovieDetails movies={movies} />} />
+          <Route path="/404" element={<NotFound />} />
+          <Route path="*" element={<Navigate to="/404" replace />} />
+        </Routes>
+      </main>
     </>
   );
 };

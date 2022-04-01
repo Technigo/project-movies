@@ -1,0 +1,9 @@
+.container {
+  min-height: 72vh;
+  padding: 3vh;
+  background-color: #181818;
+}
+
+.notfound {
+  font-weight: lighter;
+}

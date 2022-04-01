@@ -1,5 +1,6 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import BackButton from "components/dumb/BackButton";
 
 import "./MovieDetails.css";
 
@@ -10,10 +11,7 @@ const MovieDetails = ({ movies }) => {
 
   return (
     <section className="movie-container">
-      <Link className="back-link" to={"/"}>
-        <img className="back-icon" src="../../backarrow.png" alt="back arrow" />
-        <span className="back-label">Films</span>
-      </Link>
+      <BackButton />
       <img className="movie-poster" src={movie.backdropImgUrl} alt={movie.backdropImgUrl} />
       <div className="movie-desktop-details">
         <img className="movie-cover" src={movie.coverImgUrl} alt={movie.coverImgUrl} />

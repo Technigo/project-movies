@@ -1,0 +1,20 @@
+.back-link {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.back-label:hover {
+  text-decoration: underline;
+}
+
+.back-icon {
+  height: 16px;
+}
+
+.back-label {
+  color: white;
+  font-size: 18px;
+}
