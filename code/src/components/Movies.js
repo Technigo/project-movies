@@ -4,43 +4,51 @@ import styled from 'styled-components'
 
 const Movies = ({ apiData }) => {
     const MovieContainer = styled.div`
+    position: relative;
         width: 375px;
         margin: 0;
         display: flex;
         flex-direction: column;
         color: white;
-        text-align: center;
+        
 
+        `
+        
+    const PosterImage = styled.img`
+        
         &:hover {
-            filter: brightness(20%);
+            opacity: 0.2;
         }
     `
 
     const MovieText = styled.div`
-        
-        
-        width: 375px;
-        margin-top: 100px;
-        text-align: center;
         position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 400px;
         color: white;
-        padding-top: 350px; 
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            opacity: 1;
+        }
 
        
     `
 
-    const Text = styled.p`
-       font-size: 20px;
+    const TitleText = styled.p`
+       font-size: 28px;
        font-weight: 700;
-        margin: 10px;
+       margin: 0 0 10px 25px;
+      
 
-        &:hover {
-            color: white;
-        }
     `
 
-
-
+    const ReleasedText = styled.p`
+        margin: 0 0 0 25px;
+        font-size: 18px;
+    `
 
     return (
         apiData && apiData.map((movieItem) => {
@@ -48,10 +56,10 @@ const Movies = ({ apiData }) => {
             return (
                 <Link to={`/movie/${id}`} style={{textDecoration: 'none'}}>                                    
                     <MovieContainer>
-                        <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt="film poster"/>
+                        <PosterImage src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt="film poster"/>
                         <MovieText>
-                        <Text>{title}</Text>
-                        <Text>Released {release_date}</Text>             
+                        <TitleText>{title}</TitleText>
+                        <ReleasedText>Released {release_date}</ReleasedText>             
                         </MovieText>                  
                     </MovieContainer>
                 </Link>

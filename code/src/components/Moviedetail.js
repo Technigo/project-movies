@@ -6,7 +6,7 @@ import { API_KEY } from 'Apis/Urls';
 
 const Moviedetail = () => {
     const { movieId } = useParams();
-    console.log(movieId)
+    
     const [movieDetails, setMovieDetails] = useState([]);
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const Moviedetail = () => {
     }, [movieId])
 
     const StyledBackLink = styled(Link)`
-    position: absolute;
+        position: absolute;
         background-color: black;
         width: 200px;
         margin: 30px;
@@ -34,7 +34,7 @@ const Moviedetail = () => {
     ` 
     
     const Div = styled.div`
-    margin: 0;
+        margin: 0;
         display: flex;
         flex-direction: column;
         color: white;
@@ -63,18 +63,15 @@ const Moviedetail = () => {
     `
 
     const TextContainer = styled.section`
+        position: absolute;
         display: flex;
         flex-direction: column;
-        position: absolute;
         margin-left: 250px;
         margin-top: 80px;
         background-color: rgba(0, 0, 0, 0.637);
-        border-radius: 10px;
-        
-        
+        border-radius: 10px;   
     
     `
-
     const MovieTitle = styled.p`
        font-size: 40px;
        margin: 15px;
@@ -100,7 +97,7 @@ const Moviedetail = () => {
             <StyledBackLink to="/">Back to movielist page</StyledBackLink>
         
             <BackdropImage src={`https://image.tmdb.org/t/p/w1280${backdrop_path}`} alt="film poster"/>
-             <MovieInfo>
+            <MovieInfo>
             <MovieSmallImage src={`https://image.tmdb.org/t/p/w300${poster_path}`} alt="film poster"/>
             <TextContainer>
             <MovieTitle>{title}</MovieTitle>
