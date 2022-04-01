@@ -127,7 +127,8 @@ button {
   padding: 0.5em;
   width: 120px;
   transition: all 0.5s;
-  /* border-radius: 50px; */
+  height: 50px;
+  border-radius: 50px;
 }
 
 button span {
@@ -154,4 +155,27 @@ button:hover span {
 button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+/* ----- TABLET VERSION ----- */
+
+@media (max-width: 1024px) {
+  .movie-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ----- MOBILE VERSION ------ */
+@media (max-width: 667px) {
+  .movie-list {
+    grid-template-columns: 1fr;
+  }
+
+  .movie-img-group {
+    display: flex;
+  }
+
+  button {
+    margin-bottom: 2em;
+  }
 }

@@ -7,6 +7,7 @@ import { DETAILS_URL } from "./utils.js/Urls";
 // Styled Components
 const Container = styled.section`
   min-height: 100vh;
+  height: 100%;
   background-repeat: no-repeat;
   background-position-x: 50%;
   background: center;
@@ -24,6 +25,11 @@ const DetailsContainer = styled.div`
 
 const InfoContainer = styled.div`
   display: flex;
+
+  @media (max-width: 667px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Poster = styled.div`
@@ -50,9 +56,15 @@ const MovieInfo = styled.div`
   height: fit-content;
   // border: 3px solid #fff;
 
+  @media (max-width: 667px) {
+    align-self: center;
+  }
+
   h1 {
     margin: 0;
+    padding-bottom: 5px;
     font-size: 36px;
+    border-block-end: 2px solid #525252;
   }
 
   span {
@@ -60,6 +72,7 @@ const MovieInfo = styled.div`
     padding-left: 10px;
     font-style: italic;
     font-weight: 400;
+    color: #a5a5a5;
   }
 
   p {
@@ -98,32 +111,37 @@ const MovieDetails = () => {
   }, [movie_id]);
 
   return (
-    <Container
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/original${movieDetails?.backdrop_path})`,
-      }}
-    >
-      <DetailsContainer>
-        <button onClick={onMovieButtonClick}>
-          <span></span>
-          Go back
-        </button>
-        <InfoContainer>
-          <Poster>
-            <img
-              src={`https://image.tmdb.org/t/p/w500${movieDetails?.poster_path}`}
-              alt={movieDetails}
-            />
-          </Poster>
-          <MovieInfo>
-            <h1>
-              {movieDetails.title} <span>{movieDetails.vote_average}/10</span>
-            </h1>
-            <p>{movieDetails.overview}</p>
-          </MovieInfo>
-        </InfoContainer>
-      </DetailsContainer>
-    </Container>
+    <section>
+      {movieDetails.backdrop_path && (
+        <Container
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/original${movieDetails?.backdrop_path})`,
+          }}
+        >
+          <button onClick={onMovieButtonClick}>
+            <span></span>
+            Go back
+          </button>
+          <DetailsContainer>
+            <InfoContainer>
+              <Poster>
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${movieDetails?.poster_path}`}
+                  alt={movieDetails}
+                />
+              </Poster>
+              <MovieInfo>
+                <h1>
+                  {movieDetails.title}{" "}
+                  <span>{movieDetails.vote_average}/10</span>
+                </h1>
+                <p>{movieDetails.overview}</p>
+              </MovieInfo>
+            </InfoContainer>
+          </DetailsContainer>
+        </Container>
+      )}
+    </section>
   );
 };
 

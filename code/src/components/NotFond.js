@@ -22,11 +22,13 @@ const StyleNotFond = styled.div`
     color: #fff;
     font-size: 20px;
     align-self: center;
+    margin: 5px 0 0;
   }
 
   button {
     cursor: pointer;
     align-self: center;
+    margin: 1em;
   }
 `;
 
@@ -39,7 +41,7 @@ const NotFond = () => {
   return (
     <Container>
       <StyleNotFond>
-        <p>Sorry, page not found. Click the button to go back</p>
+        <p>Sorry, page not found,</p> <p>click the button to go back to</p>
         <button onClick={onHomeButtonClick}>Homepage</button>
       </StyleNotFond>
     </Container>
