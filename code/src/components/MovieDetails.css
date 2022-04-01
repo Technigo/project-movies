@@ -1,0 +1,53 @@
+.back-link {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+	text-decoration: none;
+	margin-bottom: 20px;
+}
+
+.back-icon {
+	height: 16px;
+}
+
+.back-label {
+	color: white;
+	font-size: 18px;
+}
+
+.movie-container{
+	min-height: 70vh;
+	padding: 3vh;
+	/* padding-bottom: 10vh; */
+	background-color: #181818;
+}
+
+.movie-poster {
+	width: 100%;
+	/* border: 2px solid white; */
+	box-sizing: border-box;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.movie-title {
+	margin: 25px 0 10px 0;
+}
+
+.movie-background {
+	display: none;
+	width: 100%;
+	object-fit: cover;
+}
+
+.movie-rating {
+	color: rgb(255, 255, 255, 0.6);
+	padding: 0;
+	margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.movie-background {
+		display: block;
+	}
+}
