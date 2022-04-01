@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { TOKEN } from "token";
 import Header from "components/smart/Header";
 import MovieList from "components/smart/MovieList";
 import MovieDetails from "components/smart/MovieDetails";
@@ -9,6 +8,7 @@ import NotFound from "components/dumb/NotFound";
 export const App = () => {
   const [movies, setMovies] = useState([]);
   const [selection, setSelection] = useState("now_playing");
+  const TOKEN = 'd36dd5036852810f7b509134ae270b85'
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${selection}?api_key=${TOKEN}&language=en-US&page=1`)
