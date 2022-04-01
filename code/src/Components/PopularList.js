@@ -11,11 +11,11 @@ background-color:#000;
 
 const CardContainer = styled.div `
 position:relative;
-
+width:100%;
 
 img{
   width:100%;
-  height:100%
+  height:100%;
 }
 
 a{
