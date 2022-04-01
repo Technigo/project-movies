@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../css/popularList.css'
 
 const PopularList = ({movielist}) => {
     return (
-        <main>
+        <div className="movie-container">
             {movielist.map((movie) => (
-                <Link 
+                <Link className="link-container"
                    key={movie.title}
                    to={`/details/${movie.id}`}
                 >
@@ -13,13 +14,15 @@ const PopularList = ({movielist}) => {
                         src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
                         alt={movie.title}
                     />
-                      <div>
+                    <div className="overlay">
+                      <div className="title-container">
                         <h1>{movie.title}</h1>
                         <p>Released {movie.release_date}</p>
                       </div> 
+                    </div> 
                 </Link>
             ))}
-        </main>
+        </div>
     )
 }
 

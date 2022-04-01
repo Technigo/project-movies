@@ -1,6 +1,33 @@
-/* .detailGrid {
- 
-} */
+.details-container {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* background-repeat: no-repeat ; */
+}
+.movie-background {
+  position: fixed;
+  z-index: -1;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat ;
+}
+
+ .detailGrid {
+  display: grid;
+  align-items: flex-end;
+  /* margin-left:10px; */
+  height: 100vh;
+  /* margin: -150px 0; */
+  /* position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0; */
+}
 
 button {
   background-color: red;
@@ -48,3 +75,4 @@ button:hover {
   padding: 1em;
   max-width: 200px;
 }
+

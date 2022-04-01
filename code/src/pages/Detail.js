@@ -21,7 +21,9 @@ useEffect (() => {
     return (
         <section>
             {details && (
-             <div style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }} >
+                <div className="details-container">
+                {/* <div style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }} > */}
+                <img className="movie-background" src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt={details.title} />
                 <div className="detailGrid">
                     <button onClick={onBackButtonClick}>back to movies</button>
                     <div className="detailContent">
@@ -33,7 +35,7 @@ useEffect (() => {
                     </div>
                    </div>
                 </div>
-             </div>
+                </div>
             )} 
         </section>
     )
