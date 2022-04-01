@@ -3,6 +3,8 @@
 This week we did a movie-site using an API. This was our first time using different path
 to redirect to other pages. We used React Router and style components for the first time.
 
+This was a pair-programming project built by Lovisa Brorson and Mimmi Fordal Uddin
+
 ## The problem
 
 We fetched popular movies from a movie list using an API key, getting the information about
