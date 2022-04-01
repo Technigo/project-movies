@@ -1,0 +1,18 @@
+
+.details-container {
+    
+}
+
+
+
+
+.background-img {
+    object-fit: cover;
+    width: auto;
+    height: 100%;
+  }
+
+  .movie-title .movie-overview .movie-rating {
+    color: white;
+    z-index: 4;
+  }

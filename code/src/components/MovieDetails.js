@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 // import {SINGLE_MOVIES_URL} from "utils/urls" //../utils/urls?
+import "../css/moviedetails.css";
+import styled from "styled-components";
 
 // const GoBackButton = styled.button`
 //     padding: 10px;
@@ -8,6 +10,20 @@ import { useParams, useNavigate } from "react-router-dom";
 //     background-color: red;
 //     font-style: italic;
 // `;
+
+const BackDrop = styled.div`
+background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url(${props => props.url});
+min-height: 100vh;
+background-size: cover;
+
+`;
+
+
+   // const backgroundImageUrl = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`
+    // const background = {
+    //     backgroundImageUrl: `url(${backgroundImageUrl})`
+    // }
+
 
 const MovieDetails = () => {
     const [movie, setMovie] = useState({});
@@ -25,29 +41,29 @@ const MovieDetails = () => {
                 setMovie(data);
             })
     }, [id])
-
+ 
     return (
-        <article>
-            {movie && (
-                <div>
+        <BackDrop url={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}>
+                <div className="details-container">
                     <button onClick={onBackButtonClick}>Go back</button>
-                    <h1>{movie.title}</h1>
-                    <p>{movie.overview}</p>
-                    <p>Rating: {movie.vote_average}/10</p>
-                    <img 
-                        className="movie-poster"
-                        src={`https://image.tmdb.org/t/p/w780${movie.backdrop_path}`}
-                        alt={movie.title}
-                    />
-                     <img 
-                        className="movie-backdrop"
-                        src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-                        alt={movie.title}
-                    />
+                    <div className="container">
+                        <div className="info-child">
+                            <h1 className="movie-title">{movie.title}</h1>
+                            <p className="movie-overview">{movie.overview}</p>
+                            <p className="movie-rating">Rating: {movie.vote_average}/10</p>
+                        </div>
+                        <div className="img-child">
+                            <img 
+                                className="poster-img"
+                                src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+                                alt={movie.title}
+                            /> 
+                        </div>
+                    </div>
                 </div>
-            )}
-        </article>
+        </BackDrop>
     )
 }
 
 export default MovieDetails;
+

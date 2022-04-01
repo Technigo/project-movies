@@ -34,6 +34,7 @@ code {
   position: relative;
   color: #fff;
   text-decoration: none;
+  width: 100%;
 }
 
 .movie-cards a img {
@@ -67,6 +68,40 @@ code {
 }
 
 
+.details-container {
+  /* min-height: 100vh; */
+  /* position: fixed; */
+  display: flex;
+  /* background-size: cover; */
+  flex-direction: column;
+  /* justify-content: flex-end; */
+}
+
+/* .background-img {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+} */
+
+.poster-img {
+  height: 300px;
+  width: 200px;
+  border: 2px solid white;
+}
+
+/* .background-img {
+  background-size: cover;
+  object-fit: cover;
+  width: auto;
+  height: 100%;
+} */
+
+.movie-title, .movie-rating, .movie-overview {
+  color: white;
+  z-index: 100;
+}
+
 @media screen and (min-width: 667px) {
 
   .movie-cards {
@@ -80,6 +115,8 @@ code {
 } */
 
 
+
+
 /* DESKTOP SIZE */
 
 @media (min-width: 1024px) {
@@ -88,6 +125,27 @@ code {
     display: grid;
     grid-template-columns: repeat(4,1fr);
   }
+
+  .info-child {
+    max-width: 70ch;
+  }
+
+  .container {
+    margin: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 100px;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .poster-img {
+    max-width: 140%;
+    width: 10%;
+  }
+
+
 /* 
   .movie-cards a img {
     width: 100%;
