@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { LoadingItem } from './LoadingItem'
 
-export const TopRatedList = ({ movieList }) => {
+export const UpcomingList = ({ movieList }) => {
 	const [filteredMovieList, setfilteredMovieList] = useState(movieList)
 	const [filter, setFilter] = useState()
 	const [sorting, setSorting] = useState()
@@ -136,6 +135,7 @@ export const TopRatedList = ({ movieList }) => {
 						value={filter}
 						onChange={(e) => setFilter(e.target.value)}
 					>
+						{' '}
 						<option selected='true' disabled='disabled'>
 							Choose Genre &#9660;
 						</option>
