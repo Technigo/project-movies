@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
-import { BackIcon } from './Icon'
+// import { BackIcon } from './Icon'
 
 const ButtonText = styled.h3`
   color: white;
