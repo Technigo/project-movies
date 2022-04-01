@@ -4,7 +4,6 @@ import { BASE_URL } from 'utils/urls';
 
 import MovieList from 'Components/MovieList';
 import MovieDetails from 'Components/MovieDetails';
-// import Header from './Header';
 
 const Homepage = () => {
 
@@ -20,13 +19,10 @@ const Homepage = () => {
 
   return (
     <BrowserRouter>
-      {/* <Header/> */}
-      {/* <main> */}
         <Routes>
           <Route path="/" element={<MovieList movies={movies}/>} />
           <Route path="/details/:movieTitle" element={<MovieDetails />} />
         </Routes>
-      {/* </main> */}
     </BrowserRouter>
   )
 }

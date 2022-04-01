@@ -22,7 +22,7 @@ const MovieDetails = () => {
 
   return (
     <div className='more-page'>
-      <button onClick={onBackButtonClick}>Movies</button>
+      <button onClick={onBackButtonClick}>⇦ Movies</button>
       <div className="background" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0) 40%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})` }}>
         <div className="more-info">
         <img className="poster" src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`} alt={movieDetails.original_title} />

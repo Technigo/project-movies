@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MovieList = ({movies}) => {
+const MovieList = ({ movies }) => {
   return (
     <section className="list">
       {movies.map((movie)=> {
@@ -10,12 +10,18 @@ const MovieList = ({movies}) => {
                   to={`/details/${movie.id}`}
                   className="movie-box"
                   >
+                  <img 
+                    className="movie-poster" 
+                    src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} 
+                    alt={movie.title} />
+                  <div className="movie-image-overlay"></div>
                   <div className="info-box">
-                    <h1>{movie.original_title}</h1>
-                    <p>Released {movie.release_date}</p>
+                      <div className="movie-text-overlay">
+                        <h1>{movie.original_title}</h1>
+                        <p>Released {movie.release_date}</p>
+                      </div>
                   </div>
-                  <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-                  </Link>
+                </Link>
         })}
     </section>
   )
