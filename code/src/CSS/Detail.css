@@ -14,21 +14,6 @@
     justify-content: flex-end;
 }
 
-/* add button */
-/* .back-btn:hover {
-  padding-left: 12px;
-}
-
-.fa-chevron-circle-left {
-  position: absolute;
-  display: inline-flex;
-  color: #fff;
-  left: 56px;
-  top: 100px;
-  font-size: 20px;
-  cursor: pointer;
-} */
-
 .summary {
     display: flex;
     flex-direction: column;
@@ -36,11 +21,13 @@
     padding: 40px;
 }
 
+.detailText {
+    padding-top: 15px;
+}
+
 .detailText p {
-    /* max-width: 50%; */
     font-size: 12px;
 }
-/* adderat fontsize och tagit bort max-width */
 
 .rating {
     font-size: 14px;
@@ -52,15 +39,16 @@
     border: white solid 5px;
     width: 50%;
 }
-/* ny width ovanför */
+
 h2 {
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     font-size: 30px;
 }
 
 @media screen and (min-width: 768px) {
 .summary {
     display: flex;
+    flex-direction:row;
     align-items: flex-end;
     padding: 40px;
 }

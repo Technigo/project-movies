@@ -17,7 +17,6 @@ export const PopularList = () => {
       {movies.map((results) => (
         <Link key={results.id} to={`/movies/${results.id}`}>
           <img src={`https://image.tmdb.org/t/p/w342${results.poster_path}`} alt="poster" />
-
           <div className="cover-text">
             <h1>{results.original_title}</h1>
             <h3>Released {results.release_date}</h3>

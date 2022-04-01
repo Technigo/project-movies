@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
-// import { BackIcon } from './Icon'
 
 const ButtonText = styled.h3`
   color: white;
@@ -10,7 +9,6 @@ const ButtonText = styled.h3`
 `
 
 const GoBackButton = styled.button`
-
  padding: 10px; 
  width: 150px;
  margin: 30px;
@@ -36,7 +34,6 @@ const GoBackButton = styled.button`
   transition: all 0.6s ease-in-out;
   display: flex;
  }
-
 `
 
 export const Detail = () => {
@@ -45,7 +42,6 @@ export const Detail = () => {
   const navigate = useNavigate()
 
   const onBackButtonClick = () => {
-    // Use it to go back to previous page
     navigate(-1)
   }
 
