@@ -7,7 +7,6 @@ import { DETAILS_URL } from "./utils.js/Urls";
 // Styled Components
 const Container = styled.section`
   min-height: 100vh;
-  height: 100%;
   background-repeat: no-repeat;
   background-position-x: 50%;
   background: center;
@@ -15,6 +14,10 @@ const Container = styled.section`
   position: relative;
   padding: 5vw;
   display: grid;
+
+  @media (max-width: 667px) {
+    background: none;
+  }
 `;
 
 const DetailsContainer = styled.div`
@@ -33,8 +36,6 @@ const InfoContainer = styled.div`
 `;
 
 const Poster = styled.div`
-  // display: flex;
-  // flex-direction: column;
   margin-bottom: 1em;
 
   img {
@@ -80,18 +81,6 @@ const MovieInfo = styled.div`
     line-height: 1.5;
   }
 `;
-
-// const MovieButton = styled.button`
-//   cursor: pointer;
-//   //align-self: flex-start;
-//   background-color: rgba(0, 0, 0, 0.5);
-//   color: #fff;
-//   border: 3px solid #fff;
-//   font-size: 20px;
-//   padding: 0.5em;
-//   width: 180px;
-//   transition: all 0.5s;
-// `;
 
 const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState({});
