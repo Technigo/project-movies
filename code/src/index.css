@@ -136,24 +136,24 @@ a:link {
 @media screen and (max-width: 650px) {
 
   .details-body{
- background-color: black;
+    background-color: black;
    }
 
   .movie-box{
-   margin-top:40px; 
-flex-wrap:wrap-reverse;
-background-color: black;
-justify-content: center;
+    margin-top:40px; 
+    flex-wrap:wrap-reverse;
+    background-color: black;
+    justify-content: center;
   }
   .movie-summary{
-font-size: smaller;
-max-width: 85%;
-margin-top: 50px;
+    font-size: smaller;
+    max-width: 85%;
+    margin-top: 50px;
   }
 
   .movie-image{
-width: 85%;
-position: relative;
+    width: 85%;
+    position: relative;
   }
  
 }
