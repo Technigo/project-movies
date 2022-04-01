@@ -10,14 +10,15 @@ const MovieList = () => {
   useEffect(() => {
     fetch(BASE_URL)
       .then((res) => res.json())
-      .then((data) => setMovies(data.results));
+      .then((data) => setMovies(data.results))
+      .catch(error => console.error(error))
   }, []);
 
   return (
     <MovieContainer>
       {movies.map((movie) => (
-        <MovieWrapper>
-          <Link key={movie.id} to={`/movies/${movie.id}`}>
+        <MovieWrapper key={movie.id} >
+          <Link to={`/movies/${movie.id}`}>
             <MovieImage
               key={movie.title}
               src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}

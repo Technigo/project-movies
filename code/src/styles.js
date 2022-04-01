@@ -41,6 +41,10 @@ export const MovieImage = styled.img`
   width: 100%;
   object-fit: cover;
 
+  @media (orientation: landscape) {
+    height: 800px;
+  }
+
   @media (min-width: 1024px) {
     height: 500px;
   }
@@ -64,7 +68,7 @@ export const MovieOverlay = styled.div`
     opacity: 0;
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.75);
+      background-color: rgba(0, 0, 0, 0.60);
       opacity: 1;
     }
   }
@@ -94,7 +98,8 @@ export const MovieDetailsContainer = styled.div`
   min-height: 100vh;
   border: solid black;
   background-position: 50% 50%;
-  
+  background-image: ${(props) => (props.url)};
+
   @media (min-width: 1024px) {
     padding: 50px;
   }

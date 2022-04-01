@@ -27,11 +27,12 @@ const MovieDetails = () => {
   useEffect(() => {
     fetch(SINGLE_MOVIE_URL(movieId))
       .then((res) => res.json())
-      .then((data) => setMovies(data));
+      .then((data) => setMovies(data))
+      .catch(error => console.error(error))
   }, [movieId]);
 
   return (
-    <MovieDetailsContainer style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` }}>
+    <MovieDetailsContainer url={`url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})`} >
       <BackButton onClick={onBackButtonClick}>
         <BackArrow src={arrow} alt="back arrow icon"></BackArrow>
         <ButtonText>Movies</ButtonText>
