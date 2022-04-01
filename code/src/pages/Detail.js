@@ -27,7 +27,8 @@ useEffect (() => {
                     <div className="detailContent">
                     <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
                     <div className="detailText">
-                    <h1>{details.title}{details.vote_average}/10</h1>
+                    <h1>{details.title}</h1>
+                    <p>{details.vote_average}/10</p>
                     <p>{details.overview}</p>
                     </div>
                    </div>
