@@ -24,7 +24,7 @@ const PopularList = ({ allMovies }) => {
             <OverlayCard>
               <TextOverlay>
                 <h2>{movie.original_title}</h2>
-                <p>Release date:{movie.release_date}</p>
+                <p>Release date : {movie.release_date}</p>
               </TextOverlay>
             </OverlayCard>
           </Link>
