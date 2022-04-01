@@ -31,7 +31,7 @@ const Popular = () => {
                                     <ImageOverlay></ImageOverlay>
                                     <TextOverlay>
                                         <Filmtitle>{movie.title}</Filmtitle>
-                                        <p>Released {movie.release_date}</p>
+                                        <p>Released{movie.release_date}</p>
                                     </TextOverlay>
                                 </MovieDetails>
                             </FilmImageGroup>
