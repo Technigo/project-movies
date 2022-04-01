@@ -15,44 +15,54 @@
     width: 100%;
   }
   
-  .movie-container .cover-text{
-    position: absolute; 
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0,0,0,0.75);
-    display: none;
-    padding: 20px 20px 30px 20px;
-    line-height: 30px;
-  }
-  
-  .cover-text{
+  .cover-text {
     position: absolute;
+    color: white;
+    padding: 20px 20px 30px 20px;
+    bottom: 0;
   }
-  
+
   h1 {
-    font-size: 28px;
-  }
-
-  h3 {
-    font-size: 16px;
-    font-weight: 200;
-  }
-
-  .movie-container a:hover .cover-text {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-end;
+    display: none;
+    font-size: 45px;
   }
 
   @media screen and (min-width: 768px) {
     .movie-container a {
       width: 50%;
     }
-  }
+
+    .movie-container a:hover .cover-text {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: flex-end;
+    } 
+
+    .movie-container .cover-text{
+      position: absolute; 
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,0.75);
+      display: none;
+      padding: 20px 20px 30px 20px;
+      line-height: 30px;
+    }
+
+    h1 {
+      font-size: 28px;
+      display: inline-block;
+    }
   
+    h3 {
+      font-size: 16px;
+      font-weight: 200;
+    }
+
+  }
+
   @media screen and (min-width: 1024px) {
     .movie-container a {
       width: 25%;

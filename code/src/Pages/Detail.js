@@ -8,9 +8,8 @@ const ButtonText = styled.h3`
   font-size: 20px;
   margin: 0;
 `
- const GoBackButton = styled.button`
 
- ${BackIcon} 
+const GoBackButton = styled.button`
 
  padding: 10px; 
  width: 150px;
@@ -37,6 +36,7 @@ const ButtonText = styled.h3`
   transition: all 0.6s ease-in-out;
   display: flex;
  }
+
 `
 
 export const Detail = () => {
@@ -61,7 +61,7 @@ export const Detail = () => {
     <div className="detailPage">
       {detail && (
         <div className="background" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${detail.backdrop_path})` }}>
-          <GoBackButton onClick={onBackButtonClick}> <ButtonText>‹ Movies</ButtonText></GoBackButton>
+          <GoBackButton onClick={onBackButtonClick}><ButtonText>‹ Movies</ButtonText></GoBackButton>
           <div className="summary">
             <img src={`https://image.tmdb.org/t/p/w342${detail.poster_path}`} alt="poster" />
             <div className="detailText">
