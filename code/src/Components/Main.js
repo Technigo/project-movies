@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom"
 
 import Movies from "Components/Movies"
 import Details from "Components/Details"
-import {API_URL} from "utils/URLS"
+import { API_URL } from "utils/URLS"
 import NotFound from "Components/NotFound"
 
 const Main = () => {
@@ -21,13 +21,12 @@ const Main = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Movies movies={list} />} />
-        <Route path="/Details/:movieId" element={<Details details={list}/>} />
-        <Route path="/404" element={<NotFound/>} />
-        <Route path='*' element={<Navigate to="/404" replace/>}/>
+        <Route path="/Details/:movieId" element={<Details details={list} />} />
+        <Route path="/404" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
     </BrowserRouter>
   )
 }
 
 export default Main
-

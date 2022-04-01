@@ -4,13 +4,11 @@
 
 body {
   margin: 0;
- font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  
 }
 
 code {
@@ -18,22 +16,45 @@ code {
     monospace;
 }
 
-/* .test {
-  display: none;
-}
-
-.test:hover {
-  display: ;
-}
- */
-.cards { 
+.MovieContainer {
   display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
 
-
-
-.card {
+.MovieWrapper {
   position: relative;
+  width: 100%;
+  background-color: #000;
+}
+
+.MovieImage {
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.MovieOverlay {
+  color: #fff;
+  padding: 15px;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1));
+}
+
+.MovieTitle {
+  margin: 0;
+  font-size: 25px;
+}
+
+.releasedate {
+  text-transform: uppercase;
 }
 
 .home {
@@ -44,7 +65,7 @@ code {
   margin-left: 50px;
   background: none;
   border: 3px solid white;
-  transition: transform .3s;
+  transition: transform 0.3s;
   cursor: pointer;
   text-transform: uppercase;
 }
@@ -64,63 +85,60 @@ code {
 .home:hover {
   transform: scale(1.3);
   background: black;
-  color: white; 
+  color: white;
   border: none;
 }
 
 h1 {
   color: white;
+  max-width: 540px;
 }
 
 .details {
   display: flex;
-    align-items: flex-end;
-    padding: 50px;
-}
-
-.mainimage  {
-  width: 100%;
-  max-width: 667px;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 50px;
 }
 
 .detailsimage {
   border: solid 5px white;
   width: 20%;
+  min-width: 400px;
 }
 
 .background {
   min-height: 100vh;
-    display: flex;
-    background-size: cover;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-/* .overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transition: 0.5s ease;
-  background: rgba(0, 0, 0, 0.75);
-  opacity: 0;
-} */
-
-.overlay:hover {
-  opacity: 1;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 @media screen and (min-width: 720px) {
-  .cards { 
+  .MovieContainer {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .details {
+    display: flex;
+    flex-direction: row;
   }
 }
 
 @media screen and (min-width: 1020px) {
-  .cards { 
+  .MovieContainer {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .MovieImage {
+    height: 500px;
+  }
+
+  .MovieOverlay {
+    opacity: 0;
+  }
+
+  .MovieOverlay:hover {
+    background: rgba(0, 0, 0, 0.75);
+    opacity: 1;
   }
 }

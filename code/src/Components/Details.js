@@ -5,7 +5,6 @@ import { DETAIL_URL } from "utils/URLS"
 const Details = () => {
   const [details, setDetails] = useState([])
   const { movieId } = useParams()
-  //  const navigate = useNavigate()
 
   useEffect(() => {
     fetch(DETAIL_URL(movieId))
@@ -48,19 +47,3 @@ const Details = () => {
 }
 
 export default Details
-
-/* <h1>{movies.original_title}</h1>
-<h2>Release date: {movies.release_date}</h2>
-<h2>Description: {movies.overview}</h2>
-<h2>Rating: {movies.vote_average}</h2> 
-
-<button onClick={NotFound}>Home</button>
-
- const [details, setDetails] = useState(null) //set default to null an empty array is not the best according to Maksy
-  const {movieName} = useParams()
-  
-  if (details === null){
-    return <p>hej</p>
-  } 
-
-*/
