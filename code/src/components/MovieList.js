@@ -1,11 +1,26 @@
-import  React from 'react'
+import  React, { useEffect, useState }  from 'react'
 import { Link } from 'react-router-dom'
 
 
 
-export const MovieList = ({movies}) => {
+export const MovieList = () => {
     
+    const [movies, setMovies] = useState([])
+    const [loading, setLoading] = useState (false)
+    useEffect (() => {
+        setLoading(true)
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=49589a3567a395f78c10dc80e04eaf2d&language=en-US&page=1`)
+            .then((res) => res.json())
+            .then((json) => {
+                setMovies(json.results)
+            })
+            .finally(() => setLoading(false))
+  
+    }, [])
    
+    if (loading) {
+        return <h1 className="load">Loading in progess...</h1>
+    }
     return(
         
         <div className="list-card">

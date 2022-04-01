@@ -1,13 +1,10 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The projectbrief was to build a multi-page React application, using an API to fetch and display information about movies.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
+This project was done in pairprogramming. We started by planning our two components and doing our first API-fetch, after that we built one compinent at the time. If we would have more time we would have worked more on the styling doing styled components and also worked more with the responsivness.
 ## View it live
 
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.

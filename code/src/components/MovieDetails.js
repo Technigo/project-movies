@@ -22,19 +22,17 @@ export const MovieDetails = () => {
 
     return (
         <div className="cover">
-            
-            
             <img className="details-background"  src ={details.backdrop_path ? `${apiImageAddress}w1280${details.backdrop_path}` :''} alt="Background-poster" />
             <div className="details-info">
-            <img className ="details-img" src={details.poster_path ? `${apiImageAddress}w342${details.poster_path}`: ''} alt="Poster"/>
+                <img className ="details-img" src={details.poster_path ? `${apiImageAddress}w342${details.poster_path}`: ''} alt="Poster"/>
             <div className="details-text">
             <div className="details-title-rating">
-            <h2>{details.title}</h2>
-            <h3>{details.vote_average} /10</h3>
+                <h2>{details.title}</h2>
+                <h3>{details.vote_average} /10</h3>
             </div>
-            <p>{details.overview}</p>
+                <p>{details.overview}</p>
             </div>
-            <button onClick={onButtonClick}> ⇦ Movies</button>
+                <button onClick={onButtonClick}> ⇦ Movies</button>
             </div>
         </div>
     )

@@ -49,13 +49,11 @@ code {
     opacity: 0;
     transition-duration: 1s; 
     
-   
-    
+       
 }
 .details-background{
   width:100vw;
   height:100vh;
-  
   object-fit: cover;
   mask-image: linear-gradient(360deg, rgba(33, 16, 189, 0) , rgb(184, 33, 33) 20%); 
   
@@ -102,3 +100,26 @@ button:hover{
 
 }
 
+.notfound{
+  color:white; 
+  text-align: center; 
+  margin-top:60px; }
+
+.notfound-button{
+  font-weight: 700;
+  background-color:rgba(219, 28, 28, 0.5);
+	border-radius:19px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:7px 10px;
+	text-decoration:none;
+
+}
+.load{
+  color: #ffffff;
+  text-align: center;
+  margin-top: 200px;
+}
