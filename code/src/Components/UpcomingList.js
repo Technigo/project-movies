@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export const UpcomingList = ({ movieList }) => {
 	const [filteredMovieList, setfilteredMovieList] = useState(movieList)
-	const [filter, setFilter] = useState('All')
+	const [filter, setFilter] = useState()
 	const [sorting, setSorting] = useState()
 
 	// ADDED second useEffect to filter movies based on genre
@@ -127,7 +127,7 @@ export const UpcomingList = ({ movieList }) => {
 	return (
 		<main>
 			{/* {loading && <LoadingItem />} */}
-			<div>
+			<div className='filter-sorting-bar'>
 				{/* ADDED options to choose to filter based on genre */}
 				<label htmlFor='filter'>
 					<select
@@ -135,6 +135,10 @@ export const UpcomingList = ({ movieList }) => {
 						value={filter}
 						onChange={(e) => setFilter(e.target.value)}
 					>
+						{' '}
+						<option selected='true' disabled='disabled'>
+							Choose Genre &#9660;
+						</option>
 						<option value='All'>All</option>
 						<option value='Action'>Action</option>
 						<option value='Adventure'>Adventure</option>
@@ -163,6 +167,10 @@ export const UpcomingList = ({ movieList }) => {
 						value={sorting}
 						onChange={(e) => setSorting(e.target.value)}
 					>
+						{' '}
+						<option selected='true' disabled='disabled'>
+							Sort Movies &#9660;
+						</option>
 						<option value='popularity'>most popular</option>
 						<option value='released'>recently released</option>
 					</select>
