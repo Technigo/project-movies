@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { API_DETAILS } from '../utils/urls'
+import '../css/detail.css'
 
 
 const Detail = () => {
@@ -21,11 +22,15 @@ useEffect (() => {
         <section>
             {details && (
              <div style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }} >
-                <div>
-                    <button onClick={onBackButtonClick}>Back to list of movies</button>
+                <div className="detailGrid">
+                    <button onClick={onBackButtonClick}>back to movies</button>
+                    <div className="detailContent">
+                    <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
+                    <div className="detailText">
                     <h1>{details.title}{details.vote_average}/10</h1>
                     <p>{details.overview}</p>
-                    <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
+                    </div>
+                   </div>
                 </div>
              </div>
             )} 

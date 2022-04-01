@@ -16,7 +16,6 @@ main {
   display: grid;
 }
 
-
 /* ------------------ MEDIA QUERIES ------------------ */
 @media screen and (min-width: 768px) {
   main {
@@ -29,4 +28,3 @@ main {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-

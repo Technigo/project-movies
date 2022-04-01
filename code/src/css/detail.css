@@ -1,0 +1,50 @@
+/* .detailGrid {
+ 
+} */
+
+button {
+  background-color: red;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-variant: small-caps;
+  font-size: 32px;
+  line-height: 0.8;
+  margin-top: 2%;
+  margin-left: 2%;
+  padding: 10px;
+  border-style: none;
+  height: 3em;
+  /* box-shadow: 5px 5px rgba(0, 0, 0, 0.2); */
+  border-radius: 15px 50px;
+  width: 160px;
+  height: 120px;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.detailContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  margin: 2%;
+  width: 100%;
+}
+
+.detailGrid img {
+  border: 5px solid white;
+  margin-right: 1%;
+}
+
+.detailText {
+  display: grid;
+
+  grid-auto-rows: 70px;
+  grid-gap: 1em;
+  background-color: rgb(218, 107, 107);
+  color: white;
+  padding: 1em;
+  max-width: 200px;
+}
