@@ -25,11 +25,12 @@ export const App = () => {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     
-    @media (min-width: 768px) {
+    
+    @media (min-width: 415px) and (max-width: 820px) {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: 821px) {
       grid-template-columns: repeat(4, 1fr);
     }
 `;
