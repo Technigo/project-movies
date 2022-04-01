@@ -18,8 +18,8 @@ const Details = () => {
 
   return (
     <div>
-      <Link to='/'>
-      <button className="home">Home</button>
+      <Link to="/">
+        <button className="home">Movies</button>
       </Link>
 
       <div
@@ -28,16 +28,19 @@ const Details = () => {
           backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})`,
         }}
       >
-        <div>
+        <div className="details">
           <img
+            className="detailsimage"
             src={`https://image.tmdb.org/t/p/w342${details.poster_path}`}
             alt={details.title}
           />
-
-          <h2>Release date: {details.release_date}</h2>
-          <h2>Description: {details.overview}</h2>
-          <h2>Rating: {details.vote_average}</h2>
-          <p>{details.original_title}</p>
+          <div className="detail">
+            <h1>
+              {details.original_title}
+              <span className="vote"> {details.vote_average}/10</span>
+            </h1>
+            <h1 className="overview">Description: {details.overview}</h1>
+          </div>
         </div>
       </div>
     </div>

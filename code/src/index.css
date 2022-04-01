@@ -30,22 +30,35 @@ code {
   display: grid;
 }
 
+
+
 .card {
   position: relative;
 }
 
 .home {
-  
   position: fixed;
   margin: 20px;
   padding: 15px;
   font-size: 25px;
+  margin-left: 50px;
   background: none;
   border: 3px solid white;
   transition: transform .3s;
   cursor: pointer;
-
   text-transform: uppercase;
+}
+
+.vote {
+  color: red;
+}
+
+.overview {
+  font-weight: 400;
+}
+
+.detail {
+  margin-left: 20px;
 }
 
 .home:hover {
@@ -55,12 +68,24 @@ code {
   border: none;
 }
 
+h1 {
+  color: white;
+}
 
-.card, img {
+.details {
+  display: flex;
+    align-items: flex-end;
+    padding: 50px;
+}
+
+.mainimage  {
   width: 100%;
   max-width: 667px;
-    
-  
+}
+
+.detailsimage {
+  border: solid 5px white;
+  width: 20%;
 }
 
 .background {
