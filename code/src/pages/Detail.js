@@ -29,13 +29,13 @@ useEffect (() => {
                     <div className="detailContent">
                     <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
                     <div className="detailText">
-                    <h1>{details.title}</h1>
-                    <p>{details.vote_average}/10</p>
+                    <h1>{details.title} <span className="detail-vote">{details.vote_average}/10</span></h1>
+                    {/* <p>{details.vote_average}/10</p> */}
                     <p>{details.overview}</p>
                     </div>
                    </div>
                 </div>
-                </div>
+               </div>
             )} 
         </section>
     )

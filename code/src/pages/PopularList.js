@@ -14,12 +14,12 @@ const PopularList = ({movielist}) => {
                         src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
                         alt={movie.title}
                     />
-                    <div className="overlay">
+                    {/* <div className="overlay"> */}
                       <div className="title-container">
                         <h1>{movie.title}</h1>
                         <p>Released {movie.release_date}</p>
                       </div> 
-                    </div> 
+                    {/* </div>  */}
                 </Link>
             ))}
         </div>

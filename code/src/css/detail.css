@@ -1,9 +1,13 @@
 .details-container {
+  display: grid;
   background-size: cover;
   background-position: center;
   position: absolute;
   height: 100%;
   width: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%);
+  font-weight: 700;
+  /* align-content: flex-end; */
   /* background-repeat: no-repeat ; */
 }
 .movie-background {
@@ -18,9 +22,11 @@
 
  .detailGrid {
   display: grid;
-  align-items: flex-end;
+  overflow: scroll;
+  /* align-content: flex-end; */
   /* margin-left:10px; */
-  height: 100vh;
+  /* height: 100vh; */
+  /* width: 40%; */
   /* margin: -150px 0; */
   /* position: absolute;
   top: 0;
@@ -35,7 +41,7 @@ button {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-variant: small-caps;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 0.8;
   margin-top: 2%;
   margin-left: 2%;
@@ -43,9 +49,9 @@ button {
   border-style: none;
   height: 3em;
   /* box-shadow: 5px 5px rgba(0, 0, 0, 0.2); */
-  border-radius: 15px 50px;
-  width: 160px;
-  height: 120px;
+  border-radius: 10px 40px;
+  width: 120px;
+  height: 80px;
   cursor: pointer;
 }
 
@@ -55,24 +61,65 @@ button:hover {
 
 .detailContent {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  align-content: flex-end;
   margin: 2%;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .detailGrid img {
-  border: 5px solid white;
-  margin-right: 1%;
+  border: 5px solid #ffffff;
+  /* margin: 30vh 1% 10vh 2%; */
+  /* margin-left: 2%; */
+  width: 50vw;
+  /* margin-top: 40%; */
 }
 
 .detailText {
   display: grid;
-
-  grid-auto-rows: 70px;
-  grid-gap: 1em;
-  background-color: rgb(218, 107, 107);
+  /* grid-auto-rows: 70px; */
+  /* grid-gap: 1em; */
+  /* background-color: rgb(218, 107, 107); */
   color: white;
   padding: 1em;
-  max-width: 200px;
+  /* max-width: 200px; */
+}
+.detail-vote {
+  padding-left: 2vw;
+  font-size: 16px;
 }
 
+h1 {
+  margin: 0;
+}
+
+
+
+
+/* ------------------ MEDIA QUERIES ------------------ */
+@media screen and (min-width: 768px) {
+  .detailGrid img {
+    width: 30vw;
+    /* margin: 30% 1% 2% 2%; */
+  }
+  .detailContent {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  /* .detailText {
+    grid-template-rows: auto;
+  } */
+  button {
+    font-size: 32px;
+    width: 160px;
+    height: 120px;
+    border-radius: 15px 50px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .detailGrid img {
+    /* width: 30vw; */
+  }
+}
