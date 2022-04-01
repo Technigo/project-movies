@@ -20,11 +20,7 @@ code {
   width: 100%;
 }
 
-.movie-card:hover {
-  filter: brightness(50%);
-}
-
-.movie-card:hover .movie-text {
+.movie-card .movie-text {
   display: block;
 }
 
@@ -35,7 +31,6 @@ code {
 
 .movie-image {
   width: 100%;
-  /* border: 4px solid rgba(0, 0, 0, 0.719); */
 }
 
 .movie-text {
@@ -48,7 +43,7 @@ code {
 }
 
 .movie-title {
-  font-size: 2rem;
+  font-size: 1.4rem;
   opacity: 1;
   color: #fff;
 }
@@ -78,15 +73,6 @@ code {
   border-radius: 10px;
   border: 4px solid rgba(0, 0, 0, 0.719);
 }
-
-/* .detail-movie-text {
-  position: absolute;
-  bottom: 10px;
-  left: 20px;
-  z-index: 2;
-  display: none;
-  color: white;
-} */
 
 .detail-movie-text-container {
   background-color: rgba(0, 0, 0, 0.719);
@@ -131,21 +117,59 @@ code {
 
 /* -- Tablet -- */
 @media (min-width: 667px) and (max-width: 1024px) {
+  .movie-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .movie-title {
+    font-size: 1.6rem;
+  }
+
+  .detail-movie-image {
+    width: 15rem;
+  }
+
 }
 
 /* -- Desktop -- */
 @media (min-width: 1025px) {
+
   .movie-wrapper {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .detail-movie-image-text-container {
-    flex-direction: row;
-    align-items: flex-end;
+  .movie-card:hover .movie-image {
+    filter: brightness(50%);
+  }
+  
+  .movie-card:hover .movie-text {
+    display: block;
+  }
+
+  .movie-card .movie-text {
+    display: none;
+  }
+
+  .movie-title {
+    font-size: 2rem;
   }
 
   .detail-movie-image {
     width: 20rem;
+  }
+
+  .back-button:hover {
+    transform: translateX(10px);
+    transition: transform 500ms ease-in-out;
+  }
+}
+
+/* -- Tablet and desktop -- */
+@media (min-width: 667px) {
+
+  .detail-movie-image-text-container {
+    flex-direction: row;
+    align-items: flex-end;
   }
 
   .detail-movie-text-container {
@@ -159,10 +183,5 @@ code {
   .back-button::before {
     font-size: 2.5rem;
     font-weight: 900;
-  }
-
-  .back-button:hover {
-    transform: translateX(10px);
-    transition: transform 500ms ease-in-out;
   }
 }
