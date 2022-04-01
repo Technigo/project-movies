@@ -87,6 +87,18 @@ code {
   z-index: 100;
 }
 
+.info-child {
+  max-width: 35ch;
+}
+
+.container {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
 @media screen and (min-width: 667px) {
 
   .info-child {
