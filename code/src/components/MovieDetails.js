@@ -32,7 +32,7 @@ const MovieDetails = () => {
   }, [movieId]);
 
   return (
-    <MovieDetailsContainer url={`url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})`} >
+    <MovieDetailsContainer url={movies.backdrop_path ? `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})` : ''} >
       <BackButton onClick={onBackButtonClick}>
         <BackArrow src={arrow} alt="back arrow icon"></BackArrow>
         <ButtonText>Movies</ButtonText>
@@ -40,7 +40,7 @@ const MovieDetails = () => {
       <MovieDetailsWrapper>
         <Poster
           key={movies.title}
-          src={`https://image.tmdb.org/t/p/w300${movies.poster_path}`}
+          src={movies.poster_path ? `https://image.tmdb.org/t/p/w300${movies.poster_path}` : ''}
           alt="movie posters"
         ></Poster>
         <MovieDetail>

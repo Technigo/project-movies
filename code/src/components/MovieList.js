@@ -21,7 +21,7 @@ const MovieList = () => {
           <Link to={`/movies/${movie.id}`}>
             <MovieImage
               key={movie.title}
-              src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+              src={movie.poster_path ? `https://image.tmdb.org/t/p/w300${movie.poster_path}` : ''}
               alt="movie posters"
             ></MovieImage>
             <MovieOverlay>
