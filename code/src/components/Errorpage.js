@@ -5,27 +5,39 @@ import styled from 'styled-components'
 const Errorpage = () => {
 
     const StyledErrorBackLink = styled(Link)`
-        background-color: white;
-        width: 200px;
-        margin: 50px;
+        position: absolute; 
+        background-color: white;               
+        margin: 30px 0 0 30px;   
+        padding: 15px;   
         color: black;
+        font-weight: 700;  
         text-decoration: none;
         border-radius: 10px;
-        text-align: center;
-        padding: 10px;
+        display: flex;        
 
-        &:hover {
-            filter: brightness(80%);
+        &:hover {      
+            transition: 0.5s ease;      
+            filter: invert(70%);
         }
     `
 
+    const Div = styled.div`
+        height: 100vh;
+    `
+
+
+    const ErrorText = styled.h2`
+        color: white;
+        margin: 100px 0 0 30px;
+    `
+    
     return (
-        <div style={{height: '100vh'}}>
-            <nav style={{margin: '20px'}}>
+        <Div>
+            <nav>
                 <StyledErrorBackLink to="/">Back to movielist page</StyledErrorBackLink>
             </nav>
-            <h1 style={{color: 'white'}}>Error - page does not exist</h1>
-        </div>
+            <ErrorText>Error - page does not exist</ErrorText>
+        </Div>
     )
 }
 

@@ -16,18 +16,18 @@ export const App = () => {
     .then(res => res.json())
     .then(data => {
       setApiData(data.results);
-      console.log(data.results)
     })
   }, [])
 
   const Grid = styled.main`
     background-color: black;
+    
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     
     
     @media (min-width: 415px) and (max-width: 820px) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
 
     @media (min-width: 821px) {
