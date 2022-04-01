@@ -76,7 +76,8 @@ h1 {
 
 .navbar a.active {
 	border-bottom: 2px solid red;
-	padding-inline: 0.1em;
+	padding-right: 0.1em;
+	padding-left: 0.1em;
 	transition: all 0.25s ease-in-out;
 }
 
