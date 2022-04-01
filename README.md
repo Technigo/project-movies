@@ -9,4 +9,4 @@ multiple pages using react router. Lastly we focused on styling the site using s
 
 ## View it live
 
-https://beamish-douhua-9f9e81.netlify.app/movies/568124
+https://friendly-sawine-a52901.netlify.app/
