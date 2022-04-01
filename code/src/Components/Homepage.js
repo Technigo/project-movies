@@ -5,6 +5,8 @@ import { BASE_URL } from 'utils/urls';
 import MovieList from 'Components/MovieList';
 import MovieDetails from 'Components/MovieDetails';
 
+// MAIN API FETCH AND ROUTES
+
 const Homepage = () => {
 
   const [movies, setMovies] = useState([]);

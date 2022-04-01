@@ -1,3 +1,4 @@
+/* GENERAL STYLING */
 * {
 box-sizing: border-box; 
 }
@@ -17,6 +18,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* STYLING OF MAIN PAGE */
 
 .list {
   display: flex;
@@ -48,6 +51,8 @@ code {
 .movie-poster {
   width:100%
 }
+
+/* OVERLAY AND HOVER EFFECT STYLING */
 
 .movie-image-overlay {
   position: absolute;
@@ -81,12 +86,14 @@ code {
   color: white;
 }
 
-.background {
-  background-size: cover;
-}
+/* STYLING OF SECOND PAGE */
 
 .more-page {
   position: relative;
+}
+
+.background {
+  background-size: cover;
 }
 
 .poster {
@@ -122,6 +129,8 @@ button {
   color: white;
   font-weight: 700;
 }
+
+/* MEDIA QUERIES */
 
 @media (min-width: 667px) {
   .list {

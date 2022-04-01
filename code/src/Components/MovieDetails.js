@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { SINGLE_MOVIE_URL } from 'utils/urls';
 
+// DISPLAY OF SECOND PAGE AND MORE INFO
+
 const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState([]);
   const {movieTitle} = useParams();

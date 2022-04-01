@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// DISPLAY OF STARTER PAGE
+
 const MovieList = ({ movies }) => {
   return (
     <section className="list">
