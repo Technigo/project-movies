@@ -103,4 +103,5 @@ const MovieDescription = styled.div`
 
 const MovieImage = styled.img`
     border: 10px solid white;
+    max-width: 65%;
 `
