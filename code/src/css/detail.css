@@ -63,7 +63,7 @@ button:hover {
 .detail-content {
   display: grid;
   align-content: flex-end;
-  margin: 2%;
+  margin: 10% 0 2% 2%;
   /* width: 100%; */
 }
 
@@ -84,6 +84,8 @@ button:hover {
 .detail-vote {
   padding-left: 2vw;
   font-size: 16px;
+  font-weight: 400;
+  color: red;
 }
 
 h1 {
@@ -105,6 +107,10 @@ h1 {
   /* .detailText {
     grid-template-rows: auto;
   } */
+  .detail-text {
+    width: 25vw;
+    align-content: flex-end;
+    } 
   button {
     font-size: 32px;
     width: 160px;
@@ -119,16 +125,9 @@ h1 {
 @media screen and (min-width: 1024px) {
     .detail-content {
     grid-template-columns: 1fr 1fr 2fr;
-    margin-top: 7vw;
+    margin-top: 15%;
   }
-
-
-  
   .detail-grid img {
     width: 25vw; 
   }
-  .detail-text {
-    width: 25vw;
-    align-content: flex-end;
-    } 
 }
