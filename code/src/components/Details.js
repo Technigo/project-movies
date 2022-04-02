@@ -9,7 +9,7 @@ padding: 10px;
 color: green;
 background-color: red;
 font-style: italic;
-` 
+`
 
 const Details = () => {
 
@@ -22,29 +22,37 @@ const Details = () => {
 
     const onBackButtonClick = () => {
         navigate(-1)
-        // navigate('/')
     }
 
 
     useEffect(() => {
         fetch(SINGLE_MOVIE_URL(movieId))
             .then(res => res.json())
-            // .then(data => console.log(data))
             .then(data => setDetails(data))
-            // console.log(data)
     }, [movieId])
 
     return (
-    <div>
-         <GoBackButton onClick={onBackButtonClick}>Movies</GoBackButton>
-        <div>{details.title}</div>
-        <div>{details.vote_average}</div>
-        <div>{details.overview}</div>
-        <img src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt="poster-img" /> 
-        <img src={`https://image.tmdb.org/t/p/w1280/${details.backdrop_path}`} alt="backdrop-img" /> 
-    </div>
-    
+        <MovieDetailsPage style={{
+            backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${details.backdrop_path})`
+        }}>
+            <GoBackButton onClick={onBackButtonClick}>Movies</GoBackButton>
+
+            <div>{details.title}</div>
+            <div>{details.vote_average}</div>
+            <div>{details.overview}</div>
+            <img src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt="poster-img" />
+        </MovieDetailsPage>
+
     )
 }
 
 export default Details
+
+
+
+const MovieDetailsPage = styled.div`
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+`
