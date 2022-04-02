@@ -24,11 +24,11 @@ useEffect (() => {
                 <div className="details-container">
                 {/* <div style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }} > */}
                 <img className="movie-background" src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt={details.title} />
-                <div className="detailGrid">
+                <div className="detail-grid">
                     <button onClick={onBackButtonClick}>back to movies</button>
-                    <div className="detailContent">
+                    <div className="detail-content">
                     <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
-                    <div className="detailText">
+                    <div className="detail-text">
                     <h1>{details.title} <span className="detail-vote">{details.vote_average}/10</span></h1>
                     {/* <p>{details.vote_average}/10</p> */}
                     <p>{details.overview}</p>

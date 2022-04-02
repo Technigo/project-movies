@@ -1,3 +1,9 @@
+The assignement was to build a multi-page React application using an API from themoviedb.org where we fetched a list of movies to display them on a main page and make each move a clickable link to its own detail page where you can find more information about the movie.
+
+We started by collecting the apikey.
+
+Lastly we styled the app with css and adjusting it to be responsive using media queries.
+
 # Technigo React Starter App
 
 This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
