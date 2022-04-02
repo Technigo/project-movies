@@ -21,14 +21,14 @@ const Details = () => {
       <img className='backdrop' src={`https://image.tmdb.org/t/p/original${details.backdrop_path}`} alt="backdrop" />
       <div className='details-wrapper'>
       <div className="backbutton" onClick={() => navigate(-1)}> <i className="arrow-left"></i></div>
-        <img className="movie-img" src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
+        <img className="movie-img-details" src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
         <div className='details-info'>
           <div className='details-title-votes white'>
             <h2>{details.title}</h2> <span className='rating'> <img className='star' src="/star.png" alt="rating" />{details.vote_average}</span>
             <p className='overview white'>{details.overview}</p>
           </div>
         </div>
-      </div>
+        </div>
     </div>
   )
 }

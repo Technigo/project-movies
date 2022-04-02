@@ -20,7 +20,10 @@ a {
 
 .movie-img {
   width: 360px;
+  display: flex;
 }
+
+
 `
 
 export default GlobalStyles
