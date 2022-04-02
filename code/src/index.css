@@ -14,6 +14,12 @@ code {
 
 h1 {
 	margin: 0;
+	text-transform: uppercase;
+	font-size: 2.25rem;
+}
+
+h2 {
+	margin: 0;
 }
 
 .main {
@@ -54,15 +60,45 @@ h1 {
 	opacity: 0.9;
 }
 
+/*====SELECT/OPTION styles====*/
+.filter-sorting-bar {
+	display: flex;
+	gap: 1rem;
+	padding: 1em;
+}
+
+option,
+select,
+option:active,
+select:active {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: #111111;
+	color: #fff;
+	font-family: inherit;
+}
+
+select:focus {
+	background: #fff;
+	outline: none;
+}
+
+select {
+	font-size: 16px;
+	padding: 5px 0;
+	border-color: #fff;
+	padding: 0.25rem;
+	font-weight: 900;
+	border: 2px solid red;
+}
+
 /*====== HEADER STYLE =====*/
 .filter-sorting-bar {
 	background: #111111;
 }
 
 .navbar {
-	/* display: flex;
-	justify-content: space-between;
-	align-items: center; */
 	padding: 1em;
 	width: 100vw;
 }
@@ -85,7 +121,8 @@ h1 {
 
 .moviedetail-wrapper {
 	position: relative;
-	min-height: 100vh;
+	min-height: 80vh;
+	padding-bottom: 2em;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -93,13 +130,14 @@ h1 {
 
 .back-link {
 	padding: 20px;
+	padding-bottom: 5px;
 	display: flex;
 	align-items: center;
 	text-decoration: none;
 }
 
 .back-btn {
-	font-size: 16px;
+	font-size: 1.125rem;
 	color: #ffffff;
 	background: none;
 	border: none;
@@ -110,7 +148,8 @@ h1 {
 	align-items: center;
 }
 
-.back-btn--text {
+.back-btn--text,
+path {
 	padding-left: 0.25em;
 }
 
@@ -141,6 +180,7 @@ h1 {
 }
 
 .vote-average {
+	font-size: 1.125rem;
 	color: red;
 	font-weight: 400;
 }
@@ -180,38 +220,12 @@ h1 {
 	}
 }
 
-/*====SELECT/OPTION styles====*/
-.filter-sorting-bar {
-	display: flex;
-	gap: 1rem;
-	padding: 1em;
-}
-
-option,
-select,
-option:active,
-select:active {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-}
-
-select:focus {
-	background: #fff;
-	outline: none;
-}
-
-select {
-	font-size: 16px;
-	padding: 5px 0;
-	border-color: #fff;
-	padding: 0.25rem;
-	font-weight: 900;
-	border: 1px solid red;
-}
-
 /* =====TABLETS AND DESKTOP STYLING=====*/
 @media screen and (min-width: 768px) {
+	h1 {
+		font-size: 2.75rem;
+	}
+
 	.movie-wrapper {
 		width: 25%;
 	}
@@ -222,15 +236,40 @@ select {
 		align-items: center;
 	}
 
+	.navbar a {
+		font-size: 20px;
+	}
+
 	.detail-wrapper {
 		flex-direction: row;
 		justify-content: flex-start;
 	}
+
 	.detail-info {
 		margin-top: auto;
 		max-width: 600px;
 	}
+
+	.back-btn {
+		font-size: 1.5rem;
+	}
+
 	.detail-info-img {
-		max-width: 300px;
+		max-width: 400px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	h1 {
+		font-size: 3.75rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+		margin: 0.1em;
+	}
+
+	.back-btn {
+		font-size: 1.75rem;
 	}
 }

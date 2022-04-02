@@ -136,7 +136,7 @@ export const MovieList = ({ movieList }) => {
 					>
 						{' '}
 						<option selected='true' disabled='disabled'>
-							Choose Genre &#9660;
+							CHOOSE GENRE &#9660;
 						</option>
 						<option value='All'>All</option>
 						<option value='Action'>Action</option>
@@ -167,7 +167,7 @@ export const MovieList = ({ movieList }) => {
 						onChange={(e) => setSorting(e.target.value)}
 					>
 						<option selected='true' disabled='disabled'>
-							Sort Movies &#9660;
+							SORT MOVIES &#9660;
 						</option>
 						<option value='popularity'>by popularity</option>
 						<option value='released'>by released date</option>
@@ -189,7 +189,7 @@ export const MovieList = ({ movieList }) => {
 							/>
 						</div>
 						<div className='overlay'>
-							<h1>{movie.title}</h1>
+							<h2>{movie.title}</h2>
 							<p>Released {movie.release_date}</p>
 						</div>
 					</Link>
