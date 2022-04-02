@@ -52,40 +52,6 @@ code {
   width:100%
 }
 
-/* OVERLAY AND HOVER EFFECT STYLING */
-
-.movie-image-overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: transparent;
-  transition: 0.5s ease;
-}
-
-.movie-text-overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  color: rgba(0, 0, 0, 0);
-  transition: 0.5s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 15px;
-}
-
-.movie-box:hover .movie-image-overlay {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.movie-box:hover .movie-text-overlay {
-  color: white;
-}
-
 /* STYLING OF SECOND PAGE */
 
 .more-page {
@@ -157,4 +123,38 @@ button {
   .movie-box {
     width: 25%;
   }
+
+  /* OVERLAY AND HOVER EFFECT STYLING ONLY ON DESKTOP VIEW */
+
+  .movie-image-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    transition: 0.5s ease;
+  }
+  
+  .movie-text-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: rgba(0, 0, 0, 0);
+    transition: 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 15px;
+  } 
+  
+  .movie-box:hover .movie-image-overlay {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .movie-box:hover .movie-text-overlay {
+  color: white;
+}
 }
