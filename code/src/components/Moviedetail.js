@@ -47,23 +47,28 @@ const Moviedetail = () => {
         height: 100vh;
         width: 100vw;
         
+        
+        
     `
 
     const BackdropImage = styled.img`               
-        height: 100%;        
+        height: 100vh;        
         object-fit: cover;
     `
 
     const MovieInfo = styled.section`
         position: absolute;
         margin-left: 30px;
-
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        height: 90vh;
+        
         @media (min-width: 550px) {
             margin-left: 30px;               
         }
 
         @media (min-width: 768px) {
-            margin-top: 90vh;
             margin-left: 30px; 
             display: flex;
             flex-direction: column;
@@ -79,6 +84,7 @@ const Moviedetail = () => {
 
         @media (max-width: 768px) {
             width: 150px;
+            margin-right: 0;
         }
 
         @media (min-width: 375px) and (max-width: 767px) {
@@ -90,8 +96,8 @@ const Moviedetail = () => {
         position: absolute;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         width: 80vw;
-        margin-top: 40vh;
         background-color: rgba(0, 0, 0, 0.637);
         border-radius: 10px;          
 
@@ -109,19 +115,20 @@ const Moviedetail = () => {
         @media (min-width: 1200px) {
             margin-top: 55vh;
             width: 50vw;
+            margin-left: 20vw;
         }
         
     `
     const MovieTitle = styled.p`
-        font-size: 30px;
-        margin: 15px;
+        font-size: 23px;
+        margin: 10px;
 
         @media (min-width: 768px) {
         font-size: 45px;
         }
 
         @media (min-width: 992px) {
-        font-size: 50px;
+        font-size: 40px;
         }
 
         @media (min-width: 1200px) {
@@ -133,14 +140,14 @@ const Moviedetail = () => {
     const MovieOverview = styled.p`
         display: block;
         font-size: 15px;
-        margin: 15px;
+        margin: 10px;
 
         @media (min-width: 768px) {
             font-size: 20px;
         }
 
         @media (min-width: 992px) {
-            font-size: 28px;
+            font-size: 22px;
         }
 
         @media (min-width: 1200px) {
@@ -148,16 +155,16 @@ const Moviedetail = () => {
         }
     `
     const MovieRating = styled.p`
-        font-size: 20px;
+        font-size: 18px;
         color: green;
-        margin: 15px;
+        margin: 10px;
 
         @media (min-width: 768px) {
             font-size: 20px;
         }
 
         @media (min-width: 992px) {
-            font-size: 28px;
+            font-size: 22px;
         }
 
         @media (min-width: 1200px) {
