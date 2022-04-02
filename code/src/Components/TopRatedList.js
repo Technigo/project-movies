@@ -191,7 +191,7 @@ export const TopRatedList = ({ movieList }) => {
 							/>
 						</div>
 						<div className='overlay'>
-							<h1>{movie.title}</h1>
+							<h2>{movie.title}</h2>
 							<p>Released {movie.release_date}</p>
 						</div>
 					</Link>

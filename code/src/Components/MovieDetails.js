@@ -14,7 +14,6 @@ const Spangenre = styled.span`
 	background-color: #fff;
 	color: #111;
 	padding: 0.5rem;
-	border-radius: 1rem;
 `
 
 export const MovieDetails = () => {
@@ -50,8 +49,8 @@ export const MovieDetails = () => {
 			<div className='back-link'>
 				<button onClick={onBackButtonClick} className='back-btn'>
 					<svg
-						width='25'
-						height='25'
+						width='30'
+						height='30'
 						viewBox='0 0 80 80'
 						fill='none'
 						xmlns='http://www.w3.org/2000/svg'
