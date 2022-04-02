@@ -137,7 +137,7 @@ export const TopRatedList = ({ movieList }) => {
 						onChange={(e) => setFilter(e.target.value)}
 					>
 						<option selected='true' disabled='disabled'>
-							Choose Genre &#9660;
+							CHOOSE GENRE &#9660;
 						</option>
 						<option value='All'>All</option>
 						<option value='Action'>Action</option>
@@ -169,7 +169,7 @@ export const TopRatedList = ({ movieList }) => {
 					>
 						{' '}
 						<option selected='true' disabled='disabled'>
-							Sort Movies &#9660;
+							SORT MOVIES &#9660;
 						</option>
 						<option value='popularity'>most popular</option>
 						<option value='released'>recently released</option>

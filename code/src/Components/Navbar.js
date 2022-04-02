@@ -14,7 +14,7 @@ export const Navbar = () => {
 	return (
 		<NavbarDiv>
 			<div className='navbar'>
-				<h1>SITE NAME</h1>
+				<h1>Movie town</h1>
 				<div className='navlinks'>
 					<NavLink to='/'>Popular</NavLink>
 					<NavLink to='/toprated'>Top Rated</NavLink>
