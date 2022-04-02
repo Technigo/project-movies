@@ -8,8 +8,6 @@
   width: 100%;
   background: linear-gradient(190deg, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%);
   font-weight: 700;
-  /* align-content: flex-end; */
-  /* background-repeat: no-repeat ; */
 }
 .movie-background {
   display:inline-block;
@@ -21,22 +19,10 @@
   object-fit: cover;
   background-repeat: no-repeat ;
 }
-
  .detailGrid {
   display: grid;
   overflow: scroll;
-  /* align-content: flex-end; */
-  /* margin-left:10px; */
-  /* height: 100vh; */
-  /* width: 40%; */
-  /* margin: -150px 0; */
-  /* position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0; */
 }
-
 button {
   background-color: red;
   color: white;
@@ -55,31 +41,22 @@ button {
   height: 80px;
   cursor: pointer;
 }
-
 button:hover {
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-
 .detail-content {
   display: grid;
   align-content: flex-end;
   margin: 10% 0 2% 2%;
-  /* width: 100%; */
 }
-
 .detail-grid img {
   border: 5px solid #ffffff;
-  /* margin: 30vh 1% 10vh 2%; */
-  /* margin-left: 2%; */
   width: 50vw;
-  /* margin-top: 40%; */
 }
-
 .detail-text {
   display: grid;
   color: white;
   padding: 1em;
- 
 }
 .detail-vote {
   padding-left: 2vw;
@@ -87,26 +64,18 @@ button:hover {
   font-weight: 400;
   color: red;
 }
-
 h1 {
   margin: 0;
 }
-
-
-
 
 /* ------------------ MEDIA QUERIES ------------------ */
 @media screen and (min-width: 768px) {
   .detail-grid img {
     width: 30vw;
-    /* margin: 30% 1% 2% 2%; */
   }
   .detail-content {
     grid-template-columns: 1fr 1fr 2fr;
   }
-  /* .detailText {
-    grid-template-rows: auto;
-  } */
   .detail-text {
     width: 25vw;
     align-content: flex-end;
@@ -123,8 +92,7 @@ h1 {
 }
 
 @media screen and (min-width: 1024px) {
-    .detail-content {
-    grid-template-columns: 1fr 1fr 2fr;
+  .detail-content {
     margin-top: 15%;
   }
   .detail-grid img {

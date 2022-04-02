@@ -1,13 +1,17 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignement was to build a multi-page React route application using an API from themoviedb.org where we fetched a list of movies to display them on a main page and make each move a clickable link to its own detail page where you can find more information about the movie.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started by collecting the apikey and build the route pages.
+By following the technigo lessons, searching on SO and google we fetched the API data into our pages step by step
+Lastly we styled the app with css and adjusting it to be responsive using media queries.
+
+If we had more time we would have tried to apply:
+ - original size for the images incl. setLoading to get a better resolution and faster upload
+ - 404 not found page
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://superb-croissant-84438c.netlify.app/
