@@ -24,9 +24,7 @@ const Details = () => {
     }, [movieId])
 
     return (
-        <MovieDetailsPage style={{
-            backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${details.backdrop_path})`
-        }}>
+        <MovieDetailsPage bgImage={`https://image.tmdb.org/t/p/w1280/${details.backdrop_path}`}>
             <Container>
                 <div><GoBackButton onClick={onBackButtonClick}>← Go back to movies</GoBackButton></div>
                 <MovieDetails>
@@ -45,6 +43,25 @@ const Details = () => {
 
 export default Details
 
+const MovieDetailsPage = styled.div`
+    background-image: url(${props => props.bgImage});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: 768px) {
+        height: 100vh;
+    }
+`
+
+const Container = styled.div`
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:90%;
+`
 
 const GoBackButton = styled.button`
     margin-top: 20px;
@@ -61,16 +78,6 @@ const GoBackButton = styled.button`
     word-spacing: 2px;
     font-size: 1.1rem;
 }
-`
-
-const MovieDetailsPage = styled.div`
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @media (min-width: 768px) {
-        height: 100vh;
-    }
 `
 
 const MovieDetails = styled.div`
@@ -96,12 +103,4 @@ const MovieDescription = styled.div`
 
 const MovieImage = styled.img`
     border: 10px solid white;
-`
-const Container = styled.div`
-    max-width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height:90%;
 `
