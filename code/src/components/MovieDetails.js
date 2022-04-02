@@ -60,6 +60,7 @@ const TitleRatingContainer = styled.div`
     padding: 10px; 
     max-width: 30vw; 
     overflow:scroll;
+    
      @media (min-width: 200px) and (max-width:667px){
         flex-direction: column;
         align-self: center;
