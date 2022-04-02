@@ -37,6 +37,7 @@ const DetailContainer = styled.div`
     padding: 10px;    
     margin-bottom: 0,5rem;
     position:absolute;
+    
     bottom: 7px;
     left: 5px;
     background-color: rgba(220,220,220, 0.6);
@@ -46,9 +47,12 @@ const DetailContainer = styled.div`
     @media (max-width:667px){
         flex-direction: column;
         align-self: center;
+        align-items: flex-start;
+        right: 5px;
+      
         img{
-          height: auto;
-          width:250px;
+          height: 40%;
+          width:40%;
            }
     }
     `
@@ -59,18 +63,22 @@ const TitleRatingContainer = styled.div`
     flex-direction:column; 
     padding: 10px; 
     max-width: 30vw; 
-    overflow:scroll;
+    overflow:auto;
      @media (min-width: 200px) and (max-width:667px){
         flex-direction: column;
         align-self: center;
-      
-        
-          }
-        @media (min-width: 668px) and (max-width:1024){
+        max-width: 100%;
+        h2{
+            font-size: 15px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+    @media (min-width: 668px) and (max-width:1024){
         flex-direction: column;
         align-self: center;
-        
-       }
+    }
              
     `
 
