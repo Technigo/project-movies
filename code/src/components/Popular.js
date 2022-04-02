@@ -55,7 +55,7 @@ grid-template-columns: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-@media (min-width: 1100) {
+@media (min-width: 1100px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 `
@@ -68,6 +68,9 @@ height: 100%;
 const MovieDetails = styled.div`
     text-decoration: none;
     color: white;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 `
 
 const ImageOverlay = styled.div`
