@@ -10,4 +10,5 @@ We used styled components, React Icons and React Router DOM.
 
 ## View it live
 
+https://movies-playing-now-project.netlify.app/
 
