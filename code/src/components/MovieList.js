@@ -9,7 +9,8 @@ import { POSTER_URL } from 'utils/urls'
 const MovieSection = styled.section`
     width: 100%;
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    background-color: rgba(0,0,0,0.75)
     
 `
 
@@ -18,6 +19,7 @@ const MovieCard = styled.article`
     a img {
         width: 100%;
         height: 100%;
+        display: flex;
     }
   `
 

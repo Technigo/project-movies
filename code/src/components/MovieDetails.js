@@ -46,10 +46,14 @@ const DetailContainer = styled.div`
     @media (max-width:667px){
         flex-direction: column;
         align-self: center;
+        align-items: flex-start;
+        right: 5px;
+      
         img{
-          height: auto;
-          width:250px;
-           }
+          min-width: 320px;
+          height:60%;
+          width:60%;
+        }
     }
     `
 
@@ -59,19 +63,25 @@ const TitleRatingContainer = styled.div`
     flex-direction:column; 
     padding: 10px; 
     max-width: 30vw; 
-    overflow:scroll;
-    
+    overflow:auto;
      @media (min-width: 200px) and (max-width:667px){
         flex-direction: column;
-        align-self: center;
-      
-        
-          }
-        @media (min-width: 668px) and (max-width:1024){
+        align-self: flex-end;
+        max-width: 100%;
+        h1{
+            font-size: 21px;
+        }
+        h2{
+            font-size: 19px;
+        }
+        p {
+            font-size: 17px;
+        }
+    }
+    @media (min-width: 668px){
         flex-direction: column;
-        align-self: center;
-        
-       }
+        align-self: flex-end;
+    }
              
     `
 
@@ -105,7 +115,6 @@ const MovieDetails = () => {
                     <TitleRatingContainer className='title-rating-container'>
                         <h1>{movie.title}</h1>
                         <h2>Ratings: {movie.vote_average}/10</h2>
-                        <h3>{movie.tagline}</h3>
                         <p>{movie.overview}</p>
                     </TitleRatingContainer>
                 </DetailContainer>
