@@ -64,16 +64,21 @@ const GoBackButton = styled.button`
 `
 
 const MovieDetailsPage = styled.div`
-    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (min-width: 768px) {
+        height: 100vh;
+    }
 `
 
 const MovieDetails = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 
     @media (min-width: 768px) {
         align-items: flex-end;
