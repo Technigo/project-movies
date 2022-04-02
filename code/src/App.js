@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+
+import Overview from 'components/Overview';
 
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      <Overview />
     </div>
   )
 }
