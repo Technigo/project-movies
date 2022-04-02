@@ -62,7 +62,7 @@ const Moviedetail = () => {
         display: flex;
         flex-direction: column;
         justify-content: end;
-        height: 90vh;
+        height: 92vh;
         
         @media (min-width: 550px) {
             margin-left: 30px;               
@@ -102,18 +102,17 @@ const Moviedetail = () => {
         border-radius: 10px;          
 
         @media (min-width: 768px) {
-            margin-top: 95vh;
             margin-left: 30vw;
             width: 55vw;
         }
 
         @media (min-width: 992px) {
-            margin-top: 55vh;
+            
             width: 60vw;
         }
 
         @media (min-width: 1200px) {
-            margin-top: 55vh;
+    
             width: 50vw;
             margin-left: 20vw;
         }

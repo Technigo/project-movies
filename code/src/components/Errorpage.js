@@ -25,12 +25,11 @@ const Errorpage = () => {
         height: 100vh;
     `
 
-
     const ErrorText = styled.h2`
         color: white;
         margin: 100px 0 0 30px;
     `
-    
+
     return (
         <Div>
             <nav>
