@@ -13,7 +13,7 @@ const Genrediv = styled.div`
 const Spangenre = styled.span`
 	background-color: #fff;
 	color: #111;
-	padding: 0.5rem;
+	padding: 0.25rem;
 `
 
 export const MovieDetails = () => {

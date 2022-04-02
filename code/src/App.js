@@ -8,7 +8,7 @@ import { NotFound } from 'Components/NotFound'
 import { Navbar } from 'Components/Navbar'
 import { TopRatedFetch } from 'Components/TopRatedFetch'
 import { UpcomingFetch } from 'Components/UpcomingFecth'
-// import { Footer } from 'Components/Footer'
+import { Footer } from 'Components/Footer'
 
 export const App = () => {
 	const [movieList, setMovieList] = useState([])
@@ -44,7 +44,7 @@ export const App = () => {
 					<Route path='/404' element={<NotFound />} />
 					<Route path='*' element={<Navigate to='/404' replace />} />
 				</Routes>
-				{/* <Footer /> */}
+				<Footer />
 			</BrowserRouter>
 		</>
 	)
