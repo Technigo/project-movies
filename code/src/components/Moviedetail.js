@@ -40,6 +40,7 @@ const Moviedetail = () => {
     ` 
     
     const Div = styled.div`
+        position:fixed;
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -57,11 +58,11 @@ const Moviedetail = () => {
     `
 
     const MovieInfo = styled.section`
-        position: absolute;
+        position: fixed;
         margin-left: 30px;
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: flex-end;
         height: 92vh;
         
         @media (min-width: 550px) {
@@ -96,7 +97,6 @@ const Moviedetail = () => {
         position: absolute;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
         width: 80vw;
         background-color: rgba(0, 0, 0, 0.637);
         border-radius: 10px;          
