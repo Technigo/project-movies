@@ -5,6 +5,7 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background-color: #010101;
 }
 
 code {
@@ -75,12 +76,11 @@ select:active {
 	-moz-appearance: none;
 	appearance: none;
 	background-color: #111111;
-	color: #fff;
+	color: #fff; 
 	font-family: inherit;
 }
 
 select:focus {
-	background: #fff;
 	outline: none;
 }
 

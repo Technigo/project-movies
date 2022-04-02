@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { LoadingItem } from './LoadingItem'
+
 
 export const TopRatedList = ({ movieList }) => {
 	const [filteredMovieList, setfilteredMovieList] = useState(movieList)
@@ -127,9 +127,9 @@ export const TopRatedList = ({ movieList }) => {
 
 	return (
 		<main>
-			{/* {loading && <LoadingItem />} */}
+			
 			<div className='filter-sorting-bar'>
-				{/* ADDED options to choose to filter based on genre */}
+				
 				<label htmlFor='filter'>
 					<select
 						id='filter'
