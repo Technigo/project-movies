@@ -3,14 +3,6 @@ import { useParams, useNavigate } from "react-router-dom"
 import { SINGLE_MOVIE_URL } from "utils/urls"
 import styled from "styled-components"
 
-
-const GoBackButton = styled.button`
-padding: 10px;
-color: green;
-background-color: red;
-font-style: italic;
-`
-
 const Details = () => {
 
     const [details, setDetails] = useState({})
@@ -36,13 +28,13 @@ const Details = () => {
             backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${details.backdrop_path})`
         }}>
             <Container>
-                <GoBackButton onClick={onBackButtonClick}>Movies</GoBackButton>
+                <div><GoBackButton onClick={onBackButtonClick}>← Go back to movies</GoBackButton></div>
                 <MovieDetails>
                     <MovieImage src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt="poster-img" />
                     <MovieDescription>
-                        <div>{details.title}</div>
-                        <div>{details.vote_average}</div>
-                        <div>{details.overview}</div>
+                        <h1>{details.title}</h1>
+                        <div>{details.vote_average}/10</div>
+                        <p>{details.overview}</p>
                     </MovieDescription>
                 </MovieDetails>
             </Container>
@@ -54,6 +46,22 @@ const Details = () => {
 export default Details
 
 
+const GoBackButton = styled.button`
+    margin-top: 20px;
+    color: white;
+    font-size: inherit;
+    font-family: inherit;
+    background: none;
+    border: 0px;
+    cursor: pointer;
+    transition: word-spacing 0.5s ease-out 0s, font-size 0.5s ease-out 0s;
+}
+
+&:hover {
+    word-spacing: 2px;
+    font-size: 1.1rem;
+}
+`
 
 const MovieDetailsPage = styled.div`
     height: 100vh;
