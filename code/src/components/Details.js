@@ -35,12 +35,17 @@ const Details = () => {
         <MovieDetailsPage style={{
             backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${details.backdrop_path})`
         }}>
-            <GoBackButton onClick={onBackButtonClick}>Movies</GoBackButton>
-
-            <div>{details.title}</div>
-            <div>{details.vote_average}</div>
-            <div>{details.overview}</div>
-            <img src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt="poster-img" />
+            <Container>
+                <GoBackButton onClick={onBackButtonClick}>Movies</GoBackButton>
+                <MovieDetails>
+                    <MovieImage src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt="poster-img" />
+                    <MovieDescription>
+                        <div>{details.title}</div>
+                        <div>{details.vote_average}</div>
+                        <div>{details.overview}</div>
+                    </MovieDescription>
+                </MovieDetails>
+            </Container>
         </MovieDetailsPage>
 
     )
@@ -51,8 +56,39 @@ export default Details
 
 
 const MovieDetailsPage = styled.div`
-    height: 100%;
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+`
+
+const MovieDetails = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (min-width: 768px) {
+        align-items: flex-end;
+        flex-direction: row;
+    }
+`
+
+const MovieDescription = styled.div`
+    color:white;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 12px;
+    border-radius: 12px;
+    max-width: 650px;
+`
+
+const MovieImage = styled.img`
+    border: 10px solid white;
+`
+const Container = styled.div`
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:90%;
 `
