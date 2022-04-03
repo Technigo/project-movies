@@ -9,7 +9,7 @@ import Button from "./Button"
 
 
 const MovieDetails = () => {
-    const [moviedetails, setMovieDetails] = useState([])
+    const [moviedetails, setMovieDetails] = useState(null)
     const [loading, setLoading] = useState(false)
     const { movieId } = useParams()
 
@@ -33,7 +33,9 @@ const MovieDetails = () => {
     }, [movieId])    
     
 
-    if (moviedetails) {
+    if (moviedetails === null) {
+        return <><Loader /></>
+    }
 
         return (
             <section className="moviedetails-background" style={{backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.4) 60%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${moviedetails?.backdrop_path})`}}>
@@ -67,9 +69,7 @@ const MovieDetails = () => {
                 </div>
             </section>
         )
-    }
-
-    return null
+    
     
 }
 
