@@ -34,7 +34,7 @@ const MovieList = () => {
                     <div key={movie.id} className='movie-container'>
                         <div className="movie-text-group">
                             <h1 className='movie-title'>{movie.title}</h1>
-                            <p className="release-date">{movie.release_date}</p>
+                            <p className="release-date">Released {movie.release_date}</p>
                         </div>
                         <img className="movielist-image" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="movie poster"/>
                     </div>

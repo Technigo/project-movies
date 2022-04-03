@@ -37,11 +37,12 @@ code {
   bottom: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
   opacity: 0;
   background-color: rgba(8, 8, 8, 0.856);
   border-radius: 25px;
+  padding: 0 1.5rem 1.5rem;
 }
 
 .movie-container:hover .movie-text-group {
@@ -62,6 +63,11 @@ code {
 .movie-rating,
 .movie-overview-text {
   color: white;
+}
+
+.movie-title {
+  font-size: 2rem;
+  margin-bottom: 0;
 }
 
 .moviedetail-title {
@@ -112,10 +118,14 @@ code {
   margin: 0 3rem 2rem;
 }
 
+.button-arrow {
+  margin-right: 5px;
+}
+
 .moviedetail-text-group {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 45%;
   margin: 2rem;
 }
 
@@ -140,6 +150,9 @@ code {
 /**********MEDIA QUERIES***********/
 
 @media screen and (max-width: 667px) {
+  .movie-text-group{
+    padding: 0 0 5rem 2.5rem;
+  }
   .moviedetails-background {
     background-position-x: 50%;
     height: 100%;
@@ -170,7 +183,10 @@ code {
 }
 
 @media screen and (min-width: 667px) and (max-width: 1023px) {
-  .moviedetails-background {
+  .movie-text-group{
+    padding: 0 1rem 4rem 1.5rem;
+  }
+   .moviedetails-background {
     background-position-x: 50%;
   }
   .movie-poster {

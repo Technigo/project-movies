@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { FaAngleLeft } from "@fortawesome/free-solid-svg-icons"
+import { FaChevronLeft } from "react-icons/fa"
 
 import { MOVIEDETAIL_API } from "./utils/urls"
 import Loader from 'Components/Loader'
 import Button from "./Button"
 
 
-// <FontAwesomeIcon icon="fa-solid fa-angle-left" />
 
 const MovieDetails = () => {
     const [moviedetails, setMovieDetails] = useState([])
@@ -18,7 +16,7 @@ const MovieDetails = () => {
     const navigate = useNavigate()
 
     const onBackButtonClick = () => {
-        navigate(-1)
+        navigate("/")
     }
    
     useEffect(() => {
@@ -39,9 +37,22 @@ const MovieDetails = () => {
         <section className="moviedetails-background" style={{backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.4) 60%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${moviedetails.backdrop_path})`}}>
            {loading && <Loader />}
             <Button
-            onClick={onBackButtonClick}>
-                <span>
-                <FontAwesomeIcon icon="fas-solid fa-angle-left" />
+            onClick={onBackButtonClick}
+            top="1.2rem"
+            left="1rem"
+            fontSize="1.5rem"
+            topDesktop="2.2rem"
+            leftDesktop="3.8rem"
+            leftHover="1.5rem"
+            background="transparent"
+            width="100px"
+            height="40px"
+            color="white"
+            fontSizeDesktop="2rem"
+            letterSpacing="5px"
+            >
+                <span className="button-arrow">
+                <FaChevronLeft />
                 </span>
                 Back
             </Button>
