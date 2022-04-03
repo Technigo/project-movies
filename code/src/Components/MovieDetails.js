@@ -42,7 +42,8 @@ const MovieDetails = () => {
                {loading && <Loader />}
                 <Button
                 onClick={onBackButtonClick}
-                top="1.2rem"
+                position="absolute"
+                top="1.5rem"
                 left="1rem"
                 fontSize="1.5rem"
                 topDesktop="2.2rem"

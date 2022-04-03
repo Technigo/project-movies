@@ -14,17 +14,17 @@ const Error = () => {
             <p className="error-message">Sorry, this page doesn't exist</p>
             <Button
             onClick={onBackButtonClick}
-            top="65%"
-            left="35%"
-            topDesktop="55%"
-            leftDesktop="40%"
+            position="relative"
             background="white"
-            width="260px"
-            height="50px"
+            width="190px"
+            height="45px"
             color="black"
-            fontSize="1.5rem"
+            fontSize="1.1rem"
+            fontSizeDesktop="1.5rem"
             backgroundHover="#4d658c"
             colorHover="white"
+            widthDesktop="240px"
+            heightDesktop="55px"
             >
                 Return to homepage
             </Button>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Button = styled.button`
     appearance: none;
-    position: absolute;
+    position: ${props => props.position};
     top: ${props => props.top};
     left: ${props => props.left};
     width: ${props => props.width};
@@ -12,7 +12,7 @@ const Button = styled.button`
     background: ${props => props.background};
     color: ${props => props.color};
     font-size: ${props => props.fontSize};
-    padding: 15px;
+    padding: 10px;
     display: flex;
     letter-spacing: 0;
     align-items: center;
@@ -29,7 +29,9 @@ const Button = styled.button`
     @media screen and (min-width: 668px) {
         font-size: ${props => props.fontSizeDesktop};
         top: ${props => props.topDesktop};
-        left: ${props => props.leftDesktop};       
+        left: ${props => props.leftDesktop};  
+        width: ${props => props.widthDesktop};
+        height: ${props => props.heightDesktop};
     }
 `
 
