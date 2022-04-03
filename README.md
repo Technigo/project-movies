@@ -1,12 +1,16 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+Users should be able to:
+- view the optimal layout for the site depending on their device's screen size
+- see all movies in the first page
+- be redirected to each movie they select to see the movie's details
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
-## The problem
+## What we have learned
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+- Styled components
+- React Router V6
+- Pair programming 
 
 ## View it live
 

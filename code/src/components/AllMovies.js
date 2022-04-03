@@ -1,16 +1,16 @@
 import React from "react"
 import { Link } from 'react-router-dom';
 
-import Flex from './styles/Flex.styled'
-import OverlayCard from './styles/OverlayCard.styled'
-import TextOverlay from './styles/TextOverlay.styled'
-import Container from './styles/Container.styled'
+//Styled components
+import { AllMoviesFlexContainer } from './styles/Containers.styled'
+import { OverlayCard, TextOverlay } from './styles/Overlay.styled'
 
-const PopularList = ({ allMovies }) => {
+const AllMovies = ({ allMovies }) => {
   return (
-    <Flex>
+    <AllMoviesFlexContainer>
       {allMovies.map((movie) => (
-        <Container>
+        //Wrapping each movie card again with the same styled component (<AllMoviesFlexContainer>) for overlay effects
+        <AllMoviesFlexContainer> 
           <Link
             key={movie.id}
             to={`/movie/${movie.id}`}
@@ -28,10 +28,10 @@ const PopularList = ({ allMovies }) => {
               </TextOverlay>
             </OverlayCard>
           </Link>
-        </Container>
+        </AllMoviesFlexContainer>
       ))}
-    </Flex>
+    </AllMoviesFlexContainer>
   )
 }
 
-export default PopularList
+export default AllMovies

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-import PopularList from 'components/PopularList'
-import Details from 'components/Details'
-import NotFound from 'components/NotFound'
+//API URLS 
 import { ALL_MOVIES_URL } from "./utils/urls"
 
+//Styled components
 import GlobalStyles from "components/styles/Global";
+import AllMovies from 'components/AllMovies'
+import MovieDetails from 'components/MovieDetails'
 
 const App = () => {
 
@@ -25,9 +26,8 @@ const App = () => {
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<PopularList allMovies={allMovies} setAllMovies={setAllMovies}/>} />
-          <Route path="/movie/:movieId" element={<Details />} />
-          <Route path="/404" element={<NotFound/>} />
+          <Route path="/" element={<AllMovies allMovies={allMovies} setAllMovies={setAllMovies}/>} />
+          <Route path="/movie/:movieId" element={<MovieDetails />} />
         </Routes>
       </BrowserRouter>
     </section>
