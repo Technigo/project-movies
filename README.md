@@ -13,6 +13,10 @@ Users should be able to:
 - React Router V6
 - Pair programming 
 
+## The problem
+
+It was tricky to decide how to go about and use the styled components. In hindsight, for projects of this scale, the styled components can be combined in to one .js file dedicated to styling or evening use the styled component within each component.
+
 ## View it live
 
 https://glittery-jelly-117bff.netlify.app/
