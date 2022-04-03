@@ -1,13 +1,15 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+The goal for this project was to use [themoviedb.org](http://themoviedb.org/)'s API to fetch a list of movies (more on which movies further down), display them on a page, and then link to a movie detail page when you click on the movie.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+In this app, we've used the API to fetch popular movies in the US. 
+
+We built the app together pair programming.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+At the beginning we had a few issues getting the APIs to display on the page. It was the first time we used styled components. After deploying we got an error when refreshing the page.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://tiina-marianne-movies.netlify.app/
