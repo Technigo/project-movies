@@ -9,7 +9,7 @@ left: 0;
 position: absolute;
 
 & > i {
-    border: solid grey;
+    border: solid white;
     border-width: 0 5px 5px 0;
     display: inline-block;
     padding: 5px;
@@ -17,7 +17,7 @@ position: absolute;
     -webkit-transform: rotate(135deg);
 }
 
-& :hover{
+&:hover{
     transform: scale(1.2);
 }
 
