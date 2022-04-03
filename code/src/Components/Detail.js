@@ -124,7 +124,7 @@ if (movieDetail === null) {
     <DetailContainer>
          <Poster src={`https://image.tmdb.org/t/p/w300${movieDetail.poster_path}`} alt="poster-image"/>
          <DetailsText>
-         <h1>{movieDetail.original_title} {movieDetail.vote_average}</h1>
+         <h1>{movieDetail.original_title} {movieDetail.vote_average}/10</h1>
          <Description>{movieDetail.overview}</Description>
          </DetailsText>
     </DetailContainer>  
