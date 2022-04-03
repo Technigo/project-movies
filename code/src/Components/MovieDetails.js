@@ -33,12 +33,12 @@ const MovieDetails = () => {
     }, [movieId])    
     
 
+    console.log("moviedetails", moviedetails)
     if (moviedetails === null) {
         return <><Loader /></>
     }
-
         return (
-            <section className="moviedetails-background" style={{backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.4) 60%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${moviedetails?.backdrop_path})`}}>
+            <section className="moviedetails-background" style={{backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.4) 60%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${moviedetails.backdrop_path})`}}>
                {loading && <Loader />}
                 <Button
                 onClick={onBackButtonClick}
@@ -55,13 +55,13 @@ const MovieDetails = () => {
                 fontSizeDesktop="2rem"
                 letterSpacing="5px"
                 >
-                    <span className="button-arrow">
-                    <FaChevronLeft />
-                    </span>
+                <span className="button-arrow">
+                <FaChevronLeft />
+                </span>
                     Back
                 </Button>
                 <div className="moviedetails-wrapper"key={moviedetails.id}>
-                    <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${moviedetails?.poster_path}`} alt=""/>
+                    <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${moviedetails.poster_path}`} alt=""/>
                     <div className="moviedetail-text-group">
                         <h1 className="moviedetail-title">{moviedetails.title}<span className="movie-rating">{moviedetails.vote_average} / 10</span></h1>
                         <p className="movie-overview-text">{moviedetails.overview}</p>
