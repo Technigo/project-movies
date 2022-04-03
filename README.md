@@ -15,7 +15,7 @@ Users should be able to:
 
 ## The problem
 
-It was tricky to decide how to go about and use the styled components. In hindsight, for projects of this scale, the styled components can be combined in to one .js file dedicated to styling or evening use the styled component within each component.
+It was tricky to decide how to go about and use the styled components. In hindsight, for projects of this scale, the styled components can be combined in to one .js file dedicated to styling or even use the styled component within each component.
 
 ## View it live
 
