@@ -49,6 +49,29 @@ code {
   opacity: 1;
 }
 
+
+/**********MOVIE DETAILS PAGE***********/
+
+.moviedetails-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 0 3rem 2rem;
+}
+
+.button-arrow {
+  margin-right: 5px;
+  margin-top: 3px;
+}
+
+.moviedetail-text-group {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin: 2rem;
+}
+
+
 /**********TYPOGRAPHY***********/
 
 .header-title {
@@ -106,28 +129,6 @@ code {
   height: 100%;
   border: 3px solid white;
   border-radius: 25px;
-}
-
-
-/**********MOVIE DETAILS PAGE***********/
-
-.moviedetails-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  margin: 0 3rem 2rem;
-}
-
-.button-arrow {
-  margin-right: 5px;
-  margin-top: 3px;
-}
-
-.moviedetail-text-group {
-  display: flex;
-  flex-direction: column;
-  width: 45%;
-  margin: 2rem;
 }
 
 
