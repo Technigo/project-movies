@@ -14,228 +14,285 @@ export const MovieList = ({ movieList }) => {
 			const filteredList = [...movieList]
 			if (sorting === 'relesead') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(28)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(28))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(28)).sort((a, b) => (a.popularity < b.popularity? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(28))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'Adventure') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(12)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(12))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(12)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(12))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'Animation') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(16)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(16))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(16)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(16))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'Comedy') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(35)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(35))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(35)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(35))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'Crime') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(80)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(80))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(80)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(80))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'Documentary') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(99)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(99))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(99)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(99))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'Drama') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(18)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(18))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(18)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(18))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'Family') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(10751)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(10751))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(10751)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(10751))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'Fantasy') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(14)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(14))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(14)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(14))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'History') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(36)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(36))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(36)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(36))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'Horror') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(27)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(27))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(27)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(27))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'Music') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(10402)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(10402))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(10402)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(10402))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'Mystery') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(9648)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(9648))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(9648)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(9648))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'Romance') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(10749)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(10749))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(10749)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(10749))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'SciFi') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(878)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(878))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(878)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(878))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'TVmovie') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(10770)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(10770))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(10770)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(10770))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'Thriller') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(53)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(53))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(53)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(53))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'War') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(10752)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(10752))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(10752)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(10752))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		} else if (filter === 'Western') {
 			const filteredList = [...movieList]
 			if (sorting === 'released') {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(37)).sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(37))
+						.sort((a, b) => (a.release_date < b.release_date ? 1 : -1))
 				)
-			}
-			else {
+			} else {
 				setfilteredMovieList(
-					filteredList.filter((movie) => movie.genre_ids.includes(37)).sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
+					filteredList
+						.filter((movie) => movie.genre_ids.includes(37))
+						.sort((a, b) => (a.popularity < b.popularity ? 1 : -1))
 				)
 			}
 		}
@@ -256,7 +313,6 @@ export const MovieList = ({ movieList }) => {
 			)
 		}
 	}, [sorting])
-	
 
 	return (
 		<main>
