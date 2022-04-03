@@ -1,24 +1,64 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: #000;
+	color: #fff;
+}
+* {
+	box-sizing: border-box;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	display: flex;
+	flex-wrap: wrap;
+}
+.wrapper a {
+	width: 25%;
+	text-decoration: none;
+	color: #fff;
+}
+.wrapper a img {
+	width: 100%;
+}
+.container {
+	position: relative;
+}
+
+.movie-details {
+	position: absolute;
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(1, 1, 1, 0.64);
+	color: white;
+}
+h1 {
+	margin: 0 0 5% 5%;
+	font-size: 32px;
+	font-weight: bolder;
+}
+p {
+	margin: 0 0 5% 5%;
+	font-size: 16px;
+}
+.container:hover .movie-details {
+	opacity: 1;
 }
 
 .details-container {
-  background: center;
-  background-size: cover;
-  min-height: 100vh;
+	background: center;
+	background-size: cover;
+	min-height: 100vh;
 }
