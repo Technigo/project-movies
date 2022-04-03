@@ -14,8 +14,6 @@
     display: flex;
     top: 0;
     left: 0;
-    justify-content: center;
-    overflow: hidden;
 }
 
 .backdrop {
@@ -26,6 +24,8 @@
     height: 100%;
     object-fit: cover;
     opacity: 0.5;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .details-wrapper {
@@ -88,13 +88,13 @@
 
 @media (min-width: 667px) {
     .movie-img-details {
-      width: 80%;
+      width: 40%;
     }
   }
   
   @media (min-width: 1024px) {
     .movie-img-details{
-      width: 40%;
+      width: 30%;
     }
   }
 

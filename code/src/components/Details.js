@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 
 import "./Details.css"
 
+
 import { DETAILS_URL } from "../utils/urls"
 
 const Details = () => {
@@ -20,7 +21,7 @@ const Details = () => {
     <div className='details'>
       <img className='backdrop' src={`https://image.tmdb.org/t/p/original${details.backdrop_path}`} alt="backdrop" />
       <div className='details-wrapper'>
-      <div className="backbutton" onClick={() => navigate(-1)}> <i className="arrow-left"></i></div>
+      <div className='backbutton' onClick={() => navigate(-1)}> <i className='arrow-left'></i></div>
         <img className="movie-img-details" src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
         <div className='details-info'>
           <div className='details-title-votes white'>

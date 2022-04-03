@@ -23,7 +23,6 @@ a {
   display: flex;
 }
 
-
 `
 
 export default GlobalStyles
