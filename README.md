@@ -1,13 +1,13 @@
 # Project Movies
 
 Replace this readme with your own information about your project.
-
 Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project is uses API from https://www.themoviedb.org/ to display 20 movie posters that each lead to a detailed page of the movie selected. The page is built with React Routes, Navigation and some styled components.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+One of the challenges in this project was to display a background image with a url that was fetched from tmdb api. We had never used styled components before and struggled a little with putting the styled component inside the default component function but realised that the styled component needed to be outside the main function. We solved the issue by sending the url as a prop into the styled component and the problem which had seemed daunting to begin with had a surprisingly easy solution.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://top-movies-2022.netlify.app/
