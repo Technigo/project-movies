@@ -2,25 +2,16 @@ import styled from 'styled-components'
 
 export const DetailsWrapper = styled.div`
 position: relative;
-padding: 50px;
 
 & > img {
-    box-shadow: 0px 4px 3px rgba(0,0,0,0.1),
-               0px 8px 13px rgba(0,0,0,0.1),
-               0px 18px 23px rgba(0,0,0,0.1)
+  box-shadow: 5px 5px 5px rgba(0,0,0, 0.6);
+  margin: 40px 0 0 40px;
 }
-
- @media (min-width: 375px) {
+@media (min-width: 375px) {
   & > img {
     width: 40%;
   }
 }
-
-@media (min-width: 667px) {
-    & > img {
-      width: 40%;
-    }
-  }
   
   @media (min-width: 1024px) {
     & > img{
@@ -32,6 +23,7 @@ padding: 50px;
 export const DetailsTextWrapper = styled.div`
 position: relative;
 padding: 50px;
+background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
 
 & img {
   width: 15px;
