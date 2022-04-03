@@ -23,7 +23,7 @@ position: relative;
 
 export const DetailsTextWrapper = styled.div`
 position: relative;
-padding: 20px 0 50px 50px;
+padding: 20px 20px 50px 20px;
 background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
 
 & img {
