@@ -6,9 +6,7 @@ const MyFooter = styled.footer`
 	color: #fff;
 	text-align: center;
 	position: fixed;
-	left: 0;
-	bottom: 0;
-	right: 0;
+	bottom:0;
 	padding: 0.5em;
 	width: 100vw;
 `
