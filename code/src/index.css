@@ -38,7 +38,7 @@ code {
 }
 .list-container:hover .list-text{opacity:1; transition-duration: 0.4s;}
 
-.cover{position: relative;}
+.cover{position: relative; height:100vh;}
 
 .list-text{
     color: white;
@@ -121,5 +121,5 @@ button:hover{
 .load{
   color: #ffffff;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 2;
 }
