@@ -1,6 +1,5 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
 Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 This project is uses API from https://www.themoviedb.org/ to display 20 movie posters that each lead to a detailed page of the movie selected. The page is built with React Routes, Navigation and some styled components.
 
