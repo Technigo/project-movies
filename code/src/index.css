@@ -26,6 +26,7 @@ h2 {
 .main {
 	display: flex;
 	flex-wrap: wrap;
+	padding-bottom: 2em;
 }
 
 .movie-wrapper {
@@ -76,7 +77,7 @@ select:active {
 	-moz-appearance: none;
 	appearance: none;
 	background-color: #111111;
-	color: #fff; 
+	color: #fff;
 	font-family: inherit;
 }
 
