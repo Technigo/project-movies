@@ -7,7 +7,8 @@ position: relative;
   box-shadow: 5px 5px 5px rgba(0,0,0, 0.6);
   margin: 60px 0 0 60px;
 }
-@media (min-width: 375px) {
+
+@media (min-width: 360px) {
   & > img {
     width: 40%;
   }
@@ -15,7 +16,7 @@ position: relative;
   
   @media (min-width: 1024px) {
     & > img{
-      width: 30%;
+      width: 20%;
     }
   }
 `
