@@ -33,38 +33,44 @@ const MovieDetails = () => {
     }, [movieId])    
     
 
-    return (
-        <section className="moviedetails-background" style={{backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.4) 60%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${moviedetails.backdrop_path})`}}>
-           {loading && <Loader />}
-            <Button
-            onClick={onBackButtonClick}
-            top="1.2rem"
-            left="1rem"
-            fontSize="1.5rem"
-            topDesktop="2.2rem"
-            leftDesktop="3.8rem"
-            leftHover="1.5rem"
-            background="transparent"
-            width="100px"
-            height="40px"
-            color="white"
-            fontSizeDesktop="2rem"
-            letterSpacing="5px"
-            >
-                <span className="button-arrow">
-                <FaChevronLeft />
-                </span>
-                Back
-            </Button>
-            <div className="moviedetails-wrapper"key={moviedetails.id}>
-                <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${moviedetails.poster_path}`} alt=""/>
-                <div className="moviedetail-text-group">
-                    <h1 className="moviedetail-title">{moviedetails.title}<span className="movie-rating">{moviedetails.vote_average} / 10</span></h1>
-                    <p className="movie-overview-text">{moviedetails.overview}</p>
+    if (moviedetails) {
+
+        return (
+            <section className="moviedetails-background" style={{backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.4) 60%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${moviedetails?.backdrop_path})`}}>
+               {loading && <Loader />}
+                <Button
+                onClick={onBackButtonClick}
+                top="1.2rem"
+                left="1rem"
+                fontSize="1.5rem"
+                topDesktop="2.2rem"
+                leftDesktop="3.8rem"
+                leftHover="1.5rem"
+                background="transparent"
+                width="100px"
+                height="40px"
+                color="white"
+                fontSizeDesktop="2rem"
+                letterSpacing="5px"
+                >
+                    <span className="button-arrow">
+                    <FaChevronLeft />
+                    </span>
+                    Back
+                </Button>
+                <div className="moviedetails-wrapper"key={moviedetails.id}>
+                    <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${moviedetails?.poster_path}`} alt=""/>
+                    <div className="moviedetail-text-group">
+                        <h1 className="moviedetail-title">{moviedetails.title}<span className="movie-rating">{moviedetails.vote_average} / 10</span></h1>
+                        <p className="movie-overview-text">{moviedetails.overview}</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-    )
+            </section>
+        )
+    }
+
+    return null
+    
 }
 
 export default MovieDetails
