@@ -19,7 +19,7 @@ a {
 }
 
 .movie-img {
-  width: 360px;
+  max-width: 360px;
   display: flex;
 }
 

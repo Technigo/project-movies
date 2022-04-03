@@ -4,7 +4,8 @@ import styled from 'styled-components'
 export const AllMoviesFlexContainer = styled.article`
   display: flex;
   flex-wrap: wrap;
-  position: relative
+  position: relative;
+  justify-content: space-around;
 `
 
 export const DetailsContainer = styled.div`
