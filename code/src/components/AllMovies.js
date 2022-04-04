@@ -10,9 +10,8 @@ const AllMovies = ({ allMovies }) => {
     <AllMoviesFlexContainer>
       {allMovies.map((movie) => (
         //Wrapping each movie card again with the same styled component (<AllMoviesFlexContainer>) for overlay effects
-        <AllMoviesFlexContainer> 
+        <AllMoviesFlexContainer key={movie.id}> 
           <Link
-            key={movie.id}
             to={`/movie/${movie.id}`}
             rel="noopener noreferrer"
           >

@@ -19,7 +19,6 @@ const MovieDetails = () => {
       .then(res => res.json())
       .then(data => setDetails(data))
   }, [movieId])
-  console.log(details.poster_path)
   return (
     <DetailsContainer url={`url(https://image.tmdb.org/t/p/original${details.backdrop_path})`}>
       <DetailsWrapper>

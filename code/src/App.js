@@ -26,7 +26,7 @@ const App = () => {
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<AllMovies allMovies={allMovies} setAllMovies={setAllMovies}/>} />
+          <Route path="/" element={<AllMovies allMovies={allMovies} />} />
           <Route path="/movie/:movieId" element={<MovieDetails />} />
         </Routes>
       </BrowserRouter>
