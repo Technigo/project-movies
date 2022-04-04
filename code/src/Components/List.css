@@ -29,7 +29,7 @@
 }
 .movietext {
   align-self: flex-end;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.61);
   margin-left: 20px;
   margin-bottom: 20px;
 }
