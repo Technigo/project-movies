@@ -58,7 +58,7 @@ const Moviedetail = () => {
     `
 
     const MovieInfo = styled.section`
-        position: fixed;
+        position: absolute;
         margin-left: 30px;
         display: flex;
         flex-direction: column;
