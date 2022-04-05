@@ -33,7 +33,6 @@ const MovieDetails = () => {
     }, [movieId])    
     
 
-    console.log("moviedetails", moviedetails)
     if (moviedetails === null) {
         return <><Loader /></>
     }
@@ -62,7 +61,7 @@ const MovieDetails = () => {
                     Back
                 </Button>
                 <div className="moviedetails-wrapper"key={moviedetails.id}>
-                    <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${moviedetails.poster_path}`} alt=""/>
+                    <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${moviedetails.poster_path}`} alt="movie poster"/>
                     <div className="moviedetail-text-group">
                         <h1 className="moviedetail-title">{moviedetails.title}<span className="movie-rating">{moviedetails.vote_average} / 10</span></h1>
                         <p className="movie-overview-text">{moviedetails.overview}</p>
