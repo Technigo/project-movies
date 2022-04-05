@@ -28,9 +28,7 @@ code {
 }
 
 .MovieImage {
-  height: 600px;
-  width: 100%;
-  object-fit: cover;
+  width: 100%
 }
 
 .MovieOverlay {
@@ -57,19 +55,6 @@ code {
   text-transform: uppercase;
 }
 
-.home {
-  position: fixed;
-  margin: 20px;
-  padding: 15px;
-  font-size: 25px;
-  margin-left: 50px;
-  background: none;
-  border: 3px solid white;
-  transition: transform 0.3s;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
 .vote {
   color: red;
 }
@@ -91,7 +76,7 @@ code {
 
 h1 {
   color: white;
-  max-width: 540px;
+  max-width: 440px;
 }
 
 .details {
@@ -103,8 +88,8 @@ h1 {
 
 .detailsimage {
   border: solid 5px white;
-  width: 20%;
-  min-width: 400px;
+  width: 100%;
+  margin-top: 10px;
 }
 
 .background {
@@ -115,6 +100,13 @@ h1 {
   justify-content: flex-end;
 }
 
+@media screen and (min-width: 320px) {
+
+  .overview {
+    font-size: 12px;
+  }
+}
+
 @media screen and (min-width: 720px) {
   .MovieContainer {
     grid-template-columns: repeat(2, 1fr);
@@ -123,14 +115,24 @@ h1 {
     display: flex;
     flex-direction: row;
   }
+  
+  .overview {
+    font-size: 12px;
+  }
+
+  .detailsimage {
+    width: 40%;
+  }
+
 }
 
 @media screen and (min-width: 1020px) {
   .MovieContainer {
     grid-template-columns: repeat(4, 1fr);
   }
-  .MovieImage {
-    height: 500px;
+
+  .detailsimage{
+    width: 20%;
   }
 
   .MovieOverlay {
@@ -140,5 +142,5 @@ h1 {
   .MovieOverlay:hover {
     background: rgba(0, 0, 0, 0.75);
     opacity: 1;
-  }
+  }  
 }

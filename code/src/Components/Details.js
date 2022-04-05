@@ -1,6 +1,20 @@
 import React, { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import { DETAIL_URL } from "utils/URLS"
+import styled from 'styled-components'
+
+
+const DetailsButton = styled.a `
+position: fixed;
+margin: 10px 0 0 50px;
+color: white;
+font-size: 20px;
+transition: transform 0.3s;
+
+&:hover  {
+  transform: scale(1.3);
+}
+`
 
 const Details = () => {
   const [details, setDetails] = useState([])
@@ -18,7 +32,10 @@ const Details = () => {
   return (
     <div>
       <Link to="/">
-        <button className="home">Movies</button>
+       
+        <DetailsButton> ❮ Movies</DetailsButton>
+        
+        
       </Link>
 
       <div
