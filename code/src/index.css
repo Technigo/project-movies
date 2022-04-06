@@ -29,6 +29,7 @@ code {
 }
 .container {
 	position: relative;
+	height: 100%;
 }
 
 .movie-details {
@@ -120,4 +121,55 @@ button:hover span {
 
 .error {
 	font-size: 3em;
+}
+
+@media screen and (max-width: 600px) {
+
+	.wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	}
+
+	.wrapper a {
+		width: 100%;
+	}
+
+	.details-container {
+		flex-direction: column;
+		justify-content: start;
+	}
+
+	.details {
+		flex-direction: column;
+		align-items: start;
+		margin-top: 10%;
+	}
+
+	.movie-introduction {
+		margin-left: 0;
+	}
+
+	h1 {
+		margin: 0 0 5% 0;
+		font-size: 32px;
+		font-weight: bolder;
+	}
+	p {
+		margin: 0 0 5% 0;
+		font-size: 16px;
+	}
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+
+	.wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+
+	.wrapper a {
+		width: 100%;
+	}
+
 }

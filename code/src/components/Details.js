@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import NotFound from 'components/NotFound'
 
 import { AiFillCaretLeft } from 'react-icons/ai';
 
@@ -24,7 +25,7 @@ const Details = () => {
 		[ movieId ]
 	);
 
-	console.log(details);
+	if (!details) {return <NotFound />}
 
 	return (
 		<section>
