@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: center;
   position: absolute;
-  overflow: hidden;
+  overflow: scroll;
   height: 100%;
   width: 100%;
   background: linear-gradient(190deg, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%);
