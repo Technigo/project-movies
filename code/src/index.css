@@ -137,7 +137,7 @@ code {
   }
 
   .movie-card:hover .movie-image {
-    filter: brightness(50%);
+    filter: brightness(30%);
   }
   
   .movie-card:hover .movie-text {
@@ -160,6 +160,11 @@ code {
     transform: translateX(10px);
     transition: transform 500ms ease-in-out;
   }
+
+  .detail-movie-rating, .detail-movie-text {
+    font-size: 1.2rem;
+
+  }
 }
 
 /* -- Tablet and desktop -- */
@@ -168,6 +173,8 @@ code {
   .detail-movie-image-text-container {
     flex-direction: row;
     align-items: flex-end;
+    padding-bottom:30px;
+    padding-left:30px;
   }
 
   .detail-movie-text-container {

@@ -35,7 +35,7 @@ const Details = () => {
           <span className='detail-movie-rating'>
             {movieDetails.vote_average}/10
           </span>
-          <p>{movieDetails.overview}</p>
+          <p className='detail-movie-text'>{movieDetails.overview}</p>
         </div>
       </div>
     </section>
