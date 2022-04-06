@@ -47,7 +47,7 @@ button:hover {
 .detail-content {
   display: grid;
   align-content: flex-end;
-  margin: 10% 0 2% 2%;
+  margin: 2% 0 2% 2%;
 }
 .detail-grid img {
   border: 5px solid #ffffff;
@@ -93,7 +93,7 @@ h1 {
 
 @media screen and (min-width: 1024px) {
   .detail-content {
-    margin-top: 15%;
+    /* margin-top: 15%; */
   }
   .detail-grid img {
     width: 25vw; 
