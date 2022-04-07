@@ -22,7 +22,8 @@ export const App = () => {
   const Grid = styled.main`
     background-color: black;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    width: 100vw;
     
     @media (min-width: 415px) and (max-width: 820px) {
       grid-template-columns: repeat(2, 1fr);
