@@ -77,10 +77,16 @@ const Moviedetail = () => {
 
     @media (min-width: 768px) {
       flex-direction: row;
-      margin-top: 55vh;
+      margin-top: 50vh;
       align-items: flex-end;
       width: 90vw;
+      
     }
+
+    @media (min-width: 992px) {
+        margin-top: 25vh;
+    }
+
   `;
 
   const ImageContainer = styled.div`
@@ -91,6 +97,7 @@ const Moviedetail = () => {
       width: 300px;
       margin: 0;
     }
+
   `;
 
   const MovieSmallImage = styled.img`
@@ -107,6 +114,8 @@ const Moviedetail = () => {
     }
 
     @media (min-width: 1200px) {
+        width: 350px;
+       
     }
   `;
 
@@ -124,12 +133,12 @@ const Moviedetail = () => {
 
     @media (min-width: 992px) {
       width: 60vw;
-      margin-left: 8vw;
+      margin-left: 5vw;
     }
 
     @media (min-width: 1200px) {
       width: 50vw;
-      margin-left: 8vw;
+      margin-left: 10vw;
     }
   `;
   const MovieTitle = styled.p`
@@ -202,7 +211,7 @@ const Moviedetail = () => {
         <InfoContainer>
           <ImageContainer>
             <MovieSmallImage
-              src={`https://image.tmdb.org/t/p/w300${poster_path}`}
+              src={`https://image.tmdb.org/t/p/w500${poster_path}`}
               alt="film poster"
             />
           </ImageContainer>
