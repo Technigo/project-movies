@@ -1,8 +1,8 @@
 # Project Movies 🎬
 
-The aim of the project was to build a multi-page movie site using Movie DB API. We fetch a list of movies, display them on the landing page, and link it to a movie detail page.
+This is a multi-page movie site built using Movie DB API. It fetches a list of movies, displays them on the landing page, and links it to a movie detail page.
 
-We created a version that shows the Popular Movies on the landing page and on each movie detail page we have also fetched and displayed Similar Movies. In addition we implemented a Loading page to show while the fetch is being processed and a Not Found page for when a movie request does not match anything in the database.
+The application shows the most Popular Movies on the landing page and on each movie detail page it also displays Similar Movies. In addition a 'Loading page' was created to show while the fetch is being processed and a 'Not Found page' for when a movie request does not match anything in the database.
 
 ## What have I learned 💡
 
