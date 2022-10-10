@@ -1,4 +1,5 @@
 import React/* , { useEffect, useState } */ from 'react';
+import { Link } from 'react-router-dom'
 /* 82911629aa763b7af65fbb5fa82c43e6 */
 
 const Movies = ({ getMovies }) => {
@@ -6,7 +7,7 @@ const Movies = ({ getMovies }) => {
     <div>
       {getMovies.map((movie) => (
         <div>
-          <p>{movie.overview}</p>
+          <Link key={movie.id} to={`/detail/${movie.id}`}>{movie.title}</Link>
         </div>
       ))}
     </div>
