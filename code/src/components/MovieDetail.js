@@ -32,7 +32,7 @@ const MovieDetail = () => {
       )}
 
       <div className="movie-detail-div">
-      Here comes some info in a div
+        Here comes some info in a div
       </div>
     </section>
   )

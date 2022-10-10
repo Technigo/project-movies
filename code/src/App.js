@@ -3,8 +3,10 @@ import Main from './components/Main.js';
 
 export const App = () => {
   return (
-    <div>
-      <Main />
-    </div>
+    <section className="outer-wrapper">
+      <section className="inner-wrapper">
+        <Main />
+      </section>
+    </section>
   );
 }
