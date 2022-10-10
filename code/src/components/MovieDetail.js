@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import 'css/movieDetails.css'
+import backIcon from 'icons/back.png';
 
 const MovieDetail = () => {
   const [movieDetail, setMovieDetail] = useState()
@@ -16,24 +17,23 @@ const MovieDetail = () => {
   return (
 
     <section>
-      <Link to="/" className="backLink">
-        <img src="icons/back.png" alt="back button" /> Movies
-      </Link>
+      <div className="back-btn-div">
+        <Link to="/" className="backLink">
+          <img className="back-image" src={backIcon} alt="back button" />
+        </Link>
+        <span> Back to movies</span>
+      </div>
       {movieDetail && (
-        <div className="background" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetail.backdrop_path})` }}>
-          <div className="summary">
+        <div className="background" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetail.backdrop_path})` }}>
+          <div className="summary-wrapper">
             <img src={`https://image.tmdb.org/t/p/w342${movieDetail.poster_path}`} alt={movieDetail.title} />
-            <div className="details">
-              <h1><span className="title">{movieDetail.title}</span> <span className="rating">{Math.round(movieDetail.vote_average * 10) / 10}</span></h1>
-              <p>{movieDetail.overview}</p>
+            <div className="detail-div">
+              <h1><div className="title">{movieDetail.title}</div> <div className="rating-div">{Math.round(movieDetail.vote_average * 10) / 10}</div></h1>
+              <p className="overview-p">{movieDetail.overview}</p>
             </div>
           </div>
         </div>
       )}
-
-      <div className="movie-detail-div">
-        Here comes some info in a div
-      </div>
     </section>
   )
 }

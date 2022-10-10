@@ -1,4 +1,28 @@
-.movie-detail-div {
-  background-color: lightgray;
-  height: 400px;
+
+
+/* .rating{
+    width: 100px;
+} */
+
+.detail-div{
+    width: 50%;
+}
+
+.back-image{
+    height: 1.9vw;
+    width: 1.9vw;
+}
+
+.back-btn-div{
+    position: absolute;
+    top: 20px;
+}
+
+/* .backLink:active{
+color: blue;
+} */
+
+.back-image:hover{
+    height: 2.2vw;
+    width: 2.2vw;
 }
