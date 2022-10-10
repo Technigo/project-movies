@@ -1,3 +1,4 @@
+/* eslint-disable no-template-curly-in-string */
 import React, { useState, useEffect } from 'react';
 // import { BrowserRouter, Routes, Roure} from 'react-router-dom'
 // import Movie from './Movie'
@@ -14,13 +15,22 @@ const MovieApp = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log(movieList)
+  const allMovies = movieList.map((movie) => {
+    return (
+      <div className="movie" key={movie.id}>
+        <div className="overlay">
+          <h2 className="movie-title movie-text">{movie.original_title}</h2>
+          <p className="movie-text">Released {movie.release_date}</p>
+        </div>
+        <img src={`http://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="poster" />
+      </div>
+    )
+  })
+
   return (
-    <div>
-      {movieList && movieList.map((movie) => {
-        return <p key={movie.id}>{movie.original_title}</p>
-      })}
-    </div>
+    <section className="movie-wrapper">
+      {allMovies}
+    </section>
 
   )
 }
