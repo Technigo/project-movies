@@ -18,6 +18,7 @@ const Main = () => {
   useEffect(() => {
     fetchMovies();
   }, []);
+
   return (
     <>
       <p>Hej!</p>
