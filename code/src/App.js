@@ -1,9 +1,10 @@
 import React from 'react';
+import Main from './components/Main.js';
 
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      <Main />
     </div>
   );
 }
