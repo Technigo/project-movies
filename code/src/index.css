@@ -12,11 +12,18 @@ code {
     monospace;
 }
 
-.pokemon-list {
+.movie-list {
   display: flex;
   flex-direction: column;
 }
 
-.pokemons {
+.movies {
   padding: 10%;
 }
+
+a:-webkit-any-link {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
