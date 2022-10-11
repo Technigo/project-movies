@@ -1,20 +1,19 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Movie } from './components/Movie';
-import { NotFound } from './components/NotFound';
-import  { List } from './components/List';
-/*Api*/
-import { API_URL } from 'utils/urls'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Movie from './components/Movie';
+import NotFound from './components/NotFound';
+import List from './components/List';
+import API_URL from './urls/urls'
 
 export const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
-          <Route path="/" />
-          <List />
-          <Route path="/Movie" element={<Movie />} />
-          <Route path="/NotFound" element={<NotFound />} />
-      </Switch>
+      <Routes>
+        <Route path="/" />
+        <List />
+        <Route path="/Movie" element={<Movie />} />
+        <Route path="/404" element={<NotFound />} />
+      </Routes>
     </BrowserRouter>
   );
 }
