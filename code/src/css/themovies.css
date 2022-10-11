@@ -1,0 +1,46 @@
+.main-page{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+   .image-container {
+    width: 100%;
+    position: relative;
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+  } 
+  
+  .image-container img {
+    width: 100%;
+  }
+
+  @media (min-width: 370px) and (max-width: 570px){
+    .image-container {
+      width: 50%;
+      position: relative;
+      background-color: black;
+      color: #fff;
+      text-decoration: none;
+    } 
+  }
+  
+  @media (min-width:571px) and (max-width: 820px){
+    .image-container {
+      width: 33%;
+      position: relative;
+      background-color: black;
+      color: #fff;
+      text-decoration: none;
+    } 
+  }
+  
+  @media (min-width: 821px){
+    .image-container {
+      width: 25%;
+      position: relative;
+      background-color: black;
+      color: #fff;
+      text-decoration: none;
+    } 
+  }

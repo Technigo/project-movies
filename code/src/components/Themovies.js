@@ -1,7 +1,9 @@
 /* eslint-disable no-use-before-define */
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../css/themovies.css'
 
-const Themovies = () => {
+const TheMovies = () => {
   const [movies, setMovies] = useState([])
   const [loading, setLoading] = useState(true)
 
@@ -26,13 +28,13 @@ const Themovies = () => {
     <main className="main-page">
       {movies.results.map((movie) => {
         return (
-          <a href="https://google.com/" className="image-container" key={movie.id}>
+          <Link className="image-container" key={movie.id} to={`/movies/${movie.id}`}>
             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="movie poster" />
-          </a>
+          </Link>
         )
       })}
     </main>
   )
 }
 
-export default Themovies;
+export default TheMovies;
