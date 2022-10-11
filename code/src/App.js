@@ -27,7 +27,7 @@ export const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<MovieList list={movieList} />} />
-        <Route path="/details/:pokemonName" element={<MovieDetails />} />
+        <Route path="/details/:movie" element={<MovieDetails />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="/*" element={<Navigate to="/404" />} />
       </Routes>

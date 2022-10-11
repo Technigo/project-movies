@@ -5,9 +5,91 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1B1B1B;
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+header {
+  margin: 40px 20px 24px 20px;
+}
+
+.movie-list {
+  border: solid red;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  width: 49%;
+  height: 300px;
+}
+
+.movie-poster {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+}
+
+.movie-details {
+  border: solid pink;
+  color: white;
+  padding: 4px;
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.movie-card:hover .overlay {
+  opacity: 1;
+}
+
+/* FOOTER */
+
+.footer {
+  height: 100px;
+}
+
+.footer-text {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 40px;
+  line-height: 15px;
 }
