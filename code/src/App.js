@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import MoviePage from 'components/MoviePage';
+import MovieDetail from 'components/MovieDetail';
 import NotFound from 'components/NotFound';
 import MovieApp from './components/MovieApp'
 
@@ -22,7 +22,7 @@ export const App = () => {
         <Route path="/" element={<MovieApp movieList={movieList} />} />
         <Route
           path="/movie/:id"
-          element={<MoviePage movieList={movieList} />} />
+          element={<MovieDetail movieList={movieList} />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>
