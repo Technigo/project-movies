@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable react/jsx-closing-tag-location */
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
