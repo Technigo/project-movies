@@ -11,6 +11,14 @@ import { List } from 'components/List';
 //   'https://api.themoviedb.org/3/movie/550?api_key=d4669261ce30d2ac76f238d73f4bd890';
 
 export const App = () => {
+  // const [pokemonList, setPokemonList] = useState([]);
+
+  // useEffect(() => {
+  //   fetch('https://pokeapi.co/api/v2/pokemon')
+  //     .then((response) => response.json())
+  //     .then((data) => setPokemonList(data.results));
+  // }, []);
+
   return (
     <BrowserRouter>
       <Header />

@@ -7,9 +7,8 @@ export const List = () => {
       Här ska vi mappa över alla filmer
       {/* {list.map((movie) => {
         return (
-          <Link key={movie.title} to={`/details/${movie.title}`}>
-            {movie.title}
-            console.log({movie.title})
+          <Link key={pokemon.name} to={`/details/${pokemon.name}`}>
+            {pokemon.name}
           </Link>
         );
       })} */}
