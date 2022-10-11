@@ -1,10 +1,12 @@
 import React from 'react';
-import { Container } from './Container'
+import { Movies } from './components/Movies.js'
+
 
 export const App = () => {
+
   return (
     <div>
-      <Container />
+      <Movies />
     </div>
   );
 }
