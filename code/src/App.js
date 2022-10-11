@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Movie } from './components/Movie';
 import { NotFound } from './components/NotFound';
-import List from './components/List';
+import  { List } from './components/List';
 /*Api*/
 import { API_URL } from 'utils/urls'
 
