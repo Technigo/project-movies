@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Orbit } from '@uiball/loaders';
 
-export const StartPage = () => {
-  const [movies, setMovies] = useState([])
+export const Upcoming = () => {
+  const [upcoming, setUpcoming] = useState([])
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://api.themoviedb.org/3/movie/popular?api_key=124871c87c46d6e667f133342d66de5c&language=en-US&page=1')
+    fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=124871c87c46d6e667f133342d66de5c&language=en-US&page=1&region=SE')
       .then((res) => res.json())
-      .then((json) => setMovies(json.results))
+      .then((json) => setUpcoming(json.results))
       .catch((error) => alert(error, 'error'))
       .finally(() => setLoading(false));
   }, [])
@@ -22,17 +22,15 @@ export const StartPage = () => {
       </>
     );
   }
-
   return (
-    <div className='startpage'>
-      <h1>Popular movies</h1>
-      {movies.map((movie) => (
+    <div className='upcoming'>
+      <h1>Upcoming movies</h1>
+
+      {upcoming.map((movie) => (
         <Link key={movie.id} to={`/movies/${movie.id}`}>
           <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-          <div className='details'>
-            <h1>{movie.title}</h1>
-            <p>Released {movie.release_date}</p>
-          </div>
+          <h1>{movie.title}</h1>
+          <p>Release date {movie.release_date}</p>
         </Link>
       ))}
     </div>

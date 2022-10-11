@@ -9,13 +9,13 @@ export const Header = () => {
       </h1>
       <ul>
         <li>
-          <NavLink to='/NewReleases'>New Releases</NavLink>
+          <NavLink to='/newReleases'>New Releases</NavLink>
         </li>
         <li>
-          <NavLink to='/Oncinema'>On cinema</NavLink>
+          <NavLink to='/upcoming'>Upcoming</NavLink>
         </li>
         <li>
-          <NavLink to='/PopularTV-series'>Popular TV-series</NavLink>
+          <NavLink to='/TV-series'>TV-series</NavLink>
         </li>
       </ul>
     </header>
