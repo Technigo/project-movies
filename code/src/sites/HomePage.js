@@ -10,14 +10,17 @@ export const HomePage = () => {
     })
   // })
   return (
-    <div className="movieContainer">
+    <section className="movieContainer">
       {movies.map((prop) => (
-        <section className="movieName" key={prop.id}>
-          <h1>{prop.title}</h1>
-          <h1>{prop.release_date}</h1>
-        </section>
-      ))
-      };
-    </div>
+        <div className="movieName" key={prop.id}>
+          <img className="movieImage" src={`https://image.tmdb.org/t/p/w500${prop.poster_path}`} alt={prop.title} />
+          <div className="movieText">
+            <h1 className="movieTitle">{prop.title}</h1>
+            <h2 className="releaseDate">{prop.release_date}</h2>
+          </div>
+        </div>
+      ))};
+    </section>
+
   )
 }
