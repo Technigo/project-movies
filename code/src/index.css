@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.list {
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw 25vw;
+  grid-template-rows: auto;
+}
+
+.MovieList {
+
+}
+/* .list-element {
+  width: 25%;
+  text-align: center;
+} */
