@@ -1,12 +1,13 @@
 /* eslint-disable no-lone-blocks */
 /* eslint-disable no-unreachable */
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 // import { useParams } from 'react-router-dom';
 // skickar inte in props här som det är nu
-const MoviePage = () => {
-  // const movieMatch = movieList.find((movie) => movie.id === params.id);
-  // console.log(movieMatch)
+const MoviePage = ({ movieList }) => {
+  const { id } = useParams();
+  const movieMatch = movieList.find((movie) => movie.id === id);
+  console.log(movieMatch)
 
   return (
     <div style={{ backgroundColor: '#FFF' }}>
