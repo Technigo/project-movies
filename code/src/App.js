@@ -4,6 +4,7 @@ import { Nav } from './Nav';
 import { Welcome } from './Welcome';
 import { Contact } from './Contact';
 import { About } from './About';
+import { API_URL } from 'utils/urls'
 
 export const App = () => {
   return (
