@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const MoviePosters = () => {
+const MovieFeed = () => {
   const [posters, setPosters] = useState([]);
   console.log(posters);
 
@@ -29,4 +29,4 @@ const MoviePosters = () => {
   );
 };
 
-export default MoviePosters;
+export default MovieFeed;
