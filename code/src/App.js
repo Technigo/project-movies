@@ -1,9 +1,22 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Header from 'components/Header';
+import List from 'components/List';
+import Contact from 'components/Contact';
+import NotFound from 'components/NotFound';
+import Details from 'components/Details';
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<List />} />
+        <Route path="/details/:pokemonName" element={<Details />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/404" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/404" />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
