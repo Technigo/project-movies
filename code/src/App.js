@@ -1,9 +1,13 @@
 import React from 'react';
 
+import Movie from './components/Movie'
+
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      <main>
+        <Movie />
+      </main>
     </div>
   );
 }
