@@ -16,7 +16,7 @@ const MovieDetail = () => {
   }, [id])
   return (
 
-    <section>
+    <section className="movie-wrapper">
       <div className="back-btn-div">
         <Link to="/" className="backLink">
           <img className="back-image" src={backIcon} alt="back button" />
@@ -24,13 +24,17 @@ const MovieDetail = () => {
         <span> Back to movies</span>
       </div>
       {movieDetail && (
-        <div className="background" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetail.backdrop_path})` }}>
+        <div className="background">
+          <img className="background-img" src={`https://image.tmdb.org/t/p/w1280${movieDetail.backdrop_path}`} alt={movieDetail.title} />
           <div className="summary-wrapper">
-            <img src={`https://image.tmdb.org/t/p/w342${movieDetail.poster_path}`} alt={movieDetail.title} />
-            <div className="detail-div">
-              <h1><div className="title">{movieDetail.title}</div> <div className="rating-div">{Math.round(movieDetail.vote_average * 10) / 10}</div></h1>
-              <p className="overview-p">{movieDetail.overview}</p>
+            <img className="poster-img" src={`https://image.tmdb.org/t/p/w342${movieDetail.poster_path}`} alt={movieDetail.title} />
+            <div className="title">
+              <h1>{movieDetail.title}</h1>
             </div>
+            <div className="rating-div">
+              {Math.round(movieDetail.vote_average * 10) / 10}
+            </div>
+            <p className="overview-p">{movieDetail.overview}</p>
           </div>
         </div>
       )}
