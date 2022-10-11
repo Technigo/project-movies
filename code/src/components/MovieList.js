@@ -1,16 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const List = ({ list }) => {
+const MovieList = ({ list }) => {
   return (
-    <div>
-      {list.map((pokemon) => {
+    <div className="movie-card">
+      {list.map((movie) => {
         return (
-          <Link key={pokemon.name} to={`/details/${pokemon.name}`}>{pokemon.name}</Link>
-        );
+          <>
+            <Link key={movie.title} to={`/details/${movie.title}`}>{movie.title}</Link>
+            <Link key={movie.release_date} to={`/details/${movie.release_date}`}>{movie.release_date}</Link>
+          </>
+        )
       })}
     </div>
   );
 }
 
-export default List;
+export default MovieList;

@@ -8,12 +8,17 @@ import NotFound from 'components/NotFound';
 import Footer from 'components/Footer';
 
 export const App = () => {
-  const [pokemonList, setPokemonList] = useState([]);
+  const [movieList, setMovieList] = useState([]);
 
   useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon')
-      .then((response) => response.json())
-      .then((data) => setPokemonList(data.result));
+    fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=d7ebb1544b11b5a98ffd2c23bb80dd3b&language=en-US&page=1')
+      .then((res) => res.json())
+      .then((data) => {
+        setMovieList(data.results);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   return (
@@ -21,7 +26,7 @@ export const App = () => {
       {/* Can put a component outside Routes which will be visible on every page */}
       <Header />
       <Routes>
-        <Route path="/" element={<MovieList list={pokemonList} />} />
+        <Route path="/" element={<MovieList list={movieList} />} />
         <Route path="/details/:pokemonName" element={<MovieDetails />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="/*" element={<Navigate to="/404" />} />
