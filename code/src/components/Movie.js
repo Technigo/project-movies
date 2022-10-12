@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import MovieList from 'components/MovieList'
+import MovieDetails from 'components/MovieDetails';
 
 const Movie = () => {
   const [movieList, setMovieList] = useState([]);
@@ -16,6 +17,7 @@ const Movie = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MovieList movies={movieList} />} />
+        <Route path="/movies/:moviesId" element={<MovieDetails />} />
       </Routes>
     </BrowserRouter>
   );
