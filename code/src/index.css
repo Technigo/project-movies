@@ -10,23 +10,44 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100%;
+  background-color: #1e1e1e;
+  color: white;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Segoe UI",
     monospace;
 }
 
 main {
   display: flex;
-    flex-direction: column;
-    align-items: center;
-  
+  flex-wrap: wrap; 
 }
 
 .movie-card {
   border: 1px solid black;
+  position: relative;
+  width: 49%;
 }
+
+.movie-card:hover {
+  opacity: 0.3;
+}
+
+.movie-card img {
+  width: 100%;
+}
+
+.description {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: white;
+}
+.hidden-description {
+  display: none;
+}
+
 
 .movie-detail {
   color:white;
@@ -48,11 +69,11 @@ main {
   background: rgb(0 0 0 / 40%);
   padding: 10px;
   border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 .background {
   background-color: #1e1e1e;
-  min-height: 100%;
   min-height: 100vh;
   background-position: center;
   background-size: cover;
@@ -68,7 +89,6 @@ main {
   align-items: center;
   margin-bottom: 20px;
   font-size: 25px;
- 
 }
 
 .title-vote h3 {
@@ -79,7 +99,6 @@ main {
   padding: 3px 5px;
   display: flex;
   align-items: center;
-  
 }
 
 .title-vote h1 {
@@ -92,21 +111,39 @@ main {
   padding-right: 3px;
 }
 
+.back-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 20px;
+  color:white;
+  text-decoration: none;
+}
+
+
+
+.back-button img {
+  content: url(back-arrow-50.png);
+}
+
+.back-button:hover {
+  transform: scale(1.04);
+  transition: 0.3s ease-in-out;
+}
+
 @media (min-width: 667px) {
 
   main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-items: center;
   }
 
-  .description {
-    display: none;
+  .movie-card {
+    width: 24.7%;
   }
-  .movie-card:hover + .description {
-    display: block;
-  }
+
   .movie-detail {
     flex-direction: row;
     align-items: flex-end;
@@ -116,4 +153,13 @@ main {
     font-size: 17px;
     max-width: 40%;
   }
+
+  .back-button img {
+    content: url(back-arrow-100.png);
+  }
+
+  .back-button {
+    font-size: 25px; 
+  }
+
 }

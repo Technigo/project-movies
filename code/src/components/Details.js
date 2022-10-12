@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 export const Details = () => {
-  const { id } = useParams()
-  const navigate = useNavigate();
-
   const [movieDetails, setMovieDetails] = useState([])
+
+  const { id } = useParams()
+
   const roundedNumber = Math.round(movieDetails.vote_average * 10) / 10
 
   const FetchDetails = () => {
@@ -27,7 +27,10 @@ export const Details = () => {
       style={{
         backgroundImage: `url(http://image.tmdb.org/t/p/original${movieDetails.backdrop_path})`
       }}>
-      <button type="button" onClick={() => navigate(-1)}>Back</button>
+      <Link to="/" className="back-button">
+        <img src="./back-arrow-100.png" alt="Back button" />
+        <p>Back</p>
+      </Link>
       <div className="movie-detail">
         <img src={`http://image.tmdb.org/t/p/w342${movieDetails.poster_path}`} alt="movie" />
         <div className="details">
@@ -41,3 +44,4 @@ export const Details = () => {
     </div>
   )
 }
+// role="button" tabIndex="0" onClick={() => navigate(-1)}
