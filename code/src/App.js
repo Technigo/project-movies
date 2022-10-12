@@ -22,7 +22,10 @@ export const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<MovieFeed posters={posters} />} />
-          <Route path="/posters/:id" element={<SingleMovie />} />
+          <Route
+            path="/posters/:id"
+            element={<SingleMovie posters={posters} />}
+          />
         </Routes>
       </main>
     </BrowserRouter>
