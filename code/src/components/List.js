@@ -11,7 +11,7 @@ const List = ({ movies }) => {
               <img
                 className="list-poster"
                 alt={movie.title}
-                scr={movie.poster_path} />
+                scr={`https://image.tmdb.org/t/p/w342${movies.poster_path}`} />
               <div className="movie-info">
                 <h1>{movie.title}</h1>
                 <p>{movie.release_date}</p>

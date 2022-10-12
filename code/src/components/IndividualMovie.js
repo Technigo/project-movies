@@ -1,18 +1,20 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from 'react';
 import { API_KEY } from 'urls/urls';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const IndividualMovie = () => {
-  const [movies, setMovies] = useState('')
+  const [movie, setMovie] = useState('')
   const [error, setError] = useState('')
-  const MOVIE_URL = `https://api.themoviedb.org/3/individualmovie/?${movies}api_key=${API_KEY}&language=en-US`
+  const { movieId } = useParams()
+  const MOVIE_URL = `https://api.themoviedb.org/3/individualmovie/?${movieId}api_key=${API_KEY}&language=en-US`
 
   useEffect(() => {
     fetch(MOVIE_URL)
-      .then((res) => res.data())
+      .then((res) => res.json())
       .then((data) => {
         if (data.id) {
-          setMovies(data)
+          setMovie(data)
         } else {
           setError(true)
         }
@@ -29,8 +31,20 @@ const IndividualMovie = () => {
 
   return (
     <div>
-      <Link to="/">Movies</Link>
-      <div className="movie-card">This is an individual movie card</div>
+      <Link to="/" className="btn-back">
+        <i className="far fa-arrow-alt-circle-left" />
+        <span className="btn-text">Back Home!</span>
+      </Link>
+      <div className="movie-details">
+        <img
+          className="movie-poster"
+          src={movie.poster_path ? `https://image.tmdb.org/t/p/w342${movie.poster_path}` : ''}
+          alt={movie.title} />
+        <div className="movie-summary">
+          <h1>{movie.title}<span className="movie-rating">{movie.vote_average} / 10</span></h1>
+          <p>{movie.overview}</p>
+        </div>
+      </div>
     </div>
   )
 }
