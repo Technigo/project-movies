@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import MovieDetail from 'components/MovieDetail';
 import NotFound from 'components/NotFound';
-import MovieApp from './components/MovieApp'
+import MovieApp from './components/MovieApp';
 
 export const App = () => {
   const [movieList, setMovieList] = useState([])
