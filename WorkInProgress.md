@@ -35,3 +35,7 @@ Frågor: (eventuella "att göra")
 - Ska vi ta bort "tillbaka-knappen". Den fyller ju egentlgen ingen funktion i details utan den skulle väl egentligen bara va bra att ha om vi skapar fler sidor att gå till från details. För at komma tillbaka till details och inte till Movies. 
 
 - Ska vi ta bort Header helt? Den krånglar lite med background nu och jag undrar om vi inte skulle kunna strunta i den och använda oss av länkar mm i varje component istället? 
+
+Nina Onsdag kväll:
+
+-strulade lite innan jag kunde göra en git pull, va nåt jag inte hade sparat i denna filen innan jag commitade =)
