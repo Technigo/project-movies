@@ -14,7 +14,10 @@ export const Collection = () => {
   }, [id])
 
   return (
-    <div className='collections'>
+    <section className='collections'>
+      <Link to='/' className='backLink'>
+        <img src='/icons/back-icon.svg' id='back-icon' alt='back' />Back to movie
+      </Link>
       {collections.map((movies) => {
         return (
           <>
@@ -28,7 +31,7 @@ export const Collection = () => {
           </>
         )
       })}
-    </div>
+    </section>
 
   )
 }

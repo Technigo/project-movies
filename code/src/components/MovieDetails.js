@@ -27,20 +27,25 @@ export const MovieDetails = () => {
   }
 
   return (
-    <div className='details'>
-      <h1>{details.title}</h1>
-      <h2>{Math.round(details.vote_average * 10) / 10}</h2>
-      <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
-      <h3>Summary</h3>
-      <p>{details.overview}</p>
+    <section className='movie-details'>
+      <Link to='/' className='backLink'>
+        <img src='/icons/back-icon.svg' id='back-icon' alt='back' />Movies
+      </Link>
+      <div className='details'>
+        <h1>{details.title}</h1>
+        <h2>{Math.round(details.vote_average * 10) / 10}</h2>
+        <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
+        <h3>Summary</h3>
+        <p>{details.overview}</p>
 
-      {details.belongs_to_collection !== null
+        {details.belongs_to_collection !== null
         && <div id='collection'>
           <p>
             <Link to={`/collection/${details.belongs_to_collection.id}`}>More from this collection</Link>
           </p>
         </div>}
 
-    </div>
+      </div>
+    </section>
   );
 }

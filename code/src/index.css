@@ -33,3 +33,7 @@ ul {
   flex-direction: row;
   gap: 15px;
 }
+
+#back-icon {
+  width: 20px;
+}
