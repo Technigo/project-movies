@@ -1,29 +1,49 @@
-import React, { useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router';
+/*eslint-disable */
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
-const MovieDetails = ({ popularList }) => {
-  // const params = useParams();
+import { MOVIEDETAILS_URL } from 'short/Urls.js';
 
-  const { movieId } = useParams(); // add the placeholder here (slug)
+const MovieDetails = () => {
+  const [movieDetails, setMovieDetails] = useState({});
+  const { movie_id } = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(movieId)
-  });
+    fetch(MOVIEDETAILS_URL(movie_id))
+      .then((res) => res.json())
+      .then((data) => {setMovieDetails(data);});
+  }, []);
 
   const goBack = () => {
     navigate(-1);
-  };
+  }
+
   return (
-    <section className="movie-container">
-      {console.log('popularList', popularList)}
-      <p>I am detail component</p>
-      <button type="button" onClick={goBack}>{' '}Go back{' '}</button>
-    </section>
+    <>
+      <section className="details-container">
+        <img
+          className="backdrop-image"
+          src={`https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`}
+          alt={movieDetails} />
+        <div>
+          <img
+            className="poster-image"
+            src={`https://image.tmdb.org/t/p/w780${movieDetails.poster_path}`}
+            alt={movieDetails} />
+          <h1>{movieDetails.title}</h1>
+          <h2>{movieDetails.tagline}</h2>
+          <p>{movieDetails.overview}</p>
+        </div>
+      </section>
+      <div className="button-container">
+        <button type="button" onClick={goBack}> Go back </button>
+      </div>
+    </>
   );
 };
-export default MovieDetails;
 
+export default MovieDetails;
 /*
 import React, { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router';
