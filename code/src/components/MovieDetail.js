@@ -22,7 +22,7 @@ const MovieDetail = () => {
       className="movie-page"
       style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetailList.backdrop_path})` }}>
       <div className="go-back">
-        <img src="" alt="Go back" />
+        <img src="./assets/back.png" alt="Go back" />
         <Link to="/">Movies</Link>
       </div>
       <div className="movieDetailInfo">
