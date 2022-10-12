@@ -23,74 +23,65 @@ header {
   text-align: center;
 }
 
-h1 {
-  font-size: 32px;
-  font-weight: 400;
-}
-
 header {
   margin: 40px 20px 24px 20px;
 }
 
+article {
+  width: 50%;
+}
+
 .movie-list {
-  border: solid red;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
+
 .movie-card {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  width: 49%;
-  height: 300px;
+  width: 100%;
+  height: auto;
 }
 
 .movie-poster {
-  position: absolute;
   display: inline-block;
   width: 100%;
-  top: 0;
   z-index: -1;
 }
 
 .movie-details {
-  border: solid pink;
-  color: white;
-  padding: 4px;
-}
-
-.overlay {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.movie-card:hover .overlay {
-  opacity: 1;
+  display: none;
 }
 
 /* MOVIE DETAILS */
+.movie-details-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: flex-end;
+}
+
+.movie-details-inner-container {
+  margin: 20px;
+}
 
 .movie-backdrop {
-  position: absolute;
+  top: 0;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
   height: 100%;
-  z-index: -1;
+  width: auto;
 }
 
 .movie-info {
   position: relative;
+  margin-top: 100px;
 }
 
 .movie-poster-details {
@@ -99,22 +90,32 @@ header {
 }
 
 .goBackBtn {
+  display: flex;
+  align-items: center;
+  height: 25px;
   position: relative;
   color: white;
-  border: none;
   font-size: 16px;
-  background-color: inherit;
+  text-decoration: none;
+}
+
+.goback-icon {
+  width: 25px;
+  margin-right: 4px;
 }
 
 .movie-title-rating {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 5px;
 }
 
 /* FOOTER */
 
 .footer {
+  width: 100%;
   height: 100px;
+  background-color: black;
 }
 
 .footer-text {
@@ -122,4 +123,44 @@ header {
   text-align: center;
   margin-top: 40px;
   line-height: 15px;
+}
+
+@media (min-width: 992px) {
+  .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .movie-card:hover .overlay {
+    opacity: 1;
+  }
+
+  .movie-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: white;
+    padding: 36px 20px;
+    
+  }
+
+  article {
+    width: 25%;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+  
 }

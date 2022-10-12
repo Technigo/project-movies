@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
-import Header from 'components/Header';
 import MovieDetails from 'components/MovieDetails';
 import MovieList from 'components/MovieList';
 import NotFound from 'components/NotFound';
-import Footer from 'components/Footer';
 
 export const App = (movie) => {
   const [movieList, setMovieList] = useState([]);
@@ -25,13 +23,11 @@ export const App = (movie) => {
     <BrowserRouter>
       {/* Can put a component outside Routes which will be visible on every page */}
       <Routes>
-        <Route element={<Header />} />
         <Route path="/" element={<MovieList list={movieList} />} />
         <Route path="/movies/:movieId" element={<MovieDetails movie={movie} />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="/*" element={<Navigate to="/404" />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 }
