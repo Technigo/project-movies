@@ -13,13 +13,23 @@
 .details-container{
     background-color: rgba(0, 0, 0, 0.36);
     color: white;
+    margin-left: 0;
+}
+
+.details-container p{
+    max-width: 400px;
 }
 
 .summary {
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
+    flex-direction: column;
     padding: 50px;
+    border: 3px solid white;
+}
+
+.summary img{
+    border: 5px solid white;
+    width: 200px;
 }
 
 .back-button {
@@ -46,4 +56,29 @@
 
 .back-button:hover .left-arrow{
     margin-right: 5px;
+}
+
+/* media query somehow not working(?) */
+@media (min-width: 577px){
+    .summary {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        padding: 50px;
+    }
+
+    .summary img{
+        border: 5px solid white;
+        width: 250px;
+    }
+
+    .details-container{
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 770px){
+    .summary img{
+        width: auto;
+    }
 }
