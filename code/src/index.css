@@ -9,6 +9,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.outer-wrapper {
+  background-color: rgb(31, 31, 31);
+
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -19,14 +24,18 @@ code {
   flex-wrap: wrap;
 }
 
-.movies {
+/* .movies {
   padding: 10%;
-}
+} */
 
 .movie-cards {
   position: relative;
-  width: 49%;
+  width: 50%;
   height: auto;
+}
+
+.image-text {
+  display: none;
 }
 
 .image-overlay {
@@ -38,22 +47,11 @@ code {
 }
 
 .movie-cards img {
-  width: 48%;
+  width: 100%;
   height: auto;
-  
-}
-
-.list-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 20%;
-  top: 45%;
 }
 
 a:-webkit-any-link {
-  display: flex;
   color: black;
   cursor: pointer;
   text-decoration: none;
@@ -72,11 +70,37 @@ a:-webkit-any-link {
 
 /* DESKTOP */
 @media (min-width: 1025px) {
-  .movie-cards:hover > .movie-cards img {
-    
+  .movie-cards {
+    position: relative;
+    width: 25%;
+    height: auto;
   }
 
-  .image-overlay:hover {
+  .image-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    color: white;
+    opacity: 0;
+  }
+  
+  .list-title {
+    font-size: 25px;
+    font-weight: bold;   
+  }
+  
+  .release-date {
+    font-size: 18px;
+  }
+
+  .movie-cards:hover > .image-text  {
+    opacity: 1;
+  } 
+
+  .movie-cards:hover > .image-overlay {
     background-color: rgba(0, 0, 0, 0.5);
   }
 }

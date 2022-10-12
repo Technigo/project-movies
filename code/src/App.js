@@ -8,13 +8,15 @@ import Details from 'pages/Details';
 
 export const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<List />} />
-        <Route path="/details/:movieName" element={<Details />} />
-        <Route path="/404" element={<NotFound />} />
-        <Route path="*" element={<Navigate to="/404" />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="outer-wrapper">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<List />} />
+          <Route path="/details/:movieName" element={<Details />} />
+          <Route path="/404" element={<NotFound />} />
+          <Route path="*" element={<Navigate to="/404" />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }

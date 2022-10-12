@@ -15,11 +15,14 @@ const List = () => {
     <div className="movie-list">
       {movieList.map((movie) => {
         return (
-          <div className="movie-cards">
-            <div className="image-overlay" />
-            <Link className="movies" key={movie.id} to={`/details/${movie.id}`}>
+          <div className="movie-cards" key={movie.id}>
+            <Link className="movies" to={`/details/${movie.id}`}>
+              <div className="image-overlay" />
               <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="" />
-              <h1 className="list-title">{movie.title}</h1>
+              <div className="image-text">
+                <h1 className="list-title">{movie.title}</h1>
+                <h2 className="release-date">Released {movie.release_date}</h2>
+              </div>
             </Link>
           </div>
         )
