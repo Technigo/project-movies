@@ -25,7 +25,7 @@ main {
   /* padding: 0 50px; */
 }
 
-nav{
+nav {
   padding: 30px;
 }
 
@@ -34,38 +34,37 @@ nav{
   flex-wrap: wrap;
 }
 
-.list-wrapper a{
+.list-wrapper a {
   width: 100%;
   position: relative;
   color: #fff;
-  text-decoration:none
+  text-decoration: none;
 }
-
 
 @media (min-width: 370px) {
   .list-wrapper a {
-      width:50%
+    width: 50%;
   }
 }
 
 @media (min-width: 570px) {
   .list-wrapper a {
-      width:33.33%
+    width: 33.33%;
   }
 }
 
 @media (min-width: 820px) {
   .list-wrapper a {
-      width:25%
+    width: 25%;
   }
 }
 
 /*
 .movie-container {
   /* border: solid green 3px; */
-  /* display: flex; */
-  /* position: relative; */
-  /* z-index: 1;
+/* display: flex; */
+/* position: relative; */
+/* z-index: 1;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -77,7 +76,6 @@ nav{
   transition: .5s ease; 
 }*/
 
-
 .list-element {
   /* border: solid orange 5px; */
   margin: 0 auto;
@@ -85,17 +83,17 @@ nav{
 }
 
 .list-wrapper .movie-info {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
-.list-element:hover, .movie-container {
+.list-element:hover,
+.movie-container {
   z-index: 2;
   opacity: 1;
 }
-
 
 /*color is transparent!!*/
 h1 {
@@ -122,8 +120,6 @@ h4 {
   transform: translate(-50%, -50%);
 }
 
-
-
 /* clean up the hover, do we need all code dublicated?*/
 
 .movie-info:hover {
@@ -143,7 +139,6 @@ h4 {
 
 .movie-info:hover h1 {
   color: white;
-
 }
 
 .movie-info:hover h4 {
@@ -156,17 +151,13 @@ h4 {
   transition: 0.3s ease;
 } */
 
-
-
 .details-container {
   border: solid hotpink 2px;
 }
 
-
-
 /*Details */
 
-.details-container, .button-container { 
+.details-container {
   border: solid green 2px;
   position: relative;
   display: inline-flex;
@@ -177,56 +168,105 @@ h4 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: cover;
-  object-fit: cover;  /*added this, makes image cover except >1280px*/
+  object-fit: cover; /*added this, makes image cover except >1280px*/
   height: 100vh;
   width: 100vw; /*makes image fit to the edge >1280px*/
-  z-index: -1;  /*lays image behind everything, as background*/
-  opacity: 50%;
+  /* z-index: -1;/* ays image behind everything, as background*/
+  /* opacity: 50%; */
+}
+.gradiant {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 255) 0%,
+    rgb(7, 0, 0) 100%
+  );
+  background: -moz-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(3, 0, 0) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(7, 0, 0) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(3, 0, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(17, 0, 0) 100%
+  );
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=rgb(13, 1, 1), endColorstr=rgb(0, 0, 0));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=rgb(25, 49, 49), endColorstr=rgb(7, 0, 0));
 }
 
-
-
-.poster-image{
+.poster-image {
   position: absolute;
   z-index: 1;
   border: solid white 5px;
   bottom: 10%;
   left: 5%;
   height: 50%;
-
+}
+.text-wrapper {
+  position: absolute;
+  bottom: 10%;
+  left: 25%;
+  max-width: 35%;
+  line-height: 1.6;
 }
 
-.over-view, h2, h3{
-  position: absolute;
+.over-view,
+h2,
+h3 {
   /*border: solid 3px brown;*/
   color: white;
-  position: absolute;
   z-index: 1;
   padding-left: 2%;
 }
 
-.over-view{
-  top: 60%;
-  left: 30%;
-  max-width: 40%;
+.title {
+  /*om ni vill styla title samma stil som rating */
 }
 
-h2 {
-  top: 50%;
-  left: 30%;
+.rating {
+  background-color: white;
+  color: black;
+  padding: 2px 4px;
+  margin-left: 20px;
 }
 
-h3 {
-  top: 55%;
-  left: 30%;
-}
+/* ta bort dessa, gjorde en div,text-wrapper, istället och la dem i */
+/* .over-view{
+  
+} */
+
+/* h2 {
+  bottom: 25%;
+  left: 23%;
+} */
+
+/* h3 {
+  bottom: 22%;
+  left: 23%;
+} */
 
 .button-container {
-  border: solid orange 2px;
+  /* border: solid orange 2px; */
   position: absolute;
-  color: white;
   z-index: 1;
   top: 10%;
-  left: 10%;
-
+  left: 5%;
+  color: white;
+  font-weight: 700;
 }

@@ -1,8 +1,8 @@
 /*eslint-disable */
-import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
-import { MOVIEDETAILS_URL } from 'short/Urls.js';
+import { MOVIEDETAILS_URL } from "short/Urls.js";
 
 const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState({});
@@ -12,12 +12,16 @@ const MovieDetails = () => {
   useEffect(() => {
     fetch(MOVIEDETAILS_URL(movie_id))
       .then((res) => res.json())
-      .then((data) => {setMovieDetails(data);});
+      .then((data) => {
+        setMovieDetails(data);
+      });
   }, []);
+
+  console.log("moviedata", movieDetails);
 
   const goBack = () => {
     navigate(-1);
-  }
+  };
 
   return (
     <>
@@ -25,21 +29,32 @@ const MovieDetails = () => {
         <img
           className="backdrop-image"
           src={`https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`}
-          alt={movieDetails} />
+          alt={movieDetails}
+        />
+        <div class="gradiant"></div>
+
         <div>
           <img
             className="poster-image"
             src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`}
-            alt={movieDetails} />
-          <h2>{movieDetails.title}</h2>
-          <h3>{movieDetails.tagline}</h3>
-          <p className="over-view">{movieDetails.overview}</p>
+            alt={movieDetails}
+          />
+          <div className="text-wrapper">
+            <h2>
+              <span className="title">{movieDetails.title}</span>
+              <span className="rating">⭐️ {movieDetails.vote_average}</span>
+            </h2>
+            <h3>{movieDetails.tagline}</h3>
+            <p className="over-view">{movieDetails.overview}</p>
+          </div>
         </div>
         <div className="button-container">
-        <button type="button" onClick={goBack}> Go back </button>
-      </div>
+          <button type="button" onClick={goBack}>
+            {" "}
+            Go back{" "}
+          </button>
+        </div>
       </section>
-     
     </>
   );
 };
