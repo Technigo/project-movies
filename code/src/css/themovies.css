@@ -33,6 +33,9 @@
     justify-content: flex-end;
   }
 
+@keyframes mymove {
+  50% {transform: rotate(180deg);}
+}
   /* media query */
 
   @media (min-width: 370px) and (max-width: 570px){
