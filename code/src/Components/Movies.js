@@ -1,19 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Movies = ({ blabla }) => {
+const Movies = ({ movies }) => {
   return (
     <section className="movies">
-      {blabla.map((bla) => {
+      {movies.map((movie) => {
         return (
           <Link
-            key={bla.id}
-            to={`/details${bla.title}`}
+            key={movie.title}
+            to={`/details/${movie.id}`}
             className="movie">
-            <img src={`https://image.tmdb.org/t/p/w342/${bla.poster_path}`} alt="poster" />
+            <img src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt="poster" />
             <div className="movie-hover">
-              <h1> {bla.title} </h1>
-              <p> {bla.release_date} </p>
+              <h1> {movie.title} </h1>
+              <p> {movie.release_date} </p>
             </div>
           </Link>
         )
