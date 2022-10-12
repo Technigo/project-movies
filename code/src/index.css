@@ -12,13 +12,49 @@ code {
     monospace;
 }
 
-img {
-  max-width: 300px;
-}
-
 .poster-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+}
+
+/* section {
+  display: flex;
+  align-items: flex-end;
+} */
+
+.wrapper {
+  height: 90vh;
+  display: flex;
+  margin-left: 30px;
+}
+
+.content {
+  display: flex;
+  align-items: flex-end;
+}
+.text-container {
+  max-width: 500px;
+  margin-left: 20px;
+}
+.title-vote {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+p {
+  color: white;
+}
+
+h2 {
+  color: white;
+}
+
+.vote {
+  padding: 5px;
+  background-color: white;
+  color: black;
 }

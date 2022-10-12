@@ -10,6 +10,7 @@ const SingleMovie = () => {
 
   const [movie, setMovie] = useState({});
   const { id } = useParams();
+  console.log(useParams);
   const url = `https://api.themoviedb.org/3/movie/${id}?api_key=4f32d41e25209822b9c7a73559fb2822&language=en-US`;
 
   useEffect(() => {
@@ -21,24 +22,32 @@ const SingleMovie = () => {
   }, [id, url]);
 
   return (
-    <div>
+    <section
+      style={{
+        backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${movie.backdrop_path})`,
+        backgroundSize: 'cover',
+        height: '100vh'
+      }}
+    >
       <button type="button" onClick={returnToHomePage}>
         Home
       </button>
-      <h2>{movie.title}</h2>
-      <h2>{movie.overview}</h2>
-      <h2>{movie.vote_average}</h2>
-      <img
-        src={`https://image.tmdb.org/t/p/w1280/${movie.poster_path}`}
-        alt=""
-      />
-
-      <img
-        src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}
-        alt=""
-      />
-      <h1>Test detail about movie</h1>
-    </div>
+      <div className="wrapper">
+        <div className="content">
+          <img
+            src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+            alt=""
+          />
+          <div className="text-container">
+            <div className="title-vote">
+              <h2>{movie.title}</h2>
+              <h2 className="vote">{movie.vote_average}</h2>
+            </div>
+            <p>{movie.overview}</p>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
