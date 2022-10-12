@@ -31,7 +31,7 @@ const IndividualMovie = () => {
   }
 
   return (
-    <div>
+    <div className="background-poster" style={{ backgroundImage: movie.backdrop_path ? `linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` : '' }}>
       <Link to="/" className="btn-back">
         <span className="btn-text">Back Home!</span>
       </Link>

@@ -16,3 +16,10 @@ a.active {
   text-decoration: underline;
   background-color: red;
 }
+
+.background-poster {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
