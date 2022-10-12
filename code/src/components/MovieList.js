@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MovieList = ({ movies }) => {
+const MovieList = ({ list }) => {
   return (
     <div>
-      {movies.map((singleMovie) => {
+      {list.map((movie) => {
         return (
           <Link
-            key={singleMovie.id}
-            to={`/details/${singleMovie.title}`}>
-            {singleMovie.title}
+            key={movie.id}
+            to={`/details/${movie.id}`}>
+            {movie.title}
             <img
-              src={`https://image.tmdb.org/t/p/w342${singleMovie.poster_path}`}
+              src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
               alt="movie_poster" />
           </Link>
         )
@@ -21,3 +21,22 @@ const MovieList = ({ movies }) => {
 }
 
 export default MovieList;
+
+/* import React from 'react';
+import { Link } from 'react-router-dom';
+
+const MovieList = ({ list }) => {
+  return (
+    <div className="popular-list">
+      {list.map((movie) => {
+        return (
+          <Link key={movie.id} to={`/details/${movie.id}`}>
+            <img src={`http://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt="movie_poster" />
+          </Link>
+        )
+      })}
+    </div>
+  );
+}
+
+export default MovieList; */

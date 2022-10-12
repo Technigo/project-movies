@@ -16,8 +16,8 @@ const Movie = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MovieList movies={movieList} />} />
-        <Route path="/movies/:moviesId" element={<MovieDetails />} />
+        <Route path="/" element={<MovieList list={movieList} />} />
+        <Route path="/details/:id" element={<MovieDetails />} />
       </Routes>
     </BrowserRouter>
   );
