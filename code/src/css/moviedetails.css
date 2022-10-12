@@ -18,6 +18,7 @@
 
 .details-container p{
     max-width: 400px;
+    font-size: 18px;
 }
 
 .rating {
@@ -31,7 +32,6 @@
     display: flex;
     flex-direction: column;
     padding: 50px;
-    border: 3px solid white;
 }
 
 .summary img{
@@ -56,7 +56,7 @@
 .left-arrow{
     width: 30px;
     border-radius: 50%;
-    margin-right: 10%;
+    margin-right: 10px;
     transition: margin-right .2s ease-in-out;
 }
 
@@ -64,7 +64,7 @@
     margin-right: 5px;
 }
 
-/* media query somehow not working(?) */
+/* media query */
 @media (min-width: 577px){
     .summary {
         display: flex;
@@ -79,7 +79,7 @@
     }
 
     .details-container{
-        padding: 0 15px;
+        padding: 0 30px;
         margin-left: 20px;
     }
 }

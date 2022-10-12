@@ -35,10 +35,10 @@ const MovieDetails = () => {
         <div className="summary">
           <img src={`https://image.tmdb.org/t/p/w342${movieDetail.poster_path}`} alt="movie poster" />
           <div className="details-container">
-            <h2>
+            <h1>
               <span>{movieDetail.title}</span>
               <span className="rating">⭐{movieDetail.vote_average.toFixed(1)}</span>
-            </h2>
+            </h1>
             <p>
               <span>{movieDetail.overview}</span>
             </p>
