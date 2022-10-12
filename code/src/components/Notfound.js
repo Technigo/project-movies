@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
 
-export const Notfound = () => {
+export const NotFound = () => {
   const navigate = useNavigate();
   const returnToDefaultPage = () => {
     navigate('/');
@@ -13,4 +13,4 @@ export const Notfound = () => {
     </div>
   );
 }
-export default Notfound;
+export default NotFound;
