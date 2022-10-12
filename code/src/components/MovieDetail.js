@@ -27,7 +27,7 @@ const MovieDetail = () => {
         <img className="movie-poster" src={`http://image.tmdb.org/t/p/w342${movieDetailList.poster_path}`} alt={movieDetailList.original_title} />
         <div className="movie-info">
           <div className="rated-title">
-            <h2>{movieDetailList.original_title} </h2>
+            <h2>{movieDetailList.title} </h2>
             <p className="rating">⭐️ {Number(movieDetailList.vote_average).toFixed(1)}</p>
           </div>
           <p>{movieDetailList.overview}</p>
