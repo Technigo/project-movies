@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from 'react';
 import { API_KEY } from 'urls/urls';
@@ -6,8 +7,8 @@ import { Link, useParams } from 'react-router-dom';
 const IndividualMovie = () => {
   const [movie, setMovie] = useState('')
   const [error, setError] = useState('')
-  const { movieId } = useParams()
-  const MOVIE_URL = `https://api.themoviedb.org/3/individualmovie/?${movieId}api_key=${API_KEY}&language=en-US`
+  const { movie_id } = useParams()
+  const MOVIE_URL = `https://api.themoviedb.org/3/movie/?${movie_id}api_key=${API_KEY}&language=en-US`
 
   useEffect(() => {
     fetch(MOVIE_URL)
@@ -32,7 +33,6 @@ const IndividualMovie = () => {
   return (
     <div>
       <Link to="/" className="btn-back">
-        <i className="far fa-arrow-alt-circle-left" />
         <span className="btn-text">Back Home!</span>
       </Link>
       <div className="movie-details">
