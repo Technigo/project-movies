@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import 'css/movieDetails.css'
-import backIcon from 'icons/back.png';
+import BackIcon from 'icons/arrow2.png';
 
 const MovieDetail = () => {
   const [movieDetail, setMovieDetail] = useState()
@@ -18,23 +18,30 @@ const MovieDetail = () => {
 
     <section className="movie-wrapper">
       {movieDetail && (
-        <div className="background">
-          <img className="background-img" src={`https://image.tmdb.org/t/p/w1280${movieDetail.backdrop_path}`} alt={movieDetail.title} />
-          <div className="back-btn-div">
-            <Link to="/" className="backLink">
-              <img className="back-image" src={backIcon} alt="back button" />
-            </Link>
-            <span> Back to movies</span>
-          </div>
+        <div
+          className="background"
+          style={{
+            backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetail.backdrop_path})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center'
+          }}>
           <div className="summary-wrapper">
+            <div className="back-btn-div">
+              <Link to="/" className="backLink">
+                <img className="back-image" src={BackIcon} alt="back button" />
+              </Link>
+              <div className="back-text">Movies</div>
+            </div>
             <img className="poster-img" src={`https://image.tmdb.org/t/p/w342${movieDetail.poster_path}`} alt={movieDetail.title} />
-            <div className="title">
+            <div className="details-title">
               <h1>{movieDetail.title}</h1>
             </div>
-            <div className="rating-div">
-              {Math.round(movieDetail.vote_average * 10) / 10}
+            <div className="details-rating">
+              <p><span className="star">⭐</span>{Math.round(movieDetail.vote_average * 10) / 10}</p>
             </div>
             <p className="overview-p">{movieDetail.overview}</p>
+
           </div>
         </div>
       )}

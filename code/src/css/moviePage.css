@@ -25,7 +25,7 @@
   bottom: 0;
   position: absolute;
   z-index: 1;
-  width: 100%;
+  width: fit-content;
   color: #fff;
   padding: 40px 30px;
 }
