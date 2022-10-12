@@ -1,12 +1,5 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-
-import { List } from './components/List';
-// import { Details } from './components/Details';
-// import { Header } from './components/Header';
-// import { NotFound } from './components/NotFound';
 
 // url for movie-popular: https://api.themoviedb.org/3/movie/popular?api_key={35a0fb6f5f3fde8a6e6cf4ca489b902a}&language=en-US&page=1
 
@@ -16,27 +9,38 @@ import { List } from './components/List';
 
 // https://api.themoviedb.org/3/movie/popular?api_key=35a0fb6f5f3fde8a6e6cf4ca489b902a
 
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+
+import Details from 'components/Details';
+import { NotFound } from 'components/NotFound';
+import Header from 'components/Header';
+import { MovieList } from 'components/MovieList';
+
 export const App = () => {
-  const [list, setList] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [movieList, setMovieList] = useState([]);
+  const [details, setDetails] = useState();
 
   useEffect(() => {
-    setLoading(true);
-    fetch('https://api.themoviedb.org/3/movie/popular?api_key=35a0fb6f5f3fde8a6e6cf4ca489b902a')
+    fetch('https://api.themoviedb.org/3/movie/popular?api_key=35a0fb6f5f3fde8a6e6cf4ca489b902a&language=en-US&page=1')
       .then((response) => response.json())
-      .then((data) => {
-        setList(data.results)
-        console.log(data.results)
-      })
-      .catch((event) => {
-        console.error(console.error(event))
-      })
-      .finally(() => {
-        setLoading(false);
-      })
-  }, [])
+      .then((data) => setMovieList(data.results));
+  }, []);
+  // useEffect(() => {
+  //     fetch(`https://api.themoviedb.org/3/movie/${movie.id}?api_key=35a0fb6f5f3fde8a6e6cf4ca489b902a&language=en-US`)
+  //       .then((response) => response.json())
+  //       .then((data) => setDetails(data.results));
+  //   }, []);
+
   return (
-    <List movies={setList} />
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<MovieList list={movieList} />} />
+        <Route path="/details/:movieTitle" element={<Details />} />
+        <Route path="/404" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/404" />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-

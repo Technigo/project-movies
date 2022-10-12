@@ -1,8 +1,17 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-export const Header = () => {
+const Header = () => {
   return (
-    <h1> Here will come header with navi </h1>
-  )
+    <header>
+      <h1> Here will come header with navi </h1>
+      <nav>
+        <NavLink to="/"> Home </NavLink>
+        <NavLink to="/details"> Details </NavLink>
+      </nav>
+    </header>
+  );
 }
+
+export default Header;

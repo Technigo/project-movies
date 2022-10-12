@@ -18,4 +18,15 @@ code {
 .list-element {
   width: 25%;
   text-align: center;
+
+}
+
+.popular-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a {
+  display: flex;
+  margin: 50px;
 }
