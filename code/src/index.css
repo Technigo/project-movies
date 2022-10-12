@@ -1,6 +1,7 @@
 body {
   margin: 0;
   background-color: black;
+  color: white;
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -44,6 +45,15 @@ code {
   font-size: 2em;
   margin-bottom: 0px;
 }
+
+.loader-container {
+ text-align: center;
+ padding-top: 200px;
+}
+
+.loader-icon {
+ font-size: 40px;
+ }
 
 /* TABLET */
 
