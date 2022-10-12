@@ -17,15 +17,15 @@ const MovieDetail = () => {
   return (
 
     <section className="movie-wrapper">
-      <div className="back-btn-div">
-        <Link to="/" className="backLink">
-          <img className="back-image" src={backIcon} alt="back button" />
-        </Link>
-        <span> Back to movies</span>
-      </div>
       {movieDetail && (
         <div className="background">
           <img className="background-img" src={`https://image.tmdb.org/t/p/w1280${movieDetail.backdrop_path}`} alt={movieDetail.title} />
+          <div className="back-btn-div">
+            <Link to="/" className="backLink">
+              <img className="back-image" src={backIcon} alt="back button" />
+            </Link>
+            <span> Back to movies</span>
+          </div>
           <div className="summary-wrapper">
             <img className="poster-img" src={`https://image.tmdb.org/t/p/w342${movieDetail.poster_path}`} alt={movieDetail.title} />
             <div className="title">
