@@ -1,12 +1,18 @@
+import { MovieList } from 'MovieList';
 import React from 'react';
-import { Movies } from './components/Movies.js'
-
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Movies } from './Components/Movies'
+import { NotFound } from './Components/NotFound'
 
 export const App = () => {
-
   return (
-    <div>
-      <Movies />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Movies />} />
+        <Route path="/movielist" element={<MovieList />} />
+        <Route path="/404" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/404" />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

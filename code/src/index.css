@@ -17,4 +17,6 @@ code {
     monospace;
 }
 
-
+.button{
+  border:solid;
+}
