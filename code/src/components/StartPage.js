@@ -17,25 +17,29 @@ export const StartPage = () => {
 
   if (loading) {
     return (
-      <>
+      <div className='loading-container'>
         <h2>Loading..</h2>
-        <Orbit size={40} speed={0.9} color='black' />
-      </>
+        <Orbit size={40} speed={0.9} color='#F9F9F9' />
+      </div>
     );
   }
 
   return (
-    <div className='startpage'>
-      <h1>Popular movies</h1>
-      {movies.map((movie) => (
-        <Link key={movie.id} to={`/movies/${movie.id}`}>
-          <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-          <div className='details'>
-            <h1>{movie.title}</h1>
-            <p>Released {movie.release_date}</p>
-          </div>
-        </Link>
-      ))}
-    </div>
+    <section className='startpage'>
+      <h1 className='popular'>Popular movies</h1>
+      <div className='movies-container'>
+        {movies.map((movie) => (
+          <article className='movie-wrapper' key={movie.id}>
+            <Link key={movie.id} to={`/movies/${movie.id}`}>
+              <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+              <div className='details'>
+                <h1>{movie.title}</h1>
+                <p>Released {movie.release_date}</p>
+              </div>
+            </Link>
+          </article>
+        ))}
+      </div>
+    </section>
   )
 }

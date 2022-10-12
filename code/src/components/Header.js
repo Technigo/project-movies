@@ -5,17 +5,17 @@ import { Link, NavLink } from 'react-router-dom'
 export const Header = () => {
   return (
     <header>
-      <h1>
-        <Link to='/'>The movie browser</Link>
-      </h1>
-      <ul>
-        <li>
+
+      <Link to='/'><img className='miniflix' src='https://cloudinary-res.cloudinary.com/image/upload/v1521663307/MiniFlix-Logo_620x180.png' alt='Netflix' width='112' height='28' /></Link>
+
+      <ul className='navlink-container'>
+        <li className='navlink'>
           <NavLink to='/newReleases'>New Releases</NavLink>
         </li>
-        <li>
+        <li className='navlink'>
           <NavLink to='/upcoming'>Upcoming</NavLink>
         </li>
-        <li>
+        <li className='navlink'>
           <NavLink to='/TV-series'>TV-series</NavLink>
         </li>
       </ul>
