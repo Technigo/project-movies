@@ -1,24 +1,49 @@
-import React, { useEffect } from 'react';
+/* eslint-disable comma-dangle */
+/* eslint-disable react/jsx-closing-bracket-location */
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
+const apiKey = 'd4669261ce30d2ac76f238d73f4bd890';
+
 const Details = () => {
-  //   const params = useParams();
-  const { pokemonName } = useParams();
+  const [movie, setMovie] = useState({});
+  const params = useParams();
   const navigate = useNavigate();
+  const API_URL = `https://api.themoviedb.org/3/movie/${params.movieId}?api_key=${apiKey}&language=en-US&page=1`;
+
   useEffect(() => {
-    // console.log(params.pokemonName);
-    console.log(pokemonName);
+    fetch(API_URL)
+      .then((response) => response.json())
+      .then((json) => setMovie(json));
   });
+
   const goBack = () => {
     navigate(-1);
   };
   return (
-    <div>
-      <p>I am the Deatails component</p>
-      <button type="button" onClick={goBack}>
-        {' '}
-        Go back{' '}
-      </button>
+    <div
+      style={{
+        backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
+      }}
+      className="movie-details-wrapper">
+      <div className="movie-details">
+        <div className="image-wrapper">
+          <button type="button" onClick={goBack}>
+            {' '}
+            Movies{' '}
+          </button>
+          <img
+            src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+            alt={movie.title}
+          />
+        </div>
+        <div>
+          <p>{movie.vote_average} on IMDB</p>
+          <p>{movie.title}</p>
+          <p>{movie.overview}</p>
+          <span>Released {movie.release_date}</span>
+        </div>
+      </div>
     </div>
   );
 };
