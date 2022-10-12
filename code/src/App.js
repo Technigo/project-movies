@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import MovieDetails from 'components/MovieDetails'
 import Header from 'components/Header';
 import MovieList from 'components/MovieList';
-import NotFound from 'components/NotFound';
+import NotFound from 'components/NotFound.js';
 
 import { POPULARMOVIE_URL } from 'short/Urls.js'
 
