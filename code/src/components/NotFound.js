@@ -9,11 +9,10 @@ const NotFound = () => {
 
   return (
     <div>
-      <p>not found</p>
-      <button type="button" onClick={returnToDefaultPage}> Go to Homepage</button>
-
+      <p>Page not found</p>
+      <button type="button" onClick={returnToDefaultPage}>Go to Homepage</button>
     </div>
-  );
+  )
 }
 
 export default NotFound

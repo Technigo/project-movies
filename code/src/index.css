@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  background-color: black;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -17,21 +19,43 @@ code {
 }
 
 .movies {
-  display: flex;
-  border: 2px solid lightskyblue;
+  display: grid;
+  align-items: end;
 }
 
 .poster-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .poster-image {
   width: 100%;
+  position: relative;
 }
 
 .poster-text-container {
-  display: nånting
+ position: absolute;
+ /* border: 1px solid red; */
+ margin: 1vw;
+ color: white;
 }
 
-/* @TODO add max width to grid to make responsive */
+.poster-text-container-title {
+  font-size: 2em;
+  margin-bottom: 0px;
+}
+
+/* TABLET */
+
+@media (min-width: 669px) {
+  .poster-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* DESKTOP */ 
+@media (min-width: 992px) {
+  .poster-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

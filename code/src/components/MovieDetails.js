@@ -8,7 +8,7 @@ const MovieDetails = () => {
   useEffect(() => {
     // console.log(params.movieTitle)
     console.log(movieTitle)
-  });
+  })
 
   const goBack = () => {
     navigate(-1)
@@ -16,10 +16,11 @@ const MovieDetails = () => {
 
   return (
     <div>
-      <p>I am the Details comonent</p>
+      <h1>{movieTitle}</h1>
+      {/* <img className="poster-image" src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={`${movieTitle} poster`} /> */}
       <button type="button" onClick={goBack}>Go back</button>
     </div>
-  );
+  )
 }
 
 export default MovieDetails
