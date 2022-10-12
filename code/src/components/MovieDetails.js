@@ -7,7 +7,7 @@ const MovieDetails = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('https://api.themoviedb.org/3/movie/760161??api_key=d7ebb1544b11b5a98ffd2c23bb80dd3b&language=en-US')
+    fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=d7ebb1544b11b5a98ffd2c23bb80dd3b&language=en-US`)
       .then((res) => res.json())
       .then((json) => {
         setMovie(json);
@@ -23,13 +23,15 @@ const MovieDetails = () => {
 
   return (
     <>
-      <div>
-        <p>This is details</p>
-        <h2>{movie.title}</h2>
-        <button type="button" onClick={goBack}>Movies</button>
-      </div>
-      <div>
-        <img className="movie-backdrop" src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={movie.title} />
+      <img className="movie-backdrop" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title} />
+      <button className="goBackBtn" type="button" onClick={goBack}>Movies</button>
+      <div className="movie-info">
+        <img className="movie-poster-details" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+        <div className="movie-title-rating">
+          <h2 className="movie-title">{movie.title}</h2>
+          <h2>Rating: {movie.vote_average}/10</h2>
+        </div>
+        <p className="movie-description">{movie.overview}</p>
       </div>
     </>
   )

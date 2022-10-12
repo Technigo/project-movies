@@ -17,7 +17,7 @@ const MovieList = ({ list }) => {
                     <p key={movie.release_date}>{movie.release_date}</p>
                   </div>
                 </div>
-                <img className="movie-poster" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="movie poster" />
+                <img className="movie-poster-details" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="movie poster" />
               </div>
             </Link>
           </article>

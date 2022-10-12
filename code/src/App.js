@@ -24,10 +24,10 @@ export const App = (movie) => {
   return (
     <BrowserRouter>
       {/* Can put a component outside Routes which will be visible on every page */}
-      <Header />
       <Routes>
+        <Route element={<Header />} />
         <Route path="/" element={<MovieList list={movieList} />} />
-        <Route path="/movies/:movie" element={<MovieDetails movie={movie} />} />
+        <Route path="/movies/:movieId" element={<MovieDetails movie={movie} />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="/*" element={<Navigate to="/404" />} />
       </Routes>
