@@ -18,6 +18,7 @@ code {
 
 a {
   text-decoration: none;
+  color: #F9F9F9
 }
 
 /** HEADER **/
@@ -28,9 +29,8 @@ header {
   display: flex;
   justify-content: center;
   background: #181818e0;
-  border-bottom: solid #a09c9c5e 0.3px;
   flex-direction: column;
-  padding: 20px 0;
+  padding: 5px 0;
   align-items: center;
   z-index: 1;
 }
@@ -60,7 +60,15 @@ header {
 
 /** ICONS **/
 #back-icon {
-  width: 20px;
+  width: 30px;
+  filter: invert(1);
+  margin-right: 6px;
+}
+
+#back-icon:hover {
+ transform: scale(1.2);
+ opacity: 0.8;
+ transition: transform 0.4s;
 }
 
 #star-icon {
@@ -69,6 +77,7 @@ header {
 
 #more-icon {
   width: 15px;
+  margin-left: 4px;
 }
 
 /** STARTPAGE **/
@@ -141,6 +150,71 @@ header {
   justify-content: flex-end;
 }
 
+/** MOVIE DETAILS **/
+
+.movie-details {
+  position: absolute;
+  bottom: 0;
+  padding: 35px
+}
+
+.background {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-img {
+  border: solid #F9F9F9 2px;
+  height: 300px;
+  width: fit-content;
+}
+
+.details h1 {
+  color: #F9F9F9;
+  font-size: 20px
+}
+
+.details h2, details p {
+  font-size: 15px;
+  color: #F9F9F9
+}
+
+.details p {
+  font-size: 18px;
+  color: #F9F9F9;
+  margin-top: 0;
+  max-width: 450px;
+}
+
+.back {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.backLink {
+  color: #F9F9F9;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.ratings {
+  background: #b1aaaa8a;
+  padding: 6px
+}
+
+.collection {
+  background: #b1aaaa8a;
+  padding: 10px;
+  width: fit-content;
+}
+
 /** MEDIA QUERIES **/
 
   @media (min-width: 370px) {
@@ -165,6 +239,11 @@ header {
       margin: 125px 10px;
   }
 
+    .movie-details {
+      bottom: 20%;
+      left: 10%;
+  }
+
     .movie-wrapper {
       width: 33.33%;
     }
@@ -172,9 +251,22 @@ header {
   
   @media (min-width: 820px) {
 
+    .details {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .detail-text {
+      padding: 20px
+    }
+
+    .detail-img {
+      height: 380px;
+    }
+    
     .startpage {
       margin: 125px 100px;
-  }
+    }
 
     .movie-wrapper {
       width: 25%;

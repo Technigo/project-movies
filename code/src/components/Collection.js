@@ -31,12 +31,3 @@ export const Collection = () => {
 
   )
 }
-
-/* {collections.map((item) => (
-
-<div key={item.id} className='collection-movie'>
-  <h1>{item.parts.map((movie) => movie.title)}</h1>
-</div>
-
-))}
-</div> */
