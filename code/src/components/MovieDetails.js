@@ -33,7 +33,7 @@ const MovieDetails = () => {
             alt={movieDetails} />
           <h1>{movieDetails.title}</h1>
           <h2>{movieDetails.tagline}</h2>
-          <p>{movieDetails.overview}</p>
+          <p className="over-view">{movieDetails.overview}</p>
         </div>
       </section>
       <div className="button-container">

@@ -15,6 +15,7 @@ const MovieList = ({ movies }) => {
             alt={movie.title} />
           <div className="movie-info">
             <h1>{movie.title}</h1>
+            <p>Release date: {movie.release_date}</p>
           </div>
         </Link>
       ))}
