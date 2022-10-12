@@ -1,3 +1,7 @@
+html {
+  min-height: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
 }
 
 code {
@@ -14,9 +19,101 @@ code {
 
 main {
   display: flex;
-  flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  
 }
 
 .movie-card {
   border: 1px solid black;
+}
+
+.movie-detail {
+  color:white;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.movie-detail img {
+  border: 5px solid white;
+  max-width: 70%;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.movie-detail p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: rgb(0 0 0 / 40%);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.background {
+  background-color: #1e1e1e;
+  min-height: 100%;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title-vote {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 25px;
+ 
+}
+
+.title-vote h3 {
+  background-color: white;
+  border-radius: 7px;
+  color: black;
+  margin-left: 15px;
+  padding: 3px 5px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.title-vote h1 {
+  font-weight: bold;
+}
+
+.vote-icon {
+  content: url(Star.svg);
+  height: 15px;
+  padding-right: 3px;
+}
+
+@media (min-width: 667px) {
+
+  main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .description {
+    display: none;
+  }
+  .movie-card:hover + .description {
+    display: block;
+  }
+  .movie-detail {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .movie-detail p {
+    font-size: 17px;
+    max-width: 40%;
+  }
 }

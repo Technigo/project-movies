@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 export const Details = () => {
   const { id } = useParams()
-  console.log('movie-id:', id)
+  const navigate = useNavigate();
 
   const [movieDetails, setMovieDetails] = useState([])
+  const roundedNumber = Math.round(movieDetails.vote_average * 10) / 10
 
   const FetchDetails = () => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=874b455d7037920aea9fd13db8645525&language=en-US`)
@@ -21,13 +22,22 @@ export const Details = () => {
   }, [])
 
   return (
-    <div>
-      <h1>{movieDetails.title}</h1>
-      <p>{movieDetails.vote_average}</p>
-      <p>{movieDetails.overview}</p>
-      <img src={`http://image.tmdb.org/t/p/w342${movieDetails.poster_path}`} alt="movie" />
+    <div
+      className="background"
+      style={{
+        backgroundImage: `url(http://image.tmdb.org/t/p/original${movieDetails.backdrop_path})`
+      }}>
+      <button type="button" onClick={() => navigate(-1)}>Back</button>
+      <div className="movie-detail">
+        <img src={`http://image.tmdb.org/t/p/w342${movieDetails.poster_path}`} alt="movie" />
+        <div className="details">
+          <div className="title-vote">
+            <h1>{movieDetails.title}</h1>
+            <h3><span className="vote-icon" /> {roundedNumber}</h3>
+          </div>
+          <p>{movieDetails.overview}</p>
+        </div>
+      </div>
     </div>
   )
 }
-
-// title, vote_average, overview, backdrop_path, poster_path

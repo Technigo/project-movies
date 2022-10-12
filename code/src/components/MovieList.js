@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Details } from './Details';
 
 export const MovieList = () => {
   const [list, setList] = useState([])
@@ -30,9 +29,6 @@ export const MovieList = () => {
           <Link to={`/movies/${movie.id}`}>
             <img src={`http://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="movie" />
           </Link>
-          <Details
-            title={movie.title}
-            overview={movie.overview} />
         </div>
 
       ))}
