@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-const MovieList = () => {
+const MovieList = ({ API_KEY }) => {
   const [movieList, setMovielist] = useState([]);
-  const API_KEY = '0b4c9ac144793b50dd9acb3ecd05ab10'
   const [loading, setLoading] = useState(false);
 
   const fetchMovies = () => {
@@ -24,11 +23,12 @@ const MovieList = () => {
   }
 
   return (
-    <div>
+    <div className="movie-list-container">
       {movieList.map((movie) => (
-        <Link key={movie.id} to="/details/:movieName">
+        <Link key={movie.id} to={`/details/${movie.id}`}>
           <img
-            src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+            className="poster"
+            src={`https://image.tmdb.org/t/p/w400/${movie.poster_path}`}
             alt="" />
         </Link>
       ))}

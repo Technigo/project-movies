@@ -1,9 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import videoBg from '../Assets/header-movie2.mp4'
 
 const Header = () => {
   return (
-    <Link to="/"> Go to start page </Link>
+    <div className="header-container">
+      <video className="video" src={videoBg} autoPlay loop muted />
+      <Link className="go-back-link" to="/">
+        <h1> MOVIE TIME </h1>
+        <h2>All your favourite movies in one place!</h2>
+      </Link>
+    </div>
   )
 }
 
