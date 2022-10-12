@@ -8,11 +8,6 @@ img {
   position: relative;
 }
 
-.poster:hover {
-  filter: brightness(35%);
-  top: 0;
-}
-
 .posterInfo {
   display: flex;
   color: white;
@@ -27,4 +22,5 @@ img {
 
 .posterInfo:hover {
   opacity: 1;
+  background-color: rgb(0 0 0 / 75%);
 }
