@@ -28,6 +28,10 @@ code {
   display: flex;
   align-items: flex-end;
 }
+
+.movie-img {
+  border: 10px solid white;
+}
 .text-container {
   max-width: 500px;
   margin-left: 20px;

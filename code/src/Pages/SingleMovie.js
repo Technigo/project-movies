@@ -10,16 +10,16 @@ const SingleMovie = () => {
 
   const [movie, setMovie] = useState({});
   const { id } = useParams();
-  console.log(useParams);
   const url = `https://api.themoviedb.org/3/movie/${id}?api_key=4f32d41e25209822b9c7a73559fb2822&language=en-US`;
 
   useEffect(() => {
+    console.log('useEffect');
     fetch(url)
       .then((res) => res.json())
       .then((json) => {
         setMovie(json);
       });
-  }, [id, url]);
+  }, [url]);
 
   return (
     <section
@@ -35,6 +35,7 @@ const SingleMovie = () => {
       <div className="wrapper">
         <div className="movie-content">
           <img
+            className="movie-img"
             src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
             alt=""
           />
