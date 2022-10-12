@@ -1,0 +1,15 @@
+.movie-container {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1023px) {
+    .movie-container {
+        grid-template-columns: repeat(2, 1fr);
+        }
+}
+
+img {
+    width: 100%;
+    border: 5px solid black;
+}

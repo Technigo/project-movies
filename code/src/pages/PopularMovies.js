@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-
+import '../css/PopularMovies.css'
 import { BASE_URL } from '../data/urls';
 
 export const PopularMovies = () => {
@@ -19,13 +19,12 @@ export const PopularMovies = () => {
   console.log(popMovies)
   return (
     <section className="movie-container">
-      <p>I am the popular movies</p>
       {popMovies.map((movie) => (
         <Link to={`/movies/${movie.id}`} key={movie.id}>
           <div className="movie-card">
             <div className="img-container">
               <img
-                src={{ /* movie.poster_path url  */ }}
+                src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
                 alt={movie.title}
                 className="image" />
               <div className="overlay">
@@ -41,6 +40,3 @@ export const PopularMovies = () => {
     </section>
   )
 }
-
-// Hej Nina! Här har jag fått det mesta att funka men
-// behöver på något sätt länka till MovieDetails. // Tror jag har fixat in länken /NB

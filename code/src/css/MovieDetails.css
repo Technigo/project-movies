@@ -1,0 +1,40 @@
+.detailsContainer {
+position: relative;
+border: 3px solid blue;
+}
+
+.previousPage {
+/*  Finns inte än */
+position: absolute;
+}
+
+.background {
+ min-height: 100vh;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
+}
+
+.summary {
+    border: 3px solid rgb(255, 0, 212);
+    display: flex;
+
+
+}
+
+.summary img{
+    border: 3px solid rgb(0, 255, 47);
+    margin: 30px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border: 3px solid rgb(255, 157, 0);
+    Margin: 30px;
+    justify-content: flex-end;
+}
