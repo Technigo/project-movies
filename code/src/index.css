@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  width: 100vw;
+  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -14,16 +16,67 @@ code {
 
 .movie-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .movies {
   padding: 10%;
 }
 
+.movie-cards {
+  position: relative;
+  width: 49%;
+  height: auto;
+}
+
+.image-overlay {
+  color: transparent;
+  height: 100%;
+  position: absolute;
+  transition: .5s ease;
+  width: 100%;
+}
+
+.movie-cards img {
+  width: 48%;
+  height: auto;
+  
+}
+
+.list-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 20%;
+  top: 45%;
+}
+
 a:-webkit-any-link {
+  display: flex;
   color: black;
   cursor: pointer;
   text-decoration: none;
 }
 
+.border-pic {
+  border: 4px solid white;
+}
+
+.page-content {
+  padding: 10%;
+}
+
+/* Tablet */
+@media (min-width: 668px) and (max-width: 1024px) {}
+
+/* DESKTOP */
+@media (min-width: 1025px) {
+  .movie-cards:hover > .movie-cards img {
+    
+  }
+
+  .image-overlay:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
