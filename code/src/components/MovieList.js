@@ -7,8 +7,8 @@ const MovieList = ({ movieList }) => {
     <div>
       {movieList.map((movie) => {
         return (
-          <Link className="movies" key={movie.id} to={`/details/${movie.title}`}>
-            <img src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`} alt="Movie poster" />{movie.title}
+          <Link className="movies" key={movie.id} to={`/moviedetails/${movie.title}`}>
+            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="Movie poster" />{movie.title}
           </Link>
         )
       })}

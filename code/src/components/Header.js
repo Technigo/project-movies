@@ -1,5 +1,5 @@
 import React from 'react'
-//  { useState }  lägg till är uppe sen
+//  { useState }  läg till här uppe
 import { NavLink } from 'react-router-dom'
 
 const Header = () => {

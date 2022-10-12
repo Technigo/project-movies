@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
 const MovieDetails = () => {
-  // const params = useParams();
+  // const params = useParams()
   const { movieTitle } = useParams()
   const navigate = useNavigate()
   useEffect(() => {
@@ -19,7 +19,7 @@ const MovieDetails = () => {
       <p>I am the Details comonent</p>
       <button type="button" onClick={goBack}>Go back</button>
     </div>
-  )
+  );
 }
 
 export default MovieDetails

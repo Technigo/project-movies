@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
-import MovieDetails from 'components/MovieDetails'
 import NotFound from 'components/NotFound'
 import Header from 'components/Header'
+import MovieDetails from 'components/MovieDetails'
 import MovieList from 'components/MovieList'
 
 export const App = () => {
@@ -19,8 +19,8 @@ export const App = () => {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<MovieList list={movieList} />} />
-        <Route path="/details/:movieTitle" element={<MovieDetails />} />
+        <Route path="/" element={<MovieList movieList={movieList} />} />
+        <Route path="/moviedetails/:movieTitle" element={<MovieDetails />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>
