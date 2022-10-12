@@ -1,84 +1,48 @@
-.main-container{
-    position: relative;
+.main-container {
+  position: relative;
 }
 
-.main-container .background{
-    min-height: 100vh;
-    display: flex;
-    background-size: cover;
-    flex-direction: column;
-    justify-content: flex-end;
+.main-container .background {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .details-container{
     background-color: rgba(0, 0, 0, 0.36);
     color: white;
-    margin-left: 0;
-}
-
-.details-container p{
-    max-width: 400px;
 }
 
 .summary {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: flex-end;
     padding: 50px;
-    border: 3px solid white;
-}
-
-.summary img{
-    border: 5px solid white;
-    width: 200px;
 }
 
 .back-button {
-    position: absolute;
-    display: inline-flex;
-    color: #fff;
-    align-items: center;
-    font-weight: 700;
-    text-decoration: none;
-    left: 50px;
-    top: 50px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+  position: absolute;
+  display: inline-flex;
+  color: #fff;
+  align-items: center;
+  font-weight: 700;
+  text-decoration: none;
+  left: 50px;
+  top: 50px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-.left-arrow{
-    width: 30px;
-    background-color: white;
-    border-radius: 50%;
-    margin-right: 10%;
-    transition: margin-right .2s ease-in-out;
+.left-arrow {
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 10%;
+  transition: margin-right 0.2s ease-in-out;
 }
 
-.back-button:hover .left-arrow{
-    margin-right: 5px;
-}
-
-/* media query somehow not working(?) */
-@media (min-width: 577px){
-    .summary {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        padding: 50px;
-    }
-
-    .summary img{
-        border: 5px solid white;
-        width: 250px;
-    }
-
-    .details-container{
-        margin-left: 20px;
-    }
-}
-
-@media (min-width: 770px){
-    .summary img{
-        width: auto;
-    }
+.back-button:hover .left-arrow {
+  margin-right: 5px;
 }
