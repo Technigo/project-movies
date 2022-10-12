@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import '../css/PopularMovies.css'
+import '../css/popularMovies.css'
 import { BASE_URL } from '../data/urls';
 
 export const PopularMovies = () => {

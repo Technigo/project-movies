@@ -36,6 +36,37 @@ Frågor: (eventuella "att göra")
 
 - Ska vi ta bort Header helt? Den krånglar lite med background nu och jag undrar om vi inte skulle kunna strunta i den och använda oss av länkar mm i varje component istället? 
 
+-------------------------------------
+
 Nina Onsdag kväll:
 
 -strulade lite innan jag kunde göra en git pull, va nåt jag inte hade sparat i denna filen innan jag commitade =)
+
+-Visst utgår vi ifrån mobile i css'en och kör media querys för tablet och desktop?!
+
+- ska vi döpa filerna enl förslag, för att lättare skilja på filtyperna?
+Förslag: CSS-filernas namn med camelCase och js-filerna med PascalCase (upper CamelCase)
+
+- tänker att "tillbaka knappen" är bra för att gå från details till main stie utan att använda back-knappen i browsern.
+
+- fixat Header.
+
+-rubrik till css-filerna
+/*===========  MEDIA QUERY  ---------------*/
+
+-Ändrat i App.js till "exact", det funkar inte än som det ska men det stör inte så länge, jag löser det i morn
+
+/By using React Router's exact prop on the first route, you can ensure that the route will match only if the current URL is an exact match./
+
+-fixat css i PopularMovies.css 
+   -overlay
+   -text hoover (spiller över på den svarta ramen, behöver fixas)
+
+Fastnade med overlay, hade en bokstav fel i en selector visket strulade till det till jag fann problemet.
+
+Fortsätta:
+- <p> text overlay, tycker vi ska försöka få till raiting här.
+
+-fixa "tillbaka/home" länken i MovieDetails
+
+Linnéa du kan ju fortsätta med stylingen i movieDetails.
