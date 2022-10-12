@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-import Header from 'components/Header';
-import List from 'components/List';
-import Details from 'components/Details';
-import NotFound from 'components/NotFound';
+/* import Header from 'components/Header'; */
+import PopularList from 'components/PopularList';
+/* import Details from 'components/Details';
+import NotFound from 'components/NotFound'; */
 
 export const App = () => {
-  const [list, setList] = useState([]);
+  const [popularList, setPopularList] = useState([]);
   const [loading, setLoading] = useState(false);
+  console.log(loading)
 
   useEffect(() => {
     setLoading(true);
-    fetch('https://pokeapi.co/api/v2/pokemon')
+    fetch('https://api.themoviedb.org/3/movie/popular?api_key=22332a0afa34a5b14d4e80b45a24b1e8&language=en-US&page=1')
       .then((res) => res.json())
       .then((data) => {
-        setList(data.results)
+        setPopularList(data.results)
       })
       .catch((e) => {
         console.error(console.error(e))
@@ -31,11 +32,12 @@ export const App = () => {
   }
   return (
     <BrowserRouter>
-      <Header />
+      <p>hello</p>
+      {/* <Header /> */}
       <Routes>
-        <Route path="/" element={<List pokemons={list} />} />
-        <Route path="/details/:pokemonName" element={<Details />} />
-        <Route path="/404" element={<NotFound />} />
+        <Route path="/" element={<PopularList movies={popularList} />} />
+        {/* <Route path="/details/:pokemonName" element={<Details />} />
+        <Route path="/404" element={<NotFound />} /> */}
         <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
     </BrowserRouter>

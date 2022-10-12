@@ -10,7 +10,7 @@ const Details = () => {
     navigate(-1);
   }
   useEffect(() => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`).then((res) => res.json()).then((data) => setDetails(data))
+    fetch(`https://api.themoviedb.org/3/movie/550?api_key=22332a0afa34a5b14d4e80b45a24b1e8${pokemonName}`).then((res) => res.json()).then((data) => setDetails(data))
   }, [pokemonName])
   return (
     <div>
