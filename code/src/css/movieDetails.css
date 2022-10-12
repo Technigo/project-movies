@@ -70,6 +70,10 @@ body {
   font-weight: bold;
 }
 
+/* .back-text:hover {
+  margin-left: 13px;
+} */
+
 .details-title h1 {
   margin: 0;
   font-size: 24px;
@@ -125,6 +129,7 @@ body {
 @media (min-width: 1024px) {
   .back-image:hover {
     transform: scale(1.1);
+    margin-right: 12px;
   }
 
   .poster-img {
@@ -146,6 +151,7 @@ body {
   .back-image {
     height: 100%;
     width: 25px;
+    
   }
   .backLink {
     display: flex;
@@ -172,4 +178,11 @@ body {
     font-size: 12px;
   }
 
+  .background{
+    background-position-y: center;
+    min-width: 1500px;
+  }
 }
+
+
+
