@@ -5,9 +5,13 @@ import { ProductPage } from './sites/ProductPage';
 
 export const App = () => {
   return (
-    <div>
-      <HomePage />
-      <ProductPage />
-    </div>
+    <BrowserRouter>
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/movies/:slug" element={<ProductPage />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
   );
 }

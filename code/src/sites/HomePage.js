@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
+
 
 export const HomePage = () => {
   const [movies, setMovies] = useState([''])
@@ -13,14 +15,18 @@ export const HomePage = () => {
     <section className="movieContainer">
       {movies.map((prop) => (
         <div className="movieName" key={prop.id}>
-          <img className="movieImage" src={`https://image.tmdb.org/t/p/w500${prop.poster_path}`} alt={prop.title} />
-          <div className="movieText">
-            <h1 className="movieTitle">{prop.title}</h1>
-            <h2 className="releaseDate">{prop.release_date}</h2>
-          </div>
+          <Link className="movie-link" to={`/${prop.id}`}>
+            <img className="movieImage" src={`https://image.tmdb.org/t/p/w500${prop.poster_path}`} alt={prop.title} />
+            <div className="movieText">
+              <h1 className="movieTitle">{prop.title}</h1>
+              <h2 className="releaseDate">{prop.release_date}</h2>
+            </div>
+          </Link>
         </div>
-      ))};
-    </section>
+
+      ))
+      };
+    </section >
 
   )
 }

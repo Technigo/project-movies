@@ -54,7 +54,7 @@ code {
   .movieContainer {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
-    max-width: 25%
+    max-width: 25%;
   }
 
 }
