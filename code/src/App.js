@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import Movies from 'Components/Movies';
+import Details from 'Components/Details';
 
 export const App = () => {
-fetch('https://api.themoviedb.org/3/movie/popular?api_key=f8eb3d0941c8cec7118b188a305910c5&language=en-US&page=1')
-.then((data) => data.json())
-.then((configuredData) => console.log(configuredData))
+  const [movies, setMovies] = useState([])
+
+  fetch('https://api.themoviedb.org/3/movie/popular?api_key=f8eb3d0941c8cec7118b188a305910c5&language=en-US&page=1')
+    .then((data) => data.json())
+    .then((configuredData) => setMovies(configuredData.results))
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Movies blabla={movies} />} />
+        <Route path="/details" element={<Details />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
