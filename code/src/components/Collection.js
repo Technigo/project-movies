@@ -18,7 +18,7 @@ export const Collection = () => {
       {collections.map((movies) => {
         return (
           <>
-            <Link key={movies.id} to={`/movies/${movies.id}`}>
+            <Link key={movies.title} to={`/movies/${movies.id}`}>
               <h1
                 key={movies.title}
                 className='list-element'>{movies.title}
