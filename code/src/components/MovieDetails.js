@@ -37,7 +37,7 @@ const MovieDetails = () => {
           <div className="details-container">
             <h2>
               <span>{movieDetail.title}</span>
-              <span>⭐{movieDetail.vote_average.toFixed(1)}</span>
+              <span className="rating">⭐{movieDetail.vote_average.toFixed(1)}</span>
             </h2>
             <p>
               <span>{movieDetail.overview}</span>

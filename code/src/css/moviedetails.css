@@ -20,6 +20,13 @@
     max-width: 400px;
 }
 
+.rating {
+    background: white;
+    color: black;
+    padding: 0 5px;
+    margin-left: 10px;
+}
+
 .summary {
     display: flex;
     flex-direction: column;
@@ -72,6 +79,7 @@
     }
 
     .details-container{
+        padding: 0 15px;
         margin-left: 20px;
     }
 }
