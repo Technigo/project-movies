@@ -7,7 +7,7 @@ const MoviePoster = (props) => {
     <div className={styles.poster}>
       <Link key={props.poster.id} to={`/posters/${props.poster.id}`}>
         <img
-          src={`https://image.tmdb.org/t/p/w300/${props.poster.poster_path}`}
+          src={`https://image.tmdb.org/t/p/w500/${props.poster.poster_path}`}
           alt=""
         />
       </Link>
