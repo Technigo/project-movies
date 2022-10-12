@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable linebreak-style */
 /* eslint-disable no-unused-vars */
 /* import React from 'react';

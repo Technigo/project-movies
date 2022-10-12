@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(35, 31, 31, 0.925);
 }
 
 code {
@@ -22,11 +23,27 @@ code {
 }
 
 .popular-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 a {
   display: flex;
-  margin: 50px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+img {
+  width:100%;
+}
+nav {
+  display: inline-flex;
+  font-size: 20px;
+}
+
+p {
+  color:white;
 }

@@ -37,7 +37,7 @@ export const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<MovieList list={movieList} />} />
-        <Route path="/details/:movieTitle" element={<Details />} />
+        <Route path="/details/:id" element={<Details />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>
