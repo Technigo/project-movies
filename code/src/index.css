@@ -20,3 +20,18 @@ code {
   display: flex;
   border: 2px solid lightskyblue;
 }
+
+.poster-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.poster-image {
+  width: 100%;
+}
+
+.poster-text-container {
+  display: nånting
+}
+
+/* @TODO add max width to grid to make responsive */
