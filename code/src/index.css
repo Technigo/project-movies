@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: rgb(39, 39, 39);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -60,7 +60,7 @@ nav{
   }
 }
 
-
+/*
 .movie-container {
   /* border: solid green 3px; */
   /* display: flex; */
@@ -74,8 +74,9 @@ nav{
   height: 100%;
   width: 100%;
   opacity: ;
-  transition: .5s ease; */
-}
+  transition: .5s ease; 
+}*/
+
 
 .list-element {
   /* border: solid orange 5px; */
@@ -103,7 +104,7 @@ h1 {
   margin: 10px 10px 10px 20px;
 }
 
-p {
+h4 {
   color: rgba(255, 255, 255, 0);
   font-size: 16px;
   margin: 0px 10px 30px 20px;
@@ -145,7 +146,7 @@ p {
 
 }
 
-.movie-info:hover p {
+.movie-info:hover h4 {
   color: white;
 }
 
@@ -165,12 +166,67 @@ p {
 
 /*Details */
 
-.backdrop-image{
-  
+.details-container, .button-container { 
+  border: solid green 2px;
+  position: relative;
+  display: inline-flex;
 }
+
+.backdrop-image {
+  border: solid red 2px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: cover;
+  object-fit: cover;  /*added this, makes image cover except >1280px*/
+  height: 100vh;
+  width: 100vw; /*makes image fit to the edge >1280px*/
+  z-index: -1;  /*lays image behind everything, as background*/
+  opacity: 50%;
+}
+
+
+
 .poster-image{
-  
+  position: absolute;
+  z-index: 1;
+  border: solid white 5px;
+  bottom: 10%;
+  left: 5%;
+  height: 50%;
+
 }
+
+.over-view, h2, h3{
+  position: absolute;
+  /*border: solid 3px brown;*/
+  color: white;
+  position: absolute;
+  z-index: 1;
+  padding-left: 2%;
+}
+
 .over-view{
-  
+  top: 60%;
+  left: 30%;
+  max-width: 40%;
+}
+
+h2 {
+  top: 50%;
+  left: 30%;
+}
+
+h3 {
+  top: 55%;
+  left: 30%;
+}
+
+.button-container {
+  border: solid orange 2px;
+  position: absolute;
+  color: white;
+  z-index: 1;
+  top: 10%;
+  left: 10%;
+
 }

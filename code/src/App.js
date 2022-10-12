@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import MovieDetails from 'components/MovieDetails'
-import Header from 'components/Header';
 import MovieList from 'components/MovieList';
 import NotFound from 'components/NotFound.js';
 
@@ -21,7 +20,6 @@ export const App = () => {
   }, []);
   return (
     <BrowserRouter>
-      <Header />
       <main>
         <Routes>
           <Route path="/" element={<MovieList movies={movieList} />} />
