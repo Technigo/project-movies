@@ -11,7 +11,7 @@ const Details = () => {
   }
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${title}?api_key=f8eb3d0941c8cec7118b188a305910c5&language=en-US`)
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=f8eb3d0941c8cec7118b188a305910c5&language=en-US`)
       .then((data) => data.json())
       .then((configuredData) => setDetails(configuredData))
   }, [id])
