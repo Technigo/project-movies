@@ -7,7 +7,7 @@ import MovieList from 'components/MovieList';
 import NotFound from 'components/NotFound';
 import Footer from 'components/Footer';
 
-export const App = () => {
+export const App = (movie) => {
   const [movieList, setMovieList] = useState([]);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<MovieList list={movieList} />} />
-        <Route path="/details/:movie" element={<MovieDetails />} />
+        <Route path="/movies/:movie" element={<MovieDetails movie={movie} />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="/*" element={<Navigate to="/404" />} />
       </Routes>
