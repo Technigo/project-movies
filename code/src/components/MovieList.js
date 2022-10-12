@@ -11,11 +11,8 @@ const MovieList = ({ movies }) => {
           to={`/MovieDetails/${movie.id}`}>
           <img
             className="list-element"
-            src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
             alt={movie.title} />
-          <div className="movie-info">
-            <h1>{movie.title}</h1>
-          </div>
         </Link>
       ))}
     </section>

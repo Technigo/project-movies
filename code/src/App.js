@@ -22,12 +22,14 @@ export const App = () => {
   return (
     <BrowserRouter>
       <Header />
-      <Routes>
-        <Route path="/" element={<MovieList movies={movieList} />} />
-        <Route path="/MovieDetails/:movie_id" element={<MovieDetails />} />
-        <Route path="/404" element={<NotFound />} />
-        <Route path="*" element={<Navigate to="/404" replace />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<MovieList movies={movieList} />} />
+          <Route path="/MovieDetails/:movie_id" element={<MovieDetails />} />
+          <Route path="/404" element={<NotFound />} />
+          <Route path="*" element={<Navigate to="/404" replace />} />
+        </Routes>
+      </main>
     </BrowserRouter>
   );
 }
