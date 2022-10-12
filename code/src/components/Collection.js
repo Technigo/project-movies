@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 export const Collection = () => {
   const [collections, setCollections] = useState([])
@@ -15,14 +15,15 @@ export const Collection = () => {
 
   return (
     <div className='collections'>
-      <h1>{collections.name}</h1>
       {collections.map((movies) => {
         return (
           <>
-            <h1
-              key={movies.title}
-              className='list-element'>{movies.title}
-            </h1>
+            <Link key={movies.id} to={`/movies/${movies.id}`}>
+              <h1
+                key={movies.title}
+                className='list-element'>{movies.title}
+              </h1>
+            </Link>
             <p key={movies.id}>{movies.overview}</p>
           </>
         )
@@ -31,12 +32,3 @@ export const Collection = () => {
 
   )
 }
-
-/* {collections.map((item) => (
-
-<div key={item.id} className='collection-movie'>
-  <h1>{item.parts.map((movie) => movie.title)}</h1>
-</div>
-
-))}
-</div> */
