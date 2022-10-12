@@ -12,11 +12,16 @@ code {
     monospace;
 }
 
-.list {
+.movieList {
   display: flex;
   flex-wrap: wrap;
 }
-.list-element {
+.movieList-element {
   width: 25%;
   text-align: center;
+}
+
+.navBar {
+  display: flex;
+  justify-content: flex-end;
 }
