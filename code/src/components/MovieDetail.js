@@ -20,14 +20,17 @@ const MovieDetail = () => {
   return (
     <article
       className="movie-page"
-      style={{ backgroundImage: `url(${movieDetailList.backdrop_path})` }}>
+      style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetailList.backdrop_path})` }}>
       <div className="go-back">
         <img src="" alt="Go back" />
         <Link to="/">Movies</Link>
       </div>
-      <img src={`http://image.tmdb.org/t/p/w342${movieDetailList.poster_path}`} alt={movieDetailList.original_title} />
-      <h2>{movieDetailList.original_title} {movieDetailList.vote_average.toFixed(1)}</h2>
-      <p>{movieDetailList.overview}</p>
+      <div className="movieDetailInfo">
+        <img src={`http://image.tmdb.org/t/p/w342${movieDetailList.poster_path}`} alt={movieDetailList.original_title} />
+        <h2>{movieDetailList.original_title} </h2>
+        <p><span className="rating">{Number(movieDetailList.vote_average).toFixed(1)}/10</span></p>
+        <p>{movieDetailList.overview}</p>
+      </div>
     </article>
 
   )

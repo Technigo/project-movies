@@ -1,61 +1,109 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	display: flex;
 	justify-content: center;
 	background-color: black;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
 }
 
 .movie-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 }
 
 .movie {
-  position: relative;
+	position: relative;
 }
 
-.movie:hover > .overlay{
-  display: flex;
+.movie:hover>.overlay {
+	display: flex;
 }
 
 .overlay {
 	display: none;
 	justify-content: flex-end;
 	flex-direction: column;
-  position: absolute;
-  top:0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-	color:white;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: white;
 }
 
 .overlay h2 {
-  font-size: 32px;
-  margin: 0 0 0 1rem;
-
-
+	font-size: 32px;
+	margin: 0 0 0 1rem;
 }
+
 .movie-text {
-margin: 1rem 0 2rem 1rem;
+	margin: 1rem 0 2rem 1rem;
 }
 
-.movie-page{
-	background-color: rgb(240, 235, 235);
+.movie-page {
+	display: flex;
+	min-height: 100vh;
+	padding: 50px;
+	background-size: cover;
+	flex-direction: column;
+	justify-content: flex-end;
 }
 
+/* .movie-page .backgroundImage{
+	background: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);
+} */
+
+.go-back {
+	position: absolute;
+	display: inline-flex;
+	color: #fff;
+	align-items: center;
+	font-weight: 700;
+	text-decoration: none;
+	left: 50px;
+	top: 50px;
+}
+
+.rating:before {
+	/* content: url(./assets/star.png); */
+	padding-right: 5px;
+}
+
+.rating {
+	display: flex;
+	color: #000;
+	font-weight: 500;
+	background: #fff;
+	padding: 0 5px;
+}
+
+.movieDetailInfo {
+	display: flex;
+	color: #fff;
+	flex-direction: row;
+	align-items: flex-end;
+}
+
+h2 {
+	text-shadow: 2px 2px #4d4d4d;
+	font-size: 25px;
+}
+
+.movieDetailInfo img {
+	border: 5px solid #fff;
+}
