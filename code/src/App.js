@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { MovieList } from './components/MovieList'
 
 // REMEMBER TO IMPORT PAGES
 
@@ -34,9 +35,9 @@ export const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MovieList list={list} />}/>
-        <Route path="/moviedetails/:id" element={<MovieDetails    />} />
-        <Route path="/404 " element={<PageNotFound    />} />
-        <Route path="*" element={<Navigate to="/404" replace />} />
+        {/* <Route path="/moviedetails/:id" element={<MovieDetails />} />
+        <Route path="/404 " element={<PageNotFound />} />
+        <Route path="*" element={<Navigate to="/404" replace />} /> */}
       </Routes>
     </BrowserRouter>
   );
