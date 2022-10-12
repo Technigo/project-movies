@@ -4,6 +4,7 @@
 }
 
 body {
+  background-color: black;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -17,12 +18,15 @@ code {
     monospace;
 }
 
-
 main {
-  max-width: 1200px;
+  max-width: auto;
   margin: 0 auto;
   width: 100%;
-  padding: 0 50px;
+  /* padding: 0 50px; */
+}
+
+nav{
+  padding: 30px;
 }
 
 .list-wrapper {
@@ -58,35 +62,83 @@ main {
 
 
 .movie-container {
-  border: solid green 3px;
-  width: auto;
+  /* border: solid green 3px; */
+  /* display: flex; */
+  /* position: relative; */
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 100%;
-  display: flex;
-
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
 }
 
 .list-element {
-  border: solid orange 5px;
+  /* border: solid orange 5px; */
   margin: 0 auto;
   width: 100%;
-
 }
 
+.list-element:hover, .movie-container {
+  /* border: solid orange 5px; */
+  z-index: 2;
+  opacity: 1;
+}
+
+/*color is transparent!!*/
+h1{
+  color: rgba(255, 255, 255, 0);
+  font-size: 20px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* clean up the hover, do we need all code dublicated?*/
+
+h1:hover{
+  color: white;
+  font-size: 20px;
+  display: block;
+  position: absolute;
+  background-color: #00000094;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* .list-element:hover a:hover img:hover .overlay:hover .movie-container:hover img.list-element:hover .list-wrapper:hover .movie-info:hover {
+  background-color:red;
+  border: solid red 4px;
+  transition: 0.3s ease;
+} */
 
 .movie-info {
- display: none;
-  border: solid black 2px;
   width: 100px;
-}
+  width: 300px;
+  /* position: absolute;
+  display: none; */
+  background: rgba(0, 0, 0, 0.6);
 
+}
 
 
 .details-container {
   border: solid hotpink 2px;
 }
 
-.list {
-  /* display: flex;
-  flex-wrap: wrap; */
-}
 
