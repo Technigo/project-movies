@@ -5,7 +5,7 @@
 html,
 body {
   margin: 0;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
 }
 
@@ -20,8 +20,6 @@ body {
   color: #fff;
   font-size: 16px;
   row-gap: 20px;
-  height: auto;
-  justify-content: flex-end;
 }
 
 .poster-img {
