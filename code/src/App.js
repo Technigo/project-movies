@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 /* import Header from 'components/Header'; */
 import PopularList from 'components/PopularList';
-/* import Details from 'components/Details';
-import NotFound from 'components/NotFound'; */
+import Details from 'components/Details';
+import NotFound from 'components/NotFound';
 
 export const App = () => {
   const [popularList, setPopularList] = useState([]);
@@ -36,8 +36,8 @@ export const App = () => {
       {/* <Header /> */}
       <Routes>
         <Route path="/" element={<PopularList movies={popularList} />} />
-        {/* <Route path="/details/:pokemonName" element={<Details />} />
-        <Route path="/404" element={<NotFound />} /> */}
+        <Route path="/movies/:id" element={<Details />} />
+        <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
     </BrowserRouter>
