@@ -10,8 +10,10 @@ const Movies = ({ movies }) => {
             key={movie.title}
             to={`/details/${movie.id}`}
             className="movie">
-            <img src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt="poster" />
-            <div className="movie-hover">
+            <div className="image-container">
+              <img className="details-img" src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt="poster" />
+            </div>
+            <div className="movie-details">
               <h1> {movie.title} </h1>
               <p> {movie.release_date} </p>
             </div>
@@ -19,7 +21,6 @@ const Movies = ({ movies }) => {
         )
       })}
     </section>
-
   )
 }
 
