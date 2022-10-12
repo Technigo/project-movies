@@ -23,14 +23,17 @@ const Main = () => {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Movies getMovies={getMovies} />} />
-        <Route path="/detail/:id" element={<MovieDetail />} />
-        <Route path="/404" element={<NotFound />} />
-        <Route path="*" element={<Navigate to="/404" />} />
-      </Routes>
+      <section className="outer-wrapper">
+        <section className="inner-wrapper">
+          <Routes>
+            <Route path="/" element={<Movies getMovies={getMovies} />} />
+            <Route path="/detail/:id" element={<MovieDetail />} />
+            <Route path="/404" element={<NotFound />} />
+            <Route path="*" element={<Navigate to="/404" />} />
+          </Routes>
+        </section>
+      </section>
     </BrowserRouter>
-
   )
 }
 

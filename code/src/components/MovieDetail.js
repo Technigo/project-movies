@@ -15,16 +15,12 @@ const MovieDetail = () => {
       })
   }, [id])
   return (
-
     <section className="movie-wrapper">
       {movieDetail && (
         <div
           className="background"
           style={{
-            backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetail.backdrop_path})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center center'
+            backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetail.backdrop_path})`
           }}>
           <div className="summary-wrapper">
             <div className="back-btn-div">
@@ -34,14 +30,15 @@ const MovieDetail = () => {
               <div className="back-text">Movies</div>
             </div>
             <img className="poster-img" src={`https://image.tmdb.org/t/p/w342${movieDetail.poster_path}`} alt={movieDetail.title} />
-            <div className="details-title">
-              <h1>{movieDetail.title}</h1>
+            <div className="details-info">
+              <div className="details-title">
+                <h1>{movieDetail.title}</h1>
+              </div>
+              <div className="details-rating">
+                <p><span className="star">⭐</span> {Math.round(movieDetail.vote_average * 10) / 10}</p>
+              </div>
+              <p className="overview">{movieDetail.overview}</p>
             </div>
-            <div className="details-rating">
-              <p><span className="star">⭐</span>{Math.round(movieDetail.vote_average * 10) / 10}</p>
-            </div>
-            <p className="overview-p">{movieDetail.overview}</p>
-
           </div>
         </div>
       )}
