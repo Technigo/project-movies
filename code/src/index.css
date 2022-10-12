@@ -34,11 +34,24 @@ code {
   position: relative;
 }
 
+.poster-image, .poster-text-container {
+  transition: opacity 300ms ease-in-out;
+
+}
+
 .poster-text-container {
  position: absolute;
  /* border: 1px solid red; */
  margin: 1vw;
  color: white;
+ opacity: 0;
+}
+
+.movies:hover .poster-text-container {
+  opacity: 1;
+}
+.movies:hover .poster-image {
+  opacity: 0.3;
 }
 
 .poster-text-container-title {

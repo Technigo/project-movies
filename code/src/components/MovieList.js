@@ -15,7 +15,7 @@ const MovieList = ({ movieList, loading }) => {
             <img className="poster-image" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={`${movie.title} poster`} />
             <div className="poster-text-container">
               <h1 className="poster-text-container-title">{movie.title}</h1>
-              <p>Released: {movie.release_date}</p>
+              <p>Released on {movie.release_date}</p>
             </div>
           </Link>
         )
