@@ -1,14 +1,14 @@
 /* eslint-disable camelcase */
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from 'react';
-import { API_KEY } from 'urls/urls';
+import { API_KEY } from 'urls/urls'
 import { Link, useParams } from 'react-router-dom';
 
 const IndividualMovie = () => {
   const [movie, setMovie] = useState('')
   const [error, setError] = useState('')
   const { movie_id } = useParams()
-  const MOVIE_URL = `https://api.themoviedb.org/3/movie/?${movie_id}api_key=${API_KEY}&language=en-US`
+  const MOVIE_URL = `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${API_KEY}&language=en-US`
 
   useEffect(() => {
     fetch(MOVIE_URL)

@@ -23,7 +23,7 @@ export const App = () => {
       {loading && <LoadingPage />}
       <Routes>
         <Route path="/" element={<List movies={list} />} />
-        <Route path="/individualmovie/:movieId" element={<IndividualMovie />} />
+        <Route path="/individualmovie/:movie_id" element={<IndividualMovie />} />
         <Route path="/404" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
