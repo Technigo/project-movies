@@ -3,7 +3,8 @@
 /* eslint-disable no-unreachable */
 import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom';
-// skickar inte in props här som det är nu
+import backIcon from './left-arrow.svg'
+
 const MovieDetail = () => {
   const [movieDetailList, setMovieDetailList] = useState([])
   const { id } = useParams()
@@ -20,16 +21,17 @@ const MovieDetail = () => {
   return (
     <article
       className="movie-page"
-      style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetailList.backdrop_path})` }}>
-      <div className="go-back">
-        <img src="./assets/back.png" alt="Go back" />
-        <Link to="/">Movies</Link>
-      </div>
-      <div className="movieDetailInfo">
-        <img src={`http://image.tmdb.org/t/p/w342${movieDetailList.poster_path}`} alt={movieDetailList.original_title} />
-        <h2>{movieDetailList.original_title} </h2>
-        <p><span className="rating">{Number(movieDetailList.vote_average).toFixed(1)}/10</span></p>
-        <p>{movieDetailList.overview}</p>
+      style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(https://image.tmdb.org/t/p/w1280${movieDetailList.backdrop_path})` }}>
+      <Link className="go-back" to="/"> <img className="back-icon" src={backIcon} alt="Go back" />Movies</Link>
+      <div className="movie-detail-info">
+        <img className="movie-poster" src={`http://image.tmdb.org/t/p/w342${movieDetailList.poster_path}`} alt={movieDetailList.original_title} />
+        <div className="movie-info">
+          <div className="rated-title">
+            <h2>{movieDetailList.title} </h2>
+            <p className="rating">⭐️ {Number(movieDetailList.vote_average).toFixed(1)}</p>
+          </div>
+          <p>{movieDetailList.overview}</p>
+        </div>
       </div>
     </article>
 
