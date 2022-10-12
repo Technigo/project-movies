@@ -22,18 +22,20 @@ code {
 }
 
 .movie-wrapper {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	display: flex;
+	flex-wrap: wrap;
+	/* display: grid;
+	grid-template-columns: repeat(2, 1fr); */
 }
 
 .movie {
 	position: relative;
+	width: 50%;
 }
 
-.movie:hover>.overlay {
-	display: flex;
+.movie-img {
+	width: 100%;
 }
-
 .overlay {
 	display: none;
 	justify-content: flex-end;
@@ -64,10 +66,6 @@ code {
 	justify-content: flex-end;
 }
 
-/* .movie-page .backgroundImage{
-	background: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);
-} */
-
 .go-back {
 	position: absolute;
 	display: inline-flex;
@@ -77,11 +75,6 @@ code {
 	text-decoration: none;
 	left: 50px;
 	top: 50px;
-}
-
-.rating:before {
-	/* content: url(./assets/star.png); */
-	padding-right: 5px;
 }
 
 .rating {
@@ -133,3 +126,15 @@ h2 {
 	margin-right: 4px;
 }
 
+@media (min-width: 600px) {
+	.movie {
+		position: relative;
+		width: 25%;
+	}
+}
+
+@media (min-width: 1024px) {
+	.movie:hover>.overlay {
+		display: flex;
+	}
+}

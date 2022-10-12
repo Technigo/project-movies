@@ -21,7 +21,7 @@ const MovieDetail = () => {
   return (
     <article
       className="movie-page"
-      style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetailList.backdrop_path})` }}>
+      style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(https://image.tmdb.org/t/p/w1280${movieDetailList.backdrop_path})` }}>
       <Link className="go-back" to="/"> <img className="back-icon" src={backIcon} alt="Go back" />Movies</Link>
       <div className="movie-detail-info">
         <img className="movie-poster" src={`http://image.tmdb.org/t/p/w342${movieDetailList.poster_path}`} alt={movieDetailList.original_title} />
