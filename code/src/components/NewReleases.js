@@ -8,7 +8,7 @@ export const NewReleases = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=124871c87c46d6e667f133342d66de5c&language=en-&page=1')
+    fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=124871c87c46d6e667f133342d66de5c&language=en-US&page=1')
       .then((res) => res.json())
       .then((json) => setNewReleases(json.results))
       .catch((error) => alert(error, 'error'))
@@ -25,10 +25,10 @@ export const NewReleases = () => {
   }
   return (
     <div className='new-releases'>
-      <h1>Upcoming movies</h1>
+      <h1>On cinema right now</h1>
 
       {newReleases.map((releases) => (
-        <Link key={releases.id} to={`/movies/${releases.id}`}>
+        <Link key={releases.id} to={`/newReleases/${releases.id}`}>
           <img src={`https://image.tmdb.org/t/p/w342${releases.poster_path}`} alt={releases.title} />
           <h1>{releases.orignail_titel}</h1>
           <p>Release date {releases.release_date}</p>
