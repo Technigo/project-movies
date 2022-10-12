@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/themovies.css'
+import RotatingPoo from './RotatingPoo';
 
 const TheMovies = () => {
   const [movies, setMovies] = useState([])
@@ -20,7 +21,7 @@ const TheMovies = () => {
   }
 
   if (loading) {
-    return <h1>hold your poo</h1>
+    return <RotatingPoo />
   }
   console.log(movies)
 
