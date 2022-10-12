@@ -33,7 +33,7 @@ export const MovieDetails = () => {
       </Link>
       <div className='details'>
         <h1>{details.title}</h1>
-        <h2>{Math.round(details.vote_average * 10) / 10}</h2>
+        <h2><img src='/icons/star-icon.svg' id='star-icon' alt='rating' />{Math.round(details.vote_average * 10) / 10}</h2>
         <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
         <h3>Summary</h3>
         <p>{details.overview}</p>
@@ -41,7 +41,7 @@ export const MovieDetails = () => {
         {details.belongs_to_collection !== null
         && <div id='collection'>
           <p>
-            <Link to={`/collection/${details.belongs_to_collection.id}`}>More from this collection</Link>
+            <Link to={`/collection/${details.belongs_to_collection.id}`}>More from this collection <img src='/icons/more-icon.svg' id='more-icon' alt='more' /></Link>
           </p>
         </div>}
 
