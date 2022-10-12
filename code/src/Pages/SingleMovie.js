@@ -33,7 +33,7 @@ const SingleMovie = () => {
         Home
       </button>
       <div className="wrapper">
-        <div className="content">
+        <div className="movie-content">
           <img
             src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
             alt=""
