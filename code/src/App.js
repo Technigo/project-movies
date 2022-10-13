@@ -5,6 +5,7 @@ import NotFound from 'components/NotFound'
 import Header from 'components/Header'
 import MovieDetails from 'components/MovieDetails'
 import MovieList from 'components/MovieList'
+import { MOVIE_LIST_URL } from 'utils/urls'
 
 // Gör laddningen långsammare så att loadern syns
 const delayer = (delayTime) => {
@@ -18,7 +19,7 @@ export const App = () => {
 
   useEffect(() => {
     setLoading(true)
-    fetch('https://api.themoviedb.org/3/movie/popular?api_key=53b8247bd63f1573ceb909c8f6502bd9&language=en-US&page=1')
+    fetch(MOVIE_LIST_URL)
       .then((response) => response.json())
       .then((data) => setMovieList(data.results))
       .catch((error) => console.error(error))
@@ -34,7 +35,7 @@ export const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<MovieList movieList={movieList} loading={loading} />} />
-        <Route path="/moviedetails/:movieTitle" element={<MovieDetails loading={loading} />} />
+        <Route path="/movieDetails/:movieId" element={<MovieDetails loading={loading} />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>

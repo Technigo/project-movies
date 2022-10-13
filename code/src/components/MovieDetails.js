@@ -1,15 +1,24 @@
-import React, { useEffect } from 'react'
+
+import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import { MOVIE_DETAILS_URL } from 'utils/urls'
 import Loader from './Loader'
 
-const MovieDetails = ({ loading }) => {
-  // const params = useParams()
-  const { movieTitle } = useParams()
+const MovieDetails = () => {
+  const { movieId } = useParams()
   const navigate = useNavigate()
+  const [details, setDetails] = useState({})
+  const [loading, setLoading] = useState(true)
+
   useEffect(() => {
-    // console.log(params.movieTitle)
-    console.log(movieTitle)
-  })
+    console.log(movieId)
+    fetch(MOVIE_DETAILS_URL(movieId))
+      .then((response) => response.json())
+      .then((data) => setDetails(data))
+      .catch(((error) => console.error(error)))
+      .finally(() => setLoading(false))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const goBack = () => {
     navigate(-1)
@@ -19,11 +28,13 @@ const MovieDetails = ({ loading }) => {
 
   return (
     <div>
-      <h1>{movieTitle}</h1>
-      {/* <img className="poster-image" src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={`${movieTitle} poster`} /> */}
+      <h1>{details.title}</h1>
+      <img className="poster-image" src={details ? details.t.p.w342.poster_path : ''} alt={details.title} />
       <button type="button" onClick={goBack}>Go back</button>
     </div>
   )
 }
 
 export default MovieDetails
+
+// https://image.tmdb.org/t/p/w342${details.poster_path}
