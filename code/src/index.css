@@ -22,27 +22,26 @@ code {
 .movies {
   display: grid;
   align-items: end;
+  position: relative;
 }
 
 .poster-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .poster-image {
   width: 100%;
-  position: relative;
 }
 
 .poster-image, .poster-text-container {
   transition: opacity 300ms ease-in-out;
-
 }
 
 .poster-text-container {
  position: absolute;
  /* border: 1px solid red; */
- margin: 1vw;
+ margin: calc(15px + 1vw);
  color: white;
  opacity: 0;
 }
@@ -51,12 +50,13 @@ code {
   opacity: 1;
 }
 .movies:hover .poster-image {
-  opacity: 0.3;
+  opacity: 0.25;
 }
 
 .poster-text-container-title {
   font-size: 2em;
   margin-bottom: 0px;
+  overflow-wrap: break-word;
 }
 
 .loader-container {
@@ -64,21 +64,44 @@ code {
  padding-top: 200px;
 }
 
-.loader-icon {
- font-size: 40px;
- }
+ .spinner {
+  animation-name: loadspinner;
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  margin-top: 30px;
+  margin: 30px auto;
+  animation-duration: 900ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 
-/* TABLET */
+.loader-message {
+font-size: 25px;
+}
 
+@keyframes loadspinner {
+from {
+    transform: rotate(0deg)
+
+  } 
+to {
+    transform: rotate(360deg)
+  }
+}
+
+
+/* TABLET
 @media (min-width: 669px) {
   .poster-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr);
   }
 }
 
-/* DESKTOP */ 
+DESKTOP
 @media (min-width: 992px) {
   .poster-container {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr);
   }
-}
+}  */
