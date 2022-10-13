@@ -9,7 +9,7 @@ export const HomePage = () => {
       .then((data) => {
         setMovies(data.results)
       })
-  })
+  }, [])
   return (
     <section className="movieContainer">
       {movies.map((prop) => (
@@ -18,7 +18,7 @@ export const HomePage = () => {
             <img className="movieImage" src={`https://image.tmdb.org/t/p/w500${prop.poster_path}`} alt={prop.title} />
             <div className="movieText">
               <h1 className="movieTitle">{prop.title}</h1>
-              <h2 className="releaseDate">{prop.release_date}</h2>
+              <p className="releaseDate">Released: {prop.release_date}</p>
             </div>
           </Link>
         </div>
