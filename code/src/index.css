@@ -15,8 +15,15 @@ code {
     monospace;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 .active {
-  color: hotpink;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 
