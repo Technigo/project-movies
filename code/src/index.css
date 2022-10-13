@@ -19,13 +19,14 @@ code {
   color: hotpink;
 }
 
-.movies {
+
+/* - - - MovieList.js - - - */
+
+.movie {
   display: grid;
   align-items: end;
   position: relative;
 }
-
-/* - - - MovieList.js - - - */
 
 .poster-container {
   display: grid;
@@ -68,6 +69,10 @@ code {
   padding-top: 200px;
 }
 
+.loader-message {
+  font-size: 25px;
+}
+
 .spinner {
   animation-name: loadspinner;
   display: block;
@@ -81,10 +86,6 @@ code {
   animation-timing-function: linear;
 }
 
-.loader-message {
-  font-size: 25px;
-}
-
 @keyframes loadspinner {
 from {
     transform: rotate(0deg)
@@ -94,18 +95,3 @@ to {
     transform: rotate(360deg)
   }
 }
-
-
-/* TABLET
-@media (min-width: 669px) {
-  .poster-container {
-    grid-template-columns: 1fr 1fr);
-  }
-}
-
-DESKTOP
-@media (min-width: 992px) {
-  .poster-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr);
-  }
-}  */
