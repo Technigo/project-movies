@@ -6,7 +6,7 @@ import { Orbit } from '@uiball/loaders';
 import { TVSHOW_DETAILS_URL } from 'utils/Urls';
 /* import { Seasons } from './Seasons' */
 
-export const TvShowDetails = () => {
+export const TvSeriesDetails = () => {
   const [tvShow, setTvShow] = useState([])
   const [loading, setLoading] = useState(true);
   const { id } = useParams()
@@ -30,7 +30,7 @@ export const TvShowDetails = () => {
 
   return (
     <section className='tvPage'>
-      <Link to='/' className='backLink'>
+      <Link to='/TV-series' className='backLink'>
         <div className='back'>
           <img src='/icons/back-icon.svg' id='back-icon' alt='back' />
           <p>TV-shows</p>

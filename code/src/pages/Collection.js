@@ -16,20 +16,15 @@ export const Collection = () => {
 
   return (
     <section className='collections'>
-      <h1>{collections.name}</h1>
-      <div className='collection-container'>
-        {collections.map((movies) => {
-          return (
-            <>
-              <h1
-                key={movies.title}
-                className='list-element'>{movies.title}
-              </h1>
-              <p key={movies.id}>{movies.overview}</p>
-            </>
-          )
-        })}
-      </div>
+      {collections.map((movies) => {
+        return (
+          <div className='collection-container' key={movies.id}>
+            <h1 className='list-element'>{movies.title}
+            </h1>
+            <p>{movies.overview}</p>
+          </div>
+        )
+      })}
     </section>
 
   )

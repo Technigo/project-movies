@@ -2,14 +2,14 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Orbit } from '@uiball/loaders';
-import { NEW_RELEASES_URL } from 'utils/Urls';
+import { ONCINEMA_URL } from 'utils/Urls';
 
-export const NewReleases = () => {
+export const Oncinema = () => {
   const [newReleases, setNewReleases] = useState([])
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(NEW_RELEASES_URL)
+    fetch(ONCINEMA_URL)
       .then((res) => res.json())
       .then((json) => setNewReleases(json.results))
       .catch((error) => alert(error, 'error'))
