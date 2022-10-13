@@ -25,18 +25,22 @@ export const TVseries = () => {
   }
 
   return (
-    <div className='tv-series'>
-      <h1>Popular Tv-Shows</h1>
-      {tvShow.map((show) => (
-        <Link key={show.id} to={`/Tv-series/${show.id}`}>
-          <img src={`https://image.tmdb.org/t/p/w342${show.poster_path}`} alt={show.title} />
-          <div className='details'>
-            <h1>{show.title}</h1>
-            <p>Released {show.first_air_date}</p>
-          </div>
-        </Link>
-      ))}
-    </div>
+    <section className='tv-series'>
+      <h1 className='popular'>Popular Tv-Shows</h1>
+      <div className='movies-container'>
+        {tvShow.map((show) => (
+          <article className='movie-wrapper' key={show.id}>
+            <Link key={show.id} to={`/Tv-series/${show.id}`}>
+              <img src={`https://image.tmdb.org/t/p/w342${show.poster_path}`} alt={show.name} />
+              <div className='details'>
+                <h1>{show.name}</h1>
+                <p>Released {show.first_air_date}</p>
+              </div>
+            </Link>
+          </article>
+        ))}
+      </div>
+    </section>
   )
 }
 

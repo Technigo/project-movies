@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Orbit } from '@uiball/loaders';
-import { Seasons } from 'components/Seasons'
+import { Seasons } from './Seasons'
 
 export const TvShowDetails = () => {
   const [tvShow, setTvShow] = useState([])
@@ -28,21 +28,26 @@ export const TvShowDetails = () => {
   }
 
   return (
-    <section className='tvshow-details'>
-      <Link to='/TV-series' className='backLink'>
-        <img src='/icons/back-icon.svg' id='back-icon' alt='back' />Tv-Show
-      </Link>
-      <div className='details' key={tvShow.id}>
-        <h1>{tvShow.name}</h1>
-        <h2><img src='/icons/star-icon.svg' id='star-icon' alt='rating' />{Math.round(tvShow.vote_average * 10) / 10}</h2>
-        <a href={tvShow.homepage} className='homepage'>
-          <img src={`https://image.tmdb.org/t/p/w342${tvShow.backdrop_path}`} alt={tvShow.title} />
-        </a>
-        <h3>Summary</h3>
-        <p>{tvShow.overview}</p>
-        <Seasons />
+    <div className='background' style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${tvShow.backdrop_path})` }}>
+      <section className='tvshow-details'>
+        <Link to='/TV-series' className='backLink'>
+          <div className='back'>
+            <img src='/icons/back-icon.svg' id='back-icon' alt='back' />
+            <p>TV-shows</p>
+          </div>
+        </Link>
+        <div className='details'>
+          <img src={`https://image.tmdb.org/t/p/w342${tvShow.poster_path}`} className='detail-img' alt={tvShow.title} />
+          <div className='detail-text'>
+            <h1>{tvShow.name}<span className='ratings'><img src='/icons/star-icon.svg' id='star-icon' alt='rating' />{Math.round(tvShow.vote_average * 10) / 10}</span></h1>
+            <p>{tvShow.overview}</p>
+            <div className='collection'>
+              <Link to={`/Tv-series/${<Seasons id={id} />}`}>All seasons <img src='/icons/more-icon.svg' id='more-icon' alt='more' /></Link>
+            </div>
+          </div>
+        </div>
 
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

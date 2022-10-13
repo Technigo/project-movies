@@ -24,16 +24,21 @@ export const Upcoming = () => {
     );
   }
   return (
-    <div className='upcoming'>
-      <h1>Upcoming movies</h1>
-
-      {upcoming.map((movie) => (
-        <Link key={movie.id} to={`/movies/${movie.id}`}>
-          <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-          <h1>{movie.title}</h1>
-          <p>Release date {movie.release_date}</p>
-        </Link>
-      ))}
-    </div>
+    <section className='upcoming'>
+      <h1 className='upcoming-header'>Upcoming movies</h1>
+      <div className='movies-container'>
+        {upcoming.map((movie) => (
+          <article className='movie-wrapper' key={movie.id}>
+            <Link key={movie.id} to={`/movies/${movie.id}`}>
+              <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+              <div className='details'>
+                <h1>{movie.title}</h1>
+                <p>Release date {movie.release_date}</p>
+              </div>
+            </Link>
+          </article>
+        ))}
+      </div>
+    </section>
   )
 }
