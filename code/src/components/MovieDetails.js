@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { BASE_URL } from '../utils/urls'
 
-export const MovieDetails = ( ) => {
+export const MovieDetails = () => {
   const [details, setDetails] = useState({});
   const navigate = useNavigate();
   const { id } = useParams();
@@ -12,7 +13,7 @@ export const MovieDetails = ( ) => {
   };
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`)
+    fetch(`${BASE_URL}${id}?api_key=${API_KEY}&language=en-US`)
       .then((res) => res.json())
       .then((data) => setDetails(data))
       .catch((error) => console.error(error))
@@ -31,7 +32,6 @@ export const MovieDetails = ( ) => {
           <p className="movie-desc">{details.overview}</p>
         </div>
       </div>
-      
     </section>
   )
 };
