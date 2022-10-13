@@ -14,8 +14,8 @@ export const App = (movie) => {
       .then((data) => {
         setMovieList(data.results);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((e) => {
+        console.error(console.error(e));
       });
   }, []);
 
@@ -23,9 +23,9 @@ export const App = (movie) => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MovieList list={movieList} />} />
-        <Route path="/movies/:movieId" element={<MovieDetails movie={movie} />} />
+        <Route path="/movieDetails/:movieId" element={<MovieDetails movie={movie} />} />
         <Route path="/404" element={<NotFound />} />
-        <Route path="/*" element={<Navigate to="/404" />} />
+        <Route path="*" element={<Navigate to="/404" />} />
       </Routes>
     </BrowserRouter>
   );
