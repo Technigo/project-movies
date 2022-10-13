@@ -20,13 +20,15 @@ export const App = (movie) => {
   }, []);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MovieList list={movieList} />} />
-        <Route path="/movieDetails/:movieId" element={<MovieDetails movie={movie} />} />
-        <Route path="/404" element={<NotFound />} />
-        <Route path="*" element={<Navigate to="/404" />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="outer-wrapper">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MovieList list={movieList} />} />
+          <Route path="/movieDetails/:movieId" element={<MovieDetails movie={movie} />} />
+          <Route path="/404" element={<NotFound />} />
+          <Route path="*" element={<Navigate to="/404" />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
