@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom' // importing for usage
 // import { useParams } from 'react-router-dom';
 
-export const Movies = ({ movies,downPage, upPage }) => {
+const Movies = ({ movies,downPage, upPage }) => {
   return (
     <section className="list-wrapper">
       {movies.map((movie) => (
@@ -28,3 +28,4 @@ export const Movies = ({ movies,downPage, upPage }) => {
     </section>
   )
 }
+export default Movies;
