@@ -1,13 +1,12 @@
 # Project Movies
+How to build multi-page applications using React Router. 
 
-Replace this readme with your own information about your project.
+How to pass information such as product ids, or blog post titles in the URL and pick this up in React router to load dynamic content.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Practice using APIs in React - combining useState with useEffect
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Sketching out design, started with first components and fetch API to populate first page with movies. Then linking each movie item to movie details page and added API to that. Finally styling and also making it responsive.
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://moviereleases.netlify.app/movies/436270
