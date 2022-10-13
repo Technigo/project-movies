@@ -1,11 +1,11 @@
 import React from 'react'
-import loadingIcon from './loading-icon.svg'
+import loadingIcon from '../assets/loading-icon.svg'
 
 const Loading = () => {
   return (
     <div className="loading">
-      <p>Loading Loading Loading ...</p>
-      <img src={loadingIcon} alt="Loading" />
+      <img className="loading-img" src={loadingIcon} alt="Loading" />
+      <p>Loading...</p>
     </div>
   )
 }

@@ -130,12 +130,53 @@ h2 {
 
 .loading{
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
 	color: #fff;
 	margin: auto;
   width: 100%;
-  border: 3px solid rgb(186, 182, 182);
-  /* padding: 10px; */
+	height: 100%;
 }
+
+.loading p {
+	font-size: 28px;
+}
+
+.loading-img {
+  display:block;
+  width: 100px;
+  height: 100px;
+  animation:loading-cog 5s linear infinite;
+}
+
+.not-found-container {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	height: 100vh;
+	justify-content: center;
+}
+.ghost {
+	margin: 2rem;
+}
+.not-found-container h1, h2 {
+	color: #fff;
+	align-self: center;
+}
+
+@keyframes loading-cog
+{
+  0%
+  {
+    transform:rotate(0deg);
+  }
+  100%
+  {
+    transform:rotate(360deg);
+  }
+}
+
 
 @media (min-width: 600px) {
 	p {
