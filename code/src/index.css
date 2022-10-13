@@ -117,11 +117,17 @@ span.released {
     grid-template-columns: 1fr 1fr 1fr;
     width: 33.3%;
   }
+  .movie-details {
+    flex-direction: row;
+  }
 }
 
 @media screen and (min-width: 900px) {
   .movies-list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 25%;
+  }
+  .movie-details {
+    flex-direction: row;
   }
 }
