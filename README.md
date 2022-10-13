@@ -8,5 +8,7 @@ Practice using APIs in React - combining useState with useEffect
 ## The problem
 Sketching out design, started with first components and fetch API to populate first page with movies. Then linking each movie item to movie details page and added API to that. Finally styling and also making it responsive.
 
+Would be cool to add more pages with other categories of movies. Like popular.
+
 ## View it live
 https://moviereleases.netlify.app/movies/436270
