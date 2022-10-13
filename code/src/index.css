@@ -24,15 +24,13 @@ code {
   color: white;
 }
 
-
 .movieText {
   position: absolute;
   left: 20px;
   bottom: 20px;
 }
 
-
-@media (max-width: 668px) {
+.movieBackrop @media (max-width: 668px) {
   .movieContainer {
     display: grid;
     grid-template-columns: 2fr;
