@@ -15,7 +15,7 @@ const Details = () => {
     fetch(API_URL)
       .then((response) => response.json())
       .then((json) => setMovie(json));
-  });
+  }, [API_URL]);
 
   const goBack = () => {
     navigate(-1);
