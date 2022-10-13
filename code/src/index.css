@@ -236,6 +236,27 @@ header {
   width: fit-content;
 }
 
+/** NOT FOUND ERROR **/
+
+.notfound-container {
+  margin-top: 100px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #F9F9F9;
+}
+
+.errorBtn {
+  padding: 15px;
+  background: #e69595;
+  border-radius: 10px;
+}
+
+#notfoundIcon {
+  filter: invert(1)
+}
+
 /** MEDIA QUERIES **/
 
   @media (min-width: 370px) {

@@ -8,13 +8,13 @@ export const NotFound = () => {
     navigate('/');
   }
   return (
-    <div className='notfound-container'>
+    <section className='notfound-container'>
       <h1 className='notfound-404'>404</h1>
-      <img src='../icons/PageNotFound.png' alt='notfound 404' />
+      <img id='notfoundIcon' src='../icons/PageNotFound.png' alt='notfound 404' />
       <h2 className='notfound-ops'> Ooooppps! </h2>
       <p> We couldn`t find the page you were looking for. May we suggest to have a look at
-        our Populare movies list.
+        our Popular movies list.
       </p>
-      <button type='button' onClick={onHomeButtonClick}>Return to Populare Movies</button>
-    </div>);
+      <button className='errorBtn' type='button' onClick={onHomeButtonClick}>Return to Popular Movies</button>
+    </section>);
 }
