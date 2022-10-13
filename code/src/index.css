@@ -169,6 +169,10 @@ header {
   flex-direction: column;
 }
 
+.detail-text {
+  background: #1313139e
+}
+
 .detail-img {
   border: solid #F9F9F9 2px;
   height: 300px;
@@ -241,7 +245,7 @@ header {
 
     .movie-details {
       bottom: 20%;
-      left: 10%;
+      left: 20px
   }
 
     .movie-wrapper {
@@ -257,7 +261,7 @@ header {
     }
 
     .detail-text {
-      padding: 20px
+      padding: 20px;
     }
 
     .detail-img {
