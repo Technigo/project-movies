@@ -1,13 +1,19 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+Team Josefine Engdahl, Cecilia Frånlund, Petra Eriksson.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+In this project we were building a multi-page application using React Router.
+It's passing information in the URL and pick this up in React router to load dynamic content. 
+Were also using APIs in React - combining `useState` with `useEffect`.
+
+<img width="968" alt="Screenshot_2022-10-13_at_11 07 07" src="https://user-images.githubusercontent.com/108176641/195555854-e311fc7a-0a10-4944-bc56-a966eff9cce3.png">
+
+
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We made a plan of how to approach the problem in figma. Started out fetching the data, and passed props components. Added some React Routes to Components and finally styled the CSS. If we had more time we would add more information about each movie.
+
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://newly-release-movies.netlify.app/
