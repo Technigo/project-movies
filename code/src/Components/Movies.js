@@ -1,28 +1,30 @@
-//map all the movies 
 
-import React, { useState, useEffect } from 'react';
-import { BroswerRouter, Routes, Route } from "react-router-dom"
+import React from 'react';
+import { Link } from 'react-router-dom' // importing for usage
+// import { useParams } from 'react-router-dom';
 
-export const Movies = () => {
-  const [movieList, setMovieList] = useState([]); // empty array for input
-  const [loading, setLoading] = useState(false);// loading check
-  /* const [page, setPage] = useState(1) */
-  const movie_url = "https://api.themoviedb.org/3/movie/popular?api_key=db7243cd4866f0f7a8a865282262f6fd&language=en-US"
-  
-  useEffect(() => {
-    setLoading(true);
-    fetch(movie_url)
-      .then((res) => res.json())
-      .then((data) => {setMovieList(data)})
-      .catch((error) => console.error(error))
-      .finally(() => setLoading(false));
-  }, [])
-  
-  return(
-    <div>
-      {movieList.map((item) => (
-        <div>key={item.results}</div>
+export const Movies = ({ movies,downPage, upPage }) => {
+  return (
+    <section className="list-wrapper">
+      {movies.map((movie) => (
+        <Link
+          className="movie-container"
+          key={movie.id}
+          to={`/MovieDetails/${movie.id}`}>
+          <img
+            className="list-element"
+            src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+            alt={movie.title} />
+          <div className="movie-info">
+            <h1>{movie.title}</h1>
+            <h4>Released {movie.release_date}</h4>
+          </div>
+        </Link>
       ))}
-      </div>
+          <div className='buttons'>
+          <button className='up' type='button' onClick={upPage}>Page up!</button>
+          <button type='button' onClick={downPage}>Page down!</button>
+        </div>
+    </section>
   )
 }
