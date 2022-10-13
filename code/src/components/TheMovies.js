@@ -23,10 +23,10 @@ const TheMovies = () => {
       .catch((error) => console.error(error))
   }
 
+  // during loading, a component containing animated poo emoji will show up
   if (loading) {
     return <RotatingPoo />
   }
-  console.log(movies)
 
   return (
     <main className="main-page">

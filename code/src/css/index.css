@@ -11,13 +11,13 @@ body {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
   }
-
-  .relative {
+  
+  /* styling for animated poo */
+  .poo-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 0 50px; */
     height: 100vh;
     overflow: hidden;
   }
@@ -33,11 +33,9 @@ body {
   }
   
   .loading{
-    /* padding: 20% 0; */
     font-size: 30px;
     text-align: center;
     margin-top: 90px;
-    /* margin: auto; */
     color: black;
     height: 500px;
     animation-name: mymove;

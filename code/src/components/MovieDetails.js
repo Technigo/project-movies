@@ -12,7 +12,7 @@ const MovieDetails = () => {
   console.log(movieId)
 
   useEffect(() => {
-    // Shows the poo spinner for 3 seconds
+    // Sets loading to true for 3 seconds
     PooTimer(setLoading)
 
     // Calls the api and fetches information about a particular movie
@@ -22,11 +22,11 @@ const MovieDetails = () => {
       .catch((error) => console.log(error))
   }, [movieId])
 
+  // during loading, a component containing animated poo emoji will show up
   if (loading) {
     return <RotatingPoo />
   }
 
-  console.log(movieDetail)
   return (
     <article className="main-container">
 
@@ -40,7 +40,7 @@ const MovieDetails = () => {
           <div className="details-container">
             <h1>
               <span>{movieDetail.title}</span>
-              <span className="rating">⭐{movieDetail.vote_average.toFixed(1)}</span>
+              <span className="rating">⭐{movieDetail.vote_average.toFixed(1)}</span> {/* toFixed is used to round up decimal */}
             </h1>
             <p>
               <span>{movieDetail.overview}</span>

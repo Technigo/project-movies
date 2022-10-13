@@ -14,6 +14,7 @@
     background-color: rgba(0, 0, 0, 0.36);
     color: white;
     margin-left: 0;
+    padding: 0 10px;
 }
 
 .details-container p{
@@ -63,26 +64,36 @@
     margin-right: 5px;
 }
 
-/* media query */
-@media (min-width: 577px){
+/* for smaller phone */
+@media (max-width: 400px){
+    .back-button{
+        top: 5px;
+        left: 40px;
+    }
+
     .summary {
-        display: flex;
+        padding: 40px;
+    }
+}
+
+/* for small tablet */
+@media (min-width: 577px){
+    
+    .summary {
         flex-direction: row;
         align-items: flex-end;
-        padding: 50px;
     }
 
     .summary img{
-        border: 5px solid white;
         width: 250px;
     }
 
     .details-container{
-        padding: 0 30px;
         margin-left: 20px;
     }
 }
 
+/* for bigger screen */
 @media (min-width: 770px){
     .summary img{
         width: auto;
