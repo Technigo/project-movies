@@ -9,15 +9,24 @@ import { POPULARMOVIE_URL } from 'short/Urls.js'
 
 export const App = () => {
   const [movieList, setMovieList] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetch(POPULARMOVIE_URL)
       .then((res) => res.json())
       .then((data) => {
         setMovieList(data.results);
-      });
+      })
+      .finally(() => {
+        setLoading(false);
+      })
   }, []);
 
+  if (loading) {
+    return (
+      <div>...Loading</div>
+    );
+  }
   return (
     <BrowserRouter>
       <main>
