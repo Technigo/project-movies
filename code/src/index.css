@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -28,3 +34,88 @@ a.active {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+
+.movie-poster-list {
+  position: relative;
+}
+
+.list-poster {
+  display: inherit;
+  transition: 0.5s ease;
+  width:100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.movie-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+  transition: 0.4s ease;
+  color: white;
+  overflow: hidden;
+  line-height: 3rem;
+}
+
+.movie-text:hover {
+  opacity: 100;
+  background: rgba(44, 44, 44, 0.7);
+}
+
+/* --- INDIVIDUAL MOVIE --- */
+
+.movie-poster {
+  border: 5px solid white;
+}
+
+.detail-group-container {
+  display: flex;
+  margin-top: 22rem;
+  margin-left: 3rem;
+  color: white;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+}
+
+.movie-details {
+  margin-left: 2.5rem;
+  width: 25vw;
+}
+
+.movie-voting-h1{
+  display: inline;
+}
+
+.movie-voting {
+  font-size: medium;
+  color: yellow;
+  margin-left: 1rem;
+}
+
+.btn-text {
+  margin-left: 3rem;
+  margin-top: 20%;
+  padding: 0.5rem;
+  color:white;
+  cursor:pointer;
+  background: transparent;
+  border: none;
+  font-size:1rem;
+    /*border: 3px solid white;
+  border-radius: 2rem;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);*/
+}
+
+.btn-text:hover{
+  border: 2px solid white;
+  transform: scale(1.5);
+  transition: 0.5s ease; 
+ }
