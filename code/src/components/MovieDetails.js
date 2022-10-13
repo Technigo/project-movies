@@ -20,12 +20,20 @@ const MovieDetails = () => {
 
   return (
     <>
-      <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title} />
-      <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
-      <h2>{movie.title}</h2>
-      <h3>{movie.vote_average}/10</h3>
-      <p>{movie.overview}</p>
-      <button type="button" onClick={goBack}>Movie list</button>
+      <img className="background-img" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title} />
+      <div className="details-wrapper">
+        <button className="back-button" type="button" onClick={goBack}>Movies</button>
+        <div className="movie-details">
+          <img className="details-img" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+          <div className="details-text">
+            <div className="text-box">
+              <h2>{movie.title}</h2>
+              <h3 className="rating">&#11088; {movie.vote_average}/10</h3>
+              <p>{movie.overview}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
