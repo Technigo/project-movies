@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import Loader from './Loader'
 
-const MovieDetails = () => {
+const MovieDetails = ({ loading }) => {
   // const params = useParams()
   const { movieTitle } = useParams()
   const navigate = useNavigate()
@@ -13,6 +14,8 @@ const MovieDetails = () => {
   const goBack = () => {
     navigate(-1)
   }
+
+  if (loading) return <Loader />
 
   return (
     <div>
