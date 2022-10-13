@@ -17,6 +17,7 @@ export const App = () => {
         setMovieList(data.results);
       });
   }, []);
+
   return (
     <BrowserRouter>
       <main>

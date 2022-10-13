@@ -307,12 +307,10 @@ h3 {
 }
   
   .text-wrapper {
-    padding-bottom: 10px;
-    align-self: flex-end;
     text-align: bottom;
     line-height: 1.6;
-    align-self: flex-end;
-    padding-bottom: 10px;;
+    padding-bottom: 20px;;
+    width: 300px;
   }
 }
 

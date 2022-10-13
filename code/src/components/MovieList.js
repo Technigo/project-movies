@@ -24,8 +24,3 @@ const MovieList = ({ movies }) => {
 };
 
 export default MovieList;
-
-// 1) Map movies, wrapped in section list wrapper
-// 2)
-// to get the POSTER IMAGE, the poster_path need to be added to at the end shttps://image.tmdb.org/t/p/w780
-// {movie.release_date} for when released
