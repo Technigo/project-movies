@@ -16,11 +16,17 @@ import Details from 'components/Details';
 import { NotFound } from 'components/NotFound';
 import Header from 'components/Header';
 import { MovieList } from 'components/MovieList';
+import SelectList from 'components/SelectList';
 
 export const App = () => {
   const [movieList, setMovieList] = useState([]);
   const [details, setDetails] = useState();
+  const [selectList, setSelectList] = useState();
 
+  // const [loading, setLoading] = useState();
+
+  // if (loading) {
+  // return(
   useEffect(() => {
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=35a0fb6f5f3fde8a6e6cf4ca489b902a&language=en-US&page=1')
       .then((response) => response.json())
@@ -34,7 +40,8 @@ export const App = () => {
 
   return (
     <BrowserRouter>
-      <Header />
+      {/* <Header />
+      <SelectList /> */}
       <Routes>
         <Route path="/" element={<MovieList list={movieList} />} />
         <Route path="/details/:id" element={<Details />} />

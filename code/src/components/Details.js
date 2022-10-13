@@ -7,28 +7,44 @@ import { useNavigate, useParams } from 'react-router-dom';
 const Details = () => {
 //   const params = useParams();
   const { id } = useParams()
-  const [movie, setMovie] = useState()
+  const [movie, setMovie] = useState({})
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=35a0fb6f5f3fde8a6e6cf4ca489b902a&language=en-US`)
       .then((response) => response.json())
       .then((json) => {
         setMovie(json)
+        console.log("fetch ID", movie)
       })
   }, [id]);
 
   const navigate = useNavigate();
   useEffect(() => {
-    console.log(id);
+    // console.log(id);
   });
   const goBack = () => {
     navigate(-1);
   }
   return (
-    <div>
-      <p>{id}</p>
-      <button type="button" onClick={goBack}> Go back </button>
-    </div>
+    <section className="movie-container">´
+      <div className="backdrop">
+        <button type="button" onClick={goBack}> 👈🏼 Movies </button>
+        <img src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.title} />
+      </div>
+      <div className="details-containter">
+        <div className="poster">
+          <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+        </div>
+
+        <div className="movieInfo">
+          <h2>{movie.title} </h2>
+          <h3 className="vote-average"> ⭐️ {Math.round(movie.vote_average * 10) / 10}/10 </h3>
+          <a type="image/png" sizes="32x32" href="https://img.icons8.com/3d-fluency/2x/star.png"> </a>
+          <p>{movie.overview}</p>
+        </div>
+      </div>
+
+    </section>
   );
 }
 

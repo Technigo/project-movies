@@ -1,6 +1,6 @@
-/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable linebreak-style */
 /* eslint-disable no-unused-vars */
+/* eslint-disable jsx-a11y/alt-text */
 /* import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -20,16 +20,27 @@ export const List = ({ movieList }) => {
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SelectList from './SelectList'
 
-export const MovieList = ({ list }) => {
+export const MovieList = ({ list, selectList, setSelectList }) => {
   return (
-    <div className="popular-list">
-      {list.map((movie) => {
-        return <Link key={movie.id} to={`/details/${movie.title}`}>
-          <img src={`http://image.tmdb.org/t/p/w300/${movie.poster_path}`} />
-        </Link>
-      })}
-    </div>
+    <>
+      <div className="select">
+        <SelectList
+          selectList={selectList}
+          setSelectList={setSelectList} />
+      </div>
+
+      <div className="popular-list">
+        {list.map((movie) => {
+          return (
+            <Link key={movie.id} to={`/details/${movie.id}`}>
+              <img src={`http://image.tmdb.org/t/p/w300/${movie.poster_path}`} />
+            </Link>
+          )
+        })}
+      </div>
+    </>
   );
 }
 
