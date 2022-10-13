@@ -24,7 +24,10 @@ const Details = () => {
   return (
     <div
       style={{
-        backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
+        backgroundImage: `linear-gradient(
+          rgba(11, 11, 11, 0.6),
+          rgba(11, 11, 11, 0.6)
+        ), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
       }}
       className="movie-details-wrapper">
       <div className="movie-details">

@@ -8,7 +8,7 @@ const NotFound = () => {
   };
 
   return (
-    <div>
+    <div className="not-found-page">
       <p>Sorry, this page does not exist..</p>
       <button type="button" onClick={returnToDefaultPage}>
         {' '}
