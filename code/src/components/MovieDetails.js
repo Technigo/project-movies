@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import { MOVIEDETAILS_URL } from 'short/Urls.js';
-import Icon from './icons/Singlepop.png';
+import Icon from './icons/Back.png';
 
 const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState({});
@@ -38,7 +38,7 @@ const MovieDetails = () => {
         <div className="text-wrapper">
           <h2>
             <span className="title">{movieDetails.title}</span>
-            <span className="rating">⭐️ {movieDetails.vote_average}</span>
+            <span className="rating">⭐️ {Math.round(movieDetails.vote_average * 10) / 10}</span>
           </h2>
           <h3>{movieDetails.tagline}</h3>
           <p className="over-view">{movieDetails.overview}</p>

@@ -11,7 +11,6 @@ export const App = () => {
   const [movieList, setMovieList] = useState([]);
 
   useEffect(() => {
-    // set loading?
     fetch(POPULARMOVIE_URL)
       .then((res) => res.json())
       .then((data) => {

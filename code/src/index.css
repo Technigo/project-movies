@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: rgb(39, 39, 39);
+  background-color: rgb(12, 12, 12);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -124,13 +124,11 @@ h4 {
 
 /* ------- MOVIE DETAILS ------------ */
 .details-container {
-  border: solid green 2px;
   position: relative;
   display: inline-flex;
 }
 
 .backdrop-image {
-  border: solid red 2px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: cover;
@@ -182,9 +180,12 @@ h4 {
   left: 10%; 
   right: 10%;
   height: 50%;
+  
+
   display: flex;
   animation: myAnim 3s ease 0s 1 normal forwards;
 }
+
 
 @keyframes myAnim {
 	0% {
@@ -196,22 +197,22 @@ h4 {
 		opacity: 1;
 		transform: translateX(0);
 	}
-}
+} 
 
 .poster-image {
   border-radius: 10px;
   -webkit-box-shadow: 0px -2px 16px 3px rgba(0, 0, 0, 0.49); 
   box-shadow: 0px -2px 16px 3px rgba(0, 0, 0, 0.49);
-  
+  max-height: 420px;
+  align-self: flex-end;
 
 
 }
 .text-wrapper {
   text-align: bottom;
-  max-width: 50%;
+  max-width: 400px;
   line-height: 1.6;
   align-self: flex-end;
-  padding-bottom: 10px;;
 }
 
 .over-view,
@@ -253,3 +254,68 @@ h3 {
 } 
 
 /*----MEDIA QUERIES----*/
+
+@media (max-width: 780px) {
+  .details-container {
+    position: relative;
+    display: block;
+  }
+  
+  .backdrop-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: cover;
+    object-fit: cover; 
+    height: 100vh;
+    width: 100vw; 
+  }
+  
+  .detail-wrapper {
+    display: block; 
+    margin: 0 auto;
+    top: 150px;
+    padding-bottom: 10px;
+  
+  }
+  
+  span {
+    font-size: 18px;
+  }
+  
+  h3 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+
+  .button-container {
+    position: absolute;
+    z-index: 1;
+    top: 5%;
+    left: 10%;
+  }
+
+  .poster-image {
+    margin-bottom: 10px;
+    width: 200px;
+  }
+  
+  .over-view, h2, h3 {
+  color: white;
+  padding-left: 0%;
+}
+  
+  .text-wrapper {
+    padding-bottom: 10px;
+    align-self: flex-end;
+    text-align: bottom;
+    line-height: 1.6;
+    align-self: flex-end;
+    padding-bottom: 10px;;
+  }
+}
+
+
