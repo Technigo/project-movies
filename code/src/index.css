@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.library {
+  border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+}
+
+/*.image-container{
+  border: 2px solid red;
+}*/
+
+.library-image{
+  border: 2px solid blue;
+  
+}
+.library-element {
+  border: 2px solid magenta;
+  width: 25%;
+  text-align: center;
+}
+
+/*.library-image-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: 0.5s ease;
+}
+.library-image:hover {
+  color: transparent;
+}
+
+.library-image-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.play {
+  transform: scale(1.5);
+}
+
+.play:hover {
+  transform: scale(2.0);
+}*/
+
