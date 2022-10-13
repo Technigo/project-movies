@@ -21,16 +21,34 @@ code {
 /* MOVIELIST */
 
 .list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .list-item {
-  width: 100%;
+  background-size: cover;
+  aspect-ratio: 1 / 1.5;
 }
 
-.list-item img {
-  width: 100%;
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  padding: 1.5rem;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.list-item:hover .overlay {
+  opacity: 1;
 }
 
 /* MOVIEDETAILS */
@@ -73,19 +91,18 @@ code {
 /* MEDIA QUERIES */
 
 @media only screen and (min-width: 820px) {
-  .list-item {
-    width: 25%;
+/*   .list-item {
+    width: 25%; */
 }
-}
+
 
 @media only screen and (max-width:819px) and (min-width: 570px) {
-  .list-item {
-    width: 33.33%;
-}
+/*   .list-item {
+    width: 33.33%; */
 }
 
+
 @media only screen and (max-width: 569px) and (min-width: 370px) {
-  .list-item {
-    width: 50%;
-}
+/*   .list-item {
+    width: 50%; */
 }
