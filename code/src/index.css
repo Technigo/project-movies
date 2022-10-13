@@ -25,8 +25,8 @@ p {
 .movies-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 50%;
-  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .movie-item {
   position: relative;
@@ -89,6 +89,7 @@ p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  max-width: 300px;
 }
 .overview {
   line-height: 1.6;
@@ -118,7 +119,6 @@ span.released {
 @media screen and (min-width: 600px) {
   .movies-list {
     grid-template-columns: 1fr 1fr 1fr;
-    width: 33.3%;
   }
   .movie-details {
     flex-direction: row;
@@ -128,7 +128,6 @@ span.released {
 @media screen and (min-width: 900px) {
   .movies-list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 25%;
   }
   .movie-details {
     flex-direction: row;
