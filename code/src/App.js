@@ -5,8 +5,8 @@ import NotFound from 'components/NotFound'
 import Header from 'components/Header'
 import MovieDetails from 'components/MovieDetails'
 import MovieList from 'components/MovieList'
-// import Loader from 'components/Loader'
 
+// Gör laddningen långsammare så att loadern syns
 const delayer = (delayTime) => {
   // eslint-disable-next-line no-promise-executor-return
   return new Promise((resolve) => setTimeout(resolve, delayTime))
