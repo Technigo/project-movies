@@ -2,13 +2,14 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Orbit } from '@uiball/loaders';
+import { MOVIES_URL } from 'utils/Urls'
 
 export const StartPage = () => {
   const [movies, setMovies] = useState([])
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://api.themoviedb.org/3/movie/popular?api_key=124871c87c46d6e667f133342d66de5c&language=en-US&page=1')
+    fetch(MOVIES_URL)
       .then((res) => res.json())
       .then((json) => setMovies(json.results))
       .catch((error) => alert(error, 'error'))

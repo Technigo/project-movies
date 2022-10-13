@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Orbit } from '@uiball/loaders';
 import { Seasons } from 'components/Seasons'
+import { TVSHOW_DETAILS_URL } from 'utils/Urls';
 
 export const TvShowDetails = () => {
   const [tvShow, setTvShow] = useState([])
@@ -11,7 +12,7 @@ export const TvShowDetails = () => {
   const { id } = useParams()
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=124871c87c46d6e667f133342d66de5c&language=en-US`)
+    fetch(TVSHOW_DETAILS_URL(id))
       .then((res) => res.json())
       .then((data) => { setTvShow(data) })
       .catch((error) => alert(error, 'error'))

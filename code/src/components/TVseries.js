@@ -2,13 +2,14 @@
 import React, { useEffect, useState } from 'react';
 import { Orbit } from '@uiball/loaders';
 import { Link } from 'react-router-dom'
+import { TVSHOW_URL } from 'utils/Urls';
 
 export const TVseries = () => {
   const [tvShow, setTvShow] = useState([])
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://api.themoviedb.org/3/tv/popular?api_key=124871c87c46d6e667f133342d66de5c&language=en-US')
+    fetch(TVSHOW_URL)
       .then((res) => res.json())
       .then((json) => setTvShow(json.results))
       .catch((error) => alert(error, 'error'))

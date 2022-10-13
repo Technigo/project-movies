@@ -1,13 +1,14 @@
 /* eslint-disable linebreak-style */
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { TVSHOW_DETAILS_URL } from 'utils/Urls'
 
 export const Seasons = () => {
   const [season, setSeason] = useState([])
   const { id } = useParams()
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=124871c87c46d6e667f133342d66de5c&language=en-US`)
+    fetch(TVSHOW_DETAILS_URL(id))
       .then((res) => res.json())
       .then((data) => setSeason(data.seasons))
       .catch((error) => alert(error, 'error'))

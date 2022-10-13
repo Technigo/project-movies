@@ -2,13 +2,14 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Orbit } from '@uiball/loaders';
+import { UPCOMING_URL } from 'utils/Urls';
 
 export const Upcoming = () => {
   const [upcoming, setUpcoming] = useState([])
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=124871c87c46d6e667f133342d66de5c&language=en-US&page=1&region=SE')
+    fetch(UPCOMING_URL)
       .then((res) => res.json())
       .then((json) => setUpcoming(json.results))
       .catch((error) => alert(error, 'error'))

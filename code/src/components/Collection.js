@@ -1,13 +1,14 @@
 /* eslint-disable linebreak-style */
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { COLLECTION_URL } from 'utils/Urls'
 
 export const Collection = () => {
   const [collections, setCollections] = useState([])
   const { id } = useParams()
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/collection/${id}?api_key=12f0d4f0075ee3d1ab7e1bc82f5a355c&language=en-US`)
+    fetch(COLLECTION_URL(id))
       .then((res) => res.json())
       .then((data) => setCollections(data.parts))
       .catch((error) => alert(error, 'error'))
