@@ -24,3 +24,7 @@ img {
   opacity: 1;
   background-color: rgb(0 0 0 / 75%);
 }
+
+.title {
+  padding: 10px;
+}
