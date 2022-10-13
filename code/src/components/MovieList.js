@@ -9,7 +9,6 @@ export const MovieList = () => {
       .then((response) => response.json())
       .then((data) => {
         setList(data.results)
-        console.log(data.results)
       })
   }
 

@@ -44,4 +44,3 @@ export const Details = () => {
     </div>
   )
 }
-// role="button" tabIndex="0" onClick={() => navigate(-1)}

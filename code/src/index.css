@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100%;
-  background-color: #1e1e1e;
+  background-color: #000000;
   color: white;
 }
 
@@ -25,13 +25,13 @@ main {
 }
 
 .movie-card {
-  border: 1px solid black;
   position: relative;
-  width: 49%;
+  width: 50%;
 }
-
-.movie-card:hover {
-  opacity: 0.3;
+ 
+.movie-card a:hover > img{
+  opacity: 0.2;
+  transition: 0.3s ease-in-out;
 }
 
 .movie-card img {
@@ -44,6 +44,7 @@ main {
   bottom: 20px;
   color: white;
 }
+
 .hidden-description {
   display: none;
 }
@@ -63,13 +64,15 @@ main {
   margin-bottom: 15px;
 }
 
-.movie-detail p {
+p {
   font-size: 16px;
   letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+.movie-detail p {
   background: rgb(0 0 0 / 40%);
   padding: 10px;
   border-radius: 5px;
-  margin-bottom: 15px;
 }
 
 .background {
@@ -101,8 +104,13 @@ main {
   align-items: center;
 }
 
-.title-vote h1 {
+ h1 {
   font-weight: bold;
+  margin: 5px 0px;
+}
+
+.movie-card h1 {
+  margin-bottom: 20px;
 }
 
 .vote-icon {
@@ -114,24 +122,40 @@ main {
 .back-button {
   display: flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   margin: 20px;
   color:white;
   text-decoration: none;
 }
 
-
-
 .back-button img {
   content: url(back-arrow-50.png);
 }
 
+.back-button p {
+  margin: 0px;
+}
+
 .back-button:hover {
   transform: scale(1.04);
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 @media (min-width: 667px) {
+
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  .description p {
+    font-size: 13px;
+    margin: 5px 0px;
+  }
 
   main {
     display: flex;
@@ -141,7 +165,7 @@ main {
   }
 
   .movie-card {
-    width: 24.7%;
+    width: 33%;
   }
 
   .movie-detail {
@@ -149,17 +173,23 @@ main {
     align-items: flex-end;
   }
 
-  .movie-detail p {
-    font-size: 17px;
-    max-width: 40%;
-  }
-
   .back-button img {
     content: url(back-arrow-100.png);
+    max-width: 60%;
   }
 
   .back-button {
     font-size: 25px; 
   }
+}
 
+@media (min-width: 1024px ) {
+
+  .movie-card {
+    width: 25%;
+  }
+  
+  .movie-detail p {
+    max-width: 70%;
+  }
 }
