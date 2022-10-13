@@ -18,7 +18,7 @@ const MovieDetails = () => {
   return (
     <div className="detailPage" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})` }}>
       <div className="detailBox">
-        <button className="backButton" type="button" onClick={onBackButtonClick}>Go back</button>
+        <button className="backButton" type="button" onClick={onBackButtonClick}><span className="arrow" /> Go back</button>
         <img className="detailPoster" src={`http://image.tmdb.org/t/p/w300/${movieDetails.poster_path}`} alt={movieDetails.title} />
         <h1 className="detailTitle">{movieDetails.title}</h1>
         <p className="detailScore">{Math.round(movieDetails.vote_average * 10) / 10}</p>

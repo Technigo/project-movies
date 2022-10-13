@@ -48,6 +48,9 @@ a {color: inherit;}
   margin: 0 auto;
 }
 
+/* Our mainPage here we show all the movies, and if you hover the image will 
+   turn darker and the name and realease date will show at the bottom */
+
 .sectionWrapper {
   display: flex;
   flex-wrap: wrap;
@@ -57,14 +60,11 @@ a {color: inherit;}
   width: 25%;
   size: fit-content;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-/* .movieBox:hover {
-  opacity: 0.5;
-} */
-
-.hoverBox {
-  display: none;
+.movieBox .hoverBox {
   border: 2px solid pink;
   position: absolute;
   top: 0;
@@ -75,7 +75,11 @@ a {color: inherit;}
   
 }
 
-.hoverBox:hover {
+.hoverDetails {
+  display: none;
+}
+
+.movieBox:hover .hoverBox {
    display: flex;
   flex-direction: column;
   text-align: center;
@@ -83,17 +87,74 @@ a {color: inherit;}
   background: rgba(0,0,0,.75);
 }
 
+.movieBox:hover .hoverBox .hoverDetails{
+  display: flex;
+ flex-direction: column;
+ text-align: center;
+ justify-content: flex-end;
+}
+
+
 .img {
   width: 100%;
 }
-
+/*back button, The span creates the arrow, and if you hover on it it will move to the left.*/
 .backButton {
-  display: inline;
-  width: 8%;
-  background-color: inherit;
-  color: #fff;
   grid-area: 1 / 1 / span 1 / span 1;
+  display: flex;
+  color: white;
+  background-color: inherit;
+  padding: 10px 16px;
+  border-radius: 20px;
+  transition: all .3s ease;
+  font-weight: bold;
+  cursor: pointer;
+  align-items: center;
+  font-size: 20px;
+  border-style: none;
 }
+
+.backButton > .arrow {
+  width: 30px;
+  height: 30px;
+  border-right: 8px solid white;
+  border-bottom: 8px solid white;
+  position: relative;
+  transform: rotate(135deg);
+  margin: 0 6px;
+  transition: all .3s ease;
+}
+
+.backButton > .arrow::before {
+  display: block;
+  background-color: currentColor;
+  width: 4px;
+  transform-origin: bottom right;
+  height: 3px;
+  position: absolute;
+  opacity: 0;
+  bottom: calc(-2px / 2);
+  transform: rotate(45deg);
+  transition: all .3s ease;
+  content: "";
+  right: 0;
+}
+
+.backButton:hover > .arrow {
+  transform: rotate(135deg) translate(4px, 4px);
+  border-color: text-hover-color;
+}
+
+.backButton:hover > .arrow::before {
+  opacity: 1;
+  width: 20px;
+}
+
+.backButton:hover {
+  background-color: transparent;
+  color: white;
+}
+
 
 .detailPage {
   min-height: 100vh;

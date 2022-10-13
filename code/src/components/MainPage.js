@@ -40,8 +40,8 @@ const MainPage = () => {
             <img className="img" src={`http://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.title} />
 
             <div className="hoverBox">
-              <h1>{movie.title}</h1>
-              <p>{movie.release_date}</p>
+              <h1 className="hoverDetails">{movie.title}</h1>
+              <p className="hoverDetails">Released: {movie.release_date}</p>
             </div>
 
           </Link>
