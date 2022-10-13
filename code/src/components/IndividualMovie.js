@@ -42,7 +42,7 @@ const IndividualMovie = () => {
           alt={movie.title} />
         <div className="movie-details">
           <div className="movie-summary">
-            <h1 className="movie-voting-h1">{movie.title} <span className="movie-voting"> ⭐{movie.vote_average} / 10</span></h1>
+            <h1 className="movie-voting-h1">{movie.title} <span className="movie-voting"> ⭐{Number(movie.vote_average).toFixed(1)} / 10</span></h1>
             <p>{movie.overview}</p>
           </div>
         </div>
