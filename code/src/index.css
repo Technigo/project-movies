@@ -1,4 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  display: block;
+  background-color: black;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -12,11 +18,43 @@ code {
     monospace;
 }
 
+/* MOVIELIST */
+
 .list {
   display: flex;
   flex-wrap: wrap;
 }
-.list-element {
-  width: 25%;
-  text-align: center;
+
+.list-item {
+  width: 100%;
+}
+
+.list-item img {
+  width: 100%;
+}
+
+/* MOVIEDETAILS */
+
+.movie-title {
+  color: white;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 820px) {
+  .list-item {
+    width: 25%;
+}
+}
+
+@media only screen and (max-width:819px) and (min-width: 570px) {
+  .list-item {
+    width: 33.33%;
+}
+}
+
+@media only screen and (max-width: 569px) and (min-width: 370px) {
+  .list-item {
+    width: 50%;
+}
 }
