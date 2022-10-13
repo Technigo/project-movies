@@ -25,6 +25,8 @@ code {
   position: relative;
 }
 
+/* - - - MovieList.js - - - */
+
 .poster-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -39,11 +41,11 @@ code {
 }
 
 .poster-text-container {
- position: absolute;
- /* border: 1px solid red; */
- margin: calc(15px + 1vw);
- color: white;
- opacity: 0;
+  position: absolute;
+  /* border: 1px solid red; */
+  margin: calc(15px + 1vw);
+  color: white;
+  opacity: 0;
 }
 
 .movies:hover .poster-text-container {
@@ -59,12 +61,14 @@ code {
   overflow-wrap: break-word;
 }
 
+/* - - - Loader.js - - - */
+
 .loader-container {
- text-align: center;
- padding-top: 200px;
+  text-align: center;
+  padding-top: 200px;
 }
 
- .spinner {
+.spinner {
   animation-name: loadspinner;
   display: block;
   width: 40px;
@@ -78,7 +82,7 @@ code {
 }
 
 .loader-message {
-font-size: 25px;
+  font-size: 25px;
 }
 
 @keyframes loadspinner {
