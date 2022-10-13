@@ -2,9 +2,10 @@
 .movie-container {
     display: grid;
     grid-template-columns: 1fr;
+	gap: 10px;
     justify-content: center;
-    width: 100vw;
-    /* border: 2px solid pink; */
+    padding: 10px;
+	background-color: #141414;
 }
 
 .img-container {
@@ -16,7 +17,6 @@
 .image {
 	width: 100%;
 	display: block;
-    border: 5px solid black;
 }
 
 .overlay {

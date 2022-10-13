@@ -1,15 +1,25 @@
 .detailsContainer {
 position: relative;
-border: 3px solid blue;
 }
 
-.previousPage {
-/*  Finns inte än */
+.background a {
 position: absolute;
+display: flex;
+align-items: center;
+top: 50px;
+left: 50px;
+font-size: 1.7em;
+font-weight: 700;
+text-shadow: 2px 2px #000000d6;
+}
+
+.background a img{
+    width: 30px;
+    margin: 10px;
 }
 
 .background {
- min-height: 100vh;
+ min-height: 95vh;
  background-size: cover;
  background-repeat: no-repeat;
  background-position: center;
@@ -19,22 +29,67 @@ position: absolute;
 }
 
 .summary {
-    border: 3px solid rgb(255, 0, 212);
     display: flex;
-
+    flex-direction: column;
 
 }
 
 .summary img{
-    border: 3px solid rgb(0, 255, 47);
+    border: 5px solid antiquewhite;
     margin: 30px;
+    width: 200px;
 }
 
 .details {
     display: flex;
     flex-direction: column;
     color: white;
-    border: 3px solid rgb(255, 157, 0);
     Margin: 30px;
     justify-content: flex-end;
+    max-width: 90%;
+}
+
+.title {
+    text-shadow: 2px 2px #000000cb;
+    font-size: 2em;
+}
+
+.ratingRelease {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.rating, .released {
+    display: inline;
+}
+
+.overview {
+    margin-top: 20px;
+    font-size: 1.1em;
+
+}
+/*===========  MEDIA QUERY  ---------------*/
+
+@media (min-width: 668px) {
+    .details {
+        max-width: 40%;
+    }
+
+    .summary {
+    flex-direction: row;
+    }
+
+    .summary img {
+    width: 300px;
+    }
+}
+    
+@media (min-width: 1024px) {
+    .summary img {
+        width: 400px;
+    }
+    .details {
+        max-width: 40%;
+    }
 }

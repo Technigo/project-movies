@@ -70,3 +70,19 @@ Fortsätta:
 -fixa "tillbaka/home" länken i MovieDetails
 
 Linnéa du kan ju fortsätta med stylingen i movieDetails.
+
+--------------------------------------------------------
+Linnéa torsdag
+
+fråga: Jag tog bort det här:  // eslint-disable-next-line react-hooks/exhaustive-deps 
+för jag förstod inte vad den gör och när jag tog bort den händer inget? Ska jag lägga tillbaka den? :D 
+
+- Lade till rating i overlay i PopularMovies
+- lade till releasedate i MovieDetails
+- lade till link back to movies i MovieDetails
+- kommenterade ut tillbaka-knappen Movie details
+- pillat med css i movieDetails
+- lade till en icon till Movies-link 
+
+att göra: 
+- Det vore coolt med ngn slags hover transform transision på länken
