@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Orbit } from '@uiball/loaders';
 import { TVSHOW_DETAILS_URL } from 'utils/Urls';
-import { Seasons } from './Seasons'
+/* import { Seasons } from './Seasons' */
 
 export const TvShowDetails = () => {
   const [tvShow, setTvShow] = useState([])
@@ -42,9 +42,12 @@ export const TvShowDetails = () => {
           <div className='detail-text'>
             <h1>{tvShow.name}<span className='ratings'><img src='/icons/star-icon.svg' id='star-icon' alt='rating' />{Math.round(tvShow.vote_average * 10) / 10}</span></h1>
             <p>{tvShow.overview}</p>
-            <div className='collection'>
-              <Link to={`/Tv-series/${<Seasons id={id} />}`}>All seasons <img src='/icons/more-icon.svg' id='more-icon' alt='more' /></Link>
-            </div>
+            {/* <div className='collection'>
+        <Link to={`/Tv-series/${<Seasons id={id} />}`}>All seasons <img src='/icons/more-icon.svg'
+            id='more-icon'
+            alt='more' />
+              </Link>
+            </div> */}
           </div>
         </div>
 
