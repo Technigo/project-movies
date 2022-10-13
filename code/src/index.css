@@ -59,25 +59,7 @@ nav {
   }
 }
 
-/*
-.movie-container {
-  /* border: solid green 3px; */
-/* display: flex; */
-/* position: relative; */
-/* z-index: 1;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: ;
-  transition: .5s ease; 
-}*/
-
 .list-element {
-  /* border: solid orange 5px; */
   margin: 0 auto;
   width: 100%;
 }
@@ -95,9 +77,8 @@ nav {
   opacity: 1;
 }
 
-/*color is transparent!!*/
 h1 {
-  color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0); /*color is transparent!*/ 
   font-size: 28px;
   margin: 10px 10px 10px 20px;
 }
@@ -120,12 +101,8 @@ h4 {
   transform: translate(-50%, -50%);
 }
 
-/* clean up the hover, do we need all code dublicated?*/
-
 .movie-info:hover {
-  color: white;
   font-size: 20px;
-  position: absolute;
   background-color: #00000094;
   width: 100%;
   height: 100%;
@@ -145,18 +122,8 @@ h4 {
   color: white;
 }
 
-/* .list-element:hover a:hover img:hover .overlay:hover .movie-container:hover img.list-element:hover .list-wrapper:hover .movie-info:hover {
-  background-color:red;
-  border: solid red 4px;
-  transition: 0.3s ease;
-} */
 
-.details-container {
-  border: solid hotpink 2px;
-}
-
-/*Details */
-
+/* ------- MOVIE DETAILS ------------ */
 .details-container {
   border: solid green 2px;
   position: relative;
@@ -286,3 +253,4 @@ h3 {
   transform: scale(1.2);
 } 
 
+/*----MEDIA QUERIES----*/
