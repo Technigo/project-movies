@@ -22,7 +22,6 @@ main {
   max-width: auto;
   margin: 0 auto;
   width: 100%;
-  /* padding: 0 50px; */
 }
 
 nav {
@@ -246,7 +245,7 @@ h3 {
 } 
 
 .button-icon{
-  width: 90%;
+  width: 95%;
 }
 
 .back-button:hover{

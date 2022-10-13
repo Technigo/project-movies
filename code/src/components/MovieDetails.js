@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import { MOVIEDETAILS_URL } from 'short/Urls.js';
-import Back from './icons/Back.png';
+import Icon from './icons/Singlepop.png';
 
 const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState({});
@@ -24,10 +24,10 @@ const MovieDetails = () => {
 
   return (
     <section className="details-container">
-        <img
-          className="backdrop-image"
-          src={`https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`}
-          alt={movieDetails} />
+      <img
+        className="backdrop-image"
+        src={`https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`}
+        alt={movieDetails} />
       <div className="gradient" />
 
       <div className="detail-wrapper">
@@ -46,10 +46,10 @@ const MovieDetails = () => {
       </div>
       <div className="button-container">
         <button type="button" className="back-button" onClick={goBack}>
-        <img
-          className="button-icon"
-          src={Back}
-          alt="button that goes back shaped as popcorn" />
+          <img
+            className="button-icon"
+            src={Icon}
+            alt="button that goes back shaped as popcorn" />
         </button>
       </div>
     </section>
@@ -57,9 +57,3 @@ const MovieDetails = () => {
 };
 
 export default MovieDetails;
-// movie_id as param, Eslint disablet because of underscore and movieid not being in camelcase
-// To add the movie score add {movieDetails.vote_average}
-// ${movieDetails.poster_path} or BACKDROP PATH to add to the poster URL! WIDTH is specified in link
-// {movieDetails.tagline} Adds a tagline "there has always been something wrong with esther"
-
-// add genre would be fun? Ex a button/tag with "HORROR, THRILLER etc" ??
