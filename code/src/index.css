@@ -56,10 +56,10 @@ a {
   opacity: 0;
 }
 
-.movies:hover .poster-text-container {
+.movie:hover .poster-text-container {
   opacity: 1;
 }
-.movies:hover .poster-image {
+.movie:hover .poster-image {
   opacity: 0.25;
 }
 
