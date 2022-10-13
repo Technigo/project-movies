@@ -31,8 +31,8 @@ export const MovieDetails = () => {
             <div className="details">
               <h1 className="title">{movie.title}</h1>
               <div className="ratingRelease">
-                <p className="released"><b>Release date:</b> {movie.release_date}</p>
                 <p className="rating"><b>Rating:</b> ⭐️ {Math.round(movie.vote_average * 10) / 10}</p>
+                <p className="released"><b>Release date:</b> {movie.release_date}</p>
               </div>
               <p className="overview">{movie.overview}</p>
               {/* <button type="button" onClick={PreviousPage}> Go Back </button> */}

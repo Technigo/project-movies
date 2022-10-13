@@ -86,3 +86,7 @@ för jag förstod inte vad den gör och när jag tog bort den händer inget? Ska
 
 att göra: 
 - Det vore coolt med ngn slags hover transform transision på länken
+
+-----------------------------
+började med att ändra filerna movieDetails.css och popularMovies.css (hade inte gått igenom att jag hade bytt till liten bokstav.)
+
