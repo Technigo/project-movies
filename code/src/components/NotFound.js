@@ -8,7 +8,7 @@ const NotFound = () => {
   }
   return (
     <div>
-      <p>Sorry, this route does not exist</p>
+      <p>Sorry, this page does not exist</p>
       <button type="button" onClick={returnToDefaultPage}>Go to default page</button>
     </div>
   )

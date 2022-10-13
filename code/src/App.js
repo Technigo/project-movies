@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
@@ -14,15 +15,15 @@ export const App = () => {
       .then((res) => res.json())
       .then((data) => setMovieList(data.results))
       .catch((error) => console.error(error))
-      .finally(() => console.log('All good!'))
+      .finally(() => console.log(`the movielist: ${movieList}`))
   }, []);
 
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<MovieList movies={movieList} />} />
-        <Route path="/details/:movieName" element={<MovieDetails />} />
+        <Route path="/" element={<MovieList movieList={movieList} />} />
+        <Route path="/movie/:id" element={<MovieDetails />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>
