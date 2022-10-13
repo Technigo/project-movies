@@ -46,11 +46,13 @@ const Details = () => {
           />
         </div>
         <div>
-          <p>{Math.round(movie.vote_average * 10) / 10} on IMDB</p>
-          <p>{movie.title}</p>
-          <p>{movie.runtime} minutes</p>
+          <h2>{movie.title}</h2>
+          <div className="movie-info">
+            <p>⭐️ {Math.round(movie.vote_average * 10) / 10} on IMDB</p>
+            <p>Playtime {movie.runtime} minutes</p>
+          </div>
           <p>{movie.overview}</p>
-          <span>Released {movie.release_date}</span>
+          <span className="released">Released {movie.release_date}</span>
         </div>
       </div>
     </div>

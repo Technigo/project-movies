@@ -30,8 +30,8 @@ export const List = () => {
             <div className="movie-item-info-wrapper">
               <div className="movie-item-info">
                 <h2>{movie.title}</h2>
-                <p>{movie.overview}</p>
-                <p>⭐️{movie.vote_average}</p>
+                <p>⭐️ {movie.vote_average}</p>
+                <p className="truncated">{movie.overview}</p>
               </div>
             </div>
           </NavLink>
