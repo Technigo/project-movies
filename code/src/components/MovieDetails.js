@@ -12,9 +12,6 @@ const MovieDetails = () => {
       .then((json) => {
         setMovie(json);
       })
-      .catch((err) => {
-        console.log(err);
-      });
   }, [movieId]);
 
   const goBack = () => {
