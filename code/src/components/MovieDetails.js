@@ -29,12 +29,10 @@ const MovieDetails = () => {
   return (
     <div>
       <h1>{details.title}</h1>
-      <img className="poster-image" src={details ? details.t.p.w342.poster_path : ''} alt={details.title} />
+      <img className="poster-image" src={details ? `https://image.tmdb.org/t/p/w342${details.poster_path}` : ''} alt={details.title} />
       <button type="button" onClick={goBack}>Go back</button>
     </div>
   )
 }
 
 export default MovieDetails
-
-// https://image.tmdb.org/t/p/w342${details.poster_path}
