@@ -46,7 +46,7 @@ const Details = () => {
           />
         </div>
         <div>
-          <p className="vote-average">⭐️{movie.vote_average}</p>
+          <p>{Math.round(movie.vote_average * 10) / 10} on IMDB</p>
           <p>{movie.title}</p>
           <p>{movie.runtime} minutes</p>
           <p>{movie.overview}</p>
