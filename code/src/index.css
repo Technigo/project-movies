@@ -141,7 +141,7 @@ header {
 }
 
 .movie-wrapper .details h1 {
-  font-size: 30px;
+  font-size: 20px;
   color: #F9F9F9;
   margin-top: auto;
   margin-bottom: 0;
@@ -189,23 +189,18 @@ header {
 
 .detail-img {
   border: solid #F9F9F9 2px;
-  height: 300px;
+  height: 200px;
   width: fit-content;
 }
 
-.details h1 {
+.detail-text h1 {
   color: #F9F9F9;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1.6;
 }
 
-.details h2, details p {
-  font-size: 15px;
-  color: #F9F9F9
-}
-
-.details p {
-  font-size: 18px;
+.detail-text p {
+  font-size: 14px;
   color: #F9F9F9;
   margin-top: 0;
   max-width: 450px;
@@ -221,8 +216,11 @@ header {
 
 .backLink {
   color: #F9F9F9;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
+  position: absolute;
+  top: 110px;
+  left: 35px;
 }
 
 .ratings {
@@ -234,6 +232,7 @@ header {
   background: #b1aaaa8a;
   padding: 10px;
   width: fit-content;
+  font-size: 14px;
 }
 
 /** NOT FOUND ERROR **/
@@ -264,6 +263,28 @@ header {
     .movie-wrapper {
       width: 50%;
     }
+    
+    .detail-img {
+      height: 220px;
+    }
+
+    .detail-text h1 {
+      font-size: 18px;
+    }
+
+    .detail-text p {
+      font-size: 16px;
+    }
+
+    .backLink {
+      font-size: 19px;
+    }
+
+    .collection {
+      font-size: 16px;
+    }
+
+    
   }
   
   @media (min-width: 570px) {
@@ -293,6 +314,31 @@ header {
     .movie-wrapper {
       width: 33.33%;
     }
+
+    .detail-img {
+      height: 240px;
+    }
+
+    .detail-text h1 {
+      font-size: 20px;
+    }
+
+    .detail-text p {
+      font-size: 18px;
+    }
+
+    .backLink {
+      font-size: 20px;
+    }
+
+    .collection {
+      font-size: 18px;
+    }
+
+    .movie-wrapper .details h1 {
+      font-size: 30px;
+    }
+
   }
   
   @media (min-width: 820px) {

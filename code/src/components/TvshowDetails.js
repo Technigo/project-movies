@@ -29,29 +29,31 @@ export const TvShowDetails = () => {
   }
 
   return (
-    <div className='background' style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${tvShow.backdrop_path})` }}>
-      <section className='tvshow-details'>
-        <Link to='/TV-series' className='backLink'>
-          <div className='back'>
-            <img src='/icons/back-icon.svg' id='back-icon' alt='back' />
-            <p>TV-shows</p>
-          </div>
-        </Link>
-        <div className='details'>
-          <img src={`https://image.tmdb.org/t/p/w342${tvShow.poster_path}`} className='detail-img' alt={tvShow.title} />
-          <div className='detail-text'>
-            <h1>{tvShow.name}<span className='ratings'><img src='/icons/star-icon.svg' id='star-icon' alt='rating' />{Math.round(tvShow.vote_average * 10) / 10}</span></h1>
-            <p>{tvShow.overview}</p>
-            {/* <div className='collection'>
+    <section className='tvPage'>
+      <Link to='/' className='backLink'>
+        <div className='back'>
+          <img src='/icons/back-icon.svg' id='back-icon' alt='back' />
+          <p>TV-shows</p>
+        </div>
+      </Link>
+      <div className='background' style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${tvShow.backdrop_path})` }}>
+        <article className='tvshow-details'>
+          <div className='details'>
+            <img src={`https://image.tmdb.org/t/p/w342${tvShow.poster_path}`} className='detail-img' alt={tvShow.title} />
+            <div className='detail-text'>
+              <h1>{tvShow.name}<span className='ratings'><img src='/icons/star-icon.svg' id='star-icon' alt='rating' />{Math.round(tvShow.vote_average * 10) / 10}</span></h1>
+              <p>{tvShow.overview}</p>
+              {/* <div className='collection'>
         <Link to={`/Tv-series/${<Seasons id={id} />}`}>All seasons <img src='/icons/more-icon.svg'
             id='more-icon'
             alt='more' />
               </Link>
             </div> */}
+            </div>
           </div>
-        </div>
 
-      </section>
-    </div>
+        </article>
+      </div>
+    </section>
   );
 }

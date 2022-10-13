@@ -28,27 +28,29 @@ export const MovieDetails = () => {
   }
 
   return (
-    <div className='background' style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
-      <section className='movie-details'>
-        <Link to='/' className='backLink'>
-          <div className='back'>
-            <img src='/icons/back-icon.svg' id='back-icon' alt='back' />
-            <p>Movies</p>
-          </div>
-        </Link>
-        <div className='details'>
-          <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} className='detail-img' alt={details.title} />
-          <div className='detail-text'>
-            <h1>{details.title} <span className='ratings'><img src='/icons/star-icon.svg' id='star-icon' alt='rating' />{Math.round(details.vote_average * 10) / 10}</span></h1>
-            <p>{details.overview}</p>
+    <section className='detailsPage'>
+      <Link to='/' className='backLink'>
+        <div className='back'>
+          <img src='/icons/back-icon.svg' id='back-icon' alt='back' />
+          <p>Movies</p>
+        </div>
+      </Link>
+      <div className='background' style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
+        <article className='movie-details'>
+          <div className='details'>
+            <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} className='detail-img' alt={details.title} />
+            <div className='detail-text'>
+              <h1>{details.title} <span className='ratings'><img src='/icons/star-icon.svg' id='star-icon' alt='rating' />{Math.round(details.vote_average * 10) / 10}</span></h1>
+              <p>{details.overview}</p>
 
-            {details.belongs_to_collection !== null
+              {details.belongs_to_collection !== null
         && <div className='collection'>
           <Link to={`/collection/${details.belongs_to_collection.id}`}>More from this collection <img src='/icons/more-icon.svg' id='more-icon' alt='more' /></Link>
         </div>}
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </article>
+      </div>
+    </section>
   );
 }
