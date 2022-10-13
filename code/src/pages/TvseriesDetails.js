@@ -43,12 +43,13 @@ export const TvSeriesDetails = () => {
             <div className='detail-text'>
               <h1>{tvShow.name}<span className='ratings'><img src='/icons/star-icon.svg' id='star-icon' alt='rating' />{Math.round(tvShow.vote_average * 10) / 10}</span></h1>
               <p>{tvShow.overview}</p>
-              {/* <div className='collection'>
-        <Link to={`/Tv-series/${<Seasons id={id} />}`}>All seasons <img src='/icons/more-icon.svg'
-            id='more-icon'
-            alt='more' />
-              </Link>
-            </div> */}
+              <div className='collection'>
+                <Link to={`/seasons/${id}`}>All seasons <img
+                  src='/icons/more-icon.svg'
+                  id='more-icon'
+                  alt='more' />
+                </Link>
+              </div>
             </div>
           </div>
 

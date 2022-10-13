@@ -10,6 +10,7 @@ import { Upcoming } from 'pages/Upcoming'
 import { Collection } from 'pages/Collection'
 import { TvSeriesDetails } from 'pages/TvseriesDetails'
 import { NotFound } from 'components/NotFound'
+import { Seasons } from 'pages/Seasons'
 
 export const App = () => {
   return (
@@ -24,6 +25,7 @@ export const App = () => {
           <Route path='/newReleases' element={<Oncinema />} />
           <Route path='/TV-series' element={<TVseries />} />
           <Route path='/TV-series/:id' element={<TvSeriesDetails />} />
+          <Route path='/seasons/:id' element={<Seasons />} />
           <Route path='/404' element={<NotFound />} />
           <Route path='*' element={<Navigate to='/404' replace />} />
         </Routes>

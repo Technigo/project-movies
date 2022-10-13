@@ -16,21 +16,18 @@ export const Seasons = () => {
 
   return (
     <section className='tvshow-details'>
-      <div className='collections'>
-        <h1>{season.name}</h1>
-        {season.map((show) => {
-          return (
-            <>
-              <img src={`https://image.tmdb.org/t/p/w342${show.poster_path}`} alt={show.title} />
-              <h1
-                key={show.title}
-                className='list-element'>{show.name}
-              </h1>
-              <p key={show.id}>Episodes: {show.episode_count}</p>
-            </>
-          )
-        })}
-      </div>
+
+      {season.map((show) => {
+        return (
+          <div className='collections-seasons' key={show.id}>
+            <img src={`https://image.tmdb.org/t/p/w342${show.poster_path}`} alt={show.title} />
+            <h1 className='list-element'>{show.name}
+            </h1>
+            <p key={show.id}>Episodes: {show.episode_count}</p>
+          </div>
+        )
+      })}
+
     </section>
 
   )
