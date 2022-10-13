@@ -25,16 +25,21 @@ export const NewReleases = () => {
     );
   }
   return (
-    <div className='new-releases'>
-      <h1>On cinema right now</h1>
-
-      {newReleases.map((releases) => (
-        <Link key={releases.id} to={`/movies/${releases.id}`}>
-          <img src={`https://image.tmdb.org/t/p/w342${releases.poster_path}`} alt={releases.title} />
-          <h1>{releases.orignail_titel}</h1>
-          <p>Release date {releases.release_date}</p>
-        </Link>
-      ))}
-    </div>
+    <section className='new-releases'>
+      <h1 className='on-cinema'>On cinema right now</h1>
+      <div className='movies-container'>
+        {newReleases.map((releases) => (
+          <article className='movie-wrapper' key={releases.id}>
+            <Link key={releases.id} to={`/newReleases/${releases.id}`}>
+              <img src={`https://image.tmdb.org/t/p/w342${releases.poster_path}`} alt={releases.title} />
+              <div className='details'>
+                <h1>{releases.original_title}</h1>
+                <p>Release date {releases.release_date}</p>
+              </div>
+            </Link>
+          </article>
+        ))}
+      </div>
+    </section>
   )
 }

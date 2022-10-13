@@ -82,8 +82,15 @@ header {
 
 /** STARTPAGE **/
 
-.startpage {
+.startpage, .tv-series, 
+.new-releases, .upcoming {
   margin: 160px 10px;
+}
+
+.collections {
+  margin: 160px 40px;
+  background: #5451519e;
+  padding: 15px;
 }
 
 .loading-container {
@@ -98,7 +105,8 @@ header {
   align-items: center;
 }
 
-.popular {
+.popular, .upcoming-header,
+.on-cinema {
   color: #F9F9F9;
   font-size: 20px;
   text-align: center;
@@ -139,7 +147,13 @@ header {
   margin-bottom: 0;
 }
 
-.movie-wrapper .details p {
+.collections h1 {
+  font-size: 20px;
+  color: #F9F9F9;
+}
+
+.movie-wrapper .details p,
+.collections p {
   color: #F9F9F9;
 }
 
@@ -152,7 +166,7 @@ header {
 
 /** MOVIE DETAILS **/
 
-.movie-details {
+.movie-details, .tvshow-details {
   position: absolute;
   bottom: 0;
   padding: 35px
@@ -181,7 +195,8 @@ header {
 
 .details h1 {
   color: #F9F9F9;
-  font-size: 20px
+  font-size: 20px;
+  line-height: 1.6;
 }
 
 .details h2, details p {
@@ -194,6 +209,8 @@ header {
   color: #F9F9F9;
   margin-top: 0;
   max-width: 450px;
+  max-height: 170px;
+  overflow: auto;
 }
 
 .back {
@@ -241,12 +258,16 @@ header {
 
     .startpage {
       margin: 125px 10px;
-  }
+    }
 
+    .details p {
+      max-height: fit-content;
+    }
+  
     .movie-details {
       bottom: 20%;
       left: 20px
-  }
+    }
 
     .movie-wrapper {
       width: 33.33%;
@@ -266,6 +287,10 @@ header {
 
     .detail-img {
       height: 380px;
+    }
+
+    .details p {
+      max-height: fit-content;
     }
     
     .startpage {
