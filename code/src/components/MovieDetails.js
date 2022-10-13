@@ -1,8 +1,9 @@
-/*eslint-disable */
-import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+/* eslint-disable */
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
-import { MOVIEDETAILS_URL } from "short/Urls.js";
+import { MOVIEDETAILS_URL } from 'short/Urls.js';
+import Back from './icons/Back.png';
 
 const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState({});
@@ -17,45 +18,41 @@ const MovieDetails = () => {
       });
   }, []);
 
-  console.log("moviedata", movieDetails);
-
   const goBack = () => {
     navigate(-1);
   };
 
   return (
-    <>
-      <section className="details-container">
+    <section className="details-container">
         <img
           className="backdrop-image"
           src={`https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`}
-          alt={movieDetails}
-        />
-        <div class="gradiant"></div>
+          alt={movieDetails} />
+      <div className="gradient" />
 
-        <div>
-          <img
-            className="poster-image"
-            src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`}
-            alt={movieDetails}
-          />
-          <div className="text-wrapper">
-            <h2>
-              <span className="title">{movieDetails.title}</span>
-              <span className="rating">⭐️ {movieDetails.vote_average}</span>
-            </h2>
-            <h3>{movieDetails.tagline}</h3>
-            <p className="over-view">{movieDetails.overview}</p>
-          </div>
+      <div className="detail-wrapper">
+        <img
+          className="poster-image"
+          src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`}
+          alt={movieDetails} />
+        <div className="text-wrapper">
+          <h2>
+            <span className="title">{movieDetails.title}</span>
+            <span className="rating">⭐️ {movieDetails.vote_average}</span>
+          </h2>
+          <h3>{movieDetails.tagline}</h3>
+          <p className="over-view">{movieDetails.overview}</p>
         </div>
-        <div className="button-container">
-          <button type="button" onClick={goBack}>
-            {" "}
-            Go back{" "}
-          </button>
-        </div>
-      </section>
-    </>
+      </div>
+      <div className="button-container">
+        <button type="button" className="back-button" onClick={goBack}>
+        <img
+          className="button-icon"
+          src={Back}
+          alt="button that goes back shaped as popcorn" />
+        </button>
+      </div>
+    </section>
   );
 };
 
@@ -66,29 +63,3 @@ export default MovieDetails;
 // {movieDetails.tagline} Adds a tagline "there has always been something wrong with esther"
 
 // add genre would be fun? Ex a button/tag with "HORROR, THRILLER etc" ??
-
-/*
-import React, { useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router';
-
-export const MovieDetails = () => {
-  const params = useParams();
-  const { pokemonName } = useParams();
-  const navigate = useNavigate();
-  useEffect(() => {
-    console.log(params.pokemonName)
-    console.log(pokemonName)
-  });
-
-  const goBack = () => {
-    navigate(-1);
-  }
-  return (
-    <div>
-      <p>I am detail component</p>
-      <button type="button" onClick={goBack}> Go back </button>
-    </div>
-  );
-}
-export default MovieDetails;
-*/
