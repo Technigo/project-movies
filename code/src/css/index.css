@@ -41,19 +41,9 @@ body {
     color: black;
     height: 500px;
     animation-name: mymove;
-    animation-duration: 5000ms;
+    animation-duration: 3000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear; 
-  }
-  
-  @keyframes mymove {
-    from { 
-      transform: rotate(0); 
-    }
-    to { 
-      transform: rotate(360deg);
-      transform-origin: center center;
-    }
   }
 
   @-moz-keyframes mymove {

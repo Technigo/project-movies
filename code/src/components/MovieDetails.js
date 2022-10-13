@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import '../css/moviedetails.css'
 import RotatingPoo from './RotatingPoo';
+import { PooTimer } from './util';
 
 const MovieDetails = () => {
   const [movieDetail, setMovieDetail] = useState({})
@@ -11,15 +12,20 @@ const MovieDetails = () => {
   console.log(movieId)
 
   useEffect(() => {
+    // Shows the poo spinner for 3 seconds
+    PooTimer(setLoading)
+
+    // Calls the api and fetches information about a particular movie
     fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=02c269c6419024906430a5cca2edf53f&language=en-US`)
       .then((res) => res.json())
       .then((data) => setMovieDetail(data))
       .catch((error) => console.log(error))
-      .finally(() => setLoading(false))
   }, [movieId])
+
   if (loading) {
     return <RotatingPoo />
   }
+
   console.log(movieDetail)
   return (
     <article className="main-container">

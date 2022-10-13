@@ -3,12 +3,16 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/themovies.css'
 import RotatingPoo from './RotatingPoo';
+import { PooTimer } from './util';
 
 const TheMovies = () => {
   const [movies, setMovies] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    // Shows the poo spinner for 3 seconds
+    PooTimer(setLoading)
+
     fetchMovies();
   }, []);
 
@@ -17,7 +21,6 @@ const TheMovies = () => {
       .then((res) => res.json())
       .then((data) => setMovies(data))
       .catch((error) => console.error(error))
-      .finally(() => setLoading(false))
   }
 
   if (loading) {
