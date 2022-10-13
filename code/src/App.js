@@ -6,10 +6,11 @@ import MovieList from 'components/MovieList';
 import Notfound from 'components/Notfound.js';
 
 import { POPULARMOVIE_URL } from 'short/Urls.js'
+import Icon from 'components/icons/Largepop.png';
 
 export const App = () => {
   const [movieList, setMovieList] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(POPULARMOVIE_URL)
@@ -18,13 +19,21 @@ export const App = () => {
         setMovieList(data.results);
       })
       .finally(() => {
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 2000);
       })
   }, []);
 
+  // only shows if spammed  or with slow internet
   if (loading) {
     return (
-      <div>...Loading</div>
+      <div className="loader">
+        <img
+          className="popcorn-spinner"
+          src={Icon}
+          alt="button that goes back shaped as popcorn" />
+      </div>
     );
   }
   return (
