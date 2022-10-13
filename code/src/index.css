@@ -60,18 +60,24 @@ h2 {
   content: url(star.svg);
 }
 
-.home-button {
+.button-container {
   position: absolute;
+
   display: flex;
+  flex-direction: row;
+  top: 50px;
+  left: 50px;
+}
+
+.home-button {
   border: none;
   background: none;
   color: white;
   font-size: 20px;
   font-weight: 700;
-  align-items: center;
-  top: 50px;
-  left: 50px;
+
   cursor: pointer;
+  transition: all 0.4s;
 }
 
 .arrow-icon {
@@ -79,12 +85,8 @@ h2 {
 }
 
 .home-button:hover {
-  transition: 0.5s ease-out;
-  transform: translateX(0.5s);
-}
-
-.home-button::before {
-  content: url(left_arrow_icon.svg);
+  transform: translate(0.5em, 0);
+  transition: 0.5s ease-in-out;
 }
 
 @media (max-width: 667px) {

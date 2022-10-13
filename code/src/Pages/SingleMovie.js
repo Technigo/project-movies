@@ -36,10 +36,16 @@ const SingleMovie = () => {
         height: '100vh'
       }}
     >
-      <button className="home-button" type="button" onClick={returnToHomePage}>
+      <div className="button-container">
         <img className="arrow-icon" src={MyImage} alt="arrow" />
-        Movies
-      </button>
+        <button
+          className="home-button"
+          type="button"
+          onClick={returnToHomePage}
+        >
+          Movies
+        </button>
+      </div>
       <div className="wrapper">
         <div className="movie-content">
           <img
