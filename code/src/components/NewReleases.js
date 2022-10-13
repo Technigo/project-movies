@@ -30,7 +30,7 @@ export const NewReleases = () => {
       <div className='movies-container'>
         {newReleases.map((releases) => (
           <article className='movie-wrapper' key={releases.id}>
-            <Link key={releases.id} to={`/newReleases/${releases.id}`}>
+            <Link key={releases.id} to={`/movies/${releases.id}`}>
               <img src={`https://image.tmdb.org/t/p/w342${releases.poster_path}`} alt={releases.title} />
               <div className='details'>
                 <h1>{releases.original_title}</h1>
