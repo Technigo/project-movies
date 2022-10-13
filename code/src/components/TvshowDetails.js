@@ -3,12 +3,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Orbit } from '@uiball/loaders';
-<<<<<<< HEAD
-import { Seasons } from 'components/Seasons'
 import { TVSHOW_DETAILS_URL } from 'utils/Urls';
-=======
 import { Seasons } from './Seasons'
->>>>>>> styling
 
 export const TvShowDetails = () => {
   const [tvShow, setTvShow] = useState([])
