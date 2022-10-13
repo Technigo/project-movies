@@ -90,6 +90,9 @@ p {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.overview {
+  line-height: 1.6;
+}
 
 /* Button */
 .back-button {
