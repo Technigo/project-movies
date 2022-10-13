@@ -19,7 +19,7 @@ export const Details = () => {
       })
   }, [id])
 
-  console.log(`Details: ${details}`)
+  console.log(details)
 
   return (
     <article className="detailPage">
