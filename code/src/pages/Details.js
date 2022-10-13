@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { SINGLE_MOVIE_URL } from 'utils/urls';
 import Movie from '../components/Movie'
 
 const Details = (/* { movieList } */) => {
@@ -10,19 +11,24 @@ const Details = (/* { movieList } */) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (loading === false) {
-      fetch(`https://api.themoviedb.org/3/movie/${movieName}?api_key=5c488ae3d23d9ae818b9225c2ec7dd14&language=en-US`)
-        .then((response) => response.json())
-        .then((data) => setListItem(data))
-        .catch((error) => console.error(error))
-        .finally(() => setLoading(true))
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loading])
+    setLoading(true)
+    fetch(SINGLE_MOVIE_URL(movieName))
+      .then((response) => response.json())
+      .then((data) => setListItem(data))
+      .catch((error) => console.error(error))
+      .finally(() => setLoading(false))
+  }, [movieName])
 
   const goBack = () => {
     navigate(-1);
   }
+
+  if (loading) {
+    return (
+      <p>Page is loading...</p>
+    )
+  }
+
   return (
     <div
       className="background-image"

@@ -11,7 +11,8 @@ body {
 
 .outer-wrapper {
   background-color: rgb(31, 31, 31);
-
+  width: 100vw;
+  height: 100vh;
 }
 
 code {
@@ -20,17 +21,18 @@ code {
 }
 
 .movie-list {
+  background-color: rgb(31, 31, 31);
   display: flex;
   flex-wrap: wrap;
 }
 
-/* .movies {
-  padding: 10%;
-} */
+.movies {
+  width: 50%;
+}
 
 .movie-cards {
   position: relative;
-  width: 50%;
+  width: 100%;
   height: auto;
 }
 
@@ -65,14 +67,42 @@ a:-webkit-any-link {
   padding: 10%;
 }
 
+.not-found {
+  background-color: rgb(31, 31, 31);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.not-found p {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  padding-top: 10%;
+  padding-bottom: 2%;
+}
+
+.not-found button {
+  background-color: beige;
+  border: solid beige;
+  padding: 10px 25px;
+  border-radius: 25px 25px;
+  font-weight: bold;
+}
+
 /* Tablet */
 @media (min-width: 668px) and (max-width: 1024px) {}
 
 /* DESKTOP */
 @media (min-width: 1025px) {
+  .movies {
+    width: 25%;
+  }
+  
   .movie-cards {
     position: relative;
-    width: 25%;
+    width: 100%;
     height: auto;
   }
 

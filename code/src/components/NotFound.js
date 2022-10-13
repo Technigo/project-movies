@@ -8,7 +8,7 @@ const NotFound = () => {
   }
 
   return (
-    <div>
+    <div className="not-found">
       <p>Page not found</p>
       <button type="button" onClick={returnToDefaultPage}>
         Go to default page

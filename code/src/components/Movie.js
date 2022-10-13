@@ -5,7 +5,7 @@ const Movie = ({ name, poster, overview, average }) => {
     <div className="page-content">
       <p>{name}</p>
       <p>{average}</p>
-      <img className="border-pic" src={`https://image.tmdb.org/t/p/w342${poster}`} alt="" />
+      <img className="border-pic" src={`https://image.tmdb.org/t/p/w342${poster}`} alt="movie-poster" />
       <p>{overview}</p>
     </div>
   )
