@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { SINGLE_MOVIE_URL } from 'utils/urls';
 import Movie from '../components/Movie'
 
-const Details = (/* { movieList } */) => {
+const Details = () => {
   const [listItem, setListItem] = useState([]);
   const [loading, setLoading] = useState(false);
   // const params = useParams(); // Version1
@@ -37,7 +37,9 @@ const Details = (/* { movieList } */) => {
         backgroundSize: 'cover',
         height: '100vh' }}>
 
-      <button type="button" onClick={goBack}>Go back</button>
+      <button type="button" className="back-btn" onClick={goBack}>
+      ↩️ Go back
+      </button>
       <Movie
         name={listItem.title}
         poster={listItem.poster_path}

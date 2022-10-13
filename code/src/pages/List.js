@@ -11,6 +11,7 @@ const List = () => {
       .then((data) => setMovieList(data.results))
       .catch((error) => console.error(error));
   }, []);
+
   return (
     <div className="movie-list">
       {movieList.map((movie) => {
@@ -18,13 +19,11 @@ const List = () => {
           <Link className="movies" key={movie.id} to={`/details/${movie.id}`}>
             <div className="movie-cards">
               <div className="image-overlay" />
-
               <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="" />
               <div className="image-text">
                 <h1 className="list-title">{movie.title}</h1>
                 <h2 className="release-date">Released {movie.release_date}</h2>
               </div>
-
             </div>
           </Link>
         )
