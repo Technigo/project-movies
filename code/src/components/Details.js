@@ -1,19 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { NotFound } from './NotFound';
 
 export const Details = () => {
   const [movieDetails, setMovieDetails] = useState([])
 
   const { id } = useParams()
 
+  /* To round rating number to one decimal */
   const roundedNumber = Math.round(movieDetails.vote_average * 10) / 10
 
   const FetchDetails = () => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=874b455d7037920aea9fd13db8645525&language=en-US`)
       .then((response) => response.json())
-      .then((data) => {
-        setMovieDetails(data)
-        console.log(data)
+      .then((data) => setMovieDetails(data))
+      .catch((error) => {
+        console.log(error)
+        if (error) {
+          return (<NotFound />
+
+          )
+        }
       })
   }
 
