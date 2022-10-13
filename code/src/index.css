@@ -49,7 +49,6 @@ main {
   display: none;
 }
 
-
 .movie-detail {
   color:white;
   display: flex;
@@ -175,7 +174,7 @@ p {
 
   .back-button img {
     content: url(back-arrow-100.png);
-    max-width: 60%;
+    max-width: 50%;
   }
 
   .back-button {
