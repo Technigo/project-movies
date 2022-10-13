@@ -120,18 +120,36 @@ a.active {
   transition: 0.5s ease; 
  }
 
- /* ----  ipad --- */
- @media (min-width: 600px) {
-  .movie-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* ----  computer --- */
+ /* ----  computer --- */
  @media (min-width: 1024px) {
   .movie-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .movie-poster {
+    border: 5px solid white;
+  }
+  
+  .detail-group-container {
+    display: flex;
+    margin-top: 22rem;
+    margin-left: 3rem;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+  }
+  
+  .movie-details {
+    margin-left: 2.5rem;
+    width: 25vw;
+  }
+  
+  .movie-voting-h1{
+    display: inline;
+  }
+  
+  .movie-voting {
+    font-size: medium;
+    margin-left: 1rem;
   }
 }
