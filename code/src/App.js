@@ -10,7 +10,7 @@ export const App = () => {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<PopularMovies />} exact />
+        <Route path="/" element={<PopularMovies />} />
         <Route path="/movies/:movieId" element={<MovieDetails />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" />} />

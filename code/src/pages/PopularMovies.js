@@ -30,7 +30,7 @@ export const PopularMovies = () => {
               <div className="overlay">
                 <div className="text">
                   <h2>{movie.title}</h2>
-                  <h2 className="rating">⭐️ {Math.round(movie.vote_average * 10) / 10}</h2>
+                  <h2 className="rating-overlay">⭐️ {Math.round(movie.vote_average * 10) / 10}</h2>
                 </div>
               </div>
             </div>

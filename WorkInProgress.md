@@ -90,3 +90,8 @@ att göra:
 -----------------------------
 började med att ändra filerna movieDetails.css och popularMovies.css (hade inte gått igenom att jag hade bytt till liten bokstav.)
 
+-fixat lite olika css i movieDetails.css, media querie
+
+-flyttat utbbackgroundImages style till en funktion i MoviDetails.js
+
+-rating "knapp"

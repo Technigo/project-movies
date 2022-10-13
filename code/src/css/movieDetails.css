@@ -1,45 +1,50 @@
 .detailsContainer {
-position: relative;
+    display: flex;
 }
+
+/* .background {
+    /* min-height: 95vh; */
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+   } */
 
 .background a {
 position: absolute;
 display: flex;
 align-items: center;
-top: 2%;
+top: 8%;
 left: 5%;
 font-size: 1.3rem;
 font-weight: 700;
 text-shadow: 2px 2px #000000d6;
 }
 
+/* hoover for "button" */
+
+/* .background a:hover {
+    font-size: 20px;
+    transform: translate(10px,0);
+    transition: all .3s ease-in-out;
+} */
+
 .background a img{
     width: 1.2rem;
     margin: 10px;
 }
 
-.background {
- min-height: 95vh;
- background-size: cover;
- background-repeat: no-repeat;
- background-position: center;
- display: flex;
- flex-direction: column;
- justify-content: flex-end;
-}
-
 .summary {
     display: flex;
     flex-direction: column;
-    
     margin: 17% 10% 10% 10%;
-    
-
 }
 
 .summary img{
     align-self: center;
-    border: 5px solid #eee6dc;
+    border: 3px solid #eee6dc;
     box-shadow:  10px 10px 60px #eee6dc,
              -10px -10px 60px #fff;
     /* margin: 30px; */
@@ -50,7 +55,7 @@ text-shadow: 2px 2px #000000d6;
 .details {
     display: flex;
     flex-direction: column;
-    color: white;
+    color: #fff;
     /* Margin: 30px; */
     justify-content: flex-end;
     max-width: 90%;
@@ -72,9 +77,14 @@ text-shadow: 2px 2px #000000d6;
 .rating, .released {
     display: inline;
 }
+
 .ratingRelease p {
     margin-left: 4px;
     margin-bottom: 20px;
+}
+
+.released{
+    font-size: 0.9rem;
 }
 
 .rating {
@@ -90,33 +100,51 @@ text-shadow: 2px 2px #000000d6;
 }
 
 .overview {
-    font-size: 1.1em;
+    font-size: 0.9rem;
     line-height: 1.3;
-    margin-top: 5px;
-
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
+h4 {
+    font-style: italic;
+}
+
+
 
 /*===========  MEDIA QUERY  ---------------*/
 
 @media (min-width: 668px) {
-    .details {
-        max-width: 40%;
-    }
-
+    
     .summary {
-    flex-direction: row;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 17% 8% 8% 10%;
     }
 
     .summary img {
-    width: 300px;
+        width: 50%;
+        margin-bottom: 0px;
+    }
+
+    .details {
+        justify-content: center;
+        margin-left: 8%;
+        width: 60%;
     }
 }
     
 @media (min-width: 1024px) {
+
+    .summary {
+        margin: 13% 8% 8% 10%;
+    }
     .summary img {
-        width: 400px;
+        width: 55%;
+        margin-bottom: 0px;
     }
     .details {
         max-width: 40%;
+        
     }
 }
