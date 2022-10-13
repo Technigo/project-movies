@@ -62,6 +62,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .movie-details {
   display: flex;
