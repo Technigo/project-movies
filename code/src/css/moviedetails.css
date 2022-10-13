@@ -56,7 +56,6 @@
 .left-arrow{
     width: 30px;
     border-radius: 50%;
-    margin-right: 10px;
     transition: margin-right .2s ease-in-out;
 }
 
