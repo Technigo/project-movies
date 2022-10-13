@@ -6,7 +6,7 @@ const Header = () => {
     <header>
       <h1>Top Rated Movies</h1>
       <nav className="nav-links">
-        <NavLink to="/"> Home </NavLink>
+        <NavLink className="home-link" to="/"> Home </NavLink>
       </nav>
     </header>
   )

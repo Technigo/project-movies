@@ -18,13 +18,14 @@ const MovieDetails = () => {
   const goBack = () => {
     navigate(-1) // to go back to previous page
   }
+
   return (
     <>
       {movieDetailList && (
         <div
           className="background">
           <p> {movieDetailList.title}</p>
-          <p>⭐{movieDetailList.vote_average}</p>
+          <p>⭐ {Number(movieDetailList.vote_average).toFixed(1)} / 10</p>
           <p>{movieDetailList.overview}</p>
           <img className="details-img" src={`http://image.tmdb.org/t/p/w342${movieDetailList.poster_path}`} alt="poster" />
           <button type="button" onClick={goBack}>Go back</button>

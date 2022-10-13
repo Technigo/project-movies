@@ -44,6 +44,18 @@ h1 {
   border: 3px solid white;
 }
 
+.home-link {
+  text-decoration: none;
+  color: white;
+}
+
+.home-link:active {
+  color: grey;
+}
+
+.home-link:hover {
+  
+}
 
 /* 
 .movie-img {
