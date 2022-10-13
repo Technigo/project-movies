@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { BASE_URL } from 'Utils/Urls';
 
 const MainPage = () => {
   const [loading, setLoading] = useState(false);
@@ -7,7 +8,7 @@ const MainPage = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch('https://api.themoviedb.org/3/movie/popular?api_key=6cfbbdc6034efd81a5554b5cb5a11377&language=en-US&page=1')
+    fetch(BASE_URL)
       .then((res) => res.json())
       .then((data) => {
         setMovies(data.results)
@@ -27,21 +28,26 @@ const MainPage = () => {
   }
 
   return (
-    <section className="list">
+    <section className="sectionWrapper">
+      {/*  <div className="innerWrapper"> */}
       {movies.map((movie) => {
         return (
-
           <Link
             key={movie.id}
-            to={`/details/${movie.id}`}>
+            to={`/details/${movie.id}`}
+            className="movieBox">
 
-            <div>
-              <img src={`http://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.title} />
-              {movie.title}
+            <img className="img" src={`http://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.title} />
+
+            <div className="hoverBox">
+              <h1>{movie.title}</h1>
+              <p>{movie.release_date}</p>
             </div>
+
           </Link>
         )
       })}
+      {/*       </div> */}
     </section>
   )
 };

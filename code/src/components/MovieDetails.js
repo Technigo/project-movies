@@ -1,25 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
+import { SINGLE_MOVIE_URL } from 'Utils/Urls';
 
 const MovieDetails = () => {
-  const [movieDetails, setMovieDetails] = useState();
+  const [movieDetails, setMovieDetails] = useState({});
   const navigate = useNavigate();
   const { id } = useParams();
   const onBackButtonClick = () => {
     navigate(-1);
   }
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=6cfbbdc6034efd81a5554b5cb5a11377&language=en-US`)
+    fetch(SINGLE_MOVIE_URL(id))
       .then((res) => res.json())
       .then((data) => setMovieDetails(data))
   }, [id])
-
+  console.log(movieDetails)
   return (
-    <div>
-      <button type="button" onClick={onBackButtonClick}>Go back</button>
-      <h2>{movieDetails}</h2>
-      {/*  <img alt="img" src={details.sprites ? details.sprites.other['official-artwork']
-     .front_default : ''} /> */}
+    <div className="detailPage" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})` }}>
+      <div className="detailBox">
+        <button className="backButton" type="button" onClick={onBackButtonClick}>Go back</button>
+        <img className="detailPoster" src={`http://image.tmdb.org/t/p/w300/${movieDetails.poster_path}`} alt={movieDetails.title} />
+        <h1 className="detailTitle">{movieDetails.title}</h1>
+        <p className="detailScore">{Math.round(movieDetails.vote_average * 10) / 10}</p>
+        <p className="detailOverview">{movieDetails.overview}</p>
+
+      </div>
     </div>
   );
 }

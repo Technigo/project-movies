@@ -8,15 +8,21 @@ import MainPage from './components/MainPage'
 
 export const App = () => {
   return (
+
     <BrowserRouter>
       <Header />
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/details/:id" element={<MovieDetails />} />
-        <Route path="/404" element={<NotFound />} />
-        <Route path="*" element={<Navigate to="/404" replace />} />
-      </Routes>
+      <section className="outerWrapper">
+        <div className="innerWrapper">
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/details/:id" element={<MovieDetails />} />
+            <Route path="/404" element={<NotFound />} />
+            <Route path="*" element={<Navigate to="/404" replace />} />
+          </Routes>
+        </div>
+      </section>
 
     </BrowserRouter>
+
   );
 }
