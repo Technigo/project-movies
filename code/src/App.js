@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Movies from './components/Movies.js'
@@ -43,6 +44,19 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Movies movies={fetchMovies} upPage={upPage} downPage={downPage} />} />
         <Route path="/MovieDetails/:movie_id" element={<MovieDetails />} />
+
+import { MovieList } from 'MovieList';
+import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Movies } from './Components/Movies'
+import { NotFound } from './Components/NotFound'
+
+export const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Movies />} />
+        <Route path="/movielist" element={<MovieList />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>
