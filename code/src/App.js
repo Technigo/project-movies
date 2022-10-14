@@ -7,6 +7,7 @@ import NotFound from 'components/NotFound';
 
 export const App = (movie) => {
   const [movieList, setMovieList] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=775e89d95406e8985a2124041da6e29f&language=en-US&page=1')
@@ -16,9 +17,19 @@ export const App = (movie) => {
       })
       .catch((e) => {
         console.error(console.error(e));
-      });
+      })
+      .finally(() => {
+        setTimeout(() => {
+          setLoading(false);
+        }, 500);
+      })
   }, []);
 
+  if (loading) {
+    return (
+      <p className="loading-text">THE PAGE IS LOADING...</p>
+    )
+  }
   return (
     <div className="outer-wrapper">
       <BrowserRouter>
