@@ -12,7 +12,7 @@ const Movies = ({ movies }) => {
               to={`/details/${movie.id}`}
               className="movie">
               <div className="image-overlay" />
-                <img className="details-img" src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt="poster" />
+              <img className="details-img" src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt="poster" />
               <div className="movie-details">
                 <h1> {movie.title} </h1>
                 <p> {movie.release_date} </p>
