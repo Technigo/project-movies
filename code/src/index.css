@@ -1,107 +1,162 @@
 * {
 	margin: 0;
-	padding: 0;
+  padding: 0;
 	box-sizing: border-box;
+  max-width: 100%;
+  /*  outline: 1px solid red; */
 }
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  color:white;
   background-color: black;
-  display: flex;
-  justify-content: center;
-  color: white;
-}
+  }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* HEADER */
+.home-link-text {
+  text-decoration: none;
+  font-size: 1.8rem;
+  
 }
-header {
-  display: flex;
-  justify-content: space-between;
-  margin: 0.5rem
-}
-
 h1 {
-  font-size: 3rem;
+ color: white;
+  width: 100vw;
+  margin-left: 5.7rem;
 }
 
+h1:hover {
+  color: rgba(228, 221, 221, 0.569);
+  transition: 0.5s ease;
+}
+
+/* MOVIE PAGE */
+
+.movie-wrapper {
+  display: flex;
+  width: 100%;
+}
 .movie-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
 }
 
-.movie-card {
-  color: white;
-  text-decoration: none;
-}
-
-.details-img {
+.movie-img {
+  width: 100%;
   border: 3px solid white;
 }
 
-.home-link {
+/* CARD OVERLAY */
+.card-group {
   text-decoration: none;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+ }
+
+.card-image-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+  transition: 0.5s ease;
+}
+
+.card-text-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: rgba(0, 0, 0, 0);
+  transition: 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 15px;
+}
+
+.card-group:hover .card-image-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.card-group:hover .card-text-overlay {
   color: white;
 }
 
-.home-link:active {
-  color: grey;
-}
+/* DETAILS PAGE */
+.background-img {
+  min-height: 100vh;
+  min-width: 90vw;
+  background-size: cover;
+ }
+ 
+ .details-img {
+   border: 3px solid white;
+ }
 
-.home-link:hover {
-  
-}
-
-/* 
-.movie-img {
-  display: flex;
-  position: relative;
-  justify-content: center;
+  .go-back-btn {
+  color: #fff;
+  text-decoration: none;
+  display: inline-flex;
   align-items: center;
+  font-size: 25px;
+  font-weight: 700;
+  background-color: transparent;
+  cursor: pointer;
+  text-shadow: 2px 4px 6px rgb(76, 74, 74);
+  margin: 3%;
+  margin-left: 5rem;
+  border: none;
+ }
+
+ .go-back-btn:hover {
+   color: rgb(186, 178, 178);
+   transition: 0.5s ease;
+ }
+
+ .movie-detail-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  color: #fff;
+  padding: 50px;
+ }
+
+ .title-rate {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+ }
+
+ .detail-text {
+  max-width: 500px;
+  font-size: 20px;
+  margin-top: 4%;
+  font-weight: 600;
+  letter-spacing: .5px;
+  line-height: 30px;
+ }
+ .movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  
+ }
+.detail-page {
+   min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+    justify-content: flex-end;
   }
 
-.movie-info-overlay {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  justify-content: space-around;
-  align-items: center;
-  background: rgba(67, 80, 83, 0.4);
-  display: flex;
-}
-
-.movie-info-overlay:hover {
-  display: flex;
-  background: rgba(67, 80, 83, 0.6);
-  transition: 0.3s;
-}
-
-.image-wrapper {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-}
-
-.album-image {
-  width: 100%;
-}
-
-.album-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 2rem;
-}
-
-.album-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-} */
