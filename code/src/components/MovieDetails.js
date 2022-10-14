@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react'
-import { useNavigate, useParams, Link } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { MOVIE_DETAILS_URL } from 'utils/urls'
 import Loader from './Loader'
 
@@ -21,7 +21,7 @@ const MovieDetails = () => {
   }, [])
 
   const goBack = () => {
-    navigate(-1)
+    navigate('/')
   }
 
   if (loading) return <Loader />
@@ -33,12 +33,12 @@ const MovieDetails = () => {
         backgroundImage: `url(http://image.tmdb.org/t/p/original${details.backdrop_path})`
       }}>
       <div className="details-summary">
-        <Link to={goBack} className="link-back">⬅️ Movies</Link>
+        <button type="button" onClick={goBack} className="link-back">⏪ Movies</button>
         <img className="details-summary-poster" src={details ? `https://image.tmdb.org/t/p/w342${details.poster_path}` : ''} alt={details.title} />
         <div className="details-summary-text">
           <h1 className="details-summary-text-header">
             <span className="details-summary-text-header-title">{details.title} </span>
-            <span className="details-summary-text-header-rating">⭐️ 7.2</span>
+            <span className="details-summary-text-header-rating">⭐️ {details.vote_average.toFixed(1)}</span>
           </h1>
           <p className="details-summary-text-description">{details.overview}</p>
         </div>
