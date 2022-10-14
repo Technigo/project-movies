@@ -13,15 +13,14 @@ code {
 }
 
 .movies {
-  display: grid;
-  grid-template-columns: 1fr;
-  column-gap: 0px;
-  border: solid blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.movie {
+.movie-container {
   position: relative;
-  border: solid salmon;
+  width: 50%;
 }
 
 .movie:hover > .movie-details {
@@ -30,30 +29,39 @@ code {
 
 .movie-details {
   opacity: 0;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  color: white;
 }
 
-.details-img:hover {
+.image-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  color: transparent;
+  transition: .5s ease;
+}
+
+.movie:hover > .image-overlay {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.details-image {
-  width: 100%;
-  object-fit: contain;
-}
 
-.image-container {
-  border: solid green;
+.details-img {
+  width: 100%;
+  height: auto;
 }
 
 @media (min-width: 668px) and (max-width: 1024px) {
-  .movies {
-    grid-template-columns: 1fr 1fr;
+  .movie-container {
+    width: 33%;
   }
 }
   
 @media (min-width: 1025px) {
-  .movies {
-    grid-template-columns: repeat(4, 1fr)
+  .movie-container {
+    width: 25%;
   }
 }
 
