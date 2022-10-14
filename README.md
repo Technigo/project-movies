@@ -15,9 +15,18 @@ Describe how you approached to problem, and what tools and techniques you used t
 - React
 - fetch
 
-- ESLint for code formatting
-- Netlify for deployment
+- [ESLint](https://eslint.org/) for code formatting
+- [Netlify](https://www.netlify.com/) for deployment
 
 ## View it live
 
 https://yay-movies.netlify.app/
+
+## Running locally
+
+```sh
+npm i
+npm run start
+```
+
+And go to `http://localhost:3000`
