@@ -18,13 +18,16 @@ img {
 
   flex-direction: column;
   justify-content: flex-end;
+  transition: all 0.4s;
 }
 
 .posterInfo:hover {
   opacity: 1;
   background-color: rgb(0 0 0 / 75%);
+  transition: 0.3s ease-in-out;
 }
 
-.title {
+h1,
+p {
   padding: 10px;
 }

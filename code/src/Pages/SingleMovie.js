@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 // import { useParams } from 'react-router-dom';
 import { useNavigate, useParams } from 'react-router-dom';
 import MyImage from 'left_arrow_icon.svg';
+import MyImageStar from 'star.svg';
 
 const SingleMovie = () => {
   const navigate = useNavigate();
@@ -57,7 +58,10 @@ const SingleMovie = () => {
             <div className="title-vote">
               <h2>{movie.title}</h2>
 
-              <h2 className="vote"> {movie.vote_average.toFixed(1)}</h2>
+              <h2 className="vote">
+                <img className="star-icon" src={MyImageStar} alt="arrow" />
+                {movie.vote_average.toFixed(1)}
+              </h2>
             </div>
             <p>{movie.overview}</p>
           </div>
