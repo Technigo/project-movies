@@ -28,7 +28,7 @@ export const TVseries = () => {
 
   return (
     <section className='tvSeriesPage'>
-      <h1 className='popular'>Popular Tv-Shows</h1>
+      <h1 className='popular'>Popular TV-series</h1>
       <div className='movies-container'>
         {tvShow.map((show) => (
           <article className='movie-wrapper' key={show.id}>
