@@ -1,12 +1,13 @@
 /* eslint-disable linebreak-style */
 import React, { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { COLLECTION_URL } from 'utils/Urls'
 import { Orbit } from '@uiball/loaders';
 
 export const Collection = () => {
   const [collections, setCollections] = useState([])
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate()
   const { id } = useParams()
 
   useEffect(() => {
@@ -17,6 +18,10 @@ export const Collection = () => {
       .catch((error) => alert(error, 'error'))
       .finally(() => setLoading(false));
   }, [id])
+
+  const goBack = () => {
+    navigate(-1);
+  }
 
   if (loading) {
     return (
@@ -29,12 +34,11 @@ export const Collection = () => {
 
   return (
     <section className='collectionsPage'>
-      <Link to='/' className='backLink'>
-        <div className='back'>
-          <img src='/icons/back-icon.svg' id='back-icon' alt='back' />
-          <p>Movies</p>
-        </div>
-      </Link>
+      <button type='button' className='backLink' onClick={goBack}>
+        <img src='/icons/back-icon.svg' id='back-icon' alt='back' />
+        <p>Back</p>
+      </button>
+
       {collections.map((movies) => {
         return (
           <div className='collection-container' key={movies.id}>

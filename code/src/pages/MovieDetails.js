@@ -1,13 +1,14 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable react/jsx-closing-tag-location */
 import React, { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { Orbit } from '@uiball/loaders';
 import { MOVIES_DETAILS_URL } from 'utils/Urls';
 
 export const MovieDetails = () => {
   const [details, setDetails] = useState([])
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate()
   const { id } = useParams()
 
   useEffect(() => {
@@ -17,6 +18,10 @@ export const MovieDetails = () => {
       .catch((error) => alert(error, 'error'))
       .finally(() => setLoading(false));
   }, [id])
+
+  const goBack = () => {
+    navigate(-1);
+  }
 
   if (loading) {
     return (
@@ -29,12 +34,10 @@ export const MovieDetails = () => {
 
   return (
     <section className='detailsPage'>
-      <Link to='/' className='backLink'>
-        <div className='back'>
-          <img src='/icons/back-icon.svg' id='back-icon' alt='back' />
-          <p>Movies</p>
-        </div>
-      </Link>
+      <button type='button' className='backLink' onClick={goBack}>
+        <img src='/icons/back-icon.svg' id='back-icon' alt='back' />
+        <p>Movies</p>
+      </button>
       <div className='background' style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
         <article className='movie-details'>
           <div className='details'>

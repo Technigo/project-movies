@@ -1,12 +1,13 @@
 /* eslint-disable linebreak-style */
 import React, { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { TVSHOW_DETAILS_URL } from 'utils/Urls'
 import { Orbit } from '@uiball/loaders';
 
 export const Seasons = () => {
   const [season, setSeason] = useState([])
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate()
   const { id } = useParams()
 
   useEffect(() => {
@@ -17,6 +18,10 @@ export const Seasons = () => {
       .catch((error) => alert(error, 'error'))
       .finally(() => setLoading(false));
   }, [id])
+
+  const goBack = () => {
+    navigate(-1);
+  }
 
   if (loading) {
     return (
@@ -29,12 +34,11 @@ export const Seasons = () => {
 
   return (
     <section className='seasonsPage'>
-      <Link to='/' className='backLink'>
-        <div className='back'>
-          <img src='/icons/back-icon.svg' id='back-icon' alt='back' />
-          <p>Back</p>
-        </div>
-      </Link>
+      <button type='button' className='backLink' onClick={goBack}>
+        <img src='/icons/back-icon.svg' id='back-icon' alt='back' />
+        <p>Back</p>
+      </button>
+
       <div className='seasons-container'>
         {season.map((show) => {
           return (
