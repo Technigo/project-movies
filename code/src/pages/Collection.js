@@ -8,6 +8,7 @@ export const Collection = () => {
   const [collections, setCollections] = useState([])
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate()
+  // eslint-disable-next-line camelcase
   const { id } = useParams()
 
   useEffect(() => {
@@ -17,6 +18,7 @@ export const Collection = () => {
       .then((data) => setCollections(data.parts))
       .catch((error) => alert(error, 'error'))
       .finally(() => setLoading(false));
+  // eslint-disable-next-line camelcase
   }, [id])
 
   const goBack = () => {

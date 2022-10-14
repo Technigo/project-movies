@@ -39,22 +39,23 @@ export const MovieDetails = () => {
         <img src='/icons/back-icon.svg' id='back-icon' alt='back' />
         <p>Movies</p>
       </button>
-      <div className='background' style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
+      {details && (<div className='background' style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
         <article className='movie-details'>
           <div className='details'>
-            <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
+            {details.poster_path && (<img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />)}
             <div className='detail-text'>
-              <h1>{details.title} <span className='ratings'><img src='/icons/star-icon.svg' id='star-icon' alt='rating' />{Math.round(details.vote_average * 10) / 10}</span></h1>
+              <h1>{details.title} <span className='ratings'><span className='star'>&#x2736;</span>{Math.round(details.vote_average * 10) / 10}</span></h1>
+              <p> Genres:{' '}
+                {details.genres && details.genres.map((genre) => genre.name).join(', ')} </p>
               <p>{details.overview}</p>
-
-              {details.belongs_to_collection !== null
-        && <div className='collection'>
-          <Link to={`/collection/${details.belongs_to_collection.id}`}>More from this collection <img src='/icons/more-icon.svg' id='more-icon' alt='more' /></Link>
-        </div>}
+              {details.belongs_to_collection && (<div className='collection'>
+                <Link to={`/collection/${details.belongs_to_collection.id}`}>More from {details.belongs_to_collection.name} <span className='more'>&#129054;</span> </Link>
+              </div>)}
             </div>
           </div>
+
         </article>
-      </div>
+      </div>)}
     </section>
   );
 }

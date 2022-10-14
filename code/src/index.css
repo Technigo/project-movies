@@ -58,22 +58,41 @@ header {
   margin-left: -20px;
 }
 
-/** ICONS **/
+/** ICONS & BACK BTN **/
 #back-icon {
   width: 30px;
   filter: invert(1);
   margin-right: 6px;
 }
 
-#star-icon {
-  width: 20px;
-  border: none
+.backLink {
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font: bold, 18px;
+  color: #F9F9F9;
+  position: absolute;
+  top: 120px;
+  left: 10px;
 }
 
-#more-icon {
+.backLink:hover p {
+    transform: translate(15%);
+    transition: transform 330ms ease-in-out;
+ }
+
+.star {
+  width: 20px;
+  color: rgba(248, 219, 52, 0.849);
+  padding-right: 3px;
+}
+
+.more {
   width: 15px;
+  color: #e87676f5;
   margin-left: 4px;
-  border: none
 }
 
 /** STARTPAGE, TV-SERIES, UPCOMING, SEASONS, ON CINEMA  **/
@@ -194,11 +213,13 @@ header {
 
 .details img {
   width: 35%;
-  border: solid #F9F9F9 1px
+  border: solid #F9F9F9 1px;
+  margin-bottom: 10px;
 }
 
 .detail-text {
-  background: #1313139e
+  background: #1313139e;
+  padding: 10px;
 }
 
 .detail-text h1 {
@@ -216,19 +237,6 @@ header {
   overflow: auto;
 }
 
-.backLink {
-  background: transparent;
-  border: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font: bold, 18px;
-  color: #F9F9F9;
-  position: absolute;
-  top: 120px;
-  left: 10px;
-}
-
 .ratings {
   background: #b1aaaa8a;
   color: #F9F9F9;
@@ -236,6 +244,8 @@ header {
   padding: 5px;
   text-shadow: none;
   display: inline-block;
+  border-radius: 10px;
+  margin-left: 5px;
 }
 
 .detailPage .ratings:before {
@@ -247,6 +257,12 @@ header {
   padding: 10px;
   width: fit-content;
   font-size: 14px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.collection:hover {
+  opacity: 0.7
 }
 
 /** NOT FOUND ERROR **/
@@ -297,6 +313,7 @@ header {
 
     .collection {
       font-size: 16px;
+      margin-top: 10px;
     }
 
     
@@ -327,7 +344,7 @@ header {
     }
   
     .movie-details, .tvshow-details  {
-      bottom: 20%;
+      bottom: 10%;
       left: 20px
     }
 
@@ -335,7 +352,6 @@ header {
     .seasons-wrapper {
       width: 33.33%;
     }
-
 
     .detail-text h1 {
       font-size: 20px;
@@ -373,6 +389,10 @@ header {
 
     .details p {
       max-height: fit-content;
+    }
+
+    .details img {
+      margin-right: 10px;
     }
     
     .startPage, .tvSeriesPage, 
