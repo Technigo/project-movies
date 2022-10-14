@@ -124,6 +124,37 @@ a.active {
   transition: 0.5s ease; 
 }
 
+.btn-back {
+  position: absolute;
+  left: 0;
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  text-shadow: 1px 1px black;
+}
+
+/*--- Mobile ---*/
+@media (min-width: 375px) and (max-width: 667px) {
+
+  .movie-poster {
+    margin-bottom: 60%;
+    margin-left: 12%;
+    margin-right: 12%;
+    border: 5px solid white;
+    max-width: 200px;
+  }
+  
+  .movie-summary {
+  margin-left: 6%;
+  bottom: 0;
+  right: 10%;
+  position: absolute;
+  font-size: 10px;
+  }
+}
+
   /* ----  ipad --- */
   @media (min-width: 668px) and (max-width: 1023px) {
     .movie-container {
@@ -159,18 +190,6 @@ a.active {
     }
   }
   
-
-.btn-back {
-  position: absolute;
-  left: 0;
-  color: white;
-  text-decoration: none;
-  font-size: 1.3rem;
-  font-weight: bold;
-  display: flex;
-  text-shadow: 1px 1px black;
-}
-
 /* ----  computer --- */
 @media (min-width: 1024px) {
   .movie-container {
