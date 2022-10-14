@@ -67,11 +67,13 @@ header {
 
 #star-icon {
   width: 20px;
+  border: none
 }
 
 #more-icon {
   width: 15px;
   margin-left: 4px;
+  border: none
 }
 
 /** STARTPAGE, TV-SERIES, UPCOMING, SEASONS, ON CINEMA  **/
@@ -169,10 +171,14 @@ header {
 
 /** MOVIE/TVSHOW/COLLECTION DETAILS **/
 
+.detailsPage {
+  position: relative;
+}
+
 .movie-details, .tvshow-details {
   position: absolute;
-  bottom: 0;
-  padding: 35px
+  bottom: 20px;
+  left: 10px
 }
 
 .background {
@@ -186,14 +192,13 @@ header {
   flex-direction: column;
 }
 
-.detail-text {
-  background: #1313139e
+.details img {
+  width: 35%;
+  border: solid #F9F9F9 1px
 }
 
-.detail-img {
-  border: solid #F9F9F9 2px;
-  height: 200px;
-  width: fit-content;
+.detail-text {
+  background: #1313139e
 }
 
 .detail-text h1 {
@@ -220,13 +225,21 @@ header {
   font: bold, 18px;
   color: #F9F9F9;
   position: absolute;
-  top: 110px;
-  left: 35px;
+  top: 120px;
+  left: 10px;
 }
 
 .ratings {
   background: #b1aaaa8a;
-  padding: 6px
+  color: #F9F9F9;
+  font-weight: 500;
+  padding: 5px;
+  text-shadow: none;
+  display: inline-block;
+}
+
+.detailPage .ratings:before {
+  padding-right: 5px;
 }
 
 .collection {
@@ -268,10 +281,6 @@ header {
     .movie-wrapper, 
     .seasons-wrapper  {
       width: 50%;
-    }
-    
-    .detail-img {
-      height: 220px;
     }
 
     .detail-text h1 {
@@ -327,9 +336,6 @@ header {
       width: 33.33%;
     }
 
-    .detail-img {
-      height: 240px;
-    }
 
     .detail-text h1 {
       font-size: 20px;
@@ -363,10 +369,6 @@ header {
 
     .detail-text {
       padding: 20px;
-    }
-
-    .detail-img {
-      height: 380px;
     }
 
     .details p {

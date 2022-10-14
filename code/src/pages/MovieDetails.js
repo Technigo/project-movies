@@ -41,7 +41,7 @@ export const MovieDetails = () => {
       <div className='background' style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
         <article className='movie-details'>
           <div className='details'>
-            <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} className='detail-img' alt={details.title} />
+            <img src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
             <div className='detail-text'>
               <h1>{details.title} <span className='ratings'><img src='/icons/star-icon.svg' id='star-icon' alt='rating' />{Math.round(details.vote_average * 10) / 10}</span></h1>
               <p>{details.overview}</p>
