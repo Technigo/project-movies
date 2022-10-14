@@ -29,8 +29,9 @@ export const App = () => {
     if (page === 1) {
       setPage(1)
     } else {
-    setPage(page - 1)
-    }  }
+      setPage(page - 1)
+    }
+  }
 
   if (loading) {
     return (
@@ -47,7 +48,6 @@ export const App = () => {
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>
     </BrowserRouter>
-
 
         </>
   );
