@@ -30,6 +30,9 @@ const MovieList = ({ API_KEY }) => {
             className="poster"
             src={`https://image.tmdb.org/t/p/w400/${movie.poster_path}`}
             alt="" />
+          <div className="text-container">
+            <p className="title-text">{`${movie.id}`}</p>
+          </div>
         </Link>
       ))}
     </div>
