@@ -1,7 +1,7 @@
 /* eslint-disable comma-dangle */
 /* eslint-disable react/jsx-closing-bracket-location */
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams, NavLink } from 'react-router-dom';
 import Loader from 'components/Loader';
 
 const apiKey = 'd4669261ce30d2ac76f238d73f4bd890';
@@ -9,7 +9,7 @@ const apiKey = 'd4669261ce30d2ac76f238d73f4bd890';
 const Details = () => {
   const [movie, setMovie] = useState({});
   const [ready, setReady] = useState(true);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const params = useParams();
   const API_URL = `https://api.themoviedb.org/3/movie/${params.movieId}?api_key=${apiKey}&language=en-US&page=1`;
 
@@ -24,9 +24,9 @@ const Details = () => {
   if (!ready) {
     return <Loader />;
   }
-  const goBack = () => {
-    navigate(-1);
-  };
+  // const goBack = () => {
+  //   navigate(-1);
+  // };
 
   return (
     <div
@@ -39,10 +39,16 @@ const Details = () => {
       className="movie-details-wrapper">
       <div className="movie-details">
         <div className="image-wrapper">
-          <button className="back-button" type="button" onClick={goBack}>
+          <nav>
+            <NavLink className="back-button" to="/">
+              <img src="" />
+              Home
+            </NavLink>
+          </nav>
+          {/* <button className="back-button" type="button" onClick={goBack}>
             {' '}
-            Movies{' '}
-          </button>
+            Back{' '}
+          </button> */}
           <img
             src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
             alt={movie.title}
