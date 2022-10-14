@@ -21,7 +21,7 @@ export const App = () => {
       .finally(() => {
         setTimeout(() => {
           setLoading(false);
-        }, 2000);
+        }, 2600);
       })
   }, []);
 

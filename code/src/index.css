@@ -152,6 +152,7 @@ h4 {
 
 .backdrop-image {
   background-repeat: no-repeat;
+  background-color: rgb(34, 34, 34); /*-in case image doesnt load-*/
   background-size: cover;
   background-position: cover;
   object-fit: cover; 
@@ -276,6 +277,11 @@ h3 {
 /*----MEDIA QUERIES----*/
 
 @media (max-width: 780px) {
+  .loader{
+    top: 45%;
+    left: 40%;
+  }
+
   .details-container {
     position: relative;
     display: block;
@@ -314,8 +320,8 @@ h3 {
   .button-container {
     position: absolute;
     z-index: 1;
-    top: 5%;
-    left: 10%;
+    top: 7%;
+    left: 7%;
   }
 
   .poster-image {
@@ -332,7 +338,7 @@ h3 {
     text-align: bottom;
     line-height: 1.6;
     padding-bottom: 20px;;
-    width: 300px;
+    width: 310px;
   }
 }
 
