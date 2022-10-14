@@ -24,7 +24,13 @@ export const MovieDetails = () => {
     <section
       className="details-container"
       style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${details.backdrop_path})` }}>
-      <button type="button" onClick={returnToDefaultPage}>Return home</button>
+      <button
+        className="go-back-btn"
+        type="button"
+        onClick={returnToDefaultPage}
+      >
+        <span className="go-back-home">«</span>Go Back
+      </button>
       <div className="movie-field">
         <img className="poster-image" src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt="movie poster" />
         <div className="movie-field-text">
