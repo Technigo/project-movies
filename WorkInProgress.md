@@ -112,21 +112,27 @@ Nina fredag fm
 -desktop media queries ok
 -hover movies "back to main" z-index =)
 -fix gradient backdrop
+
 -lagt in en aria-lable "star"
 
 -commit blue level
 
+-fixed loading på både PopularMovies and MovieDetails
+har testat med en timerfunktion jag lånade från joel och tika
+
+-----------------------------
+
+Linnea, du kan gärna skriva på ReadMe
+
+red level, styling:
+
+-404
 
 -----------------------------------
 Söndag   ReadMe, netlify link, validation
 
 -----------------------------------
 
-red level, styling:
-
--loading
-
--404
 
 
 

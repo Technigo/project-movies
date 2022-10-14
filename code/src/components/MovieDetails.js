@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, NavLink } from 'react-router-dom'
+import Loading from 'components/Loading';
+
 import { SINGLE_MOVIE_URL } from '../data/urls';
 import arrowIcon from '../data/arrowIcon.png';
 import 'css/movieDetails.css'
@@ -7,7 +9,7 @@ import 'css/movieDetails.css'
 
 export const MovieDetails = () => {
   const [movie, setMovie] = useState()
-  // const [movie, setMovie] = useState()
+  const [loading, setLoading] = useState()
   const { movieId } = useParams();
   // const navigate = useNavigate();
 
@@ -22,7 +24,12 @@ export const MovieDetails = () => {
     fetch(SINGLE_MOVIE_URL(movieId))
       .then((res) => res.json())
       .then((json) => setMovie(json))
+      .finally(() => setLoading(false))
   }, [movieId])
+
+  if (loading) {
+    return <Loading />
+  }
 
   // const PreviousPage = () => {
   //  navigate(-1);

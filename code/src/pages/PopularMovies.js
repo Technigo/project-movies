@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import Loading from 'components/Loading';
+
+import { BASE_URL } from '../data/urls'
 import '../css/popularMovies.css'
-import { BASE_URL } from '../data/urls';
 
 export const PopularMovies = () => {
   const [popMovies, setPopMovies] = useState([])
@@ -13,8 +15,9 @@ export const PopularMovies = () => {
       .then((data) => setPopMovies(data.results))
       .finally(() => setLoading(false))
   }, []);
+
   if (loading) {
-    return <h1>loading</h1>
+    return <Loading />
   }
   console.log(popMovies)
   return (
