@@ -8,9 +8,9 @@ const NotFound = () => {
   }
 
   return (
-    <div>
-      <p>Page not found</p>
-      <button type="button" onClick={returnToDefaultPage}>Go to Homepage</button>
+    <div className="error-message-container">
+      <p className="error-message">Oops! We can&apos;t seem to find the page you&apos;re looking for </p>
+      <button className="link-to-main" type="button" onClick={returnToDefaultPage}>Go back to main page</button>
     </div>
   )
 }

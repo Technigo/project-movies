@@ -90,6 +90,7 @@ a {
   background-color: transparent;
   height: 20px;
   border: none;
+  cursor: pointer;
 }
 
 .link-back svg {
@@ -113,7 +114,7 @@ a {
 }
 
 .details-summary-text {
-  border: 2px rgb(0, 191, 255) solid;
+  /* border: 2px rgb(0, 191, 255) solid; */
   height: fit-content;
   width: 50%;
   align-self: flex-end;
@@ -138,6 +139,32 @@ a {
 .details-summary-text-description {
   font-size: 16px;
 }
+
+/* - - - NotFound.js - - - */
+
+.error-message-container {
+  text-align: center;
+  padding-top: 200px;
+}
+
+.error-message {
+  font-size: 25px;
+}
+
+.link-to-main {
+  font-size: 20px;
+  color:white;
+  font-weight: bold;
+  background-color: transparent;
+  height: 20px;
+  border: none;
+}
+
+.link-to-main:hover {
+  color:rgb(126, 126, 126);
+  cursor: pointer;
+}
+
 
 /* - - - Loader.js - - - */
 
