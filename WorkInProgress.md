@@ -88,6 +88,8 @@ att göra:
 - Det vore coolt med ngn slags hover transform transision på länken
 
 -----------------------------
+Nina Tors kväll
+
 började med att ändra filerna movieDetails.css och popularMovies.css (hade inte gått igenom att jag hade bytt till liten bokstav.)
 
 -fixat lite olika css i movieDetails.css, media querie
@@ -101,6 +103,29 @@ mig veteligen har inget nytt hänt, det sista jag gjorde innan vara att testa
 media querie .summery, justify-content: space-around; som jag sedan ändrade tillbaka....
 
 tar nya tag imorn fm
+
+-----------------------------------
+Nina fredag fm
+
+-fixat tillbaka backdrop. (efter push "blue level" ska jag testa att göra om detta igen)
+
+-desktop media queries ok
+-hover movies "back to main" z-index =)
+-fix gradient backdrop
+
+-commit blue level
+
+-----------------------------------
+Söndag   ReadMe, netlify link
+
+-----------------------------------
+
+red level, styling:
+
+-loading
+
+-404
+
 
 
 

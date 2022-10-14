@@ -32,7 +32,7 @@ export const MovieDetails = () => {
     <section className="detailsContainer">
       {movie && (
         // <div className="background" style={detailStyling}>
-        <div className="background" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
+        <div className="background" style={{ backgroundImage: `linear-gradient( rgba(0,0,0,0) -70%, rgba(0,0,0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
           <NavLink className="link" to="/"> <img className="arrowIcon" src={arrowIcon} alt="back button" /><span>Movies</span> </NavLink>
           <div className="summary">
             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />

@@ -1,35 +1,37 @@
-/* .detailsContainer {
+.detailsContainer {
     display: flex;
-} */
-/*  bg så den tacker hela bg desktop */
- .background {
-    /* min-height: 95vh; */
+    flex-direction: column;
+
+}
+
+.background {    
+    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
-    display: flex;
     flex-direction: column;
     justify-content: flex-end;
 } 
 
 .background a {
-position: absolute;
-display: flex;
-align-items: center;
-top: 8%;
-left: 5%;
-font-size: 1.3rem;
-font-weight: 700;
-text-shadow: 2px 2px #000000d6;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 8%;
+    left: 5%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px #000000d6;
 }
 
-/* hoover for "button" */
+/* hoover for "movies button" */
 
-/* .background a:hover {
-    font-size: 20px;
-    transform: translate(10px,0);
-    transition: all .3s ease-in-out;
-} */
+.background a:hover {
+    font-size: 1.5rem;
+    transform: translate(-10px,0);
+    transition: all .4s ease-in-out;
+    z-index: 2;
+}
 
 .background a img{
     width: 1.2rem;
@@ -47,7 +49,6 @@ text-shadow: 2px 2px #000000d6;
     border: 3px solid #eee6dc;
     box-shadow:  10px 10px 60px #eee6dc,
              -10px -10px 60px #fff;
-    /* margin: 30px; */
     width: 80%;
     margin-bottom: 8%;
 }
@@ -56,7 +57,6 @@ text-shadow: 2px 2px #000000d6;
     display: flex;
     flex-direction: column;
     color: #fff;
-    /* Margin: 30px; */
     justify-content: flex-end;
     max-width: 90%;
 }
@@ -70,7 +70,6 @@ text-shadow: 2px 2px #000000d6;
 .ratingRelease {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     align-items: baseline;
 }
 
@@ -93,7 +92,6 @@ text-shadow: 2px 2px #000000d6;
     color: #000;
     border-radius: 5px;
     font-size: 12px;
-    /* font-weight: 700; */
     line-height: 1.5;
     padding: 5px;
     margin-left: 32px;
@@ -112,14 +110,14 @@ h4 {
 
 
 
-/*===========  MEDIA QUERY  ---------------*/
+/*===========  MEDIA QUERY TABLET ---------------*/
 
 @media (min-width: 668px) {
-    
+
     .summary {
         flex-direction: row;
         justify-content: space-between;
-        margin: 17% 8% 8% 10%;
+        margin: 14% 8% 8% 10%;
     }
 
     .summary img {
@@ -133,18 +131,24 @@ h4 {
         width: 60%;
     }
 }
-    
+
+
+/*===========  MEDIA QUERY DESKTOP ---------------*/
+
+
 @media (min-width: 1024px) {
 
     .summary {
-        margin: 13% 8% 8% 10%;
+        justify-content: center;
+        width: 70%;
+        margin: 8% auto ;
     }
+
     .summary img {
-        width: 55%;
-        margin-bottom: 0px;
+        width: 40%;        
     }
+
     .details {
-        max-width: 40%;
-        
+        max-width: 40%;                    
     }
 }
