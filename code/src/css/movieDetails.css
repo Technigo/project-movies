@@ -18,12 +18,13 @@ body {
   color: #fff;
   font-size: 16px;
   row-gap: 20px;
+  justify-content: flex-start;
   overflow: auto;
 }
 
 .poster-img {
   width: 45vw;
-  height: 65vw;
+  height: auto;
   border: 5px solid white;
 }
 
@@ -39,7 +40,7 @@ body {
   background-position: center center;
   position: fixed;
   height: 100%;
-  width: auto;
+  width: 100%;
 }
 
 .back-btn-div {
@@ -93,9 +94,13 @@ body {
     margin-left: 3px; */
   }
 
+  .summary-wrapper{
+    justify-content: flex-start;
+  }
+
   .poster-img {
-    width: 32vw;
-    height: 45vw;
+    width: 40%;
+    height: auto;
   }
 
   .back-btn-div {
@@ -126,8 +131,8 @@ body {
   }
 
   .poster-img {
-    width: 17vw;
-    height: 28vw;
+    width: 45%;
+    height: auto;
   }
 
   .summary-wrapper {
@@ -135,7 +140,7 @@ body {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 50px;
     color: #fff;
     font-size: 16px;
     row-gap: 20px;
@@ -174,7 +179,6 @@ body {
 
   .background{
     background-position-y: center;
-    min-width: 1500px;
   }
 }
 
