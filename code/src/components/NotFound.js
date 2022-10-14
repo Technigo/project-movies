@@ -12,7 +12,7 @@ const NotFound = () => {
       <p>Sorry, this page does not exist..</p>
       <button type="button" onClick={returnToDefaultPage}>
         {' '}
-        Go to default page{' '}
+        Return{' '}
       </button>
     </div>
   );
