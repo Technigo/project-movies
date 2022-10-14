@@ -92,18 +92,19 @@ h2 {
   .poster-container {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-.movie-content {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: flex-end;
-  max-width: 300px;
-  min-height: 100vh;
-}
-.movie-img {
-  max-width: 200px;
-}
-.button-container {
-  top: 20px;
+  .movie-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 300px;
+    min-height: 100vh;
+    margin-top: 15px;
+  }
+  .movie-img {
+    max-width: 200px;
+  }
+  .button-container {
+    top: 20px;
+  }
 }
