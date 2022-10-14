@@ -17,4 +17,4 @@ We constructed an umbrella components App.js where we added the routes and fetch
 
 https://movie-catalogue-project.netlify.app/
 
-Created by Antonella Cardozo & Petra Söderström
+Created by Antonella Cardozo & Petra Söderström 🍿
