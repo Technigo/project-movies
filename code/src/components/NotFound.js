@@ -4,7 +4,7 @@ import GoBack from './GoBack';
 
 const NotFound = () => {
   return (
-    <div className="movie-page not-found-container">
+    <div className="movie-page" id="not-found-container">
       <GoBack />
       <img className="ghost" src={ghost} alt="Ghost" />
       <h1>404</h1>

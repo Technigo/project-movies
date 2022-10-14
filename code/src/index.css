@@ -29,7 +29,7 @@ p {
 }
 h2 {
 	text-shadow: 1px 1px #4d4d4d;
-	font-size: 25px;
+	font-size: 25x;
 }
 
 .go-back {
@@ -39,8 +39,8 @@ h2 {
 	align-items: center;
 	font-weight: 700;
 	text-decoration: none;
-	left: 2rem;
-	top: 2rem;
+	left: 0;
+	top: 0;
 }
 
 .back-icon {
@@ -50,15 +50,15 @@ h2 {
 }
 
 header {
-	height: 10vh;
+	height: 12vh;
 	top: 0;
 	z-index: 1;
 	background-color: #000;
 	width: 100%;
-	padding: 1rem;
+	padding: 0.5rem;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 header h1 {
@@ -68,6 +68,10 @@ header h1 {
   -webkit-text-fill-color: transparent; 
 	font-family: Waltograph, sans-serif;
 	background-color: black;
+}
+
+header h2 {
+	font-size: 20px;
 }
 
 /* MOVIE LIST */
@@ -95,7 +99,7 @@ header h1 {
 /* MOVE DETAIL PAGE */
 .movie-page {
 	display: flex;
-	min-height: 80vh;
+	min-height: 85vh;
 	min-width: 50vh;
 	padding: 2rem;
 	background-size: cover;
@@ -156,14 +160,15 @@ header h1 {
 }
 
 /* PAGE NOT FOUND */
-.not-found-container {
+#not-found-container {
 	display: flex;
 	flex-direction: column;
-	align-self: center;
-	height: 100vh;
+	align-self: center !important;
+	height: 80vh;
 	width: 100vw;
-	justify-content: center;
-	text-align: center;
+	justify-content: center !important;
+	text-align: center !important;
+	align-items: center;
 }
 
 .ghost {
@@ -241,6 +246,14 @@ footer {
 		line-height: 1.5;
 	}
 
+	.go-back {
+		left: 1rem;
+		top: 1rem;
+	}
+ 	header {
+		padding: 1rem 0.5rem;
+
+ }
 	header h1 {
 		font-size: 40px;
 	}
@@ -280,6 +293,11 @@ footer {
 }
 
 @media (min-width: 1024px) {
+	header {
+		padding: 1rem;
+		height: 12vh;
+	}
+	
 	.movie:hover>.overlay {
 		display: flex;
 		justify-content: flex-end;
@@ -297,10 +315,7 @@ footer {
 		margin: 0 0 0 1rem;
 	}
 
-	.go-back {
-		left: 50px;
-		top: 50px;
-	}
+
 
 	.movie-page {
 		padding: 3rem;
