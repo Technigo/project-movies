@@ -13,7 +13,7 @@ export const MovieList = ({ movieList }) => {
               key={movie.id}
               to={`/details/${movie.id}`}
               className="movieBox">
-              <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="poster" />
+              <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="poster" className="poster" />
               <div className="hoverBox">
                 <h1 className="hoverDetails">{movie.title}</h1>
                 <p className="hoverDetails">Released {movie.release_date}</p>

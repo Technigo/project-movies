@@ -63,15 +63,19 @@ a {color: inherit;}
   justify-content: flex-end;
   background: rgba(0,0,0,.75);
 }
-/*  Didn't make any difference   */
-/*.movieBox:hover .hoverBox .hoverDetails {
+
+.movieBox:hover .hoverBox .hoverDetails {
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: flex-end;
-} */
+}
 
 .img {
+  width: 100%;
+}
+
+.poster {
   width: 100%;
 }
 
@@ -159,16 +163,15 @@ a {color: inherit;}
 
 .detailScore {
   grid-area: 4 / 5 / span 1 / span 1;
+  background-color: whitesmoke;
+  color: black;
+  justify-self: start;
+  align-self: start;
+  padding: 5px 7px 5px 5px;
 }
 
 .detailOverview {
   grid-area: 5 / 3 /span 1 / span 3;
-}
-
-.navBar {
-  display: flex;
-  justify-content: flex-end;
-  margin: 10px;
 }
 
 h1 {
