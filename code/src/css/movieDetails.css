@@ -1,6 +1,4 @@
-/* * {
-  outline: 1px solid red;
-} */
+
 
 html,
 body {
@@ -20,6 +18,7 @@ body {
   color: #fff;
   font-size: 16px;
   row-gap: 20px;
+  overflow: auto;
 }
 
 .poster-img {
@@ -41,7 +40,6 @@ body {
   position: fixed;
   height: 100%;
   width: auto;
-/*   border: 2px solid red; */
 }
 
 .back-btn-div {
@@ -67,10 +65,6 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
-
-/* .back-text:hover {
-  margin-left: 13px;
-} */
 
 .details-title h1 {
   margin: 0;

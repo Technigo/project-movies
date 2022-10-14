@@ -1,13 +1,12 @@
 import React/* , { useEffect, useState } */ from 'react';
 import { Link } from 'react-router-dom'
-
+/* import Select from './Select'; */
 import 'css/moviePage.css'
-
-/* 82911629aa763b7af65fbb5fa82c43e6 */
 
 const Movies = ({ getMovies }) => {
   return (
     <>
+      {/* <Select option={option} setOption={setOption} API_URL={API_URL} /> */}
       {getMovies.map((movie) => (
         <div className="movie-card" key={movie.id}>
           <Link to={`/detail/${movie.id}`}>
