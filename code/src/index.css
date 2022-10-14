@@ -135,6 +135,27 @@ span.released {
   animation: spin 2s linear infinite;
 }
 
+.back-button {
+  position: absolute;
+  display: inline-flex;
+  color: #fff;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
+  left: 50px;
+  top: 50px;
+  
+}
+
+.back-button svg {
+  width: 30px;
+  transition: margin-right 0.2s ease-in-out;
+}
+
+.back-button:hover svg {
+  margin-right: 5px;
+}
+
 /* Safari */
 @-webkit-keyframes spin {
   0% {
@@ -153,6 +174,24 @@ span.released {
     transform: rotate(360deg);
   }
 }
+/* FOOTER */
+hr {
+  border-color: rgba(150, 141, 141, 0.5);
+}
+footer {
+  color: rgba(150, 141, 141, 0.9);
+  text-align: center;
+  /*padding: 5px;*/
+}
+
+footer p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color:rgba(150, 141, 141, 0.9);
+}
 
 /* MEDIA QUERIES */
 
@@ -163,6 +202,13 @@ span.released {
   .movie-details {
     flex-direction: row;
   }
+  .image-wrapper {
+    gap: 60px;
+  }
+
+  .movies-list {
+    width: auto;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -171,5 +217,11 @@ span.released {
   }
   .movie-details {
     flex-direction: row;
+  }
+  .image-wrapper {
+    gap: 60px;
+  }
+  .movies-list {
+    width: auto;
   }
 }
