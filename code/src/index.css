@@ -181,6 +181,7 @@ hr {
 footer {
   color: rgba(150, 141, 141, 0.9);
   text-align: center;
+  width:auto;
   /*padding: 5px;*/
 }
 
@@ -195,7 +196,7 @@ a {
 
 /* MEDIA QUERIES */
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 381px) {
   .movies-list {
     grid-template-columns: 1fr 1fr 1fr;
   }
