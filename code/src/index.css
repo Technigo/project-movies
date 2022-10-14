@@ -96,6 +96,10 @@ code {
   margin-bottom: 60px;
 }
 
+.goback-icon {
+
+}
+
 .movie-details {
   display: flex;
   flex-direction: column;
