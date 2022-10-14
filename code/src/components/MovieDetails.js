@@ -40,7 +40,7 @@ const MovieDetails = () => {
             <span className="details-summary-text-header-title">{details.title} </span>
             <span className="details-summary-text-header-rating">⭐️ 7.2</span>
           </h1>
-          <p className="details-summary-text-wrapper-description">{details.overview}</p>
+          <p className="details-summary-text-description">{details.overview}</p>
         </div>
       </div>
     </article>
