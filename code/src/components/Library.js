@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { BASE_URL } from 'utils/urls';
 
-const Library = ({ library }) => {
+const Library = () => {
+  const [library, setLibrary] = useState([]);
+
+  useEffect(() => {
+    fetch(BASE_URL)
+      .then((response) => response.json())
+      .then((data) => setLibrary(data.results))
+      .catch((error) => console.error(error))
+  }, []);
+
+  /* const Library = ({ library }) => { */
   return (
     <section className="library">
       {library.map((movie) => {
         return (
           <Link
-            key={movie.title}
-            to={`/details/${movie.title}`}>
+            key={movie.id}
+            to={`/details/${movie.id}`}>
 
             <img className="library-image" src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt="poster" />
 
