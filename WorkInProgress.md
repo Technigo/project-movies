@@ -112,11 +112,13 @@ Nina fredag fm
 -desktop media queries ok
 -hover movies "back to main" z-index =)
 -fix gradient backdrop
+-lagt in en aria-lable "star"
 
 -commit blue level
 
+
 -----------------------------------
-Söndag   ReadMe, netlify link
+Söndag   ReadMe, netlify link, validation
 
 -----------------------------------
 

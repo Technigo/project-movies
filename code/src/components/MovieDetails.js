@@ -39,7 +39,7 @@ export const MovieDetails = () => {
             <div className="details">
               <h1 className="title">{movie.title}</h1>
               <div className="ratingRelease">
-                <p className="rating"><b>Rating:</b> ⭐️ {Math.round(movie.vote_average * 10) / 10}</p>
+                <p className="rating"><b>Rating:</b><span className="star" role="img" aria-label="star symbol" /> ⭐️ {Math.round(movie.vote_average * 10) / 10}</p>
                 <p className="released"><b>Release date:</b> {movie.release_date}</p>
               </div>
               <h4>&quot; {movie.tagline} &quot;</h4>
