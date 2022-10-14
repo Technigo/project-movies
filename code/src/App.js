@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { Movies } from './components/Movies.js'
+import Movies from './components/Movies.js'
 import { NotFound } from './components/NotFound.js'
 import MovieDetails from './MovieDetail.js';
 
@@ -29,8 +29,9 @@ export const App = () => {
     if (page === 1) {
       setPage(1)
     } else {
-    setPage(page - 1)
-    }  }
+      setPage(page - 1)
+    }
+  }
 
   if (loading) {
     return (
@@ -47,7 +48,6 @@ export const App = () => {
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>
     </BrowserRouter>
-
 
         </>
   );

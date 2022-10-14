@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  text-decoration: none;
+}
 
 body {
   margin: 0;
@@ -10,6 +15,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
@@ -17,4 +23,57 @@ code {
     monospace;
 }
 
+.list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  /*width: 400px;*/
+}
 
+.movie-container {
+  width: 25%;
+}
+
+.img.list-element{
+  display: block;
+  width: 100%;
+}
+
+.movie-info {
+  position: absolute;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0;
+}
+
+.movie-info:hover{
+  opacity: 1;
+}
+
+/*.img.list-element{
+  opacity: 3;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}*/
+
+
+
+/*.movie-info {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;*/
+=======
+.button{
+  border:solid;
+}
