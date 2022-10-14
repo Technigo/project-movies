@@ -17,9 +17,11 @@ const Details = () => {
   }, [id])
 
   return (
-    <section className="details-container">
+    <section
+      className="details-container"
+      style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
       <button className="go-back-btn" type="button" onClick={onBackButtonClick}>Go back</button>
-      <img className="poster-img" src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt="poster" />
+      <img className="poster-img" src={`https://image.tmdb.org/t/p/w500/${details.poster_path}`} alt="poster" />
       <div className="movie-info">
         <div className="title-and-rating">
           <h1>{details.title}</h1>

@@ -60,22 +60,35 @@ code {
 .details-container {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 0.5fr 1fr 1fr;
+  width: 100vw; 
+  height: 100vh;
 }
 
 .go-back-btn {
   grid-column: 1/2;
+  justify-self: start;
+  align-self: start;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .poster-img {
   grid-column: 1/2;
   grid-row: 2/4;
+  border: solid white 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+
 }
 
 .movie-info {
   grid-column: 2/3;
   grid-row: 3/4;
+  margin-bottom: 20px;
 }
+
+
 /* Media Qs */
 
 @media (min-width: 668px) and (max-width: 1024px) {
