@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Orbit } from '@uiball/loaders';
 import { TVSHOW_DETAILS_URL } from 'utils/Urls';
-/* import { Seasons } from './Seasons' */
 
 export const TvSeriesDetails = () => {
   const [tvShow, setTvShow] = useState([])

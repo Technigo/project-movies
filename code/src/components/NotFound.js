@@ -8,7 +8,7 @@ export const NotFound = () => {
     navigate('/');
   }
   return (
-    <section className='notfound-container'>
+    <section className='notFoundPage'>
       <h1 className='notfound-404'>404</h1>
       <img id='notfoundIcon' src='../icons/PageNotFound.png' alt='notfound 404' />
       <h2 className='notfound-ops'> Ooooppps! </h2>

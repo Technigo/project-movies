@@ -5,13 +5,14 @@ import { Orbit } from '@uiball/loaders';
 import { ONCINEMA_URL } from 'utils/Urls';
 
 export const Oncinema = () => {
-  const [newReleases, setNewReleases] = useState([])
-  const [loading, setLoading] = useState(true);
+  const [onCinema, setOnCinema] = useState([])
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true)
     fetch(ONCINEMA_URL)
       .then((res) => res.json())
-      .then((json) => setNewReleases(json.results))
+      .then((json) => setOnCinema(json.results))
       .catch((error) => alert(error, 'error'))
       .finally(() => setLoading(false));
   }, [])
@@ -20,15 +21,15 @@ export const Oncinema = () => {
     return (
       <>
         <h2>Loading..</h2>
-        <Orbit size={40} speed={0.9} color='black' />
+        <Orbit size={40} speed={0.9} color='#F9F9F9' />
       </>
     );
   }
   return (
-    <section className='new-releases'>
+    <section className='onCinemaPage'>
       <h1 className='on-cinema'>On cinema right now</h1>
       <div className='movies-container'>
-        {newReleases.map((releases) => (
+        {onCinema.map((releases) => (
           <article className='movie-wrapper' key={releases.id}>
             <Link key={releases.id} to={`/movies/${releases.id}`}>
               <img src={`https://image.tmdb.org/t/p/w342${releases.poster_path}`} alt={releases.title} />

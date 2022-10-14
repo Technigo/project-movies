@@ -6,9 +6,10 @@ import { MOVIES_URL } from 'utils/Urls'
 
 export const StartPage = () => {
   const [movies, setMovies] = useState([])
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true)
     fetch(MOVIES_URL)
       .then((res) => res.json())
       .then((json) => setMovies(json.results))
@@ -26,7 +27,7 @@ export const StartPage = () => {
   }
 
   return (
-    <section className='startpage'>
+    <section className='startPage'>
       <h1 className='popular'>Popular movies</h1>
       <div className='movies-container'>
         {movies.map((movie) => (

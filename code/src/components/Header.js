@@ -10,7 +10,7 @@ export const Header = () => {
 
       <ul className='navlink-container'>
         <li className='navlink'>
-          <NavLink to='/newReleases'>On cinema</NavLink>
+          <NavLink to='/onCinema'>On cinema</NavLink>
         </li>
         <li className='navlink'>
           <NavLink to='/upcoming'>Upcoming</NavLink>

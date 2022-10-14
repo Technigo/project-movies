@@ -25,7 +25,7 @@ export const Upcoming = () => {
     );
   }
   return (
-    <section className='upcoming'>
+    <section className='upcomingPage'>
       <h1 className='upcoming-header'>Upcoming movies</h1>
       <div className='movies-container'>
         {upcoming.map((movie) => (
