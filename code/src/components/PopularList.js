@@ -12,10 +12,6 @@ const PopularList = ({ movies }) => {
             className="movieCard"
             key={movie.id}
             to={`/movies/${movie.id}`}>
-            {/*
-            to={`/details/${movie.name}`}
-          className="list-element">{movie.name}
-          */}
             <div className="imageContainer">
               <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} className="poster" />
               <div className="imageOverlay">

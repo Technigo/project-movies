@@ -30,7 +30,6 @@
   position: relative;
 }
 
-/* Make the image to responsive */
 .image {
   display: block;
   width: 100%;
@@ -56,5 +55,3 @@
 .imageContainer:hover .imageOverlay {
   opacity: 1;
 }
-
-
