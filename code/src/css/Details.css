@@ -50,6 +50,23 @@
     width: 35%;
   }
 
+  .rating {
+    color: #000;
+    font-weight: 500;
+    background: #fff;
+    padding: 5px 5px;
+    text-shadow: none;
+    display: inline-block;
+  }
+
+  .star {
+    font-size: 16px;
+  }
+
   p {
     margin-right: 15%;
+  }
+
+  .rating:before {
+    content: url('../star-icon.png');
   }

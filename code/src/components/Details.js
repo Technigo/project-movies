@@ -26,7 +26,7 @@ const Details = () => {
             <img className="detailsPoster" alt="img" src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} />
           </div>
           <div className="detailsBox">
-            <h2>{details.title}</h2>
+            <h2><span className="title">{details.title}</span> <span className="rating"> {Math.round(details.vote_average * 10) / 10}</span></h2>
             <p>{details.overview}</p>
           </div>
         </div>
