@@ -8,10 +8,14 @@ export const PageNotFound = () => {
   };
 
   return (
-    <>
-      <h1>Page Not Found! </h1>
-      <button type="button" onClick={returnToDefaultPage}>Go back to the home page</button>
-    </>
+    <section className="pagenotfound-container">
+      <div className="pagenotfound-text">
+        <h1>Oh no! Page not found! </h1>
+        <p>Whoops! Seems like you tried navigating to a page that does not exist.</p>
+        <p>To return to our homepage, click the button below!</p>
+      </div>
+      <button className="pagenotfound-button" type="button" onClick={returnToDefaultPage}>RETURN HOME</button>
+    </section>
   );
 }
 
