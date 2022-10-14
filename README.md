@@ -11,8 +11,10 @@ Tech stack and features
 
 ## The problem
 
-We constructed out umbrella components App.js where we added the routes and fetched the API. We further added two key components - List.js and IndividualMovie.js. On the IndividualMovie.js we additionally called on the api. We have also added NotFound.js and LoadingPage.js in order to improve the user experience. The page was further styled in CSS that is fully responsive. 
+We constructed an umbrella components App.js where we added the routes and fetched the API. We further added two key components - List.js and IndividualMovie.js. On the IndividualMovie.js we additionally called on the api. We have also added NotFound.js and LoadingPage.js in order to improve the user experience. The page was further styled in CSS that is fully responsive. 
 
 ## View it live
 
 https://movie-catalogue-project.netlify.app/
+
+Created by Antonella Cardozo & Petra Söderström
