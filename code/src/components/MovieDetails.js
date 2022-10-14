@@ -17,20 +17,29 @@ const MovieDetails = () => {
   }, [id])
 
   return (
-    <section className="details-page">
-      <div className="background-image">
-        <img src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.tittle} />
-        <button type="button" onClick={goBack}> Movies </button>
-        <div className="movie-container">
-          <img className="movie-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-          <div className="movie-description">
-            <h2>{movie.title}</h2>
-            <h3>{Math.round(movie.vote_average * 10) / 10}</h3>
-            <p>{movie.overview}</p>
+    <div className="background" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
+      <div className="movie-details">
+        <div className="detail-container">
+          <div className="go-back">
+            <img src="/icons/backicon.svg" id="goback" alt="goback" />
+            <button type="button" onClick={goBack}> Movies </button>
+          </div>
+          <div className="movie-poster">
+            <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
           </div>
         </div>
+        <div className="movie-description">
+          <div className="movie-tittle">
+            <h2>{movie.title}</h2>
+            <div className="star-raiting">
+              <img src="/icons/star.svg" alt="starraiting" />
+              <h3>{Math.round(movie.vote_average * 10) / 10}</h3>
+            </div>
+          </div>
+          <p>{movie.overview}</p>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
 
