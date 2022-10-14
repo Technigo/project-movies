@@ -7,9 +7,13 @@ const NotFound = () => {
     navigate('/');
   }
   return (
-    <div>
+    <div style={{ textAlign: 'center' }}>
+      <h1>Error 404 Page Not Found</h1>
       <p>Sorry Movie Master, no such page</p>
-      <button type="button" onClick={onHomeButtonClick}>Return to Home Page</button>
+      <button
+        type="button"
+        onClick={onHomeButtonClick}>Return to Home Page
+      </button>
     </div>);
 }
 export default NotFound;
