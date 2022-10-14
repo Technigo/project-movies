@@ -5,8 +5,6 @@ import { MovieList } from './components/MovieList'
 import { MovieDetails } from './components/MovieDetails'
 import { PageNotFound } from './components/PageNotFound'
 
-// REMEMBER TO IMPORT PAGES
-
 export const App = () => {
   const [list, setList] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -36,7 +34,6 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<MovieList list={list} />} />
         <Route path="/moviedetails/:id" element={<MovieDetails />} />
-        {/*  <Route path="moviedetails/movieId" element={<MovieDetails />} /> */}
         <Route path="/404" element={<PageNotFound />} />
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>

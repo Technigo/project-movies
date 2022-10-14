@@ -27,8 +27,7 @@ export const MovieDetails = () => {
       <button
         className="go-back-btn"
         type="button"
-        onClick={returnToDefaultPage}
-      >
+        onClick={returnToDefaultPage} >
         <span className="go-back-home">«</span>Go Back
       </button>
       <div className="movie-field">
