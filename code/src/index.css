@@ -14,25 +14,34 @@ body {
 	display: flex;
 	justify-content: center;
 	background-color: black;
-}
-
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
+	color: #fff;
 }
 
 p {
 	font-size: 16px;
 	line-height: 1.2;
 }
+
+header {
+	height: 10vh;
+	top: 0;
+	z-index: 1;
+	background-color: #000;
+	width: 100%;
+	padding: 0.5rem;
+}
 .movie-wrapper {
 	display: flex;
 	flex-wrap: wrap;
+	scroll-margin-top: 10rem;
+	justify-content: center;
+
 }
 
 .movie {
 	position: relative;
-	width: 50%;
+	width: 45%;
+	margin: 0.5rem;
 }
 
 .movie-img {
@@ -70,7 +79,6 @@ h2 {
 	min-width: 50vh;
 	padding: 2rem;
 	background-size: cover;
-	/* background-position: center center; */
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
@@ -156,15 +164,29 @@ h2 {
 	align-self: center;
 	height: 100vh;
 	justify-content: center;
+	text-align: center;
 }
 .ghost {
 	margin: 2rem;
 }
 .not-found-container h1, h2 {
 	color: #fff;
-	align-self: center;
 }
 
+footer {
+	display: flex;
+	height: 5rem;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	gap:2rem
+}
+ footer p {
+	color: #adadad;
+ }
+.tmdb-logo {
+	height:2rem;
+}
 @keyframes loading-cog
 {
   0%
@@ -182,9 +204,15 @@ h2 {
 	p {
 		line-height: 1.5;
 	}
+
+	.movie-wrapper {
+		
+		justify-content: center;
+	}
 	.movie {
 		position: relative;
-		width: 25%;
+		width: 23%;
+		
 	}
 
 /* -------------- */
