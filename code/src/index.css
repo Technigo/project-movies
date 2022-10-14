@@ -20,6 +20,8 @@ code {
 
 a {color: inherit;}
 
+/* Styling the component App.js */
+
 .outerWrapper {
   width: 100%;
 }
@@ -28,6 +30,8 @@ a {color: inherit;}
   width: 99%;
   margin: 0 auto;
 }
+
+/* Styling the page MovieList.js */
 
 .sectionWrapper {
   display: flex;
@@ -43,7 +47,7 @@ a {color: inherit;}
 }
 
 .movieBox .hoverBox {
-  border: 2px solid pink;
+  border: 5px solid black;
   position: absolute;
   top: 0;
   right: 0;
@@ -71,6 +75,8 @@ a {color: inherit;}
   justify-content: flex-end;
 }
 
+/* General styling */
+
 .img {
   width: 100%;
 }
@@ -79,7 +85,9 @@ a {color: inherit;}
   width: 100%;
 }
 
-/*back button, The span creates the arrow, and if you hover on it it will move to the left.*/
+/* Styling the page Details.js */
+
+/*    Here, the span creates the arrow. Hover over it, and it will move to the left. */
 .backButton {
   grid-area: 1 / 1 / span 1 / span 1;
   display: flex;
@@ -126,11 +134,6 @@ a {color: inherit;}
   border-color: text-hover-color;
 }
 
-.backButton:hover > .arrow::before {
-  opacity: 1;
-  width: 20px;
-}
-
 .backButton:hover {
   background-color: transparent;
   color: white;
@@ -155,10 +158,13 @@ a {color: inherit;}
 
 .detailPoster {
   grid-area: 2 / 1 / span 4 / span 2;
+  border: 6px solid #fff;
 }
 
 .detailTitle {
   grid-area: 4 / 3 / span 1 / span 2;
+  text-shadow: 1px 1px #4d4d4d;
+  margin-top: 20px;
 }
 
 .detailScore {
@@ -168,6 +174,7 @@ a {color: inherit;}
   justify-self: start;
   align-self: start;
   padding: 5px 7px 5px 5px;
+  font-size: 1.3em;
 }
 
 .detailOverview {
@@ -179,6 +186,77 @@ h1 {
   margin: 10px;
 }
 
+/* MEDIA QUERIES */
 
+@media (min-width: 0px) and (max-width: 570px) {
+  .movieBox {
+    width: 100%;
+  }
+  
+  .detailBox {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 5px;
+  }
+}
+
+@media (min-width: 571px) and (max-width: 850px) {
+  .movieBox {
+    width: 33.33%;
+  }
+
+  .detailBox {
+    width: 90%
+  }
+
+  .detailPoster {
+    width: 200px;
+  }
+
+  .detailPoster {
+    grid-column-start: 1;
+    grid-column-end: five;
+    grid-row-start: row1-start;
+    grid-row-end: 1;
+  }
+
+  .detailTitle {
+    grid-column-start: 3;
+    grid-column-end: five;
+    grid-row-start: row1-start;
+    grid-row-end: 1;
+  }
+
+  .detailScore {
+    grid-column-start: 3;
+    grid-column-end: five;
+    grid-row-start: row1-start;
+    grid-row-end: 2;
+  }
+
+  .detailOverview {
+    grid-column-start: 3;
+    grid-column-end: five;
+    grid-row-start: row1-start;
+    grid-row-end: 3;
+  }
+
+}
+
+@media (min-width: 851px) and (max-width: 1299px) {
+  .movieBox {
+    width: 25%;
+  }
+
+  .detailPoster {
+    width: 250px;
+  }
+}
+
+@media (min-width: 1300px)  {
+  .movieBox {
+    width: 25%;
+  }
+}
 
 

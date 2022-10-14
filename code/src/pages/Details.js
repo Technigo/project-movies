@@ -23,7 +23,7 @@ export const Details = () => {
   return (
     <>
       <button className="backButton" type="button" onClick={goBack}><span className="arrow" /> Go back</button>
-      <div className="detailPage" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
+      <div className="detailPage" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
 
         <div className="detailBox">
           <img className="detailPoster" src={`http://image.tmdb.org/t/p/w342/${details.poster_path}`} alt="poster" />
