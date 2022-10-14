@@ -13,4 +13,4 @@ export const NotFound = () => {
     </div>
   )
 }
-}
+
