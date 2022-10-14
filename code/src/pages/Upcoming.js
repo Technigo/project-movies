@@ -6,9 +6,10 @@ import { UPCOMING_URL } from 'utils/Urls';
 
 export const Upcoming = () => {
   const [upcoming, setUpcoming] = useState([])
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true)
     fetch(UPCOMING_URL)
       .then((res) => res.json())
       .then((json) => setUpcoming(json.results))
@@ -20,7 +21,7 @@ export const Upcoming = () => {
     return (
       <>
         <h2>Loading..</h2>
-        <Orbit size={40} speed={0.9} color='black' />
+        <Orbit size={40} speed={0.9} color='#F9F9F9' />
       </>
     );
   }

@@ -7,11 +7,12 @@ import { TVSHOW_DETAILS_URL } from 'utils/Urls';
 
 export const TvSeriesDetails = () => {
   const [tvShow, setTvShow] = useState([])
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate()
   const { id } = useParams()
 
   useEffect(() => {
+    setLoading(true)
     fetch(TVSHOW_DETAILS_URL(id))
       .then((res) => res.json())
       .then((data) => { setTvShow(data) })
@@ -27,7 +28,7 @@ export const TvSeriesDetails = () => {
     return (
       <>
         <h2>Loading..</h2>
-        <Orbit size={40} speed={0.9} color='black' />
+        <Orbit size={40} speed={0.9} color='#F9F9F9' />
       </>
     );
   }

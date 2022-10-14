@@ -7,11 +7,12 @@ import { MOVIES_DETAILS_URL } from 'utils/Urls';
 
 export const MovieDetails = () => {
   const [details, setDetails] = useState([])
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate()
   const { id } = useParams()
 
   useEffect(() => {
+    setLoading(true)
     fetch(MOVIES_DETAILS_URL(id))
       .then((res) => res.json())
       .then((json) => { setDetails(json) })
