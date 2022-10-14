@@ -3,19 +3,27 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { MOVIE_DETAILS_URL } from 'utils/urls'
 import Loader from './Loader'
+import NotFound from './NotFound'
 
 const MovieDetails = () => {
   const { movieId } = useParams()
   const navigate = useNavigate()
   const [details, setDetails] = useState({})
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
 
   useEffect(() => {
     console.log(movieId)
     fetch(MOVIE_DETAILS_URL(movieId))
       .then((response) => response.json())
-      .then((data) => setDetails(data))
-      .catch(((error) => console.error(error)))
+      .then((data) => {
+        if (data) {
+          setDetails(data)
+        } else {
+          setError(true)
+        }
+      })
+      .catch(() => setError(true))
       .finally(() => setLoading(false))
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -25,6 +33,8 @@ const MovieDetails = () => {
   }
 
   if (loading) return <Loader />
+
+  if (error) return <NotFound />
 
   return (
     <article
