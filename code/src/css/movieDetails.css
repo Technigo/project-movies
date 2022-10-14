@@ -144,7 +144,7 @@ body {
     color: #fff;
     font-size: 16px;
     row-gap: 20px;
-    justify-content: flex-end;
+    justify-content: flex-stat;
   }
 
   .back-image {
@@ -178,7 +178,7 @@ body {
   }
 
   .background{
-    background-position-y: center;
+    background-position-y: center; 
   }
 }
 
