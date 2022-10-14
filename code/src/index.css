@@ -139,7 +139,6 @@ a.active {
     .detail-group-container {
       display: flex;
       margin-top: 22rem;
-      margin-left: 3rem;
       color: white;
       align-items: flex-end;
       margin-bottom: 4rem;
@@ -188,7 +187,7 @@ a.active {
     margin-top: 22rem;
     margin-left: 3rem;
     align-items: flex-end;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
   
   .movie-details {
