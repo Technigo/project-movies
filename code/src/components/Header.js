@@ -8,8 +8,8 @@ const Header = () => {
   const year = date.getFullYear();
   return (
     <header>
-      <h1 style={{ color: '#FFF' }}>Popular movies</h1>
-      <p>{month} {year}</p>
+      <h1>Popular movies</h1>
+      <h2>{month} {year}</h2>
     </header>
   )
 }

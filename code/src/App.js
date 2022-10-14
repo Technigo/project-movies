@@ -15,7 +15,6 @@ export const App = () => {
       .then((res) => res.json())
       .then((data) => setMovieList(data.results))
       .catch((error) => console.error(error))
-      .finally(() => console.log(`the movielist: ${movieList}`))
   }, []);
 
   return (
@@ -28,8 +27,6 @@ export const App = () => {
           element={<MovieDetail movieList={movieList} />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" />} />
-        {/* Det här funkar inte om man försöker nå /movie/vad-som-helst. /vad-som-helst funkar dock.
-        <Route path="/movie/*" element={<Navigate to="/404" />} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>

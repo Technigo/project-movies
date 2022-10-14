@@ -22,11 +22,7 @@ const MovieDetail = () => {
         }
       })
       .catch(() => setError(true))
-      // .catch((error) => console.error(error))
-      // .finally(() => setLoading(false))
-    setTimeout(() => {
-      setLoading(false)
-    }, 1500)
+      .finally(() => setLoading(false))
   }, [id])
 
   if (error) {
@@ -36,7 +32,9 @@ const MovieDetail = () => {
   return (
     <article
       className="movie-page"
-      style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(https://image.tmdb.org/t/p/w1280${movieDetailList.backdrop_path})` }}>
+      style={movieDetailList.backdrop_path
+      && { backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), 
+        url(https://image.tmdb.org/t/p/w1280${movieDetailList.backdrop_path})` }}>
       {loading ? <Loading />
         : <>
           <GoBack />
