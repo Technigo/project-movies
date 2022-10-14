@@ -2,21 +2,28 @@
 /* eslint-disable react/jsx-closing-bracket-location */
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import Loader from 'components/Loader';
 
 const apiKey = 'd4669261ce30d2ac76f238d73f4bd890';
 
 const Details = () => {
   const [movie, setMovie] = useState({});
-  const params = useParams();
+  const [ready, setReady] = useState(true);
   const navigate = useNavigate();
+  const params = useParams();
   const API_URL = `https://api.themoviedb.org/3/movie/${params.movieId}?api_key=${apiKey}&language=en-US&page=1`;
 
   useEffect(() => {
+    setReady(false);
     fetch(API_URL)
       .then((response) => response.json())
-      .then((json) => setMovie(json));
+      .then((json) => setMovie(json))
+      .finally(() => setReady(true));
   }, [API_URL]);
 
+  if (!ready) {
+    return <Loader />;
+  }
   const goBack = () => {
     navigate(-1);
   };
