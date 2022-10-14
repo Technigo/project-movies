@@ -19,7 +19,7 @@ const MovieDetail = () => {
   };
 
   return (
-  <section className="details-container">
+    <section className="details-container">
       <img
         className="backdrop-image"
         src={`https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`}

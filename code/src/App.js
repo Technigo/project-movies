@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Movies from './components/Movies.js'
-import { NotFound } from './components/NotFound.js'
-import MovieDetails from './MovieDetail.js';
+import NotFound from './components/NotFound.js'
+import MovieDetails from './components/MovieDetail.js';
 
 export const App = () => {
   const [fetchMovies, setFetchMovies] = useState([]) // default state for picking up data
@@ -39,7 +39,6 @@ export const App = () => {
     );
   }
   return (
-    <>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Movies movies={fetchMovies} upPage={upPage} downPage={downPage} />} />
@@ -48,7 +47,5 @@ export const App = () => {
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>
     </BrowserRouter>
-
-        </>
   );
 }

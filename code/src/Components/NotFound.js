@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'// initialized with useNavigate
 
-export const NotFound = () => {
+const NotFound = () => {
   const navigator = useNavigate()
   const toDefaultnav = () => { // navigates to the original from default page when given -1
     navigator(-1)
@@ -13,4 +13,4 @@ export const NotFound = () => {
     </div>
   )
 }
-
+export default NotFound;
