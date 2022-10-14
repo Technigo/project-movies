@@ -28,6 +28,10 @@ p {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.movies-list a img {
+  width: 100%;
+}
 .movie-item {
   position: relative;
 }
@@ -196,21 +200,14 @@ a {
 
 /* MEDIA QUERIES */
 
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 600px) {
   .movies-list {
     grid-template-columns: 1fr 1fr 1fr;
   }
   .movie-details {
     flex-direction: row;
   }
-  .image-wrapper {
-    gap: 60px;
-  }
-
-  .movies-list {
-    width: auto;
-  }
-}
+ }
 
 @media screen and (min-width: 900px) {
   .movies-list {
@@ -218,11 +215,5 @@ a {
   }
   .movie-details {
     flex-direction: row;
-  }
-  .image-wrapper {
-    gap: 60px;
-  }
-  .movies-list {
-    width: auto;
   }
 }

@@ -23,10 +23,11 @@ export const List = () => {
             key={movie.id}
             to={`/details/${movie.id}`}
             className="movie-item">
-            <img
-              src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-              alt={movie.title}
-            />
+            <div className="poster-image">
+              <img
+                src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+                alt={movie.title} />
+            </div>
             <div className="movie-item-info-wrapper">
               <div className="movie-item-info">
                 <h2>{movie.title}</h2>

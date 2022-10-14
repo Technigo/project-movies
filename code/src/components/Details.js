@@ -52,7 +52,6 @@ const Details = () => {
             {' '}
             Back{' '}
           </button> */}
-          <div></div>
           <img
             src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
             alt={movie.title}

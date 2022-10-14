@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <hr />
-      <p>&#169;2022 by <a href="mailto:saralie.bognandi@gmail.com">Saralie</a> and <a href="mailto:saralie.bognandi@gmail.com">Younas</a></p>
+      <p>&#169;2022 by <a href="mailto:saralie.bognandi@gmail.com">Saralie</a> and <a href="mailto:younas.tesfamaria@outlook.com">Younas</a></p>
       <p>
         Team Foxes
         <span role="img" aria-label="fox emoji">
