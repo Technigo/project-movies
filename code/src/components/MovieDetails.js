@@ -11,12 +11,12 @@ export const MovieDetails = () => {
   const { movieId } = useParams();
   // const navigate = useNavigate();
 
-  const detailStyling = {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) -40%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
-    minHeight: '100vh',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat'
-  }
+  // const detailStyling = {
+  //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) -40%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
+  //   minHeight: '100vh',
+  //   backgroundSize: 'cover',
+  //   backgroundRepeat: 'no-repeat'
+  // }
 
   useEffect(() => {
     fetch(SINGLE_MOVIE_URL(movieId))
@@ -31,7 +31,8 @@ export const MovieDetails = () => {
   return (
     <section className="detailsContainer">
       {movie && (
-        <div className="background" style={detailStyling}>
+        // <div className="background" style={detailStyling}>
+        <div className="background" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
           <NavLink className="link" to="/"> <img className="arrowIcon" src={arrowIcon} alt="back button" /><span>Movies</span> </NavLink>
           <div className="summary">
             <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />

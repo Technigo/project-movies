@@ -92,6 +92,15 @@ började med att ändra filerna movieDetails.css och popularMovies.css (hade int
 
 -fixat lite olika css i movieDetails.css, media querie
 
--flyttat utbbackgroundImages style till en funktion i MoviDetails.js
-
 -rating "knapp"
+
+-flyttat utbbackgroundImages style till en funktion i MoviDetails.js
+// detta funkar tills 23.30 sedan ballar sidan ur och 
+url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path}) går inte längre att läsa?!
+mig veteligen har inget nytt hänt, det sista jag gjorde innan vara att testa 
+media querie .summery, justify-content: space-around; som jag sedan ändrade tillbaka....
+
+tar nya tag imorn fm
+
+
+

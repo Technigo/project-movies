@@ -1,16 +1,16 @@
-.detailsContainer {
+/* .detailsContainer {
     display: flex;
-}
-
-/* .background {
+} */
+/*  bg så den tacker hela bg desktop */
+ .background {
     /* min-height: 95vh; */
-    /* background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-   } */
+} 
 
 .background a {
 position: absolute;
