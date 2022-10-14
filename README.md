@@ -1,13 +1,12 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to make a page displaying popular movies in a list and when you clicked them it should take you to a page where you got some more info about that specific movie. To achieve that we had to fetch data from an api, get familiar with React Router and useParams, and also continue learning about the useState and useEffect hook.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We were a group of three working on the project. We began by deciding what components we wanted to have and then we did all the routing in the App component. After that we moved on the List component and did the get request to the api and made sure that everything there was working. Once we got those things in place the first real challenge was to understand the useParams-thing that we used to make a get request for each specific movie once you clicked them. To actually get it to work was one thing, but wrapping your head around what was going on took some time.
+We did almost everything together with mob-programming using LiveShare in VS Code and divided just a few styling things by the end of the project.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://tarafredriknick-project-movies.netlify.app/

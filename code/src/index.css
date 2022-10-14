@@ -1,5 +1,11 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
+}
+
+body {
+  display: block;
+  background-color: black;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -10,4 +16,180 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* MOVIELIST */
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.list-item {
+  background-size: cover;
+  aspect-ratio: 1 / 1.5;
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.list-item:hover .overlay {
+  opacity: 1;
+}
+
+/* MOVIEDETAILS */
+
+.details-container {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movie-field {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 3em;
+}
+
+.poster-image {
+  margin-right: 2em;
+}
+
+.movie-field-text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.movie-desc {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.movie-title {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 26px;
+}
+
+.movie-field-text span {
+  font-size: 16px;
+  width: 150px;
+  padding: 5px;
+  color: rgb(31, 30, 30);
+  margin-left: 1rem;
+  border-radius: 5px;
+}
+
+
+.poster-image {
+  border: 5px solid white;
+}
+
+.rating {
+  background: white;
+  color: black;
+}
+
+.go-back-btn {
+  background: none;
+  color: #fff;
+  font-size: 24px;
+  padding-top: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-left: 2rem;
+  font-weight: bold;
+  display:flex;
+  align-items: center;
+}
+
+.go-back-home {
+font-size: 50px;
+margin: 0px 1rem 0 1rem;
+transition: 0.3s ease-in-out;
+padding-bottom: 12px;
+}
+
+.go-back-btn{
+  transition: all 0.2s;
+}
+.go-back-home:hover{
+  transform: translateX(-10px);
+}
+
+.go-back-btn:hover {
+transform: translateX(-10px);
+}
+
+.pagenotfound-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.pagenotfound-text {
+  text-align: center;
+  color: white;
+  padding-bottom: 2em;
+}
+
+.pagenotfound-text h1 {
+  padding-bottom: 2em;
+} 
+
+.pagenotfound-button {
+  background: none;
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+  padding: 1em 2em;
+  font-size: 1em;
+  transition: all 0.5s;
+  border-radius: 15px;
+}
+
+.pagenotfound-button:hover {
+  border: 2px solid red;
+  color: white;
+  box-shadow: 0 0.5em 0.5em -0.4em red;
+  transform: translateY(-0.20em);
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 820px) {
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+}
+}
+
+@media only screen and (max-width:819px) and (min-width: 570px) {
+   .list {
+    grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media only screen and (max-width: 569px) and (min-width: 370px) {
+   .list {
+    grid-template-columns: repeat(2, 1fr);
+}
 }
