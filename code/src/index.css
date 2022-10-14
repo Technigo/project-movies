@@ -69,6 +69,67 @@ a {
   overflow-wrap: break-word;
 }
 
+/* - - - MovieDetails.js - - - */
+
+.details-container {
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.link-back {
+  position: absolute;
+  top: 50px;
+  bottom: 50px;
+  font-size: 20px;
+  color:white;
+  font-weight: bold;
+  background-color: transparent;
+  width: 30px;
+  height: 20px;
+  border: none;
+  display: inline-flex;
+}
+
+.link-back svg {
+  width: 30px;
+  transition: margin-right 0.2s ease-in-out;
+}
+
+.link-back:hover svg {
+  margin-right: 5px;
+}
+
+.details-summary {
+  display: flex;
+  padding: 50px;
+  gap: 20px;
+}
+
+.details-summary-poster {
+  border: 5px white solid;
+  height: 432px;
+}
+
+.details-summary-text {
+  border: 1px red solid;
+}
+
+.details-summary-text-header {
+  text-shadow: 1px 1px #4d4d4d;
+}
+
+/* .details-summary-text-header-rating {
+
+}
+
+.details-summary-text-description {
+
+} */
+
 /* - - - Loader.js - - - */
 
 .loader-container {

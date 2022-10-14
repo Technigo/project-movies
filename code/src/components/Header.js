@@ -1,14 +1,13 @@
 import React from 'react'
-//  { useState }  läg till här uppe
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
     <header>
-      <nav>
+      {/* <nav>
         <NavLink to="/"> Home </NavLink>
         <NavLink to="/details"> Details </NavLink>
-      </nav>
+      </nav> */}
     </header>
   )
 }
