@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-/* import Header from 'components/Header'; */
 import PopularList from 'components/PopularList';
 import Details from 'components/Details';
 import NotFound from 'components/NotFound';
