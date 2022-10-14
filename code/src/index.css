@@ -88,10 +88,8 @@ a {
   color:white;
   font-weight: bold;
   background-color: transparent;
-  width: 30px;
   height: 20px;
   border: none;
-  display: inline-flex;
 }
 
 .link-back svg {
@@ -116,19 +114,30 @@ a {
 
 .details-summary-text {
   border: 1px red solid;
+  height: fit-content;
+  width: 50%;
+  align-self: flex-end;
 }
 
 .details-summary-text-header {
-  text-shadow: 1px 1px #4d4d4d;
+ font-size: 22px;
 }
 
-/* .details-summary-text-header-rating {
+.details-summary-text-header-title {
+  text-shadow: 1px 1px #4d4d4d;
+}
+  
 
+.details-summary-text-header-rating {
+background-color: white;
+color: black;
+padding-left: 5px;
+padding-right: 5px;
 }
 
 .details-summary-text-description {
 
-} */
+}
 
 /* - - - Loader.js - - - */
 

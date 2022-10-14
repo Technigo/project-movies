@@ -33,12 +33,12 @@ const MovieDetails = () => {
         backgroundImage: `url(http://image.tmdb.org/t/p/original${details.backdrop_path})`
       }}>
       <div className="details-summary">
-        <Link to={goBack} className="button-back"> Movies </Link>
+        <Link to={goBack} className="link-back">⬅️ Movies</Link>
         <img className="details-summary-poster" src={details ? `https://image.tmdb.org/t/p/w342${details.poster_path}` : ''} alt={details.title} />
         <div className="details-summary-text">
           <h1 className="details-summary-text-header">
-            <span className="details-summary-text-header-title">{details.title}</span>
-            <span clasName="details-summary-text-header-rating">⭐️ Rating</span>
+            <span className="details-summary-text-header-title">{details.title} </span>
+            <span className="details-summary-text-header-rating">⭐️ 7.2</span>
           </h1>
           <p className="details-summary-text-wrapper-description">{details.overview}</p>
         </div>
@@ -49,4 +49,4 @@ const MovieDetails = () => {
 
 export default MovieDetails
 
-// @TODO add icon and animation to button and fix styling
+// @TODO add icon to link, fix text animation & styling
