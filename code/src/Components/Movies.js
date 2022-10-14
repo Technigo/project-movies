@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom' // importing for usage
-// import { useParams } from 'react-router-dom';
-​
+//import { useParams } from 'react-router-dom';
+
 const Movies = ({ movies, downPage, upPage }) => {
   return (
     <section className="list-wrapper">
@@ -21,7 +21,6 @@ const Movies = ({ movies, downPage, upPage }) => {
             </div>
           </Link>
         </div>
-​
       ))}
       <div className="buttons">
         <button className="up" type="button" onClick={upPage}>Page up!</button>
