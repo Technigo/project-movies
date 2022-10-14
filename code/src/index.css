@@ -147,10 +147,19 @@ a:-webkit-any-link {
 }
 
 /* TABLET */
-@media (min-width: 668px) and (max-width: 1024px) {}
+@media (min-width: 668px) and (max-width: 1024px) {
+  .page-content img {
+    width: 40%;
+  }
+
+  .back-btn {
+    margin-bottom: 5%;
+  }
+}
 
 /* DESKTOP */
 @media (min-width: 1025px) {
+  /* MOVIE-LIST */
   .movies {
     width: 25%;
   }

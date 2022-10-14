@@ -1,5 +1,5 @@
 import React from 'react';
-// &nbsp;
+
 const Movie = ({ name, poster, overview, average }) => {
   return (
     <section className="page-content">

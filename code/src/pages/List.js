@@ -5,6 +5,7 @@ import { BASE_URL } from 'utils/urls';
 const List = () => {
   const [movieList, setMovieList] = useState([]);
 
+  // Function that fetches the movie-list from the database
   useEffect(() => {
     fetch(BASE_URL)
       .then((response) => response.json())
@@ -16,6 +17,7 @@ const List = () => {
     <section className="movie-list">
       {movieList.map((movie) => {
         return (
+          // Identification for the detailed view, so the dynamic fetch works
           <Link className="movies" key={movie.id} to={`/details/${movie.id}`}>
             <div className="movie-cards">
               <div className="image-overlay" />
@@ -28,7 +30,6 @@ const List = () => {
           </Link>
         )
       })}
-
     </section>
   )
 }

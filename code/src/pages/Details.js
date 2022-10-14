@@ -6,19 +6,20 @@ import Movie from '../components/Movie'
 const Details = () => {
   const [listItem, setListItem] = useState([]);
   const [loading, setLoading] = useState(false);
-  // const params = useParams(); // Version1
-  const { movieName } = useParams(); // Version2; rekommenderat!
+  const { movieId } = useParams();
   const navigate = useNavigate();
 
+  // Function that fetches the specific movie-information abouth the selected movie
   useEffect(() => {
     setLoading(true)
-    fetch(SINGLE_MOVIE_URL(movieName))
+    fetch(SINGLE_MOVIE_URL(movieId))
       .then((response) => response.json())
       .then((data) => setListItem(data))
       .catch((error) => console.error(error))
       .finally(() => setLoading(false))
-  }, [movieName])
+  }, [movieId])
 
+  // Function that enables the user to go back to the previous page
   const goBack = () => {
     navigate(-1);
   }
@@ -32,6 +33,7 @@ const Details = () => {
   return (
     <section
       className="background-image"
+      // This is all the styling for the background image, none in the css-file
       style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${listItem.backdrop_path})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
