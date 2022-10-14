@@ -30,7 +30,7 @@ const Details = () => {
   }
 
   return (
-    <div
+    <section
       className="background-image"
       style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${listItem.backdrop_path})`,
         backgroundPosition: 'center',
@@ -44,8 +44,9 @@ const Details = () => {
         name={listItem.title}
         poster={listItem.poster_path}
         overview={listItem.overview}
-        average={listItem.vote_average} />
-    </div>
+        // Makes the vote-average into a number with just one decimal
+        average={String(Math.round(listItem.vote_average * 10) / 10)} />
+    </section>
   )
 }
 

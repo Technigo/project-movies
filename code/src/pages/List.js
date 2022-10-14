@@ -13,13 +13,13 @@ const List = () => {
   }, []);
 
   return (
-    <div className="movie-list">
+    <section className="movie-list">
       {movieList.map((movie) => {
         return (
           <Link className="movies" key={movie.id} to={`/details/${movie.id}`}>
             <div className="movie-cards">
               <div className="image-overlay" />
-              <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="" />
+              <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={`${movie.title}-poster`} />
               <div className="image-text">
                 <h1 className="list-title">{movie.title}</h1>
                 <h2 className="release-date">Released {movie.release_date}</h2>
@@ -29,7 +29,7 @@ const List = () => {
         )
       })}
 
-    </div>
+    </section>
   )
 }
 
