@@ -17,7 +17,8 @@ const MovieDetails = () => {
     fetch(MOVIE_DETAILS_URL(movieId))
       .then((response) => response.json())
       .then((data) => {
-        if (data) {
+        console.log(data)
+        if (data.id) {
           setDetails(data)
         } else {
           setError(true)
@@ -25,7 +26,7 @@ const MovieDetails = () => {
       })
       .catch(() => setError(true))
       .finally(() => setLoading(false))
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const goBack = () => {
