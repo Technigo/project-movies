@@ -34,14 +34,20 @@ export const App = () => {
   console.log(movieList)
 
   return (
+
     <BrowserRouter>
       <Header />
-      <Routes>
-        <Route path="/" element={<MovieList movieList={movieList} />} />
-        <Route path="/details/:id" element={<Details />} />
-        <Route path="/404" element={<NotFound />} />
-        <Route path="*" element={<Navigate to="/404" replace />} />
-      </Routes>
+      <section className="outerWrapper">
+        <div className="innerWrapper">
+          <Routes>
+            <Route path="/" element={<MovieList movieList={movieList} />} />
+            <Route path="/details/:id" element={<Details />} />
+            <Route path="/404" element={<NotFound />} />
+            <Route path="*" element={<Navigate to="/404" replace />} />
+          </Routes>
+        </div>
+      </section>
+
     </BrowserRouter>
   );
 }
