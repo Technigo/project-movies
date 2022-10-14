@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import MovieDetail from 'components/MovieDetail';
 import NotFound from 'components/NotFound';
+import Header from 'components/Header';
+import Footer from 'components/Footer';
 import MovieApp from './components/MovieApp';
 
 export const App = () => {
@@ -18,6 +20,7 @@ export const App = () => {
 
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/" element={<MovieApp movieList={movieList} />} />
         <Route
@@ -28,6 +31,7 @@ export const App = () => {
         {/* Det här funkar inte om man försöker nå /movie/vad-som-helst. /vad-som-helst funkar dock.
         <Route path="/movie/*" element={<Navigate to="/404" />} /> */}
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
