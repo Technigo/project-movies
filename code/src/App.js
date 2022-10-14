@@ -32,7 +32,6 @@ export const App = () => {
   }
   return (
     <BrowserRouter>
-      <p>hello</p>
       {/* <Header /> */}
       <Routes>
         <Route path="/" element={<PopularList movies={popularList} />} />
