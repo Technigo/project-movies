@@ -22,8 +22,8 @@ body {
 }
 
 .poster-img {
-  width: 57%;
-  height: 40%;
+  width: 45vw;
+  height: 65vw;
   border: 5px solid white;
 }
 
@@ -94,8 +94,8 @@ body {
   }
 
   .poster-img {
-      width: 43%;
-      height: 45%;
+    width: 32vw;
+    height: 45vw;
   }
 
   .back-btn-div {
@@ -126,8 +126,8 @@ body {
   }
 
   .poster-img {
-      width: 50%;
-      height: 55%;
+    width: 17vw;
+    height: 28vw;
   }
 
   .summary-wrapper {
