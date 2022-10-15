@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 import MovieList from 'components/MovieList'
-/* import Header from 'components/Header' */
 import MovieDetails from 'components/MovieDetails'
 import NotFound from 'components/NotFound';
 import { BASE_URL } from 'utils/urls';
@@ -21,9 +20,6 @@ export const App = () => {
 
   return (
     <BrowserRouter>
-      {/* <header>
-        <Header />
-      </header> */}
       <main>
         <Routes>
           <Route path="/" element={<MovieList movieList={movieList} />} />

@@ -7,7 +7,7 @@ import { MOVIEDETAILS_URL } from 'utils/urls'
 
 const MovieDetails = () => {
   const [movieDetailList, setMovieDetailList] = useState([])
-  const { id } = useParams() // preferred version
+  const { id } = useParams()
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const MovieDetails = () => {
   }, [id])
 
   const goBack = () => {
-    navigate(-1) // to go back to previous page
+    navigate(-1)
   }
 
   return (
@@ -42,12 +42,3 @@ const MovieDetails = () => {
 }
 
 export default MovieDetails
-
-/* <div
-className='backdrop'
-style={{
-  backgroundImage: movieDetails.backdrop_path
-    ? `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`
-    : '',
-}}
-> */
