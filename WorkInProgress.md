@@ -122,14 +122,19 @@ har testat med en timerfunktion jag lånade från joel och tika
 
 -----------------------------
 
-Linnea, du kan gärna skriva på ReadMe
+Linnea - lördag
 
-red level, styling:
+- såg att du ändrat till " min-height 100vh " på background, men då blir det 100% + header och alltså tvingar bakgrundbilden alltid fram en scroll-list. Jag ändrade tillbaka till 90vh nu. Då blir bakgrundbilden liiite mindre men det kommer inte fram scroll-list förrän själva innehållet kräver det. Tycker det blir mer clean så. :) 
+- styling av 404 - NotFound
+- cross-browser-testing chrome Edge Firefox
+- skrivit i Readme
+- kollat checklistan för blå och röd nivå, vi är klara! :) 
 
--404
+
+-- Insåg nu att jag har hela tiden haft inzoomat i browser till typ 125%. 🙈 Nu tycker jag texten är lite liten. Ska vi ändra? 
 
 -----------------------------------
-Söndag   ReadMe, netlify link, validation
+Söndag   netlify link, stämma av ReadMe, validation, pull request
 
 -----------------------------------
 
