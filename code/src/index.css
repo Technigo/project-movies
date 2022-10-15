@@ -18,6 +18,7 @@ code {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-size: cover;
 }
 
 .movie-container {
@@ -47,7 +48,6 @@ code {
 }
 
 /* Hover effects */
-
 .movie:hover > .movie-details {
   opacity: 1;
 }
@@ -57,14 +57,13 @@ code {
 }
 
 /* Movie details */
-
 .details-container {
   width: 100vw; 
   height: 100vh;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  position: relative;
+  justify-content: space-between;
 }
 
 .go-back-btn {
@@ -87,14 +86,19 @@ code {
 }
 
 .poster-img {
-  opacity: 0;
+  max-width: 50vw;
+  min-width: 30vw;
+  border: solid white 10px;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .movie-info {
   margin-bottom: 20px;
+  align-self: center;
+  justify-self: center;
   color: white;
   margin-left: 20px;
-  position: absolute;
   bottom: 10vh;
 }
 
@@ -111,6 +115,19 @@ code {
   font-size: 18px;
 }
 
+.title-and-rating {
+  display: flex;
+}
+
+.rating {
+  align-self: center;
+  margin-left: 10px;
+  /* background-color: white;
+  border-radius: 10px;
+  color: black;
+  padding: 3px; */
+}
+
 /* Media Qs */
 @media (min-width: 668px) and (max-width: 1024px) {
   .movie-container {
@@ -118,50 +135,29 @@ code {
   }
   .details-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 1fr 1fr;
-    width: 100vw; 
-    height: 100vh;
-    background-size: cover;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr 1fr;
   }
 
   .go-back-btn {
     grid-column: 1/2;
   }
 
-  .go-back-btn:hover {
-    color: black;
-    background-color: white;
-    transform: scale(1.1)
-  }
-
   .poster-img {
     grid-column: 1/2;
-    grid-row: 3/4;
-    border: solid white 10px;
-    margin-left: 20px;
+    grid-row: 2/3;
     margin-bottom: 20px;
     justify-self: start;
     align-self: end;
-    opacity: 1;
+    max-width: 20vh;
+    min-width: 10vw;
   }
 
   .movie-info {
     grid-column: 2/3;
-    grid-row: 3/4;
-    margin-bottom: 20px;
+    grid-row: 2/3;
     align-self: end;
-    color: white;
-    margin-left: 20px;
-  }
-
-  .title-and-rating {
-    display: flex;
-  }
-
-  .rating {
-    align-self: center;
-    margin-left: 10px;
+    margin-left: 5px;
   }
 }
   
@@ -183,21 +179,14 @@ code {
     grid-column: 1/2;
   }
 
-  .go-back-btn:hover {
-    color: black;
-    background-color: white;
-    transform: scale(1.1)
-  }
-
   .poster-img {
     grid-column: 1/2;
     grid-row: 2/4;
-    border: solid white 10px;
     margin-left: 20px;
     margin-bottom: 20px;
     justify-self: start;
     align-self: end;
-    opacity: 1;
+    max-width: 40vw;
   }
 
   .movie-info {
@@ -206,17 +195,7 @@ code {
     margin-bottom: 20px;
     align-self: end;
     justify-self: end;
-    color: white;
     margin-left: 20px;
-  }
-
-  .title-and-rating {
-    display: flex;
-  }
-
-  .rating {
-    align-self: center;
-    margin-left: 10px;
   }
 }
 
