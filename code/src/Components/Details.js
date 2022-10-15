@@ -24,7 +24,7 @@ const Details = () => {
       <img className="poster-img" src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt="poster" />
       <div className="movie-info">
         <div className="title-and-rating">
-          <h1>{details.title}</h1>
+          <h1 className="title">{details.title}</h1>
           <p className="rating">⭐️{details.vote_average}</p>
         </div>
         <p className="overview">{details.overview}</p>

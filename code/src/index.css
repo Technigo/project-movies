@@ -63,20 +63,21 @@ code {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: end;
+  position: relative;
 }
 
+
 .go-back-btn {
-  justify-self: start;
-  align-self: start;
-  margin-top: 20px;
-  margin-left: 20px;
   color: white;
   border-radius: 20px;
   border: solid white 2px;
   padding: 10px;
   background-color: transparent;
   cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 20px;
 }
 
 .go-back-btn:hover {
@@ -87,7 +88,6 @@ code {
 
 .poster-img {
   max-width: 50vw;
-  min-width: 30vw;
   border: solid white 10px;
   margin-left: 20px;
   margin-top: 20px;
@@ -100,6 +100,7 @@ code {
   color: white;
   margin-left: 20px;
   bottom: 10vh;
+  font-weight: 500;
 }
 
 .title-and-rating {
@@ -109,6 +110,10 @@ code {
 .rating {
   align-self: center;
   margin-left: 10px;
+}
+
+.title {
+  text-shadow: 1px 1px #4d4d4d;;
 }
 
 .overview {
@@ -122,10 +127,9 @@ code {
 .rating {
   align-self: center;
   margin-left: 10px;
-  /* background-color: white;
-  border-radius: 10px;
+  background-color: white;
   color: black;
-  padding: 3px; */
+  padding: 3px;
 }
 
 /* Media Qs */
@@ -149,8 +153,7 @@ code {
     margin-bottom: 20px;
     justify-self: start;
     align-self: end;
-    max-width: 20vh;
-    min-width: 10vw;
+    max-width: 25vh;
   }
 
   .movie-info {
