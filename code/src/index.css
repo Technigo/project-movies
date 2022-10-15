@@ -69,7 +69,7 @@ a:-webkit-any-link {
 .page-content {
   color: white;
   width: 100vw;
-  height: 75vh;
+  height: auto;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -95,6 +95,7 @@ a:-webkit-any-link {
   flex-wrap: wrap;
   margin-right: 20%;
   margin-left: 3%;
+  margin-top: 10%;
   background-color: rgb(37, 37, 37, 0.8);
   padding: 2%;
   border-radius: 20px;
