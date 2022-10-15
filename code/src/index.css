@@ -75,11 +75,6 @@ a:-webkit-any-link {
   flex-direction: column;
 }
 
-.background-image {
-  padding: 10%;
-  overflow-x: hidden;
-}
-
 .back-btn {
   background-color: transparent;
   border: transparent;
@@ -102,6 +97,8 @@ a:-webkit-any-link {
   margin-left: 3%;
   background-color: rgb(37, 37, 37, 0.8);
   padding: 2%;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px black;
 }
 
 .title-box h1 {

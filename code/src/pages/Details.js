@@ -9,6 +9,16 @@ const Details = () => {
   const { movieId } = useParams();
   const navigate = useNavigate();
 
+  // This is all the styling for the background image, none in the css-file
+  const detailBackground = {
+    backgroundImage: `url(https://image.tmdb.org/t/p/w1280${listItem.backdrop_path})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    height: '100vh',
+    padding: '10%',
+    overflowX: 'hidden'
+  }
+
   // Function that fetches the specific movie-information abouth the selected movie
   useEffect(() => {
     setLoading(true)
@@ -31,13 +41,7 @@ const Details = () => {
   }
 
   return (
-    <section
-      className="background-image"
-      // This is all the styling for the background image, none in the css-file
-      style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${listItem.backdrop_path})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        height: '100vh' }}>
+    <section style={detailBackground}>
 
       <button type="button" className="back-btn" onClick={goBack}>
       ↩️ Go back
