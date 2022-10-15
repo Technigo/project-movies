@@ -42,7 +42,7 @@ export const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Movies movies={fetchMovies} upPage={upPage} downPage={downPage} />} />
-        <Route path="/MovieDetails/:movie_id" element={<MovieDetails />} />
+        <Route path="/MovieDetails/:movieID" element={<MovieDetails />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>
