@@ -24,8 +24,8 @@ const Movies = ({ movies, downPage, upPage }) => {
         ))}
       </div>
       <div className="buttons">
-        <button className="up" type="button" onClick={upPage}>Page up!</button>
-        <button type="button" onClick={downPage}>Page down!</button>
+        <button className="buttonpage" type="button" onClick={downPage}>Page down</button>
+        <button className="buttonpage" type="button" onClick={upPage}>Page up</button>
       </div>
     </section>
   )

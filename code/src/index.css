@@ -22,9 +22,10 @@ color: white;
 }
 
 button {
-  margin: 10px;
+  margin: 50px;
   font-size: x-large;
   color:white;
+  z-index:10
 }
 
 button:hover {
@@ -65,8 +66,8 @@ flex-wrap: wrap;
 }
 
 .movie-detail { /*text*/
-position: absolute;
 background: rgba(0,0,0,0.85);
+position: absolute;
 display: none;
 padding: 40px; 
 }
@@ -85,3 +86,154 @@ padding: 40px;
   font-weight: 900;
   font-size: xx-large;
 }
+
+.backdrop-image {
+  position: absolute;
+  background-size: cover;             /*covering the the page with the whole picture,meaning no partials*/
+  background-repeat: no-repeat;       /*meaning we wont repeat it many times in a row*/
+  height: 100vh;      /*VIEWPORTHEIGHT, takes the complete 100% height of the page, automtic adjustment also in RESPOSSIVE DESIGN*/
+  width: 100%;
+}
+
+.poster-image {
+  border-radius: 20px;
+  border: 5px solid white;
+  margin: 45px;
+  z-index: 10;
+}
+
+.text-wrapper{
+  color: white;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 50px;
+  width: 60%
+}
+
+.back-button {
+  position: absolute;
+  top: 5%;
+  left: 5%
+}
+
+.buttonpage {
+  border: 2px solid white;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.buttonpage:hover {
+  box-shadow: 2px 2px 4px white;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.over-view {
+  padding-top: 30px;
+}
+
+.detail-wrapper {
+  position: absolute;
+  bottom:0%;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 10px 1px black ;
+  background-image: linear-gradient(to top, #000000, #000000, #77777743, #b9b9b900, #ffffff00);
+  padding: 2px;
+}
+
+.rating{
+padding: 5px;
+margin: 15px;
+animation: blinker 3s linear infinite;
+}
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+}
+
+@media (max-width: 400px){
+  .movie-info {
+    top: 5px;
+  }
+  .detail-wrapper {
+    position:absolute;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 150px;
+  }
+  .poster-image {
+    width: 60%
+  }
+
+  .text-wrapper {
+    margin-left: 55px;
+  }
+  .backdrop-image {
+    opacity: 0;
+  }
+}
+@media (max-width: 540px) {
+  .movie-info{
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .detail-wrapper {
+    position:absolute;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 150px;
+  }
+
+  .poster-image {
+    width: 60%;
+  }
+
+  .text-wrapper {
+    margin-left: 55px;
+  }
+  .backdrop-image {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 768px) {
+  .movie-info{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .detail-wrapper {
+    position:absolute;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 150px;
+  }
+
+  .text-wrapper {
+    margin-left: 55px;
+  }
+  .poster-image {
+    width: fit-content;
+  }
+  .backdrop-image{
+    opacity:0;
+  }
+}
+
+
+

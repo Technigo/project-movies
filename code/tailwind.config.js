@@ -6,6 +6,8 @@ module.exports = {
   },
   plugins: [],
   screens: {
+    mobile: '400px',
+    // => @media (min-width: 400px) { ... }
     tablet: '640px',
     // => @media (min-width: 640px) { ... }
 
