@@ -20,7 +20,10 @@ body {
 p {
 color: white;
 }
-
+.back-button {
+  border: none;
+  background-color: #00000000;
+}
 button {
   margin: 50px;
   font-size: x-large;
