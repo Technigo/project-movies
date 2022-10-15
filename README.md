@@ -1,13 +1,12 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week we built our first multi-page React application using a movie API. The project was done by pair programming and we chose to display top rated movies.
 
 ## The problem
+We had a lot of issues displaying the API data and had to re-start our project twice before it all of a sudden started to work, we unfortunately do not know what the issue or solution was but this set us back quite a lot and cause quite a lot of headache.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+If we had more time we would have spent more time on the CSS and the responsiveness.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://top-rated-movies-2afa29.netlify.app
