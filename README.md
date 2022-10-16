@@ -11,7 +11,7 @@ Our challenge this week was our collection and sesason components when we were m
 For finding answers and help we have used: 
 
 - Google 
-- Stackover Flow
+- StackOverflow
 - Youtube 
 
 ## View it live
