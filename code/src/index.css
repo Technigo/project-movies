@@ -83,6 +83,7 @@ a:-webkit-any-link {
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 10%;
+  padding-left: 0%;
 }
 
 .page-content img {
@@ -94,7 +95,7 @@ a:-webkit-any-link {
   align-items: flex-end;
   flex-wrap: wrap;
   margin-right: 20%;
-  margin-left: 3%;
+  margin-left: 0%;
   margin-top: 10%;
   background-color: rgb(37, 37, 37, 0.8);
   padding: 2%;
@@ -152,6 +153,7 @@ a:-webkit-any-link {
 
   .back-btn {
     margin-bottom: 5%;
+    padding-left: 0%;
   }
 }
 
@@ -221,6 +223,7 @@ a:-webkit-any-link {
     margin-bottom: 5%;
     transition: 0.5s ease-in-out;
     cursor: pointer;
+    padding-left: 3%;
   }
 
   .back-btn:hover {
