@@ -8,11 +8,13 @@ import MovieDetail from 'Component/MovieDetail';
 export const App = () => {
 	const [selection, setSelection] = useState('now-playing');
 	const [movies, setMovies] = useState([]);
+	const [loading, setLoading] = useState(false);
 
 	const api_key = '16e2f0b0c955ae35c249c51b6faa99c0';
 	const selection_URL = `https://api.themoviedb.org/3/movie/${selection}?api_key=${api_key}&language=en-US&page=1`;
 
 	useEffect(() => {
+		setLoading(true);
 		fetch(selection_URL)
 			.then((response) => response.json())
 			.then((data) => {
@@ -29,7 +31,8 @@ export const App = () => {
 				);
 				setSelection(selection);
 			})
-			.catch((error) => console.log(error));
+			.catch((error) => console.log(error))
+			.finally(() => setLoading(false));
 	}, [selection]);
 
 	return (
@@ -38,11 +41,14 @@ export const App = () => {
 				<NavBar value={selection} setSelection={setSelection} />
 			</nav>
 			<Routes>
-				<Route path="/" element={<Movies movies={movies} />} />
 				<Route
+					path="/"
+					element={<Movies loading={loading} movies={movies} />}
+				/>
+				{/* <Route
 					path="movies/:movieId"
 					element={<MovieDetail movies={movies} />}
-				/>
+				/> */}
 				<Route path="*" element={<Error />} />
 			</Routes>
 		</Router>
