@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:#333333;
+}
+
+.title-top{
+  color:whitesmoke;
+  padding-left: 3rem;
+}
+
+.nav-header{
+  padding-right: 3rem;
+}
+
+select{
+  width:180px;
+  height: 25px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: whitesmoke;
+  font-weight: bold;
+}

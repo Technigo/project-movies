@@ -6,8 +6,8 @@ const NavBar = ({ value, setSelection }) => {
 
 	return (
 		<header>
-			<h1>A Film A Day</h1>
-			<nav>
+			<h1 className="title-top">A Film A Day</h1>
+			<nav className="nav-header">
 				<select
 					value={value}
 					onChange={(e) => {
@@ -15,7 +15,7 @@ const NavBar = ({ value, setSelection }) => {
 						navigate('/');
 					}}
 				>
-					<option value="movie">Now Playing</option>
+					<option value="now_playing">Now Playing</option>
 					<option value="upcoming">Upcoming</option>
 					<option value="popular">Popular</option>
 					<option value="top_rated">Top-Rated</option>
