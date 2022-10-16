@@ -1,6 +1,6 @@
 # Project Movies [View Live &#10555;](https://movies-lisa-sofia.netlify.app/)
 
-In this project we have created an app to show popular movies and some information about each movie, fletching information from an API. We created the app through pair-programming.
+In this project we have created an app to show popular movies and some information about each movie, fetching information from an API. We created the app through pair-programming.
 
 ## The problem
 
