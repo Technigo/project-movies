@@ -15,4 +15,4 @@ Teamwork-approach: We have entirely different work-schedules (morning/day vs. ev
 
 ## View it live
 
-Netlify link: 
+Netlify link: https://project-movies-linnea-nina.netlify.app
