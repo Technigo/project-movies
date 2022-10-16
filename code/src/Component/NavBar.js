@@ -15,7 +15,7 @@ const NavBar = ({ value, setSelection }) => {
 						navigate('/');
 					}}
 				>
-					<option value="now_playing">Now Playing</option>
+					<option value="movie">Now Playing</option>
 					<option value="upcoming">Upcoming</option>
 					<option value="popular">Popular</option>
 					<option value="top_rated">Top-Rated</option>

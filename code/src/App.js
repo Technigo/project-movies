@@ -6,7 +6,7 @@ import Error from 'Component/Error';
 import MovieDetail from 'Component/MovieDetail';
 
 export const App = () => {
-	const [selection, setSelection] = useState('now-playing');
+	const [selection, setSelection] = useState('popular');
 	const [movies, setMovies] = useState([]);
 	const [loading, setLoading] = useState(false);
 

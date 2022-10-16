@@ -13,7 +13,7 @@ const Movies = ({ movies, loading }) => {
 				return (
 					<>
 						<Link to={`movies/${movie.id}`}>
-							<article key={movie.id} className="movie-group">
+							<article key={movie.id} className="movies">
 								<img
 									className="movie-img"
 									src={movie.posterUrl}
