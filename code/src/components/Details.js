@@ -29,21 +29,31 @@ const Details = () => {
   }
 
   return (
-    <section className="details-container">
-      <button type="button" onClick={onBackButtonClick}>Movies</button>
-      <img src={movie.backdrop_path ? `${apiImageAddress}w1280${movie.backdrop_path}` : ''} alt="poster" />
 
-      <div className="movie-info">
-        <img src={movie.poster_path ? `${apiImageAddress}w185${movie.poster_path}` : ''} alt="profile" />
-        <div className="movie-rating">
-          <h1>{movie.title}</h1>
-          <p>{movie.vote_average}</p>
+    <section className="details-container">
+      <div className="image-backdrop">
+        <img
+          src={movie.backdrop_path ? `${apiImageAddress}original${movie.backdrop_path}` : ''}
+          alt="poster" />
+      </div>
+      <button className="movie-button" type="button" onClick={onBackButtonClick}>⬅ Movies</button>
+
+      <div className="movie-container">
+        <div className="movie-poster">
+          <img src={movie.poster_path ? `${apiImageAddress}w185${movie.poster_path}` : ''} alt="profile" />
         </div>
-        <div className="movie-summary">
-          <p>{movie.overview}</p>
+        <div className="movie-title">
+          <h2>{movie.title}</h2>
+          <div className="movie-rating"> {String(Math.round(movie.vote_average * 10) / 10)}⭐
+          </div>
+          <div className="movie-summary">
+            <p>{movie.overview}</p>
+          </div>
         </div>
       </div>
     </section>
+
   )
 }
 export default Details;
+
