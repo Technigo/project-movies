@@ -21,7 +21,7 @@ const Movies = ({ movies, loading }) => {
 								/>
 								<div className="text-hover">
 									<h2 className="title">{movie.title}</h2>
-									<p className="release">Released:{movie.date}</p>
+									<p className="rating">Rating: {movie.rating} /10</p>
 								</div>
 							</article>
 						</Link>
