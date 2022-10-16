@@ -15,7 +15,7 @@ export const NotFound = () => {
   // }
   return (
     <div className="notFound">
-      <h2> OBS! It look like you got lost...... </h2>
+      <h2> OBS! It look like you got lost! </h2>
       <h3>404 PAGE NOT FOUND</h3>
       <img src={workingInProgress} alt="working" />
       <Link to="/">
