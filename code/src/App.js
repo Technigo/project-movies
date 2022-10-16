@@ -23,7 +23,7 @@ export const App = () => {
   // const [loading, setLoading] = useState();
   // if (loading) {
   // return(
-    
+
   useEffect(() => {
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=35a0fb6f5f3fde8a6e6cf4ca489b902a&language=en-US&page=1')
       .then((response) => response.json())
