@@ -47,7 +47,7 @@ const SingleMovie = () => {
           Movies
         </button>
       </div>
-      <div className="wrapper">
+      <div className="movie-container">
         <div className="movie-content">
           <img
             className="movie-img"
@@ -58,7 +58,7 @@ const SingleMovie = () => {
             <div className="title-vote">
               <h2>{movie.title}</h2>
 
-              <h2 className="vote">
+              <h2 className="rating">
                 <img className="star-icon" src={MyImageStar} alt="arrow" />
                 {movie.vote_average.toFixed(1)}
               </h2>
