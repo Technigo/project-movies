@@ -37,8 +37,7 @@ export const App = () => {
 
   return (
     <BrowserRouter>
-      {/* <Header />
-      <SelectList /> */}
+      <Header />
       <Routes>
         <Route path="/" element={<MovieList list={movieList} />} />
         <Route path="/details/:id" element={<Details />} />
