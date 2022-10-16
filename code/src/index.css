@@ -45,6 +45,11 @@ select{
   padding:10px;
 }
 
+.movies{
+  position:relative;
+  display:flex;
+}
+
 .movie-img{
   border-radius: 10px;
   position: relative;
@@ -59,14 +64,19 @@ select{
   right: 0;
   bottom: 0;
   position:absolute;
-  background-color: rgba(21, 19, 19, 0.6);
+  background-color: rgba(21, 19, 19, 0.8);
 }
 
-.movie-img:hover .text-hover{
+.movies:hover .text-hover{
   display: flex;
   width: 100%;
   height:100%;
   flex-direction: column;
+  align-items: center;
   justify-content: flex-end;
 }
 
+.title, .rating{
+  color: whitesmoke;
+  text-align: center;
+}
