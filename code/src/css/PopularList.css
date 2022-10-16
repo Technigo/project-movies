@@ -30,12 +30,6 @@
   position: relative;
 }
 
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 /* The overlay effect - lays on top of the container and over the image */
 .imageOverlay {
   position: absolute;
