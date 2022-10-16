@@ -26,15 +26,15 @@ export const TvSeriesDetails = () => {
 
   if (loading) {
     return (
-      <>
+      <div className='loading-container'>
         <h2>Loading..</h2>
         <Orbit size={40} speed={0.9} color='#F9F9F9' />
-      </>
+      </div>
     );
   }
 
   return (
-    <section className='tvPage'>
+    <section className='detailsPage'>
       <button type='button' className='backLink' onClick={goBack}>
         <img src='/icons/back-icon.svg' id='back-icon' alt='back' />
         <p>TV-series</p>

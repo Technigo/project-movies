@@ -236,7 +236,7 @@ header {
   color: #F9F9F9;
   margin-top: 0;
   max-width: 450px;
-  max-height: 170px;
+  max-height: 130px;
   overflow: auto;
 }
 
@@ -252,7 +252,7 @@ header {
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%), 0 6px 20px 0 rgb(0 0 0 / 35%);
 }
 
-.detailPage .ratings:before {
+.ratings:before {
   padding-right: 5px;
 }
 
@@ -285,6 +285,8 @@ header {
   padding: 15px;
   background: #e69595;
   border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%), 0 6px 20px 0 rgb(0 0 0 / 35%);
 }
 
 #notfoundIcon {
@@ -303,24 +305,6 @@ header {
     .seasons-wrapper  {
       width: 50%;
     }
-
-    .detail-text h1 {
-      font-size: 18px;
-    }
-
-    .detail-text p {
-      font-size: 16px;
-    }
-
-    .backLink {
-      font-size: 19px;
-    }
-
-    .collection {
-      font-size: 16px;
-      margin-top: 10px;
-    }
-
     
   }
   

@@ -49,7 +49,7 @@ export const MovieDetails = () => {
                 {details.genres && details.genres.map((genre) => genre.name).join(', ')} </p>
               <p>{details.overview}</p>
               {details.belongs_to_collection && (<div className='collection'>
-                <Link to={`/collection/${details.belongs_to_collection.id}`}>More from {details.belongs_to_collection.name} <span className='more'>&#129054;</span> </Link>
+                <Link to={`/collection/${details.belongs_to_collection.id}`}>More from {details.belongs_to_collection.name} <span className='more'>&#10148;</span> </Link>
               </div>)}
             </div>
           </div>
