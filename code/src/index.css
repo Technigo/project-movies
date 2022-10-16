@@ -63,7 +63,7 @@ code {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   position: relative;
 }
 
@@ -201,6 +201,3 @@ code {
     margin-left: 20px;
   }
 }
-
-
-  
