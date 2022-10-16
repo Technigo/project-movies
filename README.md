@@ -10,4 +10,4 @@ The biggest problem was to understand how do we need to fetch data for Detail co
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+movieprojectreact.netlify.app
