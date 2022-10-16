@@ -11,9 +11,12 @@ const MovieDetail = ({ movies }) => {
 			<BackBtn />
 			<img className="backdrop" src={movie.backdropUrl} alt="img" />
 			<div className="details">
-				<h2>{movie.title}</h2>
-				<p>{movie.date}</p>
-				<p>{movie.description}</p>
+				<img className="movie-poster" src={movie.posterUrl} alt="poster" />
+				<div className="description">
+					<h2 className="movie-title">{movie.title}</h2>
+					<p className="movie-date">Released Date:{movie.date}</p>
+					<p className="movie-description">{movie.description}</p>
+				</div>
 			</div>
 		</div>
 	);

@@ -80,3 +80,63 @@ select{
   color: whitesmoke;
   text-align: center;
 }
+
+.rating{
+  font-weight: bold;
+}
+
+.Btn-container{
+  padding-left: 3rem;
+  padding-top:1rem;
+  padding-bottom: 1rem;
+}
+
+.backBtn-link{
+  text-decoration: none;
+}
+
+.back{
+  color:whitesmoke;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.back:hover{
+  opacity: 60%;
+  cursor: pointer;
+}
+
+.details-container{
+  background-color: black;
+}
+
+.details-container{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position:relative
+}
+
+.details{
+  position:absolute;
+  margin-top: 5rem;
+  margin-left:3rem;
+  display: flex;
+}
+
+.backdrop{
+  opacity: 50%;
+}
+
+.movie-poster{
+  border: 1px whitesmoke solid;
+  border-radius: 25px;
+  height:300px;
+  object-fit: cover;
+}
+
+.description{
+  margin-left: 2rem;
+  overflow: scroll;
+  padding:3rem;
+}
