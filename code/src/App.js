@@ -2,11 +2,8 @@
 /* eslint-disable no-unused-vars */
 
 // url for movie-popular: https://api.themoviedb.org/3/movie/popular?api_key={35a0fb6f5f3fde8a6e6cf4ca489b902a}&language=en-US&page=1
-
 // url for movie-details: https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US
-
 // fetch('https://api.themoviedb.org/3/movie/550?api_key=35a0fb6f5f3fde8a6e6cf4ca489b902a')
-
 // https://api.themoviedb.org/3/movie/popular?api_key=35a0fb6f5f3fde8a6e6cf4ca489b902a
 
 import React, { useState, useEffect } from 'react';
@@ -24,9 +21,9 @@ export const App = () => {
   const [selectList, setSelectList] = useState();
 
   // const [loading, setLoading] = useState();
-
   // if (loading) {
   // return(
+    
   useEffect(() => {
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=35a0fb6f5f3fde8a6e6cf4ca489b902a&language=en-US&page=1')
       .then((response) => response.json())

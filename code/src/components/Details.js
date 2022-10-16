@@ -26,26 +26,23 @@ const Details = () => {
     navigate(-1);
   }
   return (
-    <section className="movie-container">´
-      <div className="backdrop">
-        <button type="button" onClick={goBack}> 👈🏼 Movies </button>
-        <img src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.title} />
-      </div>
-      <div className="details-containter">
-        <div className="poster">
-          <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-        </div>
-
-        <div className="movieInfo">
-          <h2>{movie.title} </h2>
-          <h3 className="vote-average"> ⭐️ {Math.round(movie.vote_average * 10) / 10}/10 </h3>
-          <a type="image/png" sizes="32x32" href="https://img.icons8.com/3d-fluency/2x/star.png"> </a>
-          <p>{movie.overview}</p>
-        </div>
-      </div>
-
-    </section>
-  );
+    <div className="backdrop-container">
+    <button type="button" onClick={goBack}> 👈🏼 Movies </button>
+    <img className="backdrop" src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.title}  />
+    
+  <div className="overview-container">
+    <img className="poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+    
+  <div className="details-container">
+    <div className="title-rating-text">
+    <h3 className="title-details"> {movie.title} <span className="rating">⭐️{Math.round(movie.vote_average * 10) / 10}/10 </span> </h3>
+  </div>
+    
+  <div className="overview-text">{movie.overview}</div>
+  </div>
+  </div>
+  </div>
+    );
 }
 
 export default Details;
