@@ -16,7 +16,7 @@ export const App = () => {
 	useEffect(() => {
 		setLoading(true);
 		fetch(
-			`https://api.themoviedb.org/3/movie/${selection}?api_key=${api_key}&language=en-US&page=1`
+			`https://api.themoviedb.org/3/movie/${selection}?api_key=${api_key}&language=en-US`
 		)
 			.then((response) => response.json())
 			.then((data) => {
