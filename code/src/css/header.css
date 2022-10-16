@@ -1,0 +1,21 @@
+.header {
+	height: 60px;
+	padding: 20px;
+	background-color: #141414;
+	color: white;
+}
+
+.header a {
+	color: white;
+}
+
+.header span {
+	font-size: 30px;
+}
+
+nav .nav-links {
+	display: flex;
+	justify-content: flex-end;
+  margin: 0 20px;
+  list-style-type: none;
+}
