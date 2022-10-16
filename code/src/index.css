@@ -137,10 +137,14 @@ button {
   blink-caret .75s step-end infinite;
 }
 
+.notFound h3 {
+  color: aquamarine;
+}
+
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
-  to { width: 30% }
+  to { width: 50% }
 }
 
 .notFound img {
