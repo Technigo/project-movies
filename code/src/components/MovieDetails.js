@@ -5,20 +5,11 @@ import Loading from 'components/Loading';
 import { SINGLE_MOVIE_URL } from '../data/urls';
 import arrowIcon from '../data/arrowIcon.png';
 import 'css/movieDetails.css'
-// import { useNavigate } from 'react-router-dom'
 
 export const MovieDetails = () => {
   const [movie, setMovie] = useState()
   const [loading, setLoading] = useState()
   const { movieId } = useParams();
-  // const navigate = useNavigate();
-
-  // const detailStyling = {
-  //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) -40%, rgb(0, 0, 0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
-  //   minHeight: '100vh',
-  //   backgroundSize: 'cover',
-  //   backgroundRepeat: 'no-repeat'
-  // }
 
   useEffect(() => {
     fetch(SINGLE_MOVIE_URL(movieId))
@@ -31,14 +22,9 @@ export const MovieDetails = () => {
     return <Loading />
   }
 
-  // const PreviousPage = () => {
-  //  navigate(-1);
-  // }
-
   return (
     <section className="detailsContainer">
       {movie && (
-        // <div className="background" style={detailStyling}>
         <div className="background" style={{ backgroundImage: `linear-gradient( rgba(0,0,0,0) -70%, rgba(0,0,0) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
           <NavLink className="link" to="/"> <img className="arrowIcon" src={arrowIcon} alt="back button" /><span>Movies</span> </NavLink>
           <div className="summary">
@@ -52,7 +38,6 @@ export const MovieDetails = () => {
               <h4>&quot; {movie.tagline} &quot;</h4>
               <p className="overview">{movie.overview}</p>
               <h5><span>Length:</span> {movie.runtime} minutes</h5>
-              {/* <button type="button" onClick={PreviousPage}> Go Back </button> */}
             </div>
           </div>
         </div>)}
