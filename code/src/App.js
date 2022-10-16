@@ -11,11 +11,13 @@ export const App = () => {
 	const [loading, setLoading] = useState(false);
 
 	const api_key = '16e2f0b0c955ae35c249c51b6faa99c0';
-	const selection_URL = `https://api.themoviedb.org/3/movie/${selection}?api_key=${api_key}&language=en-US&page=1`;
+	/* const selection_URL = `https://api.themoviedb.org/3/movie/${selection}?api_key=${api_key}&language=en-US&page=1`; */
 
 	useEffect(() => {
 		setLoading(true);
-		fetch(selection_URL)
+		fetch(
+			`https://api.themoviedb.org/3/movie/${selection}?api_key=${api_key}&language=en-US&page=1`
+		)
 			.then((response) => response.json())
 			.then((data) => {
 				setMovies(
@@ -25,8 +27,8 @@ export const App = () => {
 						date: item.release_date,
 						description: item.overview,
 						rating: item.vote_average,
-						coverImgUrl: `https://image.tmdb.org/t/p/w300${item.poster_path}`,
-						backdropImgUrl: `https://image.tmdb.org/t/p/w1280${item.backdrop_path}`,
+						posterUrl: `https://image.tmdb.org/t/p/w300${item.poster_path}`,
+						backdropUrl: `https://image.tmdb.org/t/p/w1280${item.backdrop_path}`,
 					}))
 				);
 				setSelection(selection);
@@ -42,13 +44,14 @@ export const App = () => {
 			</nav>
 			<Routes>
 				<Route
+					exact
 					path="/"
 					element={<Movies loading={loading} movies={movies} />}
 				/>
-				{/* <Route
+				<Route
 					path="movies/:movieId"
 					element={<MovieDetail movies={movies} />}
-				/> */}
+				/>
 				<Route path="*" element={<Error />} />
 			</Routes>
 		</Router>

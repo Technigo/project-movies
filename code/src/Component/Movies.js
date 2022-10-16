@@ -16,7 +16,7 @@ const Movies = ({ movies, loading }) => {
 							<article key={movie.id} className="movie-group">
 								<img
 									className="movie-img"
-									src={movie.coverImgUrl}
+									src={movie.posterUrl}
 									alt={movie.title}
 								/>
 								<div className="text-hover">
