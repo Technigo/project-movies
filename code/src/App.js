@@ -6,7 +6,7 @@ import MovieDetails from 'components/MovieDetails'
 import MovieList from 'components/MovieList'
 import { MOVIE_LIST_URL } from 'utils/urls'
 
-// Gör laddningen långsammare så att loadern syns
+// Make loading of page slower so that you can see the lovely loader screen better
 const delayer = (delayTime) => {
   // eslint-disable-next-line no-promise-executor-return
   return new Promise((resolve) => setTimeout(resolve, delayTime))
