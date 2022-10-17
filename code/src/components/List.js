@@ -12,10 +12,10 @@ const List = ({ movies }) => {
                 className="list-poster"
                 src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
                 alt={movie.title} />
-              <div className="movie-info">
+              {/* <div className="movie-info">
                 <h1>{movie.title}</h1>
                 <p>{movie.release_date}</p>
-              </div>
+              </div> */}
             </div>
           </Link>
         )
