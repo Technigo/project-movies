@@ -8,7 +8,6 @@ import { MOVIE_LIST_URL } from 'utils/urls'
 
 // Make loading of page slower so that you can see the lovely loader screen better
 const delayer = (delayTime) => {
-  // eslint-disable-next-line no-promise-executor-return
   return new Promise((resolve) => setTimeout(resolve, delayTime))
 }
 
