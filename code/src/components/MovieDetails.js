@@ -40,7 +40,7 @@ const MovieDetails = () => {
     <article
       className="details-container"
       style={{
-        backgroundImage: `url(http://image.tmdb.org/t/p/original${details.backdrop_path})`
+        backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 55%, rgba(0,0,0,0.7) 100%), url(http://image.tmdb.org/t/p/original${details.backdrop_path})`
       }}>
       <div className="details-summary">
         <button type="button" onClick={goBack} className="link-back">
