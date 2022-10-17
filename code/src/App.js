@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 import NotFound from 'components/NotFound'
-import Header from 'components/Header'
 import MovieDetails from 'components/MovieDetails'
 import MovieList from 'components/MovieList'
 import { MOVIE_LIST_URL } from 'utils/urls'
@@ -32,7 +31,6 @@ export const App = () => {
 
   return (
     <BrowserRouter>
-      <Header />
       <Routes>
         <Route path="/" element={<MovieList movieList={movieList} loading={loading} />} />
         <Route path="/moviedetails/:movieId" element={<MovieDetails loading={loading} />} />
