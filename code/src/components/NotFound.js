@@ -9,7 +9,7 @@ const NotFound = () => {
   return (
     <div className="not-found-page">
       <p>Sorry, this page does not exist</p>
-      <button type="button" onClick={returnToDefaultPage}>Go to default page</button>
+      <button type="button" onClick={returnToDefaultPage}>Go to movie page</button>
     </div>
   )
 }
