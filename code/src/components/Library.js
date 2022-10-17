@@ -12,26 +12,31 @@ const Library = () => {
       .catch((error) => console.error(error))
   }, []);
 
-  /* const Library = ({ library }) => { */
   return (
     <section className="library">
       {library.map((movie) => {
         return (
-          <Link
-            key={movie.id}
-            to={`/details/${movie.id}`}>
-            <div className="release-container">
-              <img className="library-image" src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt="poster" />
-              <h1>{movie.title}</h1>
-              <p>Release date: {movie.release_date}</p>
-            </div>
+          <div className="release-container">
+            <Link
+              key={movie.id}
+              to={`/details/${movie.id}`}
+              className="movie">
+              <div className="img-overlay" />
+              <img src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt="poster" />
+              <div className="library-info">
+                <h1>{movie.title}</h1>
+                <p>Release date: {movie.release_date}</p>
+              </div>
 
-          </Link>
+            </Link>
+          </div>
         )
       })}
     </section>
   )
 };
+
+/* className="library-image" */
 
 export default Library;
 

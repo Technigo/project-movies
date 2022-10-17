@@ -27,15 +27,16 @@ const Details = () => {
       <p>Page is loading...</p>
     );
   }
-
+  // hellaoj */
   return (
 
     <section className="details-container">
-      <div className="image-backdrop">
-        <img
-          src={movie.backdrop_path ? `${apiImageAddress}original${movie.backdrop_path}` : ''}
-          alt="poster" />
-      </div>
+
+      <img
+        className="image-backdrop"
+        src={movie.backdrop_path ? `${apiImageAddress}w1280${movie.backdrop_path}` : ''}
+        alt="poster" />
+
       <button className="movie-button" type="button" onClick={onBackButtonClick}>⬅ Movies</button>
 
       <div className="movie-container">
