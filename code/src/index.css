@@ -94,7 +94,7 @@ a {
 
 .link-back-text {
   padding-left: 10px;
-
+  text-shadow: 1px 1px #4d4d4d;
 }
 
 .link-back .link-back-icon {
@@ -103,7 +103,7 @@ a {
 }
 
 .link-back:hover .link-back-icon {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .details-summary {
@@ -121,7 +121,7 @@ a {
   height: fit-content;
   width: 50%;
   align-self: flex-end;
-}
+} 
 
 .details-summary-text-header {
   font-size: 22px;
@@ -130,7 +130,6 @@ a {
 .details-summary-text-header-title {
   text-shadow: 1px 1px #4d4d4d;
 }
-  
 
 .details-summary-text-header-rating {
   background-color: white;
@@ -141,6 +140,7 @@ a {
 
 .details-summary-text-description {
   font-size: 16px;
+  text-shadow: 1px 1px #4d4d4d;
 }
 
 /* - - - NotFound.js - - - */
