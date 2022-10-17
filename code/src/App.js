@@ -22,7 +22,7 @@ export const App = () => {
       .then((data) => setMovieList(data.results))
       .catch((error) => console.error(error))
       .finally(() => {
-        delayer(1000).then(() => {
+        delayer(2000).then(() => {
           setLoading(false)
         })
       })
