@@ -50,7 +50,6 @@ a {
 
 .poster-text-container {
   position: absolute;
-  /* border: 1px solid red; */
   margin: calc(15px + 1vw);
   color: white;
   opacity: 0;
@@ -93,13 +92,18 @@ a {
   cursor: pointer;
 }
 
-.link-back svg {
+.link-back-text {
+  padding-left: 10px;
+
+}
+
+.link-back .link-back-icon {
   width: 30px;
   transition: margin-right 0.2s ease-in-out;
 }
 
-.link-back:hover svg {
-  margin-right: 5px;
+.link-back:hover .link-back-icon {
+  margin-right: 10px;
 }
 
 .details-summary {
@@ -114,7 +118,6 @@ a {
 }
 
 .details-summary-text {
-  /* border: 2px rgb(0, 191, 255) solid; */
   height: fit-content;
   width: 50%;
   align-self: flex-end;

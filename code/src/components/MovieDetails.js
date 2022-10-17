@@ -44,7 +44,10 @@ const MovieDetails = () => {
         backgroundImage: `url(http://image.tmdb.org/t/p/original${details.backdrop_path})`
       }}>
       <div className="details-summary">
-        <button type="button" onClick={goBack} className="link-back">⏪ Movies</button>
+        <button type="button" onClick={goBack} className="link-back">
+          <span className="link-back-icon">⏪</span>
+          <span className="link-back-text">Movies</span>
+        </button>
         <img className="details-summary-poster" src={details ? `https://image.tmdb.org/t/p/w342${details.poster_path}` : ''} alt={details.title} />
         <div className="details-summary-text">
           <h1 className="details-summary-text-header">
