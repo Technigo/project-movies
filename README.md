@@ -11,4 +11,4 @@ Sketching out design, started with first components and fetch API to populate fi
 Would be cool to add more pages with other categories of movies. Like popular.
 
 ## View it live
-https://moviereleases.netlify.app/movies/436270
+https://moviereleases.netlify.app
