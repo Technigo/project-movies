@@ -1,13 +1,404 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background:  #181818
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+a {
+  text-decoration: none;
+  color: #F9F9F9
+}
+
+/** HEADER **/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #181818e0;
+  flex-direction: column;
+  padding: 5px 0;
+  align-items: center;
+  z-index: 1;
+}
+
+.miniflix {
+  margin: 10px;
+  width: 120px;
+  height: auto;
+}
+
+.navlink-container a {
+  color: #F9F9F9;
+}
+
+.navlink:hover, .miniflix:hover {
+  transform: scale(1.1);
+  transition: transform 0.4s;
+  cursor: pointer
+}
+
+.navlink-container {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin-left: -20px;
+}
+
+/** ICONS & BACK BTN **/
+#back-icon {
+  width: 30px;
+  filter: invert(1);
+  margin-right: 6px;
+}
+
+.backLink {
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font: bold, 18px;
+  color: #F9F9F9;
+  position: absolute;
+  top: 120px;
+  left: 10px;
+}
+
+.backLink:hover p {
+    transform: translate(15%);
+    transition: transform 330ms ease-in-out;
+ }
+
+.star {
+  width: 20px;
+  color: rgba(248, 219, 52, 0.849);
+  padding-right: 3px;
+}
+
+.more {
+  width: 15px;
+  color: #e87676f5;
+  margin-left: 4px;
+}
+
+/** STARTPAGE, TV-SERIES, UPCOMING, SEASONS, ON CINEMA  **/
+
+.startPage, .tvSeriesPage, 
+.onCinemaPage, .upcomingPage {
+  margin: 130px 10px;
+}
+
+.seasonsPage {
+  margin: 160px 10px;
+}
+
+.collectionsPage {
+  margin: 180px 40px;
+  background: #5451519e;
+  padding: 15px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%), 0 6px 20px 0 rgb(0 0 0 / 35%);
+}
+
+.loading-container {
+  display: flex;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  color: #F9F9F9;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popular, .upcoming-header,
+.on-cinema {
+  color: #F9F9F9;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.movies-container, .seasons-container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.movie-wrapper, .seasons-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.movie-wrapper img, 
+.seasons-wrapper img {
+  width: 97%;
+  border: solid #a09c9c5e 0.5px;
+}
+
+.movie-wrapper .details, 
+.seasons-wrapper .details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  padding: 20px;
+}
+
+.movie-wrapper .details h1, 
+.seasons-wrapper .details h1 {
+  font-size: 20px;
+  color: #F9F9F9;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.collectionsPage h1 {
+  font-size: 20px;
+  color: #F9F9F9;
+}
+
+.movie-wrapper .details p,
+.collectionsPage p, 
+.seasons-wrapper .details p {
+  color: #F9F9F9;
+}
+
+.movie-wrapper a:hover .details, 
+.seasons-wrapper:hover .details {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/** MOVIE/TVSHOW/COLLECTION DETAILS **/
+
+.detailsPage {
+  position: relative;
+}
+
+.movie-details, .tvshow-details {
+  position: absolute;
+  bottom: 20px;
+  left: 10px
+}
+
+.background {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.details img {
+  width: 35%;
+  border: solid #F9F9F9 1px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%), 0 6px 20px 0 rgb(0 0 0 / 35%);
+}
+
+.detail-text {
+  background: #1313139e;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%), 0 6px 20px 0 rgb(0 0 0 / 35%);
+}
+
+.detail-text h1 {
+  color: #F9F9F9;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.detail-text p {
+  font-size: 14px;
+  color: #F9F9F9;
+  margin-top: 0;
+  max-width: 450px;
+  max-height: 130px;
+  overflow: auto;
+}
+
+.ratings {
+  background: #b1aaaa8a;
+  color: #F9F9F9;
+  font-weight: 500;
+  padding: 5px;
+  text-shadow: none;
+  display: inline-block;
+  border-radius: 10px;
+  margin-left: 5px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%), 0 6px 20px 0 rgb(0 0 0 / 35%);
+}
+
+.ratings:before {
+  padding-right: 5px;
+}
+
+.collection {
+  background: #b1aaaa8a;
+  padding: 10px;
+  width: fit-content;
+  font-size: 14px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%), 0 6px 20px 0 rgb(0 0 0 / 35%);
+}
+
+.collection:hover {
+  opacity: 0.7
+}
+
+/** NOT FOUND ERROR **/
+
+.notFoundPage{
+  margin-top: 100px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #F9F9F9;
+}
+
+.errorBtn {
+  padding: 15px;
+  background: #e69595;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%), 0 6px 20px 0 rgb(0 0 0 / 35%);
+}
+
+#notfoundIcon {
+  filter: invert(1)
+}
+
+/** MEDIA QUERIES **/
+
+  @media (min-width: 370px) {
+
+    .seasonsPage {
+      margin: 180px 10px;
+    }
+
+    .movie-wrapper, 
+    .seasons-wrapper  {
+      width: 50%;
+    }
+    
+  }
+  
+  @media (min-width: 570px) {
+
+    header {
+      flex-direction: row;
+    }
+
+    .miniflix {
+      width: 180px;
+      height: auto;
+    }
+
+    .startPage, .tvSeriesPage, 
+    .onCinemaPage, .upcomingPage {
+      margin: 125px 10px;
+    }
+
+    .seasonsPage {
+      margin: 180px 10px;
+    }
+
+    .details p {
+      max-height: fit-content;
+    }
+  
+    .movie-details, .tvshow-details  {
+      bottom: 10%;
+      left: 20px
+    }
+
+    .movie-wrapper, 
+    .seasons-wrapper {
+      width: 33.33%;
+    }
+
+    .detail-text h1 {
+      font-size: 20px;
+    }
+
+    .detail-text p {
+      font-size: 18px;
+    }
+
+    .backLink {
+      font-size: 20px;
+    }
+
+    .collection {
+      font-size: 18px;
+    }
+
+    .movie-wrapper .details h1, 
+    .seasons-wrapper .details h1 {
+      font-size: 30px;
+    }
+
+  }
+  
+  @media (min-width: 820px) {
+
+    .details {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .detail-text {
+      padding: 20px;
+    }
+
+    .details p {
+      max-height: fit-content;
+    }
+
+    .details img {
+      margin-right: 10px;
+    }
+    
+    .startPage, .tvSeriesPage, 
+    .onCinemaPage, .upcomingPage {
+      margin: 125px 100px;
+    }
+
+    .seasonsPage {
+      margin: 180px 10px;
+    }
+
+    .movie-wrapper, 
+    .seasons-wrapper {
+      width: 25%;
+    }
+
+  
+  }
+
+
