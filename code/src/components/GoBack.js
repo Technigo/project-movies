@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import backIcon from '../assets/left-arrow.svg'
+import backIcon from '../assets/images/left-arrow.svg'
 
 const GoBack = () => {
   return (

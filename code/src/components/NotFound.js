@@ -1,5 +1,5 @@
 import React from 'react';
-import ghost from '../assets/ghost.svg';
+import ghost from '../assets/images/ghost.svg';
 import GoBack from './GoBack';
 
 const NotFound = () => {
