@@ -17,15 +17,17 @@ const Details = () => {
   }, [id])
 
   return (
-    <section className="details-container">
-      <button type="button" onClick={onBackButtonClick}>Go back</button>
-      <img src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt="poster" />
+    <section
+      className="details-container"
+      style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
+      <button className="go-back-btn" type="button" onClick={onBackButtonClick}>Go back</button>
+      <img className="poster-img" src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt="poster" />
       <div className="movie-info">
         <div className="title-and-rating">
-          <h1>{details.title}</h1>
-          <p>{details.vote_average}</p>
+          <h1 className="title">{details.title}</h1>
+          <p className="rating">⭐️{details.vote_average}</p>
         </div>
-        <p>{details.overview}</p>
+        <p className="overview">{details.overview}</p>
       </div>
     </section>
   )
