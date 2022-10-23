@@ -1,12 +1,11 @@
 # Project Movies
-
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to produce a movie site showing popular movies, using react and react- routers, as well as APIs fetches. We choose not to use style components in this project, look forward to doing it in the next. 
 
 ## The problem
+We started by sorting out the different components, decided o keep the app fairly “clean”. And focused large part of the coding to the components
+We learnt to use the URL component for our APIs and how to solve the 404/undefined problems in consol by creating an “ApiImageAdress”. 
+If we had more time we would create more features, for us the styling took more time than expected 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
 ## View it live
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://project-popular-movies.netlify.app/
