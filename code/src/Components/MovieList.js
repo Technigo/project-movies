@@ -26,12 +26,14 @@ const MovieList = ({ API_KEY }) => {
     <div className="movie-list-container">
       {movieList.map((movie) => (
         <Link key={movie.id} to={`/details/${movie.id}`}>
-          <img
-            className="poster"
-            src={`https://image.tmdb.org/t/p/w400/${movie.poster_path}`}
-            alt="" />
-          <div className="text-container">
-            <p className="title-text">{`${movie.id}`}</p>
+          <div className="overlay-container">
+            <div className="title-container">
+              <p className="title-text">{`${movie.original_title}`}</p>
+            </div>
+            <img
+              className="poster"
+              src={`https://image.tmdb.org/t/p/w400/${movie.poster_path}`}
+              alt="" />
           </div>
         </Link>
       ))}

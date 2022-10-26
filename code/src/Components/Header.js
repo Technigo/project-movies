@@ -7,8 +7,8 @@ const Header = () => {
     <div className="header-container">
       <video className="video" src={videoBg} autoPlay loop muted />
       <Link className="go-back-link" to="/">
-        <h1> MOVIE TIME </h1>
-        <h2>All your favourite movies in one place!</h2>
+        <h1 className="header-title"> MOVIE TIME </h1>
+        <h2 className="header-text">All your favourite movies in one place!</h2>
       </Link>
     </div>
   )
