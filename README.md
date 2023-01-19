@@ -12,4 +12,4 @@ Layout on website it is not fully compatible with Microsoft Edge right now.
 
 ## View it live
 
-movieprojectreact.netlify.app
+https://movieprojectreact.netlify.app
