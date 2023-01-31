@@ -10,4 +10,4 @@ Describe how you approached to problem, and what tools and techniques you used t
 
 ## View it live
 
-https://stellar-centaur-6d02ea.netlify.app/
+https://movies-mariawestling.netlify.app/
