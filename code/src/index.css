@@ -1,13 +1,173 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Library styling */
+.library {
+  display: flex;
+  flex-wrap: wrap;
+  background-size: cover;
+}
+
+.release-container {  
+  position: relative;
+  width: 50%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.library-info {
+  opacity: 0;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  color: white;
+}
+
+.img-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  color: transparent;
+  transition: 0.5s ease;
+}
+
+.movie:hover > .library-info {
+  opacity: 1;
+}
+
+.movie:hover > .img-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Details styling */
+.movie-button {
+  position: absolute;
+  top: 6%;
+  left: 5%;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 5px;
+  transform: scale(1.0);
+  transition: transform 0.6s;
+}
+
+.movie-button:hover {
+  transform: scale(1.2);
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  
+}
+
+.image-backdrop {
+  object-fit: cover;
+  min-height: 100vh;
+
+}
+
+.movie-container {
+  position: absolute;
+  bottom: 5%;
+  padding: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.movie-poster {
+  border: 2px solid white;
+  width: 100%;
+  height: auto;
+}
+
+.movie-rating {
+  width:fit-content;
+  height:fit-content;
+  font-weight: 700;
+  background-color: white;
+  font-size: 20px;
+  color: black;
+}
+
+.movie-title {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px 0 15px;
+  color: white;
+  background-color: rgba(30, 29, 29, 0.582);
+  border-radius: 15px;
+  
+}
+
+.movie-summary {
+  color: white;
+  font-weight: 500;
+}
+
+
+/* TABLET */
+@media (min-width: 668px) and (max-width: 1024px) {
+
+  .details-container {
+    display:flex;
+  }
+
+  .movie-container {
+    width: 65%;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1025px) {
+
+.library {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.release-container {
+  max-width: 25%;
+}
+
+.movie-poster {
+  border: 2px solid white;
+  width: fit-content;
+  height: auto;
+}
+
+.movie-container {
+  margin-left: 30px;
+}
+
+}
+
+.movie-title {
+  max-width: 400px;
 }
