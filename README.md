@@ -1,13 +1,11 @@
-# Project Movies
+# Project Movie-App
 
-Replace this readme with your own information about your project.
+For week 8 of the Technigo bootcamp we have built a multi-page applications using React Router.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+# The Problem
 
-## The problem
+We began creating the different components needed for the app and the we set up routes between them. We have been fetching data about popular movies from The Movie BD API and displayed this info in different pages. We have both been pair-programming and woking separately. If we had more time we would have added a functionality to toggle between different selections of movies.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+# View it live
 
-## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://popularmovieapp.netlify.app/

@@ -1,19 +1,10 @@
-# Technigo React Starter App
+# Project Movie-App
+For week 8 of the Technigo bootcamp we have built a multi-page applications using React Router.
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+# The Problem
+We began creating the different components needed for the app and the we set up routes between them. We have been fetching data about popular movies from The Movie BD API and displayed this info in different pages. We have both been pair-programming and woking separately. If we had more time we would have added a functionality to toggle between different selections of movies.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
 
-## Usage
+# View it live
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
-
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+https://popularmovieapp.netlify.app/
