@@ -4,13 +4,11 @@ import { Link, useParams } from 'react-router-dom'
 export const ProductPage = () => {
   const { slug } = useParams()
   const [details, setDetails] = useState({})
-  console.log(slug)
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${slug}?api_key=70e43da479b5b8f5a366a40753e1b1e3&language=en-US`)
       .then((response) => response.json())
       .then((data) => {
         setDetails(data)
-        console.log(details)
       })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

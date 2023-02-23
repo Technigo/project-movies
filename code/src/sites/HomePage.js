@@ -13,7 +13,7 @@ export const HomePage = () => {
   return (
     <section className="movieContainer">
       {movies.map((prop) => (
-        <div className="movieName" key={prop.id}>
+        <div key={prop.id} className="movieName">
           <Link className="movie-link" to={`/${prop.id}`}>
             <img className="movieImage" src={`https://image.tmdb.org/t/p/w500${prop.poster_path}`} alt={prop.title} />
             <div className="movieText">

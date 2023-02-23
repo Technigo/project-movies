@@ -6,12 +6,10 @@ import { ProductPage } from './sites/ProductPage';
 export const App = () => {
   return (
     <BrowserRouter>
-      <main>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/:slug" element={<ProductPage />} />
-        </Routes>
-      </main>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/:slug" element={<ProductPage />} />
+      </Routes>
     </BrowserRouter>
   );
 }
