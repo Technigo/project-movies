@@ -1,13 +1,9 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+The task was to build our first multi-page React application. One page with the movies and one page with the details about a specifik movie. 
+We worked in pairs and did everything together with vsCode-liveshare. The project went faster than expected but we maybe need to deep dive a bit more to fully understand "useParams" that was new to us. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://movieprojectweek8.netlify.app/

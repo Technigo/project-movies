@@ -1,13 +1,113 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.poster-container {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.movie-container {
+  height: 90vh;
+  display: flex;
+  margin-left: 30px;
+}
+
+.movie-content {
+  display: flex;
+  align-items: flex-end;
+}
+
+.movie-img {
+  border: 10px solid white;
+}
+.text-container {
+  max-width: 500px;
+  margin-left: 20px;
+}
+.title-vote {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+p {
+  color: white;
+}
+
+h2 {
+  color: white;
+}
+
+.rating {
+  padding: 5px 15px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  border-radius: 7px;
+}
+
+.button-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 50px;
+  left: 50px;
+}
+
+.home-button {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.star-icon {
+  max-width: 20px;
+  margin-right: 10px;
+}
+
+.arrow-icon {
+  max-width: 20px;
+}
+.home-button:hover {
+  transform: translate(0.5em, 0);
+  transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 667px) {
+  .poster-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .movie-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 300px;
+    min-height: 100vh;
+    margin-top: 15px;
+  }
+  .movie-img {
+    max-width: 200px;
+  }
+  .button-container {
+    top: 20px;
+  }
 }
