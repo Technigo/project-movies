@@ -1,3 +1,7 @@
+ /* * { 
+  outline: 1px solid red;
+}  */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +9,233 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+header {
+  color: white;
+  font-weight: lighter;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+  position: absolute;
+  display: inline-flex;
+  color: #fff;
+  align-items: center;
+  font-weight: 500;
+  text-decoration: none;
+  left: 60px;
+  background: border-box;
+  top: 100px;
+  font-size: 20px;
+}
+
+/*POPULAR LIST*/
+.popular-section {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+
+.popular-container {
+  position: relative;
+  width: 50%;
+}
+
+img {
+  width: 100%;
+}
+
+/*Tablet/Desktop screen*/
+@media (min-width: 768px){
+  .popular-container {
+    width: 25%
+  }
+}
+
+/*--------------DETAILS-----------------------*/
+.backdrop-container {
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center
+}
+
+.overview-container {
+  margin-top: 100px; 
+  margin-bottom: 20px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex end;
+  z-index: 2;
+}
+
+.backdrop {
+position: fixed;
+opacity: 0.3;
+height: 100vh;
+z-index: -1;
+}
+
+.title-rating-text {
+max-width: 425px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.title-details {
+  width: fit-content;
+  font-size: 28px;
+  color: white;
+  display: inline-block;
+  align-items: flex-end;
+  margin: 0;
+}
+
+.rating {
+  display: inline;
+  color: white;
+  font-weight: bold;
+  height: 30px;
+  font-size: 18px;
+  background-color: rgb(24, 90, 43);
+  padding: 3px 5px 4px 5px;
+  border-radius: 6px;
+}
+
+.poster {
+  width: 70%;
+  max-width: 342px;
+  border: 5px solid white;
+  
+}
+
+.details-container {
+width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-right: 5%;
+}
+
+.overview-text {
+  color: white;
+  font-size: 17px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.backdrop {
+position: fixed;
+z-index: -1;
+height: 100vh;
+}
+
+button {
+  position: absolute;
+  display: inline-flex;
+  color: #fff;
+  align-items: center;
+  font-weight: 500;
+  text-decoration: none;
+  left: 60px;
+  background: border-box;
+  top: 100px;
+  font-size: 20px;
+}
+
+
+/*DESKTOP/TABLET */
+
+@media (min-width: 768px) {
+.overview-container {
+    flex-direction: row;
+    position: absolute;
+    left: 60px;
+    bottom: 160px;
+    margin-top: 0px; 
+    margin-bottom: 0px;
+}
+
+.poster {
+margin-right: 20px;
+}
+
+.overview-text {
+  font-size: 18px;  
+}
+
+button {
+  position: absolute;
+  display: inline-flex;
+  color: #fff;
+  align-items: center;
+  font-weight: 500;
+  text-decoration: none;
+  left: 60px;
+  background: border-box;
+  top: 100px;
+  font-size: 20px;
+  }
+}
+
+
+
+
+
+
+
+/*------------------NOT FOUND PAGE------------------------*/
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notFound h2 {
+  color:antiquewhite;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(200, 195, 187); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .notFound h2 {
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  }
+  /* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 30% }
+}
+}
+
+
+.notFound img {
+  width:250px;
+  height: 250px;
+}
+
+.notFound button {
+margin-top: 400px;
+}
+
