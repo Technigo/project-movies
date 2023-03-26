@@ -1,19 +1,12 @@
-# Technigo React Starter App
+## Project Movies
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+A multipage site that shows the current most popular movies and a details page about the selected movie when clicked. Built in React with data from the TMDB API (https://www.themoviedb.org/)
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+#### The process and problems
 
-## Usage
+The point was to use React Router to build a site with multiple pages. The detail pages about each movie is fetched dynamically using useEffect and useParams, to get the movie ID from the URL and be able to fetch the right data from the API.
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+We designed our own loading spinner as our little fun project inside the project. If we had more time, we would spend more time on responsiveness in a smaller device & of course make our loading spinner better!
 
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+#### View it live
+https://joel-tika-movies.netlify.app/
