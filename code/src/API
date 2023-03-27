@@ -1,0 +1,10 @@
+// API-nyckel (v3 auth) Sandra:
+// ef419ef4eccfeb47458eaa6d860708b3
+
+// API-nyckel (v3 auth) Ylva:
+
+// Exempel på API-begäran
+// https://api.themoviedb.org/3/movie/550?api_key=ef419ef4eccfeb47458eaa6d860708b3
+
+// Testa här(flik try it out): https://developers.themoviedb.org/3/configuration/get-api-configuration
+// (funkar ej för mig/S)
