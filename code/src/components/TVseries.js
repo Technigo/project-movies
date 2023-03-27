@@ -25,7 +25,7 @@ export const TVseries = () => {
       <h1 className="popular">Popular TV-series</h1>
       <div className="movies-container">
         {tvShow.map((show) => (
-          <article clasName="movie-wrapper" key={show.id}>
+          <article className="movie-wrapper" key={show.id}>
             <div className="details">
               <h1>{show.name}</h1>
             </div>
