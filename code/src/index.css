@@ -12,11 +12,61 @@ code {
     monospace;
 }
 
-.list {
+a {
+  text-decoration: none;
+  color: #F9F9F9
+}
+
+/** HEADER **/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  background: #181818e0;
+  flex-direction: column;
+  padding: 5px 0;
+  align-items: center;
+  z-index: 1;
 }
-.list-element {
-  width: 25%;
-  text-align: center;
+
+.miniflix {
+  margin: 10px;
+  width: 120px;
+  height: auto;
 }
+
+.navlink-container a {
+  color: #F9F9F9;
+}
+
+.navlink:hover, .miniflix:hover {
+  transform: scale(1.1);
+  transition: transform 0.4s;
+  cursor: pointer
+}
+
+.navlink-container {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin-left: -20px;
+}
+
+.startpage {
+margin: 130px 10px;
+}
+
+.loading-container {
+  display: flex;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  color: #F9F9F9;
+  flex-direction: column;
+  align-items: center;
+}
+
