@@ -1,0 +1,2 @@
+export const BASE_URL = 'https://api.themoviedb.org/3/movie/popular?api_key=6cfbbdc6034efd81a5554b5cb5a11377&language=en-US&page=1';
+export const SINGLE_MOVIE_URL = (id) => `https://api.themoviedb.org/3/movie/${id}?api_key=6cfbbdc6034efd81a5554b5cb5a11377&language=en-US`;
