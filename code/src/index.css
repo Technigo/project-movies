@@ -18,8 +18,26 @@ code {
   width: 100%;
 }
 
+.movie-list-element {
+  position: relative;
+}
+
+.movie-list-short-info {
+  position: absolute;
+  top: 0;
+  background-color: black;
+  opacity: 50%;
+  height: 100%;
+  width: 100%;
+}
+
 .movie-list-img {
   max-width: 400px;
   max-height: 400px;
   object-fit: cover;
+}
+
+.movie-title,
+.movie-release-date {
+  color: white;
 }
