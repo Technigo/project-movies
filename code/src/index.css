@@ -31,12 +31,6 @@ header {
   z-index: 1;
 }
 
-.miniflix {
-  margin: 10px;
-  width: 120px;
-  height: auto;
-}
-
 .navlink-container a {
   color: #F9F9F9;
 }
@@ -54,7 +48,7 @@ header {
   margin-left: -20px;
 }
 
-.startpage {
+.startpage, .tvSeriesPage {
 margin: 130px 10px;
 }
 

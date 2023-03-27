@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { MOVIES_URL } from 'utils/Urls';
 
 export const StartPage = () => {
@@ -26,14 +27,17 @@ export const StartPage = () => {
     <section className="startPage">
       <h1 className="popular">Popular movies</h1>
       <div className="movies-container">
-        <p>Use map-props function here</p>
-        <article className="movie-wrapper">
-          <p>Post poster-path here and movie title here</p>
-          <div className="details">
-            <h2>title here</h2>
-            <p>Released - post movie release date here</p>
-          </div>
-        </article>
+        {movies.map((movie) => (
+          <article className="movie-wrapper" key={movie.id}>
+            <Link key={movie.id} to={`/movies/${movies.id}`}>
+              <p>Post poster-path here and movie title here</p>
+              <div className="details">
+                <h2>TITLE here</h2>
+                <p>Released - post movie release date here</p>
+              </div>
+            </Link>
+          </article>
+        ))}
       </div>
     </section>
   )
