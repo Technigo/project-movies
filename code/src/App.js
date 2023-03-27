@@ -1,9 +1,15 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { MovieList } from './components/MovieList'
+import { Details } from './components/Details'
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MovieList />} />
+        <Route path="/movies/:id" element={<Details />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
