@@ -1,9 +1,14 @@
 import React from 'react';
+import { Homepage } from './Homepage/Homepage';
 
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
