@@ -1,5 +1,8 @@
 body {
   margin: 0;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -10,4 +13,206 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* - - - MovieList.js - - - */
+
+.movie {
+  display: grid;
+  align-items: end;
+  position: relative;
+}
+
+.poster-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.poster-image {
+  width: 100%;
+}
+
+.poster-image, .poster-text-container {
+  transition: opacity 300ms ease-in-out;
+}
+
+.poster-text-container {
+  position: absolute;
+  margin: calc(15px + 1vw);
+  color: white;
+  opacity: 0;
+  text-shadow: 1px 1px #4d4d4d;
+}
+
+.movie:hover .poster-text-container {
+  opacity: 1;
+}
+.movie:hover .poster-image {
+  opacity: 0.25;
+}
+
+.poster-text-container-title {
+  font-size: 2em;
+  margin-bottom: 0px;
+  overflow-wrap: break-word;
+}
+
+/* - - - MovieDetails.js - - - */
+
+.details-container {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.link-back {
+  position: absolute;
+  top: 50px;
+  bottom: 50px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  background-color: transparent;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.link-back-text {
+  padding-left: 10px;
+  text-shadow: 1px 1px #4d4d4d;
+}
+
+.link-back .link-back-icon {
+  width: 30px;
+  transition: margin-right 0.2s ease-in-out;
+}
+
+.link-back:hover .link-back-icon {
+  margin-right: 5px;
+}
+
+.details-summary {
+  display: flex;
+  padding: 50px;
+  gap: 20px;
+}
+
+.details-summary-poster {
+  border: 5px white solid;
+  height: 432px;
+  object-fit: contain;
+}
+
+.details-summary-text {
+  height: fit-content;
+  width: 50%;
+  align-self: flex-end;
+} 
+
+.details-summary-text-header {
+  font-size: 22px;
+}
+
+.details-summary-text-header-title {
+  text-shadow: 1px 1px #4d4d4d;
+}
+
+.details-summary-text-header-rating {
+  background-color: white;
+  color: black;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.details-summary-text-description {
+  font-size: 16px;
+  text-shadow: 1px 1px #4d4d4d;
+}
+
+/* - - - NotFound.js - - - */
+
+.error-message-container {
+  text-align: center;
+  padding-top: 200px;
+}
+
+.error-message {
+  font-size: 25px;
+}
+
+.link-to-main {
+  font-size: 20px;
+  color:white;
+  font-weight: bold;
+  background-color: transparent;
+  height: 20px;
+  border: none;
+}
+
+.link-to-main:hover {
+  color:rgb(126, 126, 126);
+  cursor: pointer;
+}
+
+/* - - - Loader.js - - - */
+
+.loader-container {
+  text-align: center;
+  padding-top: 200px;
+}
+
+.loader-message {
+  font-size: 25px;
+}
+
+.spinner {
+  animation-name: loadspinner;
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  margin-top: 30px;
+  margin: 30px auto;
+  animation-duration: 900ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes loadspinner {
+from {
+    transform: rotate(0deg)
+
+  } 
+to {
+    transform: rotate(360deg)
+  }
+}
+
+@media (max-width:500px) {
+
+
+  .details-summary {
+    flex-wrap: wrap;
+    gap: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+
+  .details-summary-poster {
+    height: 215px;
+    align-self: flex-end;
+  }
+
+  .details-summary-text {
+    width: 100%;
+    align-self: flex-end;
+  } 
+  
 }
