@@ -1,0 +1,11 @@
+.detail-background-picture {
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.detail-cover-picture {
+  height: 100px;
+}
