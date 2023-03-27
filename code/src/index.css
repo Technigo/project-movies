@@ -33,6 +33,7 @@ header {
 
 .navlink-container a {
   color: #F9F9F9;
+  border: 1px solid red;
 }
 
 .navlink:hover, .miniflix:hover {
@@ -46,10 +47,52 @@ header {
   display: flex;
   gap: 15px;
   margin-left: -20px;
+  border: 1px solid blueviolet;
 }
 
 .movies-container {
   display: flex;
   flex-wrap: wrap;
   row-gap: 10px;
+  border: 1px solid grey;
+}
+
+.movie-wrapper .details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  padding: 20px;
+}
+
+.movie-wrapper .details h1{
+  font-size: 20px;
+  color: red;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.movie-wrapper .details p{
+  color: #d56060;
+}
+
+/*---MOVIE/TVSHOW/COLLECTION DETAILS---*/
+.movie-details, .tvshow-details {
+  position: absolute;
+  bottom: 20px;
+  left: 10px
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-text h1 {
+  color: #8fc69f;
+  font-size: 15px;
+  line-height: 1.6;
 }
