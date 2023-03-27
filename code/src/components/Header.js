@@ -1,6 +1,4 @@
 import React from 'react'
-// eslint-disable-next-line spaced-comment
-//import { Link, NavLink } from 'react-router-dom'
 
 export const Header = () => {
   return (
