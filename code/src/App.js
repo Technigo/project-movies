@@ -1,13 +1,20 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Header } from 'components/Header'
+import { StartPage } from 'components/StartPage'
 
 export const App = () => {
   return (
-    <main>
-      <Header />
-      <div>
+    <BrowserRouter>
+      <main>
+        <Header />
+        <Routes>
+          <Route path="/" element={<StartPage />} />
+          <div>
       Find me in src/app.js!
-      </div>
-    </main>
+          </div>
+        </Routes>
+      </main>
+    </BrowserRouter>
   );
 }
