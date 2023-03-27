@@ -48,19 +48,8 @@ header {
   margin-left: -20px;
 }
 
-.startpage, .tvSeriesPage {
-margin: 130px 10px;
-}
-
-.loading-container {
+.movies-container {
   display: flex;
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 30px;
-  color: #F9F9F9;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
 }
-
