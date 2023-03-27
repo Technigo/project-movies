@@ -3,7 +3,7 @@ import React from 'react';
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      This is the start of our interesting week with movie releases!
     </div>
   );
 }
