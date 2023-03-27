@@ -1,0 +1,72 @@
+.detailPage {
+    position: relative;
+}
+
+.button {
+    position: absolute;
+    display: inline-flex;
+    color: #fff;
+    align-items: center;
+    font-weight: bold;
+    text-decoration: none;
+    left: 50px;
+    top: 50px;
+    border: none;
+    background: none;
+    font-size: 16px;
+}
+
+.button > .arrow {
+    width: 30px;
+    height: 30px;
+    border-right: 8px solid white;
+    border-bottom: 8px solid white;
+    position: relative;
+    transform: rotate(135deg);
+    margin: 0 6px;
+    transition: all .3s ease;
+  }
+
+.background {
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .detailsPoster {
+    border: 5px solid #fff;
+  }
+
+  .summary {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    padding: 50px;
+  }
+
+  .detailsBox {
+    padding: 20px;
+    width: 35%;
+  }
+
+  .rating {
+    color: #000;
+    font-weight: 500;
+    background: #fff;
+    padding: 5px 5px;
+    text-shadow: none;
+    display: inline-block;
+  }
+
+  .star {
+    font-size: 16px;
+  }
+
+  p {
+    margin-right: 15%;
+  }
+
+  .rating:before {
+    content: url('../star-icon.png');
+  }
