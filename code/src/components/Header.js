@@ -7,9 +7,6 @@ const Header = () => {
       <h1>Movie releases</h1>
       <nav>
         <p>
-          <Link to="/details">Go to Details</Link>
-        </p>
-        <p>
           <Link to="/">Go to Home</Link>
         </p>
         <p>
