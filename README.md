@@ -1,13 +1,14 @@
-# Project Movies
+# Project Movies 
 
-Replace this readme with your own information about your project.
+The assignment was to build a multi-page React application, using an API that fetches popular movies in the US.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We looked at the provided videos from technigo for this weeks project, googled, searched on Stack Overflow. We also got help from joining the live sessions. 
+
+If we had more time we would like to add more pages, add a dropdown menu, add a page to catch errors from the API. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://popularmovies-us.netlify.app/
