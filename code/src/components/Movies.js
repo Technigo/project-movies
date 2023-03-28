@@ -1,29 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const Movie = ({ title, releaseDate, movieId, poster }) => {
-  const [isHover, setIsHover] = useState(false)
-
-  const handleMouseEnter = () => {
-    setIsHover(true);
-  };
-  const handleMouseLeave = () => {
-    setIsHover(false);
-  };
-
+export const MovieList = ({ movies }) => {
   return (
-    <div
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}>
-      <Link
-        to={`/movies/${movieId}`}>
-        <img src={`http://image.tmdb.org/t/p/w342${poster}`} alt="movie" />
-        <div
-          className={isHover ? 'description' : 'hidden-description'}>
-          <h1>{title}</h1>
-          <p>Released {releaseDate}</p>
-        </div>
-      </Link>
-    </div>
-  )
-}
+    <section className="list-wrapper">
+      {movies.map((movie) => (
+        <Link
+          className="movie-container"
+          key={movie.id}
+          to={`/MovieDetails/${movie.id}`}>
+          <img
+            className="list-element"
+            src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+            alt={movie.title} />
+          <div className="movie-info">
+            <h1>{movie.title}</h1>
+            <h4>Released {movie.release_date}</h4>
+          </div>
+        </Link>
+      ))}
+    </section>
+  );
+};
