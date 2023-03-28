@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
@@ -12,11 +13,82 @@ code {
     monospace;
 }
 
-body {
-  background-color: black;
-}
-
 h1 {
   color: white;
 }
+
+h2 {
+  color: white;
+}
+
+h3 {
+  color: white;
+}
+
+/* THE FOLLOWING CLASSES ARE FROM MOVIELIST.JS */
+.movies {
+  display: flex; /* this pushed all posters in to just one row */
+  flex-wrap: wrap; /* this then made all posters display in rows of two but with an uneven margin to the left */
+  justify-content: center; /* this centered the two posters on the page */
+  background-size: cover;
+}
+
+.movie-container {
+  position: relative;
+  width: 50%; /* this moved all posters to the left side, no margin */
+}
+
+.movie-details {
+  opacity: 0; /* when this is active the title and date do not display */
+  position: absolute;
+  left: 5%;
+  bottom: 5%; /*text appears on top of image*/
+}
+
+.details-img {
+  width: 100%; /* displays all images (2 per row) over the full page */
+  height: auto;
+}
+
+.image-overlay {
+  height: 100%; /* this put the image under the wrong title? */
+  width: 100%;
+  position: absolute; /* this put the posters back in the correct place with their titles */
+  color: transparent;
+}
+
+/* HOVER */
+
+/* ChatGPT on this way of targeting: The > symbol in CSS is known as the child combinator selector, 
+and it selects only the direct child element of a given parent element. In the case of the CSS code you 
+provided, using the > symbol between .movie and .movie-details ensures that only the direct child 
+element with the .movie-details class is targeted, and not any other descendant elements that may 
+also have the .movie-details class. */
+
+.movie:hover > .movie-details { 
+  opacity: 1; 
+  transition: 0.5s ease;
+}
+
+.movie:hover > .image-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: 0.5s ease;
+}
+
+/* THE FOLLOWING CLASSES ARE FROM MOVIEDETAILS.JS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

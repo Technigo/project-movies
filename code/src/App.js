@@ -1,9 +1,8 @@
 /* eslint-disable no-trailing-spaces */
-/* eslint-disable max-len */
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MovieList from 'components/MovieList';
-import NotFound from 'components/NotFound';
+// import NotFound from 'components/NotFound';
 import MovieDetails from 'components/MovieDetails';
 import Header from 'components/Header';
 import { BASE_URL } from 'utils/urls';
@@ -18,9 +17,7 @@ export const App = () => {
   useEffect(() => {
     fetch(BASE_URL)
       .then((data) => data.json())
-      .then((configuredData) => { 
-        setMovieList(configuredData.results);
-      })
+      .then((configuredData) => setMovieList(configuredData.results))
       // .catch((err) => {
     // console.log(err);
     // });
@@ -33,12 +30,13 @@ export const App = () => {
       <Routes>
         {/* path to a single component */}
         <Route path="/" element={<MovieList movieList={movieList} />} />
-        <Route path="/moviedetails/:id" element={<MovieDetails />} />
-        {/* this above Route path can be switched to the movies later - maybe rename to movieDetails or such */}
-        <Route path="/404" element={<NotFound />} />
-        <Route path="*" element={<Navigate to="/404" />} />
+        <Route path="/details/:id" element={<MovieDetails />} />
+        {/* This second path was not corresponding with our code on line 14 in MovieList.js and 
+        therefore it was not working and was not taking the user to the movie details. */}
+        {/* <Route path="/404" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/404" />} /> I removed Navigate from the
+        import at the top since I commented this out */}
       </Routes>
-      This is the start of our interesting week with movie releases!
     </BrowserRouter>
   );
 }

@@ -4,27 +4,28 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { MOVIE_DETAILS } from 'utils/urls';
 
 const MovieDetails = () => {
-  const navigate = useNavigate();
-  //   const params = useParams();
-  const { movieId } = useParams();
-  const [details, setDetails] = useState({});
-  // this { pokemonName } above can be switched to the movie details
+  const navigate = useNavigate()
+  const { id } = useParams()
+  // I changed this from MovieId to only id so that it matches with the second path
+  // in app.js. I also changed it in the urls.js and in this file.
+  const [details, setDetails] = useState({})
+
   const onBackButtonClick = () => {
     navigate(-1)
   }
-  const onGoToNotFoundButtonClick = () => {
-    navigate('/404');
+  const notFoundButtonClick = () => {
+    navigate('/404')
   }
 
   useEffect(() => {
     fetch(MOVIE_DETAILS)
       .then((data) => data.json())
       .then((configuredData) => setDetails(configuredData))
-  }, [movieId]);
+  }, [id]);
   
   return (
     <section
-      className="movie-details-containter"
+      className="movie-details-container"
       style={{ backgroundImage:
       `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
       <button
@@ -35,7 +36,7 @@ const MovieDetails = () => {
       <img
         className="poster-img"
         src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`}
-        alt="poster" />
+        alt="movie-poster" />
       <div
         className="movie-info">
         <div className="title-and-rating">
@@ -45,7 +46,7 @@ const MovieDetails = () => {
 average={String(Math.round(listItem.vote_average * 10) / 10)} */}
         </div>
         <p className="overview">{details.overview}</p>
-        <button type="button" onClick={onGoToNotFoundButtonClick}>
+        <button type="button" onClick={notFoundButtonClick}>
           Go to NotFound
         </button>
         {/* eventually we might delete this button above */}
