@@ -1,13 +1,14 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+We have created a multi-page site with react router. This site is showing an overview of the 20 top-rated movies. If you click on a movie you will be directed to a new page with the movie details.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started building up the infrastructure with a repetition from last week, creating hooks and state using useEffect and useState and fetched the data from APIs. Then we moved on to the using React Router to create paths between our two pages. Finally we styled the pages and made the site responsive.
+
+If we had more time we would add an animation to our loading and maybe more animations to the site overall.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://toprated-movies.netlify.app
+

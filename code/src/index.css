@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +9,281 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.outer-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MOVIELIST */
+.top-rated-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.movie-card {
+  position: relative;
+  width: 100%;
+  background-color: black;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.overlay {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: left;
+  width: 100%;
+}
+
+.movie-card:hover .image {
+  opacity: 0.3;
+}
+
+.movie-card:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  padding: 0 32px;
+}
+
+.loading-text {
+  color: white;
+  font-weight: 700;
+}
+
+/* MOVIE DETAILS */
+
+.background-img {
+  
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  opacity: 0.8;
+
+}
+
+.details-wrapper {
+  position: absolute;
+  top: 12%;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+
+}
+
+.goBackBtn {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25px;
+  text-decoration: none;
+}
+
+.goback-icon {
+  width: 40px;
+}
+
+.icon-text {
+  color: #fff;
+  font-weight: 700;
+
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: fit-content;
+  color: white;
+}
+
+.movie-detail-title {
+  font-size: 17px;
+}
+
+.text-box {
+  background-color: rgba(0, 0, 0, 0.615);
+  padding: 5px;
+}
+
+.details-img {
+  width: 200px;
+  border: 5px solid #fff;
+  margin-bottom: 10px;
+}
+
+.rating {
+  color: white;
+  width: 150px;
+  font-size: 14px;
+}
+
+.movie-detail-text {
+  font-size: 12px;
+}
+
+.outer-wrapper {
+  overflow: hidden;
+}
+
+
+/***** TABLET *****/
+@media (min-width: 668px){  
+  .movie-card {
+    width: 50%;
+  }
+
+  .movie-details {
+    display: flex;
+    flex-direction: row;
+    
+  }
+
+  .background-img {
+    width: 240%;
+    height: 100vh; 
+  }
+
+  .outer-wrapper {
+    overflow: hidden;
+  }
+
+  .goBackBtn {
+    margin-bottom: 380px;
+  }
+
+  .goback-icon {
+    width: 50px;
+  }
+
+  .details-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: fit-content;
+    color: white;
+    margin-left: 25px;
+  }
+
+  .text-box {
+    padding: 20px;
+  }
+
+  .movie-detail-title {
+    font-size: 24px;
+  }
+  
+  .details-img {
+    width: 342px;
+    border: 5px solid #fff;
+  }
+  
+  .rating {
+    color: white;
+    width: 150px;
+    font-size: 20px;
+  }
+  
+  .movie-detail-text {
+    font-size: 16px;
+  }
+
+  }
+
+
+/***** DESKTOP *****/
+@media (min-width: 1025px) {
+  .loading-text {
+    padding: 100px;
+  }
+
+  .top-rated-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+   .movie-card {
+    width: 25%;
+  } 
+
+/* DETAILS */
+
+.outer-wrapper {
+  overflow: hidden;
+}
+
+.background-img {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  opacity: 0.8;
+}
+
+.details-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.goBackBtn {
+  margin-bottom: 55px;
+}
+
+.goback-icon {
+  width: 50px;
+}
+
+.goback-icon:hover {
+  width: 53px;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: row;
+}
+
+.details-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: fit-content;
+  color: white;
+  margin-left: 25px;
+  width: 500px;
+}
+
 }
