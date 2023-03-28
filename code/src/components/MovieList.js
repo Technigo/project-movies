@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { MOVIES_URL } from 'utils/Urls'
-import { Movies } from 'components/Movies'
+import { Movie } from 'components/Movie'
 
 export const MovieList = () => {
   const [list, setList] = useState([])
@@ -19,14 +19,14 @@ export const MovieList = () => {
 
   return (
     <main>
-      {list.map((movies) => (
+      {list.map((movie) => (
         <div
           className="movie-card">
-          <Movies
-            title={movies.title}
-            releaseDate={movies.release_date}
-            movieID={movies.id}
-            poster={movies.poster_path} />
+          <Movie
+            title={movie.title}
+            releaseDate={movie.release_date}
+            movieID={movie.id}
+            poster={movie.poster_path} />
         </div>
       ))}
     </main>

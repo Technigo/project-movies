@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
 
-export const Movies = () => {
+export const Movie = () => {
   return (
     <div>
       <p>Here link goes</p>
