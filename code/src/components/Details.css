@@ -1,11 +1,49 @@
 .detail-background-picture {
-  height: 100%;
-
+  min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.detail-cover-picture {
-  height: 100px;
+.movie-data-cover {
+  height: 370px;
+  width: 250px;
+  border: 3px solid white;
+}
+
+.detail-container {
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  left: 10px;
+  background-color: #1313139e;
+  padding: ;
+}
+
+.movie-data-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.movie-data-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-data-title-and-rating {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.movie-data-title {
+  color: white;
+}
+
+.movie-data-rating {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 0 5px;
+  font-size: 20px;
 }
