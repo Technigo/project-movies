@@ -11,7 +11,6 @@ export const MovieList = ({ movieList }) => {
       {movieList.map((singlemovie) => {
         return (
           <p>{singlemovie.title}</p>
-
         )
       })}
 

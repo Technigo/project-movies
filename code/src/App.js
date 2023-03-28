@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import MovieInfoPage from './Components/MovieInfoPage/MovieInfoPage';
+import { MovieInfoPage } from './Components/MovieInfoPage/MovieInfoPage';
 import { MovieList } from './Components/MovieList/MovieList';
 import { NotFound } from './Components/NotFound/NotFound';
 import { BASE_URL, API_KEY } from './utils/urls'
