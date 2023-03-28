@@ -6,8 +6,7 @@ import Details from 'components/Details';
 
 export const App = () => {
   return (
-    <BrowserRouter>
-      {/* Put header comp here */}
+    <BrowserRouter className="Main-container">
       <Routes>
         <Route path="/" element={<Movies />} />
         <Route path="/details" element={<Details />} />

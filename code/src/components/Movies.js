@@ -13,14 +13,14 @@ export const Movies = () => {
   }, []);
 
   return (
-    <div>
+    <div className="movie-container">
       {movies.results.map((singleMovie) => {
         return (
           <>
             <div key={singleMovie.id}>
               <img src={`https://image.tmdb.org/t/p/w342/${singleMovie.poster_path}`} alt="movie poster" />
             </div>
-            <div>
+            <div className="release-info">
               <h2>{singleMovie.original_title}</h2>
               <p>{singleMovie.release_date}</p>
             </div>
