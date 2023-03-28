@@ -12,6 +12,7 @@ code {
     monospace;
 }
 
-.movie-backdrop{
-  max-height: 300px;
+.movie-poster{
+  max-width: 342px;
+  min-width: 190px;
 }
