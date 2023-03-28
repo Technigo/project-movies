@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,7 +10,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
 }
 
 code {
@@ -33,11 +37,12 @@ code {
 
 
 .movie-article {
-  border: 1px solid #ccc;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  width: 100%;
   background-color: black;
+  
+  transition: opacity 0.3 ease;
+ 
 }
 
 .movie-article img {
@@ -45,12 +50,34 @@ code {
   height: auto;
   object-fit: cover;
   margin-bottom: 10px;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
 }
 
 .movie-details {
-  margin-top: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3 ease;
+}
+
+.movie-article:hover .movie-details {
+  opacity: 1;
+}
+
+.movie-details h1,
+.movie-details p {
+  margin: 0;
+  padding: 0;
+  color: white;
 }
 
 .popular-movies-section {
