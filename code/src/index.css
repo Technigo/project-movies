@@ -12,87 +12,68 @@ code {
     monospace;
 }
 
-a {
-  text-decoration: none;
-  color: #F9F9F9
+/*Text*/
+h1 {
+  font-weight: bold;
+  margin: 5px 0px;
 }
 
-/** HEADER **/
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
+p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+
+.not-found {
+  padding: 30px;
+}
+
+/*Detail component*/
+.background {
+  background-color: #1e1e1e;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
   display: flex;
-  justify-content: center;
-  background: #181818e0;
   flex-direction: column;
-  padding: 5px 0;
-  align-items: center;
-  z-index: 1;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.navlink-container a {
-  color: #F9F9F9;
-  border: 1px solid red;
-}
-
-.navlink:hover, .miniflix:hover {
-  transform: scale(1.1);
-  transition: transform 0.4s;
-  cursor: pointer
-}
-
-.navlink-container {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  margin-left: -20px;
-  border: 1px solid blueviolet;
-}
-
-.movies-container {
+/*Main page design with picture*/
+main {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 10px;
-  border: 1px solid grey;
 }
 
-.movie-wrapper .details {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0,0,0,0.75);
-  display: none;
-  padding: 20px;
+.movie-card {
+  position: relative;
+  width: 50%;
 }
 
-.movie-wrapper .details h1{
-  font-size: 20px;
-  color: red;
-  margin-top: auto;
-  margin-bottom: 0;
+.movie-card img{
+  width: 100%;
 }
 
-.movie-wrapper .details p{
-  color: #d56060;
-}
-
-/*---MOVIE/TVSHOW/COLLECTION DETAILS---*/
-.movie-details, .tvshow-details {
-  position: absolute;
-  bottom: 20px;
-  left: 10px
-}
-
-.details {
+/*Button design*/
+.back-button {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 20px;
+  color:white;
+  text-decoration: none;
 }
 
-.detail-text h1 {
-  color: #8fc69f;
-  font-size: 15px;
-  line-height: 1.6;
+
+.back-button p {
+  margin: 0px;
+}
+
+.back-button:hover {
+  transform: scale(1.04);
+  transition: 0.2s ease-in-out;
 }

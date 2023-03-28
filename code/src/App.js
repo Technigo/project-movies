@@ -1,17 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Header } from 'components/Header'
-import { OnCinema } from 'components/OnCinema'
+import { NotFound } from 'components/NotFound'
+import { MovieList } from 'components/MovieList'
 
 export const App = () => {
   return (
     <BrowserRouter>
-      <main>
-        <Header />
-        <Routes>
-          <Route path="/onCinema" element={<OnCinema />} />
-        </Routes>
-      </main>
+
+      <Routes>
+        <Route path="/" element={<MovieList />} />
+        <Route path="/404" element={<NotFound />} />
+      </Routes>
     </BrowserRouter>
   );
 }

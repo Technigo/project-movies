@@ -1,17 +1,12 @@
 import React from 'react'
+// import { Link } from 'react-router-dom'
 
-export const MovieDetails = () => {
+export const Movies = () => {
   return (
-    <section className="detailsPage">
-      <button type="button">Back button</button>
-      <p>Movies</p>
-
-      <article className="movie-details">
-        <div className="details">
-          <div className="detail-text">
-            <h2>Place title and maybe rating</h2>
-          </div>
-        </div>
-      </article>
-    </section>)
+    <div>
+      <p>Here link goes</p>
+      <h1> Add title here</h1>
+      <p>Add release date</p>
+    </div>
+  )
 }
