@@ -7,9 +7,6 @@ export const Details = () => {
 
   const { id } = useParams()
 
-  /* To round rating number to one decimal */
-  const roundedNumber = Math.round(movieDetails.vote_average * 10) / 10
-
   const FetchDetails = () => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=874b455d7037920aea9fd13db8645525&language=en-US`)
       .then((response) => response.json())
@@ -43,7 +40,6 @@ export const Details = () => {
         <div className="details">
           <div className="title-vote">
             <h1>{movieDetails.title}</h1>
-            <h3><span className="vote-icon" /> {roundedNumber}</h3>
           </div>
           <p>{movieDetails.overview}</p>
         </div>
