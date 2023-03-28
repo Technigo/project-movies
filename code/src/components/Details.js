@@ -18,8 +18,13 @@ export const Details = () => {
   }
   return (
     <div>
-      <h2> This is the Details component for the movie {movie.title} </h2>
-      <button type="button" onClick={onGoToNotFoundButtonClick}>Go to NotFound</button>
+      {movie && (
+        <>
+          <h2> This is the Details component for the movie {movie.title} </h2>
+          <button type="button" onClick={onGoToNotFoundButtonClick}>Go to NotFound</button>
+          <img className="movie-backdrop" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title} />
+        </>
+      )}
     </div>)
 }
 

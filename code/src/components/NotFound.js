@@ -11,7 +11,7 @@ export const NotFound = () => {
   }
   return (
     <div>
-      <h1>Nothing here</h1>
+      <h1>This page does not exist</h1>
       <button type="button" onClick={onGoToHomeButtonClick}>Go to Home</button>
       <button type="button" onClick={goBackButtonClick}>Go to Back</button>
     </div>)
