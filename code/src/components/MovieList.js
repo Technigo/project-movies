@@ -7,7 +7,7 @@ export const MovieList = ({ movieList }) => {
       {movieList.map((singleMovie) => {
         return (
           <p key={singleMovie.id}>
-            <Link to={`/details/${singleMovie.title}`}>Go to {singleMovie.title} details </Link>
+            <Link to={`/details/${singleMovie.id}`}>Go to {singleMovie.title} details </Link>
           </p>
         )
       })}

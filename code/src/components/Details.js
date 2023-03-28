@@ -1,22 +1,26 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { SINGLE_MOVIE_URL } from 'utils/urls';
 
-export const Details = (props) => {
+export const Details = () => {
   const navigate = useNavigate();
-  //   const params = useParams();
-  const { movieTitle } = useParams();
+  const [movie, setMovie] = useState();
+  const { id } = useParams();
 
   useEffect(() => {
-    // console.log('params', params);
-    console.log('movieTitle', movieTitle);
-  }, [movieTitle]);
+    fetch(SINGLE_MOVIE_URL(id))
+      .then((res) => res.json())
+      .then((data) => setMovie(data))
+  }, [id])
+
   const onGoToNotFoundButtonClick = () => {
     navigate('/404');
   }
   return (
     <div>
-      <h2>{movieTitle}<span className="rating">{props.vote_average}</span></h2>
-      <p>{}</p>
+      <h2> This is the Details component for the movie {movie.title} </h2>
       <button type="button" onClick={onGoToNotFoundButtonClick}>Go to NotFound</button>
     </div>)
 }
+
+export default Details;
