@@ -24,3 +24,71 @@ main {
   width: 100%;
 }
 
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-size: cover;
+}
+
+.movie-container {
+  position: relative;
+  width: 50%;
+}
+
+.movie-details {
+  opacity: 0;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  color: white;
+}
+
+.details-img {
+  width: 100%;
+  height: auto;
+}
+
+.image-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  color: transparent;
+  transition: .5s ease;
+}
+
+/* Hover effects */
+.movie:hover > .movie-details {
+  opacity: 1;
+}
+
+.movie:hover > .image-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 668px) and (max-width: 1024px) {
+  .movie-container {
+    width: 33%;
+  }
+  .details-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr 1fr;
+  }
+}
+  
+@media (min-width: 1025px) {
+  .movie-container {
+    width: 25%;
+  }
+
+  .poster-img {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    justify-self: start;
+    align-self: end;
+    max-width: 40vw;
+  }
+}
