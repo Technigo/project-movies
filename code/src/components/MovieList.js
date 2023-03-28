@@ -13,7 +13,6 @@ export const MovieList = () => {
         setList(data.results)
       })
   }
-  // To run an API request to moviedb and fetch popular films
   useEffect(() => {
     FetchMovies()
   }, [])
