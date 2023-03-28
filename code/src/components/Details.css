@@ -1,49 +1,66 @@
+.details-page {
+  position: relative;
+}
+
 .detail-background-picture {
   min-height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .movie-data-cover {
-  height: 370px;
-  width: 250px;
-  border: 3px solid white;
+  height: 290px;
+  width: 195px;
+  border: 5px solid white;
 }
 
 .detail-container {
-  position: absolute;
-  z-index: 1;
-  bottom: 20px;
-  left: 10px;
+  display: flex;
+  flex-direction: column;
   background-color: #1313139e;
-  padding: ;
+  padding: 50px;
+  margin-left: 0px;
 }
 
 .movie-data-section {
   display: flex;
-  flex-direction: row;
-}
-
-.movie-data-container {
-  display: flex;
   flex-direction: column;
-}
-
-.movie-data-title-and-rating {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
 }
 
 .movie-data-title {
   color: white;
+  text-shadow: 1px 1px #4d4d4d;
 }
 
 .movie-data-rating {
-  display: flex;
-  align-items: center;
+  display: inline-block;
   background-color: white;
   padding: 0 5px;
   font-size: 20px;
+  text-shadow: none;
+  font-weight: 500;
+}
+
+.movie-data-overview {
+  color: white;
+  max-width: 400px;
+}
+
+@media (min-width: 768px) {
+  .detail-background-picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .movie-data-section {
+    flex-direction: row;
+    bottom: 20px;
+    gap: 20px;
+    align-items: flex-end;
+  }
+
+  .movie-data-cover {
+    width: auto;
+    height: 400px;
+  }
 }

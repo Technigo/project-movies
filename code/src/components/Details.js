@@ -20,25 +20,24 @@ export const Details = ({ movieId, apiKey }) => {
     )
   }
   return (
-    <>
-      {movieData.backdrop_path && <div className="detail-background-picture" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieData.backdrop_path})` }} />}
-      <div className="detail-container">
-        <section className="movie-data-section">
+    <div className="details-page">
+      <div className="detail-background-picture" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieData.backdrop_path})` }}>
+        <div className="detail-container">
+          <section className="movie-data-section">
 
-          {movieData.poster_path && <img className="movie-data-cover" src={`https://image.tmdb.org/t/p/w1280${movieData.poster_path}`} alt="Yo" />}
-          <div className="movie-data-container">
-            <div className="movie-data-title-and-rating">
+            {movieData.poster_path && <img className="movie-data-cover" src={`https://image.tmdb.org/t/p/w1280${movieData.poster_path}`} alt="Yo" />}
+            <div className="movie-data-container">
 
               <h1 className="movie-data-title"> {movieData.title}</h1>
               <span className="movie-data-rating">⭐{movieData.vote_average}</span>
+              <p className="movie-data-overview">
+                {movieData.overview}
+              </p>
             </div>
-            <p className="movie-data-overview">
-              {movieData.overview}
-            </p>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
-    </>
+    </div>
 
   )
 }
