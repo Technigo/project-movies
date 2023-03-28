@@ -12,17 +12,19 @@ export const Details = () => {
       .then((res) => res.json())
       .then((data) => setMovie(data))
   }, [movieId])
-
-  const onGoToNotFoundButtonClick = () => {
-    navigate('/404');
+  console.log(movie)
+  const onGoBackButtonClick = () => {
+    navigate(-1);
   }
 
   return (
     <div>
       <h2>I am the details for {movie.title}</h2>
-      <button type="button" onClick={onGoToNotFoundButtonClick}>Go to Not Found
+      <p>Rating: {Math.round(movie.vote_average * 10) / 10}</p>
+      <p>{movie.overview}</p>
+      <p>Budget: {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(movie.budget)}</p>
+      <button type="button" onClick={onGoBackButtonClick}>Go back
       </button>
-      <span className="rating">{Math.round(movie.vote_average * 10) / 10}</span>
     </div>
   )
 }
