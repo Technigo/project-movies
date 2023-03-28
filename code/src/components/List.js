@@ -12,16 +12,17 @@ export const List = () => {
   return (
     <section className="main">
       {movies.map((movie) => (
-        <Link
-          key={movie.id}
-          to={`/details/${movie.id}`}
-          alt={movie.title}>
-          <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-          <div className="movie-info">
-            <h1>{movie.title}</h1>
-            <h2>Coming {movie.release_date}</h2>
-          </div>
-        </Link>
+        <div className="movie-card" key={movie.id}>
+          <Link
+            to={`/details/${movie.id}`}
+            alt={movie.title}>
+            <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+            <div className="movie-card-info">
+              <h1>{movie.title}</h1>
+              <h2>Release date: {movie.release_date}</h2>
+            </div>
+          </Link>
+        </div>
       ))}
     </section>
   )
