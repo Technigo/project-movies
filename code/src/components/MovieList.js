@@ -9,10 +9,11 @@ export const MovieList = () => {
     fetch(MOVIES_URL)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data.results)
         setList(data.results)
       })
   }
-  // To run an API request to moviedv and fetch popular films
+  // To run an API request to moviedb and fetch popular films
   useEffect(() => {
     FetchMovies()
   }, [])
@@ -21,7 +22,8 @@ export const MovieList = () => {
     <main>
       {list.map((movie) => (
         <div
-          className="movie-card">
+          className="movie-card"
+          key={movie.id}>
           <Movie
             title={movie.title}
             releaseDate={movie.release_date}
