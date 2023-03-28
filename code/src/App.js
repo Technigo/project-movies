@@ -1,19 +1,23 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Header from 'components/Header'
 import PopularMovies from 'pages/PopularMovies';
 import NotFound from 'pages/NotFound';
 import MovieDetails from 'pages/MovieDetails';
 
 export const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<PopularMovies />} />
-        <Route path="/details" element={<MovieDetails />} />
-        <Route path="/404" element={<NotFound />} />
-        <Route path="*" element={<Navigate to="/404" />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="outer-wrapper">
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<PopularMovies />} />
+          <Route path="/details" element={<MovieDetails />} />
+          <Route path="/404" element={<NotFound />} />
+          <Route path="*" element={<Navigate to="/404" />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
 
   );
 }

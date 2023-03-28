@@ -27,7 +27,7 @@ const PopularMovies = () => {
   return (
     <section className="popular-movies-section">
       <h1>Popular Movies</h1>
-      <div>
+      <div className="movie-grid-container">
         {movies.map((movie) => {
           return (
             <article className="movie-article">
@@ -43,11 +43,8 @@ const PopularMovies = () => {
             </article>
           )
         })}
-
       </div>
-
     </section>
-
   )
 }
 
