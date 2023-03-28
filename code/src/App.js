@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { MovieList } from 'components/MovieList';
 
 export const App = () => {
@@ -16,8 +16,8 @@ export const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MovieList movieList={movieList} />} />
-        <Route path="*" element={<Navigate to="/404" />} />
       </Routes>
     </BrowserRouter>
   );
 }
+
