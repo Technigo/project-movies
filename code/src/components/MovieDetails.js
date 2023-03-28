@@ -27,7 +27,7 @@ const MovieDetails = () => {
     <section
       className="movie-details-container"
       style={{ backgroundImage:
-      `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
+      `url(https://image.tmdb.org/t/p/original${details.backdrop_path})` }}>
       <button
         className="go-back-btn"
         type="button"
@@ -42,8 +42,8 @@ const MovieDetails = () => {
         <div className="title-and-rating">
           <h1 className="title">{details.title}</h1>
           <p className="rating">⭐️{details.vote_average}</p>
-          {/* Since toFixed() didn't work, you could use the following:
-average={String(Math.round(listItem.vote_average * 10) / 10)} */}
+          {/* We could use the following to get just one decimal:
+        {Math.round(details.vote_average * 10) / 10}/10 */}
         </div>
         <p className="overview">{details.overview}</p>
         <button type="button" onClick={notFoundButtonClick}>

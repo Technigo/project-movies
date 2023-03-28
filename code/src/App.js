@@ -33,6 +33,7 @@ export const App = () => {
         <Route path="/details/:id" element={<MovieDetails />} />
         {/* This second path was not corresponding with our code on line 14 in MovieList.js and 
         therefore it was not working and was not taking the user to the movie details. */}
+        
         {/* <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" />} /> I removed Navigate from the
         import at the top since I commented this out */}
