@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box; 
+  }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +9,254 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #000;
+  color: #fff;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+a {color: inherit;}
+
+/* Styling the component App.js */
+
+.outerWrapper {
+  width: 100%;
+}
+
+.innerWrapper {
+  width: 99%;
+  margin: 0 auto;
+}
+
+/* Styling the page MovieList.js */
+
+.sectionWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movieBox {
+  width: 25%;
+  size: fit-content;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movieBox .hoverBox {
+  border: 5px solid black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.hoverDetails {
+  display: none;
+}
+
+.movieBox:hover .hoverBox {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-end;
+  background: rgba(0,0,0,.75);
+}
+
+.movieBox:hover .hoverBox .hoverDetails {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-end;
+}
+
+/* General styling */
+
+.img {
+  width: 100%;
+}
+
+.poster {
+  width: 100%;
+}
+
+/* Styling the page Details.js */
+
+/*    Here, the span creates the arrow. Hover over it, and it will move to the left. */
+.backButton {
+  grid-area: 1 / 1 / span 1 / span 1;
+  display: flex;
+  color: white;
+  background-color: inherit;
+  padding: 10px 16px;
+  border-radius: 20px;
+  transition: all .3s ease;
+  font-weight: bold;
+  cursor: pointer;
+  align-items: center;
+  font-size: 20px;
+  border-style: none;
+}
+
+.backButton > .arrow {
+  width: 30px;
+  height: 30px;
+  border-right: 8px solid white;
+  border-bottom: 8px solid white;
+  position: relative;
+  transform: rotate(135deg);
+  margin: 0 6px;
+  transition: all .3s ease;
+}
+
+.backButton > .arrow::before {
+  display: block;
+  background-color: currentColor;
+  width: 4px;
+  transform-origin: bottom right;
+  height: 3px;
+  position: absolute;
+  opacity: 0;
+  bottom: calc(-2px / 2);
+  transform: rotate(45deg);
+  transition: all .3s ease;
+  content: "";
+  right: 0;
+}
+
+.backButton:hover > .arrow {
+  transform: rotate(135deg) translate(4px, 4px);
+  border-color: text-hover-color;
+}
+
+.backButton:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.detailPage {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.detailBox {
+  width: 70%;
+  margin: 0 auto;
+  display: grid; 
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(5, 20%);
+  padding-bottom: 5%;
+ }
+
+.detailPoster {
+  grid-area: 2 / 1 / span 4 / span 2;
+  border: 6px solid #fff;
+}
+
+.detailTitle {
+  grid-area: 4 / 3 / span 1 / span 2;
+  text-shadow: 1px 1px #4d4d4d;
+  margin-top: 20px;
+}
+
+.detailScore {
+  grid-area: 4 / 5 / span 1 / span 1;
+  background-color: whitesmoke;
+  color: black;
+  justify-self: start;
+  align-self: start;
+  padding: 5px 7px 5px 5px;
+  font-size: 1.3em;
+}
+
+.detailOverview {
+  grid-area: 5 / 3 /span 1 / span 3;
+}
+
+h1 {
+  display: inline-block;
+  margin: 10px;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 0px) and (max-width: 570px) {
+  .movieBox {
+    width: 100%;
+  }
+  
+  .detailBox {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 5px;
+  }
+}
+
+@media (min-width: 571px) and (max-width: 850px) {
+  .movieBox {
+    width: 33.33%;
+  }
+
+  .detailBox {
+    width: 90%
+  }
+
+  .detailPoster {
+    width: 200px;
+  }
+
+  .detailPoster {
+    grid-column-start: 1;
+    grid-column-end: five;
+    grid-row-start: row1-start;
+    grid-row-end: 1;
+  }
+
+  .detailTitle {
+    grid-column-start: 3;
+    grid-column-end: five;
+    grid-row-start: row1-start;
+    grid-row-end: 1;
+  }
+
+  .detailScore {
+    grid-column-start: 3;
+    grid-column-end: five;
+    grid-row-start: row1-start;
+    grid-row-end: 2;
+  }
+
+  .detailOverview {
+    grid-column-start: 3;
+    grid-column-end: five;
+    grid-row-start: row1-start;
+    grid-row-end: 3;
+  }
+
+}
+
+@media (min-width: 851px) and (max-width: 1299px) {
+  .movieBox {
+    width: 25%;
+  }
+
+  .detailPoster {
+    width: 250px;
+  }
+}
+
+@media (min-width: 1300px)  {
+  .movieBox {
+    width: 25%;
+  }
+}
+
+
