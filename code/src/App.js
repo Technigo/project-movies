@@ -6,7 +6,6 @@ import { NotFound } from 'Components/NotFound'
 import { MovieDetails } from 'Components/MovieDetails'
 import { Movies } from 'Components/Movies'
 
-
 export const App = () => {
  return (
   {/* Wrapper for everything / main wrapper for the whole wrap */}
