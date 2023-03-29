@@ -9,8 +9,8 @@ export const NotFound = () => {
 
   return (
     <div className="not-found">
-      <p>Oops, page not found</p>
-      <button type="button" onClick={returnToHomePage}>Return to home page</button>
+      <p>Ooh noo.... Page not found </p>
+      <button type="button" onClick={returnToHomePage}>Return here</button>
     </div>
   );
 }
