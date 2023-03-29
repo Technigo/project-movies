@@ -1,13 +1,20 @@
-# Project Movies
+# Project Movies 🍿
 
-Replace this readme with your own information about your project.
+This project is a movie app created in React using routes, useEffect and useState hooked on an external API and, of course, some styling was added via CSS.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Tech stack and features
+- React Hooks
+- React Router
+- JSX
+- CSS
+
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We constructed an umbrella components App.js where we added the routes and fetched the API. We further added two key components - List.js and IndividualMovie.js. On the IndividualMovie.js we additionally called on the api. We have also added NotFound.js and LoadingPage.js in order to improve the user experience. The page was further styled in CSS that is fully responsive. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://movie-catalogue-project.netlify.app/
+
+Created by Antonella Cardozo & Petra Söderström 🍿
