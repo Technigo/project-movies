@@ -21,9 +21,16 @@ align-items: center;
 color: rgb(125, 80, 80);
 z-index: 1;
 align-items: center;
+margin-left: 500px;
+margin-top: 20px;
 }
 
 .navlink-container img{
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
   content: url(movie.png)
 }
 
@@ -31,14 +38,6 @@ align-items: center;
   transform: scale(1.1);
   transition: transform 0.4s;
   cursor: pointer;
-}
-
-.navlink-text {
-  margin: 20px;
-  font-size: 20px;
-  display: flex;
-  border: 1px solid red;
-  flex-direction:row;
 }
 
 /*Text*/
