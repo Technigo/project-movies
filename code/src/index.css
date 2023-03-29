@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+body {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, 150px) 1fr;
+  row-gap: 30px;
+  margin-top: 20px;
+}
+
+/*Tablet media query*/
+@media (min-width: 667px) {
+  body {
+      grid-template-columns: 1fr repeat(5, 90px) 1fr;
+      margin-top: 40px;
+  }
+}
+
+
+/*Desktop media query*/
+@media (min-width: 1025px) {
+  body {
+      grid-template-columns: 1fr repeat(10, 50px) 1fr;
+  }
+}

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 // import { useParams } from "react-router-dom";
-import { SingleMoviePoster } from "../SingleMovieDetails/SingleMovieDetails";
-import { SingleMovieDetails } from "../SingleMovieDetails/SingleMovieDetails";
+import { SingleMoviePoster } from 'components/SingleMoviePoster/SingleMoviePoster';
+import { SingleMovieDetails } from '../SingleMovieDetails/SingleMovieDetails';
 
 export const SingleMovie = () => {
   const [loading, setLoading] = useState(false);
