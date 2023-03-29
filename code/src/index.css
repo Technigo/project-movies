@@ -1,7 +1,6 @@
-* {
-  box-sizing: border-box;
+html {
+  min-height: 100%;
 }
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -17,7 +16,7 @@ code {
 }
 
 header {
-  position:fixed;
+  /* position:fixed; */
   width: 100%;
   top: 0;
   display: flex;
@@ -83,6 +82,12 @@ p {
   align-items: flex-start;
 }
 
+.movie-detail img {
+  max-width: 70%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
 /*Main page design with picture*/
 main {
   display: flex;
@@ -90,10 +95,16 @@ main {
 }
 
 .movie-card {
-  margin: 130px 10px;
+  position: relative;
   width: 50%;
   background: rgba(0,0,0,0.75);
 
+}
+
+.movide-detail {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
 }
 
 .movie-card img{
