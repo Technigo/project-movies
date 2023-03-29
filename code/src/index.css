@@ -12,26 +12,29 @@ code {
     monospace;
 }
 
-/*DETAILS IN HEADER*/
-.navlink-container {
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: center;
-color: rgb(125, 80, 80);
-z-index: 1;
-align-items: center;
-margin-left: 500px;
-margin-top: 20px;
+header {
+  position:fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #181818e0;
+  align-items: center; 
 }
 
-.navlink-container img{
+.navlink-container {
+  list-style: none;
   display: flex;
-  margin-bottom: 20px;
-  flex-direction:column;
-  align-items: center;
-  justify-content: center;
-  content: url(movie.png)
+  gap: 15px;
+  margin-left: -20px;
+}
+
+
+.movienation {
+margin: 10px;
+width: 100px;
+height: auto;
+  content: url(red.png)
 }
 
 .navlink:hover {
@@ -40,7 +43,7 @@ margin-top: 20px;
   cursor: pointer;
 }
 
-/*Text*/
+/*TEXT SIZINGS*/
 h1 {
   font-weight: bold;
   margin: 5px 0px;
@@ -54,6 +57,11 @@ p {
 
 
 .not-found {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #F9F9F9;
   padding: 30px;
 }
 
@@ -79,10 +87,13 @@ main {
 .movie-card {
   position: relative;
   width: 50%;
+  background: rgba(0,0,0,0.75);
+
 }
 
 .movie-card img{
-  width: 100%;
+  width: 97%;
+  border: solid #a09c9c5e 0.5px;
 }
 
 .movie-card a:hover > img{
@@ -109,15 +120,32 @@ main {
   justify-content: center;
   cursor: pointer;
   margin: 20px;
-  color:white;
   text-decoration: none;
+  color:rgb(172, 31, 31)
 }
 
 .back-button p {
   margin: 0px;
+  color: white;
+  font-size: bold;
 }
 
 .back-button:hover {
   transform: scale(1.04);
   transition: 0.2s ease-in-out;
 }
+/** MEDIA QUERIES **/
+@media (min-width: 370px){
+
+.movie-card {
+  width: 50%;
+}
+
+@media (min-width: 570px) {
+  header {
+    flex-direction: row;
+  }
+  .movie-card {
+    width: 30%;
+  }
+}}
