@@ -5,22 +5,44 @@ const MovieDetails = () => {
   const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState({});
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
-  const onBackButtonClick = () => {
+  const backButton = () => {
     navigate(-1);
   }
 
   useEffect(() => {
+    setLoading(true)
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=95ef8b2227f45566b4eecd3687c10466&language=en-US`)
       .then((res) => res.json())
       .then((data) => setMovieDetails(data));
+    setLoading(false)
   }, [id])
+
+  if (loading) {
+    return (
+      <p>loading...</p>
+    )
+  }
 
   return (
     <section className="detail-page">
-      <button type="button" onClick={onBackButtonClick}>Go back</button>
-      <h2>{movieDetails.original_title} </h2>
-      <img alt={movieDetails} src={`https://image.tmdb.org/t/p/w300${movieDetails.backdrop_path}`} />
+      {movieDetails && (
+        <div className="background">
+          <img alt={movieDetails} src={`https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`} />
+
+          <button type="button" onClick={backButton}>Back to movies</button>
+          <div className="detail-wrapper">
+            <img alt={movieDetails} src={`https://image.tmdb.org/t/p/w300${movieDetails.poster_path}`} />
+            <div className="detail-text">
+              <h2>{movieDetails.original_title}
+                <span className="rating"> {movieDetails.vote_average}/10</span>
+              </h2>
+              <p>{movieDetails.overview}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

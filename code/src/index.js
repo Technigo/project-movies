@@ -1,6 +1,9 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
+import './CSS/index.css';
+import './CSS/MovieList.css'
+import './CSS/MovieDetails.css'
+import './CSS/NotFound.css'
 import { App } from './App';
 
 const container = document.getElementById('root');
