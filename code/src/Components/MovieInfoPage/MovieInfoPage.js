@@ -1,7 +1,7 @@
 // /////////////// IMPORT //////////////////////// //
 
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import './MovieInfoPage.css';
 
 // /////////////// COMPONENT //////////////////////// //
@@ -12,6 +12,7 @@ export const MovieInfoPage = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState(false);
   const [details, setDetails] = useState({});
+  const navigate = useNavigate();
 
   useEffect(() => {
     setLoading(true)
@@ -23,6 +24,10 @@ export const MovieInfoPage = () => {
       .finally(() => setLoading(false))
   }, [id]);
 
+  const returnToHomePage = () => {
+    navigate('/');
+  };
+
   // /////////////// RETURNS JXT //////////////////////// //
 
   return (
@@ -30,12 +35,12 @@ export const MovieInfoPage = () => {
       className="details-container"
       style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${details.backdrop_path})` }}>
       <div>
+        <button type="button" className="home-button" onClick={returnToHomePage}> Back </button>
         <p className="details-title">{details.title}</p>
         <img className="poster-image" src={`https://image.tmdb.org/t/p/w300/${details.poster_path}`} alt="movie poster" />
         <p className="movie-info">{details.overview}</p>
-        {/* <span>{details.vote_average.toFixed(1)}</span> */}
+        <h1 className="imdb-numbers"><span>{details.vote_average?.toFixed(1)}</span></h1>
       </div>
     </section>
   );
 }
-
