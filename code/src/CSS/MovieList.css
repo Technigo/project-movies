@@ -3,12 +3,46 @@ body {
     background-color: white;
 }
 
-.movie-container {
+.movie-wrapper {
     display: flex; 
     flex-direction: row;
     flex-wrap: wrap; 
 }
 
-.cover-image {
-flex-direction: 25%; 
+.movie-wrapper a {
+    width:25%; 
 }
+
+.movie-container {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end; 
+    position: relative;
+}
+.cover-image {
+    width: 100%; 
+}
+
+.cover-title {
+    position: absolute; 
+    padding-left: 1em;
+    color: white; 
+    z-index:10;
+    display:none;
+ }
+
+.movie-container:hover .cover-title {
+    display: flex;
+    flex-direction: column; 
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: flex-end;
+}
+
+.movie-container:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
