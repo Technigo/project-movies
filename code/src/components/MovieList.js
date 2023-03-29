@@ -25,12 +25,16 @@ const MovieList = () => {
     )
   }
   return (
-    <div>
+    <div className="mainWrapper">
       {list.map((movies) => {
         return (
-          <Link key={movies.id} to={`/details/${movies.original_title}`}>
-            <p>{movies.original_title}</p>
-          </Link>
+          <div className="eachMovie">
+            <Link key={movies.id} to={`/details/${movies.id}`}>
+              <img alt="img" className="listPosterImg" src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`} />
+              <h2>{movies.original_title}</h2>
+              <p className="releaseDate">{movies.release_date}</p>
+            </Link>
+          </div>
         )
       })}
     </div>
