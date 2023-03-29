@@ -1,5 +1,6 @@
 .details-page {
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .detail-background-picture {
@@ -18,7 +19,6 @@
   flex-direction: column;
   background-color: #1313139e;
   padding: 50px;
-  margin-left: 0px;
 }
 
 .movie-data-section {
@@ -38,6 +38,7 @@
   font-size: 20px;
   text-shadow: none;
   font-weight: 500;
+  color: black;
 }
 
 .movie-data-overview {

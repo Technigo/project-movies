@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { GoBackButton } from './GoBackButton';
 import './Details.css';
 
 export const Details = () => {
@@ -23,6 +24,7 @@ export const Details = () => {
   }
   return (
     <div className="details-page">
+      <GoBackButton />
       <div className="detail-background-picture" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieData.backdrop_path})` }}>
         <div className="detail-container">
           <section className="movie-data-section">
