@@ -21,18 +21,18 @@ const MoviesList = () => {
   /* This return shows the img, titles, rdate & the id on our HTML page */
   return (
     <section className="startPage">
-        <div className="movie-container">
+      <div className="movie-container">
         {list.map((movie) => (
           <article className="movie-wrapper" key={movie.id}>
             <Link key={movie.id} to={`/details/${movie.id}`}>
-            <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-            <div className="details">
-              <h1>{movie.title}</h1>
-              <p>Released {movie.release_date}</p>
+              <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+              <div className="details">
+                <h1>{movie.title}</h1>
+                <p>Released {movie.release_date}</p>
               </div>
-              </Link>
-              </article>
-      ))}
+            </Link>
+          </article>
+        ))}
       </div>
     </section>
   )
