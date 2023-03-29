@@ -21,10 +21,21 @@ export const MoviesDetails = () => {
       <section className="movie-container">
       {movie && (
         <>
-        <p>{movie.title}</p>
         <div className="background">
         <img src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.title} />
         </div>
+        <p>{movie.title}</p>
+        <span className="tagline">{movie.tagline}
+        </span>
+        <div className="poster">
+        <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+        </div>
+        <span className="overview">{movie.overview}
+        </span>
+        <span className="rating">{Math.round(movie.vote_average * 10) / 10}
+        </span>
+        <span className="length">{movie.runtime} min
+        </span>
         </>
         )}
         </section>
