@@ -94,6 +94,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   margin-left: 40px;
+  margin-right: 10px;
 }
 
 .movie-card {
@@ -152,6 +153,12 @@ main {
   transform: scale(1.04);
   transition: 0.2s ease-in-out;
 }
+
+.emoji {
+  font-size: 40px;
+  margin: 5px;
+}
+
 /** MEDIA QUERIES **/
 @media (min-width: 370px){
 

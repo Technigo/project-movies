@@ -9,7 +9,7 @@ export const Header = () => {
 
       <ul className="navlink-container">
         <li className="navlink">
-          <NavLink to="/Details">Home</NavLink>
+          <NavLink to="/Details"><span role="img" className="emoji" aria-label="popcorn">🍿</span></NavLink>
         </li>
       </ul>
     </header>
