@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// import { json } from 'react-router-dom';
+import './movieList.css'
 
 const MovieList = () => {
   const [list, setList] = useState([]);
