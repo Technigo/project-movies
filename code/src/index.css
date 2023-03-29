@@ -59,3 +59,39 @@ z-index: -1;
 .single-movie-child:hover {
   display: flex;
 }
+
+.details-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+
+.movie-poster {
+ margin-top: 100px;
+ margin-left:15px;
+ margin-bottom: 10px;
+}
+  
+.details-wrapper{
+  display:flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.poster-info{
+  align-items: baseline;
+}
+.synopsis{
+  max-width: 80%;
+  margin-right: 20px;
+  margin-bottom:25px;
+  
+}
+.details-wrapper h2{
+  align-self: flex-start;
+  margin-left:45px;
+  margin-bottom: 0;
+}
+}

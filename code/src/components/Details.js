@@ -22,26 +22,28 @@ export const Details = () => {
       {movie && (
         <div
           className="movie-backdrop"
-          style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
-            height: '100vh',
+          style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 80%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             backgroundPosition: 'center' }}>
-          <div className="details-wrapper" style={{ display: 'flex', flexDirection: 'column', alignContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+          <div className="details-wrapper">
             <img className="movie-poster" style={{ border: '5px solid white', marginTop: '80px', width: '70%' }} src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
-            <div style={{ width: '90vw',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center' }}>
+            <div
+              className="poster-info"
+              style={{ width: '90vw',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center' }}>
               <h2>
-                <span style={{ color: 'white' }}>{movie.title}</span>
+                <span style={{ color: 'white' }}>{movie.title} <br /></span>
                 <span style={{ color: 'white', marginLeft: '10px' }}>
+                  {Math.round(movie.vote_average * 10) / 10} {' '}
                   <img src={star} className="star-icon" alt="a star" style={{ scale: '1.1' }} />
-                  {Math.round(movie.vote_average * 10) / 10}
+
                 </span>
               </h2>
 
-              <p className="synopsis" style={{ color: 'white' }}>{movie.overview}</p>
+              <p className="synopsis" style={{ color: 'white', fontWeight: 'bold' }}>{movie.overview}</p>
             </div>
           </div>
         </div>
