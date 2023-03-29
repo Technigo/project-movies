@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -7,13 +7,9 @@ const Header = () => {
       <nav>
 
         <p>
-          <Link to="/">Go to Home</Link>
-        </p>
-        {/* <p>
-          <NavLink to="/MovieDetails/test">Go to Details</NavLink>
-        </p> */}
-        <p>
-          <NavLink to="/">Go to Home</NavLink>
+          <NavLink to="/">
+            <img className="home-btn " src="/logos/home.png" alt="home-button" />
+          </NavLink>
         </p>
       </nav>
     </header>

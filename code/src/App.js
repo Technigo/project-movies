@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import MovieList from 'components/MovieList';
 import NotFound from 'components/NotFound';
 import MovieDetails from 'components/MovieDetails';
-import Header from 'components/Header';
+// import Header from 'components/Header';
 import { POPULARMOVIE_URL } from 'components/urls.js';
 
 // put the set loading here
@@ -37,7 +37,7 @@ export const App = () => {
     // main wrapper for the whole app
     <BrowserRouter>
       {/* wrapper for evert component that needs to be linked to */}
-      <Header />
+      {/* <Header /> */}
       <Routes>
         {/* path to a single component */}
         <Route path="/" element={<MovieList movies={movieList} />} />
