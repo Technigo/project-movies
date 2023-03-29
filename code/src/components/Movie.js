@@ -16,8 +16,7 @@ export const Movie = ({ title, releaseDate, movieID, poster }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>
 
-      <Link
-        to={`/movies/${movieID}`}>
+      <Link to={`/movies/${movieID}`}>
         <img src={`http://image.tmdb.org/t/p/w342${poster}`} alt="movie" />
         <div className={isHover ? 'description' : 'hidden-description'}>
           <h1>{title}</h1>

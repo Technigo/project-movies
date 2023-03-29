@@ -4,7 +4,6 @@ import { NotFound } from './NotFound';
 
 export const Details = () => {
   const [movieDetails, setMovieDetails] = useState([])
-
   const { id } = useParams()
 
   const FetchDetails = () => {
@@ -23,16 +22,14 @@ export const Details = () => {
 
   useEffect(() => {
     FetchDetails()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
     <div
       className="background"
-      style={{
-        backgroundImage: `url(http://image.tmdb.org/t/p/original${movieDetails.backdrop_path})`
-      }}>
-      <Link to="/" className="back-button">
-        <img src="./back-arrow-100.png" alt="Back button" />
+      style={{ backgroundImage: `url(http://image.tmdb.org/t/p/original${movieDetails.backdrop_path})` }}>
+      <Link to="/" className="back-button" type="button">
         <p>Back</p>
       </Link>
       <div className="movie-detail">
