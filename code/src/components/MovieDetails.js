@@ -21,6 +21,11 @@ export const MovieDetails = () => {
       <h1>This is Sara&apos;s and Annika&apos;s MovieDetails-component!!!</h1>
       <p>{details.title}</p>
       <p>{details.release_date}</p>
+      <p>{details.overview}</p>
+      <p>{details.vote_average}</p>
+      <div>
+        <img src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt={details.title} />
+      </div>
     </div>
   )
 }
