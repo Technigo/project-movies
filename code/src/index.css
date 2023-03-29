@@ -144,17 +144,18 @@ also have the .movie-details class. */
 }
 
 .overview {
-  font-size: 18px; /* fixes font on description */
+  font-size: 18px; /* fixes font on movie description */
+  line-height: 25px; /* added just for fun */
 }
 
 @media (min-width: 668px) and (max-width: 1024px) {
   .movie-container {
     width: 33%;
   }
-  .movie-details-container {
+   .movie-details-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 2fr 1fr; 
   }
 
   .go-back-btn {
