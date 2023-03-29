@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: black;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -11,3 +12,175 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/** -------- Header -------- **/ 
+h2 {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0); /*transparent*/ 
+    margin: 10px 0;
+}
+
+h3 {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0); /*transparent*/ 
+  font-weight: 400;
+  margin: 0;
+}
+
+/** -------- MovieList-Styling -------- **/
+.outer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-card {
+  position: relative;
+  width: 25%;
+}
+
+.movie-image {
+  width: 100%;
+}
+
+.movie-info {
+  position: absolute;
+  bottom: 0;
+  padding: 40px 25px;
+}
+
+.movie-card:hover .movie-image {
+  filter: brightness(30%);
+}
+
+.movie-card:hover h2 {
+  color: white;
+}
+
+.movie-card:hover h3 {
+  color: white;
+}
+
+/** -------- MovieDetails -------- **/
+.movie-details {
+  display: flex;
+  flex-direction: row;
+}
+
+.background {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+}
+
+.go-back {
+  display: inline-flex;
+  margin-top: 60px;
+  margin-left: 20px;
+}
+
+.go-back img {
+  width: 35px;
+}
+
+.go-back button {
+  display: block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  background: none;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.go-back button:hover {
+  color:black;
+  -webkit-text-stroke: 1px white;
+}
+
+.movie-poster {
+  margin-left: 25px;
+  margin-top: 60px;
+  border: solid #F9F9F9 6px
+}
+
+.movie-description {
+  align-self: flex-end;
+  margin-left: 20px;
+  font-size: 15px;
+  color: #F9F9F9;
+}
+
+.movie-tittle {
+  display:inline-flex
+ }
+
+.movie-tittle h2 {
+  font-size: 30px;
+  color: white;
+  margin: 10px 0;
+}
+
+.star-raiting img {
+  width: 30px;
+}
+
+.star-raiting {
+  margin-left: 20px;
+  background-color: white;
+  padding: 10px;
+}
+
+.star-raiting h3 {
+  color: black;
+  font-size: 32px;
+  font-weight: 500;
+  display:inline-flex;
+}
+
+p {
+  font-size: 16px;
+  color: #F9F9F9;
+  margin-top: 0;
+  max-width: 450px;
+  max-height: 170px;
+  overflow: auto;
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .movie-card {
+    width: 33.33%;
+  }
+
+  .movie-description {
+    align-self: center;
+}
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .movie-card {
+    width: 50%;
+  }
+}
+
+/* Smallest devices ) */
+@media (max-width: 575.98px) {
+  .movie-card {
+    width: 50%;
+  }
+  .movie-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .movie-poster {
+    border: none;
+    margin-bottom: 20px;;
+  }
+
+}
+
+
