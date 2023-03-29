@@ -1,6 +1,5 @@
 /* eslint-disable no-shadow */
 import React, { useState, useEffect } from 'react';
-import { Movies } from 'components/Movies';
 
 const MoviesList = () => {
   const [list, setList] = useState([]);
@@ -23,7 +22,7 @@ const MoviesList = () => {
     <main>
       {list.map((movie) => (
         <div className="movie-container">
-          <Movies
+          <MoviesList
             title={movie.title}
             releaseDate={movie.release_date}
             movieId={movie.id}

@@ -8,7 +8,7 @@ const NotFound = () => {
   }
   return (
     <div>
-      <p>"Page not found"</p>
+      <p>Page not found</p>
       <button type="button" onClick={onHomeButtonClick}>Return to homepage</button>
     </div>);
 }

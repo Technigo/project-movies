@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import { MovieList } from 'components/MovieList'
-import { NotFound } from 'components/NotFound'
-import { MovieDetails } from 'components/MovieDetails'
+import MovieList from 'components/MovieList'
+import MovieDetails from 'components/MovieDetails'
+import NotFound from 'components/NotFound'
 
 export const App = () => {
   return (
