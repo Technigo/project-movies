@@ -36,7 +36,7 @@ const MovieDetails = () => {
             <img alt={movieDetails} src={`https://image.tmdb.org/t/p/w300${movieDetails.poster_path}`} />
             <div className="detail-text">
               <h2>{movieDetails.original_title}
-                <span className="rating"> {movieDetails.vote_average}/10</span>
+                <span className="rating"> {Math.round(movieDetails.vote_average * 10) / 10}/10</span>
               </h2>
               <p>{movieDetails.overview}</p>
             </div>

@@ -34,7 +34,7 @@ const MovieList = () => {
         <Link
           key={results.id}
           to={`/moviedetails/${results.id}`}>
-          <img src={`https://image.tmdb.org/t/p/w342${results.poster_path}`} alt="poster" />
+          <img className="cover-image" src={`https://image.tmdb.org/t/p/w342${results.poster_path}`} alt="poster" />
 
           <div className="cover-title">
             <h1>{results.original_title}</h1>
