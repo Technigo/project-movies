@@ -53,5 +53,6 @@ average={String(Math.round(listItem.vote_average * 10) / 10)} */}
     </section>
   )
 }
+// Ylva testar commit av branch
 
 export default MovieDetails;
