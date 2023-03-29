@@ -1,0 +1,152 @@
+.detailsWrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.backBtn  {
+    position: fixed;
+    /* display: inline-flex; */
+    color: white;
+    font-size: 18px;
+    background-color: transparent;
+    border-style: none;
+    /* align-items: center; */
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 50px;
+    margin-top: 40px;
+    z-index: 1;
+  }
+  
+.background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    height: 100%;
+    width: auto;
+    z-index: -1;
+}
+
+/* .foreground {
+    margin-left: 10px;
+} */
+
+.backdropImg {
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    height: 100%;
+    width: auto;
+    z-index: -1;
+    }
+    /* linear-gradient: 180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), */
+
+
+/* .foreground {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    } */
+
+.detailsPosterImg { 
+    display: flex;
+    border: 5px solid #FFF;
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 12%;
+    z-index: 0;
+}
+
+.movieDetails { 
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.detailHeadline {
+    /* Why does the rating go below the word 'wish' when a smaller width? */
+    display: flex;
+    flex-wrap: wrap;
+    /* display: inline-block; */
+    /* display: block; */
+}
+
+h3 { 
+    color: white;
+    font-size: 22px;
+    /* display: inline-block; */
+    margin-top: 0;
+    margin-right: 10px;
+    margin-bottom: 0;
+} 
+
+.rating {
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    background: white;
+    width: 60px;
+    height: 25px;
+    text-align: center;
+    text-shadow: none;
+    /* display: inline-block; */
+    margin-top: 0;
+}
+/* How to get everything with a bottom margin fixed? */
+    .overview {
+    color: white;
+    margin-right: 20%;
+    margin-top: 0;
+}
+
+@media (min-width: 577px) {
+    
+.foreground {
+    display: flex;
+    flex: row;
+}
+
+.detailsPosterImg {
+    width: 250px;
+    height: auto;
+    margin-top: 208px;
+}
+
+.movieDetails {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-top: 290px;
+}
+
+}
+
+@media (min-width: 770px) {
+
+.detailsPosterImg {
+     width: 342px;
+     height: auto;
+     position: fixed;
+     bottom: 20px;
+ }
+
+.movieDetails {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-top: 50%;
+
+}
+}
+
+
+/* HEADER  */
+
+h1 {
+    color: red;
+}
