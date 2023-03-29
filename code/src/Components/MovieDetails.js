@@ -13,7 +13,6 @@ const MovieDetails = () => {
 
   const FetchDetails = () => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=e865fc7d6c1eaa875454193ac1851471&language=en-US`)
-    console.log('hej?')
       .then((response) => response.json())
       .then((data) => setDetails(data))
       .catch((error) => {
