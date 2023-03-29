@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import NotFound from 'components/NotFound';
 import MovieDetails from './components/MovieDetails';
 import MovieList from './components/MovieList';
 
@@ -10,6 +11,8 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<MovieList />} />
         <Route path="/movieDetails/:id" element={<MovieDetails />} />
+        <Route path="/404" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
     </BrowserRouter>
   );
