@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+
+
+header{
+    background-color: black;
+    width:100vw;
+    display: flex;
+    justify-content: space-between;
+    background: #000000e0;
+    padding: 5px 0;
+    align-items: center;
+    z-index: 1;
+ }
+
+.navlink-container {
+    list-style: none;
+    display: flex;
+    gap: 3em;
+    margin-right:2em;
+}
+
+.navlink-container a {
+    color: #fffbfb;
+    text-decoration: none;
+  }
+
+ .logo-image {
+    margin: 1em;
+    
+}
+
+.navlink:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+  @media (max-width:400px) {
+    header{
+        width:auto;
+    }
+  }
