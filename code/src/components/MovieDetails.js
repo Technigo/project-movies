@@ -28,7 +28,7 @@ const MovieDetails = () => {
     <section
       className="movie-details-container"
       style={{ backgroundImage:
-      `url(http://image.tmdb.org/t/p/w300${details.backdrop_path})` }}>
+      `url(http://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
       <button
         className="go-back-btn"
         type="button"
