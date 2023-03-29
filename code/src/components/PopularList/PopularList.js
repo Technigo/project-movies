@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import './PopularList.css'
 
 export const PopularList = () => {
   const [list, setList] = useState([]);

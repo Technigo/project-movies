@@ -6,7 +6,7 @@ export const NotFound = () => {
 
   const onHomeButtonClick = () => {
     navigate('/');
-  }
+  };
 
   return (
     <div>
