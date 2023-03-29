@@ -6,13 +6,14 @@ export const MovieList = ({ movieList }) => {
     <div className="single-movie-wrapper">
       {movieList.map((singleMovie) => {
         return (
-          <div key={singleMovie.id}>
+          <div key={singleMovie.id} style={{ position: 'relative' }}>
             <img className="movie-poster" src={`https://image.tmdb.org/t/p/w500${singleMovie.poster_path}`} alt="movie poster" />
-            <div className="single-movie-inner-wrapper">
-              <Link to={`/details/${singleMovie.id}`}>Go to {singleMovie.title} details</Link>
-              <h2>{singleMovie.title}</h2>
-              <p>{singleMovie.release_date}</p>
-            </div>
+            <Link className="movie-link" to={`/details/${singleMovie.id}`}>
+              <div className="single-movie-child">
+                <h2 style={{ margin: 0 }}>{singleMovie.title}</h2>
+                <p>{singleMovie.release_date}</p>
+              </div>
+            </Link>
           </div>
         );
       })}

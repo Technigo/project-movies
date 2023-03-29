@@ -16,3 +16,46 @@ code {
   max-width: 342px;
   min-width: 190px;
 }
+
+.single-movie-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: black;
+}
+
+.movie-backdrop {
+z-index: -1;
+}
+
+.movie-link {
+  text-decoration: none !important;
+  color: white;
+  opacity: 1;
+  max-width: 342px;
+  min-width: 190px;
+}
+
+.single-movie-child {
+  max-Width: 342px;
+  min-Width: 190px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.single-movie-child:hover {
+  opacity: 1;
+  backdrop-filter: brightness(0.5);
+  transition: 0.4s ease;
+}
+
+.single-movie-child:hover {
+  display: flex;
+}
