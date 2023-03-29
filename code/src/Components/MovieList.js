@@ -1,5 +1,6 @@
 /* eslint-disable no-shadow */
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const MoviesList = () => {
   const [list, setList] = useState([]);
@@ -19,18 +20,23 @@ const MoviesList = () => {
 
   /* This return shows the img, titles, rdate & the id on our HTML page */
   return (
-    <main>
-      {list.map((movie) => (
+    <section className="startPage">
         <div className="movie-container">
-          <MoviesList
-            title={movie.title}
-            releaseDate={movie.release_date}
-            movieId={movie.id}
-            poster={movie.poster_path} />
-        </div>
+        {list.map((movie) => (
+          <article className="movie-wrapper" key={movie.id}>
+            <Link key={movie.id} to={`/details/${movie.id}`}>
+            <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+            <div className="details">
+              <h1>{movie.title}</h1>
+              <p>Released {movie.release_date}</p>
+              </div>
+              </Link>
+              </article>
       ))}
-    </main>
+      </div>
+    </section>
   )
 }
+
 
 export default MoviesList;
