@@ -14,7 +14,7 @@ export const List = () => {
   }, []);
 
   return (
-    <div>
+    <div className="movie-list">
       {movieList.map((movie) => {
         return (
           <NavLink key={movie.id} to={`/details/${movie.id}`} className="movie-item">
