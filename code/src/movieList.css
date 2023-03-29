@@ -1,3 +1,23 @@
+.loadingWrapper {
+  display: block;
+  margin: 10% auto;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loadingImg {
+  margin: 0 auto;
+  width: 300px;
+}
+
+.loadingText {
+  color: white;
+  font-size: 22px;
+  margin: 20px 0;
+}
+
 .mainWrapper {
     margin: 0;
     padding: 0;
