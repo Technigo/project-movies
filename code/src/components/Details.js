@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import './Details.css';
 
-export const Details = ({ movieId, apiKey }) => {
+export const Details = () => {
   const [loading, setLoading] = useState(false);
   const [movieData, setMovieData] = useState({});
+  const { movieId } = useParams();
 
   useEffect(() => {
     setLoading(true);
-    fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`, { method: 'GET' })
+    fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=c78445f7216324dcfc408149681f2fcd&language=en-US`, { method: 'GET' })
       .then((response) => response.json())
       .then((data) => setMovieData(data))
       .catch((error) => console.error(error))
