@@ -1,0 +1,38 @@
+ .movie-overview {
+    color:white;
+  }
+
+.movie-title {
+    color:white;
+  }
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+  }
+
+.details-container {
+    margin-top: 10vh;
+    margin-left: 5vw;
+  }
+
+ .all-details {
+  position: relative;
+  height: 100vh; /* Set the height of the container to fill the viewport */
+}
+
+
+.back-btn {
+  position: absolute;
+  top: 20px; /* Adjust the top position as needed */
+  left: 20px; /* Adjust the left position as needed */
+  z-index: 1; /* Set a higher z-index to ensure the button is on top of the background */
+  /* Add other styles for the button */
+  margin-left: 5vw;
+}
+
+.details-container img {
+  border: solid 3px white;
+
+}

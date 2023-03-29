@@ -1,0 +1,14 @@
+.ListPage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    }
+.ListPage a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    }
+.ListPage a img {
+    object-fit: contain;
+    object-fit: cover;
+    width: 100%;
+    }
