@@ -23,6 +23,7 @@ h2 {
 
 h3 {
   color: white;
+  font-size: 16px;
 }
 
 /* THE FOLLOWING CLASSES ARE FROM MOVIELIST.JS */
@@ -90,7 +91,7 @@ also have the .movie-details class. */
 }
 
 .go-back-btn {
-  color: red;
+  color: white;
   border-radius: 20px;
   border: solid white 2px;
   padding: 10px;
@@ -112,7 +113,7 @@ also have the .movie-details class. */
   border: solid white 10px; /* poster gets a border */
   margin-left: 20px; /* poster goes in a bit from the left */
   margin-top: 20px;
-  max-height: 400px;
+  /*max-height: 400px;*/
 }
 
 .movie-info {
@@ -146,12 +147,43 @@ also have the .movie-details class. */
   font-size: 18px; /* fixes font on description */
 }
 
+@media (min-width: 668px) and (max-width: 1024px) {
+  .movie-container {
+    width: 33%;
+  }
+  .movie-details-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr 1fr;
+  }
+
+  .go-back-btn {
+    grid-column: 1/2;
+  }
+
+  .poster-img {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-bottom: 20px;
+    justify-self: start;
+    align-self: end;
+    max-width: 25vh;
+  }
+
+  .movie-info {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: end;
+    margin-left: 5px;
+  }
+}
+
 @media (min-width: 1025px) {
   .movie-container {
     width: 25%;
   }
 
-  .details-container {
+  .movie-details-container {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     grid-template-rows: 0.5fr 1fr 1fr;
