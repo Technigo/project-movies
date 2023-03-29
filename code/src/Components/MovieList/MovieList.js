@@ -10,7 +10,10 @@ export const MovieList = ({ movieList }) => {
     <section className="movie-list-container">
       {movieList.map((singlemovie) => {
         return (
-          <p>{singlemovie.title}</p>
+          <a key={singlemovie.name}>
+            <p>{singlemovie.title}</p>
+            <p>{singlemovie.release_date}</p>
+          </a>
         )
       })}
 

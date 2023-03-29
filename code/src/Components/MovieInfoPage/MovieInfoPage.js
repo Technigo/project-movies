@@ -1,4 +1,8 @@
+// /////////////// IMPORT //////////////////////// //
+
 import React from 'react';
+
+// /////////////// COMPONENT //////////////////////// //
 
 export const MovieInfoPage = () => {
   return (
@@ -7,3 +11,4 @@ export const MovieInfoPage = () => {
     </div>
   )
 }
+

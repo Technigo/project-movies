@@ -6,6 +6,10 @@ import React from 'react';
 
 export const NotFound = () => {
   return (
-    <p> Not found :( </p>
+    <section className="notfound-container">
+      <div className="notfound-text">
+        <p> Not found :( </p>
+      </div>
+    </section>
   )
 };
