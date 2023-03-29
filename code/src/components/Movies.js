@@ -12,19 +12,24 @@ export const Movies = () => {
   }, []);
 
   return (
-    <>
+    <div className="grid-parent">
       {movies.map((movie) => {
         return (
-          <div className="grid-parent">
-            <div className="movie-container">
-              <Link key={movie.id} to={`/details/${movie.id}`}>
-                <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} />
-              </Link>
-            </div>
+          <div className="movie-container">
+            <Link key={movie.id} to={`/details/${movie.id}`}>
+              <img className="poster" src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} />
+              <div className="overlay-container">
+                <div className="title-container">
+                  <p className="title">{`${movie.title}`}</p>
+                  <p className="release-date">{`${movie.release_date}`}</p>
+                </div>
+              </div>
+            </Link>
           </div>
+
         )
       })}
-    </>
+    </div>
 
   )
 }
