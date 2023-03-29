@@ -59,7 +59,6 @@
   filter: brightness(0.3);
 }
 
-
   /* MEDIA QUERY FOR TABLET*/
 @media (min-width: 668px){
   .grid-parent {
@@ -71,6 +70,7 @@
   }
 }
 
+/*MEDIA QUERY FOR DESKTOP*/
 @media (min-width: 1024px){
   .grid-parent{
     display: grid;
