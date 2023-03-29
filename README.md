@@ -8,4 +8,4 @@ I used react router to create this multi page application.
 
 ## View it live
 
-Deployed link: nora-movies-project.netlify.app
+Deployed link: https://nora-movies-project.netlify.app/
