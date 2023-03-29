@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import NotFound from 'Components/NotFound'
+import NotFound from 'components/NotFound'
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const [details, setDetails] = useState([]);
   const navigate = useNavigate();
   const { id } = useParams()
@@ -49,7 +49,7 @@ export const MovieDetails = () => {
   );
 }
 
-/* export default MovieDetails; */
+export default MovieDetails;
 
 /* To round rating number to one decimal */
 /* const roundedNumber = Math.round(movieDetails.vote_average * 10) / 10 */

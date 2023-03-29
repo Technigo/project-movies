@@ -1,4 +1,4 @@
-/* import React from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const NotFound = () => {
@@ -12,4 +12,4 @@ const NotFound = () => {
       <button type="button" onClick={onHomeButtonClick}>Return to homepage</button>
     </div>);
 }
-export default NotFound;/ */
+export default NotFound;

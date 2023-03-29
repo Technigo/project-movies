@@ -1,10 +1,8 @@
-/* import React, { useState, useEffect } from 'react'; */
 import React from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import MovieList from 'Components/MovieList'
-import NotFound from 'Components/NotFound'
-import MovieDetails from 'Components/MovieDetails'
-/* import { Movies } from 'Components/Movies' */
+import { MovieList } from 'components/MovieList'
+import { NotFound } from 'components/NotFound'
+import { MovieDetails } from 'components/MovieDetails'
 
 export const App = () => {
   return (
