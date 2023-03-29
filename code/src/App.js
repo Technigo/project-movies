@@ -1,9 +1,15 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HomePage } from './sites/HomePage';
+import { ProductPage } from './sites/ProductPage';
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/:slug" element={<ProductPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
