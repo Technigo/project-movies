@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-/*Navlink on first page*/
+/*DETAILS IN HEADER*/
 .navlink-container {
 display: flex;
 justify-content: center;
@@ -58,7 +58,7 @@ p {
   padding: 30px;
 }
 
-/*Detail component*/
+/*DETAIL FOR MOVIES*/
 .background {
   background-color: #1e1e1e;
   min-height: 100vh;
