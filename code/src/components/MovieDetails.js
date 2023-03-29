@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 export const MovieDetails = () => {
   const { id } = useParams();
   const [details, setDetails] = useState({});
+  const navigate = useNavigate();
+  const onGoToNotFoundButtonClick = () => {
+    navigate('/');
+  }
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=37960b018b2292cd4182bc4096fb83c8&language=en-US`)
@@ -11,10 +15,6 @@ export const MovieDetails = () => {
       .then((data) => setDetails(data))
     console.log(details)
   }, [id]);
-
-  /* const onGoToNotFoundButtonClick = () => {
-        navigate('/404');
-      } */
 
   return (
     <div>
@@ -26,6 +26,7 @@ export const MovieDetails = () => {
       <div>
         <img src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt={details.title} />
       </div>
+      <button type="button" onClick={onGoToNotFoundButtonClick}> ME! </button>
     </div>
   )
 }
