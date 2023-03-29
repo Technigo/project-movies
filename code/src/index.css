@@ -89,10 +89,22 @@ also have the .movie-details class. */
   position: relative;
 }
 
-/* not done */
 .go-back-btn {
   color: red;
+  border-radius: 20px;
+  border: solid white 2px;
+  padding: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  left: 20px;
+  top: 20px;
   position: absolute; /* button comes back and places itself on top of the other button */
+}
+
+.go-back-btn:hover {
+  color: black;
+  background-color: white;
+  transform: scale(1.1)
 }
 
 .poster-img {
@@ -100,6 +112,7 @@ also have the .movie-details class. */
   border: solid white 10px; /* poster gets a border */
   margin-left: 20px; /* poster goes in a bit from the left */
   margin-top: 20px;
+  max-height: 400px;
 }
 
 .movie-info {
@@ -119,9 +132,10 @@ also have the .movie-details class. */
 .rating {
   align-self: center; /* places the rating on the same level as title instead of slightly above */
   margin-left: 10px; /* creates some space in between title and rating */
-  background-color: white;
+  background-color: lightblue;
+  border-radius: 5px; /* added some rounded edges */
   color: black;
-  padding: 3px;
+  padding: 5px;
 }
 
 .title {
@@ -132,6 +146,43 @@ also have the .movie-details class. */
   font-size: 18px; /* fixes font on description */
 }
 
+@media (min-width: 1025px) {
+  .movie-container {
+    width: 25%;
+  }
+
+  .details-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    width: 100vw; 
+    height: 100vh;
+    background-size: cover;
+  }
+
+  .go-back-btn {
+    grid-column: 1/2;
+  }
+
+  .poster-img {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    justify-self: start;
+    align-self: end;
+    max-width: 40vw;
+  }
+
+  .movie-info {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-bottom: 20px;
+    align-self: end;
+    justify-self: end;
+    margin-left: 20px;
+  }
+}
 
 
 
