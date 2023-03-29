@@ -1,8 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const NotFound = () => {
+  const navigate = useNavigate();
+  const onHomeButtonClick = () => {
+    navigate('/');
+  }
   return (
-    <p>Page not found</p>
+    <div>
+      <p>Sorry Movie lover, that page does not exist</p>
+      <button type="button" onClick={onHomeButtonClick}>Return to homepage</button>
+    </div>
   )
 };
 

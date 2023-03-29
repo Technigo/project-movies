@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Movies = () => {
   const [movies, setMovies] = useState({ results: [] });
@@ -8,7 +9,6 @@ export const Movies = () => {
       .then((response) => response.json())
       .then((fetchData) => {
         setMovies(fetchData);
-        console.log(fetchData);
       });
   }, []);
 
@@ -16,15 +16,13 @@ export const Movies = () => {
     <div className="movie-container">
       {movies.results.map((singleMovie) => {
         return (
-          <>
-            <div key={singleMovie.id}>
-              <img src={`https://image.tmdb.org/t/p/w342/${singleMovie.poster_path}`} alt="movie poster" />
-            </div>
-            <div className="release-info">
+          <div className="release-info">
+            <Link key={singleMovie.id} to={`/details/${singleMovie.id}`}>
+              <img src={`https://image.tmdb.org/t/p/w342/${singleMovie.poster_path}`} alt={singleMovie.original_title} />
               <h2>{singleMovie.original_title}</h2>
               <p>{singleMovie.release_date}</p>
-            </div>
-          </>
+            </Link>
+          </div>
         );
       })}
     </div>

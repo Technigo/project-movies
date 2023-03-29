@@ -5,9 +5,66 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: black;
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/*mobilefirst movies*/
+.movie-container{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+
+/*Details*/
+.details-container {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+
+}
+
+.background-img {
+
+}
+
+.poster {
+ 
+}
+
+.movie-info{
+ display: flex;
+
+  position: absolute;
+  top: 55%;
+  left: 0;
+}
+.header {
+ align-self: flex-end;
+ margin: 30px;
+ padding: 30px;
+}
+
+button {
+  width: 50px;
+}
+/*tablet movies*/
+@media (min-width: 770px) {
+  .movie-container{
+    grid-template-columns: 1fr 1fr;
+
+  }
+}
+/*desktop movies*/
+@media (min-width: 820px) {
+ .movie-container{
+  grid-template-columns: 1fr 1fr 1fr 1fr;}
 }
