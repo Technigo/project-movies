@@ -18,7 +18,7 @@ export const MovieDetails = () => {
 
   return (
     <div>
-      <h1>Hej hej!!!</h1>
+      <h1>This is Sara&apos;s and Annika&apos;s MovieDetails-component!!!</h1>
       <p>{details.title}</p>
       <p>{details.release_date}</p>
     </div>
