@@ -1,12 +1,11 @@
 import React from 'react'
 import GenreList from 'components/GenreList'
 
-const Header = ({ genreList, setLoading, setSelectedGenre, selectedGenre }) => {
+const Header = ({ genreList, setSelectedGenre, selectedGenre }) => {
   return (
     <nav className="navbar">
       <GenreList
         genreList={genreList}
-        setLoading={setLoading}
         setSelectedGenre={setSelectedGenre}
         selectedGenre={selectedGenre} />
     </nav>
