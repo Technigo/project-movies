@@ -27,7 +27,7 @@ export const MovieDetails = () => {
         <div className="MovieTextBlock">
           <div className="movieInfo">
             <h1>{details.title}</h1>
-            <h2>⭐  <span>{details.vote_average}</span></h2>
+            <h2>⭐  <span>{Math.round(details.vote_average * 10) / 10}</span></h2>
           </div>
           <div className="MovieSummary">
             <p>{details.overview}</p>
