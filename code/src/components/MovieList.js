@@ -30,15 +30,15 @@ const MovieList = () => {
 
   return (
     <div className="movie-container">
-      {movieList.map((movie) => (
+      {movieList.map((results) => (
         <Link
-          key={movie.id}
-          to={`/moviedetails/${movie.original_title}`}>
-          <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="poster" />
+          key={results.id}
+          to={`/moviedetails/${results.id}`}>
+          <img src={`https://image.tmdb.org/t/p/w342${results.poster_path}`} alt="poster" />
 
           <div className="cover-title">
-            <h1>{movie.original_title}</h1>
-            <h3>Released {movie.release_date}</h3>
+            <h1>{results.original_title}</h1>
+            <h3>Released {results.release_date}</h3>
           </div>
         </Link>
       ))}

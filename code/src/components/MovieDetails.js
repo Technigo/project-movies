@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const MovieDetails = () => {
+  const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState({});
   const navigate = useNavigate();
-  const { id } = useParams();
 
   const onBackButtonClick = () => {
     navigate(-1);
@@ -13,13 +13,7 @@ const MovieDetails = () => {
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=95ef8b2227f45566b4eecd3687c10466&language=en-US`)
       .then((res) => res.json())
-      .then((data) => {
-        setMovieDetails(data);
-        console.log(data);
-      })
-      .catch((error) => {
-        console.error(error)
-      })
+      .then((data) => setMovieDetails(data));
   }, [id])
 
   return (

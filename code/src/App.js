@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import MovieDetails from 'components/MovieDetails';
-import MovieList from 'components/MovieList';
+import MovieDetails from './components/MovieDetails';
+import MovieList from './components/MovieList';
 
 // API Key:95ef8b2227f45566b4eecd3687c10466
 export const App = () => {
