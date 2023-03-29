@@ -1,4 +1,4 @@
-# Project Movies
+# Project Movies 🍿🎥
 
 Replace this readme with your own information about your project.
 
