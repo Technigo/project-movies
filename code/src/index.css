@@ -1,5 +1,6 @@
 html {
   min-height: 100%;
+  background: #1e1e1e;
 }
 body {
   margin: 0;
@@ -92,6 +93,7 @@ p {
 main {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 40px;
 }
 
 .movie-card {
@@ -101,15 +103,15 @@ main {
 
 }
 
+.movie-card img{
+  width: 97%;
+  border: solid #a09c9c5e 0.6px;
+}
+
 .movide-detail {
   display: flex;
   flex-direction: column;
   margin: 50px;
-}
-
-.movie-card img{
-  width: 97%;
-  border: solid #a09c9c5e 0.5px;
 }
 
 .movie-card a:hover > img{
