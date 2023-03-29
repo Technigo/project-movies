@@ -10,7 +10,7 @@ const MovieList = ({ movieList }) => {
         return (
           <div className="movie-container">
             <Link
-              key={movie.title}
+              key={movie.id} // testar att byta ut link mot id här
               to={`/details/${movie.id}`}
               className="movie">
               <div className="image-overlay" />

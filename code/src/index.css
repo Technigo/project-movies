@@ -77,6 +77,67 @@ also have the .movie-details class. */
 
 /* THE FOLLOWING CLASSES ARE FROM MOVIEDETAILS.JS */
 
+.movie-details-container {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover; /* this altered the background to one big image instead of a small one
+  on constant repeat */
+  display: flex; /* this made the poster (smaller image) large and also screwed with the back button */
+  flex-direction: column; /* this made the background cover in full, the small poster disappeared and the
+  back button is now under the header and stretched from side to side */
+  justify-content: flex-end; /*image now takes up full screen and repeats at bottom */
+  position: relative;
+}
+
+/* not done */
+.go-back-btn {
+  color: red;
+  position: absolute; /* button comes back and places itself on top of the other button */
+}
+
+.poster-img {
+  max-width: 50vw; /* smaller poster comes back, placed to the left, overrides header */
+  border: solid white 10px; /* poster gets a border */
+  margin-left: 20px; /* poster goes in a bit from the left */
+  margin-top: 20px;
+}
+
+.movie-info {
+  margin-bottom: 20px; /* buttons go from being on top of eachother to placing in column */
+  align-self: center;
+  justify-self: center;
+  color: white;
+  margin-left: 20px;
+  bottom: 10vh;
+  font-weight: 400;
+}
+
+.title-and-rating {
+  display: flex; /* moves rating to next to title instead of under it */
+}
+
+.rating {
+  align-self: center; /* places the rating on the same level as title instead of slightly above */
+  margin-left: 10px; /* creates some space in between title and rating */
+  background-color: white;
+  color: black;
+  padding: 3px;
+}
+
+.title {
+  text-shadow: 1px 1px #4d4d4d; /* no difference? */
+}
+
+.overview {
+  font-size: 18px; /* fixes font on description */
+}
+
+
+
+
+
+
+
 
 
 

@@ -1,7 +1,7 @@
 /* eslint-disable no-trailing-spaces */
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { MOVIE_DETAILS } from 'utils/urls';
+// import { MOVIE_DETAILS } from 'utils/urls';
 
 const MovieDetails = () => {
   const navigate = useNavigate()
@@ -17,8 +17,9 @@ const MovieDetails = () => {
     navigate('/404')
   }
 
+  // when replacing the MOVIE_DETAILS in the fetch with the actual link, it finally worked
   useEffect(() => {
-    fetch(MOVIE_DETAILS)
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=ef419ef4eccfeb47458eaa6d860708b3&language=en-US`)
       .then((data) => data.json())
       .then((configuredData) => setDetails(configuredData))
   }, [id]);
@@ -27,7 +28,7 @@ const MovieDetails = () => {
     <section
       className="movie-details-container"
       style={{ backgroundImage:
-      `url(https://image.tmdb.org/t/p/original${details.backdrop_path})` }}>
+      `url(http://image.tmdb.org/t/p/w300${details.backdrop_path})` }}>
       <button
         className="go-back-btn"
         type="button"
@@ -35,7 +36,7 @@ const MovieDetails = () => {
       </button>
       <img
         className="poster-img"
-        src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`}
+        src={`http://image.tmdb.org/t/p/w342/${details.poster_path}`}
         alt="movie-poster" />
       <div
         className="movie-info">
