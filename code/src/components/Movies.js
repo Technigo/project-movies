@@ -16,13 +16,13 @@ export const Movies = () => {
     <div className="movie-container">
       {movies.results.map((singleMovie) => {
         return (
-          <div className="release-info">
-            <Link key={singleMovie.id} to={`/details/${singleMovie.id}`}>
-              <img src={`https://image.tmdb.org/t/p/w342/${singleMovie.poster_path}`} alt={singleMovie.original_title} />
-              <h2>{singleMovie.original_title}</h2>
-              <p>{singleMovie.release_date}</p>
-            </Link>
-          </div>
+          <Link key={singleMovie.id} to={`/details/${singleMovie.id}`} className="movie-list">
+            <img className="image" src={`https://image.tmdb.org/t/p/w342/${singleMovie.poster_path}`} alt={singleMovie.original_title} />
+            <div className="text-container">
+              <h2 className="name">{singleMovie.original_title}</h2>
+              <p className="date">{singleMovie.release_date}</p>
+            </div>
+          </Link>
         );
       })}
     </div>

@@ -7,7 +7,7 @@ const NotFound = () => {
     navigate('/');
   }
   return (
-    <div>
+    <div className="notFound">
       <p>Sorry Movie lover, that page does not exist</p>
       <button type="button" onClick={onHomeButtonClick}>Return to homepage</button>
     </div>

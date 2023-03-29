@@ -18,14 +18,9 @@ const Details = () => {
       });
   }, [movieInfo]);
   return (
-    <div
-      className="details-container"
-      style={{
-        backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%),
-      url (https://image.tmdb.org/t/p/w1280${singleMovie.backdrop_path})`
-      }}>
-      <button type="button" onClick={onGoBackButtonClick}>Back to movies</button>
+    <div className="test">
       <img className="background-img" src={`https://image.tmdb.org/t/p/w1280/${singleMovie.backdrop_path}`} alt={singleMovie.original_title} />
+      <button type="button" onClick={onGoBackButtonClick}>Back to movies</button>
       <div className="movie-info">
         <img className="poster" src={`https://image.tmdb.org/t/p/w342/${singleMovie.poster_path}`} alt={singleMovie.original_title} />
         <div className="header">
@@ -38,3 +33,9 @@ const Details = () => {
 }
 
 export default Details;
+
+/* className="details-container"
+      style={{
+        backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%),
+      url (https://image.tmdb.org/t/p/w1280${singleMovie.backdrop_path})`
+      }} */
