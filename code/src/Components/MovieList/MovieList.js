@@ -1,13 +1,13 @@
-// /////////////// IMPORT //////////////////////// //
+// ////////////////////////////// IMPORTS //////////////////////////////////////////////// //
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-// /////////////// COMPONENT //////////////////////// //
+// ////////////////////////////// COMPONENT //////////////////////////////////////////////// //
 
-// This function creates list of clickable movie-covers
+// This function creates a list of clickable movie-covers.
 // The function starts with declaring,
-// the variables and sets the useState value.
+// the variables and sets the useState values.
 
 export const MovieList = () => {
   const [movieList, setMovieList] = useState([])
@@ -19,16 +19,18 @@ export const MovieList = () => {
   // No options is specified for this request its per default a GET
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true) // Here the loading gets a new value. This makes the <p>Loading</p> appear.
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=5e0fb7ffc6ed1b5ff2d5d2db9f68e259&language=en-US')
       .then((res) => res.json())
       .then((data) => setMovieList(data.results))
       .catch((error) => console.error(error))
       .finally(() => setLoading(false))
+      // If the fetch is a success the loading gets a new value again.
+      // This makes the <p>Loading</p> disappear.
   }, []);
 
-  // This is an IF/ELSE-statement. IF setLoading === (true) after the fetchcall then
-  // shows "loading text" if the API call is delayed.
+  // This is like a IF/ELSE-statement. IF loading === (true) display this
+  // otherwise continue to the return part that displays the page.
 
   if (loading) {
     return (
@@ -36,7 +38,17 @@ export const MovieList = () => {
     )
   }
 
-  // /////////////// RETURNS JXT //////////////////////// //
+  // ////////////////////////////// RETURNS JXT //////////////////////////////////////////////// //
+
+  // Here comes the return for the MovieList:
+  // - We are mapping trough the movieList array and says that for each singleMovie we want to have:
+  // 1: A link-url to details page. (This makes all things inside the <Link> to a clickable link)
+  // 2: The cover picture
+  // 3: The title
+  // 4: The releasedate.
+
+  // The "base URL" for the images = (https://image.tmdb.org/t/p/w1280) were provided by the https://api.themoviedb.org homepage
+  // the /"w300" in the url is the quality of the picture and can be changed to get other sizes.
 
   return (
     <section className="movie-list-container">
