@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import MovieList from 'components/MovieList';
 import NotFound from 'components/NotFound';
-// import MovieDetails from 'components/MovieDetails';
+import MovieDetails from 'components/MovieDetails';
 import Header from 'components/Header';
 import { POPULARMOVIE_URL } from 'components/urls.js';
 
@@ -41,7 +41,7 @@ export const App = () => {
       <Routes>
         {/* path to a single component */}
         <Route path="/" element={<MovieList movies={movieList} />} />
-        {/* <Route path="/MovieDetails/:movie_id" element={<MovieDetails />} /> */}
+        <Route path="/MovieDetails/:movieId" element={<MovieDetails />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>

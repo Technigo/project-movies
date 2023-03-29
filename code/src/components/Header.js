@@ -9,9 +9,9 @@ const Header = () => {
         <p>
           <Link to="/">Go to Home</Link>
         </p>
-        <p>
+        {/* <p>
           <NavLink to="/MovieDetails/test">Go to Details</NavLink>
-        </p>
+        </p> */}
         <p>
           <NavLink to="/">Go to Home</NavLink>
         </p>
