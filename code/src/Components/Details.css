@@ -34,5 +34,36 @@
 
 .details-container img {
   border: solid 3px white;
+}
 
+button {
+  background-color: #031244; 
+  border: none; 
+  color: white; 
+  padding: 15px 32px; 
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  opacity: 0.8;
+}
+button:hover {
+  background-color: #040958;
+  color: white;
+  transition: .5 ease;
+  opacity: 1;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.2);
+}
+
+button:active {
+  background-color: #e7e7e7;
+  color: black;
 }
