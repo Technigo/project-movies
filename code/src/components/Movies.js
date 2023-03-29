@@ -21,7 +21,7 @@ export const Movies = () => {
               <div className="overlay-container">
                 <div className="title-container">
                   <p className="title">{`${movie.title}`}</p>
-                  <p className="release-date">{`${movie.release_date}`}</p>
+                  <p className="release-date">{`Released ${movie.release_date}`}</p>
                 </div>
               </div>
             </Link>

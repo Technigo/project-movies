@@ -8,23 +8,20 @@
   .title-container {
     display: flex;
     flex-direction: column;
-    align-content: flex-end;
-    text-align: center;
-    gap: 10px;
-    padding: 15px;
+    align-items: flex-start;
+    gap: 20px;
   }
 
   .title {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 26px;
     font-weight: bold;
     color: white;
     text-decoration: none;
     word-wrap: break-word;    
+    line-height: 120%;
   }
 
   .release-date{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: white;
     text-decoration: none;
@@ -44,18 +41,13 @@
   
   .overlay-container{
     position: absolute;
-    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
-    width: fit-content;
-    height: fit-content;
     opacity: 0; /*This makes the div hover-img not be displayed*/
     pointer-events: none; /* so if you select you dont see the stuff placed inside */
     transition: .2s ease;
-    display: flex;
-    align-items: center;
+    padding: 20px;
   }
 
   .movie-container:hover .overlay-container {
@@ -66,7 +58,6 @@
 .movie-container:hover img {
   filter: brightness(0.3);
 }
-
 
 
   /* MEDIA QUERY FOR TABLET*/
