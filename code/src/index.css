@@ -90,8 +90,14 @@ span.released {
   transition: 0.3s;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 840px) {
   .movie-details {
     flex-direction: row;
+    max-width: 890px;
+    margin-top: 5%;
+  }
+
+  .detail-wrapper {
+    max-width: 455px;
   }
 }
