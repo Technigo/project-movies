@@ -1,0 +1,51 @@
+
+.detail-page .background {
+  display:flex;
+  flex-direction: column; 
+  background-size: cover;
+  justify-content:flex-end; 
+  height: 100vh;
+} 
+
+.backdrop-img {
+  border: 3px solid blue; 
+    width: 100vw;
+}
+
+.poster {
+  border: 0.5px solid white; 
+  box-shadow: -24px 29px 13px -4px rgba(245, 243, 243, 0.1);}
+
+.detail-wrapper {
+  display: flex; 
+  flex-direction: row; 
+  align-items: flex-end;
+  margin-bottom: 4em;
+  margin-left: 4em;
+}
+
+
+.detail-text {
+  color: white; 
+  margin-left: 2em;
+}
+
+button {
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  left: 60px;
+  top: 60px;
+}
+
+.rating {
+  background: rgba(255, 255, 255, 0.661); 
+  color: black; 
+  padding: 0 5px; 
+  font-weight: 500; 
+  margin-left: 10px; 
+}
+
+p {
+    max-width: 400px;
+}
