@@ -8,6 +8,7 @@ export const Movies = ({ title, releaseDate, movieId, poster }) => {
 <div>
       <h1>{title}</h1>
       <p>Release {releaseDate}</p>
+      <p>HEJ HÄR ÄR JAG</p>
     </div>
      
 </Link>
