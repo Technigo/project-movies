@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import './MovieDetails.css';
 
 export const MovieDetails = () => {
   const { id } = useParams();
@@ -17,21 +18,22 @@ export const MovieDetails = () => {
   }, [id]);
 
   return (
-    <div>
-      <h1>This is Sara&apos;s and Annika&apos;s MovieDetails-component!!!</h1>
-      <p>{details.title}</p>
-      <p>{details.release_date}</p>
-      <p>{details.overview}</p>
-      <p>{details.vote_average}</p>
-      <div>
-        <img src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} alt={details.title} />
+    <div className="MovieDetailsRender" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
+      <button className="backButton" type="button" onClick={onGoToNotFoundButtonClick}> Back </button>
+      <div className="movieAndInfo">
+        <div className="movieImage">
+          <img src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt={details.title} />
+        </div>
+        <div className="MovieTextBlock">
+          <div className="movieInfo">
+            <h1>{details.title}</h1>
+            <h2>⭐  <span>{details.vote_average}</span></h2>
+          </div>
+          <div className="MovieSummary">
+            <p>{details.overview}</p>
+          </div>
+        </div>
       </div>
-      <button type="button" onClick={onGoToNotFoundButtonClick}> ME! </button>
     </div>
   )
 }
-
-/* <p>{detail.title}</p>
-            <p>{detail.overview}</p>
-            <p>{detail.vote_average}</p>
-            <img src={`https://image.tmdb.org/t/p/w300${detail.backdrop_path}`} alt={detail.title} /> */
