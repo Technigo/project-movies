@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MovieList from 'components/MovieList';
 // import NotFound from 'components/NotFound';
 import MovieDetails from 'components/MovieDetails';
-import Header from 'components/Header';
+// import Header from 'components/Header';
 import { BASE_URL } from 'utils/urls';
 
 // everything in the site has to be inside the <BrowserRouter>-tag from now on when we use
@@ -26,7 +26,7 @@ export const App = () => {
     // main wrapper for the whole app
     <BrowserRouter>
       {/* wrapper for every component that needs to be linked to */}
-      <Header />
+      {/* <Header /> */}
       <Routes>
         {/* path to a single component */}
         <Route path="/" element={<MovieList movieList={movieList} />} />
