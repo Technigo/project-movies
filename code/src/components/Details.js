@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { /* useNavigate, */ useParams } from 'react-router-dom';
 import { SINGLE_MOVIE_URL } from 'utils/urls';
 import star from './assets/star.svg'
+import { Header } from './Header';
 
 export const Details = () => {
   /* const navigate = useNavigate(); */
@@ -19,6 +20,7 @@ export const Details = () => {
   } */
   return (
     <div>
+      <Header />
       {movie && (
         <div
           className="movie-backdrop"

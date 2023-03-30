@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { MovieList } from 'components/MovieList';
 import { NotFound } from 'components/NotFound';
 import { Details } from 'components/Details';
-import { Header } from 'components/Header';
 import { BASE_URL } from 'utils/urls';
 
 export const App = () => {
@@ -29,7 +28,6 @@ export const App = () => {
     // main wrapper for the whole app
     <BrowserRouter>
       {/* wrapper for evert component that needs to be linked to */}
-      <Header />
       <Routes>
         {/* path to a single component */}
         <Route path="/" element={<MovieList movieList={movieList} />} />

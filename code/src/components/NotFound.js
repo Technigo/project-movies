@@ -1,18 +1,14 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Header } from './Header'
 
 export const NotFound = () => {
-  const navigate = useNavigate()
-  const onGoToHomeButtonClick = () => {
-    navigate('/')
-  }
-  const goBackButtonClick = () => {
-    navigate(-1)
-  }
   return (
-    <div>
-      <h1>This page does not exist</h1>
-      <button type="button" onClick={onGoToHomeButtonClick}>Go to Home</button>
-      <button type="button" onClick={goBackButtonClick}>Go to Back</button>
+    <div style={{ backgroundColor: 'black', height: '100vh' }}>
+      <Header />
+      <h1 style={{ color: 'white',
+        paddingTop: '100px',
+        paddingLeft: '5%',
+        marginTop: '0' }}>Oops! This page does not seem to exist!
+      </h1>
     </div>)
 }
