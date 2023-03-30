@@ -10,6 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: white;
+  background-color: black;
 }
 
 code {
@@ -20,7 +21,6 @@ code {
 .movie-wrapper {
   display: flex;
   flex-wrap: wrap;
-  background-color: black;
 }
 
 .movie-wrapper a {
@@ -81,7 +81,7 @@ code {
   top: 50px;
 }
 
-.movies-btn {
+.movies-btn, .home-btn {
   color: white;
   background:none;
   border: none;
@@ -94,7 +94,7 @@ code {
   width: 35px;
 }
 
-.movies-btn:hover{
+.movies-btn:hover, .home-btn:hover {
   animation: headShake;
   animation-duration: 2s;
 }
@@ -130,6 +130,28 @@ code {
 
 .details-page .details-txt p {
   max-width: 400px;
+}
+
+.notfound-page {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.notfound-wrapper p {
+  margin-top: 5em;
+  font-size: 18px;
+}
+
+.notfound-wrapper svg {
+  width: 30px;
+}
+
+.home-btn {
+  display: flex;
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 10px;
 }
 
 @media (min-width: 370px) {
