@@ -162,7 +162,7 @@ also have the .movie-details class. */
 }
 
 .title-and-rating {
-  /*display: flex; /* moves rating to next to title instead of under it */
+  /* display: flex; /* moves rating to next to title instead of under it */
 }
 
 .rating {
@@ -184,18 +184,17 @@ also have the .movie-details class. */
 
 .overview {
   font-size: 16px; /* fixes font on movie description */
-  text-shadow: 1px 1px #4d4d4d;
+  text-shadow: 1px 1px #4d4d4d; /* gives some contrast to background */
   line-height: 20px; /* added just for fun */
 }
 
 p {
-  font-size: 10px;
+  font-size: 16px;
   color: white;
-  /* text-align: center; */
 }
 
 a {
-  font-size: 10px;
+  font-size: 12px;
   color: white;
 }
 

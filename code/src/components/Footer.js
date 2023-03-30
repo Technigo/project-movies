@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-text">
-        <p>A movie release project by Ylva Karlsson & Sandra Olsson</p>
+        <p>A Technigo movie release project by Ylva Karlsson & Sandra Olsson</p>
         <a
           href="https://icons8.com"
           rel="noopener noreferrer"
