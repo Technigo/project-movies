@@ -5,6 +5,8 @@ import PopularMovies from 'pages/PopularMovies';
 import NotFound from 'pages/NotFound';
 import MovieDetails from 'pages/MovieDetails';
 import UpcomingMovies from 'pages/UpcomingMovies';
+import './index.css';
+import './moviedetails.css';
 
 export const App = () => {
   return (

@@ -4,9 +4,9 @@ import 'header.css';
 
 const Header = () => {
   return (
-    <header>
-      <Link to="/"><img className="logo-image" src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="Movie Page Logo" width="80" height="50" /></Link>
-
+    <header className="header-top">
+      <Link to="/"><img className="logo-image" src="../images/popcorn-logo.jpg" alt="Movie Page Logo" /></Link>
+      <h3>Movie-night!</h3>
       <nav>
         <ul className="navlink-container">
           <li className="navlink">

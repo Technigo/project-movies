@@ -1,0 +1,107 @@
+/***** mobile first *****/
+* {
+    box-sizing: border-box;
+  }
+
+  .outer-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: black;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+
+.movie-details-section {
+    position: absolute;
+    top: 12%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.movie-background {
+   display: none;
+}
+
+.details-image {
+    display: flex;
+    width: 200px;
+    border: 5px solid #fff;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.movie-details-text {
+    color: white;
+    font-size: 12px;
+    margin: 50px;
+}
+
+.title {
+    font-size: 17px;
+}
+
+.back-button {
+    display: flex;
+    justify-content: center;
+    margin: 0px 50px 20px 50px;
+    background-color: #e6a13a;
+    width: 90px;
+    height: 30px;
+    color: black;
+    padding: 0.3em 0.5em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+/***** TABLET *****/
+@media (min-width: 668px){
+    .movie-background {
+        display: flex;
+        width: 240%;
+        height: 100vh; 
+      }
+
+      .outer-wrapper {
+        overflow: hidden;
+      }
+ }
+
+/***** DESKTOP *****/
+@media (min-width: 1025px) {
+
+    .movie-background {
+        display: flex;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        opacity: 0.8;
+    }
+
+    .movie-details-section {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .outer-wrapper {
+        overflow: hidden;
+      }
+}

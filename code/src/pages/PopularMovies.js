@@ -26,7 +26,6 @@ const PopularMovies = () => {
   }
   return (
     <section className="popular-movies-section">
-      <h1>Popular Movies</h1>
       <div className="movie-grid-container">
         {movies.map((movie) => {
           return (
