@@ -5,8 +5,8 @@ export const Header = () => {
   return (
     <header>
       <nav>
-        <Link to="details:movieId">Movie Details</Link>
-        <Link to="/">Movie List</Link>
+        <Link to="/">Popular Movies</Link>
+        <Link to="/genre-list">Genres</Link>
       </nav>
     </header>
   )

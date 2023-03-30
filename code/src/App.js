@@ -4,6 +4,7 @@ import { MovieDetails } from 'components/MovieDetails';
 import { Header } from 'components/Header';
 import { MovieList } from 'components/MovieList';
 import { NotFound } from 'components/NotFound';
+import { GenreList } from 'components/GenreList';
 
 export const App = () => {
   const [list, setList] = useState([])
@@ -34,6 +35,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<MovieList movies={list} />} />
         <Route path="/details/:movieId" element={<MovieDetails movie={list} />} />
+        <Route path="/genre-list" element={<GenreList />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
