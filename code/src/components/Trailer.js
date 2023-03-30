@@ -26,6 +26,7 @@ export const Trailer = () => {
   return (
     <div>
       <iframe
+<<<<<<< HEAD
         title="Movie Trailer"
         width="500"
         height="300"
@@ -33,6 +34,15 @@ export const Trailer = () => {
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
          picture-in-picture"
+=======
+        className="trailer-holder"
+        title={trailer}
+        width="500"
+        height="300"
+        src={`https://www.youtube.com/embed/${trailer.key}`}
+        // frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+>>>>>>> 867aa024b4a92d925220b82a71fea102fc0b1c2f
         allowFullScreen />
     </div>
 
