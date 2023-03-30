@@ -27,10 +27,11 @@ const MovieDetails = () => {
 
   return (
     <article className="movie-details-section">
-      <button type="button" onClick={onBackButtonClick} className="back-button">Go back</button>
+
       {details && (
         <div className="movie-background" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
           <div className="movie-summary">
+            <button type="button" onClick={onBackButtonClick} className="back-button">⬅️</button>
             <img className="details-image" src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
             <div className="movie-details-text">
               <h1><span className="movie-details-title">{details.title}</span><span> ⭐ </span><span className="rating">{Math.round(details.vote_average * 10) / 10}</span></h1>

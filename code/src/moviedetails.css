@@ -20,7 +20,7 @@
 
 .movie-details-section {
     position: absolute;
-    top: 12%;
+    top: 0;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -37,7 +37,7 @@
 
 .details-image {
     display: flex;
-    width: 200px;
+    width: 250px;
     border: 5px solid #fff;
     margin-bottom: 10px;
     margin-left: 50px;
@@ -54,6 +54,7 @@
 .movie-summary {
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
 }
 
 .title {
@@ -63,14 +64,15 @@
 .back-button {
     display: flex;
     justify-content: center;
-    margin: 0px 50px 20px 50px;
-    background-color: #e6a13a;
-    width: 90px;
-    height: 30px;
+    align-self: flex-start;
+    margin: 100px 0px 20px 0px;
+    background-color: #b3d0d8;
+    width: 80px;
+    height: 40px;
     color: black;
     padding: 0.3em 0.5em;
     border: none;
-    border-radius: 0.5em;
+    border-radius: 1em;
     cursor: pointer;
 }
 
@@ -86,6 +88,17 @@
         flex-direction: row;
         
       }
+
+      .movie-summary {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        flex-direction: row;
+        padding: 50px;
+        margin: 0;
+        
+      }
+  
 
     }
 
@@ -110,7 +123,11 @@
 
     .movie-summary {
       display: flex;
+      align-items: flex-end;
+      height: 100%;
       flex-direction: row;
+      padding: 50px;
+      margin: 0;
     }
 
     
