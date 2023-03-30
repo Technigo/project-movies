@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header.js';
 import '../movieList.css'
 
 const MovieList = () => {
@@ -30,19 +31,22 @@ const MovieList = () => {
     )
   }
   return (
-    <div className="mainWrapper">
-      {list.map((movies) => {
-        return (
-          <Link key={movies.id} to={`/details/${movies.id}`}>
-            <img alt="img" className="listPosterImg" src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`} />
-            <div className="eachMovie">
-              <h2 className="listMovieTitle">{movies.original_title}</h2>
-              <p className="releaseDate">{movies.release_date}</p>
-            </div>
-          </Link>
-        )
-      })}
-    </div>
+    <>
+      <Header />
+      <div className="mainWrapper">
+        {list.map((movies) => {
+          return (
+            <Link key={movies.id} to={`/details/${movies.id}`}>
+              <img alt="img" className="listPosterImg" src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`} />
+              <div className="eachMovie">
+                <h2 className="listMovieTitle">{movies.original_title}</h2>
+                <p className="releaseDate">{movies.release_date}</p>
+              </div>
+            </Link>
+          )
+        })}
+      </div>
+    </>
 
   )
 }
