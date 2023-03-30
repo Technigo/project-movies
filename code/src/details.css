@@ -21,6 +21,10 @@
     margin-left: 5px;
 }
 
+.backBtnName:hover {
+    margin-left: 10px;
+}
+
 .background {
     background-repeat: no-repeat;
     background-size: cover;
