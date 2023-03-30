@@ -17,3 +17,15 @@ code {
   flex-wrap: wrap;
 
 }
+
+.movie-container a {
+  width: 100%;
+  position: relative;
+  text-decoration: none;
+
+
+}
+
+.movie-wrapper img {
+  width: 97%;
+}
