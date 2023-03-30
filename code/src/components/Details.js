@@ -29,8 +29,9 @@ export const Details = () => {
     <div
       className="background"
       style={{ backgroundImage: `url(http://image.tmdb.org/t/p/original${movieDetails.backdrop_path})` }}>
-      <Link to="/" className="back-button" type="button">
-        <p>Back to home page</p>
+      <Link to="/" className="back-button">
+        <img src="./back-button.png" alt="back button" />
+        <p>Home</p>
       </Link>
       <div className="movie-detail">
         <img src={`http://image.tmdb.org/t/p/w342${movieDetails.poster_path}`} alt="movie" />

@@ -130,14 +130,17 @@ main {
 
 
 /*Button design*/
+.back-button img{
+  content: url(back-button.png);
+}
 .back-button {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
   cursor: pointer;
   margin: 20px;
   text-decoration: none;
-  color:rgb(172, 31, 31)
 }
 
 .back-button p {
@@ -148,7 +151,7 @@ main {
 
 .back-button:hover {
   transform: scale(1.04);
-  transition: 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .emoji {
@@ -173,6 +176,16 @@ main {
 .movie-detail {
   flex-direction: row;
   align-items: flex-end;
+}
+
+.description p {
+  font-size: 13px;
+  margin: 5px 0px;
+}
+
+.back-button img{
+  content: url(back-button.png);
+  max-width: 50%;
 }
 
 h1 {
