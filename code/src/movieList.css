@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+/* LOADER BEFORE LIST SHOWS*/
 .loadingWrapper {
   display: block;
   margin: 10% auto;
@@ -16,8 +19,33 @@
   color: white;
   font-size: 22px;
   margin: 20px 0;
+  font-family: 'Nunito';
 }
 
+/* SELECT CATEGORY */
+label {
+  color: white;
+  font-size: 14px;
+  font-family: 'Nunito';
+}
+
+select {
+  display: block;
+  margin-top: 3px;
+  padding: 3px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Nunito';
+  color: white;
+  background-color: rgb(107, 106, 106);
+}
+
+select:focus {
+  outline: none;
+}
+
+/* LIST OF MOVIES */
 .mainWrapper {
     margin: 0;
     padding: 0;
