@@ -30,7 +30,7 @@ const Details = () => {
 
   return (
     <div className="backdrop-container">
-      <button type="button" onClick={goBack}> Movies </button>
+      <button type="button" onClick={goBack}>Movies</button>
       <img className="backdrop" src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.title} />
 
       <div className="overview-container">
