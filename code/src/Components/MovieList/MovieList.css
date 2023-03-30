@@ -1,0 +1,80 @@
+ /* ////////////////////////////// CSS FOR MOVIELIST ///////////////////////////////////// */
+
+.movie-list-container { /* This is the grid-parent */
+    display: grid; /* this makes it a grid */
+    grid-template-columns: repeat(1, 1fr); /* Here We decide how many columns we want in mobile-first view */
+}
+
+.single-movie-container { /* This a child to the parent */
+    position: relative; /* This makes the image to be in the background */
+    width: 100%;
+}
+
+.single-movie-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes the image cover the single-movie-container */
+}
+
+.single-movie-container:hover .overlay-container { /* :hover is a pseudo-class */
+    opacity: 1; /* This makes the overlay div visible when the single-movie-container is hovered */
+}
+
+.single-movie-container:hover img {
+    filter: brightness(0.5); /* This changes the brigtness of the single-movie-container (and the image filling it up)  to half when hovered */
+}
+
+.title-releasedate-container { /* This is a child-grid-component */
+    display: grid; /* This makes it a grid */
+}
+
+.title {
+    font-size: 25px;
+    color: white;
+    text-decoration: none; /* This takes away the underline and the blue link color */
+    word-wrap: break-word; /* This breakes long titles */
+    font-weight: bold;
+}
+
+.releasedate{
+    font-size: 15px;
+    color: white;
+    text-decoration: none; /* This takes away the underline and the blue link color */
+}
+  
+.overlay-container{
+    position: absolute; /* This makes the title and the release date get on-top of the image */
+    bottom: 0; /* Here we are placing the overlay div at the bottom of the single movie container */
+    opacity: 0; /* This sets the text to be non visible if not hovered */
+    transition: .4s ease-in-out; /* This makes the overlay start slow and end slow */
+    padding: 30px;
+}
+
+ /* /////////////////////////////// MEDIA QUERRIES ///////////////////////////////////// */
+
+ /* We have created the site Mobile-First */
+
+@media (min-width:668px) { /* Tablet */
+
+    .movie-list-container { /* This is the grid-parent */
+        display: grid; /* this makes it a grid */
+        grid-template-columns: repeat(2, 1fr); /* Here We decide how many colums we want */
+    }
+}
+
+@media (min-width: 1023px) { /* Laptop */
+
+    .movie-list-container { /* This is the grid-parent */
+        display: grid; /* this makes it a grid */
+        grid-template-columns: repeat(4, 1fr); /* Here We decide how many colums we want */
+    }
+}
+
+ @media (min-width: 1269px) { /* Large screens */
+
+    .movie-list-container { /* This is the grid-parent */
+        display: grid; /* this makes it a grid */
+        grid-template-columns: repeat(5, 1fr); /* Here We decide how many colums we want */
+    }
+}
+    

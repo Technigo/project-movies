@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import './MovieList.css';
 
 // ////////////////////////////// COMPONENT //////////////////////////////////////////////// //
 
@@ -56,9 +57,13 @@ export const MovieList = () => {
         return (
           <section className="single-movie-container">
             <Link key={singleMovie.id} to={`/movieInfoPage/${singleMovie.id}`}>
-              <img src={`https://image.tmdb.org/t/p/w300${singleMovie.poster_path}`} alt={singleMovie.title} />
-              <p>{singleMovie.title}</p>
-              <p>{singleMovie.release_date}</p>
+              <img className="single-movie-image" src={`https://image.tmdb.org/t/p/w300${singleMovie.poster_path}`} alt={singleMovie.title} />
+              <div className="overlay-container">
+                <div className="title-releasedate-container">
+                  <p className="title">{singleMovie.title}</p>
+                  <p className="releasedate">{singleMovie.release_date}</p>
+                </div>
+              </div>
             </Link>
           </section>
         )
