@@ -21,7 +21,7 @@
 }
 .go-back-button-text {
   margin-left: 10px;
-  text-shadow: 1px 1px #4d4d4d;
+  text-shadow: 1px 1px #000;
 }
 
 @media (min-width: 768px) {

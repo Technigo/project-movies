@@ -14,7 +14,7 @@ export const Details = () => {
       .then((response) => response.json())
       .then((data) => setMovieData(data))
       .catch((error) => console.error(error))
-      .finally(() => setLoading(false));
+      .finally(() => setLoading(false))
   }, []);
 
   if (loading) {
@@ -22,6 +22,11 @@ export const Details = () => {
       <h1 className="loading">Loading data...</h1>
     )
   }
+  let movieRating;
+  if (movieData.vote_average) {
+    movieRating = movieData.vote_average.toFixed(1);
+  }
+
   return (
     <div className="details-page">
       <GoBackButton />
@@ -33,7 +38,7 @@ export const Details = () => {
             <div className="movie-data-container">
 
               <h1 className="movie-data-title"> {movieData.title}</h1>
-              <span className="movie-data-rating">⭐{movieData.vote_average}</span>
+              <span className="movie-data-rating">⭐{movieRating}</span>
               <p className="movie-data-overview">
                 {movieData.overview}
               </p>
