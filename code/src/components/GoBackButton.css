@@ -1,9 +1,12 @@
 .go-back-button-container {
   display: flex;
   position: absolute;
+  flex-direction: row;
 }
 
 .go-back-button {
+  display: flex;
+  align-items: center;
   background-color: transparent;
   font-size: 18px;
   color: white;
