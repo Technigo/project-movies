@@ -1,21 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { TV_SERIES_URL } from 'utils/urls';
 
-export const Tvseries = () => {
-    const [tvList, setTvList] = useState([]);
-  
-    useEffect(() => {
-      fetch(TV_SERIES_URL)
-        .then((response) => response.json())
-        .then((data) => setTvList(data.results))
-    }, [])
- 
+export const TvSeries = ({ originalName, singleTvPoster, singleTvID }) => {
+    const [isHover, setIsHover] = useState(false)
+
+    const handleMouseEnter = () => {
+      setIsHover(true);
+    };
+    const handleMouseLeave = () => {
+      setIsHover(false);
+    };
+
     return (
-   <section className="tv-list-card">
-  {tvList.map((singleTv) => (
-    <div 
-    className=""
-  )
-
-   </section>
+        <div
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}>
+    
+          <Link to={`/TVseries/${singleTvID}`}>
+          <img src={`https://image.tmdb.org/t/p/w300${singleTv.poster_path}`} alt="TVseries" />
+          <div className={isHover ? 'description' : 'hidden-description'}>
+        </Link>
+        <p>First aired{singleTv.first_air_date}</p>
+          </div>
+    </div> 
+    };
