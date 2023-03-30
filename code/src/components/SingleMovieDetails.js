@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-closing-tag-location */
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
+import { API_KEY } from '../utils/urls';
 import BackButton from './BackButton'
 
 const SingleMovie = () => {
@@ -9,7 +10,7 @@ const SingleMovie = () => {
   const [productionClicked, setProductionClicked] = useState(false)
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${movieID}?api_key=b3a14eb323759b106d94ec4c766dcb5e&language=en-US`)
+    fetch(`https://api.themoviedb.org/3/movie/${movieID}?api_key=${API_KEY}&language=en-US`)
       .then((res) => res.json())
       .then((data) => setSingleMovie(data))
   }, [movieID])
@@ -38,7 +39,9 @@ const SingleMovie = () => {
                 return (
                   <div className={productionClicked ? 'company-img-container' : 'nodisplay'} key={company.id}>
                     {company.logo_path !== null
-                      && <img className="company-img" src={`https://image.tmdb.org/t/p/w780${company.logo_path}`} alt={`${company.name}_image`} />}
+                      && <Link
+                        key={company.id}
+                        to={`/company/${company.id}`}><img className="company-img" src={`https://image.tmdb.org/t/p/w780${company.logo_path}`} alt={`${company.name}_image`} /> </Link>}
                   </div>
                 )
               })}

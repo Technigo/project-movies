@@ -6,6 +6,7 @@ import MovieList from 'components/MovieList';
 import SingleMovieDetails from 'components/SingleMovieDetails';
 import NotFound from 'components/NotFound';
 import Loading from 'components/Loading';
+import Companies from 'components/Companies';
 import { API_KEY } from 'utils/urls';
 
 export const App = () => {
@@ -73,6 +74,7 @@ export const App = () => {
               setSelectedGenre={setSelectedGenre}
               selectedGenre={selectedGenre} />} />
           <Route path="/movie/:movieID" element={<SingleMovieDetails />} />
+          <Route path="/company/:companyID" element={<Companies />} />
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>
