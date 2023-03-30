@@ -52,6 +52,7 @@ h2, h3, p {
   left: 20px;
   color: white;
   font-size: 18px;
+  font-weight: 700;
   text-decoration: none;
   z-index: 2;
 }
@@ -72,6 +73,10 @@ h2, h3, p {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding: 2px 3px 2px 8px;
+  background-color:rgba(40,39,39,.7);
+  border-radius: 4px;
+  margin-top: 5px;
 }
 
 .title-rating-container {
@@ -90,15 +95,37 @@ h2, h3, p {
   color: #fff;
 }
 
+/* ---- TABLET ----- */
+@media only screen and (min-width: 744px) {
+  .title-rating-text {
+  max-width: 400px;
+  }
+}
+
 /* ---- DESKTOP ----- */
 @media only screen and (min-width: 1280px) {
+.goBackBtn {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+
+.backdrop {
+ top: 0;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+ position: fixed;
+ height: 100%;
+ width: 100%; /* updated */
+ z-index: -1;
+}
+
 .title-rating-text
 {
  bottom: 50px;
  display: flex;
  flex-direction: column;
- margin-left: 370px;
- padding-right: 50px;
+ margin-left: 400px;
  position: fixed;
  max-width: 400px;
 }
@@ -108,10 +135,8 @@ h2, h3, p {
   height: auto;
   position: fixed;
   bottom: 50px;
+  margin-left: 30px;
+  margin-right: 20px;
 }
 
-/* .title-details, .rating, .movie-description {
-    display: flex;
-    flex-direction: row;
-} */
 }
