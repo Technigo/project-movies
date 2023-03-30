@@ -20,7 +20,7 @@ export const Movies = () => {
             <img className="image" src={`https://image.tmdb.org/t/p/w342/${singleMovie.poster_path}`} alt={singleMovie.original_title} />
             <div className="text-container">
               <h2 className="name">{singleMovie.original_title}</h2>
-              <p className="date">{singleMovie.release_date}</p>
+              <p className="date">Release date {singleMovie.release_date}</p>
             </div>
           </Link>
         );

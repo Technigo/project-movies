@@ -1,7 +1,3 @@
-*{
-  overflow-x: hidden;
-}
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -71,19 +67,47 @@ code {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 10px;
+    background-colosr:rgba(19, 1, 30, 0.8);
+    color: white;
+    
   }
 
 
 .poster{
   border: solid white 2px;
 }
-button {
+.backButton {
   position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  border-style: none;
+  background-image: url('https://fontawesome.com/icons/clapperboard?f=classic&s=solid&sz=sm');
+  background-size: contain;
+  background-position: center center;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  
 }
+
+.icons{
+  display: inline-flex;
+  color: #fff;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
+  left: 50px;
+  top: 50px;
+  background-color: #fff;
+}
+
+/*Not found page*/
+
+.movie-dog{
+  width: 100%;
+}
+
 
 /*tablet movies*/
 @media (min-width: 760px) {
@@ -93,26 +117,96 @@ button {
   }
 }
 /*desktop movies*/
+
 @media (min-width: 1100px) {
- .movie-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;}
-}
-
-/*details*/
-.movie-info{
-    display: flex;
-    flex-direction: row;
+  .movie-container{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;}
+ 
+ 
+ /*details*/
+ .movie-info{
+   display: flex;
+   flex-direction: row;
+   align-items: flex-end;
    position: absolute;
- top: 50%;
-     left: 0;
-     max-width: 100%;
-   
-   }
+   bottom: 0;
+   left: 0;
+   max-width: 60%;
+   padding: 50px;
+    }
+ 
+    .image {
+     width: 100%;
+    }
+ 
+    .poster {
+     width: 100%;
+   margin-bottom: 0;
+   border: 4px solid white;
+    }
+ 
+    .text-container h2 {
+     font-size: 2rem;
+    }
+ 
+    .text-container p {
+     font-size: 20px;
+    }
+ 
+    .title {
+     margin-left: 10px;
+     font-size: 26px;
+    }
+ 
+    .rating {
+     margin-left: 10px;
+    }
+ 
+    .header p {
+     margin-left: 10px;
+     font-size: 22px;
+    }
 
-.background-img {
-  min-height: 100vh;
-  min-width: 100%;
-background-size: cover;
-object-fit: cover;
-}
+    .header{
+      margin: 10px, 0, 10px;
+    }
+ 
+    .image:hover{
+     opacity: 0.3;
+   }
+   .movie-list{
+     position: relative;
+   }
+   
+   .text-container{
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     color: white;
+     text-decoration: none;
+     visibility: hidden;
+     font-size: 15px;
+     margin-left: 15px;
+   }
+ 
+   .rating {
+   margin-left: 5px;
+     padding-right: 5px;
+   }
+   
+   .movie-list:hover .text-container{
+     visibility: visible;
+   }
+ 
+ .background-img {
+   position: relative;
+   height: 100vh;
+   width: 100%;
+   background-image: url("https://image.tmdb.org/t/p/w1280/${singleMovie.backdrop_path}");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+ 
+ }}
