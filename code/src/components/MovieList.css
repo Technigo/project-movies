@@ -1,0 +1,62 @@
+.listContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-element {
+    position: relative;
+}
+
+.list-element img {
+    width: 100%;
+}
+
+@media (min-width: 370px) {
+    .list-element {
+      width: 50%;
+    }
+  }
+
+@media (min-width: 570px) {
+    .list-element {
+      width: 33.33%;
+    }
+  }
+  
+  @media (min-width: 820px) {
+    .list-element {
+      width: 25%;
+    }
+  }
+  
+
+.details {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: white;
+    text-decoration: none;
+    background-color: #0000006b;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 38px;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 18px;
+}
+
+.list-element:hover .details {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+

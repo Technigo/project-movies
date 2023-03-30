@@ -6,12 +6,13 @@ const MovieList = ({ movies }) => {
   return (
     <section className="listContainer">
       {movies.map((movie) => {
+        const posterPath = `https://image.tmdb.org/t/p/w342/${movie.poster_path}`
         return (
           <Link
             key={movie.id}
             to={`/details/${movie.id}`}
             className="list-element">
-            {movie.original_title}
+            <img src={posterPath} alt={movie.id} />
             <div className="details">
               <h1>{movie.title}</h1>
               <p>Released {movie.release_date}</p>
