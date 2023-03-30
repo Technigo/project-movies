@@ -168,6 +168,7 @@ to {
 
 .loading-movies p {
   font-size: 50px;
+  text-align: center;
 }
 
 @media (min-width: 668px) and (max-width: 1024px){
