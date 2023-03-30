@@ -11,11 +11,46 @@ code {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* MAIN PAGE */
+
 .movie-list {
   background: #000;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.movie-item {
+  position: relative;
+}
+
+.movie-item-info {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 10px;
+  color: white;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.movie-item-info h2 {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
+.movie-item-info span {
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+.movie-item:hover .movie-item-info {
+  visibility: visible;
 }
 
 /* DETAILS PAGE */

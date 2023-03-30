@@ -17,11 +17,17 @@ export const List = () => {
     <div className="movie-list">
       {movieList.map((movie) => {
         return (
-          <NavLink key={movie.id} to={`/details/${movie.id}`} className="movie-item">
+          <NavLink className="movie-item" key={movie.id} to={`/details/${movie.id}`}>
             <img
               key={movie.id}
               src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
               alt={movie.title} />
+
+            <div className="movie-item-info">
+              <h2>{movie.title}</h2>
+              <p>⭐️ {Math.round(movie.vote_average * 10) / 10} on IMDB</p>
+              <span className="released">Release date: {movie.release_date}</span>
+            </div>
           </NavLink>
         );
       })}

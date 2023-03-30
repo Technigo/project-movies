@@ -58,7 +58,7 @@ export const Details = () => {
             </p>
           </div>
           <p className="overview">{movie.overview}</p>
-          <span className="released">Released {movie.release_date}</span>
+          <span className="released">Release date: {movie.release_date}</span>
         </div>
       </div>
     </div>
