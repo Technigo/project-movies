@@ -1,26 +1,51 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { TVSHOW_URL, CONFIG_URL } from 'utils/Urls';
 
-export const tvSeries = ({ tvDetails }) => {
-  const [isHover, setIsHover] = useState(false)
+export const TVseries = () => {
+  const [tvShow, setTvShow] = useState([]);
+  const [imgConfig, setConfig] = useState({});
 
-  const handleMouseEnter = () => {
-    setIsHover(true);
-  };
-  const handleMouseLeave = () => {
-    setIsHover(false);
-  };
+  useEffect(() => {
+    fetch(CONFIG_URL)
+      .then((res) => res.json())
+      .then((json) => {
+        console.log('Fetched config:');
+        console.log(json);
+        setConfig(json.images);
+      })
+      .catch((error) => alert(error, 'Error fetching config'))
+      .then(() => {
+        fetch(TVSHOW_URL)
+          .then((res) => res.json())
+          .then((json) => {
+            console.log(json);
+            setTvShow(json.results);
+          })
+          .catch((error) => alert(error, 'Error fetching shows'))
+      });
+  }, []);
 
-  return (
-    <div
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}>
+  const shows = tvShow.map((show) => {
+    let posterImage = null
 
-      <Link to={`/tv/popular/${tvDetails}`}>
-        <div className={isHover ? 'description' : 'hidden-description'}>
-          <h1>{tvSeries.name}</h1>
-        </div>
-      </Link>
-    </div>
-  )
+    if (show.poster_path != null) {
+      posterImage = (<img alt={`Poster for: ${show.name}`} src={`${imgConfig.secure_base_url}w500${show.poster_path}`} />);
+    } else {
+      posterImage = (<div>[No image]</div>);
+    }
+
+    return (
+    // This should probably be a component
+      <div
+        className="movie-card"
+        key={show.id}
+        poster={show.poster_path}>
+        {show.name}
+        {/* Another component */}
+        {posterImage}
+      </div>
+    );
+  });
+
+  return (<div>{shows}</div>);
 }
