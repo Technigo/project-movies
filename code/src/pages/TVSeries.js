@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Loader from 'components/Loader';
 
 const TVSeries = () => {
   const [tvSeries, setTvSeries] = useState([]);
@@ -15,7 +16,10 @@ const TVSeries = () => {
   }, [])
   if (loading) {
     return (
-      <p>Loading Tv Series...</p>
+      <div>
+        <Loader />
+        <p>Loading Tv Series...</p>
+      </div>
     );
   }
   return (
@@ -24,10 +28,10 @@ const TVSeries = () => {
       <div className="movie-grid-container">
         {tvSeries.map((show) => {
           return (
-            <article className="movie-article">
+            <article className="movie-article" key={show.id}>
               <Link
                 key={show.id}
-                to={`/movies/${show.id}`}>
+                to={`/tv/${show.id}`}>
                 <img src={`https://image.tmdb.org/t/p/w1280${show.poster_path}`} alt={show.title} />
                 <div className="movie-details">
                   <h1>{show.name}</h1>

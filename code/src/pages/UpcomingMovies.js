@@ -26,7 +26,7 @@ const UpcomingMovies = () => {
       <div className="movie-grid-container">
         {upcomingMovies.map((movie) => {
           return (
-            <article className="movie-article">
+            <article className="movie-article" key={movie.id}>
               <Link
                 key={movie.id}
                 to={`/movies/${movie.id}`}>

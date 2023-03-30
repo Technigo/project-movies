@@ -14,7 +14,7 @@ const TVSeriesDetails = () => {
     setLoading(true);
     fetch(`https://api.themoviedb.org/3/tv/${tvSeriesId}?api_key=52f9f6dc03440f8be0c16de930243dfe&language=en-US`)
       .then((res) => res.json())
-      .then((data) => { setTvDetails(data) })
+      .then((data) => setTvDetails(data))
       .catch((e) => console.error(e))
       .finally(() => setLoading(false))
   }, [tvSeriesId])
