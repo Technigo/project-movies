@@ -7,19 +7,20 @@ export const MovieList = ({ movies }) => {
     <section className="movie-list">
       {movies.map((movie) => {
         return (
-          <Link
-            className="list-item-wrapper"
-            key={movie.id}
-            to={`./MovieDetails/${movie.id}`}>
-            <img
-              className="list-item-poster"
-              src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`}
-              alt={movie.titel} />
-            <div className="list-item-info">
-              <h2>{movie.titel}</h2>
-              <h3>Released {movie.release_date}</h3>
-            </div>
-          </Link>
+          <article className="list-item-wrapper">
+            <Link
+              key={movie.id}
+              to={`./MovieDetails/${movie.id}`}>
+              <img
+                className="list-item-poster"
+                src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+                alt={movie.title} />
+              <div className="list-item-info">
+                <h2>{movie.title}</h2>
+                <h3>Released {movie.release_date}</h3>
+              </div>
+            </Link>
+          </article>
         )
       })}
     </section>

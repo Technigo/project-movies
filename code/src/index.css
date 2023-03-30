@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  margin: 0;  
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +10,161 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.page-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for MovieList */
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%
+}
+
+.list-item-wrapper {
+  position: relative;
+  background-color: black;
+  transition: 0.3s;
+  flex-grow: 1;
+}
+
+.list-item-poster {
+ width: 100%;
+}
+
+.list-item-info {
+  display: none;
+  position: absolute;
+  color: white;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  width: 100%;
+  transition: 0.3s;
+  padding: 1rem;
+}
+
+.list-item-wrapper:hover img {
+  filter: opacity(30%);
+  transition: 0.3s;
+}
+
+.list-item-wrapper:hover .list-item-info{
+  display: block;
+  transition: 0.3s;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.popcorn-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.popcorn-icon {
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  animation: rotation 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* Styling for MovieDetails */
+
+.details-section-wrapper {
+  position: relative;
+}
+
+.background-image {
+height: 100vh;
+position: relative;
+}
+
+.back-button {
+  width: fit-content;
+  background: none;
+  border: none;
+  height: 70px;
+}
+
+.back-button-image{
+  height: 50px;
+  margin-left: 3rem;
+  margin-top: 1rem;
+  transition: 0.3s;
+}
+
+.back-button-image:hover {
+  height: 70px;
+  transition: 0.3s;
+}
+
+.details-wrapper {
+  border: red dotted 1px;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  width: 100%;
+  height: 100vh;
+  transition: 0.3s;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie-details {
+  display: flex;
+  margin: auto auto 3rem 3rem; 
+}
+
+.movie-details-poster {
+  border: red dotted 2px;
+}
+
+.movie-details-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 1.5rem;
+}
+
+/* We used rgba to set transparency on the color */
+.movie-details-box {
+  background-color: rgba(0, 0, 0, .80);
+  padding: 0.8rem;
+}
+
+.movie-title {
+  margin-bottom: 1rem;
+}
+
+.rating {
+  margin-bottom: 1rem;
+}
+
+.movie-details-summary {
+  width: 400px;
 }

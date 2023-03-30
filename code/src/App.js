@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { MovieDetails } from 'components/MovieDetail';
 import { NotFound } from 'components/NotFound';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
-import { Header } from './components/Header'
 import { MovieList } from './components/MovieList'
+import Popcorn from './components/image/popcorn.png'
 
 export const App = (movie) => {
   const [movieList, setMovieList] = useState([])
@@ -21,18 +21,19 @@ export const App = (movie) => {
         console.error(e)
       })
       .finally(() => {
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 2600);
       })
   }, [])
 
   if (loading) {
-    return (<p>Loading...</p>)
+    return (<div className="popcorn-icon-wrapper"><img className="popcorn-icon" src={Popcorn} alt="Loading..." /></div>)
   }
 
   return (
     <div className="page-wrapper">
       <BrowserRouter>
-        <Header />
         <Routes>
           <Route path="/" element={<MovieList movies={movieList} />} />
           <Route path="/movieDetails/:movieId" element={<MovieDetails movie={movie} />} />
