@@ -1,0 +1,29 @@
+.not-found {
+  background: lightcoral; 
+  display: flex; 
+  color: black; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#not-found-text {
+  font-size: 60px; 
+  width: 700px; 
+}
+
+.ghost {
+  color: white; 
+}
+
+.start-button {
+  color: black; 
+  background: white; 
+  filter: opacity(70%); 
+  border-radius: 30px; 
+  padding: 10px; 
+}
+
+.start-button:hover {
+  filter: opacity(100%); 
+}
