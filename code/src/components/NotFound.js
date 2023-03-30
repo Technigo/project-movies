@@ -10,6 +10,7 @@ const NotFound = () => {
     <>
       <div className="not-found">
         <h4 id="not-found-text"> Whoopsie daisies! No movie for yousies!</h4>
+        <img className="ghost" src="./assets/ghost.png" alt="sad ghost" />
       </div>
       <button type="button" onClick={onStartClick}>⬅ Back to movies </button>
     </>
