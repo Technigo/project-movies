@@ -1,0 +1,91 @@
+
+.MovieDetailsRender {
+    background-repeat: no-repeat; /*  Do not repeat the image */
+    background-position: center;  /* Center the image */
+    background-size: cover; /*  Resize the background image to cover the entire container */
+    min-height: 100vh;
+}
+
+.movieAndInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+
+.MovieSummary {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    }
+
+.movieImage img {
+    border: 5px solid #fff;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    margin-bottom: 30px;
+}
+
+.MovieTextBlock {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    margin-left: 2%;
+    margin-bottom: 5%;
+}
+.movieInfo {
+    display: flex;
+    flex-direction: row;
+}
+
+h1, p {
+    color: white;
+    text-shadow: 1px 1px #4d4d4d
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5em;
+    
+}
+
+span {
+    background-color: white;
+}
+
+
+
+.backButton {
+    background-color: transparent; 
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    border: 5px white;
+    margin: 10px;
+    padding: 8px 15px;
+    opacity: 0.7;
+  }
+  
+  .backButton:hover{
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+/* TABLET & DESKTOP (min-width: 600px) */
+
+@media (min-width: 600px)
+{
+ .movieAndInfo {
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+    }
+
+ .MovieSummary {
+    margin-right: 50%;
+    }
+}
