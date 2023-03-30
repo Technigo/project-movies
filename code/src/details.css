@@ -18,6 +18,9 @@ h2, h3, p {
   font-size: 20px;
   align-self: center;
   margin-left: 10px;
+  background: #fff;
+  color:#000;
+  padding: 0 5px;
 }
 
 /* Background image */
@@ -71,6 +74,10 @@ h2, h3, p {
   gap: 5px;
 }
 
+.title-rating-container {
+    margin-bottom: 0;
+}
+
 .title-details-margin {
   margin: 16px 0 0 0;
 }
@@ -83,13 +90,13 @@ h2, h3, p {
 @media only screen and (min-width: 1280px) {
 .title-rating-text
 {
- bottom: 20px;
+ bottom: 30px;
  display: flex;
  flex-direction: column;
  margin-left: 370px;
  padding-right: 50px;
  position: fixed;
-  max-width: 400px;
+max-width: 400px;
 }
 
 .poster {

@@ -9,25 +9,29 @@ import '../details.css';
 
 // Define the Details component
 const Details = () => {
-  // Get the movieId parameter from the URL using the useParams hook
-  const { movieId } = useParams();
+  // Get the id parameter from the URL using the useParams hook
+  const { id } = useParams();
   // Define state for the movie details, initialized as an empty object
   const [movie, setMovie] = useState({});
-  const API_URL_MOVIE_DETAILS = `https://api.themoviedb.org/3/movie/${movieId}api_key=39168ef639d8a2d49b6d7a9893ad1b8c&language=en-US`;
-
   // Define state for the movie details, initialized as an empty object
+  // useEffect(() => {
+  //   const fetchMovie = async () => {
+  //     try {
+  //       const res = await fetch(API_URL_MOVIE_DETAILS);
+  //       const data = await res.json();
+  //       setMovie(data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   fetchMovie();
+  // }, [API_URL_MOVIE_DETAILS]);
+
   useEffect(() => {
-    const fetchMovie = async () => {
-      try {
-        const res = await fetch(API_URL_MOVIE_DETAILS);
-        const data = await res.json();
-        setMovie(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchMovie();
-  }, [API_URL_MOVIE_DETAILS]);
+    fetch(`https://api.themoviedb.org/3/movie/${id}api_key=39168ef639d8a2d49b6d7a9893ad1b8c&language=en-US`)
+      .then((data) => data.json())
+      .then((configuredData) => setMovie(configuredData))
+  }, [id]);
 
   return (
     <div className="backdrop-overlay">
@@ -50,8 +54,10 @@ const Details = () => {
             <img className="poster" src="https://via.placeholder.com/352x465" alt="Poster placeholder" />
           )}
           <div className="title-rating-text">
-            <h2 className="title-details title-details-margin">{movie.title}Movie title</h2>
-            <h2 className="rating">{Math.round(movie.vote_average * 10) / 10} Rating goes here</h2>
+            <h2 className="title-rating-container">
+              <span className="title-details title-details-margin">{movie.title}Movie title</span>
+              <span className="rating">{Math.round(movie.vote_average * 10) / 10}⭐6.6</span>
+            </h2>
             <p className="movie-description">{movie.overview}Description Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Illum, assumenda soluta nisi accusantium a quo eligendi ducimus optio!
             Odio velit nulla officiis molestiae ducimus ratione libero tempora cumque illum ullam?</p>
