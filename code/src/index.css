@@ -59,6 +59,13 @@ code {
  padding: 16px;
 }
 .background-img{ 
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://image.tmdb.org/t/p/w1280/${singleMovie.backdrop_path}");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: none;
 }
 
@@ -74,8 +81,6 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color:rgba(19, 1, 30, 0.8);
-    color: white;
     
   }
 
@@ -96,33 +101,69 @@ h2{
   
 }
 
-
 /*Not found page*/
 
 .movie-dog{
   width: 100%;
 }
 
-
-/*tablet movies*/
+/*gi movies*/
 @media (min-width: 668px) and (max-width: 1024px){
   .movie-container{
     grid-template-columns: 1fr 1fr;
-
   }
-.background-img{ 
-  display: block;
-}
+  
+  /*details*/
+  .backButton{
+    top: 0%;
+  }
 
-.movie-info{
+ .movie-info{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: 0;
-  max-width: 100%
-}
+ 
+   }
 
+   .poster {
+     margin-bottom: 0;
+     border: 4px solid white;
+     width: 100%;
+   }
+   .title {
+    font-size: 22px;
+   }
+   .movie-text p {
+    font-size: 20px;
+   }
+  
+  .movie-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color:rgba(19, 1, 30, 0.8);
+    color: white;
+    margin-left: 10px;
+    padding-left: 9px;
+ 
+  }
+  
+  .rating {
+  margin-left: 5px;
+    padding-right: 5px;
+  }
 
-}
+.background-img {
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://image.tmdb.org/t/p/w1280/${singleMovie.backdrop_path}");
+  object-fit: cover;
+  display: block;
+}}
+
 
 
 /*desktop movies*/
@@ -131,9 +172,47 @@ h2{
   .movie-container{
    display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr;}
- 
+
+   .text-container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    text-decoration: none;
+    visibility: hidden;
+    font-size: 15px;
+    margin-left: 15px;
+  }
+   .text-container h2 {
+    font-size: 2rem;
+   }
+
+   .text-container p {
+    font-size: 20px;
+   }
+
+   .movie-text{
+    margin: 10px, 0, 10px;
+  }
+  .image {
+    width: 100%;
+   }
+  .image:hover{
+   opacity: 0.3;
+ }
+ .movie-list{
+  position: relative;
+}
+.movie-list:hover .text-container{
+  visibility: visible;
+}
  
  /*details*/
+ .backButton{
+  top: 0%;
+}
+
  .movie-info{
    display: flex;
    flex-direction: row;
@@ -154,14 +233,6 @@ h2{
       border: 4px solid white;
     }
  
-    .text-container h2 {
-     font-size: 2rem;
-    }
- 
-    .text-container p {
-     font-size: 20px;
-    }
- 
     .title {
      margin-left: 10px;
      font-size: 26px;
@@ -180,34 +251,19 @@ h2{
       margin: 10px, 0, 10px;
     }
  
-    .image:hover{
-     opacity: 0.3;
-   }
-   .movie-list{
-     position: relative;
-   }
-   
-   .text-container{
-     position: absolute;
-     bottom: 0;
-     left: 0;
-     right: 0;
-     color: white;
-     text-decoration: none;
-     visibility: hidden;
-     font-size: 15px;
-     margin-left: 15px;
-   }
- 
    .rating {
    margin-left: 5px;
      padding-right: 5px;
    }
    
-   .movie-list:hover .text-container{
-     visibility: visible;
-   }
- 
+   .movie-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color:rgba(19, 1, 30, 0.8);
+    color: white;
+    
+  }
  .background-img {
    position: relative;
    height: 100vh;
