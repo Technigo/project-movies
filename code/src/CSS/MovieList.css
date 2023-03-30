@@ -28,7 +28,13 @@ body {
     padding-left: 1em;
     color: white; 
     z-index:10;
-    display:none;
+    display:block;
+ }
+
+  .release-date {
+    margin-bottom: 30px; 
+    font-size: 18px; 
+    font-weight: 300; 
  }
 
 .movie-container:hover .cover-title {
@@ -51,7 +57,6 @@ body {
         width:50%; 
     }    
 }
-
 
 @media (max-width: 667px) {
     .movie-wrapper a {

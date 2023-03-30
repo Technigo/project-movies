@@ -37,8 +37,8 @@ const MovieList = () => {
           <div className="movie-container">
             <img className="cover-image" src={`https://image.tmdb.org/t/p/w342${results.poster_path}`} alt="poster" />
             <div className="cover-title">
-              <h1>{results.original_title}</h1>
-              <h3>Released {results.release_date}</h3>
+              <h1 className="movie-title">{results.original_title}</h1>
+              <h3 className="release-date">Released {results.release_date}</h3>
             </div>
           </div>
         </Link>
