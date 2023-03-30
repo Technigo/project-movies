@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export const Header = () => {
   return (
     <header>
 
-      <Link to="/"><img className="movienation" src="./red.png" alt="movie-icon" width="112" height="25" /></Link>
+      <img className="movienation" src="./red.png" alt="movie-icon" width="112" height="25" />
 
       <ul className="navlink-container">
         <li className="navlink">
