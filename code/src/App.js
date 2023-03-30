@@ -4,7 +4,7 @@ import { NotFound } from 'components/NotFound'
 import { MovieList } from 'components/MovieList'
 import { Header } from 'components/Header'
 import { Details } from 'components/Details'
-import { TvSeries } from 'components/TVseries'
+import { TVseriesDetails } from 'components/TVseriesDetail'
 
 export const App = () => {
   return (
@@ -13,7 +13,7 @@ export const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<MovieList />} />
-          <Route path="/tv-series" element={<TvSeries />} />
+          <Route path="/tv-series/:id" element={<TVseriesDetails />} />
           <Route path="/movies/:id" element={<Details />} />
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<Navigate to="/404" />} />
