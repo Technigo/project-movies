@@ -27,22 +27,22 @@ export const MoviesDetails = () => {
       <section className="movie-container">
       {movie && (
         <>
-        <div className="background">
-        <img src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.title} />
-        </div>
+        <img src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.title} className="background"/>
+        <div className="summary">
         <button className="back-button" type='button∑' onClick={(onBackButtonClick)}>Back</button>
-        <p>{movie.title}</p>
-        <span className="tagline">{movie.tagline}
+        <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} className="poster"/>
+        <div className="details">
+        <h1>{movie.title}</h1>
+        <span className="tagline">"{movie.tagline}"
         </span>
-        <div className="poster">
-        <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-        </div>
         <span className="overview">{movie.overview}
         </span>
-        <span className="rating">{Math.round(movie.vote_average * 10) / 10}
+        <span className="rating">⭐️ {Math.round(movie.vote_average * 10) / 10}
         </span>
         <span className="length">{movie.runtime} min
         </span>
+        </div>
+        </div>
         </>
         )}
         </section>

@@ -1,17 +1,12 @@
-* {
-  margin: 0 ;
-  box-sizing: border-box;
-}
+
 .movies-container {
     display: flex;
     flex-wrap: wrap;
-   justify-content: center;
-   object-fit: cover;
-
+    flex-direction: row;
   } 
 
 .movie-poster {
-    width: 50vw;
+    width: 100vw;
     height: auto;
     position: relative;
 } 
@@ -35,4 +30,12 @@ a:hover .movie-text {
   background: rgba(212, 111, 111, 0.75); 
   display: flex;
   margin: 0 auto;
+}
+
+
+@media only screen and (min-width: 600px) {
+  .movie-poster {
+    max-width: 50%;
+    height: auto;
+} 
 }
