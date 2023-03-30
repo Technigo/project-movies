@@ -1,10 +1,14 @@
 import React from 'react';
-// import Spinner from 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import Spinner from 'react-bootstrap/Spinner';
 
 const Loader = () => {
   return (
-    <div className="spinner-border" role="status">
-      <span className="visually-hidden">Loading...</span>
+    <div className="loader-container" style={{ display: 'flex', padding: 20, flexDirection: 'column', alignItems: 'center' }}>
+      <div style={{ display: 'flex', padding: 20 }}>
+        <Spinner animation="border" variant="dark" /> <br />
+      </div>
+      <p style={{ fontSize: 20 }}>Loading...</p>
     </div>
   )
 }

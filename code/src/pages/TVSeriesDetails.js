@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import Loader from 'components/Loader';
 
 const TVSeriesDetails = () => {
   const [tvDetails, setTvDetails] = useState({});
@@ -21,7 +22,7 @@ const TVSeriesDetails = () => {
 
   if (loading) {
     return (
-      <p>Loading...</p>
+      <Loader />
     );
   }
 
@@ -32,7 +33,7 @@ const TVSeriesDetails = () => {
         <div className="movie-background" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${tvDetails.backdrop_path})` }}>
           <div className="movie-summary">
             <img src={`https://image.tmdb.org/t/p/w342${tvDetails.poster_path}`} alt={tvDetails.title} />
-            <div className="movie-details">
+            <div className="movie-details-text">
               <h1><span className="movie-details-title">{tvDetails.title}</span><span> ⭐ </span><span className="rating">{Math.round(tvDetails.vote_average * 10) / 10}</span></h1>
               <p>{tvDetails.overview}</p>
             </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Loader from 'components/Loader';
 
 const UpcomingMovies = () => {
   const [upcomingMovies, setUpcomingMovies] = useState([]);
@@ -16,7 +17,7 @@ const UpcomingMovies = () => {
 
   if (loading) {
     return (
-      <p>Loading Upcoming Movies...</p>
+      <Loader />
     );
   }
 

@@ -14,14 +14,13 @@ const TVSeries = () => {
       .catch((e) => console.error(e))
       .finally(() => setLoading(false))
   }, [])
+
   if (loading) {
     return (
-      <div>
-        <Loader />
-        <p>Loading Tv Series...</p>
-      </div>
+      <Loader />
     );
   }
+
   return (
     <section className="popular-movies-section">
       <h1>Top TV Series</h1>
