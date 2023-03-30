@@ -5,6 +5,8 @@ import { Header } from 'components/Header';
 import { MovieList } from 'components/MovieList';
 import { NotFound } from 'components/NotFound';
 import { GenreList } from 'components/GenreList';
+import { GenreMovieList } from 'components/GenreMovieList'
+import { GenreMovieDetails } from 'components/GenreMovieDetails';
 
 export const App = () => {
   const [list, setList] = useState([])
@@ -36,6 +38,8 @@ export const App = () => {
         <Route path="/" element={<MovieList movies={list} />} />
         <Route path="/details/:movieId" element={<MovieDetails movie={list} />} />
         <Route path="/genre-list" element={<GenreList />} />
+        <Route path="/genre-list/:genreId" element={<GenreMovieList />} />
+        <Route path="/genre-list/:genreId/:genreMovieId" element={<GenreMovieDetails />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
