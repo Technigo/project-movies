@@ -171,6 +171,11 @@ main {
   .movie-card {
     width: 70%;
   }
+
+  .back-button img{
+    content: url(back-button.png);
+    max-width: 20%;
+  }
   
 }
 
