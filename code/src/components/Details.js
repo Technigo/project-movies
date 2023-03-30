@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar, faCircleChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import '../details.css'
 
 const Details = () => {
@@ -20,18 +22,35 @@ const Details = () => {
       })
   }, [movieId])
 
+  // THIS IS WITH THE LINEAR GRADIENT, BEFORE ICONS WERE ADDED
+
+  //   return (
+  //     <div className="detailsWrapper">
+  //       <button type="button" className="backBtn" onClick={onBackButtonClick}>Movies</button>
+  //       <div className="background">
+  //         <div className="backdropImg" style={{ Img: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }} />
+  //         <div className="foreground">
+  //           <img alt="img" className="detailsPosterImg" src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} />
+  //           <div className="movieDetails">
+  //             <h3><span className="title">{details.title}</span>
+  // <span className="rating">{Math.round(details.vote_average * 10) / 10}</span></h3>
+  //             <p className="overview">{details.overview}</p>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   )
+  // }
+
   return (
     <div className="detailsWrapper">
-      <button type="button" className="backBtn" onClick={onBackButtonClick}>Movies</button>
+      <button type="button" className="backBtn" onClick={onBackButtonClick}><FontAwesomeIcon icon={faCircleChevronLeft} />Movies</button>
       <div className="background">
         <img alt="img" className="backdropImg" src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} />
         <div className="foreground">
           <img alt="img" className="detailsPosterImg" src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} />
           <div className="movieDetails">
-            <div className="detailHeadline">
-              <h3>{details.title}</h3>
-              <p className="rating">{details.vote_average}</p>
-            </div>
+            <h3><span className="title">{details.title}</span><span className="rating"><FontAwesomeIcon icon={faStar} />{Math.round(details.vote_average * 10) / 10}</span></h3>
             <p className="overview">{details.overview}</p>
           </div>
         </div>
