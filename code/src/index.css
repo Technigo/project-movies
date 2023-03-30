@@ -258,10 +258,10 @@ h2{
     .poster {
       margin-bottom: 0;
       border: 4px solid white;
-        height: 100%;
-        width: 30%;
-        object-fit: cover;
-        object-position: center;
+      width: 100%;
+    
+      object-fit: cover;  
+      max-width: 365px;  
     }
  
     .title {
