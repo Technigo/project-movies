@@ -6,6 +6,7 @@ import MovieList from 'components/MovieList';
 import SingleMovieDetails from 'components/SingleMovieDetails';
 import NotFound from 'components/NotFound';
 import Loading from 'components/Loading';
+import { API_KEY } from 'utils/urls';
 
 export const App = () => {
   const [movieList, setMovieList] = useState([])
@@ -15,7 +16,7 @@ export const App = () => {
   const [selectedGenre, setSelectedGenre] = useState('')
 
   const fetchGenre = () => {
-    fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=b3a14eb323759b106d94ec4c766dcb5e&language=en-US&page=1')
+    fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`)
       .then((res) => res.json())
       .then((data) => {
         setGenreList(data.genres)
@@ -29,11 +30,12 @@ export const App = () => {
   }
 
   useEffect(() => {
+    console.log(API_KEY);
     fetchGenre()
   }, [])
   const fetchMovies = () => {
     setLoading(true)
-    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=b3a14eb323759b106d94ec4c766dcb5e&with_genres=${selectedGenre}&language=en-US&page=${pageNumber}`)
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${selectedGenre}&language=en-US&page=${pageNumber}`)
       .then((res) => res.json())
       .then((data) => {
         setMovieList(data.results)

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { BiCaretLeft, BiCaretRight } from 'react-icons/bi';
 import Header from 'components/Header';
 import SingleMovie from './SingleMovie';
+// import NotFound from './NotFound';
 
 const MovieList = ({
   movieList,
@@ -34,7 +35,7 @@ const MovieList = ({
               key={movie.id}
               to={`/movie/${movie.id}`}
               className="movie-list-element">
-              <SingleMovie movie={movie} />
+              <SingleMovie movie={movie} id={movie.id} />
             </Link>
           );
         })}
