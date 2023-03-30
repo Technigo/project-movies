@@ -16,6 +16,8 @@ h2, h3, p {
 
 .rating {
   font-size: 20px;
+  align-self: center;
+  margin-left: 10px;
 }
 
 /* Background image */
@@ -46,14 +48,21 @@ h2, h3, p {
   top: 20px;
   left: 20px;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
   text-decoration: none;
   z-index: 2;
 }
 
-.go-back-icon {
+.backBtnName {
+  margin-left: 5px;
+}
+
+.backBtnName:hover {
+  margin-left: 10px;
+}
+
+.goback-icon {
   width: 25px;
-  margin-right: 4px;
 }
 
 .title-rating-text {
@@ -67,6 +76,31 @@ h2, h3, p {
 }
 
 .movie-description {
-    color: #fff;
+  color: #fff;
 }
 
+/* ---- DESKTOP ----- */
+@media only screen and (min-width: 1280px) {
+.title-rating-text
+{
+ bottom: 20px;
+ display: flex;
+ flex-direction: column;
+ margin-left: 370px;
+ padding-right: 50px;
+ position: fixed;
+  max-width: 400px;
+}
+
+.poster {
+  width: 342px;
+  height: auto;
+  position: fixed;
+  bottom: 50px;
+}
+
+/* .title-details, .rating, .movie-description {
+    display: flex;
+    flex-direction: row;
+} */
+}
