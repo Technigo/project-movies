@@ -171,6 +171,7 @@ to {
 .loading-movies p {
   font-size: 30px;
   text-align: center;
+  margin: 15px;
 }
 
 @media (min-width: 668px) and (max-width: 1024px){
@@ -236,6 +237,7 @@ to {
 
 .loading-movies p {
   font-size: 50px;
+  margin: 40px;
 }
 }
 
@@ -354,5 +356,6 @@ to {
 
  .loading-movies p {
   font-size: 50px;
+  margin: 30px;
 }
 }
