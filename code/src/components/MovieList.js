@@ -10,14 +10,14 @@ const MovieList = ({ movieList }) => {
         return (
           <div className="movie-container">
             <Link
-              key={movie.title}
+              key={movie.id} // testar att byta ut link mot id här och kom ihåg att lägga till flera keys
               to={`/details/${movie.id}`}
               className="movie">
               <div className="image-overlay" />
-              <img className="details-img" src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt="poster" />
+              <img className="details-img" src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt="movie-poster" />
               <div className="movie-details">
-                <h1> {movie.title} </h1>
-                <p> {movie.release_date} </p>
+                <h2> {movie.title} </h2>
+                <h3> {movie.release_date} </h3>
               </div>
             </Link>
           </div>
@@ -26,9 +26,7 @@ const MovieList = ({ movieList }) => {
     </section>
   )
 }
-//* <p key={singlePokemon.name}>
-// <Link to={`/details/${singlePokemon.name}`}>Go to {singlePokemon.name} details </Link> */}
-// the key below can probably be switched to the id of the movies instead - when using that api */}
-// </p> */}
+// I switched the movie title on line 19 from a h1 to a h2 and the movie release date
+// on line 20 from a p to a h3 for styling purposes
 
 export default MovieList;

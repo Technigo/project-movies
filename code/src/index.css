@@ -5,9 +5,235 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+h1 {
+  color: white;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  color: white;
+  font-size: 16px;
+}
+
+/* THE FOLLOWING CLASSES ARE FROM MOVIELIST.JS */
+.movies {
+  display: flex; /* this pushed all posters in to just one row */
+  flex-wrap: wrap; /* this then made all posters display in rows of two but with an uneven margin to the left */
+  justify-content: center; /* this centered the two posters on the page */
+  background-size: cover;
+}
+
+.movie-container {
+  position: relative;
+  width: 50%; /* this moved all posters to the left side, no margin */
+}
+
+.movie-details {
+  opacity: 0; /* when this is active the title and date do not display */
+  position: absolute;
+  left: 5%;
+  bottom: 5%; /*text appears on top of image*/
+}
+
+.details-img {
+  width: 100%; /* displays all images (2 per row) over the full page */
+  height: auto;
+}
+
+.image-overlay {
+  height: 100%; /* this put the image under the wrong title? */
+  width: 100%;
+  position: absolute; /* this put the posters back in the correct place with their titles */
+  color: transparent;
+}
+
+/* HOVER */
+
+/* ChatGPT on this way of targeting: The > symbol in CSS is known as the child combinator selector, 
+and it selects only the direct child element of a given parent element. In the case of the CSS code you 
+provided, using the > symbol between .movie and .movie-details ensures that only the direct child 
+element with the .movie-details class is targeted, and not any other descendant elements that may 
+also have the .movie-details class. */
+
+.movie:hover > .movie-details { 
+  opacity: 1; 
+  transition: 0.5s ease;
+}
+
+.movie:hover > .image-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: 0.5s ease;
+}
+
+/* THE FOLLOWING CLASSES ARE FROM MOVIEDETAILS.JS */
+
+.movie-details-container {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover; /* this altered the background to one big image instead of a small one
+  on constant repeat */
+  display: flex; /* this made the poster (smaller image) large and also screwed with the back button */
+  flex-direction: column; /* this made the background cover in full, the small poster disappeared and the
+  back button is now under the header and stretched from side to side */
+  justify-content: flex-end; /*image now takes up full screen and repeats at bottom */
+  position: relative;
+}
+
+.go-back-btn {
+  color: white;
+  border-radius: 20px;
+  border: solid white 2px;
+  padding: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  left: 20px;
+  top: 20px;
+  position: absolute; /* button comes back and places itself on top of the other button */
+}
+
+.go-back-btn:hover {
+  color: black;
+  background-color: white;
+  transform: scale(1.1)
+}
+
+.poster-img {
+  max-width: 50vw; /* smaller poster comes back, placed to the left, overrides header */
+  border: solid white 10px; /* poster gets a border */
+  margin-left: 20px; /* poster goes in a bit from the left */
+  margin-top: 20px;
+  /*max-height: 400px;*/
+}
+
+.movie-info {
+  margin-bottom: 20px; /* buttons go from being on top of eachother to placing in column */
+  align-self: center;
+  justify-self: center;
+  color: white;
+  margin-left: 20px;
+  bottom: 10vh;
+  font-weight: 400;
+}
+
+.title-and-rating {
+  display: flex; /* moves rating to next to title instead of under it */
+}
+
+.rating {
+  align-self: center; /* places the rating on the same level as title instead of slightly above */
+  margin-left: 10px; /* creates some space in between title and rating */
+  background-color: lightblue;
+  border-radius: 5px; /* added some rounded edges */
+  color: black;
+  padding: 5px;
+}
+
+.title {
+  text-shadow: 1px 1px #4d4d4d; /* no difference? */
+}
+
+.overview {
+  font-size: 18px; /* fixes font on movie description */
+  line-height: 25px; /* added just for fun */
+}
+
+@media (min-width: 668px) and (max-width: 1024px) {
+  .movie-container {
+    width: 33%;
+  }
+   .movie-details-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr 1fr; 
+  }
+
+  .go-back-btn {
+    grid-column: 1/2;
+  }
+
+  .poster-img {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-bottom: 20px;
+    justify-self: start;
+    align-self: end;
+    max-width: 25vh;
+  }
+
+  .movie-info {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: end;
+    margin-left: 5px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .movie-container {
+    width: 25%;
+  }
+
+  .movie-details-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    width: 100vw; 
+    height: 100vh;
+    background-size: cover;
+  }
+
+  .go-back-btn {
+    grid-column: 1/2;
+  }
+
+  .poster-img {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    justify-self: start;
+    align-self: end;
+    max-width: 40vw;
+  }
+
+  .movie-info {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-bottom: 20px;
+    align-self: end;
+    justify-self: end;
+    margin-left: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
