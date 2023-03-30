@@ -6,10 +6,13 @@ export const Header = () => {
     <header>
       <nav>
         <p>
-          <NavLink to="/moviedetails/test">GO to MoviesDetails component</NavLink>
+          <NavLink to="/">Home</NavLink>
         </p>
         <p>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/tvseries">TV-serise</NavLink>
+        </p>
+        <p>
+          <NavLink to="/upcoming">Upcoming</NavLink>
         </p>
       </nav>
     </header>

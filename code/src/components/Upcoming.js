@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { MOVIE_LIST_URL } from 'utils/urls';
+import { UP_COMING_URL } from 'utils/urls';
 
-export const MovieList = () => {
-  const [movieList, setMovieList] = useState([]);
+export const Upcoming = () => {
+  const [upcoming, setUpcoming] = useState([]);
 
   useEffect(() => {
-    fetch(MOVIE_LIST_URL)
+    fetch(UP_COMING_URL)
       .then((response) => response.json())
-      .then((data) => setMovieList(data.results))
+      .then((data) => setUpcoming(data.results))
   }, [])
 
   return (
-    <section className="movieListWrapper">
-      <h1 className="popular-movie">Popular right now</h1>
-      <div className="popular-movie-container">
-        {movieList.map((singleMovie) => {
+    <section className="upcomingWrapper">
+      <h1 className="upcoming-soon">Upcoming soon</h1>
+      <div className="upcoming-container">
+        {upcoming.map((singleMovie) => {
           return (
-            <div className="movie-wrapper">
-              <Link key={singleMovie.id} to={`/moviedetails/${singleMovie.id}`}>
+            <div className="upcoming-wrapper">
+              <Link key={singleMovie.id} to={`/tvdetails/${singleMovie.id}`}>
                 <img className="posterImg" src={`https://image.tmdb.org/t/p/w300${singleMovie.poster_path}`} alt={singleMovie.title} />
                 <div className="hoverBox">
                   <h1 className="hoverTitle">{singleMovie.original_title}</h1>
