@@ -22,6 +22,7 @@ code {
   justify-content: center;
   flex-wrap: wrap;
   background: black;
+  padding-top: 70px;
 }
 
 .movie-backdrop {
@@ -78,7 +79,30 @@ z-index: -1;
  min-width: 190px;
  }
 
+.backBtn {
+  display: flex;
+  backdrop-filter: opacity(1);
+  border-style: hidden;
+  width: 50px;
+  height: 50px;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 0;
+  line-height: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.backBtn img {
+  display: block;
+}
+
 @media screen and (min-width: 800px) {
+
+.single-movie-wrapper {
+  padding-top: 80px;
+}
 
 .movie-poster-details {
  max-width: 342px;
