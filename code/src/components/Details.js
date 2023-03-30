@@ -20,10 +20,10 @@ const Details = () => {
   return (
     <div className="test">
       <img className="background-img" src={`https://image.tmdb.org/t/p/w1280/${singleMovie.backdrop_path}`} alt={singleMovie.original_title} />
-      <button type="button" onClick={onGoBackButtonClick}>Back to movies</button>
+      <button className="backButton" type="button" onClick={onGoBackButtonClick}>Back to movies</button>
       <div className="movie-info">
         <img className="poster" src={`https://image.tmdb.org/t/p/w342/${singleMovie.poster_path}`} alt={singleMovie.original_title} />
-        <div className="header">
+        <div className="movie-text">
           <h2><span className="title">{singleMovie.original_title}</span><span className="rating"> ⭐️ {Math.round(singleMovie.vote_average * 10) / 10}</span></h2>
           <p className="info">{singleMovie.overview}</p>
         </div>
