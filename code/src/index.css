@@ -169,7 +169,7 @@ to {
 }
 
 .loading-movies p {
-  font-size: 50px;
+  font-size: 30px;
   text-align: center;
 }
 
@@ -232,7 +232,12 @@ to {
   background-image: url("https://image.tmdb.org/t/p/w1280/${singleMovie.backdrop_path}");
   object-fit: cover;
   display: block;
-}}
+}
+
+.loading-movies p {
+  font-size: 50px;
+}
+}
 
 
 
@@ -345,4 +350,9 @@ to {
    width: 100%;
    display: block;
    object-fit: cover;
- }}
+ }
+
+ .loading-movies p {
+  font-size: 50px;
+}
+}
