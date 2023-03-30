@@ -21,13 +21,13 @@ code {
 
 
 .home-btn {
-  width: 36px;
+  width: 80px;
   cursor: pointer;
 }
 
 .home-btn:hover {
   filter: brightness(50%);
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 .go-back-btn {
@@ -51,6 +51,20 @@ code {
   align-items: flex-end;
   gap: 30px;
   text-shadow: 1px 1px #4d4d4d;
+  animation-name: slicing;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slicing {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .movie-details h2 {
@@ -62,20 +76,33 @@ code {
   max-width: 400px;
 }
 
-.details-img,
-.trailer-holder {
+.trailer {
   border: solid 2px antiquewhite;
 }
+
 
 .star {
   color: goldenrod;
 }
 
 mark {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.886);
   padding: 3px;
   font-size: smaller;
   text-shadow: none;
+  margin-left: 10px;
+}
+
+.error-page {
+  padding: 30px
+}
+
+.error-page h1 {
+  color: red;
+}
+
+.scull {
+  font-size: 50px;
 }
 
 .error-page {
@@ -119,43 +146,104 @@ mark {
   opacity: 0;
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: left;
+  justify-content: flex-end;
   transition: opacity 0.3s ease;
-  padding-top: 100%;
+  padding: 20px;
+  gap: 10px;
+}
+
+.movie-hoverinfo h1, h4 {
+margin:0;
 }
 
 .movies-container:hover .movie-hoverinfo {
   opacity: 1;
 }
 
-
-
-
 h1 {
   color: white;
   font-size: 35px;
-
-
 }
 
 h4 {
   color: white;
   font-size: 16px;
-
 }
 
-.single-movie, .movies-container {
+.single-movie,
+.movies-container {
   z-index: 2;
   opacity: 1;
 }
 
-/*------- popcorn ------*/
-
-.popcorn-loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #1c1c1c;
+@media only screen and (max-width: 600px) {
+.trailer{
+  width: 320px;
+  height:auto;
 }
+.all-info {
+  flex-direction: column-reverse;
+}
+.movie-details h2 {
+  font-size: 22px;
+}
+
+.movies-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  gap: 2px;
+}
+  }
+@media only screen and (max-width: 1024px) and (min-width: 601px){
+  .all-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+.movies-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+}
+}
+
+.popcorn-container {
+  position: relative;
+  width: 200px; /* adjust to desired width */
+  height: 200px; /* adjust to desired height */
+}
+
+.popcorn-slice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%; /* adjust to desired slice width */
+  height: 100%;
+  background-image: url('/public/logos/palomita.png');
+  background-size: cover;
+  animation: slice-and-spin 1s ease-in-out infinite;
+  transform-origin: left center;
+}
+
+@keyframes slice-and-spin {
+  0% {
+    transform: translateY(-100%) rotate(0deg);
+  }
+  50% {
+    transform: translateY(0) rotate(360deg);
+  }
+  100% {
+    transform: translateY(100%) rotate(0deg);
+  }
+}
+
+.popcorn-slice:nth-of-type(1) {
+  left: 0%;
+}
+
+.popcorn-slice:nth-of-type(2) {
+  left: 10%;
+}
+
+
