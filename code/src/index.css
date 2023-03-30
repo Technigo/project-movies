@@ -71,7 +71,7 @@ code {
 
 .poster{
   justify-self: center;
-  width: 70%;
+  width: 100%;
 }
 h2{
   margin: 0;
@@ -102,7 +102,7 @@ h2{
   border: none;
   color: white;
   font-size: 16px;
-  
+  z-index: 1;
 }
 
 /*Not found page*/
