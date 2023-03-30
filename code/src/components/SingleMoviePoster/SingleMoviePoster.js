@@ -1,7 +1,10 @@
 import React from 'react';
 
-export const SingleMoviePoster = () => {
-  // Probably needs to receive some props from the SingleMovie fetching
-
-  return <>I am the SingleMoviePoster component</>;
+export const SingleMoviePoster = ({ posterPath, altPoster }) => {
+  return (
+    <div>
+      <img src={posterPath} alt={altPoster} />
+      <p>Test</p>
+    </div>
+  )
 };
