@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
 }
 
 code {
@@ -19,6 +20,12 @@ code {
 .movie-wrapper {
   display: flex;
   flex-wrap: wrap;
+  background-color: black;
+}
+
+.movie-wrapper a {
+  width: 100%;
+  color: #fff;
 }
 
 .movie-container {
@@ -35,9 +42,13 @@ code {
 .movie-txt {
   position: absolute;
   padding-left: 1em;
-  color: white;
   z-index: 10;
   display: none;
+}
+
+.movie-title {
+    margin-top: auto;
+    margin-bottom: 0;
 }
 
 .release-date {
@@ -55,4 +66,86 @@ code {
   bottom: 0;
   left: 0;
   justify-content: flex-end;
+}
+
+.movie-container:hover {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.details-page .movies-btn {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  left: 50px;
+  top: 50px;
+}
+
+.movies-btn {
+  color: white;
+  background:none;
+  border: none;
+  padding: 5px;
+  gap: 5px;
+  font-size: 20px;
+}
+
+.details-page .movies-btn svg {
+  width: 35px;
+}
+
+.movies-btn:hover{
+  animation: headShake;
+  animation-duration: 2s;
+}
+
+.details-page .backdrop {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.details-page .details-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.details-page img {
+  border: 5px solid #fff;
+  width: 200px;
+}
+
+.detail-page .details-txt {
+  margin-left: 0;
+}
+
+.details-page .details-txt h2 {
+  text-shadow: 1px 1px #4d4d4d;
+  font-size: 25px;
+}
+
+.details-page .details-txt p {
+  max-width: 400px;
+}
+
+@media (min-width: 370px) {
+  .movie-wrapper a {
+    width: 50%;
+  }
+}
+
+@media (min-width: 570px) {
+  .movie-wrapper a {
+    width: 33%;
+  }
+}
+
+@media (min-width: 870px) {
+  .movie-wrapper a {
+    width: 25%;
+  }
 }
