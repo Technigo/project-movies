@@ -1,13 +1,12 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+We created a movie site with multiple pages using React router and two API endpoints. We styled the page to look like the design given.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We began by completing the Example Project separately and then we used the knowledge from that to start the project together. We added all the components and fetched the APIs together while doing a live share on VS Code, and then created separate branches to style the movie list page and the movie details page individually. Fanny finished first so she also created the loading page and styled the header. If we had more time, we would add more pages and fetch more information from another API endpoint. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://movie-releases-by-fanny-and-fiona.netlify.app

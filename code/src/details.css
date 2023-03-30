@@ -88,10 +88,13 @@ h3 {
     margin-left: 5px;
     opacity: 0.9;
 }
-    .overview {
-    color: white;
-   
-   
+
+.starIcon {
+    margin-right: 5px;
+}
+
+.overview {
+    color: white;   
 }
 
 @media (min-width: 577px) {
