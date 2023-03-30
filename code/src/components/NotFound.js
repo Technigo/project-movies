@@ -9,7 +9,7 @@ export const NotFound = () => {
   }
   return (
     <div>
-      <p>Sorry, there is no such page</p>
+      <p>Sorry, this page doesn&apos;t exist</p>
       <button type="button" onClick={onHomeButtonClick}>Return to Home Page</button>
     </div>
   )
