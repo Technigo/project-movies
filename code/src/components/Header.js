@@ -14,14 +14,30 @@ const Header = ({ setList }) => {
   return (
     <header>
       <h1>The Movies</h1>
-      <label htmlFor="category">Change category 👇
-        <select id="category" onChange={(event) => setCategory(event.target.value)} value={category}>
-          <option value="popular">Popular</option>
-          <option value="now_playing">Now Playing</option>
-          <option value="upcoming">Upcoming</option>
-          <option value="top_rated">Top Rated</option>
-        </select>
-      </label>
+      <div className="selectAndBtnWrapper">
+        <label htmlFor="category">Change category 👇
+          <select id="category" onChange={(event) => setCategory(event.target.value)} value={category}>
+            <option value="popular">Popular</option>
+            <option value="now_playing">Now Playing</option>
+            <option value="upcoming">Upcoming</option>
+            <option value="top_rated">Top Rated</option>
+          </select>
+        </label>
+        <div className="contact-us">
+          <button
+            type="button"
+            className="contact"
+            onClick={() => window.open('https://fiona-klacar-portfolio.netlify.app/')}>
+              Contact Fiona
+          </button>
+          <button
+            type="button"
+            className="contact"
+            onClick={() => window.open('https://fannystenberg.netlify.app/')}>
+              Contact Fanny
+          </button>
+        </div>
+      </div>
     </header>
   )
 };
