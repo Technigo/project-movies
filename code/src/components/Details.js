@@ -40,7 +40,7 @@ export const Details = () => {
         <div
           className="backdrop"
           style={{
-            backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`
+            backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})`
           }}>
           <button type="button" onClick={backButton}>Movies</button>
           <div className="details-wrapper">
