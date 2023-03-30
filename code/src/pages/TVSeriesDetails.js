@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import Loader from 'components/Loader';
 
 const TVSeriesDetails = () => {
   const [tvDetails, setTvDetails] = useState({});
@@ -21,7 +22,7 @@ const TVSeriesDetails = () => {
 
   if (loading) {
     return (
-      <p>Loading...</p>
+      <Loader />
     );
   }
 

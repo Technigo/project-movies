@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Loader from 'components/Loader';
 
 const PopularMovies = () => {
   const [movies, setMovies] = useState([]);
@@ -13,11 +14,13 @@ const PopularMovies = () => {
       .catch((e) => console.error(e))
       .finally(() => setLoading(false))
   }, [])
+
   if (loading) {
     return (
-      <p>Loading...</p>
+      <Loader />
     );
   }
+
   return (
     <section className="popular-movies-section">
       <h1>Popular Movies</h1>

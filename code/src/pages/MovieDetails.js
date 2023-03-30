@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import Loader from 'components/Loader';
 
 const MovieDetails = () => {
   const [details, setDetails] = useState({});
+  const [loading, setLoading] = useState(false);
   const { movieId } = useParams();
   const navigate = useNavigate();
 
@@ -12,8 +14,16 @@ const MovieDetails = () => {
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=52f9f6dc03440f8be0c16de930243dfe&language=en-US`)
       .then((res) => res.json())
-      .then((data) => { setDetails(data) })
+      .then((data) => setDetails(data))
+      .catch((e) => console.error(e))
+      .finally(() => setLoading(false))
   }, [movieId])
+
+  if (loading) {
+    return (
+      <Loader />
+    );
+  }
 
   return (
     <article className="movie-details-section">
