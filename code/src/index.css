@@ -59,6 +59,10 @@ p {
   margin-bottom: 15px;
 }
 
+.details h1, p{
+  color: white;
+  background: rgb(0 0 0 / 40%);
+}
 
 .not-found {
   margin-top: 100px;
@@ -68,6 +72,11 @@ p {
   color: #F9F9F9;
   padding: 30px;
 }
+
+.not-found img{
+  content: url(not-found.png);
+}
+
 
 /*DETAIL FOR MOVIES*/
 .background {

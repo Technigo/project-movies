@@ -9,6 +9,7 @@ export const NotFound = () => {
 
   return (
     <div className="not-found">
+      <img id="not-found" src="../not-found.png" alt="not-found" />
       <p>Ooh noo.... Page not found </p>
       <button type="button" onClick={returnToHomePage}>Return here</button>
     </div>
