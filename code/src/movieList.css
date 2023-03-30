@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+/* LOADER BEFORE LIST SHOWS*/
+.loadingWrapper {
+  display: block;
+  margin: 10% auto;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loadingImg {
+  margin: 0 auto;
+  width: 300px;
+}
+
+.loadingText {
+  color: white;
+  font-size: 18px;
+  margin: 20px 0;
+  font-family: 'Nunito';
+}
+
+/* LIST OF MOVIES */
+.mainWrapper {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.mainWrapper a {
+    width: 100%;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+}
+
+.mainWrapper a .listPosterImg {
+    width: 100%;
+    height: 100%;
+  }
+
+.mainWrapper .eachMovie {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    padding: 20px;
+  }
+
+  .mainWrapper .listMovieTitle {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+  
+  .mainWrapper a:hover .eachMovie {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+/* RESPONSIVE DESIGN FOR TABLET */
+@media (min-width: 667px) and (max-width: 1024px) {
+    .mainWrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .loadingText {
+      font-size: 22px;
+    }
+}
+
+/* RESPONSIVE DESIGN FOR DESKTOP */
+@media (min-width: 1024px) {
+    .mainWrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .loadingText {
+      font-size: 22px;
+    }
+}

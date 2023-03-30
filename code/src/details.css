@@ -1,0 +1,175 @@
+.detailsWrapper {
+    position: relative;
+}
+
+.detailsWrapper .backBtn {
+    position: absolute;
+    display: inline-flex;
+    color:#FFF;
+    background-color: transparent;
+    border-style: none;
+    align-items: center;
+    font-weight: bold;
+    text-decoration: none;
+    left: 50px;
+    top: 50px;
+    z-index: 1;
+    font-size: 18px;
+}
+
+.btnWrapper .backBtn {
+    position: absolute;
+    top: 0;
+    margin-top: 5%;
+}
+
+.backBtn {
+    position: absolute;
+}
+
+.backBtnName {
+    margin-left: 5px;
+}
+
+.backBtnName:hover {
+    margin-left: 10px;
+}
+
+.background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    min-height: 100vh;
+    width: auto;
+    z-index: -1;
+}
+
+.foreground {
+    display: flex;
+    flex-direction: column;
+    top: 50px;
+    margin-left: 50px;
+    padding-right: 50px;
+}
+
+.detailsWrapper.movieDetails {
+    margin-left: 0;
+}
+
+.backdropImg {
+    top: 0;
+    position: fixed;
+    height: 100%;
+    width: auto;
+    z-index: -1;
+    filter: brightness(70%);
+
+  }
+
+.detailsPosterImg { 
+    display: flex;
+    border: 5px solid #FFF;
+    width: 200px;
+    margin-top: 20%;
+    z-index: 0;
+}
+
+.movieDetails { 
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+h3 { 
+    color: white;
+    font-size: 22px;
+    margin-top: 0;
+    margin-right: 10px;
+    margin-bottom: 0;
+} 
+
+.rating {
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    background: white;
+    padding: 0 5px;
+    text-align: center;
+    text-shadow: none;
+    margin-top: 0;
+    margin-left: 5px;
+    opacity: 0.9;
+}
+
+.starIcon {
+    margin-right: 5px;
+}
+
+.overview {
+    color: white;   
+}
+
+@media (min-width: 577px) {
+    
+.foreground {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 50px;
+}
+
+.detailsPosterImg {
+    width: 250px;
+    height: auto;
+    position: fixed;
+    bottom: 50px;
+}
+
+.movieDetails {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin-left: 300px;
+    bottom: 20px;
+    padding-right: 50px;
+
+}
+}
+
+@media (min-width: 770px) {
+
+.foreground {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 50px;
+}
+
+.detailsPosterImg {
+     width: 342px;
+     height: auto;
+     position: fixed;
+     bottom: 50px;
+ }
+
+.movieDetails {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin-left: 370px;
+    bottom: 20px;
+    padding-right: 50px;
+
+}
+
+.detailsWrapper .movieDetails h3 {
+    text-shadow: 1px 1px rgb(77, 77, 77);
+  }
+
+.movieDetails {
+    max-width: 400px;
+  }
+}
+
+

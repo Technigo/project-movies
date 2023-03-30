@@ -5,9 +5,87 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+h1 {
+  color: white;
+  margin: 0;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.selectAndBtnWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 6px 8px 6px;
+}
+
+/* SELECT CATEGORY */
+label {
+  color: white;
+  font-size: 12px;
+  font-family: 'Nunito';
+}
+
+select {
+  display: block;
+  margin-top: 3px;
+  padding: 3px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Nunito';
+  color: white;
+  background-color: rgb(107, 106, 106);
+}
+
+select:focus {
+  outline: none;
+}
+
+/* CONTACT BUTTONS */
+.contact-us {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.contact {
+  margin: 2px;
+  padding: 6px 8px;
+  height: fit-content;
+  border-radius: 15px;
+  border: none;
+  background: grey;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Nunito'
+}
+
+.contact:hover {
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0%   {transform: translateY(0);}
+    100% {transform: translateY(-10px);}
+  }
+
+  @media (min-width: 667px) {
+    .contact, label, select {
+      font-size: 14px;
+    }
+
+    .selectAndBtnWrapper {
+      padding: 0 20px 10px 20px;
+    }
+  }
