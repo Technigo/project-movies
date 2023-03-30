@@ -52,15 +52,26 @@ export const MovieInfoPage = () => {
   return (
     <section
       className="details-container"
-      style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${details.backdrop_path})` }}>
-      <div>
-        <button type="button" className="home-button" onClick={returnToHomePage}> Back </button>
-        <p className="details-title">{details.title}</p>
-        <img className="poster-image" src={`https://image.tmdb.org/t/p/w300/${details.poster_path}`} alt="movie poster" />
-        <p className="movie-info">{details.overview}</p>
-        <h1 className="imdb-numbers"><span>{details.vote_average?.toFixed(1)}</span></h1>
-        {/* the .toFixes method gives us the opportunity to decide how many decimals we want.
-        The questionmark checks if the answer from the api is valid to use */}
+      style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgb(0,0,0) 90%), 
+      url(https://image.tmdb.org/t/p/w1280/${details.backdrop_path})` }}>
+      <div className="home-button-div">
+        <button type="button" className="home-button" onClick={returnToHomePage}> <h1>Go Back</h1> </button>
+      </div>
+      <div className="movie-info-container">
+        <div className="poster-image-div">
+          <img className="poster-image" src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt="movie poster" />
+        </div>
+        <div className="movie-detail-div">
+          <div className="title-imdb-div">
+            <h1 className="details-title">{details.title}</h1>
+            <h1 className="imdb-numbers"><span>&#11088; {details.vote_average?.toFixed(1)}</span></h1>
+          </div>
+          <div className="movie-overview-div">
+            <p className="movie-overview">{details.overview}</p>
+            {/* the .toFixes method gives us the opportunity to decide how many decimals we want.
+            The questionmark checks if the answer from the api is valid to use */}
+          </div>
+        </div>
       </div>
     </section>
   );
