@@ -3,6 +3,7 @@
 /* eslint-disable react/jsx-closing-bracket-location */
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+// import backIcon from '..back-icon.png';
 
 export const Details = () => {
   const { movieName } = useParams();
@@ -34,7 +35,7 @@ export const Details = () => {
         alt={movieDetails.title}
       />
       <button className="back-btn" type="button" onClick={() => navigate('/')}>
-        Go Back
+        <img src="/images/white_arrow.png" alt="Go back" />
       </button>
       <div className="small-component">
         <div className="details-row">

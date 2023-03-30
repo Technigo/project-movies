@@ -24,6 +24,15 @@ p {
   margin-bottom: 10px;
   color: #fff;
 }
+.movie-poster {
+  position: relative;
+  filter: brightness(100%);
+  transition: filter 0.2s ease-out;
+}
+.movie-poster:hover {
+  filter: brightness(80%);
+}
+
 .movie-container {
   display: flex;
   flex-wrap: wrap;
@@ -31,6 +40,23 @@ p {
   align-items: center;
   margin: 0 auto;
   max-width: 2000px;
+}
+.movie-card,
+.movie-poster-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.movie-poster:hover .movie-card,
+.movie-poster:hover .movie-poster-card {
+  opacity: 1;
 }
 .movie-container > * {
   flex: 1 1 100px;
@@ -63,18 +89,6 @@ p {
   height: 100%;
   object-fit: cover; /* scale image to fit container */
   z-index: -1; /* img is behind other  elements */
-}
-
-.back-btn {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-.forward-btn {
-  position: absolute;
-  top: 20px;
-  left: 10px;
 }
 .big-component {
   position: relative;
@@ -142,44 +156,11 @@ p {
 }
 
 /* ----------------DETAILS BUTTONS ---------------------------- */
-.back-btn,
-.forward-btn {
-  border: none;
-  border-radius: 50%;
-  background-color: #fff;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  font-weight: bold;
-}
 
 .back-btn {
   position: absolute;
+  padding: 0px;
+  background: transparent;
   top: 20px;
   left: 20px;
-}
-
-.forward-btn {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-}
-
-.arrow-svg {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-
-.arrow-svg path {
-  fill: #000;
-}
-
-.back-btn .arrow-svg path {
-  transform: rotate(180deg);
-}
-
-.forward-btn .arrow-svg {
-  transform: rotate(0deg);
 }
