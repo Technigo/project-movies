@@ -127,11 +127,17 @@ h4 {
 
 }
 
-
-
 .single-movie, .movies-container {
   z-index: 2;
   opacity: 1;
 }
 
+/*------- popcorn ------*/
 
+.popcorn-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1c1c1c;
+}

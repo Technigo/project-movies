@@ -5,13 +5,12 @@ import NotFound from 'components/NotFound';
 import MovieDetails from 'components/MovieDetails';
 // import Header from 'components/Header';
 import { POPULARMOVIE_URL } from 'components/urls.js';
+import PopcornLoader from './components/PopcornLoader';
 
 // put the set loading here
-
 export const App = () => {
   const [movieList, setMovieList] = useState([]);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     fetch(POPULARMOVIE_URL)
       .then((res) => res.json())
@@ -27,8 +26,8 @@ export const App = () => {
 
   if (loading) {
     return (
-      <div className="loader">
-        <p>wait a damn minute</p>
+      <div>
+        <PopcornLoader />
       </div>
     );
   }
