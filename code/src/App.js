@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import NotFound from 'components/NotFound';
 import Details from 'components/Details';
-import Header from 'components/Header';
 import ListMovies from 'components/ListMovies';
 import { LIST_URL } from 'utils/urls.js';
 
@@ -38,7 +37,6 @@ export const App = () => {
     <BrowserRouter>
       <section className="outer-container">
         <div className="inner-container">
-          <Header />
           <Routes>
             {/* path to a single component */}
             <Route path="/" element={<ListMovies listMovies={listMovies} />} />
