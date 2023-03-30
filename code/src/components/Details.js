@@ -30,7 +30,7 @@ const Details = () => {
         <div className="foreground">
           <img alt="img" className="detailsPosterImg" src={`https://image.tmdb.org/t/p/w342${details.poster_path}`} />
           <div className="movieDetails">
-            <h3><span className="title">{details.title}</span><span className="rating">⭐️{Math.round(details.vote_average * 10) / 10}</span></h3>
+            <h3><span className="title">{details.title}</span><span className="rating">⭐️  {Math.round(details.vote_average * 10) / 10}</span></h3>
             <p className="overview">{details.overview}</p>
           </div>
         </div>
