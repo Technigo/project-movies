@@ -1,10 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Header from 'components/Header'
+import Header from 'components/Header';
 import PopularMovies from 'pages/PopularMovies';
 import NotFound from 'pages/NotFound';
 import MovieDetails from 'pages/MovieDetails';
 import UpcomingMovies from 'pages/UpcomingMovies';
+import TVSeries from 'pages/TVSeries';
+import TVSeriesDetails from 'pages/TVSeriesDetails';
 import './index.css';
 import './moviedetails.css';
 
@@ -17,6 +19,8 @@ export const App = () => {
           <Route path="/" element={<PopularMovies />} />
           <Route path="/movies/:movieId" element={<MovieDetails />} />
           <Route path="/upcoming" element={<UpcomingMovies />} />
+          <Route path="/tv" element={<TVSeries />} />
+          <Route path="/tv/:tvSeriesId" element={<TVSeriesDetails />} />
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<Navigate to="/404" />} />
         </Routes>

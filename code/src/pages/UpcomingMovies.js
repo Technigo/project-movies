@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Loader from 'components/Loader';
 
 const UpcomingMovies = () => {
   const [upcomingMovies, setUpcomingMovies] = useState([]);
@@ -9,14 +10,14 @@ const UpcomingMovies = () => {
     setLoading(true)
     fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=52f9f6dc03440f8be0c16de930243dfe&language=en-US&page=1')
       .then((res) => res.json())
-      .then((data) => { setUpcomingMovies(data.results) })
+      .then((data) => setUpcomingMovies(data.results))
       .catch((e) => console.error(e))
       .finally(() => setLoading(false));
   }, [])
 
   if (loading) {
     return (
-      <p>Loading Upcoming Movies...</p>
+      <Loader />
     );
   }
 
@@ -26,7 +27,7 @@ const UpcomingMovies = () => {
       <div className="movie-grid-container">
         {upcomingMovies.map((movie) => {
           return (
-            <article className="movie-article">
+            <article className="movie-article" key={movie.id}>
               <Link
                 key={movie.id}
                 to={`/movies/${movie.id}`}>
