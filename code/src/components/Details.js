@@ -24,7 +24,9 @@ const Details = () => {
 
   return (
     <div className="detailsWrapper">
-      <button type="button" className="backBtn" onClick={onBackButtonClick}><FontAwesomeIcon icon={faCircleChevronLeft} /><span className="backBtnName">Movies</span></button>
+      <div className="btnWrapper">
+        <button type="button" className="backBtn" onClick={onBackButtonClick}><FontAwesomeIcon icon={faCircleChevronLeft} /><span className="backBtnName">Movies</span></button>
+      </div>
       <div className="background">
         <img alt="img" className="backdropImg" src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} />
         <div className="foreground">

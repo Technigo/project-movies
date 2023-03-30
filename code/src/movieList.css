@@ -17,7 +17,7 @@
 
 .loadingText {
   color: white;
-  font-size: 22px;
+  font-size: 18px;
   margin: 20px 0;
   font-family: 'Nunito';
 }
@@ -70,12 +70,17 @@
     .mainWrapper {
         grid-template-columns: repeat(3, 1fr);
     }
-
+    .loadingText {
+      font-size: 22px;
+    }
 }
 
 /* RESPONSIVE DESIGN FOR DESKTOP */
 @media (min-width: 1024px) {
     .mainWrapper {
         grid-template-columns: repeat(4, 1fr);
+    }
+    .loadingText {
+      font-size: 22px;
     }
 }

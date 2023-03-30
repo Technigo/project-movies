@@ -25,13 +25,13 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   margin: 0;
-  padding: 0 20px 10px 20px;
+  padding: 0 6px 8px 6px;
 }
 
 /* SELECT CATEGORY */
 label {
   color: white;
-  font-size: 14px;
+  font-size: 12px;
   font-family: 'Nunito';
 }
 
@@ -40,7 +40,7 @@ select {
   margin-top: 3px;
   padding: 3px;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   font-family: 'Nunito';
   color: white;
@@ -66,7 +66,7 @@ select:focus {
   border: none;
   background: grey;
   color: white;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   font-family: 'Nunito'
 }
@@ -78,4 +78,14 @@ select:focus {
 @keyframes bounce {
     0%   {transform: translateY(0);}
     100% {transform: translateY(-10px);}
+  }
+
+  @media (min-width: 667px) {
+    .contact, label, select {
+      font-size: 14px;
+    }
+
+    .selectAndBtnWrapper {
+      padding: 0 20px 10px 20px;
+    }
   }
