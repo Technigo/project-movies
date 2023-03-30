@@ -182,6 +182,21 @@ also have the .movie-details class. */
   line-height: 25px; /* added just for fun */
 }
 
+p {
+  font-size: 10px;
+  color: white;
+  /* text-align: center; */
+}
+
+a {
+  font-size: 10px;
+  color: white;
+}
+
+.footer-text {
+  text-align: center;
+}
+
 @media (min-width: 668px) and (max-width: 1024px) {
   h1 {
     font-size: 40px;

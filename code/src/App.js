@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MovieList from 'components/MovieList';
 // import NotFound from 'components/NotFound';
 import MovieDetails from 'components/MovieDetails';
+// import Footer from 'components/Footer';
 // import Header from 'components/Header';
 import { BASE_URL } from 'utils/urls';
 

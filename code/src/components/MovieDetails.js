@@ -13,9 +13,9 @@ const MovieDetails = () => {
   const onBackButtonClick = () => {
     navigate(-1)
   }
-  const notFoundButtonClick = () => {
-    navigate('/404')
-  }
+  // const notFoundButtonClick = () => {
+  //   navigate('/404')
+  // }
 
   // when replacing the MOVIE_DETAILS in the fetch with the actual link, it finally worked
   useEffect(() => {
@@ -61,9 +61,9 @@ const MovieDetails = () => {
         {Math.round(details.vote_average * 10) / 10}/10 */}
         </div>
         <p className="overview">{details.overview}</p>
-        <button type="button" onClick={notFoundButtonClick}>
+        {/* <button type="button" onClick={notFoundButtonClick}>
           Go to NotFound
-        </button>
+        </button> */}
         {/* eventually we might delete this button above */}
       </div>
     </section>
