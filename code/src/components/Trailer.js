@@ -26,7 +26,6 @@ export const Trailer = () => {
         className="trailer"
         width="500"
         height="300"
-        title="Movie Trailer"
         src={`https://www.youtube.com/embed/${trailer}`} // Use the trailerKey prop
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
