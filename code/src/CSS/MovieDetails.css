@@ -8,7 +8,6 @@
 } 
 
 .backdrop-img {
-  border: 3px solid blue; 
     width: 100vw;
 }
 
@@ -31,11 +30,15 @@
 }
 
 button {
+  background-color: transparent;
   color: white;
   font-weight: 700;
+  font-size: 1em;
   position: absolute;
   left: 60px;
   top: 60px;
+  border: none;
+  transition: transform 0.4s ease-in-out
 }
 
 .rating {
@@ -48,4 +51,9 @@ button {
 
 p {
     max-width: 400px;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateX(10px);
 }

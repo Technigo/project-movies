@@ -7,11 +7,12 @@ const NotFound = () => {
     navigate('/')
   }
   return (
-    <div>
-      <p> Whoopsie daisies! No movie for yousies!</p>
-      <button type="button" onClick={onStartClick}>Back to movies </button>
-    </div>
-
+    <>
+      <div className="not-found">
+        <h4 id="not-found-text"> Whoopsie daisies! No movie for yousies!</h4>
+      </div>
+      <button type="button" onClick={onStartClick}>⬅ Back to movies </button>
+    </>
   )
 }
 

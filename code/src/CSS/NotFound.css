@@ -1,0 +1,12 @@
+.not-found {
+  display: flex; 
+  color: white; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#not-found-text {
+  font-size: 60px; 
+  width: 700px; 
+}

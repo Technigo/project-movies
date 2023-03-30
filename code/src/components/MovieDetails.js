@@ -33,7 +33,7 @@ const MovieDetails = () => {
           style={{
             backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`
           }}>
-          <button type="button" onClick={backButton}>Back to movies</button>
+          <button type="button" onClick={backButton}>⬅ Back to movies</button>
           <div className="detail-wrapper">
             <div className="poster">
               <img alt={movieDetails} src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`} />

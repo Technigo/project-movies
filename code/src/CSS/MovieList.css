@@ -1,6 +1,6 @@
 
 body {
-    background-color: white;
+    background-color: black;
 }
 
 .movie-wrapper {
@@ -26,7 +26,6 @@ body {
 .cover-title {
     position: absolute; 
     padding-left: 1em;
-    margin-right: 1em;
     color: white; 
     z-index:10;
     display:none;
@@ -47,3 +46,15 @@ body {
     background: rgba(0, 0, 0, 0.6);
 }
 
+@media (min-width:667px) and (max-width: 1025px){
+    .movie-wrapper a {
+        width:50%; 
+    }    
+}
+
+
+@media (max-width: 667px) {
+    .movie-wrapper a {
+        width:100%; 
+    }
+}
