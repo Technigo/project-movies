@@ -19,7 +19,7 @@ export const MovieList = () => {
           return (
             <div className="movie-wrapper">
               <Link key={singleMovie.id} to={`/moviedetails/${singleMovie.id}`}>
-                <img className="img" src={`https://image.tmdb.org/t/p/w300${singleMovie.poster_path}`} alt={singleMovie.title} />
+                <img className="listImg" src={`https://image.tmdb.org/t/p/w300${singleMovie.poster_path}`} alt={singleMovie.title} />
                 <div className="hoverBox">
                   <h1 className="hoverTitle">{singleMovie.original_title}</h1>
                   <p className="hoverDate">Release date: {singleMovie.release_date}</p>

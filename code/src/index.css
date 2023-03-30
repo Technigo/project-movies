@@ -12,8 +12,25 @@ code {
     monospace;
 }
 
+/* mainPage show all the movies, and if you hover the image will 
+   turn darker and the name and realease date will show at the bottom */
 
 .popular-movie-container{
   display: flex;
   flex-direction: column;
+}
+.movie-wrapper{
+  display: flex;
+  position: relative;
+  text-align: center;
+
+}
+.hoverBox{
+  position:absolute;
+  z-index: 1;
+  
+}
+.hoverBox:hover{
+  position:absolute;
+  z-index: 1;
 }

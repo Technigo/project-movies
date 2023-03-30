@@ -15,20 +15,21 @@ export const MovieDetails = () => {
   useEffect(() => {
     fetch(MOVIE_DETAILS_URL(id))
       .then((response) => response.json())
-      .then((data) => setDetails(data.results))
+      .then((data) => setDetails(data))
   }, [id])
   // const onGoToNotFoundButtononClick = () => {
   //   navigate('/404')
   // }
   return (
-    <div className="movieDetailsWrapper">
+    <div
+      className="movieDetailsWrapper"
+      style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%),url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
 
-      <img className="detailsImg" src={details.backdrop_path} alt="poster" />
       <button className="backToListBtn" type="button" onClick={onBackButtonClick}>Go Back</button>
 
       <div className="movie-details-container">
         <div className="movie-poster">
-          <img src={details.poster_path} alt="profile" />
+          <img className="detailImg" src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt="profile" />
         </div>
         <div className="movie-title">
           <h2>{details.title}</h2>
