@@ -15,3 +15,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.movie-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.movie-poster {
+  width: 100%;
+}
+
+.movie-txt {
+  position: absolute;
+  padding-left: 1em;
+  color: white;
+  z-index: 10;
+  display: none;
+}
+
+.release-date {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.movie-container:hover .movie-txt {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.65);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: flex-end;
+}

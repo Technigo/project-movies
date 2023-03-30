@@ -45,7 +45,7 @@ export const MovieList = () => {
               src={`https://image.tmdb.org/t/p/w342/${results.poster_path}`}
             />
             {/* Jag tänker att movie-item kommer synas vid hover och vara ovanpå movie-image  */}
-            <div className="movie-title">
+            <div className="movie-txt">
               <h1 className="movie-title">{results.original_title}</h1>
               <p className="release-date">Released {results.release_date}</p>
             </div>
