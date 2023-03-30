@@ -55,6 +55,11 @@ code {
   opacity: 1;
 }
 
+.movie-article:hover img {
+  filter: brightness(40%);
+}
+
+
 .movie-details {
   position: absolute;
   top: 0;
