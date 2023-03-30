@@ -15,7 +15,7 @@ export const MovieDetails = () => {
       .then((response) => response.json())
       .then((data) => setDetails(data))
     console.log(details)
-  }, [id]);
+  }, [id, details]);
 
   return (
     <div className="MovieDetailsRender" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
