@@ -15,3 +15,15 @@
 .ghost {
   color: white; 
 }
+
+.start-button {
+  color: black; 
+  background: white; 
+  filter: opacity(70%); 
+  border-radius: 30px; 
+  padding: 10px; 
+}
+
+.start-button:hover {
+  filter: opacity(100%); 
+}
