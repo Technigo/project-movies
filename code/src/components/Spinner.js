@@ -1,10 +1,11 @@
 import React from 'react'
 
 const Spinning = () => (
-  <div className="loading-thoughts">
-    <div className="loading-spinner">
+  <div className="loading-movies">
+    <span className="loading-spinner" role="img" aria-label="loading">
     🍿
-    </div>
+    </span>
+    <p>Some great cinematic experiences loading now...</p>
   </div>
 )
 

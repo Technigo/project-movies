@@ -110,7 +110,7 @@ h2{
 .movie-dog{
   height: 100vh;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: top;
   display: block;
 }
@@ -132,6 +132,42 @@ h2{
   width: 30px;
   height: 30px;
   margin-right: 10px;
+}
+
+/*SPINNER*/
+
+.loading-movies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-spinner {
+  animation-name: loadspinner;
+  display: block;
+  width: 80px;
+  height: 80px;
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation-duration: 800ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes loadspinner {
+from {
+    transform: rotate(0deg)
+
+  } 
+to {
+    transform: rotate(360deg)
+  }
+}
+
+.loading-movies p {
+  font-size: 50px;
 }
 
 @media (min-width: 668px) and (max-width: 1024px){

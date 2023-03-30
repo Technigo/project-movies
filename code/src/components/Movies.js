@@ -12,15 +12,15 @@ export const Movies = () => {
       .then((response) => response.json())
       .then((fetchData) => {
         setMovies(fetchData);
+        setTimeout(() => setLoading(false), 1500)
       })
       .catch((error) => console.log(error))
-      .finally(() => setLoading(false));
   }, []);
 
   return (
     <>
       <div className="movie-container">
-        {movies.results.map((singleMovie) => {
+        {!loading && movies.results.map((singleMovie) => {
           return (
             <Link key={singleMovie.id} to={`/details/${singleMovie.id}`} className="movie-list">
               <img className="image" src={`https://image.tmdb.org/t/p/w342/${singleMovie.poster_path}`} alt={singleMovie.original_title} />
