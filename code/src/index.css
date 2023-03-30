@@ -65,13 +65,7 @@ code {
  padding: 16px;
 }
 .background-img{ 
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background-image: url("https://image.tmdb.org/t/p/w1280/${singleMovie.backdrop_path}");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+
   display: none;
 }
 
@@ -84,9 +78,13 @@ h2{
   
 }
 .movie-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color:rgba(19, 1, 30, 0.8);
+  color: white;
+  margin-left: 10px;
+  padding-left: 9px;
     
   }
 
@@ -135,7 +133,7 @@ h2{
   height: 30px;
   margin-right: 10px;
 }
-/*gi movies*/
+
 @media (min-width: 668px) and (max-width: 1024px){
   .movie-container{
     grid-template-columns: 1fr 1fr;
@@ -230,7 +228,6 @@ h2{
     width: 100%;
    }
 
- }
  .movie-list{
   position: relative;
 }
@@ -250,7 +247,6 @@ h2{
    position: absolute;
    bottom: 0;
    left: 0;
-   max-width: 60%;
    padding: 50px;
     }
  
@@ -306,4 +302,4 @@ h2{
    background-position: center;
    display: block;
  
- }
+ }}
