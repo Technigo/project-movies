@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { DETAILS_URL } from '../data/Url';
+import '../css/MoviesDetails.css';
 
 export const MoviesDetails = () => {
   const [ movie, setMovie ] = useState()

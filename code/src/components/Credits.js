@@ -5,31 +5,23 @@ import { useParams } from 'react-router-dom';
 import { CREDITS_URL } from '../data/Url';
 
 export const Credits = () => {
-    const [ credits, setCredits ] = useState()
+    const [ credits, setCredits ] = useState([])
     const { movieId } = useParams()
   
     useEffect(() => {
-      fetch(CREDITS_URL(movieId))
-        .then((res) => res.json())
-        .then((json) => {
-          setCredits(json)
-        })
-    }, [movieId])
-
-    console.log(credits)
+        fetch(CREDITS_URL(movieId))
+          .then((res) => res.json())
+          .then((json) => {
+            console.log(json)
+            setCredits(json.credits)
+          })
+      }, [movieId])
 
     return (
-        <div>
-            <p></p>
-        {credits && (
-            <>
-        {credits.map((credit) => (
-            {credit.map((cast) => 
-                <p>{cast.original_name}</p>)}
-        ))}
-        </>
-        )}
-        </div>
-
+        <div className="cast">
+              {credits[0].map((credit) => (
+            <p key={credit.name}>{credit.name}</p>
+              ))}
+            </div>
     )
 }
