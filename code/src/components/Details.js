@@ -55,7 +55,7 @@ const Details = () => {
           )}
           <div className="title-rating-text">
             <h2 className="title-rating-container">
-              <span className="title-details title-details-margin">{movie.title}Movie title</span>
+              <span className="title-details title-details-margin">{movie.title}Movie Title</span>
               <span className="rating">{Math.round(movie.vote_average * 10) / 10}⭐6.6</span>
             </h2>
             <p className="movie-description">{movie.overview}Description Lorem ipsum dolor sit amet consectetur adipisicing elit.
