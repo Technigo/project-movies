@@ -1,34 +1,38 @@
+* {
+  margin: 0 ;
+  box-sizing: border-box;
+}
 .movies-container {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
-    border: solid green 2px;
-} 
+   justify-content: center;
+   object-fit: cover;
+
+  } 
 
 .movie-poster {
     width: 100%;
-    height: 100%;
-    box-sizing: border-box;
+    height: auto;
     position: relative;
-    border: solid pink 2px;
 } 
 
 .movie-overlay {
-  background: rgba(212, 111, 111, 0.75); 
   transition: 0.5s ease;
   display: flex;
-  border: solid blue 2px;
-  z-index: 1;
   } 
 
-  .movie-text {
+.movie-text {
     position: absolute;
     transition: 0.5s ease;
     padding: 15px;
-    z-index: 1;
-    border: solid red 2px;
+    display: none;
+    box-sizing: border-box;
+    color: white;
+    width: 50%;
   }   
 
-a:hover .movie-poster {
-  background-color: black;
+a:hover .movie-text {
+  background: rgba(212, 111, 111, 0.75); 
+  display: flex;
+  margin: 0 auto;
 }
