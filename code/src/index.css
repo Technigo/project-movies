@@ -1,3 +1,4 @@
+/***** Mobile *****/
 * {
   box-sizing: border-box;
 }
@@ -31,16 +32,18 @@ code {
 }
 
 .movie-grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  display:block;
+  width: 100%;
+  /*display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));*/
 }
 
 
 .movie-article {
+  display: block;
   position: relative;
   width: 100%;
   background-color: black;
-  
   transition: opacity 0.3 ease;
  
 }
@@ -89,3 +92,18 @@ code {
   display: grid;
 }
 
+/***** TABLET *****/
+@media (min-width: 668px) and (max-width: 1024px){
+  .movie-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/***** DESKTOP *****/
+@media (min-width: 1025px) {
+  .movie-grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
