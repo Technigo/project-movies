@@ -16,7 +16,7 @@ const TrendingList = () => {
       {movieList.map((movie) => {
         return (
           <Link key={movie.id} to={`/movies/${movie.id}`}>
-            <h2>{movie.title}</h2>
+            <img src={`http://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt="poster" />
           </Link>
         )
       })}
