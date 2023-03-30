@@ -22,6 +22,7 @@ export const Trailer = () => {
   return (
     <div>
       <iframe
+        className="trailer-holder"
         title={trailer}
         width="500"
         height="300"

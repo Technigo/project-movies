@@ -1,19 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import Header from './Header';
 
 const NotFound = () => {
-  const navigate = useNavigate();
-  const onGoToHomeButtonClick = () => {
-    navigate('/');
-  }
-  const onGoBackButtonClick = () => {
-    navigate(-1);
-  }
   return (
-    <div>
-      <h2> Sorry nothing here :( </h2>
-      <button type="button" onClick={onGoToHomeButtonClick}>Go to Home</button>
-      <button type="button" onClick={onGoBackButtonClick}>Go Back</button>
+    <div className="error-page">
+      <Header />
+      <h1>/404 Error</h1>
+      <h2> Sorry nothing to se here... <span className="scull">☠︎</span> </h2>
     </div>)
 }
 export default NotFound;

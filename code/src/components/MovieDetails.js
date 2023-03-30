@@ -36,26 +36,22 @@ const MovieDetails = () => {
   if (loading) {
     return (
       <div className="loader">
-        <p>wait a damn minute</p>
+        <p>wait a damn minute...</p>
       </div>
     );
   }
 
   return (
-    <section alt={movieDetails.title} className="background-img" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})` }}>
+    <section alt={movieDetails.title} className="background-img" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})` }}>
       <Header />
       <Trailer />
       <container className="all-info">
         <img className="details-img" src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path} `} alt={movieDetails.title} />
         <div className="movie-details">
           <h2>{movieDetails.title} <mark><span className="star">★</span> {Math.round(movieDetails.vote_average * 10) / 10}</mark></h2>
-          <p>Overview: {movieDetails.overview}</p>
-          <p>Released: {movieDetails.release_date}</p>
-          <p>Runtime: {movieDetails.runtime} minutes</p>
+          <p className="movie-overview">{movieDetails.overview}</p>
+          <p className="movie-runtime">{movieDetails.runtime} minutes</p>
         </div>
-        {/* <button type="button" onClick={onGoBackButtonClick}>
-        <img src="/logos/arrow.png" alt="go-back-button" />
-      </button> */}
       </container>
     </section>
   )

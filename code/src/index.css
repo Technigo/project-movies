@@ -27,12 +27,13 @@ code {
 
 .home-btn:hover {
   filter: brightness(50%);
+  transform: scale(1.5);
 }
 
-/* button {
+.go-back-btn {
   border: none;
   background: none;
-} */
+}
 
 .background-img {
   background-color: rgba(0, 0, 0, .6);
@@ -52,13 +53,17 @@ code {
   text-shadow: 1px 1px #4d4d4d;
 }
 
-.movie-details p {
-  max-width: 400px;
+.movie-details h2 {
   font-weight: bolder;
   text-shadow: 1px 1px #4d4d4d;
 }
 
-.details-img {
+.movie-details p {
+  max-width: 400px;
+}
+
+.details-img,
+.trailer-holder {
   border: solid 2px antiquewhite;
 }
 
@@ -73,6 +78,18 @@ mark {
   text-shadow: none;
 }
 
+.error-page {
+  padding: 30px
+}
+
+.error-page h1 {
+  color: red;
+}
+
+.scull {
+  font-size: 50px;
+}
+
 /*------- movie list tittle ------*/
 
 .movies-wrapper {
@@ -80,12 +97,12 @@ mark {
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(200px, auto);
   gap: 2px;
- 
+}
 
+.single-movie {
+  width: 387px;
 }
-.single-movie{
-width: 387px;
-}
+
 .movies-container {
   position: relative;
   width: 100%;
@@ -93,7 +110,8 @@ width: 387px;
 
 .movie-hoverinfo {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.851); /* Translucent black */
+  background-color: rgba(0, 0, 0, 0.851);
+  /* Translucent black */
   width: 100%;
   height: 100%;
   top: 0;
@@ -115,9 +133,9 @@ width: 387px;
 
 
 h1 {
-  color: white; 
+  color: white;
   font-size: 35px;
-  
+
 
 }
 
@@ -129,9 +147,8 @@ h4 {
 
 
 
-.single-movie, .movies-container {
+.single-movie,
+.movies-container {
   z-index: 2;
   opacity: 1;
 }
-
-
