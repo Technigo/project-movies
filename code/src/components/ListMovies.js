@@ -3,22 +3,25 @@ import { Link } from 'react-router-dom';
 
 const ListMovies = ({ listMovies }) => {
   return (
-    <div className="movies-container">
-      {listMovies.map((movie) => {
-        return (
-          <Link className="movie" key={movie.id} to={`/individualmovie/${movie.id}`}>
-            <img
-              className="list-poster"
-              src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-              alt={`${movie.title} poster`} />
-            <div className="poster-text-container">
-              <h1>{movie.title}</h1>
-              <p>Release date: {SVGAnimateMotionElement(movie.release_date).format('D MMM YYYY')}</p>
-            </div>
-          </Link>
-        )
-      })}
-    </div>
+    <>
+      <p>test hej super hej</p>
+      <div className="movies-list">
+        {listMovies.map((movie) => {
+          return (
+            <Link
+              key={movie.id}
+              to={`/details/${movie.id}`}
+              className="list-element">
+              <img className="cover-image" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="poster" />
+              <div className="hover-container">
+                <h1 className="movie-title">{movie.original_title}</h1>
+                <h3 className="release-date">Released {movie.release_date}</h3>
+              </div>
+            </Link>
+          )
+        })}
+      </div>
+    </>
   )
 }
 
