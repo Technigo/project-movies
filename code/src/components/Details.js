@@ -7,7 +7,7 @@ export const Details = () => {
   const { id } = useParams()
 
   const FetchDetails = () => {
-    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=874b455d7037920aea9fd13db8645525&language=en-US`)
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=7f5b30559b3d85aec06d3d1a010f4a39&language=en-US`)
       .then((response) => response.json())
       .then((data) => setMovieDetails(data))
       .catch((error) => {
