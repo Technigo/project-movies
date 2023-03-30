@@ -11,3 +11,132 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:#333333;
+}
+
+.title-top{
+  color:whitesmoke;
+  padding-left: 3rem;
+}
+
+.nav-header{
+  padding-right: 3rem;
+}
+
+select{
+  width:180px;
+  height: 25px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: whitesmoke;
+  font-weight: bold;
+}
+
+.movies-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: black;
+  padding:10px;
+}
+
+.movies{
+  position:relative;
+  display:flex;
+}
+
+.movie-img{
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height:100%;
+}
+
+.text-hover{
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position:absolute;
+  background-color: rgba(21, 19, 19, 0.8);
+}
+
+.movies:hover .text-hover{
+  display: flex;
+  width: 100%;
+  height:100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.title, .rating{
+  color: whitesmoke;
+  text-align: center;
+}
+
+.rating{
+  font-weight: bold;
+}
+
+.Btn-container{
+  padding-left: 3rem;
+  padding-top:1rem;
+  padding-bottom: 1rem;
+}
+
+.backBtn-link{
+  text-decoration: none;
+}
+
+.back{
+  color:whitesmoke;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.back:hover{
+  opacity: 60%;
+  cursor: pointer;
+}
+
+.details-container{
+  background-color: black;
+}
+
+.details-container{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position:relative
+}
+
+.details{
+  position:absolute;
+  margin-top: 5rem;
+  margin-left:3rem;
+  display: flex;
+}
+
+.backdrop{
+  opacity: 50%;
+}
+
+.movie-poster{
+  border: 1px whitesmoke solid;
+  border-radius: 25px;
+  height:300px;
+  object-fit: cover;
+}
+
+.description{
+  margin-left: 2rem;
+  overflow: scroll;
+  padding:3rem;
+}
