@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Header from './Header.js';
+import Header from './Header';
 import '../movieList.css'
 
 const MovieList = () => {
@@ -20,21 +20,13 @@ const MovieList = () => {
           setLoading(false);
         })
     }, 1700)
-  }, [])
+  }, []);
 
-  if (loading) {
-    return (
-      <div className="loadingWrapper">
-        <img alt="loading" className="loadingImg" src="https://media.tenor.com/CLVR-rgpQL8AAAAi/popcorn-joypixels.gif" />
-        <p className="loadingText">Grab your popcorn, movies coming up!</p>
-      </div>
-    )
-  }
   return (
     <>
-      <Header />
+      <Header setList={setList} />
       <div className="mainWrapper">
-        {list.map((movies) => {
+        {!loading && list.map((movies) => {
           return (
             <Link key={movies.id} to={`/details/${movies.id}`}>
               <img alt="img" className="listPosterImg" src={`https://image.tmdb.org/t/p/w342${movies.poster_path}`} />
@@ -46,8 +38,13 @@ const MovieList = () => {
           )
         })}
       </div>
+      {loading && (
+        <div className="loadingWrapper">
+          <img alt="loading" className="loadingImg" src="https://media.tenor.com/CLVR-rgpQL8AAAAi/popcorn-joypixels.gif" />
+          <p className="loadingText">Grab your popcorn, movies coming up!</p>
+        </div>
+      )}
     </>
-
   )
 }
 

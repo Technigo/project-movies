@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+/* LOADER BEFORE LIST SHOWS*/
 .loadingWrapper {
   display: block;
   margin: 10% auto;
@@ -16,8 +19,10 @@
   color: white;
   font-size: 22px;
   margin: 20px 0;
+  font-family: 'Nunito';
 }
 
+/* LIST OF MOVIES */
 .mainWrapper {
     margin: 0;
     padding: 0;
