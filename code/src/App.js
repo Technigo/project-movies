@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Header from 'components/Header'
+import Header from 'components/Header';
 import PopularMovies from 'pages/PopularMovies';
 import NotFound from 'pages/NotFound';
 import MovieDetails from 'pages/MovieDetails';
