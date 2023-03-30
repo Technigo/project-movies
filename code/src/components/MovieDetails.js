@@ -54,8 +54,8 @@ const MovieDetails = () => {
       <div
         className="movie-info">
         <div className="title-and-rating">
-          <h1 className="title">{details.title}</h1>
-          <p className="rating">⭐️{Math.round(details.vote_average * 10) / 10}</p>
+          <p className="title">{details.title}</p>
+          <p className="rating">⭐️{Math.round(details.vote_average * 10) / 10}/10 </p>
           {/* <p className="rating">⭐️{details.vote_average}</p> */}
           {/* We could use the following to get just one decimal:
         {Math.round(details.vote_average * 10) / 10}/10 */}

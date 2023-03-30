@@ -154,33 +154,38 @@ also have the .movie-details class. */
 .movie-info {
   margin-bottom: 20px; /* buttons go from being on top of eachother to placing in column */
   align-self: center;
-  justify-self: center;
+  /*justify-self: center;*/
   color: white;
-  margin-left: 20px;
+  margin-left: 10px;
   bottom: 10vh;
   font-weight: 400;
 }
 
 .title-and-rating {
-  display: flex; /* moves rating to next to title instead of under it */
+  /*display: flex; /* moves rating to next to title instead of under it */
 }
 
 .rating {
   align-self: center; /* places the rating on the same level as title instead of slightly above */
-  margin-left: 10px; /* creates some space in between title and rating */
-  background-color: lightblue;
-  border-radius: 5px; /* added some rounded edges */
-  color: black;
+  /* margin-left: 1px; /* creates some space in between title and rating */
+  /* background-color: lightblue; */
+  /* border-radius: 5px; /* added some rounded edges */
+  /* color: black; */
+  color: white;
   padding: 5px;
+  font-size: 1.5em;
 }
 
 .title {
-  text-shadow: 1px 1px #4d4d4d; /* no difference? */
+  text-shadow: 1px 1px #4d4d4d;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .overview {
-  font-size: 18px; /* fixes font on movie description */
-  line-height: 25px; /* added just for fun */
+  font-size: 16px; /* fixes font on movie description */
+  text-shadow: 1px 1px #4d4d4d;
+  line-height: 20px; /* added just for fun */
 }
 
 p {
