@@ -14,10 +14,23 @@ const MovieDetails = () => {
   useEffect(() => {
     setLoading(true)
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=95ef8b2227f45566b4eecd3687c10466&language=en-US`)
-      .then((res) => res.json())
-      .then((data) => setMovieDetails(data));
-    setLoading(false)
-  }, [id])
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Whoopsie daisy');
+        }
+        return res.json()
+      })
+      .then((data) => {
+        setMovieDetails(data)
+      })
+      .catch((error) => {
+        console.error(error)
+        navigate('/404')
+      })
+      .finally(() => {
+        setLoading(false);
+      })
+  }, [id, navigate]);
 
   if (loading) {
     return (

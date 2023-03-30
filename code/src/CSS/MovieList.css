@@ -28,7 +28,7 @@ body {
     padding-left: 1em;
     color: white; 
     z-index:10;
-    display:block;
+    display:none;
  }
 
   .release-date {
