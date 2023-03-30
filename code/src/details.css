@@ -1,0 +1,72 @@
+h2, h3, p {
+    color: #fff;
+}
+
+.movie-details-container {
+  height: auto;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.poster-rating-container {
+  margin: 80px 20px 50px 20px;
+}
+
+.rating {
+  font-size: 20px;
+}
+
+/* Background image */
+.backdrop {
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  height: 100%;
+  width: auto;
+  z-index: -1;
+}
+
+/* Poster image */
+.poster {
+  height: 300px;
+  width: auto;
+  border: 5px solid white;
+}
+
+/* Go back button */
+.goBackBtn {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.go-back-icon {
+  width: 25px;
+  margin-right: 4px;
+}
+
+.title-rating-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.title-details-margin {
+  margin: 16px 0 0 0;
+}
+
+.movie-description {
+    color: #fff;
+}
+
