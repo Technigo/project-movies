@@ -160,6 +160,21 @@ main {
 }
 
 /** MEDIA QUERIES **/
+@media (min-width: 360px){
+  main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    }
+
+  .movie-card {
+    width: 70%;
+  }
+  
+}
+
+
 @media (min-width: 667px){
 
 main {
@@ -170,7 +185,7 @@ main {
   }
 
 .movie-card {
-  width: 35%;
+  width: 50%;
 }
 
 .movie-detail {
@@ -185,7 +200,7 @@ main {
 
 .back-button img{
   content: url(back-button.png);
-  max-width: 50%;
+  max-width: 40%;
 }
 
 h1 {
