@@ -25,7 +25,7 @@ export const GenreMovieDetails = () => {
 
   return (
     <div className="details">
-      {/* <img className="background-img" src={`https://image.tmdb.org/t/p/w1280/${genreMovieDetails.backdrop_path}`} alt={genreMovieDetails.original_title} /> */}
+      <img className="background-img" src={`https://image.tmdb.org/t/p/w1280/${genreMovieDetails.backdrop_path}`} alt={genreMovieDetails.original_title} />
       <div className="movie-details">
         <a href={`https://www.imdb.com/title/${genreMovieDetails.imdb_id}/?ref_=nv_sr_srsg_0`} target="_blank" rel="noreferrer">
           <img className="small-poster" src={`https://image.tmdb.org/t/p/w780/${genreMovieDetails.poster_path}`} alt={genreMovieDetails.original_title} />

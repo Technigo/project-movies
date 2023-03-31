@@ -15,7 +15,6 @@ body {
 #root {
   width: 100%;
 }
-/* VERAS SEKTION */
 
 nav {
   display: flex;
@@ -366,6 +365,35 @@ a {
   object-fit: cover;
 }
 
+/* NOT FOUND PAGE */
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.not-found img {
+  width: 150px;
+}
+
+.not-found p {
+  font-size: 20px;
+  margin: 40px 0 40px 0;
+  font-weight: 500;
+}
+
+.backBtn {
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-color: #e42c2c;
+  color: black;
+  font-size: 16px;
+  border: none;
+}
+
+
 /* MEDIA QUERIES */
 
 @media (max-width: 667px) {
@@ -443,7 +471,9 @@ a {
   }
 }
 @media (min-width: 1024px) {
-
+  header img {
+    width: 150px;
+  }
 /*   body {
     overflow: hidden;
   } */
@@ -521,14 +551,14 @@ a {
 
   .loader-wrapper img {
     position: relative;
-    width:390px;
-    height:300px;
-    top:100px;
+    width: 300px;
+    height: auto;
+    top: 100px;
     object-fit: cover;
   }
 
-/*   .background-img {
-    display: block;
+  .background-img {
+    display: none;
   }
 
   .nav-mobile {
