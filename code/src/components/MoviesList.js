@@ -5,15 +5,22 @@ import '../css/MoviesList.css'
 
 export const MoviesList = () => {
   const [movies, setMovies] = useState([])
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
+    setLoading(true)
     fetch(LIST_URL)
       .then((res) => res.json())
       .then((json) => {
         setMovies(json.results)
+        setTimeout(() => setLoading(false), 500)
       })
   }, [])
   console.log(movies)
+
+  if (loading) {
+    return <p>Loading</p>
+  }
 
   return (
     <section className="movies-container">
