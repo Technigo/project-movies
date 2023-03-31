@@ -20,7 +20,7 @@ export const App = () => {
       .then((response) => response.json())
       .then((data) => setMovielist(data.results))
       .catch((e) => { console.error(e) })
-      .finally(() => { setLoading(true) })
+      .finally(() => { setLoading(false) })
   }, [])
   console.log(movieList)
   if (loading) {
