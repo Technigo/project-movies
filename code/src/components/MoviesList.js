@@ -13,7 +13,7 @@ export const MoviesList = () => {
       .then((res) => res.json())
       .then((json) => {
         setMovies(json.results)
-        setTimeout(() => setLoading(false), 500)
+        setTimeout(() => setLoading(false), 200)
       })
   }, [])
   console.log(movies)
