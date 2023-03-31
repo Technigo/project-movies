@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { MoviesList } from 'components/MoviesList';
 import { MoviesDetails } from 'components/MoviesDetails';
 import NotFound from 'components/NotFound';
+import Footer from 'components/Footer'
 
 
 export const App = () => {
@@ -15,6 +16,7 @@ export const App = () => {
         <Route path="/movies/:movieId" element={<MoviesDetails />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
-  );
+    );
 }

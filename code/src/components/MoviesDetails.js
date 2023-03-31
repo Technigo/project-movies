@@ -1,4 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable */
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { DETAILS_URL } from '../data/Url';
@@ -23,7 +24,7 @@ export const MoviesDetails = () => {
   console.log(movie)
 
   return (
-    <section className="movie-container">
+  <section className="movie-container">
       {movie && (
         <>
           <img src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.title} className="background" />
@@ -44,6 +45,6 @@ export const MoviesDetails = () => {
           </div>
         </>
       )}
-    </section>
+  </section>
   )
 }
