@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { Loader } from './Loader'
 
 export const GenreMovieList = () => {
   const [genreMovieList, setGenreMovieList] = useState([])
+  const [loading, setLoading] = useState(false)
   const { genreId } = useParams()
 
   useEffect(() => {
@@ -14,7 +16,15 @@ export const GenreMovieList = () => {
       .catch((e) => {
         console.error(console.error(e))
       })
+      .finally(() => {
+        setTimeout(() => setLoading(false), 1500)
+      })
   }, [genreId])
+  if (loading) {
+    return (
+      <Loader />
+    )
+  }
 
   return (
     <section className="list">
