@@ -5,23 +5,43 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: black;
+  color: white;
+  overflow-x: hidden;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+*{
+  box-sizing: border-box;
+}
+
+
 
 .movie-container {
-  display: flex;
-  flex-wrap: wrap;
-
+  display: grid;
+  grid-template-columns: 1fr;
 }
-
 .movie-container a {
-  width: 100%;
   position: relative;
   text-decoration: none;
-
-
 }
+.movie-wrapper img {
+  width: 100%;
+}
+
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .movie-container{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   }
+  }
+  /* TABLET */
+  @media (min-width: 668px) and (max-width: 1024px){
+    .movie-container{
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+  }
