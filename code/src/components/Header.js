@@ -7,7 +7,7 @@ const Header = () => {
     <header className="header-top">
       <div className="logo-container">
         <Link to="/"><img className="logo-image" src="../images/popcorn-logo.jpg" alt="Movie Page Logo" /></Link>
-        <h3 className="logo-title">MOVIE NIGHT</h3>
+        <Link to="/" style={{ textDecoration: 'none' }}><h3 className="logo-title">MOVIE NIGHT</h3></Link>
       </div>
       <nav>
         <ul className="navlink-container">
