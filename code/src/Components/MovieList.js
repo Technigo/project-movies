@@ -1,9 +1,12 @@
 /* eslint-disable no-shadow */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Spinning from './Intro';
 
+/* STARTPAGE */
 const MoviesList = () => {
   const [list, setList] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   /* Fetch function that allows us to get the movie titles, images from API */
   const FetchMovies = () => {
@@ -16,6 +19,8 @@ const MoviesList = () => {
   /* A call back function - this useEffect hook awakens the FetchMovies function above */
   useEffect(() => {
     FetchMovies()
+    setLoading(true);
+    setTimeout(() => setLoading(false), 1500)
   }, [])
 
   /* This return shows the img, titles, rdate & the id on our HTML page */
@@ -34,6 +39,7 @@ const MoviesList = () => {
           </article>
         ))}
       </div>
+      {loading && (<Spinning />)}
     </section>
   )
 }

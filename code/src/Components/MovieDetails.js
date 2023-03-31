@@ -1,12 +1,13 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import NotFound from 'components/NotFound'
 
+/* PAGE 2 */
 const MovieDetails = () => {
   const [details, setDetails] = useState([]);
   const navigate = useNavigate();
   const { id } = useParams()
-
   const onBackButtonClick = () => {
     navigate(-1);
   }
@@ -23,28 +24,39 @@ const MovieDetails = () => {
         }
       })
   }
-
+  // eslint-disable-next-line no-unused-vars
+  const handleBackButton = (event) => {
+    if (event.KeyCode === 13) {
+      onBackButtonClick();
+    }
+  };
   useEffect(() => {
     FetchDetails()
   })
 
   return (
-    <div
-      className="background"
-      style={{
-        backgroundImage: `url(http://image.tmdb.org/t/p/original${details.backdrop_path})`
-      }}>
-      <button type="button" onClick={onBackButtonClick}>
-                Back
-      </button>
-      <div className="movie-details">
-        <img src={`http://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
-        <div className="details">
-          <h1>{details.title}</h1>
+    <section className="detail-page">
+      <div
+        className="background"
+        style={{
+          backgroundImage: `url(http://image.tmdb.org/t/p/original${details.backdrop_path})`
+        }}>
+        <div className="backbutton">
+          <div type="button" className="button" onClick={onBackButtonClick}>
+            <span />
+            <span />
+            <span />
+          </div>
+        </div>
+        <div className="movie-details">
+          <img src={`http://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
+        </div>
+        <div className="details-page-2">
+          <h3>{details.title}</h3>
           <p>{details.overview}</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
