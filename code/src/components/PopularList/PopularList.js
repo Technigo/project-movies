@@ -21,6 +21,12 @@ export const PopularList = () => {
       })
   }, []);
 
+  if (loading) {
+    return (
+      <p>Loading movies...</p>
+    );
+  }
+
   return (
     <div className="popularList">
       {list.map((movie) => (

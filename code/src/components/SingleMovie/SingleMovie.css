@@ -1,8 +1,87 @@
-.detailPage .background {
-    min-height: 100vh;
-    display: flex;
-    background-size: cover;
-    flex-direction: column;
-    justify-content: flex-end;
-    color: white;
+.background {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movieInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.singleMovieWrapper .background {
+  min-height: 100vh;
+  color: white;
+  background-size: auto 100%;
+  background-position: center;
+}
+
+.goBackWrapper {
+  display: flex;
+  align-items: flex-start; /* or 'center' if you want to center it vertically */
+  justify-content: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0; /* or 'center' if you want to center it horizontally */
+}
+
+.goBackBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  padding: 7px;
+  margin: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.801);
+  border: solid white 1px;
+  border-radius: 5px;
+}
+
+.clapperboard-icon {
+  width: 20px;
+  border: none;
+  margin-right: 5px;
+}
+
+/*Tablet media query*/
+@media (min-width: 667px) {
+  img {
+    width: 350px;
   }
+}
+
+
+/*Desktop media query*/
+@media (min-width: 1025px) {
+  .singleMovieWrapper .background {
+    background-size: cover;
+  }
+
+  img {
+    width: 400px;
+  }
+
+  .background {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .movieInfoWrapper {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 50px;
+  }
+  
+  .singleMovieWrapper .background {
+    min-height: 100vh;
+    color: white;
+    background-size: auto 100%;
+    background-position: center;
+  }
+}
