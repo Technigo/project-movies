@@ -11,4 +11,4 @@ I worked a lot with turtorials from Technigo, tried the Example project steps bu
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://lighthearted-dolphin-81e027.netlify.app/
