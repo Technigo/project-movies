@@ -19,10 +19,37 @@ code {
     monospace;
 }
 
+/*---------Header----------*/
+
+
+.Header{
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+  gap: 30px;
+  align-items: center;
+}
+
+
+.Header h1 {
+  font-size: 16px;
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: white;
+}
 
 .home-btn {
-  width: 80px;
+  width: 60px;
   cursor: pointer;
+  margin-left: 20px;
 }
 
 .home-btn:hover {
@@ -34,6 +61,8 @@ code {
   border: none;
   background: none;
 }
+
+/*----------details---------------*/
 
 .background-img {
   background-color: rgba(0, 0, 0, .6);
@@ -54,6 +83,7 @@ code {
   animation-name: slicing;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
+  margin-top: 40%;
 }
 
 @keyframes slicing {
@@ -92,7 +122,7 @@ mark {
   text-shadow: none;
   margin-left: 10px;
 }
-
+/*------- Not Found 404 ------*/
 .error-page {
   padding: 30px
 }
@@ -135,6 +165,8 @@ mark {
   width: 100%;
 }
 
+
+
 .movie-hoverinfo {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.851);
@@ -176,6 +208,8 @@ h4 {
   opacity: 1;
 }
 
+/*------- Media Q ------*/
+
 @media only screen and (max-width: 600px) {
 .trailer{
   width: 320px;
@@ -183,6 +217,7 @@ h4 {
 }
 .all-info {
   flex-direction: column-reverse;
+  margin-top: 10%;
 }
 .movie-details h2 {
   font-size: 22px;
@@ -208,6 +243,7 @@ h4 {
 }
 }
 
+/*------- Loader popcorn ------*/
 .popcorn-container {
   position: absolute;
   top: 50%;
@@ -258,7 +294,7 @@ h4 {
     transform: translateY(0) scale(1) rotate(5deg);
   }
   80% {
-    transform: translateY(0) scale(1) rotate(0);
+    transform: translateY(0) scale(7) rotate(0);
   }
   85% {
     transform: translateY(-50%) scale(2);

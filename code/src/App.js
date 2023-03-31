@@ -3,9 +3,11 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import MovieList from 'components/MovieList';
 import NotFound from 'components/NotFound';
 import MovieDetails from 'components/MovieDetails';
-// import Header from 'components/Header';
+import Header from 'components/Header';
 import { POPULARMOVIE_URL } from 'components/urls.js';
 import PopcornLoader from './components/PopcornLoader';
+import TopRatedMovies from './components/TopRatedMovies';
+import PopularMovies from './components/PopularMovies';
 
 // put the set loading here
 export const App = () => {
@@ -36,11 +38,13 @@ export const App = () => {
     // main wrapper for the whole app
     <BrowserRouter>
       {/* wrapper for evert component that needs to be linked to */}
-      {/* <Header /> */}
+      <Header />
       <Routes>
         {/* path to a single component */}
         <Route path="/" element={<MovieList movies={movieList} />} />
         <Route path="/MovieDetails/:movieId" element={<MovieDetails />} />
+        <Route path="/top-rated" element={<TopRatedMovies />} />
+        <Route path="/popular" element={<PopularMovies />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>

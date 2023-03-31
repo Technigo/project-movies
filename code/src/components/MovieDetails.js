@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { MOVIEDETAILS_URL } from './urls';
-import Header from './Header';
 import PopcornLoader from './PopcornLoader';
 import { Trailer } from './Trailer';
 
@@ -44,7 +43,6 @@ const MovieDetails = () => {
 
   return (
     <section alt={movieDetails.title} className="background-img" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})` }}>
-      <Header />
       <container className="all-info">
         {/* <img className="details-img" src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path} `} alt={movieDetails.title} /> */}
         <Trailer />
