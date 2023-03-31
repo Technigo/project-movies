@@ -110,11 +110,8 @@ h2{
 /*Not found page*/
 
 .movie-dog{
-  height: 100vh;
+  
   width: 100%;
-  object-fit: cover;
-  object-position: top;
-  display: block;
 }
 
 .backButton {
