@@ -197,9 +197,83 @@ a {
   font-size: 12px;
   color: white;
 }
+/*below is a suggestion from chatGPT*/
+footer {
+  background-color: black;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* align-items: flex-end; */
+  padding: 1rem;
+  margin-top: 2.5rem;
+  border-top: solid 0.2rem #555
+}
 
-.footer-text {
+/*below is commented out for now - this was the first version with some adjustments*/
+/* footer {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  margin-top: 2.5rem;
+  padding: 20px;
+  background-color: black;
+  border-top: solid 0.2rem #555;
+} */
+
+footer p {
+  flex-basis: 100%;
+  margin-bottom: 1rem;
+}
+
+/* below in this class I had to change from flex to inline-block - otherwise they were on top of eachother */
+.footer-section {
+  /* flex-basis: 45%; */
+  display: inline-block;
+  border: solid blue 2px;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  align-items: center;
+  margin-bottom: 1rem;
+  /* margin: 0 10px; */
+  /* text-align: center;*/
+  justify-content: space-around; 
+}
+
+/* Ask Daniel about this percentage in flex-basis - what it does*/
+.footer-section h3 {
+  flex-basis: 100%;
+  font-size: 16px;
+  margin-bottom: 1rem; 
+}
+ 
+.footer-section a {
+  color: #555;
+  margin: 0.8rem;
+  /* margin-right: 1.5rem; */
+  /* text-decoration: none;
   text-align: center;
+  justify-content: space-around;
+  flex-direction: column; */
+}
+
+/* .footer-section a:last-child {
+  margin-right: 0;
+} */
+
+.footer-favicon-text {
+  margin-top: 1rem;
+  align-items: center;
+}
+
+/* Hover effect for the links in the footer */
+.footer-section a:hover {
+  transform:scale(1.5);
+  transition: 0.5s ease;
+  opacity: 1;
+  filter: invert(2);
 }
 
 @media (min-width: 668px) and (max-width: 1024px) {
