@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './List.css';
+import './Details.css';
 
 export const MovieList = () => {
     const [movies, setMovies] = useState([])

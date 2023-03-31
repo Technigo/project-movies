@@ -2,7 +2,8 @@
 /* eslint-disable indent */
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import './Details.css'
+import './Details.css';
+import './List.css';
 
 export const Details = () => {
     const { id } = useParams();

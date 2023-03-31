@@ -10,6 +10,7 @@
     height: 100vh;
     width: 100vw;
     position: absolute;
+    overflow: auto;
   }
 
 .details-container {
@@ -25,8 +26,8 @@
 
 .back-btn {
   position: absolute;
-  top: 20px; /* Adjust the top position as needed */
-  left: 20px; /* Adjust the left position as needed */
+  top: 10px; /* Adjust the top position as needed */
+  left: 10px; /* Adjust the left position as needed */
   z-index: 1; /* Set a higher z-index to ensure the button is on top of the background */
   /* Add other styles for the button */
   margin-left: 5vw;
@@ -67,3 +68,44 @@ button:active {
   background-color: #e7e7e7;
   color: black;
 }
+
+@media screen and (max-width: 800px) {
+  .details-container {
+    margin-right: 3vw;
+  }
+  .details-container img {
+    border: solid 3px white;
+    scale: 95%;
+  }
+  .background {
+    overflow: scroll;
+  }
+}
+@media screen and (max-width: 600px) {
+  .details-container {
+    margin-right: 3vw;
+  }
+  .details-container img {
+    border: solid 3px white;
+    scale: 90%;
+  }
+  .background {
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .details-container {
+    margin-top: 5vh;
+    margin-left: 5vw;
+    margin-right: 3vw;
+  }
+  .details-container img {
+    border: solid 3px white;
+    scale: 80%;
+  }
+  .background {
+    overflow: scroll;
+  }
+}
+  

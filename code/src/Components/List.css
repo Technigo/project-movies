@@ -13,6 +13,7 @@
     width: 100%;
     height: 100%;
     }
+
 .overlay {
     position: absolute;
     top: 0;
@@ -43,4 +44,24 @@
 
 .ListPage a:hover img {
     filter: blur(5px) brightness(0.4);
+}
+
+.release-date {
+    text-decoration: none;
+    color: inherit;
+    color: white;
+    }
+
+
+
+@media screen and (max-width: 1024px) {
+    .ListPage {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+    
+@media screen and (max-width: 768px) {
+    .ListPage {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
