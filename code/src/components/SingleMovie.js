@@ -24,6 +24,7 @@ const SingleMovie = () => {
       <button className="back-button" type="button" onClick={backButton}>
         ⬅ Go Back
       </button>
+
       <img className="single-movie-poster" src={`http://image.tmdb.org/t/p/w342/${movieDetails.poster_path}`} alt="poster" />
       <div className="single-movie-details">
         <h2 style={{ color: 'whitesmoke' }}>{movieDetails.title}</h2>
