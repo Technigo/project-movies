@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { API_KEY } from 'utils/key';
+// import { API_KEY } from 'utils/key';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClapperboard } from '@fortawesome/free-solid-svg-icons'
+import { SINGLE_MOVIE } from 'utils/urls';
 
 const SingleMovie = () => {
   const { id } = useParams()
   const [movieDetails, setMovieDetails] = useState([])
   const navigate = useNavigate();
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`)
+    fetch(SINGLE_MOVIE(id))
       .then((response) => response.json())
       .then((data) => setMovieDetails(data))
       .catch((error) => console.log(error))
@@ -22,14 +25,14 @@ const SingleMovie = () => {
 
       {/* <div style={pageStyle}> */}
       <button className="back-button" type="button" onClick={backButton}>
-        ⬅ Go Back
+        <FontAwesomeIcon icon={faClapperboard} /> Back to movies
       </button>
 
       <img className="single-movie-poster" src={`http://image.tmdb.org/t/p/w342/${movieDetails.poster_path}`} alt="poster" />
       <div className="single-movie-details">
-        <h2 style={{ color: 'whitesmoke' }}>{movieDetails.title}</h2>
-        <p className="single-rating" style={{ color: 'whitesmoke' }}>⭐ {Math.round(movieDetails.vote_average * 10) / 10}</p>
-        <p className="single-movie-overview" style={{ color: 'whitesmoke' }}>{movieDetails.overview}</p>
+        <h2 className="single-movie-title">{movieDetails.title}</h2>
+        <p className="single-rating">⭐ {Math.round(movieDetails.vote_average * 10) / 10}</p>
+        <p className="single-movie-overview">{movieDetails.overview}</p>
       </div>
     </div>
   )

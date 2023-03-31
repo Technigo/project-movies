@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import NotFound from 'components/NotFound';
 import TrendingList from 'components/TrendingList';
 import SingleMovie from 'components/SingleMovie';
-import './index.css'
 import Footer from 'components/Footer';
 
 export const App = () => {

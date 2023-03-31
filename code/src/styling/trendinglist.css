@@ -1,38 +1,20 @@
-.frontPage {
+.front-page {
     display: flex;
     flex-wrap: wrap;
 }
 
-.frontPage a {
+.front-page a {
     width: 100%;
     position: relative;
     color: #fff;
     text-decoration: none;
 }
 
-@media (min-width: 370px) {
-    .frontPage a {
-        width: 50%;
-    }
-}
-
-@media (min-width: 570px) {
-    .frontPage a {
-        width: 33.33%;
-    }
-}
-
-@media (min-width: 820px) {
-    .frontPage a {
-        width: 25%;
-    }
-}
-
-.frontPage a img {
+.front-page a img {
     width: 100%;
 }
 
-.frontPage .movieDetails {
+.front-page .poster-hover-details {
     position: absolute;
     top: 0;
     right: 0;
@@ -43,14 +25,33 @@
     padding: 20px;
 }
 
-.frontPage .movieDetails h1 {
+.front-page .poster-hover-details h1 {
     margin-top: auto;
-    margin-bottom: 0;
+    margin-bottom: 20px;
 }
 
-.frontPage a:hover .movieDetails {
+.front-page a:hover .poster-hover-details {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+
+@media (min-width: 370px) {
+    .front-page a {
+        width: 50%;
+    }
+}
+
+@media (min-width: 570px) {
+    .front-page a {
+        width: 33.33%;
+    }
+}
+
+@media (min-width: 820px) {
+    .front-page a {
+        width: 25%;
+    }
 }

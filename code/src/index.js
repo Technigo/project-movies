@@ -1,8 +1,9 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
-import './singlemovie.css';
-import './footer.css'
+import './styling/index.css';
+import './styling/singlemovie.css';
+import './styling/footer.css'
+import './styling/trendinglist.css'
 import { App } from './App';
 
 const container = document.getElementById('root');
