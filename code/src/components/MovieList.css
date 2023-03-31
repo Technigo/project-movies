@@ -11,22 +11,33 @@
     width: 100%;
 }
 
+
 @media (min-width: 370px) {
     .list-element {
       width: 50%;
     }
   }
 
+
 @media (min-width: 570px) {
     .list-element {
       width: 33.33%;
     }
   }
-  
+
   @media (min-width: 820px) {
     .list-element {
       width: 25%;
     }
+  }
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 42px;
+  }
+  
+  p {
+      font-size: 16px;
+  }
   }
   
 
@@ -44,13 +55,13 @@
 }
 
 h1 {
-    font-size: 38px;
+    font-size: 22px;
     margin-top: auto;
     margin-bottom: 0;
 }
 
 p {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .list-element:hover .details {

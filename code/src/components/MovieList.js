@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Loading from './Loading.js';
+import Footer from './Footer.js';
 
 const MovieList = () => {
   const [loading, setLoading] = useState(false);
@@ -44,6 +45,7 @@ const MovieList = () => {
           )
         })}
       </section>
+      {!loading && <Footer />}
       {loading && (<Loading />)}
     </>
   );
