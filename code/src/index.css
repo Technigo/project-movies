@@ -11,6 +11,10 @@ body {
   background-color: #191919;
   color: white;
 }
+
+#root {
+  width: 100%;
+}
 /* VERAS SEKTION */
 
 nav {
@@ -57,6 +61,7 @@ header a {
   text-align: center;
   border-radius: 5px;
   margin-top: 10px;
+  width: auto;
 }
 
 .genres, .production-countries {
@@ -169,22 +174,21 @@ a {
 .genre-background {
   position: absolute;
   display: block;
-  width: auto;
   height: 100vh;
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
   left:0;
 }
 
-.genre-background-top {
+.genre-background {
   height: 100vh;
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
   animation-name: fader;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 10s;
-  animation-direction: alternate;
+  animation-duration: 15s;
+/*   animation-direction: alternate; */
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;
@@ -198,7 +202,7 @@ a {
 }
 
 
-@keyframes fader {
+/* @keyframes fader {
   0% {
   opacity:1;
   }
@@ -211,7 +215,39 @@ a {
   100% {
   opacity:0;
   }
+} */
+
+@keyframes fader {
+  0% {
+    opacity:1;
+  }
+  10% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  87% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
+
+.genre-background:nth-of-type(1) {
+  animation-delay: 12s;
+}
+.genre-background:nth-of-type(2) {
+  animation-delay: 8s;
+}
+.genre-background:nth-of-type(3) {
+  animation-delay: 4s;
+}
+.genre-background:nth-of-type(4) {
+  animation-delay: 0;
+}
+
 
 .genre-list-items {
   position: absolute;
@@ -224,10 +260,11 @@ a {
   height: 480px;
   overflow: scroll;
   width: 80%;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
 }
 
 .genre-name {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 900;
   color: white;
 }
@@ -335,11 +372,21 @@ a {
     transform: rotate(360deg);
   }
 } 
+
+.loader-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
     
 .loader-wrapper img {
-  height:300px;
   position: relative;
+  width:390px;
+  height:300px;
   top:100px;
+  object-fit: cover;
 }
 
  
@@ -392,6 +439,11 @@ a {
   }
 }
 @media (min-width: 1024px) {
+
+/*   body {
+    overflow: hidden;
+  } */
+
   .list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
