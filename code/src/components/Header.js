@@ -12,10 +12,10 @@ const Header = () => {
       <nav>
         <ul className="navlink-container">
           <li className="navlink">
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/">Popular</NavLink>
           </li>
           <li className="navlink">
-            <NavLink to="/upcoming">Upcoming Movies</NavLink>
+            <NavLink to="/upcoming">Upcoming</NavLink>
           </li>
           <li className="navlink">
             <NavLink to="/tv">TV Series</NavLink>

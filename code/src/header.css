@@ -12,6 +12,7 @@
     background: rgb(35, 44, 50);
     align-items: center;
     z-index: 1;
+    position:fixed;
 }
 
 
