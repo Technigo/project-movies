@@ -5,11 +5,36 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: black;
+  background-color: #191919;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header img {
+  margin-left: 10px;
+  width: 150px;
+  margin-top: 10px;
+}
+
+header a {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #333231;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 .genres, .production-countries {
@@ -22,11 +47,14 @@ body {
 
 a {
   text-decoration: none;
+  color: white;
+  font-weight: 700;
 }
 
 .list-container {
   position: relative;
   max-width: 667px;
+  margin: 0 10px 0 10px;
 }
 
 .list-title {
@@ -59,6 +87,7 @@ a {
   max-width: 100%;
   position: relative;
   transition: filter 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
 .list-container:hover > .list-title {
@@ -208,7 +237,63 @@ animation-direction: alternate;
   margin-right: 5px;
 }
 
+.details {
+  max-width: 667px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.movie-details h2 {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.small-poster {
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+.details p {
+  margin: 10px 0 10px 0;
+}
+
+.genres p {
+  font-style: italic;
+}
+
+.details-row {
+  display: flex;
+  justify-content: space-between;
+  max-width: 80%;
+  font-size: 14px;
+}
+
+.details-plot {
+  max-width: 90%;
+  line-height: 20px;
+}
+
 @media (min-width: 668px) and (max-width: 1023px) {
+  header {
+    align-items: flex-end;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  header img {
+    width: 200px;
+  }
+
+  header a {
+    font-size: 16px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+  }
+
   .list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -217,6 +302,22 @@ animation-direction: alternate;
 
   .list-container {
     max-width: 1023px;
+  }
+
+  .small-poster {
+    max-width: 80%;
+  }
+
+  .movie-details h2 {
+    font-size: 24px;
+  }
+
+  .details-row {
+    font-size: 16px;
+  }
+
+  .details p {
+    font-size: 18px;
   }
 }
 @media (min-width: 1024px) {
