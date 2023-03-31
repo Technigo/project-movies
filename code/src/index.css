@@ -11,14 +11,9 @@ body {
   background-color: #191919;
   color: white;
 }
-/* VERAS SEKTION */
 
 nav {
   display: flex;
-}
-
-header img {
-  width: 75px;
 }
 
 .active:after {
@@ -32,27 +27,25 @@ header img {
 .nav-desktop {
   display: none;
 }
-/* slut */
 
 header {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-end;
 }
 
 header img {
   margin-left: 10px;
-  /* width: 150px; */
+  width: 75px;
   margin-top: 10px;
 }
 
-header a {
+nav a {
   display: flex;
   flex-direction: column;
   color: white;
   font-size: 14px;
   font-weight: 600;
-/*   background-color: #333231; */
   padding: 10px 20px;
   text-align: center;
   border-radius: 5px;
@@ -109,7 +102,6 @@ a {
   max-width: 100%;
   position: relative;
   transition: filter 0.3s ease-in-out;
-  border-radius: 10px;
 }
 
 .list-container:hover > .list-title {
@@ -128,9 +120,9 @@ a {
 
 /* GENRE SECTION */
 
-  .genre-wrapper{
-    overflow: hidden;
-  }
+.genre-wrapper {
+  overflow: hidden;
+}
 
 .image-wrapper {
   position: relative;
@@ -256,20 +248,13 @@ a {
   mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
 }
 
-.genre {
-  padding: 5px 15px;
-  border-radius: 20px;
-  background-color: grey;
-  margin-right: 5px;
-}
-
 .details {
   max-width: 667px;
   margin-left: 20px;
   margin-bottom: 30px;
 }
 
-.movie-details h2 {
+.details h2 {
   margin-top: 10px;
   font-size: 20px;
   font-weight: 700;
@@ -277,11 +262,6 @@ a {
 
 .small-poster {
   max-width: 80%;
-  border-radius: 10px;
-}
-
-.background-img {
-  display: none;
 }
 
 .details p {
@@ -290,10 +270,9 @@ a {
 }
 
 .genres p {
-/*   font-style: italic; */
   margin-right: 5px;
   overflow-wrap: break-word;
-/*   font-weight: 700; */
+  font-style: italic;
 }
 
 .details-row {
@@ -354,26 +333,30 @@ a {
   top:100px;
 }
 
- 
+@media (max-width: 667px) {
+  .genre:not(:last-of-type)::after {
+    content: "," "\00a0";
+  }
+}
 
 @media (min-width: 668px) and (max-width: 1023px) {
-  header {
-    align-items: flex-end;
-  }
-
   nav {
     display: flex;
     flex-direction: row;
   }
 
-  header img {
-    width: 200px;
+  header {
+    display: flex;
+    justify-content: flex-start;
   }
 
-  header a {
+  header img {
+    width: 150px;
+  }
+
+  nav a {
     font-size: 16px;
     margin-left: 50px;
-    margin-bottom: 20px;
   }
 
   .list {
@@ -390,7 +373,7 @@ a {
     max-width: 80%;
   }
 
-  .movie-details h2 {
+  .container h2 {
     font-size: 24px;
   }
 
@@ -401,8 +384,37 @@ a {
   .details p {
     font-size: 18px;
   }
+
+  .genre {
+    padding: 5px 15px;
+    border-radius: 20px;
+    background-color: grey;
+    margin-right: 5px;
+  }
+
+  .genres p {
+    font-style: normal;
+  }
 }
-@media (min-width: 1024px) {
+
+@media (min-width: 1024px) and (max-width: 1399px) {
+  header {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  header img {
+    width: 150px;
+  }
+
+  nav {
+    margin-left: 50px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
   .list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -425,13 +437,92 @@ a {
     display: block;
   }
 
-  .nav-mobile {
-    display:none;
+  .details h2 {
+    font-size: 24px;
   }
 
-  .background-img {
+  .details p {
+    font-size: 18px;
+  }
+
+  .genre {
+    padding: 5px 15px;
+    border-radius: 20px;
+    background-color: grey;
+    margin-right: 5px;
+  }
+
+  .genres p {
+    font-style: normal;
+  }
+}
+
+@media (min-width: 1440px) {
+  header {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  header img {
+    width: 150px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+  nav {
+    margin-left: 50px;
+  }
+
+  .nav-desktop {
     display: block;
-    z-index: -1;
-    object-fit: cover;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 2560px;
+  }
+
+  .small-poster {
+    width: 100%;
+  }
+
+  .details {
+    max-width: 2560px;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 40px;
+  }
+
+  .movie-details {
+    margin-left: 30px;
+  }
+
+  .details p {
+    font-size: 18px;
+  }
+
+  .details-container {
+    width: 50%;
+  }
+
+  .details h2 {
+    font-size: 28px;
+  }
+
+  .genre {
+    padding: 5px 15px;
+    border-radius: 20px;
+    background-color: grey;
+    margin-right: 5px;
+  }
+
+  .genres p {
+    font-style: normal;
   }
 }

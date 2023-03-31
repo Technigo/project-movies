@@ -6,7 +6,7 @@ export const Header = () => {
     <header>
       <Link to="/"><img src="../vs-movies.png" alt="Logo" /></Link>
       <nav>
-        <NavLink to="/">POPULAR MOVIES</NavLink>
+        <NavLink to="/">POPULAR</NavLink>
         <NavLink to="/genre-list">GENRES</NavLink>
         <NavLink className="nav-desktop left" to="/genre-list/18">DRAMA</NavLink>
         <NavLink className="nav-desktop" to="/genre-list/35">COMEDY</NavLink>
