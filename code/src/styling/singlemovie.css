@@ -1,0 +1,115 @@
+.single-movie-wrapper {
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.back-button {
+    color: white;
+    border: none;
+    background: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: 160px;
+    height: 25px;
+    margin: 30px 0 30px 20px; 
+    opacity: .85;
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.single-movie-poster {
+    border: white 5px solid;
+    width: 100%;
+    /*max-width: 342px;*/
+}
+
+.single-movie-details {
+    padding: 20px;
+}
+
+.single-movie-title {
+    font-size: 28px;
+    margin: 20px 0 10px 0;
+    color: whitesmoke;
+}
+
+.single-rating {
+    font-size: 22px;
+    margin: 0 0 10px 0;
+    color: black;
+    background-color: rgba(245, 245, 245, 0.979);
+    width: fit-content;
+    padding: 0px 10px 0px 10px;
+    border-radius: 7px;
+}
+
+.single-movie-overview {
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+@media (min-width: 667px) and (max-width: 1024px) {
+    .single-movie-wrapper {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 40% 60%;
+        padding: 30px;
+    }
+
+    .single-movie-poster {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        align-self: end;
+        width: 90%;
+        /*max-width: 342px;*/
+        justify-self: end;
+        margin: 0px 30px 0px 30px;
+    }
+
+    .single-movie-details {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        align-self: end;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1025px) {
+
+    .single-movie-wrapper {
+        display: grid;
+        grid-template-columns: 40% 40% 20%;
+        grid-template-rows: 10% 90%;
+    }
+
+    .back-button {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        margin-left: 50px;
+    }
+
+    .single-movie-poster {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        align-self: end;
+        justify-self: end;
+        margin: 0px 30px 0px 30px;
+        width: 85%;
+       /*max-width: 342px;*/
+
+    }
+
+    .single-movie-details {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        align-self: end;
+        margin: 0;
+    }
+}

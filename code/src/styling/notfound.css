@@ -1,0 +1,15 @@
+.not-found {
+    height: 70vh;
+}
+
+.not-found .back-button {
+    width: 200px;
+}
+.not-found p {
+    font-size: xx-large;
+    color: #fff;
+    text-align: center;
+}
+
+
+
