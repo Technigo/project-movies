@@ -1,0 +1,10 @@
+.loading-parent-container {
+    display: flex;
+    background-color: black;
+    height: 100vh;
+   justify-content: center;
+}
+
+p {
+    color: white;
+}

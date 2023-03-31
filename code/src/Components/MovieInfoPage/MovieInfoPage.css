@@ -1,0 +1,181 @@
+ /* ////////////////////////////// CSS FOR MOVIE DETAIL PAGE ///////////////////////////////////// */
+
+
+/* FLEX PARENT */ 
+.details-container { 
+    min-height: 100vh; 
+    width: 100vw;
+    background-repeat: no-repeat; /* No-repeat means the background image doesn't repeat when you scroll */
+    background-size: cover; /* Background image covers the entire page */
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column; /* Back button and movie description div are vertically layered */
+}
+
+
+/* BUTTON STYLING AND ANIMATION */
+.home-button {
+    position: block;
+    background: none;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s; /* makes the arrow appear/slide in/for half a second */
+    text-align: center;
+    padding: 10px;
+    width: 150px;
+}
+
+.home-button h1 {
+    font-size: 16px;
+    display: inline-block; /* displays text and arrow animation on the same line */
+    position: relative;
+    transition: 0.5s;
+}
+
+.home-button h1:after {
+    content: '«';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -20px;
+    transition: 0.5s;
+}
+
+.home-button:hover h1 {
+    opacity: 100%;
+    padding-left: 25px;
+}
+
+.home-button:hover h1:after {
+    opacity: 1;
+    left: 0;
+}
+
+
+/* CONTAINER STYLING */
+.movie-info-container {
+    margin: 3%; /* container is positioned 3% from the left and bottom */
+    bottom: 0; /* container is fixed to the bottom of the page at all times */
+    display: flex;
+    flex-direction: column; 
+    width: 320px;
+    gap: 20px;
+}
+
+
+/* MOVIE POSTER STYLING */
+.poster-image {
+    width: 230px;
+    box-shadow: 0px 0px 13px 1px rgba(255, 255, 255, 0.165);
+}
+
+p {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+     sans-serif;
+     font-size: 18px;
+     line-height: 20px;
+}
+
+h1 {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+     sans-serif;
+     font-size: 23px;
+     font-weight: bold;
+}
+
+.movie-detail-div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.title-imdb-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    gap: 10px;
+}
+
+.imdb-numbers {
+    background-color: rgba(255, 255, 255, 0.743);
+    color: black;
+    padding: 3px 2px 0px 2px;
+    height: 27px;
+    border-radius: 5px;
+    text-align: start;
+    min-width: 65px;
+}
+
+.movie-overview {
+    text-align: justify;
+}
+
+
+
+/* RESPONSIVENESS STYLING */
+
+/* SMALLEST MOBILE */
+@media (max-width: 350px) {
+    .details-container {
+        min-height: 80vh; 
+    }
+
+    .movie-info-container {
+        width: 260px;
+        gap: 15px;
+    }
+}
+
+/* TABLET */
+@media (min-width:668px) {
+    .details-container {
+        min-height: 100vh; 
+    }
+
+    .movie-info-container {
+        position: fixed;
+        flex-direction: column; 
+        width: 60%;
+        gap: 20px;
+    }
+
+    .home-button {
+        position: fixed;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1023px) {
+    .details-container {
+        min-height: 100vh; 
+    }
+
+    .movie-info-container {
+        position: fixed;
+        flex-direction: row; 
+        align-items: flex-end;
+        gap: 20px;
+    }
+
+    .home-button {
+        position: fixed;
+    }
+    
+    .poster-image {
+        display: flex;
+        align-items: flex-start;
+        width: 300px;
+    }
+    .movie-detail-div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 450px;
+    }
+}
