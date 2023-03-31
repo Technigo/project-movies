@@ -1,28 +1,31 @@
-.details-container {
-    min-height: 100vh;
+ /* ////////////////////////////// CSS FOR MOVIE DETAIL PAGE ///////////////////////////////////// */
+
+
+/* FLEX PARENT */ 
+.details-container { 
+    min-height: 100vh; 
     width: 100vw;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: no-repeat; /* No-repeat means the background image doesn't repeat when you scroll */
+    background-size: cover; /* Background image covers the entire page */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Back button and movie description div are vertically layered */
 }
 
 
 /* BUTTON STYLING AND ANIMATION */
-
 .home-button {
     background: none;
     margin-top: 20px;
     border: none;
     cursor: pointer;
-    transition: all 0.5s;
+    transition: all 0.5s; /* makes the arrow appear/slide in/for half a second */
     text-align: center;
     padding: 20px;
     width: 200px;
 }
 
 .home-button h1 {
-    display: inline-block;
+    display: inline-block; /* displays text and arrow animation on the same line */
     position: relative;
     transition: 0.5s;
 }
@@ -48,19 +51,21 @@
 
 
 /* CONTAINER STYLING */
-
 .movie-info-container {
-    margin: 3%;
-    position: relative;
+    margin: 3%; /* container is positioned 3% from the left and bottom */
+    position: fixed;
+    bottom: 0; /* container is fixed to the bottom of the page at all times */
     display: flex;
-    flex-direction: row;
+    flex-direction: column; 
     align-items: flex-end;
-    width: 60%;
+    width: 320px;
     gap: 20px;
 }
 
-.poster-image-div {
-    display: flex;
+
+/* MOVIE POSTER STYLING */
+.poster-image {
+    width: 230px;
     box-shadow: 0px 0px 13px 1px rgba(255, 255, 255, 0.165);
 }
 
@@ -93,6 +98,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     height: 35px;
+    gap: 10px;
 }
 
 .imdb-numbers {
@@ -101,4 +107,46 @@ h1 {
     padding: 3px 2px 0px 2px;
     height: 27px;
     border-radius: 5px;
+    text-align: start;
+    min-width: 65px;
+}
+
+.movie-overview {
+    text-align: justify;
+}
+
+
+
+/* RESPONSIVENESS STYLING */
+
+/* TABLET */
+@media (min-width:668px) {
+    .movie-info-container {
+        flex-direction: column; 
+        align-items: flex-end;
+        width: 60%;
+        gap: 20px;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1023px) {
+    .movie-info-container {
+        flex-direction: row; 
+        align-items: flex-end;
+        width: 60%;
+        gap: 20px;
+    }
+
+    .poster-image {
+        display: flex;
+        align-items: flex-start;
+        width: 342px;
+    }
+    .movie-detail-div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 450px;
+    }
 }
