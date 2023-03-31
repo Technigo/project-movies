@@ -116,7 +116,7 @@ h2, h3, p {
  background-position: center;
  position: fixed;
  height: 100%;
- width: 100%; /* updated */
+ width: 100%; 
  z-index: -1;
 }
 
