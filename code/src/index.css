@@ -15,10 +15,13 @@ code {
 
 h1 {
   color: white;
+  text-align: center;
+  font-size: 50px;
 }
 
 h2 {
   color: white;
+  font-size: 20px;
 }
 
 h3 {
@@ -30,13 +33,17 @@ h3 {
 .movies {
   display: flex; /* this pushed all posters in to just one row */
   flex-wrap: wrap; /* this then made all posters display in rows of two but with an uneven margin to the left */
-  justify-content: center; /* this centered the two posters on the page */
+  /* justify-content: center; this centered the two posters on the page */
+  justify-content: space-evenly;
   background-size: cover;
+  column-gap: 0.3rem;
+  row-gap: 1.5rem;
 }
 
 .movie-container {
   position: relative;
   width: 50%; /* this moved all posters to the left side, no margin */
+  border: solid grey 2px;
 }
 
 .movie-details {
@@ -90,11 +97,39 @@ also have the .movie-details class. */
   position: relative;
 }
 
+.goback-icon {
+  max-width: 5rem;
+  max-height: 5rem;
+  padding: 2rem;
+  margin-left: 1.5rem;
+  filter: invert(0.6);
+}
+
+.goback-icon:hover {
+  transform:scale(1.5);
+  transition: 0.5s ease;
+  opacity: 1;
+  filter: invert(1);
+}
+
+.back-to-list {
+  display: none;
+}
+
+/* We want to show this text when hovering over the back-to-list-button but it doesn't work yet*/
+.back-to-list:hover {
+  display: block;
+  font-size: large;
+  text-decoration: none;
+
+}
+
 .go-back-btn {
+  font-size: large;
   color: white;
   border-radius: 20px;
   border: solid white 2px;
-  padding: 10px;
+  padding: 20px;
   background-color: transparent;
   cursor: pointer;
   left: 20px;
@@ -113,48 +148,73 @@ also have the .movie-details class. */
   border: solid white 10px; /* poster gets a border */
   margin-left: 20px; /* poster goes in a bit from the left */
   margin-top: 20px;
-  /*max-height: 400px;*/
+  max-height: 400px;
 }
 
 .movie-info {
   margin-bottom: 20px; /* buttons go from being on top of eachother to placing in column */
   align-self: center;
-  justify-self: center;
+  /*justify-self: center;*/
   color: white;
-  margin-left: 20px;
+  margin-left: 10px;
   bottom: 10vh;
   font-weight: 400;
 }
 
 .title-and-rating {
-  display: flex; /* moves rating to next to title instead of under it */
+  /* display: flex; /* moves rating to next to title instead of under it */
 }
 
 .rating {
   align-self: center; /* places the rating on the same level as title instead of slightly above */
-  margin-left: 10px; /* creates some space in between title and rating */
-  background-color: lightblue;
-  border-radius: 5px; /* added some rounded edges */
-  color: black;
+  /* margin-left: 1px; /* creates some space in between title and rating */
+  /* background-color: lightblue; */
+  /* border-radius: 5px; /* added some rounded edges */
+  /* color: black; */
+  color: white;
   padding: 5px;
+  font-size: 1.5em;
 }
 
 .title {
-  text-shadow: 1px 1px #4d4d4d; /* no difference? */
+  text-shadow: 1px 1px #4d4d4d;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .overview {
-  font-size: 18px; /* fixes font on movie description */
-  line-height: 25px; /* added just for fun */
+  font-size: 16px; /* fixes font on movie description */
+  text-shadow: 1px 1px #4d4d4d; /* gives some contrast to background */
+  line-height: 20px; /* added just for fun */
+}
+
+p {
+  font-size: 16px;
+  color: white;
+}
+
+a {
+  font-size: 12px;
+  color: white;
+}
+
+.footer-text {
+  text-align: center;
 }
 
 @media (min-width: 668px) and (max-width: 1024px) {
+  h1 {
+    font-size: 40px;
+  }
+
   .movie-container {
-    width: 33%;
+    /* width: 33%; */
+    width: 25%;
   }
    .movie-details-container {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    /* grid-template-columns: 1fr 2fr; */
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 1fr; 
   }
 
@@ -180,8 +240,19 @@ also have the .movie-details class. */
 }
 
 @media (min-width: 1025px) {
+  h1 {
+    font-size: 50px;
+  }
+
   .movie-container {
-    width: 25%;
+    width: 20%;
+  }
+
+  .movies {
+    gap: 5px;
+    row-gap: 20px;
+    column-gap: 0.3rem;
+    row-gap: 2.5rem;
   }
 
   .movie-details-container {
