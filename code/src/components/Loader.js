@@ -4,11 +4,11 @@ import Spinner from 'react-bootstrap/Spinner';
 
 const Loader = () => {
   return (
-    <div className="loader-container" style={{ display: 'flex', padding: 20, flexDirection: 'column', alignItems: 'center' }}>
+    <div className="loader-container" style={{ display: 'flex', padding: 20, marginTop: 100, flexDirection: 'column', alignItems: 'center' }}>
       <div style={{ display: 'flex', padding: 20 }}>
-        <Spinner animation="border" variant="dark" /> <br />
+        <Spinner animation="border" variant="light" /> <br />
       </div>
-      <p style={{ fontSize: 20 }}>Loading...</p>
+      <p style={{ fontSize: 20, color: 'white' }}>Loading...</p>
     </div>
   )
 }
