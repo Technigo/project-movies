@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './MovieDetails.css';
+import NotFound from './NotFound';
 
 export const MovieDetails = () => {
   const { id } = useParams();
   const [details, setDetails] = useState({});
   const navigate = useNavigate();
+  const [error, setError] = useState(false)
   const onGoToNotFoundButtonClick = () => {
     navigate('/');
   }
@@ -13,8 +15,19 @@ export const MovieDetails = () => {
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=37960b018b2292cd4182bc4096fb83c8&language=en-US`)
       .then((response) => response.json())
-      .then((data) => setDetails(data))
+      .then((data) => {
+        if (data.id) {
+          setDetails(data)
+        } else {
+          setError(true)
+        }
+      })
+      .catch(() => setError(true))
   }, [id]);
+
+  if (error) {
+    return <NotFound />
+  }
 
   return (
     <div className="MovieDetailsRender" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
