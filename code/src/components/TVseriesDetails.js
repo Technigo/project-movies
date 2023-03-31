@@ -27,7 +27,7 @@ export const TVseriesDetails = () => {
 
   return (
     <div
-      className="background"
+      className="tv-background"
       style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
       <Link to="/" className="back-button">
         <img src="./back-button.png" alt="back button" />

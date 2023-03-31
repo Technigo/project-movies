@@ -91,7 +91,7 @@ p {
   align-items: flex-start;
 }
 
-.movie-detail .tv-detail img {
+.movie-detail {
   max-width: 70%;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -144,6 +144,20 @@ main {
   opacity: 0.5;
   transition: 0.3s ease-in-out;
 }
+
+/*TV detail page*/
+.tv-background {
+  background-color: #1e1e1e;
+  min-height: 100vh; 
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+
 
 .description {
   position: absolute;
