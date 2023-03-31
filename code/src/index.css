@@ -107,37 +107,28 @@ background-color: rgba(0, 0, 0, 0.442);
 
 /* LOADING */
 .loading-movies {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 1000vh;
 }
 .loading-movies p {
-  font-size: 30px;
   text-align: center;
   margin: 15px;
+
 }
 .loading-intro {
   animation-name: loadintro;
-  display: block;
-  width: 90px;
-  height: 80px;
-  font-size: 80px;
   margin-bottom: 20px;
-  animation-duration: 800ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-@keyframes loadspinning {
-from {
-    transform: rotate(0deg)
-  } 
-to {
-    transform: rotate(360deg)
-  }
-}
+  text-align: center;
+  justify-self: center; 
+  display: flex;
+  font-size: 50px;
 
+}
+/* INTRO PICTURE POPCORN MAN*/
+.loading-intro img {
+  width: 500px;
+}
 
 
 

@@ -20,12 +20,13 @@ const MoviesList = () => {
   useEffect(() => {
     FetchMovies()
     setLoading(true);
-    setTimeout(() => setLoading(false), 2500)
+    setTimeout(() => setLoading(false), 2000)
   }, [])
 
   /* This return shows the img, titles, rdate & the id on our HTML page */
   return (
     <section className="startPage">
+      {loading && (<Popcorn />)}
       <div className="movie-container">
         {list.map((movie) => (
           <article className="movie-wrapper" key={movie.id}>
@@ -39,7 +40,6 @@ const MoviesList = () => {
           </article>
         ))}
       </div>
-      {loading && (<Popcorn />)}
     </section>
   )
 }
