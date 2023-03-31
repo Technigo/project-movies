@@ -6,10 +6,11 @@ The project is to use themoviedb.org's API to fetch a list of movies, display th
 
 ## The problem
 
-We will use the API to fetch information about the movies and build this application using React. On Monday 27th of March we started this week off with planning the project in a simple Trello-board, we've signed up for the TMDB and got access to our API-key for this project. 
+We used the TMDB:s API to fetch information about the movies and build this application using React. On Monday 27th of March we started this week off with planning the project in a simple Trello-board, we've signed up for the TMDB and got access to our API-key for this project. 
 
 Our goal for the week was to pair-programme as much as we can and in the end of the week we will edit this readme with more information.
+If we had more time for this, we would add more pages and fetch more information from other endpoints in the API.
 
 ## View it live
 
-Link to Netlify: TBA.
+Link to Netlify: https://w8-movies-team-skenfrukt-ylva-sandra.netlify.app/
