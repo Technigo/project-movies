@@ -10,6 +10,7 @@ const Footer = () => {
       </div>
       <div className="about-me">
         <p>Designed by Annika, Bridget, & Frida. Technigo Web Development Bootcamp 2023.</p>
+        <p>Data and images from <a href="https://www.themoviedb.org/">The Movie Database</a></p>
       </div>
     </footer>
   )
