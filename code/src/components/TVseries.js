@@ -17,10 +17,10 @@ export const TVSeries = ({ singleTvAirDate, singleTvID, originalName, poster }) 
       onMouseLeave={handleMouseLeave}>
 
       <Link to={`/TVseries/${singleTvID}`}>
-        <img src={`https://image.tmdb.org/t/p/w300${poster}`} alt="TVseries" />
+        <img src={`https://image.tmdb.org/t/p/w342${poster}`} alt="TVseries" />
         <div className={isHover ? 'description' : 'hidden-description'}>
           <h1>{originalName}</h1>
-          <p>First aired: {singleTvAirDate.first_air_date}</p>
+          <p>First aired {singleTvAirDate.first_air_date}</p>
         </div>
       </Link>
     </div>
