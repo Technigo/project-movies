@@ -10,7 +10,8 @@ const MovieDetails = () => {
   // in app.js. I also changed it in the urls.js and in this file.
   const [details, setDetails] = useState({})
 
-  const onBackButtonClick = () => {
+  const onBackButtonClick = (e) => {
+    e.preventDefault();
     navigate(-1)
   }
   // const notFoundButtonClick = () => {
