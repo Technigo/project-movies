@@ -52,13 +52,13 @@ export const MovieInfoPage = () => {
   return (
     <section
       className="details-container"
-      style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgb(0,0,0) 90%), 
+      style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgb(0,0,0) 100%), 
       url(https://image.tmdb.org/t/p/w1280/${details.backdrop_path})` }}>
       <div className="home-button-div">
         <button type="button" className="home-button" onClick={returnToHomePage}> <h1>Go Back</h1> </button>
       </div>
       <div className="movie-info-container">
-        <img className="poster-image" src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt="movie poster" />
+        <img className="poster-image" src={`https://image.tmdb.org/t/p/w300/${details.poster_path}`} alt="movie poster" />
         <div className="movie-detail-div">
           <div className="title-imdb-div">
             <h1 className="details-title">{details.title}</h1>

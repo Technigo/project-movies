@@ -3,10 +3,11 @@
 
 /* FLEX PARENT */ 
 .details-container { 
-    min-height: 100vh; 
+    height: 100vh; 
     width: 100vw;
     background-repeat: no-repeat; /* No-repeat means the background image doesn't repeat when you scroll */
     background-size: cover; /* Background image covers the entire page */
+    background-attachment: fixed;
     display: flex;
     flex-direction: column; /* Back button and movie description div are vertically layered */
 }
@@ -14,17 +15,19 @@
 
 /* BUTTON STYLING AND ANIMATION */
 .home-button {
+    position: block;
     background: none;
-    margin-top: 20px;
+    margin-top: 10px;
     border: none;
     cursor: pointer;
     transition: all 0.5s; /* makes the arrow appear/slide in/for half a second */
     text-align: center;
-    padding: 20px;
-    width: 200px;
+    padding: 10px;
+    width: 150px;
 }
 
 .home-button h1 {
+    font-size: 16px;
     display: inline-block; /* displays text and arrow animation on the same line */
     position: relative;
     transition: 0.5s;
@@ -53,11 +56,9 @@
 /* CONTAINER STYLING */
 .movie-info-container {
     margin: 3%; /* container is positioned 3% from the left and bottom */
-    position: fixed;
     bottom: 0; /* container is fixed to the bottom of the page at all times */
     display: flex;
     flex-direction: column; 
-    align-items: flex-end;
     width: 320px;
     gap: 20px;
 }
@@ -119,29 +120,45 @@ h1 {
 
 /* RESPONSIVENESS STYLING */
 
+/* SMALLEST MOBILE */
+@media (max-width: 350px) {
+    .movie-info-container {
+        width: 260px;
+        gap: 15px;
+    }
+}
+
 /* TABLET */
 @media (min-width:668px) {
     .movie-info-container {
+        position: fixed;
         flex-direction: column; 
-        align-items: flex-end;
         width: 60%;
         gap: 20px;
+    }
+
+    .home-button {
+        position: fixed;
     }
 }
 
 /* DESKTOP */
 @media (min-width: 1023px) {
     .movie-info-container {
+        position: fixed;
         flex-direction: row; 
         align-items: flex-end;
-        width: 60%;
         gap: 20px;
     }
 
+    .home-button {
+        position: fixed;
+    }
+    
     .poster-image {
         display: flex;
         align-items: flex-start;
-        width: 342px;
+        width: 300px;
     }
     .movie-detail-div {
         display: flex;
