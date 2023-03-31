@@ -79,6 +79,7 @@ p {
   position: relative; /* for absolute positioning of children */
   height: 100vh; /* 100% of viewport height */
   overflow: hidden; /* prevent scrollilng */
+  flex-wrap: wrap;
 }
 
 .backdrop-img {
@@ -155,12 +156,39 @@ p {
   line-height: 1.5;
 }
 
+.movie-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* ----------------DETAILS BUTTONS ---------------------------- */
 
 .back-btn {
-  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-left: 20px;
+  cursor: pointer;
   padding: 0px;
-  background: transparent;
-  top: 20px;
-  left: 20px;
+  border: none; /* remove default button border */
+  color: white;
+  font-size: 18px;
+  background-color: transparent;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  text-overflow: clip;
+  font-weight: bolder;
+}
+.back-btn-container {
+  display: flex;
+}
+/* --------------- make the app responsive -------------------*/
+@media (max-width: 768px) {
+  .poster-img {
+    width: 100%;
+  }
+  .small-component {
+    width: 100%;
+  }
 }
