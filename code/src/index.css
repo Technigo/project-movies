@@ -219,7 +219,7 @@ button p {
   color: white;
   display: flex;
   flex-direction: column;
-  height: 50%;
+  height: 100%;
   padding: 20px;
   gap: 10px;
 }
