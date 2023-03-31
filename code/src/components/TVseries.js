@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export const TvSeries = ({ originalName, singleTvPoster, singleTvID }) => {
+export const TVSeries = ({ singleTvAirDate, singleTvID, originalName, poster }) => {
   const [isHover, setIsHover] = useState(false)
 
   const handleMouseEnter = () => {
@@ -10,6 +10,11 @@ export const TvSeries = ({ originalName, singleTvPoster, singleTvID }) => {
   const handleMouseLeave = () => {
     setIsHover(false);
   };
+  // console.log(poster)
+  // const x = 'abc'
+  // console.log(x)
+  // console.log(x.poster_path)
+  // console.log(poster.poster_path)
 
   return (
     <div
@@ -17,9 +22,10 @@ export const TvSeries = ({ originalName, singleTvPoster, singleTvID }) => {
       onMouseLeave={handleMouseLeave}>
 
       <Link to={`/TVseries/${singleTvID}`}>
-        <img src={`https://image.tmdb.org/t/p/w300${singleTv.poster_path}`} alt="TVseries" />
+        <img src={`https://image.tmdb.org/t/p/w300${poster}`} alt="TVseries" />
         <div className={isHover ? 'description' : 'hidden-description'}>
-          <p>First aired: {singleTv.first_air_date}</p>
+          <h1>{originalName}</h1>
+          <p>First aired: {singleTvAirDate.first_air_date}</p>
         </div>
       </Link>
     </div>

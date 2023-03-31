@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom';
 import { NotFound } from './NotFound';
 
-export const TvseriesDetails = () => {
+export const TVseriesDetails = () => {
   const [details, setDetails] = useState([])
   const { id } = useParams()
 

@@ -1,37 +1,36 @@
 
 import React, { useEffect, useState } from 'react'
 import { TVSHOW_URL } from 'utils/Urls'
-import { TVseries } from 'components/TVseries'
+import { TVSeries } from './TVseries'
 
-export const TvSeriesList = () => {
-    const [tvList, setTvList] = useState([])
+export const TVSeriesList = () => {
+  const [tvList, setTvList] = useState([])
 
-    const fetchTvSeriesList = () => {
-        fetch(TVSHOW_URL)
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data.results)
-            setTvList(data.results)
-          })
-      }
-      useEffect(() => {
-        FetchTvSeriesList()
-      }, [])
-    }
+  const FetchTvSeriesList = () => {
+    fetch(TVSHOW_URL)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.results)
+        setTvList(data.results)
+      })
+  }
+  useEffect(() => {
+    FetchTvSeriesList()
+  }, [])
 
-
-return (
-  <main>
-    {tvList.map((singleTv) => (
+  return (
+    <main>
+      {tvList.map((tvshow) => (
         <div
-        className="tv-list-card"
-        key={singleTv.id}>
-        <TVseries
-        singleTvID={singleTv.id}
-        originalName={singleTv.original_name}
-        releaseDate={singleTv.first_air_date}
-        singleTvPoster={singleTv.poster_path} />
-  </div>
-    ))}
-</main>
-    )
+          className="tv-list-card"
+          key={tvshow.id}>
+          <TVSeries
+            singleTvID={tvshow.id}
+            originalName={tvshow.original_name}
+            singleTvAirDate={tvshow.first_air_date}
+            poster={tvshow.poster_path} />
+        </div>
+      ))}
+    </main>
+  )
+}
