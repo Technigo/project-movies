@@ -26,7 +26,7 @@ main {
 
 .loader {
   border: 16px solid light rgb(54, 53, 53);
-  border-top: 16px solid rgb(49, 49, 168);
+  border-top: 16px solid rgb(168, 116, 49);
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -34,12 +34,37 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  color:rgb(196, 196, 196);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 } 
+
+header h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 56px;
+  display: flex;
+  color: rgb(255, 234, 172);
+  text-shadow: 3px 3px 4px rgba(255, 217, 0, 0.5);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: capitalize;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+}
+
+header img {
+  height: 70px;
+}
 
 .movies {
   display: flex;

@@ -1,4 +1,3 @@
-/* eslint-disable react/self-closing-comp */
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { MovieList } from 'components/MovieList';
