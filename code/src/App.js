@@ -11,7 +11,7 @@ export const App = () => {
         <Route path="/" element={<MovieList />} />
         <Route path="/details/:id" element={<MovieDetails />} />
         <Route path="/404" element={<NotFound />} />
-        <Route path="*" element={<Navigate to="404" />} />
+        <Route path="*" element={<Navigate to="404" replace />} />
       </Routes>
     </BrowserRouter>
   );

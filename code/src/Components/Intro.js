@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Spinning = () => (
+const Popcorn = () => (
   <div className="loading-movies">
     <span className="loading-intro" role="img" aria-label="loading">
-    🍿
+
+      <img src="https://payload.cargocollective.com/1/1/44701/13320134/New-Yorker-Movies-GIFWEB.gif" alt="Smiley face" width="500" height="410" />
     </span>
-    <p>HELLO AAAAAA</p>
   </div>
 )
 
-export default Spinning
+export default Popcorn

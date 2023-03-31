@@ -1,7 +1,7 @@
 /* eslint-disable no-shadow */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Spinning from './Intro';
+import Popcorn from './Intro';
 
 /* STARTPAGE */
 const MoviesList = () => {
@@ -20,7 +20,7 @@ const MoviesList = () => {
   useEffect(() => {
     FetchMovies()
     setLoading(true);
-    setTimeout(() => setLoading(false), 1500)
+    setTimeout(() => setLoading(false), 2500)
   }, [])
 
   /* This return shows the img, titles, rdate & the id on our HTML page */
@@ -39,7 +39,7 @@ const MoviesList = () => {
           </article>
         ))}
       </div>
-      {loading && (<Spinning />)}
+      {loading && (<Popcorn />)}
     </section>
   )
 }

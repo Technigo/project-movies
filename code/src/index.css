@@ -44,7 +44,6 @@ code {
   right: 0;
   text-decoration: none;
 }
-
 .details:hover h1,
 .details:hover p {
 color: #fff;
@@ -63,12 +62,13 @@ background-color: rgba(0, 0, 0, 0.442);
 
 
 /* DETAILS-PAGE */
-
 .background  {
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .movie-details {
@@ -78,32 +78,70 @@ background-color: rgba(0, 0, 0, 0.442);
   margin-left: 15px;
   padding-top: 15px;
 }
-
 .movie-details img {
  border: solid white 1px;
- 
 }
 
 .details-page-2 {
   background-color: rgba(0, 0, 0, 0.585);
-  max-width: 370px;
+  max-width: 410px;
   margin: 17px;
-
+  max-height: 210px;
+  top: 520px;
+  transition: .2s ease-in-out;
 }
-
+  .details-page-2:hover {
+    transition: 0.35s ease-in-out;
+    transform: scale(1.4);
+  }
 .details-page-2 h3 {
   font-size: 23px;
   margin-bottom: -5px;
   padding: 2px;
-  
 }
-
 .details-page-2 p {
   margin-bottom: 20px;
 }
 
+
+
+/* LOADING */
+.loading-movies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.loading-movies p {
+  font-size: 30px;
+  text-align: center;
+  margin: 15px;
+}
+.loading-intro {
+  animation-name: loadintro;
+  display: block;
+  width: 90px;
+  height: 80px;
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation-duration: 800ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes loadspinning {
+from {
+    transform: rotate(0deg)
+  } 
+to {
+    transform: rotate(360deg)
+  }
+}
+
+
+
+
 /* THE BACK BUTTON */
-/* mobile */
 .button {
   position: absolute;
   left: 21%;
@@ -112,7 +150,6 @@ background-color: rgba(0, 0, 0, 0.442);
   transform: rotate(90deg);
   cursor: pointer;
 }
-
 .button span {
   display: block;
   width: 4.5vw;
@@ -123,15 +160,12 @@ background-color: rgba(0, 0, 0, 0.442);
   margin: -10px;
   animation: animate 2s infinite;
 }
-
 .button span:nth-child(2) {
   animation-delay: -0.2s;
 }
-
 .button span:nth-child(3) {
   animation-delay: -0.4s;
 }
-
 @keyframes animate {
   0% {
       opacity: 0;
@@ -145,8 +179,6 @@ background-color: rgba(0, 0, 0, 0.442);
       transform: rotate(45deg) translate(20px, 20px);
   }
 }
-
-
 
 
 
@@ -171,6 +203,23 @@ background-color: rgba(0, 0, 0, 0.442);
     margin: -10px;
     animation: animate 2s infinite;
 }
+.background  {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+}
+.details-page-2 {
+  background-color: rgba(0, 0, 0, 0.585);
+  max-width: 410px;
+  margin: 17px;
+  max-height: 210px;
+  position: absolute;
+  left: 360px;
+  top: 300px;
+ }
 }
 
   /* TABLET */
@@ -193,4 +242,22 @@ background-color: rgba(0, 0, 0, 0.442);
     margin: -10px;
     animation: animate 2s infinite;
   }
- }
+  .background  {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .details-page-2 {
+    background-color: rgba(0, 0, 0, 0.585);
+    max-width: 410px;
+    margin: 17px;
+    max-height: 210px;
+    top: 520px;
+    position: absolute;
+    right: 18px;
+    top: 308px;
+  }
+  }
