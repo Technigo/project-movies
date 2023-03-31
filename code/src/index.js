@@ -4,6 +4,7 @@ import './styling/index.css';
 import './styling/singlemovie.css';
 import './styling/footer.css'
 import './styling/trendinglist.css'
+import './styling/notfound.css'
 import { App } from './App';
 
 const container = document.getElementById('root');

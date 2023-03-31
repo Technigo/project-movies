@@ -8,9 +8,9 @@ const NotFound = () => {
   }
 
   return (
-    <div>
+    <div className="not-found">
+      <button className="back-button" type="button" onClick={onBackButtonClick}>Back to Home Page</button>
       <p>Sorry, no such page</p>
-      <button type="button" onClick={onBackButtonClick}>Back to Home Page</button>
     </div>
   )
 }
