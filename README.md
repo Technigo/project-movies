@@ -1,13 +1,11 @@
 # Project Movies
-
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+In this pair-programming assignment were creating a page in React were we displayed popular movies from an API by using Routs, Navigate etc. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started this task by doing a sketch of the pages and the different components in Figma.
+We were planning to make alot of components, but we later on discovered that it was just to overcomplicate things and felt unneccesarry so we kept it simple and clean instead.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://antonia-andreas-movie-site.netlify.app/

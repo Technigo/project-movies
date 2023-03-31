@@ -57,7 +57,7 @@ export const MovieList = () => {
         return (
           <section className="single-movie-container">
             <Link key={singleMovie.id} to={`/movieInfoPage/${singleMovie.id}`}>
-              <img className="single-movie-image" src={`https://image.tmdb.org/t/p/w300${singleMovie.poster_path}`} alt={singleMovie.title} />
+              <img className="single-movie-image" src={`https://image.tmdb.org/t/p/w400${singleMovie.poster_path}`} alt={singleMovie.title} />
               <div className="overlay-container">
                 <div className="title-releasedate-container">
                   <p className="title">{singleMovie.title}</p>
