@@ -96,16 +96,13 @@ a {
   object-fit: cover;
  
      left:0;
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
+
 }
 
 .genre-background-top {
-   height: 100vh;
+  height: 100vh;
   max-width: 100%;
-   object-fit: cover;
+  object-fit: cover;
   animation-name: fader;
 animation-timing-function: ease-in-out;
 animation-iteration-count: infinite;
@@ -119,19 +116,19 @@ animation-direction: alternate;
 }
 
 
-  @keyframes fader {
+@keyframes fader {
   0% {
   opacity:1;
-}
-45% {
-opacity:1;
-}
-55% {
-opacity:0;
-}
-100% {
-opacity:0;
-}
+  }
+  45% {
+  opacity:1;
+  }
+  55% {
+  opacity:0;
+  }
+  100% {
+  opacity:0;
+  }
 }
 
 
@@ -169,7 +166,7 @@ opacity:0;
 }
 
 .small-poster {
- border: 2px solid white;
+ border: 1px solid white;
 }
 
 .movie-details-container {
