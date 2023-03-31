@@ -5,6 +5,10 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { MovieInfoPage } from './Components/MovieInfoPage/MovieInfoPage';
 import { MovieList } from './Components/MovieList/MovieList';
 import { NotFound } from './Components/NotFound/NotFound';
+import { Header } from './Components/Header/Header';
+import { NowPlaying } from './Components/NowPlaying/NowPlaying';
+import { TopRated } from './Components/TopRated/TopRated';
+import { UpComing } from './Components/UpComing/UpComing';
 
 // /////////////////////// MAIN APP //////////////////////////////////////////////// //
 
@@ -20,8 +24,12 @@ export const App = () => {
   return (
     <BrowserRouter>
       <main>
+        <Header />
         <Routes>
           <Route path="/" element={<MovieList />} />
+          <Route path="/NowPlaying" element={<NowPlaying />} />
+          <Route path="/TopRated" element={<TopRated />} />
+          <Route path="/UpComing" element={<UpComing />} />
           <Route path="/MovieInfoPage/:id" element={<MovieInfoPage />} /> {/* Here we make a page for all uniq ID´s in the array */}
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<Navigate to="/404" />} />

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './MovieList.css';
+import '../MovieList/MovieList.css';
 import { Loading } from '../Loading/Loading';
 
 // ////////////////////////////// COMPONENT //////////////////////////////////////////////// //
@@ -11,8 +11,8 @@ import { Loading } from '../Loading/Loading';
 // The function starts with declaring,
 // the variables and sets the useState values.
 
-export const MovieList = () => {
-  const [movieList, setMovieList] = useState([])
+export const NowPlaying = () => {
+  const [nowPlayingList, setNowPlayingList] = useState([])
   const [loading, setLoading] = useState(false);
 
   // Here we are calling the API and gets the JSON inside the useEffect.
@@ -22,9 +22,9 @@ export const MovieList = () => {
 
   useEffect(() => {
     setLoading(true) // Here the loading gets a new value. This makes the <p>Loading</p> appear.
-    fetch('https://api.themoviedb.org/3/movie/popular?api_key=5e0fb7ffc6ed1b5ff2d5d2db9f68e259&language=en-US')
+    fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=5e0fb7ffc6ed1b5ff2d5d2db9f68e259&language=en-US')
       .then((res) => res.json())
-      .then((data) => setMovieList(data.results))
+      .then((data) => setNowPlayingList(data.results))
       .catch((error) => console.error(error))
       .finally(() => setLoading(false))
       // If the fetch is a success the loading gets a new value again.
@@ -54,7 +54,7 @@ export const MovieList = () => {
 
   return (
     <section className="movie-list-container">
-      {movieList.map((singleMovie) => {
+      {nowPlayingList.map((singleMovie) => {
         return (
           <section className="single-movie-container">
             <Link key={singleMovie.id} to={`/movieInfoPage/${singleMovie.id}`}>

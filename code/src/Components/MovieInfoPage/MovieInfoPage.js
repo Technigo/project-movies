@@ -36,7 +36,7 @@ export const MovieInfoPage = () => {
   // So when the button gets "onClicked" it starts this function.
 
   const returnToHomePage = () => {
-    navigate('/');
+    navigate(-1);
   };
 
   // ////////////////////////////// RETURNS JXT //////////////////////////////////////////////// //

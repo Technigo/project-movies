@@ -1,0 +1,41 @@
+.header-container {
+    background-color: black;
+    height: 80px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px 20px 20px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.active {
+   font-weight: bold;
+}
+
+.navlink-container {
+    justify-content: center;
+    padding-top: 3i0px;
+    display: flex;
+    gap: 20px;
+}
+
+.flexlistlogo {
+    width: 200px;
+}
+
+@media (max-width: 375px) { 
+    .nav-links {
+        font-size: 14px;
+    }
+
+
+   
+}
