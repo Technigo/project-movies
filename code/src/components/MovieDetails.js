@@ -70,6 +70,5 @@ const MovieDetails = () => {
     </section>
   )
 }
-// Ylva testar commit av branch
 
 export default MovieDetails;
