@@ -14,8 +14,7 @@ export const MovieDetails = () => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=37960b018b2292cd4182bc4096fb83c8&language=en-US`)
       .then((response) => response.json())
       .then((data) => setDetails(data))
-    console.log(details)
-  }, [id, details]);
+  }, [id]);
 
   return (
     <div className="MovieDetailsRender" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
