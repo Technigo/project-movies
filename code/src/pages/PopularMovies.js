@@ -23,6 +23,7 @@ const PopularMovies = () => {
 
   return (
     <section className="popular-movies-section">
+      <h1 className="section-title">Popular Movies</h1>
       <div className="movie-grid-container">
         {movies.map((movie) => {
           return (
@@ -33,7 +34,7 @@ const PopularMovies = () => {
                 <img src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`} alt={movie.title} />
                 <div className="movie-details">
                   <h1>{movie.title}</h1>
-                  <p>{movie.release_date}</p>
+                  <p>Released: {movie.release_date}</p>
                 </div>
               </Link>
             </article>

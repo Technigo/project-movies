@@ -47,7 +47,7 @@
     background-color: rgba(0, 0, 0, 0.615);
     padding: 5px;
     color: white;
-    font-size: 12px;
+    font-size: 1.2em;
     margin: 50px;
     max-width: 600px;
 }
@@ -66,15 +66,25 @@
     display: flex;
     justify-content: center;
     align-self: flex-start;
-    margin: 100px 0px 20px 0px;
-    background-color: #b3d0d8;
-    width: 80px;
-    height: 40px;
+    margin: 70px 0px 20px 0px;
+    background-color: transparent;
     color: black;
     padding: 0.3em 0.5em;
     border: none;
     border-radius: 1em;
     cursor: pointer;
+}
+.back-button img {
+  width:55px;
+  height:55px;
+  background-color: white;
+  border-radius: 50%;
+  padding:5px;
+}
+
+.back-button:hover{
+  transform: scale(1.1);
+  transition: transform 0.4s;
 }
 
 /***** TABLET *****/

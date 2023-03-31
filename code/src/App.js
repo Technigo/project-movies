@@ -12,9 +12,10 @@ import './moviedetails.css';
 
 export const App = () => {
   return (
-    <div className="outer-wrapper">
-      <BrowserRouter>
-        <Header />
+
+    <BrowserRouter>
+      <Header />
+      <div className="outer-wrapper">
         <Routes>
           <Route path="/" element={<PopularMovies />} />
           <Route path="/movies/:movieId" element={<MovieDetails />} />
@@ -24,8 +25,8 @@ export const App = () => {
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<Navigate to="/404" />} />
         </Routes>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
 
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Loader from 'components/Loader';
+import BackButton from 'components/BackButton';
 
 const TVSeriesDetails = () => {
   const [tvDetails, setTvDetails] = useState({});
@@ -28,11 +29,11 @@ const TVSeriesDetails = () => {
 
   return (
     <article className="movie-details-section">
-      <button type="button" onClick={onBackButtonClick}>Go back</button>
       {tvDetails && (
-        <div className="movie-background" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${tvDetails.backdrop_path})` }}>
+        <div className="movie-background" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${tvDetails.backdrop_path})` }}>
           <div className="movie-summary">
-            <img src={`https://image.tmdb.org/t/p/w342${tvDetails.poster_path}`} alt={tvDetails.title} />
+            <BackButton onBackButtonClick={onBackButtonClick} />
+            <img className="details-image" src={`https://image.tmdb.org/t/p/w342${tvDetails.poster_path}`} alt={tvDetails.title} />
             <div className="movie-details-text">
               <h1><span className="movie-details-title">{tvDetails.title}</span><span> ⭐ </span><span className="rating">{Math.round(tvDetails.vote_average * 10) / 10}</span></h1>
               <p>{tvDetails.overview}</p>

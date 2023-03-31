@@ -23,7 +23,7 @@ const TVSeries = () => {
 
   return (
     <section className="popular-movies-section">
-      <h1>Top TV Series</h1>
+      <h1 className="section-title">Top TV Series</h1>
       <div className="movie-grid-container">
         {tvSeries.map((show) => {
           return (

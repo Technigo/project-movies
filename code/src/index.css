@@ -92,6 +92,11 @@ code {
   display: grid;
 }
 
+.section-title{
+  color:whitesmoke;
+  font-size: 2em;
+}
+
 /***** TABLET *****/
 @media (min-width: 668px) and (max-width: 1024px){
   .movie-grid-container {
