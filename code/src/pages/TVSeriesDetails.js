@@ -28,7 +28,7 @@ const TVSeriesDetails = () => {
 
   return (
     <article className="movie-details-section">
-      <button type="button" onClick={onBackButtonClick}>Go back</button>
+      <button type="button" onClick={onBackButtonClick} className="back-button">⬅️</button>
       {tvDetails && (
         <div className="movie-background" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${tvDetails.backdrop_path})` }}>
           <div className="movie-summary">

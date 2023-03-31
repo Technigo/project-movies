@@ -27,7 +27,6 @@ const MovieDetails = () => {
 
   return (
     <article className="movie-details-section">
-
       {details && (
         <div className="movie-background" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
           <div className="movie-summary">
