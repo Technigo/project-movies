@@ -11,3 +11,58 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: aquamarine;
+}
+
+/*styling for text*/
+
+h1, h2 {
+  font-family: Special Elite;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 22px;
+}
+
+/*styling for listed items*/
+
+ul {
+  list-style: none
+}
+
+
+/*styling for buttons*/
+
+
+/*styling for links*/
+
+a:link, a:visited {
+  background-color: grey;
+  color: white;
+  padding: 14px 25px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: orange;
+}
+
+/*styling for images*/
+
+
+/*Media queries*/
+
+/*desktop
+@media (min-width: 1025px) {
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: fit-content;
+}*/

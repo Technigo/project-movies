@@ -30,3 +30,5 @@ export const Details = () => {
     </div>
   )
 }
+
+//add fetch of backdrop img

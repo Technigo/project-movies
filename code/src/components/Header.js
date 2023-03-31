@@ -6,7 +6,6 @@ const Header = () => {
     <header>
       <nav>
         <ul>
-          <li><NavLink to="/details/test">Go to details</NavLink></li>
           <li><NavLink to="/">Home</NavLink></li>
         </ul>
       </nav>
