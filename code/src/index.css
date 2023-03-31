@@ -18,10 +18,10 @@ nav {
 
 .active:after {
   display:block;
-    content:" ";
-    height: 2px;
-    background: white;
-    margin: 10px 0;
+  content:" ";
+  height: 2px;
+  background: white;
+  margin: 10px 0;
 }
 
 .nav-desktop {
@@ -66,44 +66,73 @@ a {
   font-weight: 700;
 }
 
+/* MOVIE LISTS */
+
 .list-container {
   position: relative;
-  max-width: 667px;
-  margin: 0 10px 0 10px;
-}
-
-.list-title {
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 280px;
-  color: white;
-  font-size: 20px;
-  font-weight: 700;
-  visibility: hidden;
-  z-index: 1;
-}
-
-.list-date {
-  position: absolute;
-  top: 92%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 280px;
-  color: white;
-  font-size: 16px;
-  font-weight: 500;
-  visibility: hidden;
-  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
 }
 
 .list-img {
-  max-width: 100%;
-  position: relative;
-  transition: filter 0.3s ease-in-out;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  position:relative;
+  box-sizing: border-box;
 }
 
+.test {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  color: white;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap:10px;
+  z-index:999;
+  display: none;
+  padding: 0;
+  margin: 0;
+  height: 100px;
+  padding-left: 25px;
+  box-sizing: border-box;
+}
+
+.list-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.list-date {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.list-title:hover, .list-date:hover {
+  text-decoration: underline;
+}
+
+.list-container:hover .test {
+  display: flex;
+}
+
+.list-container:hover {
+  display: flex;
+}
+
+.list-container:hover .list-img{
+  filter: brightness(0.5);
+}
+
+/* 
 .list-container:hover > .list-title {
   visibility: visible;
   transition: visibility 0s, opacity 0.3s ease-in-out;
@@ -113,10 +142,7 @@ a {
   visibility: visible;
   transition: visibility 0s, opacity 0.3s ease-in-out;
 }
-
-.list-img:hover {
-  filter: brightness(0.5);
-}
+ */
 
 /* GENRE SECTION */
 
@@ -205,44 +231,11 @@ a {
 
 /* DETAILS */
 
-/* 
-.small-poster {
- border: 1px solid white;
- width:100%;
-}
-
-.movie-details-container {
-  position: absolute;
-  top: 68%;
-  left: 50%;
-  transform: translate(-50%, -32%);
-}
-
-.movie-details {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  color: white;
-  line-height: 30px;
-}
-
-.movie-details h2 {
-  width: 280px;
-  color: white;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 45px;
-}
-
-.details-under-headline{
-  display: flex;
-  gap: 10px;
-} */
-
 .background-img {
   display: none;
   object-fit: cover;
-  height: 100vh;
+/*   position: relative; */
+/*   height: 100vh; */
   width: 100%;
   opacity: 0.5;
   mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
@@ -367,6 +360,7 @@ a {
 
   .list-container {
     max-width: 1023px;
+    padding: 0;
   }
 
   .small-poster {
@@ -418,11 +412,13 @@ a {
   .list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto, minmax(100px, 1fr));
     max-width: 2560px;
   }
 
   .list-container {
     max-width: 2560px;
+    padding: 0;
   }
 
   .list-title {
@@ -525,4 +521,20 @@ a {
   .genres p {
     font-style: normal;
   }
+
+/*   .background-img {
+    display: block;
+  } */
+
+/*   .details{
+    position: relative;
+    max-width:100%;
+  } */
+
+/*   .movie-details{
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    transform: translate(-60%, -50%);
+  } */
 }

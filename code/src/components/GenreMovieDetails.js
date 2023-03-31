@@ -1,17 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Loader } from './Loader';
 
 export const GenreMovieDetails = () => {
   const [genreMovieDetails, setGenreMovieDetails] = useState({})
   const { genreMovieId } = useParams()
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${genreMovieId}?api_key=c4d0ef560a112a28bb0aa7ff2aa79464&language=en-US`)
       .then((response) => response.json())
       .then((data) => {
         setGenreMovieDetails(data)
-      });
+      })
+      .finally(() => {
+        setTimeout(() => setLoading(false), 1500)
+      })
   }, [genreMovieId]);
+  if (loading) {
+    return (
+      <Loader />
+    )
+  }
 
   return (
     <div className="details">
