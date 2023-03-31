@@ -10,11 +10,6 @@ export const TVSeries = ({ singleTvAirDate, singleTvID, originalName, poster }) 
   const handleMouseLeave = () => {
     setIsHover(false);
   };
-  // console.log(poster)
-  // const x = 'abc'
-  // console.log(x)
-  // console.log(x.poster_path)
-  // console.log(poster.poster_path)
 
   return (
     <div
