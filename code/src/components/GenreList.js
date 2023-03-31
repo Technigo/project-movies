@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Loader } from './Loader';
@@ -28,8 +29,12 @@ export const GenreList = ({ popularMovielist }) => {
 
   return (
     <section className="genre-wrapper">
-      <img className="genre-background" src={popularMovielist[5].backdrop_path ? `https://image.tmdb.org/t/p/w1280/${popularMovielist[5].backdrop_path}` : ''} alt={popularMovielist[5].title} />
-      <img className="genre-background-top" src={popularMovielist[11].backdrop_path ? `https://image.tmdb.org/t/p/w1280/${popularMovielist[11].backdrop_path}` : ''} alt={popularMovielist[11].title} />
+      <div className="image-wrapper">
+        <img className="genre-background" src={popularMovielist[4]?.backdrop_path ? `https://image.tmdb.org/t/p/w1280/${popularMovielist[4].backdrop_path}` : ""} alt={popularMovielist[4]?.title || ""} />
+        <img className="genre-background" src={popularMovielist[8]?.backdrop_path ? `https://image.tmdb.org/t/p/w1280/${popularMovielist[8].backdrop_path}` : ""} alt={popularMovielist[8]?.title || ""} />
+        <img className="genre-background" src={popularMovielist[2]?.backdrop_path ? `https://image.tmdb.org/t/p/w1280/${popularMovielist[2].backdrop_path}` : ""} alt={popularMovielist[2]?.title || ""} />
+        <img className="genre-background" src={popularMovielist[5]?.backdrop_path ? `https://image.tmdb.org/t/p/w1280/${popularMovielist[5].backdrop_path}` : ""} alt={popularMovielist[5]?.title || ""} />
+      </div>
       <div className="genre-list-items">
         {genres.map((singleGenre) => {
           return (
@@ -43,6 +48,5 @@ export const GenreList = ({ popularMovielist }) => {
         })}
       </div>
     </section>
-
   )
 }
