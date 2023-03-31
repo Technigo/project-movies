@@ -18,22 +18,25 @@ export const MovieDetails = () => {
       .then((data) => setDetails(data))
   }, [id])
   return (
-    <div
-      className="movieDetailsWrapper"
-      style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%),url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
+    <div className="movie-detailsWrapper">
 
-      <button className="backToListBtn" type="button" onClick={onBackButtonClick}>Go Back</button>
+      <img
+        className="movie-imge-backdrop"
+        src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`}
+        alt="poster" />
 
-      <div className="movie-details-container">
-        <div className="movie-poster">
-          <img className="detailImg" src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt="profile" />
+      <button className="backBtn" type="button" onClick={onBackButtonClick}>⬅ Back</button>
+
+      <div className="moive-detailsBox">
+        <div className="poster">
+          <img className="posterImg" src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt="profile" />
         </div>
-        <div className="movie-title">
+        <div className="title">
           <h2>{details.title}</h2>
-          <div className="movie-rating">
+          <div className="rating">
             <span>{(Math.round(details.vote_average * 10) / 10)}⭐</span>
           </div>
-          <div className="movie-summary">
+          <div className="summary">
             <p>{details.overview}</p>
           </div>
         </div>

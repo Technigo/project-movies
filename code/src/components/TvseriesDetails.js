@@ -17,23 +17,26 @@ export const TvseriesDetails = () => {
       .then((response) => response.json())
       .then((data) => setDetails(data))
   }, [id])
+
   return (
-    <div
-      className="tvDetailsWrapper"
-      style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%),url(https://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
+    <div className="tvDetailsWrapper">
+      <img
+        className="tv-imge-backdrop"
+        src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`}
+        alt="poster" />
 
-      <button className="backToListBtn" type="button" onClick={onBackButtonClick}>Go Back</button>
+      <button className="backBtn" type="button" onClick={onBackButtonClick}>⬅ Back</button>
 
-      <div className="tv-details-container">
-        <div className="tv-poster">
-          <img className="detailImg" src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt="profile" />
+      <div className="tv-detailsBox">
+        <div className="poster">
+          <img className="posterImg" src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt="profile" />
         </div>
-        <div className="tv-title">
+        <div className="title">
           <h2>{details.title}</h2>
-          <div className="tv-rating">
+          <div className="rating">
             <span>{(Math.round(details.vote_average * 10) / 10)}⭐</span>
           </div>
-          <div className="tv-summary">
+          <div className="summary">
             <p>{details.overview}</p>
           </div>
         </div>

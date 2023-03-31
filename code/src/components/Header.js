@@ -4,7 +4,10 @@ import { NavLink } from 'react-router-dom';
 export const Header = () => {
   return (
     <header>
-      <nav>
+      <div className="logo">
+        <img className="logoImg" src="/cinema_city.png" alt="" />
+      </div>
+      <nav className="navlinkWrapper">
         <p>
           <NavLink to="/">Home</NavLink>
         </p>

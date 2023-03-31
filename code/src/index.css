@@ -12,10 +12,93 @@ code {
     monospace;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: grey;
+  padding: 5px 0;
+  align-items: center;
+  z-index: 1;
+}
+
+.logoImg{
+  margin: 10px;
+  width: 150px;
+  height: fit-content;
+  margin: 0;
+}
+.navlinkWrapper{
+  display: flex;
+  flex-direction: row;
+} 
+p{
+  padding: 15px;
+  
+}
+
+
+/*details page styling*/
+.movie-detailsWrapper,
+.tvDetailsWrapper,
+.upcoming-detailsWrapper{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+
+}
+.backBtn{
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 8px;
+  transform: scale(1.0);
+  transition: transform 0.6s;
+
+}
+.backBtn:hover{
+  transform: scale(1.2);
+}
+.movie-imge-backdrop,
+.tv-imge-backdrop,
+.upcoming-imge-backdrop{
+  object-fit: cover;
+  min-height: 100vh;
+  width: 100vw;
+  
+}
+.moive-detailsBox,
+.tv-detailsBox,
+.upcoming-detailsBox{
+  display: flex;
+  position: absolute;
+  bottom: 5%;
+  padding:20px;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+.title{
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px 0 15px;
+  color: white;
+  background-color: rgba(30, 29, 29, 0.582);
+  border-radius: 15px;
+  margin-left: 5px;
+}
 /* mainPage show all the movies, and if you hover the image will 
    turn darker and the name and realease date will show at the bottom */
 
-.popular-movie-container{
+/* .popular-movie-container{
   display: flex;
   flex-direction: column;
 }
@@ -33,4 +116,4 @@ code {
 .hoverBox:hover{
   position:absolute;
   z-index: 1;
-}
+} */
