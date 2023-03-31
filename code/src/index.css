@@ -29,6 +29,11 @@ h3 {
   font-size: 16px;
 }
 
+h4 {
+  text-align: center;
+  color: white;
+}
+
 /* THE FOLLOWING CLASSES ARE FROM MOVIELIST.JS */
 .movies {
   display: flex; /* this pushed all posters in to just one row */
@@ -112,17 +117,17 @@ also have the .movie-details class. */
   filter: invert(1);
 }
 
-.back-to-list {
+/* We wanted to show this text when hovering over the back-to-list-button but we didn't get it to work
+We will ask this on Mondays team session  */
+/* .back-to-list {
   display: none;
-}
+} 
 
-/* We want to show this text when hovering over the back-to-list-button but it doesn't work yet*/
 .back-to-list:hover {
   display: block;
   font-size: large;
   text-decoration: none;
-
-}
+} */
 
 .go-back-btn {
   font-size: large;
@@ -159,10 +164,6 @@ also have the .movie-details class. */
   margin-left: 10px;
   bottom: 10vh;
   font-weight: 400;
-}
-
-.title-and-rating {
-  /* display: flex; /* moves rating to next to title instead of under it */
 }
 
 .rating {
@@ -214,19 +215,6 @@ footer {
   max-width: 700px;
 }
 
-/*below is commented out for now - this was the first version with some adjustments*/
-/* footer {
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  margin-top: 2.5rem;
-  padding: 20px;
-  background-color: black;
-  border-top: solid 0.2rem #555;
-} */
-
 .footer-paragraph {
   flex-basis: 100%;
   margin-bottom: 1rem;
@@ -238,8 +226,7 @@ footer {
 .footer-section {
   /* flex-basis: 45%; */
   display: inline-block;
-  border: solid blue 2px;
-  /* display: flex; */
+    /* display: flex; */
   /* flex-wrap: wrap; */
   align-items: center;
   margin-bottom: 1rem;
@@ -264,10 +251,6 @@ footer {
   justify-content: space-around;
   flex-direction: column; */
 }
-
-/* .footer-section a:last-child {
-  margin-right: 0;
-} */
 
 .footer-favicon-text {
   margin-top: 1rem;
