@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +8,352 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: black;
+  color: white;
+  overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/*Movies*/
+.movie-container{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.image {
+  width: 100%;
+}
+
+
+.movie-list:hover .image {
+  filter: brightness(50%);
+}
+
+.movie-list:hover h2,
+.movie-list:hover p {
+  color: #fff;
+}
+.movie-list{
+  position: relative;
+}
+
+.text-container{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  text-decoration: none;
+  visibility: hidden;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.movie-list:hover .text-container{
+  visibility: visible;
+}
+/*Movies end*/
+
+/*Mobile Details*/
+.movie-info{
+ display: grid; 
+ grid-template-columns: 1fr;   
+ padding: 16px;
+}
+.background-img{ 
+
+  display: none;
+}
+
+.poster{
+  justify-self: center;
+  width: 100%;
+  position: relative; /* add position relative to the poster element */
+  z-index: 1;
+}
+h2{
+  margin: 0;
+  
+}
+.movie-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color:rgba(19, 1, 30, 0.8);
+  color: white;
+  margin-left: 10px;
+  padding-left: 9px;
+    
+  }
+
+.backButton {
+  position: absolute;
+  margin-top: 17px;
+  margin-left: 17px;
+  border-radius: 5px;
+  cursor: pointer;
+  border-style: none;
+  background-image: url('https://fontawesome.com/icons/clapperboard?f=classic&s=solid&sz=sm');
+  background-size: contain;
+  background-position: center center;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  z-index: 2;
+}
+
+/*Not found page*/
+
+.movie-dog{
+  width: 100%;
+  margin-top: 100px;
+ 
+}
+
+.backButton {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.backButton svg {
+  fill: white;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/*SPINNER*/
+
+.loading-movies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-spinner {
+  animation-name: loadspinner;
+  display: block;
+  width: 80px;
+  height: 80px;
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation-duration: 800ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes loadspinner {
+from {
+    transform: rotate(0deg)
+
+  } 
+to {
+    transform: rotate(360deg)
+  }
+}
+
+.loading-movies p {
+  font-size: 30px;
+  text-align: center;
+  margin: 15px;
+}
+
+@media (min-width: 668px) and (max-width: 1024px){
+  .movie-container{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  /*details*/
+  .backButton{
+    top: 0%;
+  }
+
+  .movie-info{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 50px;
+    height: 40vh;
+     }
+  
+     
+  
+     .poster {
+       margin-bottom: 0;
+       border: 4px solid white;
+       width: 35%;
+     }
+
+   .title {
+    font-size: 22px;
+   }
+   .movie-text p {
+    font-size: 20px;
+    width: 300px;
+   }
+  
+  .movie-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color:rgba(19, 1, 30, 0.8);
+    color: white;
+    margin-left: 10px;
+    padding-left: 9px;
+ 
+  }
+  
+  .rating {
+  margin-left: 5px;
+    padding-right: 5px;
+  }
+
+.background-img {
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://image.tmdb.org/t/p/w1280/${singleMovie.backdrop_path}");
+  object-fit: cover;
+  display: block;
+}
+
+.loading-movies p {
+  font-size: 50px;
+  margin: 40px;
+}
+}
+
+
+
+/*desktop movies*/
+
+@media (min-width: 1024px) {
+  .movie-container{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;}
+
+   .text-container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    text-decoration: none;
+    visibility: hidden;
+    font-size: 15px;
+    margin-left: 15px;
+  }
+   .text-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+   }
+
+   .text-container p {
+    font-size: 20px;
+   }
+
+   .movie-text{
+    margin: 10px, 0, 10px;
+  }
+  .image {
+    width: 100%;
+   }
+
+ .movie-list{
+  position: relative;
+}
+.movie-list:hover .text-container{
+  visibility: visible;
+}
+ 
+ /*details*/
+ .backButton{
+  top: 0%;
+}
+
+ .movie-info{
+   display: flex;
+   flex-direction: row;
+   align-items: flex-end;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   padding: 50px;
+   height: 60vh;
+    }
+ 
+    .image {
+     width: 100%;
+    }
+ 
+    .poster {
+      margin-bottom: 0;
+      border: 4px solid white;
+      width: 100%;
+    
+      object-fit: cover;  
+      max-width: 365px;  
+    }
+ 
+    .title {
+     margin-left: 10px;
+     font-size: 26px;
+    }
+ 
+    .rating {
+     margin-left: 10px;
+     font-weight: bold;
+    }
+ 
+    .movie-text p {
+     margin-left: 10px;
+     font-size: 18px;
+    }
+
+    .movie-text{
+      margin: 10px, 0, 10px;
+    }
+ 
+   .rating {
+   margin-left: 5px;
+     padding-right: 5px;
+   }
+   
+   .movie-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+      background-color:rgba(19, 1, 30, 0.8);
+    color: white;
+    margin-left: 15px;
+    padding: 15px;
+  }
+ .background-img {
+   position: relative;
+   height: 100vh;
+   width: 100%;
+   display: block;
+   object-fit: cover;
+ }
+
+ .loading-movies p {
+  font-size: 50px;
+  margin: 30px;
+}
 }

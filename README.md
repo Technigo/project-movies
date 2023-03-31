@@ -1,13 +1,9 @@
 # Project Movies
+A movie presentation page fetching data from The Movie Database (TMDB). The site is built as a single page application in React using React browser routes. Each movie has a corresponding details-page when clicked on. If the user types an invalid URL-path a custom 404 error page is shown.
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The site is built by: 
+Hannah Ek, Irupe Pozo Graviz and Jonas Jakobson.
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Check out the deployed site at:
+https://cozy-sunburst-a5adfd.netlify.app/
