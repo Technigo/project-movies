@@ -41,7 +41,7 @@ header a {
   display: flex;
 }
 
-.genre:not(:last-of-type)::after, .country:not(:last-of-type)::after {
+.country:not(:last-of-type)::after {
   content: "," "\00a0";
 }
 
@@ -123,9 +123,7 @@ a {
   height: 100vh;
   max-width: 100%;
   object-fit: cover;
- 
-     left:0;
-
+  left:0;
 }
 
 .genre-background-top {
@@ -133,15 +131,14 @@ a {
   max-width: 100%;
   object-fit: cover;
   animation-name: fader;
-animation-timing-function: ease-in-out;
-animation-iteration-count: infinite;
-animation-duration: 10s;
-animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate;
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
-  
 }
 
 
@@ -159,8 +156,6 @@ animation-direction: alternate;
   opacity:0;
   }
 }
-
-
 
 .genre-list-items {
   position: absolute;
@@ -187,26 +182,17 @@ animation-direction: alternate;
 
 /* DETAILS */
 
-.background-img {
-    width: auto;
-  height: 100vh;
-  mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
-  
-}
-
+/* 
 .small-poster {
  border: 1px solid white;
+ width:100%;
 }
 
 .movie-details-container {
   position: absolute;
-  top: 50%;
+  top: 68%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  gap: 18px;
-  height: 550px;
-  
+  transform: translate(-50%, -32%);
 }
 
 .movie-details {
@@ -228,10 +214,19 @@ animation-direction: alternate;
 .details-under-headline{
   display: flex;
   gap: 10px;
+} */
+
+.background-img {
+  display: none;
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.5;
+  mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
 }
 
 .genre {
-  padding: 5px 20px;
+  padding: 7px 20px;
   border-radius: 20px;
   background-color: grey;
   margin-right: 5px;
@@ -259,7 +254,9 @@ animation-direction: alternate;
 }
 
 .genres p {
-  font-style: italic;
+/*   font-style: italic; */
+  margin-right: 5px;
+  font-weight: 700;
 }
 
 .details-row {

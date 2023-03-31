@@ -23,7 +23,7 @@ export const GenreList = ({ popularMovielist }) => {
   return (
     <section className="genre-wrapper">
       <img className="genre-background" src={popularMovielist[14].backdrop_path ? `https://image.tmdb.org/t/p/w1280/${popularMovielist[14].backdrop_path}` : ''} alt={popularMovielist[14].title} />
-      <button type="button" onClick={onBackButtonClick}>Go back!</button>
+      <img className="genre-background-top" src={popularMovielist[11].backdrop_path ? `https://image.tmdb.org/t/p/w1280/${popularMovielist[11].backdrop_path}` : ''} alt={popularMovielist[11].title} /><button type="button" onClick={onBackButtonClick}>Go back!</button>
       <div className="genre-list-items">
         {genres.map((singleGenre) => {
           return (
