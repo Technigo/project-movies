@@ -1,13 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 export const Header = () => {
   return (
     <header>
-      <img src="../vs-movies.png" alt="Logo" />
+      <Link to="/"><img src="../vs-movies.png" alt="Logo" /></Link>
       <nav>
-        <Link to="/">Popular Movies</Link>
-        <Link to="/genre-list">Genres</Link>
+        <NavLink to="/">POPULAR MOVIES</NavLink>
+        <NavLink to="/genre-list">GENRES</NavLink>
+        <NavLink className="nav-desktop left" to="/genre-list/18">DRAMA</NavLink>
+        <NavLink className="nav-desktop" to="/genre-list/35">COMEDY</NavLink>
+        <NavLink className="nav-desktop" to="/genre-list/53">THRILLER</NavLink>
       </nav>
     </header>
   )

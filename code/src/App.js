@@ -7,6 +7,7 @@ import { NotFound } from 'components/NotFound';
 import { GenreList } from 'components/GenreList';
 import { GenreMovieList } from 'components/GenreMovieList'
 import { GenreMovieDetails } from 'components/GenreMovieDetails';
+import { Loader } from 'components/Loader';
 
 export const App = () => {
   const [list, setList] = useState([])
@@ -23,12 +24,12 @@ export const App = () => {
         console.error(console.error(e))
       })
       .finally(() => {
-        setLoading(false)
+        setTimeout(() => setLoading(false), 1500)
       })
   }, [])
   if (loading) {
     return (
-      <p>Loading...</p>
+      <Loader />
     )
   }
   return (
