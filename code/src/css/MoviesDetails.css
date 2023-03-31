@@ -74,7 +74,7 @@ h1 {
      }
 
      .background {
-        min-height: 100vh;
+        max-width: 100%;
      }
 
     .summary {
