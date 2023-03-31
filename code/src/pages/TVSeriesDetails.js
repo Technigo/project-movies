@@ -29,7 +29,7 @@ const TVSeriesDetails = () => {
   return (
     <article className="movie-details-section">
       {tvDetails && (
-        <div className="movie-background" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${tvDetails.backdrop_path})` }}>
+        <div className="movie-background" style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${tvDetails.backdrop_path})` }}>
           <div className="movie-summary">
             <button type="button" onClick={onBackButtonClick} className="back-button">⬅️</button>
             <img className="details-image" src={`https://image.tmdb.org/t/p/w342${tvDetails.poster_path}`} alt={tvDetails.title} />

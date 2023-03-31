@@ -15,33 +15,40 @@
 }
 
 
- h3 {
-    color: white;
-    font-size: xx-large;
-    margin: 0;
-
- }
-
 .navlink-container {
     list-style: none;
     display: flex;
-    gap: 1em;
+    align-items: center;
+    gap: 2em;
     margin-right:2em;
 }
 
 .navlink-container a {
     color: #fffbfb;
     text-decoration: none;
-  }
+    font-size: 1.3em;
+}
 
- .logo-image {
+.logo-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-image {
     margin: 1em;
     border-radius: 50%;
     max-width: 50px;
     max-height: 50px;
-    
-    
 }
+
+.logo-title {
+    color: white;
+    font-size: xx-large;
+    margin: 0;
+
+ }
 
 .navlink:hover {
     transform: scale(1.1);
@@ -52,5 +59,9 @@
   @media (max-width:400px) {
     header{
         width:auto;
+    }
+
+    .logo-title{
+        display:none;
     }
   }
