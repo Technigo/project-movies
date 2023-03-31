@@ -11,7 +11,7 @@ export const MovieList = ({ loading, setLoading }) => {
       .then((data) => setMovieList(data.results))
       .catch((error) => console.log(error))
       .finally(() => { setLoading(false) })
-  }, [])
+  }, [setLoading])
 
   if (loading) {
     return (

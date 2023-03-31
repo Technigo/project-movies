@@ -10,7 +10,6 @@ export const Header = () => {
   return (
     <header className="header-parent">
       <nav style={{ display: 'flex',
-        flexWrap: 'wrap',
         width: '100vw',
         justifyContent: 'flex-start',
         alignItems: 'center',

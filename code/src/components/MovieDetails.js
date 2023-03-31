@@ -24,6 +24,10 @@ export const MovieDetails = () => {
     setShowMoreInfo(false); // set state to hide more info section
   }
 
+  const yesno = (value) => {
+    return value ? 'yes' : 'no';
+  }
+
   return (
     <div>
       {movie && (
@@ -31,12 +35,12 @@ export const MovieDetails = () => {
           className="backdrop"
           style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 80%), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
           <div className="details-wrapper">
-            <img className="poster-details" src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
+            <img
+              className="poster-details"
+              src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+              alt={movie.title} />
             <div
-              className="poster-info"
-              style={{ width: '90vw',
-                display: 'flex',
-                flexDirection: 'column' }}>
+              className="poster-info">
               <h2 style={{ margin: '0' }}>
                 <span style={{ color: 'white' }}>{movie.title} <br /></span>
                 <span style={{ color: 'white', marginLeft: '10px' }}>
@@ -46,19 +50,28 @@ export const MovieDetails = () => {
               </h2>
               <p className="synopsis" style={{ color: 'white', fontWeight: 'bold', marginBottom: 0 }}>{movie.overview}</p>
             </div>
-            <div>
-              {!showMoreInfo && ( // show moreBtn only if more info section is not displayed
-                <button className="moreBtn" type="button" onClick={handleMoreBtnClick}>
-                More
-                </button>
-              )}
-              {showMoreInfo && ( // show more info section only if it is supposed to be displayed
+            {!showMoreInfo && ( // show moreBtn only if more info section is not displayed
+              <button className="moreBtn" type="button" onClick={handleMoreBtnClick}>
+                Show more
+              </button>
+            )}
+            {showMoreInfo && ( // show more info section only if it is supposed to be displayed
+              <div className="more-info-wrapper">
                 <div className="more-info" onClick={handleMoreInfoClick}>
-                  <p>{movie.first_air_date}{movie.last_air_date}</p>
-                  <p>Seasons:{movie.number_of_seasons}</p>
+                  <p>Release date:{'  '}{movie.release_date}</p>
+                  <p>Runtime:{'  '}{movie.runtime}</p>
+                  <p>Part of a collection:{'  '}{yesno(movie.belongs_to_collection)}</p>
+                  <p>Budget:{'  '}{movie.budget}{' '}$</p>
+                  <p>Revenue:{'  '}{movie.revenue}</p>
+                  <p>Country of origin:{' '}{movie.origin_country}</p>
+                  <p style={{ display: 'flex', flexDirection: 'column' }}>
+                    Genre:{' '}{movie.genres.map((genres) => {
+                      return <p style={{ margin: '5px' }}>{genres.name}</p>
+                    })}
+                  </p>
                 </div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>
       )}

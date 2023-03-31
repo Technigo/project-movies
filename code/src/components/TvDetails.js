@@ -24,6 +24,10 @@ export const TvDetails = () => {
     setShowMoreInfo(false); // set state to hide more info section
   }
 
+  const yesno = (value) => {
+    return value ? 'yes' : 'no';
+  }
+
   return (
     <div>
       {tv && (
@@ -34,10 +38,7 @@ export const TvDetails = () => {
               src={`https://image.tmdb.org/t/p/original${tv.poster_path}`}
               alt={tv.title} />
             <div
-              className="poster-info"
-              style={{ width: '90vw',
-                display: 'flex',
-                flexDirection: 'column' }}>
+              className="poster-info">
               <h2 style={{ margin: '0' }}>
                 <span style={{ color: 'white' }}>{tv.title} <br /></span>
                 <span style={{ color: 'white', marginLeft: '10px' }}>
@@ -59,13 +60,24 @@ export const TvDetails = () => {
             </div>
             {!showMoreInfo && ( // show moreBtn only if more info section is not displayed
               <button className="moreBtn" type="button" onClick={handleMoreBtnClick}>
-                More
+                Show more
               </button>
             )}
             {showMoreInfo && ( // show more info section only if it is supposed to be displayed
-              <div className="more-info" onClick={handleMoreInfoClick}>
-                <p>{tv.first_air_date}{tv.last_air_date}</p>
-                <p>Seasons:{tv.number_of_seasons}</p>
+              <div className="more-info-wrapper">
+                <div className="more-info" onClick={handleMoreInfoClick}>
+                  <p>On air:{'  '}{tv.first_air_date}{' '}-{' '}{tv.last_air_date}</p>
+                  <p>In production:{'  '}{yesno(tv.in_production)}</p>
+                  <p>Seasons:{'  '}{tv.number_of_seasons}</p>
+                  <p>Total number of episodes:{' '}{tv.number_of_episodes}</p>
+                  <p>Country of origin:{' '}{tv.origin_country}</p>
+                  <p style={{ display: 'flex', flexDirection: 'column' }}>
+                    Genre:{' '}{tv.genres.map((genres) => {
+                      return <p style={{ margin: '5px' }}>{genres.name}</p>
+                    })}
+                  </p>
+                  <p>Type:{' '}{tv.type}</p>
+                </div>
               </div>
             )}
           </div>

@@ -11,7 +11,7 @@ export const TvList = ({ loading, setLoading }) => {
       .then((data) => setTvList(data.results))
       .catch((error) => console.log(error))
       .finally(() => { setLoading(false) })
-  }, [])
+  }, [setLoading])
 
   if (loading) {
     return (

@@ -85,6 +85,7 @@ a {
  min-width: 190px;
  border: 5px solid white;
  width: 70%;
+ margin-bottom: 5px;
  }
 
 .backBtn {
@@ -106,7 +107,7 @@ a {
 }
 
 .moreBtn {
-  border-style: hidden;
+  border-style: solid;
   margin-bottom: 5%;
   background-color: transparent;
   color: white;
@@ -116,10 +117,23 @@ a {
   margin-right: 5%
 }
 
-.more-info {
-  color: white;
+.more-info-wrapper {
+  border-radius: 50px;
+  overflow: hidden;
   margin-right: 5%;
   margin-bottom: 5%;
+  width: 40vw;
+}
+
+.more-info {
+  color: white;
+  backdrop-filter: brightness(0.3);
+  padding: 20px;
+}
+
+.more-info p {
+  margin: 10px;
+  font-weight: 700;
 }
 
 .nav-p {
@@ -128,32 +142,38 @@ a {
   font-weight: 700;
   align-items: center;
   justify-content: center;
-  margin: 10px;
+}
+
+.poster-info {
+  width: 95%;
 }
 
 @media screen and (min-width: 800px) {
 
 .moreBtn {
   display: block;
+  font-weight: 700;
 }
 
 .poster-details {
   max-width: 342px;
   margin-top: 0;
   margin: 5%;
+  margin-bottom: 5%;
 }
   
-.details-wrapper{
+.details-wrapper {
   display:flex;
   flex-direction: row;
   align-items: flex-end;
   height: 90vh;
 }
-.poster-info{
+.poster-info {
+  display: flex;
+  flex-direction: column;
   align-items: baseline;
   margin-bottom: 5%;
-  margin-left: 50px;
-  max-width: 50vw;
+  width: 50vw;
 }
 .synopsis{
   max-width: 70%;
