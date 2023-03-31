@@ -1,13 +1,15 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import Logoimage from '../images/moviesheader.PNG'
 
 const Header = () => {
   return (
     <header>
+      <img className="logo-image" src={Logoimage} alt="site logo" />
       <nav>
-        <Link to="/"> Home </Link>
-        <Link to="/aboutus"> About us </Link>
+        <NavLink to="/"> Home </NavLink>
+        <NavLink to="/aboutus"> About us </NavLink>
       </nav>
     </header>
   )

@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
+import Arrowicon from '../images/left-icon.svg'
+
 const Moviedetails = () => {
   const [movie, setMovie] = useState({})
   const navigate = useNavigate()
@@ -22,8 +24,19 @@ const Moviedetails = () => {
     <section
       className="details-page"
       style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }}>
-      <button type="button" onClick={homeButton}> Back to movie list! </button>
-      <h2>{movie.title}</h2>
+      <button type="button" onClick={homeButton}><img src={Arrowicon} alt="left arrow" className="left-arrow" /><p>Back to movie list!</p></button>
+      <div className="movie-card">
+        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+        <div className="text-details">
+          <h2>{movie.title}</h2>
+          <h3>{movie.tagline}</h3>
+          <h4>Release-date: {movie.release_date}</h4>
+          <h4> Rating: ⭐ {movie.vote_average}</h4>
+          <article>
+            {movie.overview}
+          </article>
+        </div>
+      </div>
     </section>
   )
 }
