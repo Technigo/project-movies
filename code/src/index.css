@@ -91,7 +91,7 @@ p {
   align-items: flex-start;
 }
 
-.movie-detail img {
+.movie-detail .tv-detail img {
   max-width: 70%;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -122,6 +122,25 @@ main {
 }
 
 .movie-card a:hover > img{
+  opacity: 0.5;
+  transition: 0.3s ease-in-out;
+}
+
+/*DESIGN FOR TV */
+.tv-list-card {
+  position: relative;
+}
+
+.tv-list-card img{
+  width: 100%;
+}
+
+.tv-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.tv-list-card a:hover >img{
   opacity: 0.5;
   transition: 0.3s ease-in-out;
 }
@@ -168,6 +187,8 @@ main {
   margin: 5px;
 }
 
+
+
 /** MEDIA QUERIES **/
 @media (min-width: 360px){
   main {
@@ -177,7 +198,7 @@ main {
     justify-items: center;
     }
 
-  .movie-card {
+  .movie-card .tv-card {
     width: 70%;
   }
 

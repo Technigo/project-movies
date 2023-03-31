@@ -36,7 +36,7 @@ export const TVseriesDetails = () => {
       <div className="tv-detail">
         <img src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt="profile" />
 
-        <div className="detail">
+        <div className="tv-detail">
           <h1>{details.title}</h1>
         </div>
         <p>{details.overview}</p>
