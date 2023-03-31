@@ -150,6 +150,10 @@ a {
 
 @media screen and (min-width: 800px) {
 
+.nav-p {
+  font-size: 22px;
+}
+
 .moreBtn {
   display: block;
   font-weight: 700;
@@ -176,14 +180,14 @@ a {
   width: 50vw;
 }
 .synopsis{
-  max-width: 70%;
-  
-  
+  max-width: 70%; 
 }
+
 .details-wrapper h2{
   align-self: flex-start;
   margin-bottom: 0;
 }
+
 }
 
 @media screen and (max-height: 750px) {
