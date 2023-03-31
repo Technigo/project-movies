@@ -1,0 +1,23 @@
+
+.loading {
+    display: flex;
+    justify-content: center;
+    font-size: 150px;
+    padding-top: 150px;
+}
+
+.loading span {
+    animation: bounce 0.5s ease-in-out infinite;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-40px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
