@@ -12,24 +12,34 @@ code {
     monospace;
 }
 
-.movie-poster{
+a {
+  text-decoration: none;
+}
+
+.header-parent {
+  background-color: black;
+}
+
+.poster{
   max-width: 342px;
   min-width: 190px;
 }
 
-.single-movie-wrapper {
+.list-wrapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   background: black;
-  padding-top: 70px;
 }
 
-.movie-backdrop {
-z-index: -1;
+.backdrop {
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.movie-link {
+.list-ink {
   text-decoration: none !important;
   color: white;
   opacity: 1;
@@ -37,7 +47,7 @@ z-index: -1;
   min-width: 190px;
 }
 
-.single-movie-child {
+.single-item-child {
   max-Width: 342px;
   min-Width: 190px;
   position: absolute;
@@ -51,37 +61,34 @@ z-index: -1;
   align-items: center;
 }
 
-.single-movie-child:hover {
+.single-list-child:hover {
   opacity: 1;
   backdrop-filter: brightness(0.5);
   transition: 0.4s ease;
 }
 
-.single-movie-child:hover {
+.single-list-child:hover {
   display: flex;
 }
 
-.details-wrapper{
+.details-wrapper {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  height: 95vh;
+  justify-content: flex-start;
   align-items: center;
-  height: 100vh;
-  justify-content: space-around;
 }
 
-.movie-poster-details {
- margin-top: 100px;
- margin-bottom: 10px;
- margin-bottom: 5%;
- margin-left: 5%;
+.poster-details {
+ margin-top: 5%;
  max-width: 300px;
  min-width: 190px;
+ border: 5px solid white;
+ width: 70%;
  }
 
 .backBtn {
   display: flex;
-  backdrop-filter: opacity(1);
   border-style: hidden;
   width: 50px;
   height: 50px;
@@ -98,26 +105,55 @@ z-index: -1;
   display: block;
 }
 
-@media screen and (min-width: 800px) {
-
-.single-movie-wrapper {
-  padding-top: 80px;
+.moreBtn {
+  border-style: hidden;
+  margin-bottom: 5%;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  font-family: inherit;
+  display: none;
+  margin-right: 5%
 }
 
-.movie-poster-details {
- max-width: 342px;
+.more-info {
+  color: white;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+
+.nav-p {
+  display: inline;
+  color: white;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+@media screen and (min-width: 800px) {
+
+.moreBtn {
+  display: block;
+}
+
+.poster-details {
+  max-width: 342px;
+  margin-top: 0;
+  margin: 5%;
 }
   
 .details-wrapper{
   display:flex;
   flex-direction: row;
   align-items: flex-end;
-  height: 100vh;
+  height: 90vh;
 }
 .poster-info{
   align-items: baseline;
   margin-bottom: 5%;
   margin-left: 50px;
+  max-width: 50vw;
 }
 .synopsis{
   max-width: 70%;
@@ -135,7 +171,7 @@ z-index: -1;
     margin: 0;
   }
 
-  .movie-poster-details {
+  .poster-details {
     margin-bottom: 0
 }
 }
