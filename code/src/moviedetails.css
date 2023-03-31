@@ -72,6 +72,7 @@
     border: none;
     border-radius: 1em;
     cursor: pointer;
+    opacity: 0.7;
 }
 .back-button img {
   width:55px;
@@ -79,6 +80,10 @@
   background-color: white;
   border-radius: 50%;
   padding:5px;
+}
+
+.back-button:hover{
+  opacity: 1;
 }
 
 /***** TABLET *****/
