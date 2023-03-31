@@ -2,6 +2,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+/* Component that shows the list of popular movies. The data is fetched in App.js */
 export const MovieList = ({ movies }) => {
   return (
     <section className="movie-list">

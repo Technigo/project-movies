@@ -22,11 +22,11 @@ export const App = (movie) => {
       })
       .finally(() => {
         setTimeout(() => {
-          setLoading(false);
-        }, 2600);
+          setLoading(false); /* timeout to make sure the loading animation shows */
+        }, 2000);
       })
   }, [])
-
+  /* Loading animation */
   if (loading) {
     return (<div className="popcorn-icon-wrapper"><img className="popcorn-icon" src={Popcorn} alt="Loading..." /></div>)
   }

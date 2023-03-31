@@ -1,13 +1,10 @@
 # Project Movies
-
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The aim of this project was to build a multi-page movie application, that shows a list a popular releases. The project had to be built using react-router-dom.
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Overall, the React/JavaScript part went smoothly, but we had a problem fetching the data in MovieDetails. The problem turned out to be that we had replicated fetch from App.js, where we had fetched data.result. Result turned out to be a specific level in the json for the list. In MovieDetails we had to fetch the list from the top level.
+The CSS was a struggle, especially responsiveness and working with the images from the API.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://gregarious-crostata-717649.netlify.app/

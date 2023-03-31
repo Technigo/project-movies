@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  margin: 0;  
+  margin: 0;
 }
 
 body {
@@ -36,6 +36,7 @@ code {
   background-color: black;
   transition: 0.3s;
   flex-grow: 1;
+  width: 25%;
 }
 
 .list-item-poster {
@@ -64,6 +65,7 @@ code {
   transition: 0.3s;
 }
 
+/* Animation for popcorn-spinner */
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -89,59 +91,89 @@ code {
   animation-timing-function: linear;
 }
 
+/* Media uqeries for MovieList */
+@media (max-width: 820px) {
+  .list-item-wrapper {
+    width: 33%;
+  }
+}
+
+@media (max-width: 570px) {
+  .list-item-wrapper {
+    width: 50%;
+  }
+}
+
+@media (max-width: 370px) {
+  .list-item-wrapper {
+    width: 100%;
+  }
+}
+
+
 /* Styling for MovieDetails */
 
 .details-section-wrapper {
   position: relative;
+  height: 100vh;
+  width: 100vw;
 }
 
 .background-image {
-height: 100vh;
+height: 100%;
+width: 100%;
 position: relative;
+object-fit: cover;
+background-position: center; 
 }
 
 .back-button {
-  width: fit-content;
   background: none;
   border: none;
   height: 70px;
+  width: 70px;
+  margin: 0.8rem auto 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .back-button-image{
-  height: 50px;
-  margin-left: 3rem;
-  margin-top: 1rem;
+  height: 77%;
   transition: 0.3s;
 }
 
 .back-button-image:hover {
-  height: 70px;
+  height: 95%;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .details-wrapper {
-  border: red dotted 1px;
   color: white;
   position: absolute;
   bottom: 0;
   left: 0;
   text-align: left;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   transition: 0.3s;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
 }
 
 .movie-details {
   display: flex;
-  margin: auto auto 3rem 3rem; 
+  margin: auto 3rem 3rem 3rem; 
 }
 
 .movie-details-poster {
-  border: red dotted 2px;
+  height: 50vh;
+  border: 5px solid #fff;
+  margin-bottom: 10px;
 }
 
 .movie-details-text {
@@ -155,16 +187,40 @@ position: relative;
 .movie-details-box {
   background-color: rgba(0, 0, 0, .80);
   padding: 0.8rem;
+  margin-bottom: 10px;
 }
 
 .movie-title {
   margin-bottom: 1rem;
+  font-size: 24px;
 }
 
 .rating {
   margin-bottom: 1rem;
+  font-size: 16px; 
 }
 
 .movie-details-summary {
-  width: 400px;
+  min-width: 200px;
+  max-width: 400px;
+  font-size: 16px;
+}
+
+/* Media queries for MovieDetails */
+@media (max-width: 570px) {
+ .movie-details {
+  flex-direction: column;
+  align-items: center;
+  margin: auto 0.5rem 3rem 0.5rem; 
+ }
+
+ .movie-details-text {
+  width: 100%;
+  margin: 0;
+ }
+
+ .back-button {
+  margin: 0 auto 0.5rem 0.5rem;
+}
+
 }

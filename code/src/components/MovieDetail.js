@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import Button from './image/back-button.png'
 
+/* Component that fetches details for the chosen movie */
 export const MovieDetails = () => {
   const [movie, setMovie] = useState({})
   const { movieId } = useParams();
@@ -17,13 +18,14 @@ export const MovieDetails = () => {
       .catch((e) => { console.error(e) })
   }, [movieId])
 
+  /* Button that navigates back 1 level (uses useNavigate hook) */
   const onBackButtonClick = () => {
     navigate(-1);
   }
 
   return (
     <div className="details-section-wrapper">
-      <img className="background-image" src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt={movie.title} />
+      <img className="background-image" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title} />
       <div className="details-wrapper">
         <button type="button" className="back-button" onClick={onBackButtonClick}>
           <img className="back-button-image" alt="go back" src={Button} />
