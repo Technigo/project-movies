@@ -209,41 +209,48 @@ h4 {
 }
 
 .popcorn-container {
-  position: relative;
-  width: 200px; /* adjust to desired width */
-  height: 200px; /* adjust to desired height */
-}
-
-.popcorn-slice {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 10%; /* adjust to desired slice width */
-  height: 100%;
-  background-image: url('/public/logos/palomita.png');
-  background-size: cover;
-  animation: slice-and-spin 1s ease-in-out infinite;
-  transform-origin: left center;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
 }
 
-@keyframes slice-and-spin {
-  0% {
-    transform: translateY(-100%) rotate(0deg);
+.popcorn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  animation: explode 1s linear forwards;
+}
+
+@keyframes explode {
+  0%, 10% {
+    transform: translateY(0) scale(1) rotate(0);
+  }
+  20% {
+    transform: translateY(0) scale(1) rotate(-5deg);
+  }
+  30% {
+    transform: translateY(0) scale(1) rotate(5deg);
+  }
+  40% {
+    transform: translateY(0) scale(1) rotate(-5deg);
   }
   50% {
-    transform: translateY(0) rotate(360deg);
+    transform: translateY(0) scale(1) rotate(0);
+  }
+  60% {
+    transform: translateY(-50%) scale(1.5);
   }
   100% {
-    transform: translateY(100%) rotate(0deg);
+    transform: translateY(0) scale(0);
+    opacity: 0;
   }
 }
 
-.popcorn-slice:nth-of-type(1) {
-  left: 0%;
-}
 
-.popcorn-slice:nth-of-type(2) {
-  left: 10%;
-}
 
 
