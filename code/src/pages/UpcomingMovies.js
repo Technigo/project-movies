@@ -23,7 +23,7 @@ const UpcomingMovies = () => {
 
   return (
     <section className="upcoming-movies-section">
-      <h1>Upcoming Movies</h1>
+      <h1 className="section-title">Upcoming Movies</h1>
       <div className="movie-grid-container">
         {upcomingMovies.map((movie) => {
           return (
@@ -34,7 +34,7 @@ const UpcomingMovies = () => {
                 <img src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`} alt={movie.title} />
                 <div className="movie-details">
                   <h1>{movie.title}</h1>
-                  <p>Release Date: {movie.release_date}</p>
+                  <p>Released {movie.release_date}</p>
                 </div>
               </Link>
             </article>
