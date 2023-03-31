@@ -13,10 +13,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
-=======
     "react-router": "^6.9.0",
->>>>>>> c60fbc28a48784397a671b588e407ecf3176e29c
     "react-router-dom": "^6.9.0"
   },
   "scripts": {
