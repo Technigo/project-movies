@@ -3,7 +3,11 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import NotFound from 'components/NotFound';
 import TrendingList from 'components/TrendingList';
 import SingleMovie from 'components/SingleMovie';
+<<<<<<< HEAD
 import './index.css'
+=======
+import Footer from 'components/Footer';
+>>>>>>> singlemovie
 
 export const App = () => {
   return (
@@ -14,6 +18,7 @@ export const App = () => {
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
