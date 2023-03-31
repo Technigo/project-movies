@@ -39,9 +39,10 @@ header {
 }
 
 nav {
-  width: 75%;
+  width: 85%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  gap: 2px;
 }
 
 nav a {
@@ -49,7 +50,7 @@ nav a {
 }
 
 .aboutus {
-  height: 800px;
+  height: 550px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -276,8 +277,16 @@ button p {
   nav {
     width: 90%;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 30px;
 
+  }
+
+  .aboutus {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .details-page {

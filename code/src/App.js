@@ -7,6 +7,7 @@ import Movies from './components/Movies'
 import Notfound from './components/Notfound'
 import Loadingscreen from './components/Loadingscreen'
 import Header from './components/Header'
+import Popularmovies from './components/Popularmovies'
 
 const Upcomingmovies = ('https://api.themoviedb.org/3/movie/upcoming?api_key=b6486ef7752f2120246f9cab35f64ece&language=en-US&page=1')
 
@@ -32,6 +33,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Movies movieList={movieList} />} />
         <Route path="/moviedetails/:movieId" element={<Moviedetails />} />
+        <Route path="/popularmovies" element={<Popularmovies />} />
         <Route path="/404" element={<Notfound />} />
         <Route path="/*" element={<Navigate to="/404" replace />} />
         <Route path="/aboutus" element={<Aboutus />} />
