@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/eslint-parser": "^7.18.9",
+    "dom": "^0.0.3",
     "eslint": "^8.21.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.26.0",
@@ -12,6 +13,10 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
+=======
+    "react-router": "^6.9.0",
+>>>>>>> c60fbc28a48784397a671b588e407ecf3176e29c
     "react-router-dom": "^6.9.0"
   },
   "scripts": {
