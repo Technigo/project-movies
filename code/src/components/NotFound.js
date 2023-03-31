@@ -8,9 +8,10 @@ export const NotFound = () => {
     navigate('/')
   }
   return (
-    <div>
-      <p>Sorry, this page doesn&apos;t exist</p>
-      <button type="button" onClick={onHomeButtonClick}>Return to Home Page</button>
+    <div className="not-found">
+      <img src="./vs-movies.png" alt="Logo" />
+      <p>Sorry, this page doesn&apos;t exist.</p>
+      <button className="backBtn" type="button" onClick={onHomeButtonClick}>Return to Home Page</button>
     </div>
   )
 }

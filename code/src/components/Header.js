@@ -4,7 +4,7 @@ import { NavLink, Link } from 'react-router-dom';
 export const Header = () => {
   return (
     <header>
-      <Link to="/"><img src="../vs-movies.png" alt="Logo" /></Link>
+      <Link to="/"><img src="./vs-movies.png" alt="Logo" /></Link>
       <nav>
         <NavLink to="/">POPULAR</NavLink>
         <NavLink to="/genre-list">GENRES</NavLink>
