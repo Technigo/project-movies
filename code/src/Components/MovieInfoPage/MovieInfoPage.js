@@ -58,19 +58,15 @@ export const MovieInfoPage = () => {
         <button type="button" className="home-button" onClick={returnToHomePage}> <h1>Go Back</h1> </button>
       </div>
       <div className="movie-info-container">
-        <div className="poster-image-div">
-          <img className="poster-image" src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt="movie poster" />
-        </div>
+        <img className="poster-image" src={`https://image.tmdb.org/t/p/w342/${details.poster_path}`} alt="movie poster" />
         <div className="movie-detail-div">
           <div className="title-imdb-div">
             <h1 className="details-title">{details.title}</h1>
             <h1 className="imdb-numbers"><span>&#11088; {details.vote_average?.toFixed(1)}</span></h1>
           </div>
-          <div className="movie-overview-div">
-            <p className="movie-overview">{details.overview}</p>
-            {/* the .toFixes method gives us the opportunity to decide how many decimals we want.
+          <p className="movie-overview">{details.overview}</p>
+          {/* the .toFixes method gives us the opportunity to decide how many decimals we want.
             The questionmark checks if the answer from the api is valid to use */}
-          </div>
         </div>
       </div>
     </section>
