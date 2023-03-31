@@ -226,6 +226,15 @@ h4 {
   animation: explode 1s linear forwards;
 }
 
+.popcorn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  animation: explode 1s linear forwards; /* Increase the animation duration */
+}
+
 @keyframes explode {
   0%, 10% {
     transform: translateY(0) scale(1) rotate(0);
@@ -240,16 +249,26 @@ h4 {
     transform: translateY(0) scale(1) rotate(-5deg);
   }
   50% {
-    transform: translateY(0) scale(1) rotate(0);
+    transform: translateY(0) scale(1) rotate(5deg);
   }
   60% {
-    transform: translateY(-50%) scale(1.5);
+    transform: translateY(0) scale(1) rotate(-5deg);
+  }
+  70% {
+    transform: translateY(0) scale(1) rotate(5deg);
+  }
+  80% {
+    transform: translateY(0) scale(1) rotate(0);
+  }
+  85% {
+    transform: translateY(-50%) scale(2);
   }
   100% {
     transform: translateY(0) scale(0);
     opacity: 0;
   }
 }
+
 
 
 

@@ -5,7 +5,7 @@ const PopcornLoader = () => {
     <div className="popcorn-container">
       <img
         className="popcorn"
-        src="/logos/palomita.png"
+        src="/logos/palomitaL.png"
         alt="pop-corn" />
     </div>
   );
