@@ -23,10 +23,10 @@ header img {
 
 .active:after {
   display:block;
-    content:" ";
-    height: 2px;
-    background: white;
-    margin: 10px 0;
+  content:" ";
+  height: 2px;
+  background: white;
+  margin: 10px 0;
 }
 
 .nav-desktop {
@@ -241,10 +241,11 @@ a {
 .background-img {
   display: none;
   object-fit: cover;
-  height: 100vh;
+/*   position: relative; */
+/*   height: 100vh; */
   width: 100%;
   opacity: 0.5;
-  mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
+  mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,1),  rgba(0,0,0,0));
 }
 
 .genre {
@@ -418,4 +419,20 @@ a {
   .nav-mobile {
     display:none;
   }
+
+/*   .background-img {
+    display: block;
+  } */
+
+/*   .details{
+    position: relative;
+    max-width:100%;
+  } */
+
+/*   .movie-details{
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    transform: translate(-60%, -50%);
+  } */
 }
