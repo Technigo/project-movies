@@ -1,5 +1,6 @@
 
-  .foot-container {
+
+.foot-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +11,7 @@
   
   .icon-link  {
     color: red;
-    font-size: 43px;
+    font-size: 30px;
     padding: 0 20px 0 20px;
   }
   
@@ -20,7 +21,23 @@
   
   .byFoot {
     font-family: "Courier New";
-    font-size: 22px;
+    font-size: 16px;
     color: white;
-    margin: 10px 0 14px 0;
+    margin: 10px auto 14px auto;
+    max-width: 80%;
+    text-align: center;
   }
+
+
+  @media (min-width: 820px) {
+
+      .icon-link  {
+        font-size: 43px;
+      }
+      
+      .byFoot {
+        font-size: 22px;
+      }
+  }
+
+
