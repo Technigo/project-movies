@@ -1,0 +1,137 @@
+.movie-detail-wrapper {
+display: flex;
+align-items: center;
+}
+
+.movie-detail {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0px;
+  background: rgb(0 0 0 / 50%);
+  overflow: none;
+  min-height: 100vh;
+  width: 100vw; /* Use 100% of the viewport width */
+}
+
+.movie-detail > img {
+  border: 3px solid white;
+  width: 80%;
+}
+
+.movie-detail p {
+  padding: 1px 20px 0px 22px;
+  text-align: left;
+}
+
+.background {
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: hidden;
+  padding: 0;
+}
+
+.title-vote {
+  display: flex;
+  flex-direction: column;
+ 
+  margin-bottom: 20px;
+  font-size: 25px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.title-vote h3 {
+  color: white;
+  margin-left: 0px;
+  padding: 25px 10px 25px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  width: 100%;
+  margin: 20px 0 60px 0;
+}
+
+.details-title {
+  font-size: 20px;
+  padding: 24px 0px 0px 6px;
+  text-align: center;
+}
+
+.details-rating {
+  font-size: 16px;
+  padding: 6px 0px 20px 6px;
+  text-align: center;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  cursor: pointer;
+  margin: 40px 20px 40px 2px;
+  color: white;
+  text-decoration: none;
+}
+
+.back-button img {
+  content: url(arrow-left-128.png);
+  height: 24px;
+  width: 24px;
+}
+
+.back-button p {
+  margin: 0px 0px 0px 10px;
+  font-weight: 800;
+}
+
+.back-button:hover {
+  transform: scale(1.04);
+  transition: 0.2s ease-in-out;
+}
+
+@media (min-width: 560px) {
+  .background {
+    padding: 0;
+  }
+
+  .details {
+    max-width: 500px;
+    font-size: 24px;
+    }
+
+  .movie-detail {
+    padding: 36px;
+  }
+
+  .details-title {
+    font-size: 28px;
+    padding: 24px 0px 0px 186px;
+    text-align: center;
+  }
+  
+  .details-rating {
+    font-size: 18px;
+    padding: 24px 0px 0px 186px;
+    text-align: center;
+  }
+
+  .movie-detail > img {
+    width: 240px;
+  }
+}
