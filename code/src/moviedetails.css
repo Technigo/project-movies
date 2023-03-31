@@ -72,7 +72,6 @@
     border: none;
     border-radius: 1em;
     cursor: pointer;
-    opacity: 0.7;
 }
 .back-button img {
   width:55px;
@@ -83,7 +82,8 @@
 }
 
 .back-button:hover{
-  opacity: 1;
+  transform: scale(1.1);
+  transition: transform 0.4s;
 }
 
 /***** TABLET *****/
