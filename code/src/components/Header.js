@@ -11,16 +11,16 @@ const Header = () => {
     setShowNavbar(!showNavbar)
   }
   return (
-    <nav className="navbar">
-      <div className="container">
-        <div className="logo-container" />
-        <Link to="/">
-          <img className="logo-image" src="../images/popcorn-logo.jpg" alt="Movie Page Logo" />
-        </Link>
-        <Link to="/" style={{ textDecoration: 'none' }}>
-          <h3 className="logo-title">MOVIE NIGHT</h3>
-        </Link>
-        <div />
+    <div className="navbar-wrapper">
+      <div className="navbar-container">
+        <div className="logo-container">
+          <Link to="/">
+            <img className="logo-image" src="../images/popcorn-logo.jpg" alt="Movie Page Logo" />
+          </Link>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <h3 className="logo-title">MOVIE NIGHT</h3>
+          </Link>
+        </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
           <img src="../images/burger-bar.png" alt="menu" style={{ width: 40, height: 40, backgroundColor: 'whitesmoke', borderRadius: 5 }} />
         </div>
@@ -38,7 +38,7 @@ const Header = () => {
           </ul>
         </div>
       </div>
-    </nav>
+    </div>
   )
 };
 export default Header;
