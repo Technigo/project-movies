@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { UP_COMING_URL } from 'utils/urls';
+import { UPCOMING_URL } from 'utils/urls';
 
 export const Upcoming = () => {
   const [upcoming, setUpcoming] = useState([]);
 
   useEffect(() => {
-    fetch(UP_COMING_URL)
+    fetch(UPCOMING_URL)
       .then((response) => response.json())
       .then((data) => setUpcoming(data.results))
   }, [])

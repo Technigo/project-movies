@@ -25,9 +25,9 @@ export const MovieDetails = () => {
         src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`}
         alt="poster" />
 
-      <button className="backBtn" type="button" onClick={onBackButtonClick}>⬅ Back</button>
+      <button className="backBtn" type="button" onClick={onBackButtonClick}>Go Back</button>
 
-      <div className="moive-detailsBox">
+      <div className="movie-detailsBox">
         <div className="poster">
           <img className="posterImg" src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt="profile" />
         </div>

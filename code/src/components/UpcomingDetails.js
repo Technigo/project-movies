@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { UP_COMING_DETAILS_URL } from 'utils/urls';
+import { UPCOMING_DETAILS_URL } from 'utils/urls';
 
 export const UpcomingDetails = () => {
   const [details, setDetails] = useState([])
@@ -13,7 +13,7 @@ export const UpcomingDetails = () => {
   }
 
   useEffect(() => {
-    fetch(UP_COMING_DETAILS_URL(id))
+    fetch(UPCOMING_DETAILS_URL(id))
       .then((response) => response.json())
       .then((data) => setDetails(data))
   }, [id])
