@@ -10,18 +10,24 @@ img {
     border-radius: 5px;
   }
 
-  /*Tablet media query*/
+/*Tablet media query*/
 @media (min-width: 667px) {
     img {
       width: 350px;
     }
+
+    .moviePoster {
+        margin-top: 15%;
+        margin-bottom: 10%;
+    }
   }
   
   
-  /*Desktop media query*/
-  @media (min-width: 1025px) {
+/*Desktop media query*/
+@media (min-width: 1025px) {
     .moviePoster {
         justify-content: flex-start;
+        margin-bottom: 0;
     }
 
     img {
