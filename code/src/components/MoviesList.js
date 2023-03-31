@@ -19,7 +19,7 @@ export const MoviesList = () => {
   console.log(movies)
 
   if (loading) {
-    return <p>Loading</p>
+    return <p className="loader">Loading</p>
   }
 
   return (
