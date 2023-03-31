@@ -19,8 +19,8 @@ export const MovieDetails = () => {
 
   return (
     <div className="details">
-      {/* <button type="button" onClick={onBackButtonClick}>Go back!</button>
-      <img className="background-img" src={`https://image.tmdb.org/t/p/w1280/${details.backdrop_path}`} alt={details.original_title} /> */}
+      {/* <button type="button" onClick={onBackButtonClick}>Go back!</button> */}
+      <img className="background-img" src={`https://image.tmdb.org/t/p/w1280/${details.backdrop_path}`} alt={details.original_title} />
       <div className="movie-details">
         <a href={`https://www.imdb.com/title/${details.imdb_id}/?ref_=nv_sr_srsg_0`} target="_blank" rel="noreferrer">
           <img className="small-poster" src={`https://image.tmdb.org/t/p/w780/${details.poster_path}`} alt={details.original_title} />

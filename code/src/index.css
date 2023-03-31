@@ -249,6 +249,10 @@ a {
   border-radius: 10px;
 }
 
+.background-img {
+  display: none;
+}
+
 .details p {
   margin: 10px 0 10px 0;
 }
@@ -334,5 +338,11 @@ a {
 
   .list-date {
     max-width: 200px;
+  }
+
+  .background-img {
+    display: block;
+    z-index: -1;
+    object-fit: cover;
   }
 }
