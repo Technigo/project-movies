@@ -8,7 +8,7 @@ import Logoimage from '../images/moviesheader.PNG'
 const Header = () => {
   const navigate = useNavigate();
   function handleLogoClick() {
-    navigate(-1)
+    navigate('/')
   }
   return (
     <header>
