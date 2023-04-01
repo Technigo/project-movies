@@ -8,7 +8,8 @@ This project was done in collaboration - by Nina Waldreus & Joanna Philips.
 
 First we sketched out the pages, components and the states we would need for each of them. 
 Next we implemented each page connecting them through routes and navigation links. 
-When faced with problems we turned for help to Stackoverflow, Google and other team memebers. 
+When faced with problems we turned for help to Stackoverflow, Google and other team members. 
+Also used ChatGPT for support.
 Improvements for the future would be to make the information richer by using more endpoints from the API.
 
 ## View it live
