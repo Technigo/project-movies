@@ -1,13 +1,21 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+A web app that that uses themoviedb.org's API to fetch a list of movies (more on which movies further down), display them on a page, and then link to a movie detail page when you click on the movie.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+![Movie Project](https://user-images.githubusercontent.com/65211641/229287202-41c79f5d-7df3-4674-85e4-63110f10b168.png)
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Developed as a pair programming project.
+
+Technologies:
+
+- React
+- React Router
+- External API
+- CSS
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Github: https://github.com/TessAquilon/project-movies
+Live link: xxx
