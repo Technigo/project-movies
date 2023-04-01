@@ -6,7 +6,7 @@ import { NotFound } from './components/NotFound/NotFound';
 import { SingleMovie } from './components/SingleMovie/SingleMovie';
 
 export const App = () => {
-  const API_KEY = '0bdc909b4c34b17568b8111077d9d4d62'
+  // const API_KEY = '0bdc909b4c34b17568b8111077d9d4d62'
 
   return (
     <BrowserRouter>
