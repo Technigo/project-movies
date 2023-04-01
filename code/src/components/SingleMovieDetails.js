@@ -41,7 +41,7 @@ const SingleMovie = () => {
               && productionClicked ? singleMovie.production_companies.map((company) => {
                   return (
                     <div className={productionClicked ? 'company-img-container' : 'nodisplay'} key={company.id}>
-                      {company.logo_path !== null
+                      {company.name !== null
                       && <Link
                         style={{ textDecoration: 'none' }}
                         key={company.id}
