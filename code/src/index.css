@@ -107,5 +107,6 @@ a.movie {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-end;
+    width: 100%;
   }
 }
