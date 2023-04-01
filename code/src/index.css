@@ -123,12 +123,20 @@ background-color: rgba(0, 0, 0, 0.442);
   justify-self: center; 
   display: flex;
   font-size: 50px;
-
+  flex-direction: column;
+  padding: 40px;
+  padding-top: 100px;
 }
 /* INTRO PICTURE POPCORN MAN*/
 .loading-intro img {
   width: 500px;
 }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 
 
