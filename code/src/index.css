@@ -1,5 +1,8 @@
 body {
   margin: 0;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -15,13 +18,14 @@ code {
 .main-container {
   display: grid;
   grid-template-columns: 1fr;
+  justify-content: space-around;
+  column-gap: 12px;
+  row-gap: 10px;
 }
 
 .movie-card {
-  padding: 1rem;
-  margin: 1rem;
+  border: 2px solid white;
 }
-
 
 /*styling for text*/
 
@@ -30,18 +34,35 @@ h1, h2 {
 }
 
 h2 {
-  font-weight: 300;
-  font-size: 22px;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 /*styling for listed items*/
 
 ul {
-  list-style: none
+  list-style: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
 /*styling for buttons*/
+
+button {
+  width: 140px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 20px;
+  background-color: aqua;
+  border-radius: 20px 40px;
+  border: 4px solid;
+}
+
+button:hover {
+  background-color: black; 
+  color: aqua;
+  border:4px solid aqua;
+}
 
 
 /*styling for links*/
@@ -72,44 +93,72 @@ a:hover, a:active {
 footer {
   margin-top: 1rem;
   margin-left: 1rem;
+  color: yellow;
+  font-size: 14px;
 }
-
 
 /*styling for details page*/
 
-.details-container {
-  background-color: green;
+.detailPage {
+  position: relative;
+}
+
+.detailPage .background-img {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.detailPage .details-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .details-container p {
   font-size: 22px;
+  margin: 4px;
 }
 
 .details-container h2 {
   font-size: 28px;
   font-weight: 600;
-  color: blueviolet;
-}
-
-.background-img {
-  display: none;
 }
 
 .poster {
   border: 3px solid white;
+  width: 200px;
+  margin-bottom: 12px;
 }
 
 /*Media queries*/
 
+/*tablet*/
+@media ((min-width: 667px) and (max-width: 1024px)) {
+  .main-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+.background-img {
+  position: relative;
+  display: block;
+  object-fit: cover;
+  }
+}
+
 /*desktop*/
-@media (min-width: 774px) {
+@media (min-width: 1025px) {
 .main-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   width: fit-content;
   }
 
 .background-img {
+  position: relative;
   display: block;
   object-fit: cover;
   }
