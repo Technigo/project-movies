@@ -6,8 +6,12 @@
 .detail-background-picture {
   min-height: 100vh;
   background-size: cover;
+}
+
+.details {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
 }
 
 .movie-data-cover {
@@ -48,8 +52,8 @@
   max-width: 400px;
 }
 
-@media (min-width: 768px) {
-  .detail-background-picture {
+@media (min-width: 769px) {
+  .detail-container {
     justify-content: flex-end;
   }
 

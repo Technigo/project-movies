@@ -29,20 +29,23 @@ export const Details = () => {
         className="detail-background-picture"
         style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), url(https://image.tmdb.org/t/p/w1280${movieData.backdrop_path})` }}>
         <GoBackButton />
-        <div className="detail-container">
-          <section className="movie-data-section">
+        <section className="details">
 
-            {movieData.poster_path && <img className="movie-data-cover" src={`https://image.tmdb.org/t/p/w1280${movieData.poster_path}`} alt={`Movie poster for ${movieData.title}`} />}
-            <div className="movie-data-container">
+          <div className="detail-container">
+            <section className="movie-data-section">
 
-              <h1 className="movie-data-title"> {movieData.title}</h1>
-              {movieData.vote_average && <span className="movie-data-rating">⭐{movieData.vote_average.toFixed(1)}</span>}
-              <p className="movie-data-overview">
-                {movieData.overview}
-              </p>
-            </div>
-          </section>
-        </div>
+              {movieData.poster_path && <img className="movie-data-cover" src={`https://image.tmdb.org/t/p/w1280${movieData.poster_path}`} alt={`Movie poster for ${movieData.title}`} />}
+              <div className="movie-data-container">
+
+                <h1 className="movie-data-title"> {movieData.title}</h1>
+                {movieData.vote_average && <span className="movie-data-rating">⭐{movieData.vote_average.toFixed(1)}</span>}
+                <p className="movie-data-overview">
+                  {movieData.overview}
+                </p>
+              </div>
+            </section>
+          </div>
+        </section>
       </div>
     </div>
 
