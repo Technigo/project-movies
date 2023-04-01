@@ -21,12 +21,10 @@ code {
 }
 
 
-header {
+.header-container {
   padding: 30px;
-  background-color: white;
-}
-header h6 {
-  color: black;
+  background-color: #4c0000;
+  
 }
 
 
@@ -202,6 +200,13 @@ auto;
 
 /* DROPDOWN MENU */
 /* the menu button */
+button {
+  background: none;
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+  color: white;
+}
 .dropbtn {
   background-color: orange;
   color: white;
@@ -216,24 +221,24 @@ auto;
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #0b0b0b;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 /* inside font color */
 .dropdown-content a {
-  color: black;
+  color: rgb(243, 243, 243);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
 /* dropdown list hover color pink */
-.dropdown-content a:hover {background-color: pink;}
+.dropdown-content a:hover {background-color: rgb(159, 159, 159);}
 .dropdown:hover .dropdown-content {display: block;}
-/* hover color over button blue */
-.dropdown:hover .dropbtn {background-color: blue;}
+/* hover color over button */
+/*.dropdown:hover .dropbtn {background-color: blue;} */
 
 
 

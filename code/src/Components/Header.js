@@ -6,9 +6,9 @@ const Header = () => {
       <div className="dropdown">
         <button type="button">Menu</button>
         <div className="dropdown-content">
-          <a href="#">Upcoming movies</a>
           <a href="#">Latest</a>
           <a href="#">Series</a>
+          <a href="#">Upcoming</a>
         </div>
       </div>
     </div>
