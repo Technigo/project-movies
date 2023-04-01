@@ -63,10 +63,13 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 2em;
 }
 
 header img {
   height: 70px;
+  margin: 1em;
+  animation: spin 8s linear infinite;
 }
 
 .movies {
