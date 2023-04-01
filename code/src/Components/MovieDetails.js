@@ -53,7 +53,7 @@ const MovieDetails = () => {
           <img src={`http://image.tmdb.org/t/p/w342${details.poster_path}`} alt={details.title} />
         </div>
         <div className="details-page-2">
-          <h3>{details.title}</h3>
+          <h3>{details.title}  <span className="rating">⭐️{Math.round(details.vote_average * 10) / 10}</span></h3>
           <p>{details.overview}</p>
         </div>
       </div>

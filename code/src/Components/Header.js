@@ -1,6 +1,9 @@
-import React from 'react'
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React from 'react';
 
 const Header = () => {
+/* const [category, setCategory] = useState('popular'); */
+
   return (
     <div className="header-container">
       <div className="dropdown">
@@ -14,4 +17,13 @@ const Header = () => {
     </div>
   )
 }
+
 export default Header;
+
+/*  <label htmlFor="category">Change category: </label>  <select id="category" onChange={(event) =>
+   setCategory(event.target.value)} value={category}>
+            <option value="popular">Popular</option>
+            <option value="now_playing">Now Playing</option>
+            <option value="upcoming">Upcoming</option>
+            <option value="top_rated">Top Rated</option>
+          </select> */
