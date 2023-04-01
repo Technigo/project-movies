@@ -8,6 +8,9 @@ body {
   background: black;
   color: white;
   overflow-x: hidden;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🍿</text></svg>")
+  16 0,
+auto;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -54,11 +57,10 @@ position: relative;
 .movie-wrapper:hover img{
   -webkit-filter: brightness(50%);
   filter: brightness(50%);
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🍿</text></svg>")
+  16 0,
+auto;
 }
-
-/* .movie-container:hover {
-background-color: rgba(0, 0, 0, 0.442);
-} */
 
 
 /* DETAILS-PAGE */
@@ -104,17 +106,17 @@ background-color: rgba(0, 0, 0, 0.442);
 }
 
 
-
 /* LOADING */
 .loading-movies {
   justify-content: center;
   align-items: center;
-  height: 1000vh;
+  height:auto;
+  height: 100vh;
+  overflow:auto;
 }
 .loading-movies p {
   text-align: center;
   margin: 15px;
-
 }
 .loading-intro {
   animation-name: loadintro;
@@ -138,8 +140,6 @@ background-color: rgba(0, 0, 0, 0.442);
 }
 
 
-
-
 /* THE BACK BUTTON */
 .button {
   position: absolute;
@@ -158,12 +158,18 @@ background-color: rgba(0, 0, 0, 0.442);
   transform: rotate(45deg);
   margin: -10px;
   animation: animate 2s infinite;
+  cursor: pointer;
+
 }
 .button span:nth-child(2) {
   animation-delay: -0.2s;
+  cursor: pointer;
+
 }
 .button span:nth-child(3) {
   animation-delay: -0.4s;
+  cursor: pointer;
+
 }
 @keyframes animate {
   0% {
