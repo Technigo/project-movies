@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import { MovieList } from 'components/MovieList';
 import { Header } from 'components/Header'
+import { NotFound } from 'components/NotFound'
 
 export const App = () => {
   const [movieList, setMovieList] = useState([]);
@@ -28,7 +29,8 @@ export const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<MovieList movieList={movieList} />} />
-
+        <Route path="/404" element={<NotFound />} />
+        <Route path="/*" element={<Navigate to="/404" replace />} />
       </Routes>
     </BrowserRouter>
   );

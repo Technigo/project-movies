@@ -104,6 +104,12 @@ header img {
   color: transparent;
   transition: .5s ease;
 }
+.notfound {
+  padding: 300px;
+  font-size:xx-large;
+  text-align: center;
+
+}
 
 /* Hover effects */
 .movie:hover > .movie-details {
