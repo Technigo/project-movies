@@ -15,7 +15,7 @@ const ListMovies = ({ listMovies }) => {
               key={movie.id}
               to={`/details/${movie.id}`}
               className="single-movie">
-              <img className="cover-image" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt="poster" />
+              <img className="cover-image" src={movie.poster_path ? `https://image.tmdb.org/t/p/w342${movie.poster_path}` : ''} alt="poster" />
               <div className="hover-container">
                 <h1 className="text-hover">{movie.original_title}</h1>
                 <p className="text-hover">Released: {moment(movie.release_date).format('D MMMM YYYY')}</p>
