@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import MovieList from 'components/MovieList'
 import MovieDetails from 'components/MovieDetails'
 import NotFound from 'components/NotFound'
+/* import { Header } from 'components/Header' */
 
 export const App = () => {
   return (
@@ -13,7 +14,6 @@ export const App = () => {
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="404" replace />} />
       </Routes>
-      <header />
     </BrowserRouter>
 
   );

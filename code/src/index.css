@@ -19,6 +19,18 @@ code {
 *{
   box-sizing: border-box;
 }
+
+
+header {
+  padding: 30px;
+  background-color: white;
+}
+header h6 {
+  color: black;
+}
+
+
+
 /* PAGE 1 */
 .movie-container {
   display: grid;
@@ -114,7 +126,7 @@ auto;
   height: 100vh;
   overflow:auto;
 }
-.loading-movies p {
+.loading-movies {
   text-align: center;
   margin: 15px;
 }
@@ -184,6 +196,47 @@ auto;
       transform: rotate(45deg) translate(20px, 20px);
   }
 }
+
+
+
+
+/* DROPDOWN MENU */
+/* the menu button */
+.dropbtn {
+  background-color: orange;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/* inside font color */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* dropdown list hover color pink */
+.dropdown-content a:hover {background-color: pink;}
+.dropdown:hover .dropdown-content {display: block;}
+/* hover color over button blue */
+.dropdown:hover .dropbtn {background-color: blue;}
+
+
+
 
 
 

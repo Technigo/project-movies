@@ -1,12 +1,17 @@
 import React from 'react'
 
-const header = () => {
+const Header = () => {
   return (
-    <div className="header">
-      <h6>HELLO</h6>
-
+    <div className="header-container">
+      <div className="dropdown">
+        <button type="button">Menu</button>
+        <div className="dropdown-content">
+          <a href="#">Upcoming movies</a>
+          <a href="#">Latest</a>
+          <a href="#">Series</a>
+        </div>
+      </div>
     </div>
   )
 }
-
-export default header;
+export default Header;
