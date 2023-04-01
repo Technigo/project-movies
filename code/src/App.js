@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-import { MovieList } from 'components/MovieList';
+
+import { Loader } from 'components/Loader';
 import { Header } from 'components/Header'
+import { MovieList } from 'components/MovieList';
+import { Details } from 'components/Details'
 import { NotFound } from 'components/NotFound'
 
 export const App = () => {
@@ -21,7 +24,7 @@ export const App = () => {
   }, []);
   if (loading) {
     return (
-      <div className="loader">Loading...</div>
+      <Loader />
     )
   }
   return (
@@ -31,6 +34,7 @@ export const App = () => {
         <Route path="/" element={<MovieList movieList={movieList} />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="/*" element={<Navigate to="/404" replace />} />
+        <Route path="/moviedetails/:movieId" element={<Details details={Details} />} />
       </Routes>
     </BrowserRouter>
   );
