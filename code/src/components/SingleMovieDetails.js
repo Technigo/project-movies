@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-closing-tag-location */
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom'
+import { BiCameraMovie } from 'react-icons/bi'
+import { CgSmileSad } from 'react-icons/cg'
 import { API_KEY } from '../utils/urls';
 import BackButton from './BackButton'
 
@@ -33,18 +35,20 @@ const SingleMovie = () => {
               {singleMovie.title}
             </h1>
             <p className="single-movie-page-overview">{singleMovie.overview}</p>
-            <button className="show-companies-btn" type="button" onClick={(() => setProductionClicked(!productionClicked))}>Show production companies</button>
+            <button className="show-companies-btn" type="button" onClick={(() => setProductionClicked(!productionClicked))}> <BiCameraMovie /> </button>
             <div className="single-movie-page-production-companies">
-              {productionClicked && singleMovie.production_companies.map((company) => {
-                return (
-                  <div className={productionClicked ? 'company-img-container' : 'nodisplay'} key={company.id}>
-                    {company.logo_path !== null
+              {singleMovie.production_companies.length !== 0
+              && productionClicked ? singleMovie.production_companies.map((company) => {
+                  return (
+                    <div className={productionClicked ? 'company-img-container' : 'nodisplay'} key={company.id}>
+                      {company.logo_path !== null
                       && <Link
+                        style={{ textDecoration: 'none' }}
                         key={company.id}
-                        to={`/company/${company.id}`}><img className="company-img" src={`https://image.tmdb.org/t/p/w780${company.logo_path}`} alt={`${company.name}_image`} /> </Link>}
-                  </div>
-                )
-              })}
+                        to={`/company/${company.id}`}><p className="company-name">{company.name}</p> </Link>}
+                    </div>
+                  )
+                }) : <div className={productionClicked ? 'nodata' : 'nodisplay'}><p>This information is not available</p><CgSmileSad /></div>}
 
             </div>
           </div>

@@ -36,7 +36,7 @@ export const App = () => {
   }, [])
   const fetchMovies = () => {
     setLoading(true)
-    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${selectedGenre}&language=en-US&page=${pageNumber}`)
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${selectedGenre}&sort_by=popularity.desc&language=en-US&page=${pageNumber}`)
       .then((res) => res.json())
       .then((data) => {
         setMovieList(data.results)

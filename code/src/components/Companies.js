@@ -17,14 +17,15 @@ const Companies = () => {
   }, [companyID])
 
   return (
-    <div className="single-company-page">
+    <div className="single-company-page" style={{ backgroundImage: 'url(images/company.jpg)' }}>
       <BackButton />
-
-      <h1 className="single-company-page-name">{company.name}</h1>
-      {company.logo_path !== undefined && <img className="single-company-page-img" src={`https://image.tmdb.org/t/p/w780${company.logo_path}`} alt={`${company.name}_image`} />}
-      <div className="single-company-page-details">
-        <p className="single-company-page-headquarters"><FaCity /> : {company.headquarters}</p>
-        <p className="single-company-page-homepage"><CgWebsite /> : {company.homepage}</p>
+      <div className="single-company-page-img-details-container">
+        <h1 className="single-company-page-name">{company.name}</h1>
+        {company.logo_path !== undefined && <img className="single-company-page-img" src={`https://image.tmdb.org/t/p/w780${company.logo_path}`} alt={`${company.name}_image`} />}
+        <div className="single-company-page-details">
+          <p className="single-company-page-headquarters"><FaCity /> : {company.headquarters}</p>
+          <p className="single-company-page-homepage"><CgWebsite /> : {company.homepage}</p>
+        </div>
       </div>
     </div>
   )
