@@ -5,7 +5,7 @@ The assignment was to produce a movie site showing popular movies, using react a
 
 ## The problem
 
-The style took me more time than expected.
+The styling took me more time than expected.
 
 ## View it live
 
