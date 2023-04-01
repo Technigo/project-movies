@@ -32,10 +32,9 @@ code {
 }
 
 .movie-grid-container {
-  display:block;
-  width: 100%;
-  /*display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));*/
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 20px;
 }
 
 
