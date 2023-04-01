@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRotateLeft } from '@fortawesome/free-solid-svg-icons'
 import './GoBackButton.css'
 
 export const GoBackButton = () => {
@@ -17,7 +17,7 @@ export const GoBackButton = () => {
         type="button"
         className="go-back-button"
         onClick={onGoBackButtonClick}>
-        <FontAwesomeIcon icon={faArrowLeft} />
+        <FontAwesomeIcon icon={faArrowRotateLeft} />
         <p className="go-back-button-text">Go back</p>
       </button>
     </div>

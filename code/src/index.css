@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -54,7 +50,7 @@ main {
   width: 100%;
   position: absolute;
   color: transparent;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 /* Hover effects */
@@ -76,7 +72,7 @@ main {
     grid-template-rows: 2fr 1fr;
   }
 }
-  
+
 @media (min-width: 1025px) {
   .movie-container {
     width: 25%;
