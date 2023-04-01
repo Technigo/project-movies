@@ -10,7 +10,7 @@ export const List = () => {
       .then((data) => setMovies(data.results))
   }, [])
   return (
-    <section className="main">
+    <section className="main-container">
       {movies.map((movie) => (
         <div className="movie-card" key={movie.id}>
           <Link

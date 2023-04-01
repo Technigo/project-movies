@@ -19,10 +19,11 @@ export const Details = () => {
 
   return (
     <div className="details-container">
+      <img className="background-img" src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`} alt={movie.original_title} />
       <h2>{movie.title}</h2>
-      <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+      <img className="poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
       <p>Release date: {movie.release_date}</p>
-      <p>Rating: {Math.round(movie.vote_average * 10) / 10}</p>
+      <p>Rating: ⭐ {Math.round(movie.vote_average * 10) / 10}</p>
       <p>{movie.overview}</p>
       <p>Budget: {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(movie.budget)}</p>
       <button type="button" onClick={onGoBackButtonClick}>Go back
@@ -30,5 +31,3 @@ export const Details = () => {
     </div>
   )
 }
-
-//add fetch of backdrop img
