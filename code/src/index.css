@@ -15,9 +15,7 @@ code {
     
 }
 
-main {
-  max-width: 1440px;
-}
+
 
 /*PopularList*/
 .all-movies {
@@ -69,9 +67,10 @@ a.movie {
 
 /*ShowMovie*/
 .back-link {
-  position: absolute;
   font-size: 10px;
-  bottom: 48%;
+  right: 75%;
+  top: 35%;
+  width: 30vh;
 }
 
 .details-page {
@@ -81,6 +80,7 @@ a.movie {
   color: white;
   font-size: 16px;
 }
+
 
 .solo-movie-poster {
   width: 30vh;
@@ -108,5 +108,27 @@ a.movie {
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
+  }
+
+  .details-page {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .solo-movie-poster {
+    width: 30vh;
+    align-self: center;
+  }
+
+  .back-link {
+    font-size: 10px;
+    right: 75%;
+    top: 35%;
+    width: 30vh;
+    align-self: center
   }
 }
