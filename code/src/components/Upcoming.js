@@ -18,7 +18,7 @@ export const Upcoming = () => {
         {upcoming.map((singleMovie) => {
           return (
             <div className="upcoming-wrapper">
-              <Link key={singleMovie.id} to={`/tvdetails/${singleMovie.id}`}>
+              <Link key={singleMovie.id} to={`/upcomingdetails/${singleMovie.id}`}>
                 <img className="posterImg" src={`https://image.tmdb.org/t/p/w300${singleMovie.poster_path}`} alt={singleMovie.title} />
                 <div className="hoverBox">
                   <h1 className="hoverTitle">{singleMovie.original_title}</h1>

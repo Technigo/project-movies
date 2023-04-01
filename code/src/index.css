@@ -152,6 +152,7 @@ a {
 .movie-detailsWrapper,
 .tvDetailsWrapper,
 .upcoming-detailsWrapper {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -190,11 +191,12 @@ a {
 .movie-detailsBox,
 .tv-detailsBox,
 .upcoming-detailsBox {
+  height: auto;
   display: flex;
   flex-direction: column;
   position: absolute;
   bottom: 5%;
-  padding: 20px;
+  top: 40%;
   align-items: flex-end;
   justify-content: space-around;
 }
@@ -214,7 +216,18 @@ a {
 /***************tablet design******************************/
 @media (min-width:600px) {
 
-
+  .movie-detailsBox,
+  .tv-detailsBox,
+  .upcoming-detailsBox {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 5%;
+    align-items: flex-end;
+    justify-content: space-around;
+  }
+  
 .link{
   padding: 15px
 } 
