@@ -43,7 +43,7 @@ main {
   100% { transform: rotate(360deg); }
 } 
 
-header h1 {
+.header {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 56px;
   display: flex;
@@ -52,14 +52,17 @@ header h1 {
   font-style: normal;
   font-variant: small-caps;
   text-transform: capitalize;
-}
-
-header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: rgb(0, 0, 0);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 header img {
