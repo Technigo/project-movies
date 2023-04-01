@@ -25,7 +25,7 @@ export const MovieDetails = () => {
         src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`}
         alt="poster" />
 
-      <button className="backBtn" type="button" onClick={onBackButtonClick}>Go Back</button>
+      <button className="backBtn" type="button" onClick={onBackButtonClick}> ⇐ Go back </button>
 
       <div className="movie-detailsBox">
         <div className="poster">

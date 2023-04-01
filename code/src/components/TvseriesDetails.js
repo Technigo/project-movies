@@ -32,7 +32,7 @@ export const TvseriesDetails = () => {
           <img className="posterImg" src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt="profile" />
         </div>
         <div className="title">
-          <h2>{details.title}</h2>
+          <h2>{details.name}</h2>
           <div className="rating">
             <span>{(Math.round(details.vote_average * 10) / 10)}⭐</span>
           </div>

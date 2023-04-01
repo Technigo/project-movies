@@ -7,17 +7,17 @@ export const Header = () => {
       <div className="logo">
         <img className="logoImg" src="/cinema_city.png" alt="" />
       </div>
-      <nav className="navlinkWrapper">
-        <p>
+      <ul className="navlinkWrapper">
+        <li className="link">
           <NavLink to="/">Home</NavLink>
-        </p>
-        <p>
+        </li>
+        <li className="link">
           <NavLink to="/tvseries">TV-serise</NavLink>
-        </p>
-        <p>
+        </li>
+        <li className="link">
           <NavLink to="/upcoming">Upcoming</NavLink>
-        </p>
-      </nav>
+        </li>
+      </ul>
     </header>
   )
 }
