@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import MovieList from 'components/MovieList'
 import MovieDetails from 'components/MovieDetails'
 import NotFound from 'components/NotFound'
-/* import { Header } from 'components/Header' */
 
 export const App = () => {
   return (
@@ -19,6 +18,7 @@ export const App = () => {
   );
 }
 
+export default App;
 /* BrowserRouter= Wrapper for everything / main wrapper for the whole wrap */
 /* Route= Wrapper for every component */
 /* Route path= Path to a single component */

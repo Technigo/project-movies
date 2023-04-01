@@ -27,7 +27,7 @@ const MoviesList = () => {
   return (
     <section className="startPage">
       {loading && (<Popcorn />)}
-      <Header />
+      <Header setList={setList} />
       <div className="movie-container">
         {list.map((movie) => (
           <article className="movie-wrapper" key={movie.id}>
