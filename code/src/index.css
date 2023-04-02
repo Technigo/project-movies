@@ -121,6 +121,8 @@ a.active {
 header a {
   color: white;
   text-decoration: none;
+  max-width: 32%;
+  text-align: center;
 }
 
 .notfound {
@@ -250,7 +252,13 @@ button p {
   padding: 10px;
 }
 
-
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+}
+iframe {
+  width: 90%;
+}
 
 .text-details {
   background-color: rgba(0, 0, 0, 0.41);
@@ -307,25 +315,33 @@ button p {
 
   .details-page {
     justify-content: space-between;
-    height: 85vh;
+    /* height: 85vh; */
   }
 
   .text-details {
-    width: 60%;
+    width: 40%;
   }
 
   .movie-card img {
-    width: 40%;
+    width: 30%;
     align-self: flex-end;
   }
 
   .movie-card {
     display: flex;
     flex-direction: row;
-    width: 60%;
+    width: 80%;
     padding: 30px;
     gap: 25px;
     align-items: flex-end;
+  }
+
+  .video-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+  iframe {
+    width: 100%;
   }
 
   .movies-wrapper a {

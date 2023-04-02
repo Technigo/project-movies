@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import MovieTrailers from './MovieTrailers';
 
 import Arrowicon from '../images/left-icon.svg'
 
@@ -19,6 +20,7 @@ const Moviedetails = () => {
       .then((data) => setMovie(data))
   }, [movieId])
   console.log(movie)
+  const rate = movie.vote_average;
 
   return (
     <section
@@ -31,11 +33,12 @@ const Moviedetails = () => {
           <h2>{movie.title}</h2>
           <h3>{movie.tagline}</h3>
           <h4>Release-date: {movie.release_date}</h4>
-          <h4> Rating: ⭐ {movie.vote_average}</h4>
+          <h4> Rating: ⭐ {Number(rate?.toFixed(1))}</h4>
           <article>
             {movie.overview}
           </article>
         </div>
+        <MovieTrailers />
       </div>
     </section>
   )
