@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Loader } from 'components/Loader';
 import { useParams } from 'react-router-dom';
 import { GoBackButton } from './GoBackButton';
 import './Details.css';
@@ -19,7 +20,7 @@ export const Details = () => {
 
   if (loading) {
     return (
-      <h1 className="loading">Loading data...</h1>
+      <Loader />
     )
   }
 
