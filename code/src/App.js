@@ -1,9 +1,19 @@
 import React from 'react';
+import './index.css';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { PopularList } from './components/PopularList/PopularList';
+import { NotFound } from './components/NotFound/NotFound';
+import { SingleMovie } from './components/SingleMovie/SingleMovie';
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="*" element={<Navigate to="/404" replace />} />
+        <Route path="/" element={<PopularList />} />
+        <Route path="/movie/:id" element={<SingleMovie />} />
+        <Route path="/404" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};

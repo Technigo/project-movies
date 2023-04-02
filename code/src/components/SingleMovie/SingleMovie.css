@@ -1,0 +1,80 @@
+.background {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movieInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.singleMovieWrapper .background {
+  min-height: 100vh;
+  color: white;
+  background-size: auto 100%;
+  background-position: center;
+}
+
+.goBackWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.goBackBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  padding: 7px;
+  margin: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.801);
+  border: solid white 1px;
+  border-radius: 5px;
+}
+
+.goBackBtn:hover {
+  cursor: pointer;
+}
+
+.clapperboard-icon {
+  width: 20px;
+  border: none;
+  margin-right: 5px;
+}
+
+/*Tablet media query*/
+@media (min-width: 667px) {
+  img {
+    width: 350px;
+  }
+}
+
+
+/*Desktop media query*/
+@media (min-width: 1025px) {
+  .singleMovieWrapper .background {
+    background-size: cover;
+  }
+
+  img {
+    width: 400px;
+  }
+
+  .background {
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .movieInfoWrapper {
+    flex-direction: row;
+  }
+}
