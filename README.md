@@ -1,13 +1,15 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+## What you will learn
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+✓  Pair-programming - You can find your pairings for this project [here](https://www.notion.so/Pair-and-group-programming-schedule-f594d5fcdf3d46d2bdd73533a55c5ff4).
 
-## The problem
+✓ How to build multi-page applications using React Router.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+✓ How to pass information such as product ids, or blog post titles in the URL and pick this up in React router to load dynamic content.
+
+✓ Practice using APIs in React - combining `useState` with `useEffect`
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://glistening-tiramisu-f31c45.netlify.app/
