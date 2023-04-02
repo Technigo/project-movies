@@ -2,7 +2,7 @@
 
 ## What you will learn
 
-✓  Pair-programming - You can find your pairings for this project [here](https://www.notion.so/Pair-and-group-programming-schedule-f594d5fcdf3d46d2bdd73533a55c5ff4).
+✓  Pair-programming
 
 ✓ How to build multi-page applications using React Router.
 
