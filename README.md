@@ -9,7 +9,7 @@ The project is to use themoviedb.org's API to fetch a list of movies, display th
 We used the TMDB:s API to fetch information about the movies and build this application using React. On Monday 27th of March we started this week off with planning the project in a simple Trello-board, we've signed up for the TMDB and got access to our API-key for this project. 
 
 Our goal for the week was to pair-programme as much as we can and in the end of the week we will edit this readme with more information.
-If we had more time for this, we would add more pages and fetch more information from other endpoints in the API.
+If we had more time for this, we would add more pages and fetch more information from other endpoints in the API. And continue to improve the overall design.
 
 ## View it live
 

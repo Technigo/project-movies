@@ -139,7 +139,7 @@ We will ask this on Mondays team session  */
   cursor: pointer;
   left: 20px;
   top: 20px;
-  position: absolute; /* button comes back and places itself on top of the other button */
+  position: absolute;
 }
 
 .go-back-btn:hover {
@@ -158,27 +158,25 @@ We will ask this on Mondays team session  */
 
 .movie-info {
   margin-bottom: 20px; /* buttons go from being on top of eachother to placing in column */
+  margin-top: 20px;
   align-self: center;
-  /*justify-self: center;*/
   color: white;
   margin-left: 10px;
-  bottom: 10vh;
   font-weight: 400;
+  background: rgba(40,39,39,.7);
+  border-radius: 5px;
 }
 
 .rating {
   align-self: center; /* places the rating on the same level as title instead of slightly above */
-  /* margin-left: 1px; /* creates some space in between title and rating */
-  /* background-color: lightblue; */
-  /* border-radius: 5px; /* added some rounded edges */
-  /* color: black; */
   color: white;
   padding: 5px;
   font-size: 1.5em;
 }
 
 .title {
-  text-shadow: 1px 1px #4d4d4d;
+  margin: 0;
+  text-shadow: 3px 3px #b150a7;
   font-size: 30px;
   font-weight: bold;
 }
@@ -198,11 +196,10 @@ a {
   font-size: 12px;
   color: white;
 }
-/*below is a suggestion from chatGPT*/
+
 footer {
   background-color: black;
   color: #fff;
-  /* align-items: flex-end; */
   padding: 1rem;
   margin-top: 2.5rem;
   border-top: solid 0.2rem #555
@@ -224,18 +221,12 @@ footer {
 
 /* below in this class I had to change from flex to inline-block - otherwise they were on top of eachother */
 .footer-section {
-  /* flex-basis: 45%; */
   display: inline-block;
-    /* display: flex; */
-  /* flex-wrap: wrap; */
   align-items: center;
   margin-bottom: 1rem;
-  /* margin: 0 10px; */
-  /* text-align: center;*/
   justify-content: space-around; 
 }
 
-/* Ask Daniel about this percentage in flex-basis - what it does*/
 .footer-section h3 {
   flex-basis: 100%;
   font-size: 16px;
@@ -245,11 +236,6 @@ footer {
 .footer-section a {
   color: #555;
   margin: 0.8rem;
-  /* margin-right: 1.5rem; */
-  /* text-decoration: none;
-  text-align: center;
-  justify-content: space-around;
-  flex-direction: column; */
 }
 
 .footer-favicon-text {
@@ -272,12 +258,10 @@ footer {
   }
 
   .movie-container {
-    /* width: 33%; */
     width: 25%;
   }
    .movie-details-container {
     display: grid;
-    /* grid-template-columns: 1fr 2fr; */
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 1fr; 
   }

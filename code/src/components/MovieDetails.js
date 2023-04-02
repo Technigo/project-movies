@@ -1,13 +1,12 @@
+/* eslint-disable max-len */
 /* eslint-disable no-trailing-spaces */
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-// import { MOVIE_DETAILS } from 'utils/urls';
+// import { MOVIE_DETAILS } from 'utils/urls'; - keeping this for knowledge (if someone else solved it as a shortcut)
 
 const MovieDetails = () => {
   const navigate = useNavigate()
   const { id } = useParams()
-  // I changed this from MovieId to only id so that it matches with the second path
-  // in app.js. I also changed it in the urls.js and in this file.
   const [details, setDetails] = useState({})
 
   const onBackButtonClick = (e) => {
@@ -30,11 +29,6 @@ const MovieDetails = () => {
       className="movie-details-container"
       style={{ backgroundImage:
       `url(http://image.tmdb.org/t/p/w1280${details.backdrop_path})` }}>
-      {/* <button
-        className="go-back-btn"
-        type="button"
-        onClick={onBackButtonClick}>Go back to list
-      </button> */}
       
       <a className="goBackBtn" href="/" onClick={onBackButtonClick}>
         <svg 
@@ -46,7 +40,6 @@ const MovieDetails = () => {
             fill="black"
             fillRule="evenodd" />
         </svg>
-        {/* <p className="back-to-list">Go back to list</p> */}
       </a>
       <img
         className="poster-img"
@@ -57,15 +50,8 @@ const MovieDetails = () => {
         <div className="title-and-rating">
           <p className="title">{details.title}</p>
           <p className="rating">⭐️{Math.round(details.vote_average * 10) / 10}/10 </p>
-          {/* <p className="rating">⭐️{details.vote_average}</p> */}
-          {/* We could use the following to get just one decimal:
-        {Math.round(details.vote_average * 10) / 10}/10 */}
         </div>
         <p className="overview">{details.overview}</p>
-        {/* <button type="button" onClick={notFoundButtonClick}>
-          Go to NotFound
-        </button> */}
-        {/* eventually we might delete this button above */}
       </div>
     </section>
   )
