@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: black;
@@ -15,12 +19,21 @@ code {
     monospace;
 }
 
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/*styling for movie list*/
+
 .main-container {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: space-around;
-  column-gap: 12px;
-  row-gap: 10px;
+  column-gap: 4px;
+  row-gap: 22px;
+  margin-top: 2rem;
 }
 
 .movie-card {
@@ -41,19 +54,15 @@ h2 {
 
 /*styling for listed items*/
 
-ul {
-  list-style: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+/*styling for "Go back" button*/
 
-/*styling for buttons*/
-
-button {
+.backButton {
   width: 140px;
   height: 60px;
   font-size: 18px;
   font-weight: 800;
   margin-top: 20px;
+  margin-left: 18px;
   background-color: aqua;
   border-radius: 20px 40px;
   border: 4px solid;
@@ -89,10 +98,11 @@ a:hover, a:active {
 .logo {
   max-width: 240px;
   justify-content: center;
+  display: block;
 }
 
 footer {
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-left: 1rem;
   color: yellow;
   font-size: 14px;
@@ -103,7 +113,6 @@ footer {
 .detailPage {
   position: relative;
   display: flex;
-  background-size: cover;
   flex-direction: column;
   justify-content: flex-end;
 }
@@ -142,13 +151,14 @@ footer {
   .main-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-  }
+}
 
 .background-img {
+  position: relative;
   height: 100vh;
   width: 100%;
-  display: block;
   object-fit: cover;
+  display: block;
 }
 
 .details-container {
@@ -156,11 +166,23 @@ footer {
   flex-direction: row;
   align-items: flex-start;
   position: absolute;
-}  
+  bottom: 0;
+  left: 0;
+  padding: 50px;
+  height: 60vh;
+} 
 
 .poster {
   max-width: 300px;
+  object-fit: cover;
 }
+
+.movie-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  }
 }
 
 /*desktop*/
@@ -168,19 +190,39 @@ footer {
 .main-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: fit-content;
   }
+
+
+  
+.details-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 50px;
+  height: 60vh;
+}
 
 .background-img {
   height: 100vh;
   width: 100%;
-  position: relative;
   display: block;
   object-fit: cover;
-  }
+}
 
 .poster {
   max-width: 300px;
 }
 
+
+.movie-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  margin:10px
+  }
 }
+
