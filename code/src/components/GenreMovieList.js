@@ -32,17 +32,17 @@ export const GenreMovieList = () => {
     <section className="list">
       {genreMovieList.map((singleGenreMovie) => {
         return (
-          <div key={singleGenreMovie.imdb_id} className="list-container">
-            <img key={singleGenreMovie.revenue} className="list-img" src={singleGenreMovie.poster_path ? `${imageURL}/w1280/${singleGenreMovie.poster_path}` : ''} alt={singleGenreMovie.title} />
-            <div className="test" key={singleGenreMovie.tagline}>
+          <div key={`${singleGenreMovie.id}+7`} className="list-container">
+            <img key={`${singleGenreMovie.id}+8`} className="list-img" src={singleGenreMovie.poster_path ? `${imageURL}/w1280/${singleGenreMovie.poster_path}` : ''} alt={singleGenreMovie.title} />
+            <div className="test" key={`${singleGenreMovie.id}+9`}>
               <Link
-                key={singleGenreMovie.vote_average}
+                key={`${singleGenreMovie.title}+10`}
                 to={`/genre-list/:genreId/${singleGenreMovie.id}`}
                 className="list-title">
                 {singleGenreMovie.title}
               </Link>
               <Link
-                key={singleGenreMovie.popularity}
+                key={`${singleGenreMovie.release_date}+11`}
                 to={`/details/${singleGenreMovie.id}`}
                 className="list-date">Release date: {singleGenreMovie.release_date}
               </Link>

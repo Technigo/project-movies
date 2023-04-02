@@ -530,7 +530,7 @@ a {
   }
 
   .background-img {
-    filter: brightness(0.5);
+    filter: brightness(0.9);
     display: block;
     height: 87vh;
     width: 100%;
@@ -867,7 +867,6 @@ a {
   }
 
   .background-img {
-    filter: brightness(0.7);
     display: block;
     height: 100%;
     width: 100%;
