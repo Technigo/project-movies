@@ -12,7 +12,7 @@ export const Header = () => {
         <NavLink className="nav nav-desktop left" to="/genre-list/18">DRAMA</NavLink>
         <NavLink className="nav nav-desktop" to="/genre-list/35">COMEDY</NavLink>
         <NavLink className="nav nav-desktop" to="/genre-list/53">THRILLER</NavLink>
-        <NavLink className="nav nav-desktop" to="/genre-list/9648">MYSTERY</NavLink>
+        <NavLink className="nav nav-desktop" to="/genre-list/27">HORROR</NavLink>
       </nav>
     </header>
   )
