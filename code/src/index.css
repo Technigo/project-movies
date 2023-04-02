@@ -31,11 +31,28 @@ body {
   font-weight: 900;
   font-size: 25px;
   letter-spacing: 1px;
-  box-shadow:
-    0 0 60px 15px #fff,
-    0 0 100px 30px rgb(60, 0, 255),
-    0 0 140px 45px #0ff;
+  animation: glowing 1300ms infinite;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  display: inline-block;
+  text-align: center;
 }
+
+@keyframes glowing {
+  0% {
+    background-color:  #e42c2c;
+    box-shadow: 0 0 15px  #e42c2c;
+  }
+  50% {
+    background-color:  #fe5353;
+    box-shadow: 0 0 40px #fe5353;
+  }
+  100% {
+    background-color: #e42c2c;
+    box-shadow: 0 0 15px #e42c2c;
+  }
+}
+
 
 .home-button:hover {
   filter: brightness(0.7);
@@ -190,15 +207,10 @@ a {
   overflow-wrap: break-word;
 }
 
-.genres p {
-  margin-right: 5px;
-  overflow-wrap: break-word;
-  font-style: italic;
-}
-
 .genre {
   white-space: nowrap;
-  margin: 10px 0px 10px 0;
+  margin: 10px 5px 10px 0;
+  font-style: italic;
 }
 
 .details-row {
