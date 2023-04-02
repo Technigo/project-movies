@@ -1,0 +1,110 @@
+ .movie-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+ }
+ 
+ .background {
+    position: relative ;
+    min-height: 150vh;
+    object-fit: cover;
+}
+
+.summary {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.back-button {
+    border-radius: 50px;
+    border: none;
+    width: 20vw;
+    height: 4vh;
+    background-color: red;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    transition: 0.5s ease;
+    margin-bottom: 20px;
+}
+
+.back-button:hover {
+    color: red;
+    box-shadow: inset -6em 0 0 0 rgb(255, 255, 255, 1);
+}
+
+.poster {
+    width: 200px;
+    box-shadow: 0 0 8px black;
+    margin-bottom: 20px;
+}
+
+
+h1, .tagline, .overview, .rating, .length {
+    color: white;
+}
+h1 {
+    font-size: 2em;
+}
+.tagline {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+@media only screen and (min-width: 600px) {
+    .movie-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 100%;
+        overflow: hidden;
+     }
+
+     .background {
+        max-width: 100%;
+     }
+
+    .summary {
+        margin-top: 10%;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 50px;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
+        width: 50%;
+    }
+
+    .back-button {
+        position: absolute;
+        top: 0;
+        align-items: flex-start;
+    }
+    .back-button:hover {
+        color: red;
+        box-shadow: inset -20em 0 0 0 rgb(255, 255, 255, 1);
+    }
+    .poster {
+        width: 300px;
+    }
+}
+
