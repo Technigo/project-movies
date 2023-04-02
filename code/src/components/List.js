@@ -16,7 +16,7 @@ export const List = () => {
           <Link
             to={`/details/${movie.id}`}
             alt={movie.title}>
-            <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+            <img className="main-poster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
             <div className="movie-card-info">
               <h1>{movie.title}</h1>
               <h2>Release date: {movie.release_date}</h2>
