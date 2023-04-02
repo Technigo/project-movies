@@ -14,7 +14,7 @@ const Header = () => {
       <p className="options">
         <Link to="/"><h1>New Releases</h1></Link>
         <Link to="/top-rated"> <h1>Top Rated Movies</h1></Link>
-        {/* <Link to="/upcoming"><h1>Upcoming</h1></Link> */}
+        <Link to="/upcoming"><h1>Upcoming</h1></Link>
       </p>
     </header>
   )

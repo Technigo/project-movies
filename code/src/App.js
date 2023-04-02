@@ -44,7 +44,7 @@ export const App = () => {
         <Route path="/" element={<MovieList movies={movieList} />} />
         <Route path="/MovieDetails/:movieId" element={<MovieDetails />} />
         <Route path="/top-rated" element={<TopRatedMovies />} />
-        <Route path="/popular" element={<PopularMovies />} />
+        <Route path="/upcoming" element={<PopularMovies />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>
