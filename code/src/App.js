@@ -21,7 +21,11 @@ export const App = () => {
       .then((response) => response.json())
       .then((data) => setMovielist(data.results))
       .catch((e) => { console.error(e) })
-      .finally(() => { setLoading(false) })
+      .finally(() => {
+        setTimeout(() => {
+          setLoading(false)
+        }, 3000);
+      })
   }, [])
   console.log(movieList)
   if (loading) {
