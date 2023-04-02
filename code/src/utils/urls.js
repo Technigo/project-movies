@@ -1,0 +1,2 @@
+export const BASE_URL = 'https://api.themoviedb.org/3/movie/upcoming?api_key=6f070510a0e77bc11b0787226622d477&&region=US'
+export const DETAILS_URL = (movieId) => `https://api.themoviedb.org/3/movie/${movieId}?api_key=6f070510a0e77bc11b0787226622d477&language=en-US`

@@ -1,8 +1,7 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week we created our very own movies site. We built our first multi-page React application and used a new API. The project was done in pairs.
+The app should have at least two pages - one showing a list of movies and one showing details about selected movie.
 
 ## The problem
 
@@ -10,4 +9,4 @@ Describe how you approached to problem, and what tools and techniques you used t
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://movie-project-by-vio-and-emma.netlify.app/

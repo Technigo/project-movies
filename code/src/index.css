@@ -1,5 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -11,3 +18,225 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/*styling for movie list*/
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 12px;
+  row-gap: 18px;
+  margin-top: 2rem;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.movie-card {
+  border: 3px solid white;
+  align-items: center;
+  padding: 14px 25px;
+  text-align: left;
+  display: grid;
+}
+
+/*styling for text*/
+
+h1, h2 {
+  font-family: Special Elite;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.error-msg {
+  font-size: 40px;
+}
+
+/*styling for buttons. Home button used for 404 message*/
+
+.backButton, .homeButton {
+  width: 140px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 20px;
+  margin-left: 18px;
+  background-color: aqua;
+  border-radius: 20px 40px;
+  border: 4px solid;
+}
+
+button:hover {
+  background-color: black; 
+  color: aqua;
+  border:4px solid aqua;
+}
+
+/*styling for links*/
+
+a:link, a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.movie-card:hover, .movie-card:active {
+  background-color: orange;
+}
+
+/*styling for images*/
+
+.main-poster {
+  width: 100%;
+  height: 100%;
+}
+
+/*styling for logo*/
+
+.logo {
+  max-width: 240px;
+  justify-content: center;
+  display: block;
+}
+
+footer {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  color: yellow;
+  font-size: 14px;
+}
+
+/*styling for details page*/
+
+.background-img {
+  display: none;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.details-container p {
+  font-size: 22px;
+  margin: 4px;
+}
+
+.details-container h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.poster {
+  border: 3px solid white;
+  width: 100%;
+  justify-self: center; 
+  margin-bottom: 12px;
+}
+
+/*Media queries*/
+
+/*tablet*/
+@media ((min-width: 667px) and (max-width: 1024px)) {
+  .main-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.background-img {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 50px;
+  height: 60vh;
+} 
+
+.poster {
+  max-width: 375px;
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.movie-text {
+  display: block;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left:2rem;
+  margin-bottom: 1rem;
+  padding: 10px;
+  background-color:rgba(22, 5, 32, 0.8);
+  border-radius: 20px;
+  }
+}
+
+/*desktop*/
+@media (min-width: 1025px) {
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  }
+  
+.details-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 50px;
+  height: 60vh;
+}
+
+.background-img {
+  height: 100vh;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.poster {
+  max-width: 375px;
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.movie-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left:2rem;
+  margin-bottom: 1rem;
+  padding: 10px;
+  background-color:rgba(22, 5, 32, 0.8);
+  border-radius: 20px;
+  }
+}
+
