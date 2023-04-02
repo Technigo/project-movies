@@ -56,9 +56,20 @@ h2 {
   font-size: 20px;
 }
 
-/*styling for "Go back" button*/
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
+}
 
-.backButton {
+.error-msg {
+  font-size: 40px;
+}
+
+/*styling for buttons. Home button used for 404 message*/
+
+.backButton, .homeButton {
   width: 140px;
   height: 60px;
   font-size: 18px;
@@ -174,7 +185,7 @@ footer {
 }
 
 .movie-text {
-  display: flex;
+  display: block;
   flex-direction: column;
   align-items: flex-start;
   margin-left:2rem;
