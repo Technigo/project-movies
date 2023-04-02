@@ -35,6 +35,11 @@ export const SingleMovie = () => {
     );
   }
 
+  if (!movie) {
+    navigate('/404');
+    return null;
+  }
+
   return (
     <div className="singleMovieWrapper">
       {movie && (
