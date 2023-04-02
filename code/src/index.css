@@ -5,9 +5,354 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+
+h2 {
+  color: white;
+  font-size: 20px;
+}
+
+h3 {
+  color: white;
+  font-size: 16px;
+}
+
+h4 {
+  text-align: center;
+  color: white;
+}
+
+/* THE FOLLOWING CLASSES ARE FROM MOVIELIST.JS */
+.movies {
+  display: flex; /* this pushed all posters in to just one row */
+  flex-wrap: wrap; /* this then made all posters display in rows of two but with an uneven margin to the left */
+  /* justify-content: center; this centered the two posters on the page */
+  justify-content: space-evenly;
+  background-size: cover;
+  column-gap: 0.3rem;
+  row-gap: 1.5rem;
+}
+
+.movie-container {
+  position: relative;
+  width: 50%; /* this moved all posters to the left side, no margin */
+  border: solid grey 2px;
+}
+
+.movie-details {
+  opacity: 0; /* when this is active the title and date do not display */
+  position: absolute;
+  left: 5%;
+  bottom: 5%; /*text appears on top of image*/
+}
+
+.details-img {
+  width: 100%; /* displays all images (2 per row) over the full page */
+  height: auto;
+}
+
+.image-overlay {
+  height: 100%; /* this put the image under the wrong title? */
+  width: 100%;
+  position: absolute; /* this put the posters back in the correct place with their titles */
+  color: transparent;
+}
+
+/* HOVER */
+
+/* ChatGPT on this way of targeting: The > symbol in CSS is known as the child combinator selector, 
+and it selects only the direct child element of a given parent element. In the case of the CSS code you 
+provided, using the > symbol between .movie and .movie-details ensures that only the direct child 
+element with the .movie-details class is targeted, and not any other descendant elements that may 
+also have the .movie-details class. */
+
+.movie:hover > .movie-details { 
+  opacity: 1; 
+  transition: 0.5s ease;
+}
+
+.movie:hover > .image-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: 0.5s ease;
+}
+
+/* THE FOLLOWING CLASSES ARE FROM MOVIEDETAILS.JS */
+
+.movie-details-container {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover; /* this altered the background to one big image instead of a small one
+  on constant repeat */
+  display: flex; /* this made the poster (smaller image) large and also screwed with the back button */
+  flex-direction: column; /* this made the background cover in full, the small poster disappeared and the
+  back button is now under the header and stretched from side to side */
+  justify-content: flex-end; /*image now takes up full screen and repeats at bottom */
+  position: relative;
+}
+
+.goback-icon {
+  max-width: 5rem;
+  max-height: 5rem;
+  padding: 2rem;
+  margin-left: 1.5rem;
+  filter: invert(0.6);
+}
+
+.goback-icon:hover {
+  transform:scale(1.5);
+  transition: 0.5s ease;
+  opacity: 1;
+  filter: invert(1);
+}
+
+/* We wanted to show this text when hovering over the back-to-list-button but we didn't get it to work
+We will ask this on Mondays team session  */
+/* .back-to-list {
+  display: none;
+} 
+
+.back-to-list:hover {
+  display: block;
+  font-size: large;
+  text-decoration: none;
+} */
+
+.go-back-btn {
+  font-size: large;
+  color: white;
+  border-radius: 20px;
+  border: solid white 2px;
+  padding: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  left: 20px;
+  top: 20px;
+  position: absolute;
+}
+
+.go-back-btn:hover {
+  color: black;
+  background-color: white;
+  transform: scale(1.1)
+}
+
+.poster-img {
+  max-width: 50vw; /* smaller poster comes back, placed to the left, overrides header */
+  border: solid white 10px; /* poster gets a border */
+  margin-left: 20px; /* poster goes in a bit from the left */
+  margin-top: 20px;
+  max-height: 400px;
+}
+
+.movie-info {
+  margin-bottom: 20px; /* buttons go from being on top of eachother to placing in column */
+  margin-top: 20px;
+  align-self: center;
+  color: white;
+  margin-left: 10px;
+  font-weight: 400;
+  background: rgba(40,39,39,.7);
+  border-radius: 5px;
+}
+
+.rating {
+  align-self: center; /* places the rating on the same level as title instead of slightly above */
+  color: white;
+  padding: 5px;
+  font-size: 1.5em;
+}
+
+.title {
+  margin: 0;
+  text-shadow: 3px 3px #b150a7;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.overview {
+  font-size: 16px; /* fixes font on movie description */
+  text-shadow: 1px 1px #4d4d4d; /* gives some contrast to background */
+  line-height: 20px; /* added just for fun */
+}
+
+p {
+  font-size: 16px;
+  color: white;
+}
+
+a {
+  font-size: 12px;
+  color: white;
+}
+
+footer {
+  background-color: black;
+  color: #fff;
+  padding: 1rem;
+  margin-top: 2.5rem;
+  border-top: solid 0.2rem #555
+}
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+  max-width: 700px;
+}
+
+.footer-paragraph {
+  flex-basis: 100%;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* below in this class I had to change from flex to inline-block - otherwise they were on top of eachother */
+.footer-section {
+  display: inline-block;
+  align-items: center;
+  margin-bottom: 1rem;
+  justify-content: space-around; 
+}
+
+.footer-section h3 {
+  flex-basis: 100%;
+  font-size: 16px;
+  margin-bottom: 1rem; 
+}
+ 
+.footer-section a {
+  color: #555;
+  margin: 0.8rem;
+}
+
+.footer-favicon-text {
+  margin-top: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Hover effect for the links in the footer */
+.footer-section a:hover {
+  transform:scale(1.5);
+  transition: 0.5s ease;
+  opacity: 1;
+  filter: invert(2);
+}
+
+@media (min-width: 668px) and (max-width: 1024px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .movie-container {
+    width: 25%;
+  }
+   .movie-details-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr; 
+  }
+
+  .go-back-btn {
+    grid-column: 1/2;
+  }
+
+  .poster-img {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-bottom: 20px;
+    justify-self: start;
+    align-self: end;
+    max-width: 25vh;
+  }
+
+  .movie-info {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: end;
+    margin-left: 5px;
+  }
+}
+
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  .movie-container {
+    width: 20%;
+  }
+
+  .movies {
+    gap: 5px;
+    row-gap: 20px;
+    column-gap: 0.3rem;
+    row-gap: 2.5rem;
+  }
+
+  .movie-details-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    width: 100vw; 
+    height: 100vh;
+    background-size: cover;
+  }
+
+  .go-back-btn {
+    grid-column: 1/2;
+  }
+
+  .poster-img {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    justify-self: start;
+    align-self: end;
+    max-width: 40vw;
+  }
+
+  .movie-info {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-bottom: 20px;
+    align-self: end;
+    justify-self: end;
+    margin-left: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
