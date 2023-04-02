@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Loader from 'Loader';
 import Movies from './Movies'
 import '../css/MovieList.css';
 
@@ -9,6 +10,7 @@ export const MovieList = () => {
 // useState is a State Hook (they let you use state and other features without writing a class.)
 // Inside paranthesis we use square brackets because we are fetching api to an ARRAY.
   const [list, setList] = useState([])
+  const [loading, setLoading] = useState(false);
 
   // useState([]) as initializing the list state to be ready for storing an array of movie data,
   // and setList(data.results) as the action of putting the fetched content inside the
@@ -16,11 +18,14 @@ export const MovieList = () => {
 
   // FetchMovies gets popular movies from an API
   const FetchMovies = () => {
+    setLoading(true);
     fetch('https://api.themoviedb.org/3/account/18557443/watchlist/tv?api_key=d120fe8810b0e45a06baa667dd3dc7fc&session_id=d2e64114dc41e5d2079593f40f511fba80818486')
       .then((response) => response.json())
       .then((data) => {
         setList(data.results)
       })
+      .catch((error) => console.error(error))
+      .finally(() => setLoading(false));
   }
   // Here we use the setList function to update the list state
   // with the new array of movie data: setList(data.results).
@@ -45,21 +50,27 @@ export const MovieList = () => {
 
   // This part shows the movie list on the screen
   return (
-    <main>
-      {/* Loop through the list and display each movie */}
-      {/* Call each of these mapped out "items" for now on with name "movie" */}
-      {list.map((movie) => (
-        <div
-          className="movie-card">
-          {/* Show a movie component with movie details */}
-          <Movies
-            title={movie.name}
-            releaseDate={movie.first_air_date}
-            movieId={movie.id}
-            poster={movie.poster_path} />
-          {/* movie.title for example points to title inside of movie */}
-        </div>
-      ))}
-    </main>
+    <div className="whole-webpage">
+      {loading && <div className="loader-container"><Loader /></div>}
+      <div className={`content-container ${loading ? '' : 'visible'}`}>
+        <main>
+          {/* Loop through the list and display each movie */}
+          {/* Call each of these mapped out "items" for now on with name "movie" */}
+          {list.map((movie) => (
+            <div
+              className="movie-card">
+              {/* Show a movie component with movie details */}
+              <Movies
+                title={movie.name}
+                releaseDate={movie.first_air_date}
+                movieId={movie.id}
+                poster={movie.poster_path} />
+              {/* movie.title for example points to title inside of movie */}
+            </div>
+          ))}
+        </main>
+      </div>
+    </div>
+
   )
 }

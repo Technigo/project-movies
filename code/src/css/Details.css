@@ -10,7 +10,7 @@ align-items: center;
   justify-content: center;
   flex-direction: column;
   margin: 0px;
-  background: rgb(0 0 0 / 50%);
+  background: rgb(0 0 0 / 60%);
   overflow: none;
   min-height: 100vh;
   width: 100vw; /* Use 100% of the viewport width */
@@ -104,6 +104,7 @@ align-items: center;
 .back-button:hover {
   transform: scale(1.04);
   transition: 0.2s ease-in-out;
+  opacity: 0.8;
 }
 
 @media (min-width: 560px) {
@@ -129,13 +130,13 @@ align-items: center;
   }
 
   .details-title {
-    font-size: 40px;
+    font-size: 30px;
     padding: 44px 0px 0px 0px;
     text-align: center;
   }
   
   .details-rating {
-    font-size: 28px;
+    font-size: 20px;
     padding: 14px 0px 40px 0px;
     text-align: center;
   }
@@ -152,6 +153,77 @@ align-items: center;
   
   .back-button {
     margin: 70px 20px 60px 2px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    margin: 20px 0 60px 0;
+  }
+
+  .movie-detail {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .background {
+    padding: 0;
+  }
+
+  .details {
+    max-width: 360px;
+    margin: 0px 80px 0px -120px ;
+    }
+
+  .movie-detail {
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .movie-card {
+    width: 25%;
+  }
+
+  .movie-detail p {
+    padding: 1px 20px 0px 26px;
+    font-size: 18px
+  }
+
+  .details-title {
+    font-size: 30px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px -0px;
+    text-align: left;
+  }
+  
+  .details-rating {
+    font-size: 20px;
+    padding: 14px 0px 0px 0px;
+    text-align: left;
+    opacity: 0.8;
+  }
+
+  .movie-detail > img {
+    width: 360px;
+    margin: 0px 80px 0px -80px;
+  }
+
+  .back-button img {
+    height: 34px;
+    width: 34px;
+  }
+  
+  .back-button {
+    margin: 70px 60px 60px -22px;
   }
 
 }

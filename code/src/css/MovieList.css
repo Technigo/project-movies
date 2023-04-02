@@ -52,3 +52,25 @@ main {
   .movie-card a {
     text-decoration: none;
   }
+
+  @media (min-width: 560px) {
+
+    .description {
+      position: absolute;
+      left: 6px;
+      bottom: 6px;
+      color: white;
+      z-index: 2;
+    }
+    
+    .hidden-description {
+      display: none;
+    }
+    
+    .movie-card h1 {
+      margin-bottom: 8px;
+      word-break: none;
+      width: 300px;
+    }
+
+  }
