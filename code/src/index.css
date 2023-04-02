@@ -197,6 +197,7 @@ a {
 }
 
 .genre {
+  white-space: nowrap;
   margin: 10px 0px 10px 0;
 }
 
