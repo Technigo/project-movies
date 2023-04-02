@@ -1,14 +1,16 @@
 /* eslint-disable */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
 import { Loader } from './Loader';
+import { GENRE_URL, imageURL } from 'utils/urls';
 
 export const GenreList = ({ popularMovielist }) => {
   const [genres, setGenres] = useState([])
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=c4d0ef560a112a28bb0aa7ff2aa79464&language=en-US&page=1')
+    fetch(`${GENRE_URL}`)
       .then((res) => res.json())
       .then((data) => {
         setGenres(data.genres)
@@ -27,19 +29,24 @@ export const GenreList = ({ popularMovielist }) => {
     )
   }
 
+  const a = Math.floor(Math.random() * popularMovielist.length);
+  const b = Math.floor(Math.random() * popularMovielist.length);
+  const c = Math.floor(Math.random() * popularMovielist.length);
+  const d = Math.floor(Math.random() * popularMovielist.length);
+
   return (
     <section className="genre-wrapper">
       <div className="image-wrapper">
-        <img className="genre-background" src={popularMovielist[4]?.backdrop_path ? `https://image.tmdb.org/t/p/w1280/${popularMovielist[4].backdrop_path}` : ""} alt={popularMovielist[4]?.title || ""} />
-        <img className="genre-background" src={popularMovielist[8]?.backdrop_path ? `https://image.tmdb.org/t/p/w1280/${popularMovielist[8].backdrop_path}` : ""} alt={popularMovielist[8]?.title || ""} />
-        <img className="genre-background" src={popularMovielist[2]?.backdrop_path ? `https://image.tmdb.org/t/p/w1280/${popularMovielist[2].backdrop_path}` : ""} alt={popularMovielist[2]?.title || ""} />
-        <img className="genre-background" src={popularMovielist[5]?.backdrop_path ? `https://image.tmdb.org/t/p/w1280/${popularMovielist[5].backdrop_path}` : ""} alt={popularMovielist[5]?.title || ""} />
+        <img className="genre-background" src={popularMovielist[a]?.backdrop_path ? `${imageURL}/w1280/${popularMovielist[a].backdrop_path}` : ""} alt={popularMovielist[a]?.title || ""} />
+        <img className="genre-background" src={popularMovielist[b]?.backdrop_path ? `${imageURL}/w1280/${popularMovielist[b].backdrop_path}` : ""} alt={popularMovielist[b]?.title || ""} />
+        <img className="genre-background" src={popularMovielist[c]?.backdrop_path ? `${imageURL}/w1280/${popularMovielist[c].backdrop_path}` : ""} alt={popularMovielist[c]?.title || ""} />
+        <img className="genre-background" src={popularMovielist[d]?.backdrop_path ? `${imageURL}/w1280/${popularMovielist[d].backdrop_path}` : ""} alt={popularMovielist[d]?.title || ""} />
       </div>
       <div className="genre-list-items">
         {genres.map((singleGenre) => {
           return (
             <Link
-              key={singleGenre.id}
+              key={singleGenre.name}
               to={`/genre-list/${singleGenre.id}`}
               className="genre-name">
               {singleGenre.name}

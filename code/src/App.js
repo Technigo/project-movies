@@ -8,6 +8,8 @@ import { GenreList } from 'components/GenreList';
 import { GenreMovieList } from 'components/GenreMovieList'
 import { GenreMovieDetails } from 'components/GenreMovieDetails';
 import { Loader } from 'components/Loader';
+import { Home } from 'components/Home'
+import { BASE_URL } from 'utils/urls';
 
 export const App = () => {
   const [list, setList] = useState([])
@@ -15,7 +17,7 @@ export const App = () => {
 
   useEffect(() => {
     setLoading(true)
-    fetch('https://api.themoviedb.org/3/movie/popular?api_key=c4d0ef560a112a28bb0aa7ff2aa79464&language=en-US&page=1')
+    fetch(`${BASE_URL}`)
       .then((res) => res.json())
       .then((data) => {
         setList(data.results)
@@ -32,12 +34,14 @@ export const App = () => {
       <Loader />
     )
   }
+
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<MovieList movies={list} />} />
-        <Route path="/details/:movieId" element={<MovieDetails />} />
+        <Route path="/" element={<Home HomeArray={list} />} />
+        <Route path="/popular" element={<MovieList movies={list} />} />
+        <Route path="/popular/:movieId" element={<MovieDetails />} />
         <Route path="/genre-list" element={<GenreList popularMovielist={list} />} />
         <Route path="/genre-list/:genreId" element={<GenreMovieList />} />
         <Route path="/genre-list/:genreId/:genreMovieId" element={<GenreMovieDetails />} />
