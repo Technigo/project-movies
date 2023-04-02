@@ -10,9 +10,9 @@ export const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<PopularList />} />
+        <Route path="*" element={<Navigate to="/404/" replace />} />
         <Route path="/movie/:id" element={<SingleMovie />} />
         <Route path="/404" element={<NotFound />} />
-        <Route path="*" element={<Navigate to="/404/" replace />} />
       </Routes>
     </BrowserRouter>
   );
