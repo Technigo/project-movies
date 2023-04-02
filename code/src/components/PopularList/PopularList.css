@@ -47,6 +47,8 @@
   .popularList .details h1 {
     margin-top: auto;
     margin-bottom: 0;
+    font-size: 24px;
+    text-align: center;
   }
 
   .popularList a:hover .details {

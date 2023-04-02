@@ -6,8 +6,6 @@ import { NotFound } from './components/NotFound/NotFound';
 import { SingleMovie } from './components/SingleMovie/SingleMovie';
 
 export const App = () => {
-  // const API_KEY = '0bdc909b4c34b17568b8111077d9d4d62'
-
   return (
     <BrowserRouter>
       <Routes>
@@ -19,6 +17,3 @@ export const App = () => {
     </BrowserRouter>
   );
 };
-
-// API KEY: bdc909b4c34b17568b8111077d9d4d62
-// Exempel på API-begäran: https://api.themoviedb.org/3/movie/550?api_key=bdc909b4c34b17568b8111077d9d4d62
