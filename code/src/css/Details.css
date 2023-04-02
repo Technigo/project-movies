@@ -61,6 +61,7 @@ align-items: center;
 
 .details {
   display: flex;
+  align-items: center;
   flex-direction: column;
   max-width: 300px;
   width: 100%;
@@ -120,18 +121,29 @@ align-items: center;
   }
 
   .details-title {
-    font-size: 28px;
-    padding: 24px 0px 0px 186px;
+    font-size: 40px;
+    padding: 44px 0px 0px 0px;
     text-align: center;
   }
   
   .details-rating {
-    font-size: 18px;
-    padding: 24px 0px 0px 186px;
+    font-size: 28px;
+    padding: 14px 0px 40px 0px;
     text-align: center;
   }
 
   .movie-detail > img {
-    width: 240px;
+    width: 360px;
+    margin-top: 20px;
   }
+
+  .back-button img {
+    height: 44px;
+    width: 44px;
+  }
+  
+  .back-button {
+    margin: 60px 20px 60px 2px;
+  }
+
 }

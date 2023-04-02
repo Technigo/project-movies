@@ -68,6 +68,7 @@ export const Details = () => {
           </div>
           {/* Display the movie poster and details */}
           {/* Show the movie poster */}
+
           <img src={`http://image.tmdb.org/t/p/w780${movieDetails.poster_path}`} alt="TV-Series" />
           {/* Show the movie title, rating, and overview */}
           <div className="details">
@@ -80,6 +81,7 @@ export const Details = () => {
             {/* Present the movie overview */}
             <p>{movieDetails.overview}</p>
           </div>
+
         </div>
       </div>
     </div>
