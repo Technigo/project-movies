@@ -28,7 +28,7 @@ export const MovieDetails = () => {
             <p>⭐ {Math.round(details.vote_average * 10) / 10}/10</p>
           </div>
           <div className="details-container">
-            <h2>{details.original_title}</h2>
+            <h2>{details.title}</h2>
             <div className="genres">
               {details.genres
                 ? (details.genres.map((genre) => {

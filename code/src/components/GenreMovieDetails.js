@@ -40,7 +40,7 @@ export const GenreMovieDetails = () => {
             <p>⭐ {Math.round(genreMovieDetails.vote_average * 10) / 10}/10</p>
           </div>
           <div className="details-container">
-            <h2>{genreMovieDetails.original_title}</h2>
+            <h2>{genreMovieDetails.title}</h2>
             <div className="genres">
               {genreMovieDetails.genres
                 ? (genreMovieDetails.genres.map((genre) => {
