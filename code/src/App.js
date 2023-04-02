@@ -34,12 +34,12 @@ export const App = () => {
       <Loader />
     )
   }
-  console.log(list)
+
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Home array={list} />} />
+        <Route path="/" element={<Home HomeArray={list} />} />
         <Route path="/popular" element={<MovieList movies={list} />} />
         <Route path="/popular/:movieId" element={<MovieDetails />} />
         <Route path="/genre-list" element={<GenreList popularMovielist={list} />} />
