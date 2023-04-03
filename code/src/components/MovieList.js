@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Popcorn from './Intro';
-import Header from './Header';
+/* import Header from './Header'; */
 /* STARTPAGE */
 const MovieList = () => {
   const [list, setList] = useState([]);
@@ -28,7 +28,7 @@ const MovieList = () => {
     <section className="startPage">
       {loading ? (<Popcorn />) : (
         <>
-          <Header setList={setList} />
+          {/* <Header setList={setList} /> */}
           <div className="movie-container">
             {list.map((movie) => (
               <article className="movie-wrapper" key={movie.id}>

@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
+/* import React from 'react';
 
 const Header = () => {
 /* const [category, setCategory] = useState('popular'); */
 
-  return (
+/* return (
     <div className="header-container">
       <div className="dropdown">
         <button type="button">Menu</button>
@@ -19,7 +19,7 @@ const Header = () => {
 }
 
 export default Header;
-
+ */
 /*  <label htmlFor="category">Change category: </label>  <select id="category" onChange={(event) =>
    setCategory(event.target.value)} value={category}>
             <option value="popular">Popular</option>
