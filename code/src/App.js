@@ -45,7 +45,7 @@ export const App = () => {
         console.error(console.error(e))
       })
       .finally(() => {
-        setTimeout(() => setLoading(false), 500)
+        setLoading(false)
       })
   }
 

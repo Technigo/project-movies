@@ -31,7 +31,7 @@ code {
 
 .navbar {
   background: rgba(0, 0, 0, 0.946);
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   overflow: hidden;
@@ -42,6 +42,17 @@ code {
   height: max-content;
   display: flex;
   justify-content: space-between;
+}
+
+.navbar-logo-container {
+  display: flex;
+  color: rgb(232 178 178);
+}
+
+.navbar-logo-container>h1 {
+  margin: 0;
+  align-self: center;
+  font-size: 1em;
 }
 
 .logo {
@@ -134,7 +145,10 @@ code {
 .movies-container {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  max-width: 100%;
+  margin-top: 50px;
+  padding: 0 2px;
+  background-color: #000000;
 }
 
 .movie-list-element {
@@ -263,7 +277,7 @@ code {
   width: 80px;
   text-decoration: none;
   font-size: 0.7em;
-  color: #000000;
+  color: #e7d4d4;
 }
 
 .company-img-container:hover {
