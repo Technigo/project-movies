@@ -139,9 +139,10 @@ auto;
   padding: 40px;
   padding-top: 100px;
 }
+
 /* INTRO PICTURE POPCORN MAN*/
 .loading-intro img {
-  width: 500px;
+  width: 300px;
 }
 .center {
   display: block;
@@ -286,6 +287,14 @@ auto;
   left: 360px;
   top: 300px;
  }
+ .loading-intro img {
+  width: 500px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 }
 
   /* TABLET */
@@ -325,5 +334,13 @@ auto;
     position: absolute;
     right: 18px;
     top: 308px;
+  }
+  .loading-intro img {
+    width: 500px;
+  }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   }
