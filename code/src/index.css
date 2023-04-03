@@ -19,7 +19,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: auto;
+  height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,8 +32,7 @@ header {
 .logoImg {
   margin: 10px;
   width: 150px;
-  height: fit-content;
-  margin: 0;
+  height: 80px;
 
 }
 
