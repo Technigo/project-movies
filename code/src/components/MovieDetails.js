@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import NotFound from 'komponenter/NotFound'
+import NotFound from 'components/NotFound'
 
 /* PAGE 2 */
 const MovieDetails = () => {
