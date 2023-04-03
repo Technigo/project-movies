@@ -1,0 +1,76 @@
+main {
+    display: flex;
+    flex-wrap: wrap; 
+  }
+  
+  .movie-card {
+    position: relative;
+    width: 50%;
+  }
+  
+  .movie-card a:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    position: relative;
+    z-index: 0;
+  }
+  
+  .movie-card a:hover img {
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .description {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: white;
+    z-index: 2;
+  }
+  
+  .hidden-description {
+    display: none;
+  }
+  
+  .movie-card h1 {
+    margin-bottom: 8px;
+    word-break: none;
+    width: 300px;
+  }
+  
+  .movie-card a {
+    text-decoration: none;
+  }
+
+  @media (min-width: 560px) {
+
+    .description {
+      position: absolute;
+      left: 6px;
+      bottom: 6px;
+      color: white;
+      z-index: 2;
+    }
+    
+    .hidden-description {
+      display: none;
+    }
+    
+    .movie-card h1 {
+      margin-bottom: 8px;
+      word-break: none;
+      width: 300px;
+    }
+
+  }
