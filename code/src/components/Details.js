@@ -60,12 +60,12 @@ export const Details = () => {
           </div>
           <p className="overview">{movie.overview}</p>
           <span className="released">Release date: {movie.release_date}</span>
-          <button
+          {/* <button
             className="imdb-button"
             type="button"
             onClick={() => (window.location.href = `https://www.imdb.com/title/${movie.imdb_id}/`)}>
             Go to IMDb page
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
