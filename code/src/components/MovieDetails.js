@@ -5,6 +5,7 @@ import { MOVIE_DETAILS_URL } from 'utils/urls';
 
 export const MovieDetails = () => {
   const [details, setDetails] = useState([])
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { id } = useParams();
 
@@ -16,7 +17,18 @@ export const MovieDetails = () => {
     fetch(MOVIE_DETAILS_URL(id))
       .then((response) => response.json())
       .then((data) => setDetails(data))
+      .catch((error) => alert(error, 'error'))
+      .finally(() => setLoading(false));
   }, [id])
+
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <h2>Loading..</h2>
+      </div>
+    );
+  }
+
   return (
     <div className="movie-detailsWrapper">
 

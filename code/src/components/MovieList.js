@@ -4,12 +4,23 @@ import { MOVIE_LIST_URL } from 'utils/urls';
 
 export const MovieList = () => {
   const [movieList, setMovieList] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetch(MOVIE_LIST_URL)
       .then((response) => response.json())
       .then((data) => setMovieList(data.results))
+      .catch((error) => alert(error, 'error'))
+      .finally(() => setLoading(false));
   }, [])
+
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <h2>Loading..</h2>
+      </div>
+    );
+  }
 
   return (
     <section className="movieListWrapper">

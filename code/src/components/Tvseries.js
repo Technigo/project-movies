@@ -4,12 +4,23 @@ import { TV_SERIES_URL } from 'utils/urls';
 
 export const Tvseries = () => {
   const [tvList, setTvList] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetch(TV_SERIES_URL)
       .then((response) => response.json())
       .then((data) => setTvList(data.results))
+      .catch((error) => alert(error, 'error'))
+      .finally(() => setLoading(false));
   }, [])
+
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <h2>Loading..</h2>
+      </div>
+    );
+  }
 
   return (
     <section className="tvListWrapper">

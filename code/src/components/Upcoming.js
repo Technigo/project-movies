@@ -4,12 +4,23 @@ import { UPCOMING_URL } from 'utils/urls';
 
 export const Upcoming = () => {
   const [upcoming, setUpcoming] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetch(UPCOMING_URL)
       .then((response) => response.json())
       .then((data) => setUpcoming(data.results))
+      .catch((error) => alert(error, 'error'))
+      .finally(() => setLoading(false));
   }, [])
+
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <h2>Loading..</h2>
+      </div>
+    );
+  }
 
   return (
     <section className="upcomingWrapper">
