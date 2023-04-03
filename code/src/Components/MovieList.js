@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Popcorn from './Intro';
 import Header from './Header';
 /* STARTPAGE */
-const MoviesList = () => {
+const MovieList = () => {
   const [list, setList] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -26,23 +26,26 @@ const MoviesList = () => {
   /* This return shows the img, titles, rdate & the id on our HTML page */
   return (
     <section className="startPage">
-      {loading && (<Popcorn />)}
-      <Header setList={setList} />
-      <div className="movie-container">
-        {list.map((movie) => (
-          <article className="movie-wrapper" key={movie.id}>
-            <Link key={movie.id} to={`/details/${movie.id}`}>
-              <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
-              <div className="details">
-                <h1>{movie.title}</h1>
-                <p>Released {movie.release_date}</p>
-              </div>
-            </Link>
-          </article>
-        ))}
-      </div>
+      {loading ? (<Popcorn />) : (
+        <>
+          <Header setList={setList} />
+          <div className="movie-container">
+            {list.map((movie) => (
+              <article className="movie-wrapper" key={movie.id}>
+                <Link key={movie.id} to={`/details/${movie.id}`}>
+                  <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.title} />
+                  <div className="details">
+                    <h1>{movie.title}</h1>
+                    <p>Released {movie.release_date}</p>
+                  </div>
+                </Link>
+              </article>
+            ))}
+          </div>
+        </>
+      )}
     </section>
   )
 }
 
-export default MoviesList;
+export default MovieList;
