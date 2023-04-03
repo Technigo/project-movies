@@ -1,3 +1,4 @@
+/* eslint-disable no-return-assign */
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Loading } from 'components/Loading';
@@ -59,6 +60,12 @@ export const Details = () => {
           </div>
           <p className="overview">{movie.overview}</p>
           <span className="released">Release date: {movie.release_date}</span>
+          <button
+            className="imdb-button"
+            type="button"
+            onClick={() => (window.location.href = `https://www.imdb.com/title/${movie.imdb_id}/`)}>
+            Go to IMDb page
+          </button>
         </div>
       </div>
     </div>

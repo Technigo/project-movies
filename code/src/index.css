@@ -125,6 +125,23 @@ span.released {
   transition: 0.3s;
 }
 
+.imdb-button {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  margin: 10px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #383838;
+  color: #fff;
+  cursor: pointer;
+  opacity: 80%;
+}
+
+.imdb-button:hover {
+  opacity: 100%;
+}
+
 @media screen and (min-width: 840px) {
   .movie-details {
     flex-direction: row;
