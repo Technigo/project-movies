@@ -1,13 +1,194 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: Llawysgrifen, source-code-pro, Menlo, Monaco, Consolas,
+    'Courier New', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: Llawysgrifen, source-code-pro, Menlo, Monaco, Consolas,
+    'Courier New', monospace;
+}
+
+a.active {
+  color: #61dafb;
+}
+h1,
+h2,
+h3,
+p {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.movie-poster {
+  position: relative;
+  filter: brightness(100%);
+  transition: filter 0.2s ease-out;
+}
+.movie-poster:hover {
+  filter: brightness(80%);
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 2000px;
+}
+.movie-card,
+.movie-poster-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.movie-poster:hover .movie-card,
+.movie-poster:hover .movie-poster-card {
+  opacity: 1;
+}
+.movie-container > * {
+  flex: 1 1 100px;
+  margin: 0px;
+}
+.movie-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.movie-release-date {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #fff;
+}
+/* ---------------------- DETAILS COMPONENT -------------------------- */
+.big-component {
+  position: relative; /* for absolute positioning of children */
+  height: 100vh; /* 100% of viewport height */
+  overflow: hidden; /* prevent scrollilng */
+  flex-wrap: wrap;
+}
+
+.backdrop-img {
+  position: absolute; /* position relatively to parent */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* scale image to fit container */
+  z-index: -1; /* img is behind other  elements */
+}
+.big-component {
+  position: relative;
+}
+
+.small-component {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 75%;
+  height: 75%;
+  display: flex;
+}
+
+.details-row {
+  flex: 1;
+  display: flex;
+}
+
+.details-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.poster-img {
+  flex: 1;
+  object-fit: contain;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 30px;
+}
+
+.details-text {
+  flex: 1;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.top-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  justify-content: flex-start;
+  padding-right: 30px;
+}
+
+.details-title {
+  margin: 0;
+  font-size: 24px;
+  margin-right: 16px;
+}
+
+.details-score {
+  margin: 0;
+  font-size: 24px;
+}
+
+.details-overview {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.movie-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ----------------DETAILS BUTTONS ---------------------------- */
+
+.back-btn {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  padding: 0px;
+  border: none; /* remove default button border */
+  color: white;
+  font-size: 18px;
+  background-color: transparent;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  text-overflow: clip;
+  font-weight: bolder;
+}
+.back-btn-container {
+  display: flex;
+}
+/* --------------- make the app responsive -------------------*/
+@media (max-width: 768px) {
+  .poster-img {
+    width: 100%;
+  }
+  .small-component {
+    width: 100%;
+  }
 }
