@@ -1,13 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* MAIN PAGE */
+
+.movie-list {
+  background: #000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-item {
+  position: relative;
+}
+
+.movie-item-info {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 10px;
+  color: white;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 96%;
+}
+
+.movie-item-info h2 {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
+.movie-item-info span {
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+.movie-item:hover .movie-item-info {
+  visibility: visible;
+}
+
+/* DETAILS PAGE */
+
+.movie-details-wrapper {
+  color: white;
+  min-height: 100vh;
+  background-size: cover;
+}
+.movie-details {
+  display: flex;
+  max-width: 800px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+.movie-details .image-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.movie-details .image-wrapper img {
+  border: 3px solid #fff;
+}
+
+.detail-wrapper {
+  max-width: 300px;
+}
+
+.truncated {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: auto;
+}
+.overview {
+  line-height: 1.6;
+}
+
+.movie-info {
+  display: flex;
+  gap: 20px;
+  margin: 5px;
+  color: #9e9e9e;
+  align-items: center;
+}
+
+span.released {
+  color: #9e9e9e;
+  font-size: 16px;
+}
+
+/* BUTTON */
+
+.back-button {
+  border: 2px solid #383838;
+  background-color: #383838;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 8px 25px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  box-shadow: 8px 8px #727272;
+  transition: 0.3s;
+}
+
+.imdb-button {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  margin: 10px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #383838;
+  color: #fff;
+  cursor: pointer;
+  opacity: 80%;
+}
+
+.imdb-button:hover {
+  opacity: 100%;
+}
+
+@media screen and (min-width: 840px) {
+  .movie-details {
+    flex-direction: row;
+    max-width: 890px;
+    margin-top: 5%;
+  }
+
+  .detail-wrapper {
+    max-width: 455px;
+  }
 }
