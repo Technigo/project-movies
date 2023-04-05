@@ -1,0 +1,43 @@
+
+
+.foot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  
+  .icon-link  {
+    color: red;
+    font-size: 30px;
+    padding: 0 20px 0 20px;
+  }
+  
+  .icon-link :hover {
+    color: white;
+  }
+  
+  .byFoot {
+    font-family: "Courier New";
+    font-size: 16px;
+    color: white;
+    margin: 10px auto 14px auto;
+    max-width: 80%;
+    text-align: center;
+  }
+
+
+  @media (min-width: 820px) {
+
+      .icon-link  {
+        font-size: 43px;
+      }
+      
+      .byFoot {
+        font-size: 22px;
+      }
+  }
+
+

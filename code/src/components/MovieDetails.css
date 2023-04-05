@@ -1,0 +1,87 @@
+.detailContainer {
+    margin: 0;
+    position: relative;
+}
+
+h2 {
+    color: white;
+    font-size: 30px;
+    margin: 0;
+}
+
+p {
+    color: white;
+}
+
+.icon {
+    position: absolute;
+    font-size: 40px;
+    color: red;
+    padding: 20px 20px;
+    text-decoration: none;
+    display: flex;
+    gap: 12px;
+}
+
+.icon span {
+    color: white;
+    font-size: 28px;
+}
+
+.icon:hover i {
+    transition: margin-right 0.2s ease-in-out;
+  }
+
+  .rating {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+.detailSummary {
+    min-height: 100vh;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    gap: 15px;
+}
+
+.detailText {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .poster {
+    max-width: 200px;
+    max-height: 300px;
+    border: solid white 3px;
+  }
+
+  
+  @media (min-width: 577px) {
+    .detailSummary {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 50px;
+    }
+    .detailText {
+        max-width: 600px;
+    }
+}
+
+    @media (min-width: 770px) {
+        .detailSummary {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            padding: 50px;
+        }
+        .detailText {
+            max-width: 600px;
+        }
+      }
+      
