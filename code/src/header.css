@@ -1,0 +1,83 @@
+.header {
+    display: block;
+  }
+  .header-items-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 15px;
+    height: 100px;
+  }
+  
+  .authors {
+    display: flex;
+  }
+  ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    padding: 10px;
+  }
+  
+  li {
+    padding: 10px;
+  }
+  
+  .text-welcome {
+    padding: 10px;
+    color: aliceblue;
+  }
+
+  .welcome {
+    margin-top: 3px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .icon-popcorn {
+    max-width: 100px;
+    transition: 1s ease;
+  }
+
+  .icon-popcorn:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+  }
+
+  .icon-contact {
+    max-width: 100px;
+    opacity: 1;
+  }
+
+  .icon-contact:hover {
+    opacity: 0.5;
+  }
+
+  a:link {
+    text-decoration: none;
+    color: aliceblue;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: aliceblue;
+  }
+  
+  a:hover {
+    text-decoration:dashed;
+    color: aliceblue;
+  }
+  
+  a:active {
+    text-decoration: none;
+    color: aliceblue;
+  }
+  
+  @media (min-width: 0px) and (max-width: 570px) {
+    .text-welcome {
+      display: none;
+    }
+
+  }

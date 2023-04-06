@@ -1,0 +1,67 @@
+.movies-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .single-movie {
+    width: 25%;
+    size: fit-content;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .hover-container {
+    color: rgb(241, 242, 246);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding:  45% 5%;
+  }
+
+  .single-movie .hover-container {
+    border: 5px solid black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  }
+  
+  .text-hover {
+    display: none;
+  }
+  
+  .single-movie:hover .hover-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-end;
+    background: rgba(0,0,0,.75);
+  }
+  
+  .single-movie:hover .hover-container .text-hover {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-end;
+  }
+  
+  .cover-image {
+    width: 100%;
+  }
+
+  @media (min-width: 0px) and (max-width: 570px) {
+    .single-movie {
+      width: 100%;
+    }
+
+  }
+  
+  @media (min-width: 571px) and (max-width: 850px) {
+    .single-movie{
+      width: 33.33%;
+    }
+
+}
+ 

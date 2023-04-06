@@ -1,0 +1,139 @@
+.movie-details-container {
+  height: auto;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.poster-rating-container {
+  margin: 80px 20px 50px 20px;
+}
+
+.rating {
+  font-size: 20px;
+  align-self: center;
+  margin-left: 10px;
+  background: #fff;
+  color:#000;
+  padding: 0 5px;
+}
+
+/* Background image */
+.backdrop {
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  height: 100%;
+  width: auto;
+  z-index: -1;
+}
+
+/* Poster image */
+.poster {
+  height: 300px;
+  width: auto;
+  border: 5px solid #fff;
+}
+
+/* Go back button */
+.goBackBtn {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.backBtnName {
+  margin-left: 5px;
+}
+
+.backBtnName:hover {
+  margin-left: 10px;
+}
+
+.goback-icon {
+  width: 25px;
+}
+
+.title-rating-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 2px 3px 2px 8px;
+  background-color:rgba(40,39,39,.5);
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.title-rating-container {
+  font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+.title-details {
+  text-shadow: 1px 1px #4d4d4d;
+}
+
+.title-details-margin {
+  margin: 16px 0 0 0;
+}
+
+.goBackBtn, .title-details, 
+.movie-description {
+  color: #fff;
+}
+
+/* ---- TABLET ----- */
+@media only screen and (min-width: 744px) {
+  .title-rating-text {
+  max-width: 400px;
+  }
+}
+
+/* ---- DESKTOP ----- */
+@media only screen and (min-width: 1280px) {
+.goBackBtn {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+
+.backdrop {
+ top: 0;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+ position: fixed;
+ height: 100%;
+ width: 100%; 
+ z-index: -1;
+}
+
+.title-rating-text
+{
+ bottom: 50px;
+ display: flex;
+ flex-direction: column;
+ margin-left: 400px;
+ position: fixed;
+ max-width: 400px;
+}
+
+.poster {
+  width: 342px;
+  height: auto;
+  position: fixed;
+  bottom: 50px;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+}
