@@ -1,13 +1,20 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+This pair-programming project was to make a react app with multiple pages using routes.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+✓  Pair-programming
+
+✓ How to build multi-page applications using React Router.
+
+✓ How to pass information such as product ids, or blog post titles in the URL and pick this up in React router to load dynamic content.
+
+✓ Practice using APIs in React - combining `useState` with `useEffect`
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We layed out the foundation together planning what was to be done, then branched out making different components. Merging a couple of times then using pair programming getting the components mounted and working toghether. We managed to add a few stretch goals (back button, header and loader). If we had more time we would also add categorys to the header fetching them from the API.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://master--musical-florentine-5987b8.netlify.app/
+

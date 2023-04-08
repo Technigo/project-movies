@@ -1,0 +1,31 @@
+.go-back-button-container {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.go-back-button {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  border: 0;
+}
+
+.go-back-button:hover {
+  cursor: pointer;
+  border-left: 3px solid white;
+  transition: 0.1s ease;
+}
+.go-back-button-text {
+  margin-left: 10px;
+  text-shadow: 1px 1px #000;
+}
+
+@media (min-width: 768px) {
+  .go-back-button-text {
+    margin-left: 10px;
+  }
+}
