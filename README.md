@@ -18,4 +18,4 @@ Technologies:
 ## View it live
 
 Github: https://github.com/TessAquilon/project-movies
-Live link: xxx
+Live link: https://heartfelt-torrone-e608c2.netlify.app/
