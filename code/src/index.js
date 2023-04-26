@@ -1,6 +1,8 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
+// import 'animate.css';
 import { App } from './App';
 
 const container = document.getElementById('root');
