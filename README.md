@@ -1,5 +1,7 @@
 # Project Movies
 
+Changing name to see
+
 The main focus of this project was using routes in React.
 We used APIs to fetch various movie and tv show collections to display on multiple pages with the help of useState, useEffect, Navigation Links and Routes.
 This project was done in collaboration - by Nina Waldreus & Joanna Philips.
