@@ -1,13 +1,24 @@
-# Project Movies
-
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+# Project Movies 
 
 ## View it live
+https://quiet-movies.netlify.app/
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+## Project Brief
+Create your very own movies site. You'll be building your first multi-page React application and using a fun new API too. This project should be done pair programming.
+
+## Project requirements 
+
+- [x]  Your page should follow the design provided as closely as possible
+- [x] Build a multi-page application using React Router
+- [x] Pass information such as ids, or titles in the URL and pick this up in React router to load dynamic content
+- [x] Practice using APIs in React - combining useState with useEffect
+- [x]  Your app should have two pages - one showing a list of movies and one showing details
+
+## Installation
+
+    npm install
+    npm start 
+
+### Authors and acknowledgment  
+
+Thanks @Annika for the collab 
