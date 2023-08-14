@@ -1,13 +1,25 @@
 # Project Movies
 
-Replace this readme with your own information about your project.
+Changing name to see
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The main focus of this project was using routes in React.
+We used APIs to fetch various movie and tv show collections to display on multiple pages with the help of useState, useEffect, Navigation Links and Routes.
+This project was done in collaboration - by Nina Waldreus & Joanna Philips.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+First we sketched out the pages, components and the states we would need for each of them. 
+Next we implemented each page connecting them through routes and navigation links. 
+When faced with problems we turned for help to Stackoverflow, Google and other team members. 
+Also used ChatGPT for support.
+Improvements for the future would be to make the information richer by using more endpoints from the API.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Deployed site: https://movie-night-tonight.netlify.app/
+
+
+## Image credits
+https://www.flaticon.com/free-icons/back-button Back button icons created by icon_small - Flaticon
+https://www.flaticon.com/free-icons/popcorn Popcorn icons created by Freepik - Flaticon
+https://www.flaticon.com/free-icons/menu Menu icons created by Febrian Hidayat - Flaticon
